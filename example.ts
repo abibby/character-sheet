@@ -34,6 +34,8 @@ char.setRace('Firbolg', c => {
 
 
 char.levelUp('Cleric', c => { // 1
+    c.addHitDie(8)
+
     c.addSkillProficiency('insight')
     c.addSkillProficiency('medicine')
 
@@ -42,41 +44,63 @@ char.levelUp('Cleric', c => { // 1
 })
 
 char.levelUp('Cleric', c => { // 2
+    c.addHitDie(8)
+
     c.addClassFeature('Channel Divinity: Preserve Life')
 })
 char.levelUp('Cleric', c => { // 3
+    c.addHitDie(8)
+
     c.addSpell('Lessor Restoration')
     c.addSpell('Spiritual Weapon')
 
 })
 char.levelUp('Cleric', c => { // 4
+    c.addHitDie(8)
+
     c.stats.wis.add(2)
 })
 char.levelUp('Cleric', c => { // 5
+    c.addHitDie(8)
+
     c.addSpell('Beacon of Hope')
     c.addSpell('Revivify')
 })
 char.levelUp('Cleric', c => { // 6
+    c.addHitDie(8)
+
     c.addClassFeature('Blessed Healer')
 })
 char.levelUp('Cleric', c => { // 7
+    c.addHitDie(8)
+
     c.addSpell('Death Ward')
     c.addSpell('Guardian of Faith')
 })
 char.levelUp('Cleric', c => { // 8
+    c.addHitDie(8)
+
     c.addClassFeature('Divine Strike')
     c.stats.wis.add(1)
     c.stats.con.add(1)
 })
 char.levelUp('Cleric', c => { // 9
+    c.addHitDie(8)
+
     c.addSpell('Mass Cure Wounds')
     c.addSpell('Raise Dead')
 })
 char.levelUp('Cleric', c => { // 10
+    c.addHitDie(8)
+
 })
 char.levelUp('Cleric', c => { // 11
+    c.addHitDie(8)
+
 })
 char.levelUp('Cleric', c => { // 12
+    c.addHitDie(8)
+
     c.stats.str.add(1)
     c.stats.con.add(1)
 })

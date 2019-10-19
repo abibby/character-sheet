@@ -10,11 +10,12 @@
     width: 8in;
     display: grid;
     grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
-    grid-template-rows: auto;
+    // grid-template-rows: auto;
     grid-template-areas:
         "header header header header"
         "stats  prof   combat ."
         "stats  .      combat ."
+        "stats  skills combat ."
         "stats  skills .      .";
     grid-row-gap: 10px;
     grid-column-gap: 10px;
@@ -154,9 +155,15 @@
         grid-area: combat;
 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
-        grid-template-areas: "ac initiative speed";
+        grid-template-areas:
+            "ac       ac       initiative initiative  speed       speed"
+            "hp       hp       hp         hp          hp          hp"
+            "hit-dice hit-dice hit-dice   death-saves death-saves death-saves";
+
+        grid-gap: 5px;
+
         .ac {
             grid-area: ac;
 
@@ -172,6 +179,22 @@
             grid-area: speed;
 
             @include border;
+        }
+        .hp {
+            grid-area: hp;
+
+            @include border;
+
+            .max {
+                height: 4em;
+                &::before {
+                    color: lightgrey;
+                    content: "Hit Point Maximum ";
+                }
+            }
+        }
+        .hit-dice {
+            grid-area: hit-dice;
         }
     }
 }

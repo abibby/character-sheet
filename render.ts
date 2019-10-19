@@ -37,6 +37,9 @@ async function renderObject(a: object): Promise<string> {
     if (a instanceof Promise) {
         return renderPart(await a)
     }
+    if (a instanceof Array) {
+        return (await Promise.all(a.map(renderPart))).join('')
+    }
     return a.toString()
 }
 
@@ -166,11 +169,21 @@ async function skill(s: number, title: string): Promise<string> {
     `
 }
 async function combat(c: Character): Promise<string> {
+    const hitDice = Object.entries(c.hitDice
+        .reduce((group, die) => ({ ...group, [die]: (group[die] || 0) + 1 }), {} as any))
+        .map(([die, quantity]) => html`<span class="die">${quantity}d${die}</span> `)
     return html`
     <section class="combat">
         <div class="ac">${c.ac}</div>
         <div class="initiative">${c.initiative}</div>
         <div class="speed">${c.speed}ft</div>
+        <div class="hp">
+            <div class="max">${c.maxHP}</div>
+
+        </div>
+        <div class="hit-dice">
+            ${hitDice}
+        </div>
     </section>
     `
 }

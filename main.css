@@ -4,8 +4,7 @@
   width: 8in;
   display: grid;
   grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "header header header header" "stats  prof   combat ." "stats  .      combat ." "stats  skills .      .";
+  grid-template-areas: "header header header header" "stats  prof   combat ." "stats  .      combat ." "stats  skills combat ." "stats  skills .      .";
   grid-row-gap: 10px;
   grid-column-gap: 10px;
 }
@@ -171,16 +170,16 @@
 .character .combat {
   grid-area: combat;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "ac initiative speed";
+  grid-template-areas: "ac       ac       initiative initiative  speed       speed" "hp       hp       hp         hp          hp          hp" "hit-dice hit-dice hit-dice   death-saves death-saves death-saves";
+  grid-gap: 5px;
 }
 .character .combat .ac {
   grid-area: ac;
   border: solid lightgrey;
   border-radius: 4px;
   text-align: center;
-  line-height: 100%;
 }
 .character .combat .initiative {
   grid-area: initiative;
@@ -191,4 +190,19 @@
   grid-area: speed;
   border: solid lightgrey;
   border-radius: 4px;
+}
+.character .combat .hp {
+  grid-area: hp;
+  border: solid lightgrey;
+  border-radius: 4px;
+}
+.character .combat .hp .max {
+  height: 4em;
+}
+.character .combat .hp .max::before {
+  color: lightgrey;
+  content: "Hit Point Maximum ";
+}
+.character .combat .hit-dice {
+  grid-area: hit-dice;
 }

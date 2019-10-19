@@ -153,6 +153,13 @@ export default class Character {
 
     public speed: number = 0
 
+    public hitDice: number[] = []
+    public get maxHP(): number {
+        return this.hitDice[0]
+            + this.stats.con.mod() * this.hitDice.length
+            + this.hitDice.slice(1).reduce((total, die) => total + (die / 2 + 1), 0)
+    }
+
     public setRace(race: string, bonus: Bonus): void {
         this.race = race
         this.applyBonus(bonus)
@@ -177,6 +184,10 @@ export default class Character {
     }
     public addAC(ac: number): void {
         this.acMod += ac
+    }
+
+    public addHitDie(hitDie: number): void {
+        this.hitDice.push(hitDie)
     }
 
     public addSkillProficiency(skill: keyof Skills<number>) {
