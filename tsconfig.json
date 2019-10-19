@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "noImplicitAny": true,
+        // "module": "es6",
+        "moduleResolution": "node",
+        "target": "esnext",
+        "allowJs": true,
+        "jsx": "preserve",
+        "experimentalDecorators": true,
+        "baseUrl": "./",
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    },
+    "exclude": [
+        "node_modules",
+    ]
+}
