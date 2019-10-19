@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+.character {
+  font-family: "Ubuntu", sans-serif;
+  width: 8in;
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header" "stats  prof   combat ." "stats  .      combat ." "stats  skills .      .";
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+.character header {
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "name class bkg        player-name" "name race  alignment  xp";
+}
+.character header .name {
+  grid-area: name;
+  font-size: 2em;
+}
+.character header .class-level {
+  grid-area: class;
+  position: relative;
+  height: 2em;
+}
+.character header .class-level::after {
+  content: "Class & Level";
+  display: block;
+  font-size: 0.5em;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .background {
+  grid-area: bkg;
+  position: relative;
+  height: 2em;
+}
+.character header .background::after {
+  content: "Background";
+  display: block;
+  font-size: 0.5em;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .player-name {
+  grid-area: player-name;
+  position: relative;
+  height: 2em;
+}
+.character header .player-name::after {
+  content: "Player Name";
+  display: block;
+  font-size: 0.5em;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .race {
+  grid-area: race;
+  position: relative;
+  height: 2em;
+}
+.character header .race::after {
+  content: "Race";
+  display: block;
+  font-size: 0.5em;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .alignment {
+  grid-area: alignment;
+  position: relative;
+  height: 2em;
+}
+.character header .alignment::after {
+  content: "Alignment";
+  display: block;
+  font-size: 0.5em;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .xp {
+  grid-area: xp;
+  position: relative;
+  height: 2em;
+}
+.character header .xp::after {
+  content: "Experience Points";
+  display: block;
+  font-size: 0.5em;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character .prof-bonus {
+  grid-area: prof;
+  border: solid lightgrey;
+  border-radius: 4px;
+  margin: 0.75em 0;
+  position: relative;
+}
+.character .prof-bonus .value {
+  position: absolute;
+  display: block;
+  border: solid lightgrey;
+  border-radius: 4px;
+  font-size: 1.75em;
+  background: white;
+  top: 50%;
+  transform: translate(-3px, -50%);
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+}
+.character .prof-bonus .title {
+  padding-left: 44px;
+  width: calc(100% - 3em);
+  display: block;
+  text-align: center;
+}
+.character .stats {
+  grid-area: stats;
+  display: grid;
+  row-gap: 10px;
+}
+.character .stats .stat {
+  border: solid lightgrey;
+  border-radius: 4px;
+  text-align: center;
+}
+.character .stats .stat .title {
+  display: block;
+  font-variant: small-caps;
+  font-size: 0.75em;
+}
+.character .stats .stat .bonus {
+  display: block;
+  font-size: 1.75em;
+}
+.character .stats .stat .value {
+  display: block;
+}
+.character .skills {
+  grid-area: skills;
+  border: solid lightgrey;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+.character .skills .value {
+  display: inline-block;
+  width: 4ch;
+  text-align: right;
+}
+.character .combat {
+  grid-area: combat;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "ac initiative speed";
+}
+.character .combat .ac {
+  grid-area: ac;
+  border: solid lightgrey;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 100%;
+}
+.character .combat .initiative {
+  grid-area: initiative;
+  border: solid lightgrey;
+  border-radius: 4px;
+}
+.character .combat .speed {
+  grid-area: speed;
+  border: solid lightgrey;
+  border-radius: 4px;
+}

@@ -7,6 +7,16 @@ export class Level {
     public get(className: string): number {
         return this.classMap.get(className) || 0
     }
+
+    public get total(): number {
+        return Array.from(this.classMap).reduce((total, [, l]) => total + l, 0)
+    }
+
+    public toString(): string {
+        return Array.from(this.classMap)
+            .map(([className, level]) => `${className}: ${level}`)
+            .join(', ')
+    }
 }
 
 export class Stat {
@@ -22,53 +32,134 @@ export class Stat {
     public get(): number {
         return Math.max(this.value, this.override)
     }
+    public mod(): number {
+        return mod(this.get())
+    }
+    public toString(): string {
+        return String(this.get())
+    }
 }
 
 type Bonus = (c: Character) => void
 
-interface Stats<T> {
+export interface Stats<T> {
     str: T
     dex: T
     con: T
     int: T
-    wiz: T
+    wis: T
     cha: T
 }
 
-interface Spell {
-    name: string
-    school: string
-    ritual: boolean
-    castingTime: string
-    range: string
-    components: string
-    duration: string
-    text: string
+export interface Skills<T> {
+    'acrobatics': T
+    'animal handling': T
+    'arcana': T
+    'athletics': T
+    'deception': T
+    'history': T
+    'insight': T
+    'intimidation': T
+    'investigation': T
+    'medicine': T
+    'nature': T
+    'perception': T
+    'performance': T
+    'persuasion': T
+    'religion': T
+    'sleight of hand': T
+    'stealth': T
+    'survival': T
+}
+
+export const SkillsMap: Readonly<Skills<keyof Stats<number>>> = {
+    'acrobatics': 'dex',
+    'animal handling': 'wis',
+    'arcana': 'int',
+    'athletics': 'str',
+    'deception': 'cha',
+    'history': 'int',
+    'insight': 'wis',
+    'intimidation': 'cha',
+    'investigation': 'int',
+    'medicine': 'wis',
+    'nature': 'int',
+    'perception': 'wis',
+    'performance': 'cha',
+    'persuasion': 'cha',
+    'religion': 'int',
+    'sleight of hand': 'dex',
+    'stealth': 'dex',
+    'survival': 'wis',
 }
 
 export default class Character {
-    private name: string = ''
-    private race: string = ''
+    public name: string = ''
+    public background: string = ''
+    public playerName: string = ''
+    public race: string = ''
+    public alignment: string
+    public xp: number
 
-    private readonly level: Level = new Level()
+    public readonly level: Level = new Level()
 
     public readonly stats: Readonly<Stats<Stat>> = {
         str: new Stat(),
         dex: new Stat(),
         con: new Stat(),
         int: new Stat(),
-        wiz: new Stat(),
+        wis: new Stat(),
         cha: new Stat(),
     }
 
-    private readonly spells: Spell[] = []
+    public readonly spells: string[] = []
+    public readonly classFeatures: string[] = []
+    public readonly items: string[] = []
 
-    public setName(name: string) {
-        this.name = name
+    private skillProficiency: Array<keyof Skills<number>> = []
+
+    public get skills(): Skills<number> {
+        return Object.fromEntries(
+            Object.entries(SkillsMap)
+                .map(([skill, stat]) => [
+                    skill,
+                    mod(this.stats[stat].get()) + (this.skillProficiency.filter(p => p === skill).length * this.proficiencyBonus),
+                ])
+        ) as any
     }
+
+    public get proficiencyBonus(): number {
+        if (this.level.total < 5) {
+            return 2
+        } else if (this.level.total < 9) {
+            return 3
+        } else if (this.level.total < 13) {
+            return 4
+        } else if (this.level.total < 17) {
+            return 5
+        }
+        return 6
+    }
+
+    private acBase: number = 0
+    private acMod: number = 0
+    public get ac(): number {
+        return this.acBase + this.acMod
+    }
+
+    public get initiative(): number {
+        return this.stats.dex.mod()
+    }
+
+    public speed: number = 0
 
     public setRace(race: string, bonus: Bonus): void {
         this.race = race
+        this.applyBonus(bonus)
+    }
+
+    public setBackground(background: string, bonus: Bonus): void {
+        this.background = background
         this.applyBonus(bonus)
     }
 
@@ -77,8 +168,19 @@ export default class Character {
         this.stats.dex.add(stats.dex)
         this.stats.con.add(stats.con)
         this.stats.int.add(stats.int)
-        this.stats.wiz.add(stats.wiz)
+        this.stats.wis.add(stats.wis)
         this.stats.cha.add(stats.cha)
+    }
+
+    public setAC(ac: number): void {
+        this.acBase = Math.max(ac, this.acBase)
+    }
+    public addAC(ac: number): void {
+        this.acMod += ac
+    }
+
+    public addSkillProficiency(skill: keyof Skills<number>) {
+        this.skillProficiency.push(skill)
     }
 
     public levelUp(className: string, bonus: Bonus): void {
@@ -86,13 +188,26 @@ export default class Character {
         this.applyBonus(bonus)
     }
 
-    public addSpell(spell: Spell): void {
+    public addSpell(spell: string): void {
         // https://5e.tools/data/spells/index.json?ver=1.84.1
         // https://5e.tools/data/spells/spells-phb.json?ver=1.84.1
         this.spells.push(spell)
     }
 
+    public addClassFeature(feature: string) {
+        this.classFeatures.push(feature)
+    }
+    public addItem(item: string, bonus: Bonus) {
+        this.items.push(item)
+
+        this.applyBonus(bonus)
+    }
+
     private applyBonus(bonus: Bonus): void {
         bonus(this)
     }
+}
+
+export function mod(num: number): number {
+    return Math.floor((num - 10) / 2)
 }

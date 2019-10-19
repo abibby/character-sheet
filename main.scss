@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+
+@mixin border {
+    border: solid lightgrey;
+    border-radius: 4px;
+}
+
+.character {
+    font-family: "Ubuntu", sans-serif;
+    width: 8in;
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "stats  prof   combat ."
+        "stats  .      combat ."
+        "stats  skills .      .";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+
+    header {
+        grid-area: header;
+
+        display: grid;
+
+        // grid-template-columns: auto;
+        // grid-template-rows: auto;
+        grid-template-areas:
+            "name class bkg        player-name"
+            "name race  alignment  xp";
+
+        @mixin title($title) {
+            position: relative;
+            height: 2em;
+            &::after {
+                content: $title;
+                display: block;
+                font-size: 0.5em;
+                border-top: solid 1px lightgrey;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                margin-bottom: 3px;
+            }
+        }
+
+        .name {
+            grid-area: name;
+            font-size: 2em;
+        }
+        .class-level {
+            grid-area: class;
+
+            @include title("Class & Level");
+        }
+        .background {
+            grid-area: bkg;
+
+            @include title("Background");
+        }
+        .player-name {
+            grid-area: player-name;
+
+            @include title("Player Name");
+        }
+        .race {
+            grid-area: race;
+
+            @include title("Race");
+        }
+        .alignment {
+            grid-area: alignment;
+
+            @include title("Alignment");
+        }
+        .xp {
+            grid-area: xp;
+
+            @include title("Experience Points");
+        }
+    }
+
+    .prof-bonus {
+        grid-area: prof;
+        @include border;
+        margin: 0.75em 0;
+        position: relative;
+
+        .value {
+            position: absolute;
+
+            display: block;
+            @include border;
+            font-size: 1.75em;
+            background: white;
+            top: 50%;
+            transform: translate(-3px, -50%);
+            width: 1.5em;
+            height: 1.5em;
+            text-align: center;
+            line-height: 1.5em;
+        }
+        .title {
+            padding-left: 44px;
+            width: calc(100% - 3em);
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .stats {
+        grid-area: stats;
+
+        display: grid;
+        row-gap: 10px;
+
+        .stat {
+            @include border;
+            text-align: center;
+
+            .title {
+                display: block;
+                font-variant: small-caps;
+                font-size: 0.75em;
+            }
+            .bonus {
+                display: block;
+
+                font-size: 1.75em;
+            }
+            .value {
+                display: block;
+            }
+        }
+    }
+
+    .skills {
+        grid-area: skills;
+
+        @include border;
+        line-height: 1.4;
+
+        .value {
+            display: inline-block;
+            width: 4ch;
+            text-align: right;
+        }
+        .title {
+        }
+    }
+
+    .combat {
+        grid-area: combat;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "ac initiative speed";
+        .ac {
+            grid-area: ac;
+
+            @include border;
+            text-align: center;
+        }
+        .initiative {
+            grid-area: initiative;
+
+            @include border;
+        }
+        .speed {
+            grid-area: speed;
+
+            @include border;
+        }
+    }
+}
