@@ -1,24 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
+$font-size: 14px;
+$small-font-size: $font-size * 0.75;
+$large-font-size: $font-size * 2;
+$line-height: 1.1;
+
 @mixin border {
     border: solid lightgrey;
     border-radius: 4px;
+    padding: 4px;
+}
+
+@mixin bottom-text($text) {
+    position: relative;
+    padding-bottom: $small-font-size;
+
+    &::after {
+        content: $text;
+        display: block;
+        font-size: $small-font-size;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .character {
     font-family: "Ubuntu", sans-serif;
-    width: 8in;
+    font-size: $font-size;
     display: grid;
     grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
     // grid-template-rows: auto;
     grid-template-areas:
         "header header header header"
-        "stats  prof   combat ."
-        "stats  .      combat ."
-        "stats  skills combat ."
-        "stats  skills .      .";
+        "stats  prof   combat features"
+        "stats  skills combat features"
+        "stats  skills .      features";
     grid-row-gap: 10px;
     grid-column-gap: 10px;
+    line-height: $line-height;
+
+    @media screen {
+        width: 8in;
+    }
 
     header {
         grid-area: header;
@@ -33,11 +58,11 @@
 
         @mixin title($title) {
             position: relative;
-            height: 2em;
+            height: ($font-size + $small-font-size) * $line-height + 3px;
             &::after {
                 content: $title;
                 display: block;
-                font-size: 0.5em;
+                font-size: $small-font-size;
                 border-top: solid 1px lightgrey;
                 position: absolute;
                 bottom: 0;
@@ -48,7 +73,7 @@
 
         .name {
             grid-area: name;
-            font-size: 2em;
+            font-size: $large-font-size;
         }
         .class-level {
             grid-area: class;
@@ -84,30 +109,11 @@
 
     .prof-bonus {
         grid-area: prof;
+
         @include border;
-        margin: 0.75em 0;
-        position: relative;
-
-        .value {
-            position: absolute;
-
-            display: block;
-            @include border;
-            font-size: 1.75em;
-            background: white;
-            top: 50%;
-            transform: translate(-3px, -50%);
-            width: 1.5em;
-            height: 1.5em;
-            text-align: center;
-            line-height: 1.5em;
-        }
-        .title {
-            padding-left: 44px;
-            width: calc(100% - 3em);
-            display: block;
-            text-align: center;
-        }
+        @include bottom-text("Proficiency Bonus");
+        text-align: center;
+        font-size: $large-font-size;
     }
 
     .stats {
@@ -123,12 +129,12 @@
             .title {
                 display: block;
                 font-variant: small-caps;
-                font-size: 0.75em;
+                font-size: $small-font-size;
             }
             .bonus {
                 display: block;
 
-                font-size: 1.75em;
+                font-size: $large-font-size;
             }
             .value {
                 display: block;
@@ -163,27 +169,32 @@
             "hit-dice hit-dice hit-dice   death-saves death-saves death-saves";
 
         grid-gap: 5px;
+        align-self: start;
 
-        .ac {
-            grid-area: ac;
-
+        .ac,
+        .initiative,
+        .speed {
             @include border;
             text-align: center;
+            font-size: $large-font-size;
+        }
+        .ac {
+            grid-area: ac;
+            @include bottom-text("Armor Class");
         }
         .initiative {
             grid-area: initiative;
-
-            @include border;
+            @include bottom-text("Initiative");
         }
         .speed {
             grid-area: speed;
-
-            @include border;
+            @include bottom-text("Speed");
         }
         .hp {
             grid-area: hp;
 
             @include border;
+            @include bottom-text("Current Hit Points");
 
             .max {
                 height: 4em;
@@ -195,6 +206,23 @@
         }
         .hit-dice {
             grid-area: hit-dice;
+
+            @include border;
+            @include bottom-text("Hit Dice");
+            height: 4em;
         }
+        .death-saves {
+            grid-area: death-saves;
+
+            @include border;
+            @include bottom-text("Death Saves");
+            height: 4em;
+        }
+    }
+
+    .features {
+        grid-area: features;
+
+        @include border;
     }
 }

@@ -91,12 +91,12 @@ export async function render(c: Character): Promise<string> {
             <div class="xp">${c.xp}</div>
         </header>
         <section class="prof-bonus">
-            <span class="value">${sign(c.proficiencyBonus)}</span>
-            <span class="title">Proficiency Bonus</span>
+            ${sign(c.proficiencyBonus)}
         </section>
         ${stats(c.stats)}
         ${skills(c.skills)}
         ${combat(c)}
+        ${features(c)}
     </div>
 </body>
 </html>
@@ -184,6 +184,16 @@ async function combat(c: Character): Promise<string> {
         <div class="hit-dice">
             ${hitDice}
         </div>
+        <div class="death-saves">
+        </div>
+    </section>
+    `
+}
+
+async function features(c: Character): Promise<string> {
+    return html`
+    <section class="features">
+        ${c.classFeatures.map(f => html`<div>${f}</div>`)}
     </section>
     `
 }

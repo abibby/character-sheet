@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 .character {
   font-family: "Ubuntu", sans-serif;
-  width: 8in;
+  font-size: 14px;
   display: grid;
   grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
-  grid-template-areas: "header header header header" "stats  prof   combat ." "stats  .      combat ." "stats  skills combat ." "stats  skills .      .";
+  grid-template-areas: "header header header header" "stats  prof   combat features" "stats  skills combat features" "stats  skills .      features";
   grid-row-gap: 10px;
   grid-column-gap: 10px;
+  line-height: 1.1;
+}
+@media screen {
+  .character {
+    width: 8in;
+  }
 }
 .character header {
   grid-area: header;
@@ -15,17 +21,17 @@
 }
 .character header .name {
   grid-area: name;
-  font-size: 2em;
+  font-size: 28px;
 }
 .character header .class-level {
   grid-area: class;
   position: relative;
-  height: 2em;
+  height: 29.95px;
 }
 .character header .class-level::after {
   content: "Class & Level";
   display: block;
-  font-size: 0.5em;
+  font-size: 10.5px;
   border-top: solid 1px lightgrey;
   position: absolute;
   bottom: 0;
@@ -35,12 +41,12 @@
 .character header .background {
   grid-area: bkg;
   position: relative;
-  height: 2em;
+  height: 29.95px;
 }
 .character header .background::after {
   content: "Background";
   display: block;
-  font-size: 0.5em;
+  font-size: 10.5px;
   border-top: solid 1px lightgrey;
   position: absolute;
   bottom: 0;
@@ -50,12 +56,12 @@
 .character header .player-name {
   grid-area: player-name;
   position: relative;
-  height: 2em;
+  height: 29.95px;
 }
 .character header .player-name::after {
   content: "Player Name";
   display: block;
-  font-size: 0.5em;
+  font-size: 10.5px;
   border-top: solid 1px lightgrey;
   position: absolute;
   bottom: 0;
@@ -65,12 +71,12 @@
 .character header .race {
   grid-area: race;
   position: relative;
-  height: 2em;
+  height: 29.95px;
 }
 .character header .race::after {
   content: "Race";
   display: block;
-  font-size: 0.5em;
+  font-size: 10.5px;
   border-top: solid 1px lightgrey;
   position: absolute;
   bottom: 0;
@@ -80,12 +86,12 @@
 .character header .alignment {
   grid-area: alignment;
   position: relative;
-  height: 2em;
+  height: 29.95px;
 }
 .character header .alignment::after {
   content: "Alignment";
   display: block;
-  font-size: 0.5em;
+  font-size: 10.5px;
   border-top: solid 1px lightgrey;
   position: absolute;
   bottom: 0;
@@ -95,12 +101,12 @@
 .character header .xp {
   grid-area: xp;
   position: relative;
-  height: 2em;
+  height: 29.95px;
 }
 .character header .xp::after {
   content: "Experience Points";
   display: block;
-  font-size: 0.5em;
+  font-size: 10.5px;
   border-top: solid 1px lightgrey;
   position: absolute;
   bottom: 0;
@@ -111,27 +117,19 @@
   grid-area: prof;
   border: solid lightgrey;
   border-radius: 4px;
-  margin: 0.75em 0;
+  padding: 4px;
   position: relative;
-}
-.character .prof-bonus .value {
-  position: absolute;
-  display: block;
-  border: solid lightgrey;
-  border-radius: 4px;
-  font-size: 1.75em;
-  background: white;
-  top: 50%;
-  transform: translate(-3px, -50%);
-  width: 1.5em;
-  height: 1.5em;
+  padding-bottom: 10.5px;
   text-align: center;
-  line-height: 1.5em;
+  font-size: 28px;
 }
-.character .prof-bonus .title {
-  padding-left: 44px;
-  width: calc(100% - 3em);
+.character .prof-bonus::after {
+  content: "Proficiency Bonus";
   display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
 .character .stats {
@@ -142,16 +140,17 @@
 .character .stats .stat {
   border: solid lightgrey;
   border-radius: 4px;
+  padding: 4px;
   text-align: center;
 }
 .character .stats .stat .title {
   display: block;
   font-variant: small-caps;
-  font-size: 0.75em;
+  font-size: 10.5px;
 }
 .character .stats .stat .bonus {
   display: block;
-  font-size: 1.75em;
+  font-size: 28px;
 }
 .character .stats .stat .value {
   display: block;
@@ -160,6 +159,7 @@
   grid-area: skills;
   border: solid lightgrey;
   border-radius: 4px;
+  padding: 4px;
   line-height: 1.4;
 }
 .character .skills .value {
@@ -174,27 +174,75 @@
   grid-template-rows: auto;
   grid-template-areas: "ac       ac       initiative initiative  speed       speed" "hp       hp       hp         hp          hp          hp" "hit-dice hit-dice hit-dice   death-saves death-saves death-saves";
   grid-gap: 5px;
+  align-self: start;
+}
+.character .combat .ac,
+.character .combat .initiative,
+.character .combat .speed {
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+  font-size: 28px;
 }
 .character .combat .ac {
   grid-area: ac;
-  border: solid lightgrey;
-  border-radius: 4px;
+  position: relative;
+  padding-bottom: 10.5px;
+}
+.character .combat .ac::after {
+  content: "Armor Class";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
 .character .combat .initiative {
   grid-area: initiative;
-  border: solid lightgrey;
-  border-radius: 4px;
+  position: relative;
+  padding-bottom: 10.5px;
+}
+.character .combat .initiative::after {
+  content: "Initiative";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 .character .combat .speed {
   grid-area: speed;
-  border: solid lightgrey;
-  border-radius: 4px;
+  position: relative;
+  padding-bottom: 10.5px;
+}
+.character .combat .speed::after {
+  content: "Speed";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 .character .combat .hp {
   grid-area: hp;
   border: solid lightgrey;
   border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 10.5px;
+}
+.character .combat .hp::after {
+  content: "Current Hit Points";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 .character .combat .hp .max {
   height: 4em;
@@ -205,4 +253,43 @@
 }
 .character .combat .hit-dice {
   grid-area: hit-dice;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 10.5px;
+  height: 4em;
+}
+.character .combat .hit-dice::after {
+  content: "Hit Dice";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.character .combat .death-saves {
+  grid-area: death-saves;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 10.5px;
+  height: 4em;
+}
+.character .combat .death-saves::after {
+  content: "Death Saves";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.character .features {
+  grid-area: features;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
 }
