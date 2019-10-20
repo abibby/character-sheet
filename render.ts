@@ -1,4 +1,5 @@
 import Character, { Stats, Stat, Skills, mod, LimitedFeature } from "./character"
+import { Entry, findClass, findSpell, Components, Duration } from "./5etools"
 
 
 async function html(strings: TemplateStringsArray, ...parts: unknown[]): Promise<string> {
@@ -100,6 +101,7 @@ export async function render(c: Character): Promise<string> {
         ${items(c)}
         ${features(c)}
     </div>
+    ${spells(c.spells)}
 </body>
 </html>
 `
@@ -228,7 +230,79 @@ async function items(c: Character): Promise<string> {
 async function features(c: Character): Promise<string> {
     return html`
     <section class="features">
-        ${c.features.map(f => html`<div>${f}</div>`)}
+        ${c.features.map(feature)}
     </section>
     `
+}
+async function feature(f: string): Promise<string> {
+    return html`<div>${f}</div>`
+}
+
+async function spells(s: string[]): Promise<string> {
+    return html`<div class="spells">
+        ${s.map(spell)}
+    </div>`
+}
+async function spell(name: string): Promise<string> {
+    const s = await findSpell(name)
+    if (s === undefined) {
+        return html`<div>${name}</div>`
+    }
+    return html`<div class="spell">
+        <section>
+            <h1>${s.name}</h1>
+            
+            <b>Cast Time:</b>
+            ${s.time.map(t => html`${t.number} ${t.unit}`)}
+            <br/>
+            <b>Range:</b>
+            ${s.range.distance.amount} ${s.range.distance.type}
+            <br/>
+            <b>Components:</b>
+            ${components(s.components)}    
+            <br/>
+            <b>Duration:</b>
+            ${duration(s.duration)}
+        </section>
+        ${s.entries.map(entry)}
+    </div>`
+}
+
+function components(cs: Components): string {
+    return Object.entries(cs).map(([comp, extra]) => {
+        let e = ''
+        if (typeof extra === 'object') {
+            e = ": " + extra.text
+        }
+        return comp.toUpperCase() + e
+    }).join(', ')
+}
+
+function duration(ds: Duration[]): string {
+    return ds.map((d): string => {
+        switch (d.type) {
+            case 'instant':
+                return 'Instant'
+            case 'timed':
+                let out = ''
+                if (d.concentration !== undefined) {
+                    out += 'Concentration, '
+                }
+                out += d.duration.amount + ' ' + d.duration.type
+                if (d.duration.amount !== 1) {
+                    out += 's'
+                }
+                return out
+        }
+    }).join(', ')
+}
+
+async function entry(e: Entry): Promise<string> {
+    if (typeof e === 'string') {
+        return html`<p>${e}</p>`
+    }
+    if (e.type === 'entries') {
+        return e.entries.map(entry).join('')
+    }
+    return ''
 }

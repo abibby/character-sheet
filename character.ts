@@ -1,3 +1,5 @@
+import { findClass, Class } from "./5etools"
+
 export class Level {
     private classMap = new Map<string, number>()
     public add(className: string): void {
@@ -42,7 +44,7 @@ export class Stat {
 
 type Bonus = (c: Character) => void
 
-export interface Stats<T> {
+export interface Stats<T = number> {
     str: T
     dex: T
     con: T
@@ -209,8 +211,9 @@ export default class Character {
         this.skillProficiency.push(skill)
     }
 
-    public levelUp(className: string, bonus: Bonus): void {
-        this.level.add(className)
+    public levelUp(c: Class, bonus: Bonus): void {
+        this.level.add(c.name)
+        this.addHitDie(c.hd.faces)
         this.applyBonus(bonus)
     }
 

@@ -2,21 +2,21 @@
 body {
   -webkit-print-color-adjust: exact !important;
 }
+@media screen {
+  body {
+    width: 8in;
+  }
+}
 
 .character {
   font-family: "Ubuntu", sans-serif;
   font-size: 14px;
   display: grid;
   grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
-  grid-template-areas: "header header header           header" "stats  prof   combat           items" "stats  skills combat           items" "stats  skills limited-features features" ".      .      .                features";
+  grid-template-areas: "header header header           header" "stats  prof   combat           items" "stats  skills combat           items" "stats  skills combat           features" "stats  skills limited-features features";
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   line-height: 1.3;
-}
-@media screen {
-  .character {
-    width: 8in;
-  }
 }
 .character header {
   grid-area: header;
@@ -364,4 +364,13 @@ body {
   background-color: white;
   left: 0;
   padding-top: 5px;
+}
+
+.spells {
+  grid-area: spells;
+  column-count: 2;
+  page-break-before: always;
+}
+.spells .spell {
+  page-break-inside: avoid;
 }

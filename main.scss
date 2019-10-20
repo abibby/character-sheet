@@ -36,6 +36,9 @@ $line-height: 1.3;
 }
 body {
     -webkit-print-color-adjust: exact !important;
+    @media screen {
+        width: 8in;
+    }
 }
 .character {
     font-family: "Ubuntu", sans-serif;
@@ -47,16 +50,11 @@ body {
         "header header header           header"
         "stats  prof   combat           items"
         "stats  skills combat           items"
-        "stats  skills limited-features features"
-        ".      .      .                features";
+        "stats  skills combat           features"
+        "stats  skills limited-features features";
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     line-height: $line-height;
-
-    @media screen {
-        width: 8in;
-        // height: 10.5in;
-    }
 
     header {
         grid-area: header;
@@ -260,5 +258,14 @@ body {
         @include border;
         @include lined;
         @include bottom-text("Features");
+    }
+}
+
+.spells {
+    grid-area: spells;
+    column-count: 2;
+    page-break-before: always;
+    .spell {
+        page-break-inside: avoid;
     }
 }
