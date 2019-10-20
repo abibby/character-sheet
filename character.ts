@@ -93,6 +93,12 @@ export const SkillsMap: Readonly<Skills<keyof Stats<number>>> = {
     'survival': 'wis',
 }
 
+export interface LimitedFeature {
+    name: string
+    uses: number
+    recharge: string
+}
+
 export default class Character {
     public name: string = ''
     public background: string = ''
@@ -113,7 +119,8 @@ export default class Character {
     }
 
     public readonly spells: string[] = []
-    public readonly classFeatures: string[] = []
+    public readonly features: string[] = []
+    public readonly limitedFeatures: LimitedFeature[] = []
     public readonly items: string[] = []
 
     private skillProficiency: Array<keyof Skills<number>> = []
@@ -160,6 +167,14 @@ export default class Character {
             + this.hitDice.slice(1).reduce((total, die) => total + (die / 2 + 1), 0)
     }
 
+    public get spellSaveDC(): number {
+        return 0
+    }
+    public get spellAttackMod(): number {
+        return 0
+    }
+
+
     public setRace(race: string, bonus: Bonus): void {
         this.race = race
         this.applyBonus(bonus)
@@ -205,8 +220,23 @@ export default class Character {
         this.spells.push(spell)
     }
 
-    public addClassFeature(feature: string) {
-        this.classFeatures.push(feature)
+    public addFeature(feature: string) {
+        this.features.push(feature)
+    }
+    public addLimitedFeature(name: string, uses: number, recharge: string) {
+        this.limitedFeatures.push({
+            name: name,
+            uses: uses,
+            recharge: recharge,
+        })
+    }
+    public updateLimitedFeature(name: string, feature: Partial<LimitedFeature>) {
+        for (const f of this.limitedFeatures) {
+            if (f.name !== name) {
+                continue
+            }
+            Object.assign(f, feature)
+        }
     }
     public addItem(item: string, bonus: Bonus) {
         this.items.push(item)

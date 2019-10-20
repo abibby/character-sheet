@@ -1,0 +1,3 @@
+[submodule "TheGiddyLimit.github.io"]
+	path = TheGiddyLimit.github.io
+	url = git@github.com:TheGiddyLimit/TheGiddyLimit.github.io.git

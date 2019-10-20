@@ -1,0 +1,19 @@
+{
+  "name": "character-sheet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example.ts",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwzn/character-sheet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zwzn/character-sheet/issues"
+  },
+  "homepage": "https://github.com/zwzn/character-sheet#readme"
+}

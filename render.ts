@@ -1,4 +1,4 @@
-import Character, { Stats, Stat, Skills, mod } from "./character"
+import Character, { Stats, Stat, Skills, mod, LimitedFeature } from "./character"
 
 
 async function html(strings: TemplateStringsArray, ...parts: unknown[]): Promise<string> {
@@ -96,13 +96,14 @@ export async function render(c: Character): Promise<string> {
         ${stats(c.stats)}
         ${skills(c.skills)}
         ${combat(c)}
+        ${limitedFeatures(c.limitedFeatures)}
+        ${items(c)}
         ${features(c)}
     </div>
 </body>
 </html>
 `
 }
-
 async function stats(s: Stats<Stat>): Promise<string> {
     return html`
     <section class="stats">
@@ -190,10 +191,44 @@ async function combat(c: Character): Promise<string> {
     `
 }
 
+async function limitedFeatures(features: LimitedFeature[]): Promise<string> {
+    return html`
+    <section class="limited-features">
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Max</th>
+                    <th>Recover</th>
+                    <th>Used</th>
+                </tr>
+            </thead>
+            <tbody>    
+                ${features.map(f => html`
+                    <tr>
+                        <td>${f.name}</td>
+                        <td>${f.uses}</td>
+                        <td>${f.recharge}</td>
+                        <td></td>
+                    </tr>
+                `)}
+            </tbody>
+        </table>
+    </section>
+    `
+}
+async function items(c: Character): Promise<string> {
+    return html`
+    <section class="items">
+        ${c.items.map(f => html`<div>${f}</div>`)}
+    </section>
+    `
+}
+
 async function features(c: Character): Promise<string> {
     return html`
     <section class="features">
-        ${c.classFeatures.map(f => html`<div>${f}</div>`)}
+        ${c.features.map(f => html`<div>${f}</div>`)}
     </section>
     `
 }
