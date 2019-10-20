@@ -178,7 +178,7 @@ async function combat(c: Character): Promise<string> {
     return html`
     <section class="combat">
         <div class="ac">${c.ac}</div>
-        <div class="initiative">${c.initiative}</div>
+        <div class="initiative">${sign(c.initiative)}</div>
         <div class="speed">${c.speed}ft</div>
         <div class="hp">
             <div class="max">${c.maxHP}</div>

@@ -28,6 +28,12 @@ import { findSpell, findClass } from "./5etools"
 
         c.speed = 30
     });
+
+    char.setBackground('Acolyte', c => {
+        c.addSkillProficiency('insight')
+        c.addSkillProficiency('religion')
+    })
+
     await findSpell('')
     const cleric = await findClass('Cleric')
     if (cleric === undefined) {
@@ -37,7 +43,7 @@ import { findSpell, findClass } from "./5etools"
 
     // https://5e.tools/classes.html#cleric_phb,sub:life%20domain~phb
     char.levelUp(cleric, c => { // 1
-        c.addSkillProficiency('insight')
+        c.addSkillProficiency('history')
         c.addSkillProficiency('medicine')
 
         c.addFeature('Turn Undead')
@@ -90,8 +96,7 @@ import { findSpell, findClass } from "./5etools"
         c.addFeature('Destroy Undead (CR 2)')
     })
     char.levelUp(cleric, c => { // 12
-        c.stats.str.add(1)
-        c.stats.con.add(1)
+        c.stats.con.add(2)
     })
 
     char.addItem('Plate Armor', c => {
@@ -102,8 +107,9 @@ import { findSpell, findClass } from "./5etools"
         c.addAC(1)
     })
 
-    render(char).then(htm => fs.writeFile('index.html', htm))
+    char.addItem('Warhammer', c => { })
+    char.addItem('Holy Symbol', c => { })
 
-    // findSpell('Revivify').then(console.log)
-    // .then(console.log)
+
+    await fs.writeFile('index.html', await render(char))
 })()
