@@ -176,6 +176,7 @@ export default class Character {
         return 0
     }
 
+    public feats: string[] = []
 
     public setRace(race: string, bonus: Bonus): void {
         this.race = race
@@ -247,6 +248,11 @@ export default class Character {
         this.applyBonus(bonus)
     }
 
+    public addFeat(name: string, bonus: Bonus) {
+        this.feats.push(name)
+
+        this.applyBonus(bonus)
+    }
     private applyBonus(bonus: Bonus): void {
         bonus(this)
     }

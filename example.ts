@@ -10,11 +10,11 @@ import { findSpell, findClass } from "./5etools"
 
     char.setStats({
         str: 13,
-        dex: 12,
+        dex: 10,
         con: 14,
-        int: 8,
+        int: 12,
         wis: 15,
-        cha: 10,
+        cha: 8,
     })
 
     char.setRace('Firbolg', c => {
@@ -96,18 +96,23 @@ import { findSpell, findClass } from "./5etools"
         c.addFeature('Destroy Undead (CR 2)')
     })
     char.levelUp(cleric, c => { // 12
-        c.stats.con.add(2)
+        // c.stats.con.add(2)
+        c.addFeat('Shield Master', c => { })
     })
 
-    char.addItem('Plate Armor', c => {
-        c.setAC(18)
+    char.addItem('Shining Plate Armor', c => {
+        c.setAC(18 + 1)
     })
 
-    char.addItem('Light Shied', c => {
-        c.addAC(1)
+    char.addItem('Shied', c => {
+        c.addAC(2)
+    })
+    char.addItem('Shied', c => {
+        c.addAC(2)
     })
 
-    char.addItem('Warhammer', c => { })
+    char.addItem('Light Hammer', c => { })
+    char.addItem('Sickle', c => { })
     char.addItem('Holy Symbol', c => { })
 
 
