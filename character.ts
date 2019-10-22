@@ -53,7 +53,7 @@ export interface Stats<T = number> {
     cha: T
 }
 
-export interface Skills<T> {
+export interface Skills<T = number> {
     'acrobatics': T
     'animal handling': T
     'arcana': T
@@ -208,8 +208,11 @@ export default class Character {
         this.hitDice.push(hitDie)
     }
 
-    public addSkillProficiency(skill: keyof Skills<number>) {
+    public addSkillProficiency(skill: keyof Skills) {
         this.skillProficiency.push(skill)
+    }
+    public isProficient(skill: keyof Skills): boolean {
+        return this.skillProficiency.includes(skill)
     }
 
     public levelUp(c: Class, bonus: Bonus): void {

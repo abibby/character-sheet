@@ -34,12 +34,15 @@ $line-height: 1.3;
     background-image: linear-gradient(lightgrey 1px, transparent 0);
     background-size: 100% #{$line-height * 1em};
 }
+
 body {
     -webkit-print-color-adjust: exact !important;
+
     @media screen {
         width: 8in;
     }
 }
+
 .character {
     font-family: "Ubuntu", sans-serif;
     font-size: $font-size;
@@ -48,7 +51,7 @@ body {
     // grid-template-rows: 64px 64px 128px 256px;
     grid-template-areas:
         "header header header           header"
-        "stats  prof   combat           items"
+        "stats  saves  combat           items"
         "stats  skills combat           items"
         "stats  skills combat           features"
         "stats  skills limited-features features";
@@ -70,6 +73,7 @@ body {
         @mixin title($title) {
             position: relative;
             height: ($font-size + $small-font-size) * $line-height + 3px;
+
             &::after {
                 content: $title;
                 display: block;
@@ -86,31 +90,37 @@ body {
             grid-area: name;
             font-size: $large-font-size;
         }
+
         .class-level {
             grid-area: class;
 
             @include title("Class & Level");
         }
+
         .background {
             grid-area: bkg;
 
             @include title("Background");
         }
+
         .player-name {
             grid-area: player-name;
 
             @include title("Player Name");
         }
+
         .race {
             grid-area: race;
 
             @include title("Race");
         }
+
         .alignment {
             grid-area: alignment;
 
             @include title("Alignment");
         }
+
         .xp {
             grid-area: xp;
 
@@ -142,11 +152,13 @@ body {
                 font-variant: small-caps;
                 font-size: $small-font-size;
             }
+
             .bonus {
                 display: block;
 
                 font-size: $large-font-size;
             }
+
             .value {
                 display: block;
             }
@@ -157,15 +169,19 @@ body {
         grid-area: skills;
 
         @include border;
+        @include bottom-text('Skills');
         line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         .value {
             display: inline-block;
             width: 4ch;
             text-align: right;
         }
-        .title {
-        }
+
+        .title {}
     }
 
     .combat {
@@ -173,15 +189,18 @@ body {
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1.5fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "ac       ac       initiative initiative  speed       speed"
-            "hp       hp       hp         hp          hp          hp"
+            "max-hp   max-hp   ac         ac          prof-bonus  prof-bonus"
+            "hp       hp       hp         hp          initiative  initiative"
+            "hp       hp       hp         hp          speed       speed"
             "hit-dice hit-dice hit-dice   death-saves death-saves death-saves";
 
-        grid-gap: 5px;
-        // align-self: start;
+        grid-gap: 10px;
 
+        // align-self: start;
+        .max-hp,
+        .prof-bonus,
         .ac,
         .initiative,
         .speed {
@@ -189,35 +208,50 @@ body {
             text-align: center;
             font-size: $large-font-size;
         }
+
         .ac {
             grid-area: ac;
             @include bottom-text("Armor Class");
         }
+
         .initiative {
             grid-area: initiative;
             @include bottom-text("Initiative");
         }
+
         .speed {
             grid-area: speed;
             @include bottom-text("Speed");
         }
+
         .hp {
             grid-area: hp;
 
             @include border;
             @include bottom-text("Current Hit Points");
-
-            .max::before {
-                color: lightgrey;
-                content: "Hit Point Maximum ";
-            }
         }
+
+        .max-hp {
+            grid-area: max-hp;
+
+            @include border;
+            @include bottom-text("Maximum Hit Points");
+        }
+
+        .prof-bonus {
+            grid-area: prof-bonus;
+
+            @include border;
+            @include bottom-text("Proficiency Bonus");
+        }
+
         .hit-dice {
             grid-area: hit-dice;
 
             @include border;
             @include bottom-text("Hit Dice");
         }
+
         .death-saves {
             grid-area: death-saves;
 
@@ -225,16 +259,23 @@ body {
             @include bottom-text("Death Saves");
         }
     }
+
     .limited-features {
         grid-area: limited-features;
+
+        @include border;
+        @include bottom-text('Limited Features');
+
         table {
             border-collapse: collapse;
+
             th {
                 font-size: $small-font-size;
                 text-align: left;
                 font-weight: inherit;
                 color: lightgray;
             }
+
             tbody {
                 tr:not(:last-child) {
                     td {
@@ -244,6 +285,7 @@ body {
             }
         }
     }
+
     .items {
         grid-area: items;
 
@@ -265,7 +307,28 @@ body {
     grid-area: spells;
     column-count: 2;
     page-break-before: always;
+
     .spell {
         page-break-inside: avoid;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+.row {
+    @include clearfix;
+}
+
+@for $i from 1 to 12 {
+    .col-#{$i} {
+        @include clearfix;
+        width: $i / 12 * 100%;
+        float: left;
     }
 }

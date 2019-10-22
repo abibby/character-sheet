@@ -1,9 +1,9 @@
-import { promises as fs } from "fs"
+import { readFileSync } from "fs"
 import { join } from "path"
 
 function path(...parts: string[]): string {
     return join(__dirname, '../TheGiddyLimit.github.io/data', ...parts)
 }
-export async function readJSON(...parts: string[]): Promise<any> {
-    return JSON.parse((await fs.readFile(path(...parts))).toString())
+export function readJSON(...parts: string[]): any {
+    return JSON.parse(readFileSync(path(...parts)).toString())
 }

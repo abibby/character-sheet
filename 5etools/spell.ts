@@ -59,19 +59,18 @@ export interface Spell {
 }
 
 let spellCache: Spell[] | undefined
-async function allSpells(): Promise<Spell[]> {
+function allSpells(): Spell[] {
     if (spellCache === undefined) {
         spellCache = []
-        const index: string[] = Object.values(await readJSON('spells', 'index.json'))
+        const index: string[] = Object.values(readJSON('spells', 'index.json'))
         for (const file of index) {
-            const result: { spell: Spell[] } = await readJSON('spells', file)
+            const result: { spell: Spell[] } = readJSON('spells', file)
             spellCache = spellCache.concat(result.spell)
         }
     }
     return spellCache
 }
-
-export async function findSpell(name: string): Promise<Spell | undefined> {
-    const spells = await allSpells()
+export function findSpell(name: string): Spell | undefined {
+    const spells = allSpells()
     return spells.find(spell => spell.name === name)
 }

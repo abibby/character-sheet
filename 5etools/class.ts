@@ -44,17 +44,17 @@ export interface Class {
 
 let classCache: Class[] | undefined
 
-async function allClasses(): Promise<Class[]> {
+function allClasses(): Class[] {
     if (classCache === undefined) {
         classCache = []
-        const index: string[] = Object.values(await readJSON('class', 'index.json'))
+        const index: string[] = Object.values(readJSON('class', 'index.json'))
         for (const file of index) {
-            const result: { class: Class[] } = await readJSON('class', file)
+            const result: { class: Class[] } = readJSON('class', file)
             classCache = classCache.concat(result.class)
         }
     }
     return classCache
 }
-export async function findClass(name: string): Promise<Class | undefined> {
-    return (await allClasses()).find(c => c.name === name)
+export function findClass(name: string): Class | undefined {
+    return (allClasses()).find(c => c.name === name)
 }
