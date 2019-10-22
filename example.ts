@@ -9,10 +9,10 @@ import { findSpell, findClass } from "./5etools"
     char.playerName = 'Adam Bibby'
 
     char.setStats({
-        str: 13,
+        str: 12,
         dex: 10,
         con: 14,
-        int: 12,
+        int: 13,
         wis: 15,
         cha: 8,
     })
@@ -97,7 +97,7 @@ import { findSpell, findClass } from "./5etools"
     })
     char.levelUp(cleric, c => { // 12
         // c.stats.con.add(2)
-        c.addFeat('Shield Master', c => { })
+        c.addFeat('War Caster', c => { })
     })
 
     char.addItem('Shining Plate Armor', c => {

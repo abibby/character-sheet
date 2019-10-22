@@ -259,5 +259,5 @@ export default class Character {
 }
 
 export function mod(num: number): number {
-    return Math.floor((num - 10) / 2)
+    return Math.ceil((num - 10) / 2)
 }
