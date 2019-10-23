@@ -1,8 +1,7 @@
 import Character from "./character"
 import { render } from "./render"
 import { promises as fs } from 'fs'
-import { findSpell, findClass } from "./5etools"
-import { exit } from "process";
+import { findClass } from "./5etools"
 const char = new Character()
 
 char.name = 'Mark Karlson'
@@ -113,32 +112,41 @@ char.addItem('Light Hammer', c => { })
 char.addItem('Sickle', c => { })
 char.addItem('Holy Symbol', c => { })
 
+// Cantrips
 char.addSpell('Guidance')
 char.addSpell('Light')
 char.addSpell('Spare the Dying')
 char.addSpell('Thaumaturgy')
 char.addSpell('Toll the Dead')
 
+// Level 1
 char.addSpell('Ceremony')
 char.addSpell('Healing Word')
 char.addSpell('Sanctuary')
 char.addSpell('Shield of Faith')
-char.addSpell('Blindness/Deafness')
 
+// Level 2
+char.addSpell('Blindness/Deafness')
 char.addSpell('Silence')
 char.addSpell('Beacon of Hope')
-char.addSpell('Mass Healing Word')
 char.addSpell('Zone of Truth')
+
+// Level 3
+char.addSpell('Mass Healing Word')
 char.addSpell('Water Walk')
 
+// Level 4
 char.addSpell('Control Water')
 char.addSpell('Death Ward')
 char.addSpell('Guardian of Faith')
 char.addSpell('Stone Shape')
-char.addSpell('Flame Strike')
 
+// Level 5
+char.addSpell('Flame Strike')
 char.addSpell('Greater Restoration')
 char.addSpell('Holy Weapon')
+
+// Level 6
 char.addSpell('Harm')
 char.addSpell('Planar Ally')
 
