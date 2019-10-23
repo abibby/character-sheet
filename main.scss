@@ -165,12 +165,31 @@ body {
         }
     }
 
+    .saves {
+        grid-area: saves;
+
+        @include border;
+        @include bottom-text('Saves');
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .save {
+            .value {
+                display: inline-block;
+                width: 4ch;
+                text-align: right;
+            }
+
+            .title {}
+        }
+    }
+
     .skills {
         grid-area: skills;
 
         @include border;
         @include bottom-text('Skills');
-        line-height: 1.4;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -281,6 +300,11 @@ body {
                     td {
                         border-bottom: solid 1px lightgray;
                     }
+                }
+
+                .used {
+                    padding-left: 2ch;
+                    white-space: nowrap;
                 }
             }
         }

@@ -42,6 +42,8 @@ if (cleric === undefined) {
 char.levelUp(cleric, c => { // 1
     c.addSkillProficiency('history')
     c.addSkillProficiency('medicine')
+    c.addSaveProficiency('wis')
+    c.addSaveProficiency('cha')
 
     c.addFeature('Turn Undead')
 

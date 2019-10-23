@@ -74,6 +74,15 @@ export interface Skills<T = number> {
     'survival': T
 }
 
+export const StatMap: Readonly<Stats<string>> = {
+    str: 'Strength',
+    dex: 'Dexterity',
+    con: 'Constitution',
+    int: 'Intelligence',
+    wis: 'Wisdom',
+    cha: 'Charisma',
+}
+
 export const SkillsMap: Readonly<Skills<keyof Stats<number>>> = {
     'acrobatics': 'dex',
     'animal handling': 'wis',
@@ -119,20 +128,30 @@ export default class Character {
         wis: new Stat(),
         cha: new Stat(),
     }
+    public get saves(): Stats {
+        return Object.fromEntries(
+            Object.keys(StatMap)
+                .map((stat: keyof Stats) => [
+                    stat,
+                    this.stats[stat].mod() + Number(this.saveIsProficient(stat)) * this.proficiencyBonus,
+                ])
+        ) as any
+    }
 
     public readonly spells: string[] = []
     public readonly features: string[] = []
     public readonly limitedFeatures: LimitedFeature[] = []
     public readonly items: string[] = []
 
-    private skillProficiency: Array<keyof Skills<number>> = []
+    private skillProficiency: Array<keyof Skills> = []
+    private saveProficiency: Array<keyof Stats> = []
 
     public get skills(): Skills<number> {
         return Object.fromEntries(
             Object.entries(SkillsMap)
                 .map(([skill, stat]) => [
                     skill,
-                    mod(this.stats[stat].get()) + (this.skillProficiency.filter(p => p === skill).length * this.proficiencyBonus),
+                    this.stats[stat].mod() + (this.skillProficiency.filter(p => p === skill).length * this.proficiencyBonus),
                 ])
         ) as any
     }
@@ -213,6 +232,13 @@ export default class Character {
     }
     public isProficient(skill: keyof Skills): boolean {
         return this.skillProficiency.includes(skill)
+    }
+
+    public addSaveProficiency(save: keyof Stats) {
+        this.saveProficiency.push(save)
+    }
+    public saveIsProficient(skill: keyof Stats): boolean {
+        return this.saveProficiency.includes(skill)
     }
 
     public levelUp(c: Class, bonus: Bonus): void {

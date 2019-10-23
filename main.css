@@ -162,6 +162,34 @@ body {
 .character .stats .stat .value {
   display: block;
 }
+.character .saves {
+  grid-area: saves;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.character .saves::after {
+  content: "Saves";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .saves .save .value {
+  display: inline-block;
+  width: 4ch;
+  text-align: right;
+}
 .character .skills {
   grid-area: skills;
   border: solid lightgrey;
@@ -169,7 +197,6 @@ body {
   padding: 4px;
   position: relative;
   padding-bottom: 15.5px;
-  line-height: 1.4;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -392,6 +419,10 @@ body {
 }
 .character .limited-features table tbody tr:not(:last-child) td {
   border-bottom: solid 1px lightgray;
+}
+.character .limited-features table tbody .used {
+  padding-left: 2ch;
+  white-space: nowrap;
 }
 .character .items {
   grid-area: items;

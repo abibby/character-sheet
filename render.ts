@@ -1,4 +1,4 @@
-import Character, { Stats, Stat, Skills, mod, LimitedFeature } from "./character"
+import Character, { Stats, Stat, Skills, mod, LimitedFeature, StatMap } from "./character"
 import { Entry, findClass, findSpell, Components, Duration, Spell } from "./5etools"
 
 
@@ -94,6 +94,7 @@ export async function render(c: Character): Promise<string> {
             <div class="xp">${c.xp}</div>
         </header>
         ${stats(c.stats)}
+        ${saves(c.saves)}
         ${skills(c)}
         ${combat(c)}
         ${limitedFeatures(c.limitedFeatures)}
@@ -125,10 +126,35 @@ async function stat(s: Stat, title: string): Promise<string> {
             ${title}
         </span>
         <span class="bonus">
-            ${sign(mod(s.get()))}
+            ${sign(s.mod())}
         </span>
         <span class="value">
             ${s}
+        </span>
+    </div>
+    `
+}
+
+async function saves(s: Stats): Promise<string> {
+    return html`
+    <section class="saves">
+        ${save(s.str, 'str')}
+        ${save(s.dex, 'dex')}
+        ${save(s.con, 'con')}
+        ${save(s.int, 'int')}
+        ${save(s.wis, 'wis')}
+        ${save(s.cha, 'cha')}
+    </section>
+    `
+}
+async function save(s: number, title: keyof Stats): Promise<string> {
+    return html`
+    <div class="save">
+        <span class="value">
+            ${sign(s)}
+        </span>
+        <span class="title">
+            ${StatMap[title]}
         </span>
     </div>
     `
@@ -197,7 +223,6 @@ async function limitedFeatures(features: LimitedFeature[]): Promise<string> {
             <thead>
                 <tr>
                     <th>Feature</th>
-                    <th>Max</th>
                     <th>Recover</th>
                     <th>Used</th>
                 </tr>
@@ -206,9 +231,8 @@ async function limitedFeatures(features: LimitedFeature[]): Promise<string> {
                 ${features.map(f => html`
                 <tr>
                     <td>${f.name}</td>
-                    <td>${f.uses}</td>
                     <td>${f.recharge}</td>
-                    <td></td>
+                    <td class="used"> / ${f.uses}</td>
                 </tr>
                 `)}
             </tbody>
