@@ -1,5 +1,7 @@
-const { Character } = require("../dist")
+import { Character } from "../dist"
 const char = new Character()
+
+// @ts-check
 
 char.name = 'Mark Karlson'
 char.playerName = 'Adam Bibby'
@@ -61,7 +63,9 @@ char.levelUp('Cleric', c => { // 5
 })
 char.levelUp('Cleric', c => { // 6
     c.addFeature('Blessed Healer')
-    c.updateLimitedFeature('Channel Divinity: Preserve Life', { uses: 2 })
+    c.updateLimitedFeature('Channel Divinity: Preserve Life', {
+        uses: 2
+    })
 })
 char.levelUp('Cleric', c => { // 7
     c.addSpell('Death Ward')
@@ -101,7 +105,14 @@ char.addItem('Shied', c => {
     c.addAC(2)
 })
 
-char.addItem('Light Hammer', c => { })
+char.addItem('Light Hammer', c => {
+    c.addAttack({
+        name: 'Light Hammer',
+        damage: () => `1d6 + ${c.stats.str.mod()}`,
+        type: 'attack',
+        attackBonus: () => c.stats.str.mod() + c.proficiencyBonus
+    })
+})
 char.addItem('Sickle', c => { })
 char.addItem('Holy Symbol', c => { })
 
@@ -111,6 +122,13 @@ char.addSpell('Light')
 char.addSpell('Spare the Dying')
 char.addSpell('Thaumaturgy')
 char.addSpell('Toll the Dead')
+char.addAttack({
+    name: 'Toll the Dead',
+    damage: () => `3d8 or 3d12 + ${char.stats.wis.mod()}`,
+    type: 'save',
+    save: 'wis',
+    saveDC: () => char.spellSaveDC,
+})
 
 // Level 1
 char.addSpell('Ceremony')

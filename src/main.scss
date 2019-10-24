@@ -48,6 +48,7 @@ body {
     h1 {
         font-size: 1.5em;
     }
+
     h2 {
         font-size: 1.25em;
     }
@@ -58,11 +59,11 @@ body {
     grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
     // grid-template-rows: 64px 64px 128px 256px;
     grid-template-areas:
-        "header header header           header"
-        "stats  saves  combat           items"
-        "stats  skills combat           items"
-        "stats  skills combat           features"
-        "stats  skills limited-features features";
+        "header  header  header           header"
+        "stats   saves   combat           items"
+        "stats   skills  combat           items"
+        "stats   skills  limited-features features"
+        "attacks attacks attacks          features";
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     line-height: $line-height;
@@ -189,8 +190,7 @@ body {
                 text-align: right;
             }
 
-            .title {
-            }
+            .title {}
         }
     }
 
@@ -209,8 +209,7 @@ body {
             text-align: right;
         }
 
-        .title {
-        }
+        .title {}
     }
 
     .combat {
@@ -295,29 +294,7 @@ body {
         @include border;
         @include bottom-text("Limited Features");
 
-        table {
-            border-collapse: collapse;
 
-            th {
-                font-size: $small-font-size;
-                text-align: left;
-                font-weight: inherit;
-                color: lightgray;
-            }
-
-            tbody {
-                tr:not(:last-child) {
-                    td {
-                        border-bottom: solid 1px lightgray;
-                    }
-                }
-
-                .used {
-                    padding-left: 2ch;
-                    white-space: nowrap;
-                }
-            }
-        }
     }
 
     .items {
@@ -335,14 +312,22 @@ body {
         @include lined;
         @include bottom-text("Features");
     }
+
+    .attacks {
+        grid-area: attacks;
+        @include border;
+
+        @include bottom-text("Attacks");
+    }
 }
 
 .lists {
     page-break-before: always;
 
     :not(:checked) {
-        + .spells,
-        + .feats {
+
+        +.spells,
+        +.feats {
             display: none;
         }
     }
@@ -363,22 +348,27 @@ body {
     }
 }
 
-@mixin clearfix {
-    &::after {
-        content: "";
-        clear: both;
-        display: table;
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th {
+        font-size: $small-font-size;
+        text-align: left;
+        font-weight: inherit;
+        color: lightgray;
     }
-}
 
-.row {
-    @include clearfix;
-}
+    tbody {
+        tr:not(:last-child) {
+            td {
+                border-bottom: solid 1px lightgray;
+            }
+        }
 
-@for $i from 1 to 12 {
-    .col-#{$i} {
-        @include clearfix;
-        width: $i / 12 * 100%;
-        float: left;
+        .used {
+            padding-left: 2ch;
+            white-space: nowrap;
+        }
     }
 }

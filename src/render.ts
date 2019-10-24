@@ -1,4 +1,4 @@
-import { Character, Stats, Stat, Skills, LimitedFeature, StatMap } from "."
+import { Character, Stats, Stat, Skills, LimitedFeature, StatMap, Attack } from "."
 import { Entry, findSpell, Components, Duration, Spell, findFeat, Feat } from "./5etools"
 import { promises as fs } from 'fs'
 import { join } from "path"
@@ -104,6 +104,7 @@ export async function render(c: Character): Promise<string> {
         ${limitedFeatures(c.limitedFeatures)}
         ${items(c)}
         ${features(c)}
+        ${attacks(c)}
     </div>
     <section class="lists">
         <h1>Feats</h1>
@@ -165,7 +166,7 @@ async function save(s: number, title: keyof Stats): Promise<string> {
             ${sign(s)}
         </span>
         <span class="title">
-            ${StatMap[title]}
+            ${titleCase(StatMap[title])}
         </span>
     </div>
     `
@@ -269,20 +270,55 @@ async function features(c: Character): Promise<string> {
 async function feature(f: string): Promise<string> {
     return html`<div>${f}</div>`
 }
+
+async function attacks(c: Character): Promise<string> {
+    return html`
+    <section class="attacks">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>To Hit</th>
+                    <th>Damage</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${c.attacks.map(attack)}
+            </tbody>
+        </table>
+    </section>
+    `
+}
+async function attack(a: Attack): Promise<string> {
+    let extra: Promise<string>
+    if (a.type === 'attack') {
+        extra = html`<td>${sign(a.attackBonus())} vs. AC</td>`
+    } else {
+        extra = html`<td>DC ${a.saveDC()} ${StatMap[a.save]} save</td>`
+    }
+
+    return html`
+        <tr>
+            <td>${a.name}</td>
+            ${extra}
+            <td>${a.damage()}</td>
+        </tr>
+        `
+}
 async function feats(c: Character): Promise<string> {
     return html`
     <div class="feats">
         ${c.feats
-            .map(findFeat)
-            .filter((f): f is Feat => f !== undefined)
-            .map(feat)}
+        .map(findFeat)
+        .filter((f): f is Feat => f !== undefined)
+        .map(feat)}
     </div>
     `
 }
 async function feat(f: Feat): Promise<string> {
     return html`
     <div class="feat">
-        <h2>${f.name}</h2>    
+        <h2>${f.name}</h2>
         ${f.entries.map(entry)}
     </div>
     `
@@ -291,10 +327,10 @@ async function spells(s: string[]): Promise<string> {
     return html`
     <div class="spells">
         ${s.map(findSpell)
-            .filter((spell): spell is Spell => spell !== undefined)
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .sort((a, b) => a.level - b.level)
-            .map(spell)}
+        .filter((spell): spell is Spell => spell !== undefined)
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .sort((a, b) => a.level - b.level)
+        .map(spell)}
     </div>
     `
 }

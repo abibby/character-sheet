@@ -81,12 +81,12 @@ export interface Skills<T = number> {
 }
 
 export const StatMap: Readonly<Stats<string>> = {
-    str: 'Strength',
-    dex: 'Dexterity',
-    con: 'Constitution',
-    int: 'Intelligence',
-    wis: 'Wisdom',
-    cha: 'Charisma',
+    str: 'strength',
+    dex: 'dexterity',
+    con: 'constitution',
+    int: 'intelligence',
+    wis: 'wisdom',
+    cha: 'charisma',
 }
 
 export const SkillsMap: Readonly<Skills<keyof Stats<number>>> = {
@@ -115,6 +115,20 @@ export interface LimitedFeature {
     uses: number
     recharge: string
 }
+export type Lazy<T> = () => T
+
+export type Attack = {
+    name: string
+    damage: Lazy<string>
+} &
+    ({
+        type: 'attack',
+        attackBonus: Lazy<number>
+    } | {
+        type: 'save'
+        save: keyof Stats
+        saveDC: Lazy<number>
+    })
 
 export class Character {
     public name: string = ''
@@ -195,13 +209,14 @@ export class Character {
     }
 
     public get spellSaveDC(): number {
-        return 0
+        return 8 + this.proficiencyBonus + this.stats.wis.mod()
     }
     public get spellAttackMod(): number {
         return 0
     }
 
     public feats: string[] = []
+    public attacks: Attack[] = []
 
     public setRace(race: string, bonus: Bonus): void {
         this.race = race
@@ -292,9 +307,13 @@ export class Character {
         this.applyBonus(bonus)
     }
 
-    public async save() {
+    public addAttack(attack: Attack): void {
+        this.attacks.push(attack)
+    }
 
-        await fs.writeFile('index.html', await render(this))
+    public async save(file: string) {
+
+        await fs.writeFile(file, await render(this))
         console.log('Character Generated');
 
     }

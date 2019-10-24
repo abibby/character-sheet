@@ -4,14 +4,11 @@
         "noImplicitAny": true,
         "moduleResolution": "node",
         "target": "es5",
-        "allowJs": true,
-        "jsx": "preserve",
-        "experimentalDecorators": true,
-        "baseUrl": "./",
         "strictNullChecks": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "outDir": "dist",
+        "declaration": true,
         "lib": [
             "es2019.object"
         ]
