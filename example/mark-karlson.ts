@@ -108,12 +108,20 @@ char.addItem('Shied', c => {
 char.addItem('Light Hammer', c => {
     c.addAttack({
         name: 'Light Hammer',
-        damage: () => `1d6 + ${c.stats.str.mod()}`,
+        damage: () => `1d4 + ${c.stats.str.mod()}`,
+        type: 'attack',
+        attackBonus: () => c.stats.str.mod() + c.proficiencyBonus,
+        range: '20/60',
+    })
+})
+char.addItem('Sickle', c => {
+    c.addAttack({
+        name: 'Sickle',
+        damage: () => `1d4 + ${c.stats.str.mod()}`,
         type: 'attack',
         attackBonus: () => c.stats.str.mod() + c.proficiencyBonus
     })
 })
-char.addItem('Sickle', c => { })
 char.addItem('Holy Symbol', c => { })
 
 // Cantrips
@@ -124,10 +132,11 @@ char.addSpell('Thaumaturgy')
 char.addSpell('Toll the Dead')
 char.addAttack({
     name: 'Toll the Dead',
-    damage: () => `3d8 or 3d12 + ${char.stats.wis.mod()}`,
+    damage: () => '3d8 or 3d12',
     type: 'save',
     save: 'wis',
     saveDC: () => char.spellSaveDC,
+    range: '60',
 })
 
 // Level 1

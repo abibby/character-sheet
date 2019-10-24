@@ -120,6 +120,7 @@ export type Lazy<T> = () => T
 export type Attack = {
     name: string
     damage: Lazy<string>
+    range?: string
 } &
     ({
         type: 'attack',

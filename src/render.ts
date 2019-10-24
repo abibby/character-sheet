@@ -278,6 +278,7 @@ async function attacks(c: Character): Promise<string> {
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Range</th>
                     <th>To Hit</th>
                     <th>Damage</th>
                 </tr>
@@ -300,6 +301,7 @@ async function attack(a: Attack): Promise<string> {
     return html`
         <tr>
             <td>${a.name}</td>
+            <td>${a.range}</td>
             ${extra}
             <td>${a.damage()}</td>
         </tr>
@@ -309,9 +311,9 @@ async function feats(c: Character): Promise<string> {
     return html`
     <div class="feats">
         ${c.feats
-        .map(findFeat)
-        .filter((f): f is Feat => f !== undefined)
-        .map(feat)}
+            .map(findFeat)
+            .filter((f): f is Feat => f !== undefined)
+            .map(feat)}
     </div>
     `
 }
@@ -327,10 +329,10 @@ async function spells(s: string[]): Promise<string> {
     return html`
     <div class="spells">
         ${s.map(findSpell)
-        .filter((spell): spell is Spell => spell !== undefined)
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .sort((a, b) => a.level - b.level)
-        .map(spell)}
+            .filter((spell): spell is Spell => spell !== undefined)
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .sort((a, b) => a.level - b.level)
+            .map(spell)}
     </div>
     `
 }
