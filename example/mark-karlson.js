@@ -30,7 +30,6 @@ char.setBackground('Acolyte', c => {
     c.addSkillProficiency('religion')
 })
 
-// https://5e.tools/classes.html#cleric_phb,sub:life%20domain~phb
 char.levelUp('Cleric', c => { // 1
     c.addSkillProficiency('history')
     c.addSkillProficiency('medicine')

@@ -353,13 +353,17 @@ function duration(ds: Duration[]): string {
 
 async function entry(e: Entry): Promise<string> {
     if (typeof e === 'string') {
-        return html`<p>${e.replace(/{@\w+ (\w+)[^}]*}/g, (...args) => args[1])}</p>`
+        return html`<p>${extractTemplates(e)}</p>`
     }
     if (e.type === 'entries') {
         return html`${e.entries.map(entry)}`
     }
     if (e.type === 'list') {
-        return html`<ul>${e.items.map(item => html`<li>${item}</li>`)}</ul>`
+        return html`<ul>${e.items.map(item => html`<li>${extractTemplates(item)}</li>`)}</ul>`
     }
     return ''
+}
+
+function extractTemplates(str: string) {
+    return str.replace(/{@\w+ (\w+)[^}]*}/g, (_, match) => match)
 }
