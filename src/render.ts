@@ -107,8 +107,10 @@ export async function render(c: Character): Promise<string> {
     </div>
     <section class="lists">
         <h1>Feats</h1>
+        <input type="checkbox">
         ${feats(c)}
         <h1>Spells</h1>
+        <input type="checkbox">
         ${spells(c.spells)}
     </section>
 </body>

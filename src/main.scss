@@ -339,6 +339,14 @@ body {
 
 .lists {
     page-break-before: always;
+
+    :not(:checked) {
+        + .spells,
+        + .feats {
+            display: none;
+        }
+    }
+
     .spells,
     .feats {
         column-count: 2;
