@@ -1,69 +1,76 @@
-import { StatMap } from "./character";
-import { findSpell } from "./5etools";
-async function html(strings, ...parts) {
-    let out = '';
+import { Character, Stats, Stat, Skills, LimitedFeature, StatMap } from "."
+import { Entry, findSpell, Components, Duration, Spell, findFeat, Feat } from "./5etools"
+import { promises as fs } from 'fs'
+import { join } from "path"
+
+
+async function html(strings: TemplateStringsArray, ...parts: unknown[]): Promise<string> {
+    let out: string = ''
     for (let i = 0; i < strings.length; i++) {
-        out += strings[i] + await renderPart(parts[i]);
+        out += strings[i] + await renderPart(parts[i])
     }
-    return out;
+
+    return out
 }
-async function renderPart(part) {
+
+async function renderPart(part: unknown): Promise<string> {
     switch (typeof part) {
         case 'number':
         case 'bigint':
         case 'string':
-            return String(part);
+            return String(part)
         case 'boolean':
-            return part ? 'true' : 'false';
+            return part ? 'true' : 'false'
         case 'object':
             if (part === null) {
-                return '';
+                return ''
             }
-            return renderObject(part);
+            return renderObject(part)
         case 'symbol':
             return part.toString();
         case 'function':
-            return part();
+            return part()
         case 'undefined':
-            return '';
+            return ''
         default:
-            throw new Error('unsupported type ' + typeof part);
+            throw new Error('unsupported type ' + typeof part)
     }
 }
-async function renderObject(a) {
+async function renderObject(a: object): Promise<string> {
     if (a instanceof Promise) {
-        return renderPart(await a);
+        return renderPart(await a)
     }
     if (a instanceof Array) {
-        return (await Promise.all(a.map(renderPart))).join('');
+        return (await Promise.all(a.map(renderPart))).join('')
     }
-    return a.toString();
+    return a.toString()
 }
-function titleCase(s) {
-    let out = '';
-    let cap = true;
+
+function titleCase(s: string): string {
+    let out: string = ''
+    let cap = true
     for (const c of s) {
         if (cap) {
-            out += c.toUpperCase();
-            cap = false;
-        }
-        else {
-            out += c;
+            out += c.toUpperCase()
+            cap = false
+        } else {
+            out += c
         }
         if (c === ' ') {
-            cap = true;
+            cap = true
         }
     }
-    return out;
+    return out
 }
-function sign(num) {
+function sign(num: number): string {
     if (num > 0) {
-        return '+' + num;
+        return '+' + num
     }
-    return '' + num;
+    return '' + num
 }
-export async function render(c) {
-    return html `
+
+export async function render(c: Character): Promise<string> {
+    return html`
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,7 +79,9 @@ export async function render(c) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="main.css">
+    <style>
+        ${fs.readFile(join(__dirname, 'main.css'))}
+    </style>
 
     <title>${c.name}</title>
 </head>
@@ -96,14 +105,19 @@ export async function render(c) {
         ${items(c)}
         ${features(c)}
     </div>
-    ${spells(c.spells)}
+    <section class="lists">
+        <h1>Feats</h1>
+        ${feats(c)}
+        <h1>Spells</h1>
+        ${spells(c.spells)}
+    </section>
 </body>
 
 </html>
-`;
+`
 }
-async function stats(s) {
-    return html `
+async function stats(s: Stats<Stat>): Promise<string> {
+    return html`
     <section class="stats">
         ${stat(s.str, 'str')}
         ${stat(s.dex, 'dex')}
@@ -112,10 +126,10 @@ async function stats(s) {
         ${stat(s.wis, 'wis')}
         ${stat(s.cha, 'cha')}
     </section>
-    `;
+    `
 }
-async function stat(s, title) {
-    return html `
+async function stat(s: Stat, title: string): Promise<string> {
+    return html`
     <div class="stat">
         <span class="title">
             ${title}
@@ -127,10 +141,11 @@ async function stat(s, title) {
             ${s}
         </span>
     </div>
-    `;
+    `
 }
-async function saves(s) {
-    return html `
+
+async function saves(s: Stats): Promise<string> {
+    return html`
     <section class="saves">
         ${save(s.str, 'str')}
         ${save(s.dex, 'dex')}
@@ -139,10 +154,10 @@ async function saves(s) {
         ${save(s.wis, 'wis')}
         ${save(s.cha, 'cha')}
     </section>
-    `;
+    `
 }
-async function save(s, title) {
-    return html `
+async function save(s: number, title: keyof Stats): Promise<string> {
+    return html`
     <div class="save">
         <span class="value">
             ${sign(s)}
@@ -151,10 +166,11 @@ async function save(s, title) {
             ${StatMap[title]}
         </span>
     </div>
-    `;
+    `
 }
-async function skills(c) {
-    return html `
+
+async function skills(c: Character): Promise<string> {
+    return html`
     <section class="skills">
         ${skill(c, 'acrobatics')}
         ${skill(c, 'animal handling')}
@@ -175,10 +191,11 @@ async function skills(c) {
         ${skill(c, 'stealth')}
         ${skill(c, 'survival')}
     </section>
-    `;
+    `
 }
-async function skill(c, skill) {
-    return html `
+
+async function skill(c: Character, skill: keyof Skills): Promise<string> {
+    return html`
     <div class="skill">
         <span class="value">
             ${c.isProficient(skill) ? '*' : ''}
@@ -188,13 +205,13 @@ async function skill(c, skill) {
             ${titleCase(skill)}
         </span>
     </div>
-    `;
+    `
 }
-async function combat(c) {
+async function combat(c: Character): Promise<string> {
     const hitDice = Object.entries(c.hitDice
-        .reduce((group, die) => ({ ...group, [die]: (group[die] || 0) + 1 }), {}))
-        .map(([die, quantity]) => html `<span class="die">${quantity}d${die}</span>`);
-    return html `
+        .reduce((group, die) => ({ ...group, [die]: (group[die] || 0) + 1 }), {} as any))
+        .map(([die, quantity]) => html`<span class="die">${quantity}d${die}</span>`)
+    return html`
     <section class="combat">
         <div class="prof-bonus">${sign(c.proficiencyBonus)}</div>
         <div class="ac">${c.ac}</div>
@@ -205,10 +222,11 @@ async function combat(c) {
         <div class="hit-dice">${hitDice}</div>
         <div class="death-saves"></div>
     </section>
-    `;
+    `
 }
-async function limitedFeatures(features) {
-    return html `
+
+async function limitedFeatures(features: LimitedFeature[]): Promise<string> {
+    return html`
     <section class="limited-features">
         <table>
             <thead>
@@ -219,7 +237,7 @@ async function limitedFeatures(features) {
                 </tr>
             </thead>
             <tbody>
-                ${features.map(f => html `
+                ${features.map(f => html`
                 <tr>
                     <td>${f.name}</td>
                     <td>${f.recharge}</td>
@@ -229,48 +247,66 @@ async function limitedFeatures(features) {
             </tbody>
         </table>
     </section>
-    `;
+    `
 }
-async function items(c) {
-    return html `
+async function items(c: Character): Promise<string> {
+    return html`
     <section class="items">
-        ${c.items.map(f => html `<div>${f}</div>`)}
+        ${c.items.map(f => html`<div>${f}</div>`)}
     </section>
-    `;
+    `
 }
-async function features(c) {
-    return html `
+
+async function features(c: Character): Promise<string> {
+    return html`
     <section class="features">
         ${c.features.map(feature)}
     </section>
-    `;
+    `
 }
-async function feature(f) {
-    return html `<div>${f}</div>`;
+async function feature(f: string): Promise<string> {
+    return html`<div>${f}</div>`
 }
-async function spells(s) {
-    return html `
-    <div class="spells">
-        ${Array.from(new Set(s))
-        .map(findSpell)
-        .filter((spell) => spell !== undefined)
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .sort((a, b) => a.level - b.level)
-        .map(spell)}
+async function feats(c: Character): Promise<string> {
+    return html`
+    <div class="feats">
+        ${c.feats
+            .map(findFeat)
+            .filter((f): f is Feat => f !== undefined)
+            .map(feat)}
     </div>
-    `;
+    `
 }
-async function spell(s) {
-    return html `
+async function feat(f: Feat): Promise<string> {
+    return html`
+    <div class="feat">
+        <h2>${f.name}</h2>    
+        ${f.entries.map(entry)}
+    </div>
+    `
+}
+async function spells(s: string[]): Promise<string> {
+    return html`
+    <div class="spells">
+        ${s.map(findSpell)
+            .filter((spell): spell is Spell => spell !== undefined)
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .sort((a, b) => a.level - b.level)
+            .map(spell)}
+    </div>
+    `
+}
+async function spell(s: Spell): Promise<string> {
+    return html`
     <div class="spell">
         <section>
-            <h1>${s.name}</h1>
+            <h2>${s.name}</h2>
     
             <b>Level:</b>
             ${s.level || 'Cantrip'}
             <br />
             <b>Cast Time:</b>
-            ${s.time.map(t => html `${t.number} ${t.unit}`)}
+            ${s.time.map(t => html`${t.number} ${t.unit}`)}
             <br />
             <b>Range:</b>
             ${s.range.distance.amount} ${s.range.distance.type}
@@ -283,41 +319,47 @@ async function spell(s) {
         </section>
         ${s.entries.map(entry)}
     </div>
-    `;
+    `
 }
-function components(cs) {
+
+function components(cs: Components): string {
     return Object.entries(cs).map(([comp, extra]) => {
-        let e = '';
+        let e = ''
         if (typeof extra === 'object') {
-            e = ": " + extra.text;
+            e = ": " + extra.text
         }
-        return comp.toUpperCase() + e;
-    }).join(', ');
+        return comp.toUpperCase() + e
+    }).join(', ')
 }
-function duration(ds) {
-    return ds.map((d) => {
+
+function duration(ds: Duration[]): string {
+    return ds.map((d): string => {
         switch (d.type) {
             case 'instant':
-                return 'Instant';
+                return 'Instant'
             case 'timed':
-                let out = '';
+                let out = ''
                 if (d.concentration !== undefined) {
-                    out += 'Concentration, ';
+                    out += 'Concentration, '
                 }
-                out += d.duration.amount + ' ' + d.duration.type;
+                out += d.duration.amount + ' ' + d.duration.type
                 if (d.duration.amount !== 1) {
-                    out += 's';
+                    out += 's'
                 }
-                return out;
+                return out
         }
-    }).join(', ');
+    }).join(', ')
 }
-async function entry(e) {
+
+async function entry(e: Entry): Promise<string> {
     if (typeof e === 'string') {
-        return html `<p>${e}</p>`;
+        return html`<p>${e.replace(/{@\w+ (\w+)[^}]*}/g, (...args) => args[1])}</p>`
     }
     if (e.type === 'entries') {
-        return html `${e.entries.map(entry)}`;
+        return html`${e.entries.map(entry)}`
     }
-    return '';
+    if (e.type === 'list') {
+        return html`<ul>${e.items.map(item => html`<li>${item}</li>`)}</ul>`
+    }
+    return ''
 }

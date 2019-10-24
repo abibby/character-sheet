@@ -7,7 +7,618 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="main.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  -webkit-print-color-adjust: exact !important;
+}
+@media screen {
+  body {
+    width: 8in;
+  }
+}
+body h1 {
+  font-size: 1.5em;
+}
+body h2 {
+  font-size: 1.25em;
+}
+
+.character {
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
+  grid-template-areas: "header header header           header" "stats  saves  combat           items" "stats  skills combat           items" "stats  skills combat           features" "stats  skills limited-features features";
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  line-height: 1.3;
+}
+.character header {
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "name class bkg        player-name" "name race  alignment  xp";
+}
+.character header .name {
+  grid-area: name;
+  font-size: 28px;
+}
+.character header .class-level {
+  grid-area: class;
+  position: relative;
+  height: 34.85px;
+}
+.character header .class-level::after {
+  content: "Class & Level";
+  display: block;
+  font-size: 10.5px;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .background {
+  grid-area: bkg;
+  position: relative;
+  height: 34.85px;
+}
+.character header .background::after {
+  content: "Background";
+  display: block;
+  font-size: 10.5px;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .player-name {
+  grid-area: player-name;
+  position: relative;
+  height: 34.85px;
+}
+.character header .player-name::after {
+  content: "Player Name";
+  display: block;
+  font-size: 10.5px;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .race {
+  grid-area: race;
+  position: relative;
+  height: 34.85px;
+}
+.character header .race::after {
+  content: "Race";
+  display: block;
+  font-size: 10.5px;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .alignment {
+  grid-area: alignment;
+  position: relative;
+  height: 34.85px;
+}
+.character header .alignment::after {
+  content: "Alignment";
+  display: block;
+  font-size: 10.5px;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character header .xp {
+  grid-area: xp;
+  position: relative;
+  height: 34.85px;
+}
+.character header .xp::after {
+  content: "Experience Points";
+  display: block;
+  font-size: 10.5px;
+  border-top: solid 1px lightgrey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.character .prof-bonus {
+  grid-area: prof;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+  text-align: center;
+  font-size: 28px;
+}
+.character .prof-bonus::after {
+  content: "Proficiency Bonus";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .stats {
+  grid-area: stats;
+  display: grid;
+  row-gap: 10px;
+}
+.character .stats .stat {
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+}
+.character .stats .stat .title {
+  display: block;
+  font-variant: small-caps;
+  font-size: 10.5px;
+}
+.character .stats .stat .bonus {
+  display: block;
+  font-size: 28px;
+}
+.character .stats .stat .value {
+  display: block;
+}
+.character .saves {
+  grid-area: saves;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.character .saves::after {
+  content: "Saves";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .saves .save .value {
+  display: inline-block;
+  width: 4ch;
+  text-align: right;
+}
+.character .skills {
+  grid-area: skills;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.character .skills::after {
+  content: "Skills";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .skills .value {
+  display: inline-block;
+  width: 4ch;
+  text-align: right;
+}
+.character .combat {
+  grid-area: combat;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "max-hp   max-hp   ac         ac          prof-bonus  prof-bonus" "hp       hp       hp         hp          initiative  initiative" "hp       hp       hp         hp          speed       speed" "hit-dice hit-dice hit-dice   death-saves death-saves death-saves";
+  grid-gap: 10px;
+}
+.character .combat .max-hp,
+.character .combat .prof-bonus,
+.character .combat .ac,
+.character .combat .initiative,
+.character .combat .speed {
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+  font-size: 28px;
+}
+.character .combat .ac {
+  grid-area: ac;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .combat .ac::after {
+  content: "Armor Class";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .combat .initiative {
+  grid-area: initiative;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .combat .initiative::after {
+  content: "Initiative";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .combat .speed {
+  grid-area: speed;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .combat .speed::after {
+  content: "Speed";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .combat .hp {
+  grid-area: hp;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .combat .hp::after {
+  content: "Current Hit Points";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .combat .max-hp {
+  grid-area: max-hp;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .combat .max-hp::after {
+  content: "Maximum Hit Points";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .combat .prof-bonus {
+  grid-area: prof-bonus;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .combat .prof-bonus::after {
+  content: "Proficiency Bonus";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .combat .hit-dice {
+  grid-area: hit-dice;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .combat .hit-dice::after {
+  content: "Hit Dice";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .combat .death-saves {
+  grid-area: death-saves;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .combat .death-saves::after {
+  content: "Death Saves";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .limited-features {
+  grid-area: limited-features;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .limited-features::after {
+  content: "Limited Features";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .limited-features table {
+  border-collapse: collapse;
+}
+.character .limited-features table th {
+  font-size: 10.5px;
+  text-align: left;
+  font-weight: inherit;
+  color: lightgray;
+}
+.character .limited-features table tbody tr:not(:last-child) td {
+  border-bottom: solid 1px lightgray;
+}
+.character .limited-features table tbody .used {
+  padding-left: 2ch;
+  white-space: nowrap;
+}
+.character .items {
+  grid-area: items;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  background-image: linear-gradient(lightgrey 1px, transparent 0);
+  background-size: 100% 1.3em;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .items::after {
+  content: "Items";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .features {
+  grid-area: features;
+  border: solid lightgrey;
+  border-radius: 4px;
+  padding: 4px;
+  background-image: linear-gradient(lightgrey 1px, transparent 0);
+  background-size: 100% 1.3em;
+  position: relative;
+  padding-bottom: 15.5px;
+}
+.character .features::after {
+  content: "Features";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+
+.lists {
+  page-break-before: always;
+}
+.lists .spells,
+.lists .feats {
+  column-count: 2;
+}
+.lists .spells .spell,
+.lists .spells .feat,
+.lists .feats .spell,
+.lists .feats .feat {
+  page-break-inside: avoid;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  margin-bottom: -2px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+  float: left;
+}
+.col-1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+  float: left;
+}
+.col-2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-3 {
+  width: 25%;
+  float: left;
+}
+.col-3::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  float: left;
+}
+.col-4::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+  float: left;
+}
+.col-5::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-6 {
+  width: 50%;
+  float: left;
+}
+.col-6::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+  float: left;
+}
+.col-7::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+  float: left;
+}
+.col-8::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-9 {
+  width: 75%;
+  float: left;
+}
+.col-9::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+  float: left;
+}
+.col-10::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+  float: left;
+}
+.col-11::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+    </style>
 
     <title>Mark Karlson</title>
 </head>
@@ -434,12 +1045,25 @@
     </section>
     
     </div>
+    <section class="lists">
+        <h1>Feats</h1>
+        
+    <div class="feats">
+        
+    <div class="feat">
+        <h2>War Caster</h2>    
+        <p>You have practiced casting spells in the midst of combat, learning techniques that grant you the following benefits:</p><ul><li>You have advantage on Constitution saving throws that you make to maintain your concentration on a spell when you take damage.</li><li>You can perform the somatic components of spells even when you have weapons or a {@item shield|phb} in one or both hands.</li><li>When a hostile creature's movement provokes an opportunity attack from you, you can use your reaction to cast a spell at the creature, rather than making an opportunity attack. The spell must have a casting time of 1 action and must target only that creature.</li></ul>
+    </div>
     
+    </div>
+    
+        <h1>Spells</h1>
+        
     <div class="spells">
         
     <div class="spell">
         <section>
-            <h1>Guidance</h1>
+            <h2>Guidance</h2>
     
             <b>Level:</b>
             Cantrip
@@ -456,12 +1080,12 @@
             <b>Duration:</b>
             Concentration, 1 minute
         </section>
-        <p>You touch one willing creature. Once before the spell ends, the target can roll a {@dice d4} and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.</p>
+        <p>You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Light</h1>
+            <h2>Light</h2>
     
             <b>Level:</b>
             Cantrip
@@ -483,7 +1107,7 @@
     
     <div class="spell">
         <section>
-            <h1>Spare the Dying</h1>
+            <h2>Spare the Dying</h2>
     
             <b>Level:</b>
             Cantrip
@@ -505,7 +1129,7 @@
     
     <div class="spell">
         <section>
-            <h1>Thaumaturgy</h1>
+            <h2>Thaumaturgy</h2>
     
             <b>Level:</b>
             Cantrip
@@ -522,12 +1146,12 @@
             <b>Duration:</b>
             1 minute
         </section>
-        <p>You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:</p><p>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.</p>
+        <p>You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:</p><ul><li>Your voice booms up to three times as loud as normal for 1 minute.</li><li>You cause flames to flicker, brighten, dim, or change color for 1 minute.</li><li>You cause harmless tremors in the ground for 1 minute.</li><li>You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.</li><li>You instantaneously cause an unlocked door or window to fly open or slam shut.</li><li>You alter the appearance of your eyes for 1 minute.</li></ul><p>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Toll the Dead</h1>
+            <h2>Toll the Dead</h2>
     
             <b>Level:</b>
             Cantrip
@@ -544,12 +1168,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take {@dice 1d8} necrotic damage. If the target is missing any of its hit points, it instead takes {@dice 1d12} necrotic damage.</p><p>The spell's damage increases by one die when you reach 5th level ({@dice 2d8} or {@dice 2d12}), 11th level ({@dice 3d8} or {@dice 3d12}), and 17th level ({@dice 4d8} or {@dice 4d12}).</p>
+        <p>You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage.</p><p>The spell's damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Bless</h1>
+            <h2>Bless</h2>
     
             <b>Level:</b>
             1
@@ -566,12 +1190,12 @@
             <b>Duration:</b>
             Concentration, 1 minute
         </section>
-        <p>You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a {@dice d4} and add the number rolled to the attack roll or saving throw.</p>
+        <p>You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Ceremony</h1>
+            <h2>Ceremony</h2>
     
             <b>Level:</b>
             1
@@ -588,12 +1212,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>You perform a special religious ceremony that is infused with magic. When you cast the spell, choose one of the following rites, the target of which must be within 10 feet of you throughout the casting.</p><p>You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom (Insight) check. On a successful check, you restore the target to its original alignment.</p><p>You touch one {@item vial|phb} of water and cause it to become {@item Holy Water (flask)|phb|holy water}.</p><p>You touch one humanoid who is a young adult. For the next 24 hours, whenever the target makes an ability check, it can roll a {@dice d4} and add the number rolled to the ability check. A creature can benefit from this rite only once.</p><p>You touch one humanoid who wishes to be dedicated to your god's service. For the next 24 hours, whenever the target makes a saving throw, it can roll a {@dice d4} and add the number rolled to the save. A creature can benefit from this rite only once.</p><p>You touch one corpse, and for the next 7 days, the target can't become undead by any means short of a {@spell wish} spell.</p><p>You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed.</p>
+        <p>You perform a special religious ceremony that is infused with magic. When you cast the spell, choose one of the following rites, the target of which must be within 10 feet of you throughout the casting.</p><p>You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom (Insight) check. On a successful check, you restore the target to its original alignment.</p><p>You touch one vial of water and cause it to become Holy.</p><p>You touch one humanoid who is a young adult. For the next 24 hours, whenever the target makes an ability check, it can roll a d4 and add the number rolled to the ability check. A creature can benefit from this rite only once.</p><p>You touch one humanoid who wishes to be dedicated to your god's service. For the next 24 hours, whenever the target makes a saving throw, it can roll a d4 and add the number rolled to the save. A creature can benefit from this rite only once.</p><p>You touch one corpse, and for the next 7 days, the target can't become undead by any means short of a wish spell.</p><p>You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Cure Wounds</h1>
+            <h2>Cure Wounds</h2>
     
             <b>Level:</b>
             1
@@ -610,12 +1234,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>A creature you touch regains a number of hit points equal to {@dice 1d8} + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>
+        <p>A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Detect Magic</h1>
+            <h2>Detect Magic</h2>
     
             <b>Level:</b>
             1
@@ -637,7 +1261,7 @@
     
     <div class="spell">
         <section>
-            <h1>Disguise Self</h1>
+            <h2>Disguise Self</h2>
     
             <b>Level:</b>
             1
@@ -659,7 +1283,7 @@
     
     <div class="spell">
         <section>
-            <h1>Healing Word</h1>
+            <h2>Healing Word</h2>
     
             <b>Level:</b>
             1
@@ -676,12 +1300,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>A creature of your choice that you can see within range regains hit points equal to {@dice 1d4} + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>
+        <p>A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Sanctuary</h1>
+            <h2>Sanctuary</h2>
     
             <b>Level:</b>
             1
@@ -698,12 +1322,12 @@
             <b>Duration:</b>
             1 minute
         </section>
-        <p>You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a {@spell fireball}.</p><p>If the warded creature makes an attack, casts a spell that affects an enemy, or deals damage to another creature, this spell ends.</p>
+        <p>You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball.</p><p>If the warded creature makes an attack, casts a spell that affects an enemy, or deals damage to another creature, this spell ends.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Shield of Faith</h1>
+            <h2>Shield of Faith</h2>
     
             <b>Level:</b>
             1
@@ -725,7 +1349,7 @@
     
     <div class="spell">
         <section>
-            <h1>Blindness/Deafness</h1>
+            <h2>Blindness/Deafness</h2>
     
             <b>Level:</b>
             2
@@ -742,12 +1366,12 @@
             <b>Duration:</b>
             1 minute
         </section>
-        <p>You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either {@condition blinded} or {@condition deafened} (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.</p>
+        <p>You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Lesser Restoration</h1>
+            <h2>Lesser Restoration</h2>
     
             <b>Level:</b>
             2
@@ -764,12 +1388,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>You touch a creature and can end either one disease or one condition afflicting it. The condition can be {@condition blinded}, {@condition deafened}, {@condition paralyzed}, or {@condition poisoned}.</p>
+        <p>You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Silence</h1>
+            <h2>Silence</h2>
     
             <b>Level:</b>
             2
@@ -786,12 +1410,12 @@
             <b>Duration:</b>
             Concentration, 10 minutes
         </section>
-        <p>For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are {@condition deafened} while entirely inside it. Casting a spell that includes a verbal component is impossible there.</p>
+        <p>For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Spiritual Weapon</h1>
+            <h2>Spiritual Weapon</h2>
     
             <b>Level:</b>
             2
@@ -808,12 +1432,12 @@
             <b>Duration:</b>
             1 minute
         </section>
-        <p>You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to {@dice 1d8} + your spellcasting ability modifier.</p><p>As a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it.</p><p>The weapon can take whatever form you choose. Clerics of deities who are associated with a particular weapon (as St. Cuthbert is known for his mace and Thor for his hammer) make this spell's effect resemble that weapon.</p>
+        <p>You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.</p><p>As a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it.</p><p>The weapon can take whatever form you choose. Clerics of deities who are associated with a particular weapon (as St. Cuthbert is known for his mace and Thor for his hammer) make this spell's effect resemble that weapon.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Zone of Truth</h1>
+            <h2>Zone of Truth</h2>
     
             <b>Level:</b>
             2
@@ -835,7 +1459,7 @@
     
     <div class="spell">
         <section>
-            <h1>Beacon of Hope</h1>
+            <h2>Beacon of Hope</h2>
     
             <b>Level:</b>
             3
@@ -857,7 +1481,29 @@
     
     <div class="spell">
         <section>
-            <h1>Mass Healing Word</h1>
+            <h2>Beacon of Hope</h2>
+    
+            <b>Level:</b>
+            3
+            <br />
+            <b>Cast Time:</b>
+            1 action
+            <br />
+            <b>Range:</b>
+            30 feet
+            <br />
+            <b>Components:</b>
+            V, S
+            <br />
+            <b>Duration:</b>
+            Concentration, 1 minute
+        </section>
+        <p>This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.</p>
+    </div>
+    
+    <div class="spell">
+        <section>
+            <h2>Mass Healing Word</h2>
     
             <b>Level:</b>
             3
@@ -874,12 +1520,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to {@dice 1d4} + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>
+        <p>As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Revivify</h1>
+            <h2>Revivify</h2>
     
             <b>Level:</b>
             3
@@ -901,7 +1547,7 @@
     
     <div class="spell">
         <section>
-            <h1>Water Walk</h1>
+            <h2>Water Walk</h2>
     
             <b>Level:</b>
             3
@@ -923,7 +1569,7 @@
     
     <div class="spell">
         <section>
-            <h1>Control Water</h1>
+            <h2>Control Water</h2>
     
             <b>Level:</b>
             4
@@ -940,12 +1586,12 @@
             <b>Duration:</b>
             Concentration, 10 minutes
         </section>
-        <p>Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one.</p><p>You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land.</p><p>If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.</p><p>The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.</p><p>You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.</p><p>You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect.</p><p>This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.</p><p>When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes {@dice 2d8} bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.</p><p>The first time each turn that an object enters the vortex, the object takes {@dice 2d8} bludgeoning damage; this damage occurs each round it remains in the vortex.</p>
+        <p>Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one.</p><p>You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land.</p><p>If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.</p><p>The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.</p><p>You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.</p><p>You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect.</p><p>This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.</p><p>When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.</p><p>The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage; this damage occurs each round it remains in the vortex.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Death Ward</h1>
+            <h2>Death Ward</h2>
     
             <b>Level:</b>
             4
@@ -967,7 +1613,29 @@
     
     <div class="spell">
         <section>
-            <h1>Guardian of Faith</h1>
+            <h2>Death Ward</h2>
+    
+            <b>Level:</b>
+            4
+            <br />
+            <b>Cast Time:</b>
+            1 action
+            <br />
+            <b>Range:</b>
+             touch
+            <br />
+            <b>Components:</b>
+            V, S
+            <br />
+            <b>Duration:</b>
+            8 hours
+        </section>
+        <p>You touch a creature and grant it a measure of protection from death.</p><p>The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.</p><p>If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.</p>
+    </div>
+    
+    <div class="spell">
+        <section>
+            <h2>Guardian of Faith</h2>
     
             <b>Level:</b>
             4
@@ -989,7 +1657,29 @@
     
     <div class="spell">
         <section>
-            <h1>Stone Shape</h1>
+            <h2>Guardian of Faith</h2>
+    
+            <b>Level:</b>
+            4
+            <br />
+            <b>Cast Time:</b>
+            1 action
+            <br />
+            <b>Range:</b>
+            30 feet
+            <br />
+            <b>Components:</b>
+            V
+            <br />
+            <b>Duration:</b>
+            8 hours
+        </section>
+        <p>A Large spectral guardian appears and hovers for the duration in an unoccupied space of your choice that you can see within range. The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity.</p><p>Any creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a Dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage.</p>
+    </div>
+    
+    <div class="spell">
+        <section>
+            <h2>Stone Shape</h2>
     
             <b>Level:</b>
             4
@@ -1011,7 +1701,7 @@
     
     <div class="spell">
         <section>
-            <h1>Flame Strike</h1>
+            <h2>Flame Strike</h2>
     
             <b>Level:</b>
             5
@@ -1028,12 +1718,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes {@dice 4d6} fire damage and {@dice 4d6} radiant damage on a failed save, or half as much damage on a successful one.</p>
+        <p>A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Greater Restoration</h1>
+            <h2>Greater Restoration</h2>
     
             <b>Level:</b>
             5
@@ -1050,12 +1740,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target's {@condition exhaustion} level by one, or end one of the following effects on the target:</p>
+        <p>You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target's exhaustion level by one, or end one of the following effects on the target:</p><ul><li>One effect that {@condition charmed} or {@condition petrified} the target</li><li>One curse, including the target's attunement to a cursed magic item</li><li>Any reduction to one of the target's ability scores</li><li>One effect reducing the target's hit point maximum</li></ul>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Holy Weapon</h1>
+            <h2>Holy Weapon</h2>
     
             <b>Level:</b>
             5
@@ -1072,12 +1762,12 @@
             <b>Duration:</b>
             Concentration, 1 hour
         </section>
-        <p>You imbue a weapon you touch with holy power. Until the spell ends, the weapon emits bright light in a 30-foot radius and dim light for an additional 30 feet. In addition, weapon attacks made with it deal an extra {@dice 2d8} radiant damage on a hit. If the weapon isn't already a magic weapon, it becomes one for the duration.</p><p>As a bonus action on your turn, you can dismiss this spell and cause the weapon to emit a burst of radiance. Each creature of your choice that you can see within 30 feet of you must make a Constitution saving throw. On a failed save, a creature takes {@dice 4d8} radiant damage, and it is {@condition blinded} for 1 minute. On a successful save, a creature takes half as much damage and isn't {@condition blinded}. At the end of each of its turns, a {@condition blinded} creature can make a Constitution saving throw, ending the effect on itself on a success.</p>
+        <p>You imbue a weapon you touch with holy power. Until the spell ends, the weapon emits bright light in a 30-foot radius and dim light for an additional 30 feet. In addition, weapon attacks made with it deal an extra 2d8 radiant damage on a hit. If the weapon isn't already a magic weapon, it becomes one for the duration.</p><p>As a bonus action on your turn, you can dismiss this spell and cause the weapon to emit a burst of radiance. Each creature of your choice that you can see within 30 feet of you must make a Constitution saving throw. On a failed save, a creature takes 4d8 radiant damage, and it is blinded for 1 minute. On a successful save, a creature takes half as much damage and isn't blinded. At the end of each of its turns, a blinded creature can make a Constitution saving throw, ending the effect on itself on a success.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Mass Cure Wounds</h1>
+            <h2>Mass Cure Wounds</h2>
     
             <b>Level:</b>
             5
@@ -1094,12 +1784,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to {@dice 3d8} + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>
+        <p>A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 3d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Raise Dead</h1>
+            <h2>Raise Dead</h2>
     
             <b>Level:</b>
             5
@@ -1121,7 +1811,7 @@
     
     <div class="spell">
         <section>
-            <h1>Harm</h1>
+            <h2>Harm</h2>
     
             <b>Level:</b>
             6
@@ -1138,12 +1828,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes {@dice 14d6} necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.</p>
+        <p>You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.</p>
     </div>
     
     <div class="spell">
         <section>
-            <h1>Planar Ally</h1>
+            <h2>Planar Ally</h2>
     
             <b>Level:</b>
             6
@@ -1160,11 +1850,12 @@
             <b>Duration:</b>
             Instant
         </section>
-        <p>You beseech an otherworldly entity for aid. The being must be known to you: a god, a primordial, a demon prince, or some other being of cosmic power. That entity sends a {@filter celestial|bestiary|type=celestial|miscellaneous=!swarm}, an {@filter elemental|bestiary|type=elemental|miscellaneous=!swarm}, or a {@filter fiend|bestiary|type=fiend|miscellaneous=!swarm} loyal to it to aid you, making the creature appear in an unoccupied space within range. If you know a specific creature's name, you can speak that name when you cast this spell to request that creature, though you might get a different creature anyway (DM's choice).</p><p>When the creature appears, it is under no compulsion to behave in any particular way. You can ask the creature to perform a service in exchange for payment, but it isn't obliged to do so. The requested task could range from simple (fly us across the chasm, or help us fight a battle) to complex (spy on our enemies, or protect us during our foray into the dungeon). You must be able to communicate with the creature to bargain for its services.</p><p>Payment can take a variety of forms. A celestial might require a sizable donation of gold or magic items to an allied temple, while a fiend might demand a living sacrifice or a gift of treasure. Some creatures might exchange their service for a quest undertaken by you.</p><p>As a rule of thumb, a task that can be measured in minutes requires a payment worth 100 gp per minute. A task measured in hours requires 1,000 gp per hour. And a task measured in days (up to 10 days) requires 10,000 gp per day. The DM can adjust these payments based on the circumstances under which you cast the spell. If the task is aligned with the creature's ethos, the payment might be halved or even waived. Nonhazardous tasks typically require only half the suggested payment, while especially dangerous tasks might require a greater gift. Creatures rarely accept tasks that seem suicidal.</p><p>After the creature completes the task, or when the agreed-upon duration of service expires, the creature returns to its home plane after reporting back to you, if appropriate to the task and if possible. If you are unable to agree on a price for the creature's service, the creature immediately returns to its home plane.</p><p>A creature enlisted to join your group counts as a member of it, receiving a full share of experience points awarded.</p>
+        <p>You beseech an otherworldly entity for aid. The being must be known to you: a god, a primordial, a demon prince, or some other being of cosmic power. That entity sends a celestial, an elemental, or a fiend loyal to it to aid you, making the creature appear in an unoccupied space within range. If you know a specific creature's name, you can speak that name when you cast this spell to request that creature, though you might get a different creature anyway (DM's choice).</p><p>When the creature appears, it is under no compulsion to behave in any particular way. You can ask the creature to perform a service in exchange for payment, but it isn't obliged to do so. The requested task could range from simple (fly us across the chasm, or help us fight a battle) to complex (spy on our enemies, or protect us during our foray into the dungeon). You must be able to communicate with the creature to bargain for its services.</p><p>Payment can take a variety of forms. A celestial might require a sizable donation of gold or magic items to an allied temple, while a fiend might demand a living sacrifice or a gift of treasure. Some creatures might exchange their service for a quest undertaken by you.</p><p>As a rule of thumb, a task that can be measured in minutes requires a payment worth 100 gp per minute. A task measured in hours requires 1,000 gp per hour. And a task measured in days (up to 10 days) requires 10,000 gp per day. The DM can adjust these payments based on the circumstances under which you cast the spell. If the task is aligned with the creature's ethos, the payment might be halved or even waived. Nonhazardous tasks typically require only half the suggested payment, while especially dangerous tasks might require a greater gift. Creatures rarely accept tasks that seem suicidal.</p><p>After the creature completes the task, or when the agreed-upon duration of service expires, the creature returns to its home plane after reporting back to you, if appropriate to the task and if possible. If you are unable to agree on a price for the creature's service, the creature immediately returns to its home plane.</p><p>A creature enlisted to join your group counts as a member of it, receiving a full share of experience points awarded.</p>
     </div>
     
     </div>
     
+    </section>
 </body>
 
 </html>

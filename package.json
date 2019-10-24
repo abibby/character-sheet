@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "example.ts",
-  "dependencies": {},
+  "dependencies": {
+    "object.fromentries": "^2.0.1"
+  },
   "devDependencies": {
     "@types/node": "^12.11.1",
     "browserify": "^16.5.0",
+    "copyfiles": "^2.1.1",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-sass": "^4.0.2",
@@ -18,9 +21,10 @@
     "typescript": "^3.6.4"
   },
   "scripts": {
-    "sass": "sass main.scss > dist/main.css",
-    "html": "ts-node example.ts",
-    "build": "gulp"
+    "sass": "sass src/main.scss > dist/main.css",
+    "ts": "tsc",
+    "data": "copyfiles -u 2 TheGiddyLimit.github.io/data/**/*.json TheGiddyLimit.github.io/data/*.json dist/data",
+    "build": "npm run data && npm run sass && npm run ts"
   },
   "repository": {
     "type": "git",

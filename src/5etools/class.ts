@@ -1,5 +1,5 @@
 import { readJSON } from "./util"
-import { Stats } from "character"
+import { Stats } from ".."
 import { Entry } from "./entry"
 
 interface StartingProficiencies {
@@ -56,5 +56,5 @@ function allClasses(): Class[] {
     return classCache
 }
 export function findClass(name: string): Class | undefined {
-    return (allClasses()).find(c => c.name === name)
+    return allClasses().find(c => c.name === name)
 }

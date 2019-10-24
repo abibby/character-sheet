@@ -1,4 +1,10 @@
-import { findClass, Class } from "./5etools"
+import { Class, findClass } from "./5etools"
+import { render } from "./render"
+import { promises as fs } from 'fs'
+
+if (!Object.fromEntries) {
+    require('object.fromentries').shim()
+}
 
 export class Level {
     private classMap = new Map<string, number>()
@@ -110,7 +116,7 @@ export interface LimitedFeature {
     recharge: string
 }
 
-export default class Character {
+export class Character {
     public name: string = ''
     public background: string = ''
     public playerName: string = ''
@@ -241,9 +247,12 @@ export default class Character {
         return this.saveProficiency.includes(skill)
     }
 
-    public levelUp(c: Class, bonus: Bonus): void {
-        this.level.add(c.name)
-        this.addHitDie(c.hd.faces)
+    public levelUp(name: string, bonus: Bonus): void {
+        this.level.add(name)
+        const c = findClass(name)
+        if (c !== undefined) {
+            this.addHitDie(c.hd.faces)
+        }
         this.applyBonus(bonus)
     }
 
@@ -282,6 +291,14 @@ export default class Character {
 
         this.applyBonus(bonus)
     }
+
+    public async save() {
+
+        await fs.writeFile('index.html', await render(this))
+        console.log('Character Generated');
+
+    }
+
     private applyBonus(bonus: Bonus): void {
         bonus(this)
     }

@@ -3,15 +3,22 @@
         "sourceMap": true,
         "noImplicitAny": true,
         "moduleResolution": "node",
-        "target": "esnext",
+        "target": "es5",
         "allowJs": true,
         "jsx": "preserve",
         "experimentalDecorators": true,
         "baseUrl": "./",
         "strictNullChecks": true,
         "resolveJsonModule": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "outDir": "dist",
+        "lib": [
+            "es2019.object"
+        ]
     },
+    "files": [
+        "src/index.ts"
+    ],
     "exclude": [
         "node_modules"
     ]
