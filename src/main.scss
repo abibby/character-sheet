@@ -97,6 +97,7 @@ body {
 
         .name {
             grid-area: name;
+            align-self: center;
             font-size: $large-font-size;
         }
 
