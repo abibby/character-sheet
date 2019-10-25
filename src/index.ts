@@ -209,8 +209,12 @@ export class Character {
             + this.hitDice.slice(1).reduce((total, die) => total + (die / 2 + 1), 0)
     }
 
+    private spellSaveStat: keyof Stats | undefined
     public get spellSaveDC(): number {
-        return 8 + this.proficiencyBonus + this.stats.wis.mod()
+        if (this.spellSaveStat === undefined) {
+            return 0
+        }
+        return 8 + this.proficiencyBonus + this.stats[this.spellSaveStat].mod()
     }
     public get spellAttackMod(): number {
         return 0
@@ -245,6 +249,10 @@ export class Character {
         this.acMod += ac
     }
 
+    public setSpellSaveStat(stat: keyof Stats): void {
+        this.spellSaveStat = stat
+    }
+
     public addHitDie(hitDie: number): void {
         this.hitDice.push(hitDie)
     }
@@ -272,10 +280,11 @@ export class Character {
         this.applyBonus(bonus)
     }
 
-    public addSpell(spell: string): void {
-        // https://5e.tools/data/spells/index.json?ver=1.84.1
-        // https://5e.tools/data/spells/spells-phb.json?ver=1.84.1
+    public addSpell(spell: string, bonus?: Bonus): void {
         this.spells.push(spell)
+        if (bonus) {
+            this.applyBonus(bonus)
+        }
     }
 
     public addFeature(feature: string) {

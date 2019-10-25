@@ -1,8 +1,6 @@
 import { Character } from "../dist"
 const char = new Character()
 
-// @ts-check
-
 char.name = 'Mark Karlson'
 char.playerName = 'Adam Bibby'
 
@@ -42,6 +40,8 @@ char.levelUp('Cleric', c => { // 1
 
     c.addSpell('Bless')
     c.addSpell('Cure Wounds')
+
+    c.setSpellSaveStat('wis')
 })
 
 char.levelUp('Cleric', c => { // 2
@@ -129,14 +129,15 @@ char.addSpell('Guidance')
 char.addSpell('Light')
 char.addSpell('Spare the Dying')
 char.addSpell('Thaumaturgy')
-char.addSpell('Toll the Dead')
-char.addAttack({
-    name: 'Toll the Dead',
-    damage: () => '3d8 or 3d12',
-    type: 'save',
-    save: 'wis',
-    saveDC: () => char.spellSaveDC,
-    range: '60',
+char.addSpell('Toll the Dead', c => {
+    c.addAttack({
+        name: 'Toll the Dead',
+        damage: () => '3d8 (3d12)',
+        type: 'save',
+        save: 'wis',
+        saveDC: () => c.spellSaveDC,
+        range: '60',
+    })
 })
 
 // Level 1
