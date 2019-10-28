@@ -314,9 +314,9 @@ async function feats(c: Character): Promise<string> {
     return html`
     <div class="feats">
         ${c.feats
-        .map(findFeat)
-        .filter((f): f is Feat => f !== undefined)
-        .map(feat)}
+            .map(findFeat)
+            .filter((f): f is Feat => f !== undefined)
+            .map(feat)}
     </div>
     `
 }
@@ -332,10 +332,10 @@ async function spells(s: string[]): Promise<string> {
     return html`
     <div class="spells">
         ${s.map(findSpell)
-        .filter((spell): spell is Spell => spell !== undefined)
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .sort((a, b) => a.level - b.level)
-        .map(spell)}
+            .filter((spell): spell is Spell => spell !== undefined)
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .sort((a, b) => a.level - b.level)
+            .map(spell)}
     </div>
     `
 }
@@ -408,5 +408,5 @@ async function entry(e: Entry): Promise<string> {
 }
 
 function extractTemplates(str: string) {
-    return str.replace(/{@\w+ (\w+)[^}]*}/g, (_, match) => match)
+    return str.replace(/{@\w+ ([^|]+)[^}]*}/g, (_, match) => match)
 }
