@@ -1,5 +1,5 @@
 {
-  "name": "character-sheet",
+  "name": "@zwzn/character-sheet",
   "version": "1.0.0",
   "description": "",
   "main": "example.ts",
