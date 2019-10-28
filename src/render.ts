@@ -2,6 +2,7 @@ import { Character, Stats, Stat, Skills, LimitedFeature, StatMap, Attack } from 
 import { Entry, findSpell, Components, Duration, Spell, findFeat, Feat } from "./5etools"
 import { promises as fs } from 'fs'
 import { join } from "path"
+import { range } from './functional'
 
 
 async function html(strings: TemplateStringsArray, ...parts: unknown[]): Promise<string> {
@@ -236,7 +237,7 @@ async function limitedFeatures(features: LimitedFeature[]): Promise<string> {
                 <tr>
                     <th>Feature</th>
                     <th>Recover</th>
-                    <th>Used</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -244,7 +245,9 @@ async function limitedFeatures(features: LimitedFeature[]): Promise<string> {
                 <tr>
                     <td>${f.name}</td>
                     <td>${f.recharge}</td>
-                    <td class="used"> / ${f.uses}</td>
+                    <td class="used">
+                        ${range(f.uses).map(() => html`<span class='use'></span>`)}
+                    </td>
                 </tr>
                 `)}
             </tbody>
@@ -311,9 +314,9 @@ async function feats(c: Character): Promise<string> {
     return html`
     <div class="feats">
         ${c.feats
-            .map(findFeat)
-            .filter((f): f is Feat => f !== undefined)
-            .map(feat)}
+        .map(findFeat)
+        .filter((f): f is Feat => f !== undefined)
+        .map(feat)}
     </div>
     `
 }
@@ -329,10 +332,10 @@ async function spells(s: string[]): Promise<string> {
     return html`
     <div class="spells">
         ${s.map(findSpell)
-            .filter((spell): spell is Spell => spell !== undefined)
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .sort((a, b) => a.level - b.level)
-            .map(spell)}
+        .filter((spell): spell is Spell => spell !== undefined)
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .sort((a, b) => a.level - b.level)
+        .map(spell)}
     </div>
     `
 }

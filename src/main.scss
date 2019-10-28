@@ -370,6 +370,18 @@ table {
         .used {
             padding-left: 2ch;
             white-space: nowrap;
+            text-align: right;
+
+            .use {
+                display: inline-block;
+                border: solid 1px;
+                width: 0.7em;
+                height: 0.7em;
+
+                &:not(:last-child) {
+                    margin-right: 2px;
+                }
+            }
         }
     }
 }

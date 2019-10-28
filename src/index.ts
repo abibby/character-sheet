@@ -1,4 +1,4 @@
-import { Class, findClass } from "./5etools"
+import { Class, findClass, Entry } from "./5etools"
 import { render } from "./render"
 import { promises as fs } from 'fs'
 
@@ -287,7 +287,7 @@ export class Character {
         }
     }
 
-    public addFeature(feature: string) {
+    public addFeature(feature: string, description?: Entry) {
         this.features.push(feature)
     }
     public addLimitedFeature(name: string, uses: number, recharge: string) {

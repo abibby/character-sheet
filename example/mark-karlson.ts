@@ -140,6 +140,16 @@ char.addSpell('Toll the Dead', c => {
     })
 })
 
+// Tattoo 
+//
+// you emit an aura within five feet of you and anybody in this aura can use
+// anybody else's saving throw modifier in place of their own when they have to
+// make a save, so long as they are within the aura as well
+char.addFeature('Tattoo: Hammer and Sickle', `you emit an aura within five feet
+of you and anybody in this aura can use anybody else's saving throw modifier in
+place of their own when they have to make a save, so long as they are within the
+aura as well `)
+
 // Level 1
 char.addSpell('Ceremony')
 char.addSpell('Healing Word')
