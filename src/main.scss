@@ -5,9 +5,11 @@ $small-font-size: $font-size * 0.75;
 $large-font-size: $font-size * 2;
 $line-height: 1.3;
 
+$light: #666;
+
 @mixin border {
-    border: solid lightgrey;
-    border-radius: 4px;
+    border: solid #ccc 4px;
+    border-radius: 3px;
     padding: 4px;
 }
 
@@ -325,14 +327,6 @@ body {
 .lists {
     page-break-before: always;
 
-    :not(:checked) {
-
-        +.spells,
-        +.feats {
-            display: none;
-        }
-    }
-
     .spells,
     .feats {
         column-count: 2;
@@ -357,13 +351,13 @@ table {
         font-size: $small-font-size;
         text-align: left;
         font-weight: inherit;
-        color: lightgray;
+        color: $light;
     }
 
     tbody {
         tr:not(:last-child) {
             td {
-                border-bottom: solid 1px lightgray;
+                border-bottom: solid 1px $light;
             }
         }
 
@@ -383,5 +377,31 @@ table {
                 }
             }
         }
+    }
+}
+
+.collapse {
+    input {
+        display: none;
+    }
+
+    input:not(:checked)+.collapse-header+.collapse-body {
+        display: none;
+    }
+
+    .collapse-header::before {
+        display: block;
+        content: ' ';
+        float: left;
+        border-right: $light solid 1px;
+        border-bottom: $light solid 1px;
+        width: 0.5em;
+        height: 0.5em;
+        transform: rotate(-45deg);
+        margin: 0.5em;
+    }
+
+    input:checked+.collapse-header::before {
+        transform: rotate(45deg);
     }
 }

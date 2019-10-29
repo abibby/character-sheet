@@ -5,10 +5,10 @@ char.name = 'Mark Karlson'
 char.playerName = 'Adam Bibby'
 
 char.setStats({
-    str: 12,
+    str: 11,
     dex: 10,
-    con: 14,
-    int: 13,
+    con: 15,
+    int: 12,
     wis: 15,
     cha: 8,
 })
@@ -63,9 +63,7 @@ char.levelUp('Cleric', c => { // 5
 })
 char.levelUp('Cleric', c => { // 6
     c.addFeature('Blessed Healer')
-    c.updateLimitedFeature('Channel Divinity: Preserve Life', {
-        uses: 2
-    })
+    c.updateLimitedFeature('Channel Divinity: Preserve Life', { uses: 2 })
 })
 char.levelUp('Cleric', c => { // 7
     c.addSpell('Death Ward')

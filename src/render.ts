@@ -108,18 +108,29 @@ export async function render(c: Character): Promise<string> {
         ${attacks(c)}
     </div>
     <section class="lists">
-        <h1>Feats</h1>
-        <input type="checkbox">
-        ${feats(c)}
-        <h1>Spells</h1>
-        <input type="checkbox">
-        ${spells(c.spells)}
+        ${collapse('Class Features', classFeatures(c))}
+        ${collapse('Feats', feats(c))}
+        ${collapse('Spells', spells(c.spells))}
     </section>
 </body>
 
 </html>
 `
 }
+
+async function collapse(header: unknown, body: unknown): Promise<string> {
+    const key = Math.random()
+    return html`
+    <div class='collapse'>
+        <input type="checkbox" id="${key}">
+        <label class='collapse-header' for="${key}">
+            <h1>${header}</h1>
+        </label>
+        <div class='collapse-body'>${body}</div>
+    </div>
+    `
+}
+
 async function stats(s: Stats<Stat>): Promise<string> {
     return html`
     <section class="stats">
@@ -310,6 +321,27 @@ async function attack(a: Attack): Promise<string> {
         </tr>
         `
 }
+async function classFeatures(c: Character): Promise<string> {
+    return html`
+    <div class="class-features">
+        ${c.features
+            .map((name): Entry | undefined => {
+                return ''
+            })
+            .filter((f): f is Entry => f !== undefined)
+            .map(classFeature)}
+    </div>
+    `
+}
+async function classFeature(f: Entry): Promise<string> {
+    return html`
+    <div class="class-feature">
+        <h2>${f.name}</h2>
+        ${f.entries.map(entry)}
+    </div>
+    `
+}
+
 async function feats(c: Character): Promise<string> {
     return html`
     <div class="feats">
