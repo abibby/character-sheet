@@ -334,5 +334,5 @@ export class Character {
 }
 
 export function mod(num: number): number {
-    return Math.ceil((num - 10) / 2)
+    return Math.floor((num - 10) / 2)
 }

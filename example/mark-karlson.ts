@@ -151,7 +151,7 @@ place of their own when they have to make a save, so long as they are within the
 aura as well `)
 
 // Level 1
-char.addSpell('Ceremony')
+// char.addSpell('Ceremony')
 char.addSpell('Healing Word')
 char.addSpell('Sanctuary')
 char.addSpell('Shield of Faith')
@@ -160,11 +160,12 @@ char.addSpell('Shield of Faith')
 char.addSpell('Blindness/Deafness')
 char.addSpell('Silence')
 char.addSpell('Beacon of Hope')
-char.addSpell('Zone of Truth')
 
 // Level 3
+char.addSpell('Zone of Truth')
 char.addSpell('Mass Healing Word')
 char.addSpell('Water Walk')
+char.addSpell('Meld into Stone')
 
 // Level 4
 char.addSpell('Control Water')
