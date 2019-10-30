@@ -30,8 +30,8 @@ char.setBackground('Acolyte', c => {
     c.addSkillProficiency('religion')
 })
 
-char.addSubclass('Cleric', 'Life Domain')
 char.levelUp('Cleric', c => { // 1
+    c.addSubclass('Cleric', 'Life Domain')
     c.addSkillProficiency('history')
     c.addSkillProficiency('medicine')
     c.addSaveProficiency('wis')
