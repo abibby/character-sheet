@@ -387,6 +387,12 @@ table {
         display: none;
     }
 
+    h1 {
+        background: #eee;
+        border-radius: 4px;
+        padding: 4px;
+    }
+
     @media print {
         input:not(:checked)+.collapse-header {
             display: none;
@@ -404,7 +410,7 @@ table {
             width: 0.5em;
             height: 0.5em;
             transform: rotate(-45deg);
-            margin: 0.5em;
+            margin: calc(0.5em + 4px);
         }
 
         input:checked+.collapse-header::before {
