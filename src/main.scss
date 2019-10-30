@@ -327,16 +327,20 @@ body {
 .lists {
     page-break-before: always;
 
-    .columns {
-        column-count: 2;
+    .collapse {
+        page-break-inside: avoid;
 
-        .column-item {
-            $border-thickness: 2px;
-            page-break-inside: avoid;
+        .columns {
+            column-count: 2;
 
-            border-top: solid $border-thickness;
-            border-bottom: solid $border-thickness;
-            margin-bottom: -$border-thickness;
+            .column-item {
+                $border-thickness: 2px;
+                page-break-inside: avoid;
+
+                border-top: solid $border-thickness;
+                border-bottom: solid $border-thickness;
+                margin-bottom: -$border-thickness;
+            }
         }
     }
 }

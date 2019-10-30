@@ -326,7 +326,6 @@ async function classFeatures(c: Character): Promise<string> {
     return html`
     <div class="class-features columns">
         ${c.features.map(classFeature(c))}
-        ${c.limitedFeatures.map(f => classFeature(c)(f.name))}
     </div>
     `
 }
@@ -383,9 +382,9 @@ async function feats(c: Character): Promise<string> {
     return html`
     <div class="feats columns">
         ${c.feats
-            .map(findFeat)
-            .filter((f): f is Feat => f !== undefined)
-            .map(feat)}
+        .map(findFeat)
+        .filter((f): f is Feat => f !== undefined)
+        .map(feat)}
     </div>
     `
 }
@@ -401,10 +400,10 @@ async function spells(s: string[]): Promise<string> {
     return html`
     <div class="spells columns">
         ${s.map(findSpell)
-            .filter((spell): spell is Spell => spell !== undefined)
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .sort((a, b) => a.level - b.level)
-            .map(spell)}
+        .filter((spell): spell is Spell => spell !== undefined)
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .sort((a, b) => a.level - b.level)
+        .map(spell)}
     </div>
     `
 }
