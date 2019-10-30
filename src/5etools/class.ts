@@ -15,7 +15,7 @@ interface HitDie {
     faces: number
 }
 
-interface ClassFeature {
+export interface ClassFeature {
     name: string
     entries: Entry[]
 }
@@ -28,15 +28,15 @@ export interface Class {
     spellcastingAbility?: keyof Stats
     casterProgression?: "1/2" | "full"
     startingProficiencies: StartingProficiencies
-    classFeatures: ClassFeature[]
+    classFeatures: ClassFeature[][]
     subclassTitle: string
-    subclasses: {
+    subclasses: Array<{
         name: string
-        subclassFeatures: ClassFeature[]
+        subclassFeatures: ClassFeature[][]
         source: string
         shortName: string
         page: number
-    }
+    }>
     fluff: Entry[]
     page: number
 }

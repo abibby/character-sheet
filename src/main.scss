@@ -327,12 +327,10 @@ body {
 .lists {
     page-break-before: always;
 
-    .spells,
-    .feats {
+    .columns {
         column-count: 2;
 
-        .spell,
-        .feat {
+        .column-item {
             $border-thickness: 2px;
             page-break-inside: avoid;
 
@@ -389,19 +387,28 @@ table {
         display: none;
     }
 
-    .collapse-header::before {
-        display: block;
-        content: ' ';
-        float: left;
-        border-right: $light solid 1px;
-        border-bottom: $light solid 1px;
-        width: 0.5em;
-        height: 0.5em;
-        transform: rotate(-45deg);
-        margin: 0.5em;
+    @media print {
+        input:not(:checked)+.collapse-header {
+            display: none;
+        }
     }
 
-    input:checked+.collapse-header::before {
-        transform: rotate(45deg);
+    @media screen {
+
+        .collapse-header::before {
+            display: block;
+            content: ' ';
+            float: left;
+            border-right: $light solid 1px;
+            border-bottom: $light solid 1px;
+            width: 0.5em;
+            height: 0.5em;
+            transform: rotate(-45deg);
+            margin: 0.5em;
+        }
+
+        input:checked+.collapse-header::before {
+            transform: rotate(45deg);
+        }
     }
 }

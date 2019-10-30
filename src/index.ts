@@ -20,6 +20,10 @@ export class Level {
         return Array.from(this.classMap).reduce((total, [, l]) => total + l, 0)
     }
 
+    public get classes(): string[] {
+        return Array.from(this.classMap.keys())
+    }
+
     public toString(): string {
         return Array.from(this.classMap)
             .map(([className, level]) => `${className}: ${level}`)
@@ -140,6 +144,7 @@ export class Character {
     public xp: number
 
     public readonly level: Level = new Level()
+    public readonly class: Map<string, string> = new Map()
 
     public readonly stats: Readonly<Stats<Stat>> = {
         str: new Stat(),
@@ -269,6 +274,10 @@ export class Character {
     }
     public saveIsProficient(skill: keyof Stats): boolean {
         return this.saveProficiency.includes(skill)
+    }
+
+    public addSubclass(className: string, subclass: string): void {
+        this.class.set(className, subclass)
     }
 
     public levelUp(name: string, bonus: Bonus): void {

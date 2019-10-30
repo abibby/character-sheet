@@ -10,7 +10,8 @@
         "outDir": "dist",
         "declaration": true,
         "lib": [
-            "es2019.object"
+            "es2019.object",
+            "es2019.array"
         ]
     },
     "files": [

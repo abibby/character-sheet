@@ -1,5 +1,5 @@
 import { Character, Stats, Stat, Skills, LimitedFeature, StatMap, Attack } from "."
-import { Entry, findSpell, Components, Duration, Spell, findFeat, Feat } from "./5etools"
+import { Entry, findSpell, Components, Duration, Spell, findFeat, Feat, findClass, ClassFeature } from "./5etools"
 import { promises as fs } from 'fs'
 import { join } from "path"
 import { range } from './functional'
@@ -108,6 +108,7 @@ export async function render(c: Character): Promise<string> {
         ${attacks(c)}
     </div>
     <section class="lists">
+        ${collapse('Limited Class Features', limitedClassFeatures(c))}
         ${collapse('Class Features', classFeatures(c))}
         ${collapse('Feats', feats(c))}
         ${collapse('Spells', spells(c.spells))}
@@ -323,28 +324,64 @@ async function attack(a: Attack): Promise<string> {
 }
 async function classFeatures(c: Character): Promise<string> {
     return html`
-    <div class="class-features">
-        ${c.features
-            .map((name): Entry | undefined => {
-                return ''
-            })
-            .filter((f): f is Entry => f !== undefined)
-            .map(classFeature)}
+    <div class="class-features columns">
+        ${c.features.map(classFeature(c))}
+        ${c.limitedFeatures.map(f => classFeature(c)(f.name))}
     </div>
     `
 }
-async function classFeature(f: Entry): Promise<string> {
+async function limitedClassFeatures(c: Character): Promise<string> {
     return html`
-    <div class="class-feature">
-        <h2>${f.name}</h2>
-        ${f.entries.map(entry)}
+    <div class="limited-class-features columns">
+        ${c.limitedFeatures.map(f => classFeature(c)(f.name))}
     </div>
     `
+}
+function classFeature(c: Character) {
+    return async (name: string): Promise<string> => {
+        const cls = findClass(c.level.classes[0])!
+
+        const features = cls.classFeatures.flatMap(cf => getFeature(cf, name).map(entry))
+            .concat(
+                cls.subclasses
+                    .filter(sub => Array.from(c.class.values()).includes(sub.name))
+                    .flatMap(subClass => subClass.subclassFeatures.flatMap(cf => getFeature(cf, name).map(entry)))
+            )
+        if (features.length === 0) {
+            return ''
+        }
+        return html`
+        <div class="class-feature column-item">
+            <h2>${name}</h2>
+            ${features}
+        </div>
+        `
+    }
+}
+
+function getFeature(entries: (Entry | ClassFeature)[], name: string): Entry[] {
+    for (const entry of entries) {
+        if (typeof entry === 'string') {
+            continue
+        }
+        if (('type' in entry) && entry.type !== 'entries') {
+            continue
+        }
+        if (entry.name === name) {
+            return entry.entries
+        }
+
+        const feature = getFeature(entry.entries, name)
+        if (feature !== undefined) {
+            return feature
+        }
+    }
+    return []
 }
 
 async function feats(c: Character): Promise<string> {
     return html`
-    <div class="feats">
+    <div class="feats columns">
         ${c.feats
             .map(findFeat)
             .filter((f): f is Feat => f !== undefined)
@@ -354,7 +391,7 @@ async function feats(c: Character): Promise<string> {
 }
 async function feat(f: Feat): Promise<string> {
     return html`
-    <div class="feat">
+    <div class="feat column-item">
         <h2>${f.name}</h2>
         ${f.entries.map(entry)}
     </div>
@@ -362,7 +399,7 @@ async function feat(f: Feat): Promise<string> {
 }
 async function spells(s: string[]): Promise<string> {
     return html`
-    <div class="spells">
+    <div class="spells columns">
         ${s.map(findSpell)
             .filter((spell): spell is Spell => spell !== undefined)
             .sort((a, b) => a.name.localeCompare(b.name))
@@ -373,7 +410,7 @@ async function spells(s: string[]): Promise<string> {
 }
 async function spell(s: Spell): Promise<string> {
     return html`
-    <div class="spell">
+    <div class="spell column-item">
         <section>
             <h2>${s.name}</h2>
     
@@ -440,5 +477,5 @@ async function entry(e: Entry): Promise<string> {
 }
 
 function extractTemplates(str: string) {
-    return str.replace(/{@\w+ ([^|]+)[^}]*}/g, (_, match) => match)
+    return str.replace(/{@\w+ ([^|}]+)[^}]*}/g, (_, match) => match)
 }
