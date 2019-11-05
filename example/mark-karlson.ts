@@ -133,7 +133,6 @@ aura as well `)
 // Cantrips
 char.addSpell('Guidance')
 char.addSpell('Light')
-char.addSpell('Spare the Dying')
 char.addSpell('Thaumaturgy')
 char.addSpell('Toll the Dead', c => {
     c.addAttack({
@@ -143,6 +142,16 @@ char.addSpell('Toll the Dead', c => {
         save: 'wis',
         saveDC: () => c.spellSaveDC,
         range: '60',
+    })
+})
+char.addSpell('Word of Radiance', c => {
+    c.addAttack({
+        name: 'Word of Radiance',
+        damage: () => '3d6',
+        type: 'save',
+        save: 'wis',
+        saveDC: () => c.spellSaveDC,
+        range: '5',
     })
 })
 
@@ -171,6 +180,7 @@ char.addSpell('Stone Shape')
 char.addSpell('Flame Strike')
 char.addSpell('Greater Restoration')
 char.addSpell('Holy Weapon')
+// char.addSpell('Contagion')
 
 // Level 6
 char.addSpell('Harm')
