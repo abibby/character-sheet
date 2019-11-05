@@ -330,11 +330,8 @@ export class Character {
         this.attacks.push(attack)
     }
 
-    public async save(file: string) {
-
-        await fs.writeFile(file, await render(this))
-        console.log('Character Generated');
-
+    public async render() {
+        return await render(this)
     }
 
     public assert<T>(expect: (c: Character) => T, actual: (c: Character) => T, message: string): string | undefined {

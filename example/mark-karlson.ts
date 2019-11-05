@@ -1,4 +1,5 @@
 import { Character } from "../dist"
+import { writeFileSync } from "fs";
 const char = new Character()
 
 char.name = 'Mark Karlson'
@@ -184,4 +185,4 @@ char.assert(
     'Number of spells',
 )
 
-char.save('index.html')
+char.render().then(html => writeFileSync('index.html', html))
