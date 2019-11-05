@@ -154,7 +154,6 @@ char.addSpell('Shield of Faith')
 // Level 2
 char.addSpell('Blindness/Deafness')
 char.addSpell('Silence')
-char.addSpell('Beacon of Hope')
 
 // Level 3
 char.addSpell('Zone of Truth')
@@ -165,7 +164,6 @@ char.addSpell('Meld into Stone')
 // Level 4
 char.addSpell('Control Water')
 char.addSpell('Death Ward')
-char.addSpell('Guardian of Faith')
 char.addSpell('Stone Shape')
 
 // Level 5
@@ -176,6 +174,9 @@ char.addSpell('Holy Weapon')
 // Level 6
 char.addSpell('Harm')
 char.addSpell('Planar Ally')
+
+// level 7
+char.addSpell('Regenerate')
 
 char.assert(
     c => c.level.get('Cleric') + c.stats.wis.mod() + 5 /* cantrips */ + 2/* firbolg */ + 10 /* cleric */,

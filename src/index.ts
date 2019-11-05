@@ -337,13 +337,15 @@ export class Character {
 
     }
 
-    public assert<T>(expect: (c: Character) => T, actual: (c: Character) => T, message: string): void {
+    public assert<T>(expect: (c: Character) => T, actual: (c: Character) => T, message: string): string | undefined {
         const e = expect(this)
         const a = actual(this)
         if (e === a) {
             return
         }
-        console.warn(`${message}, expected ${e} got ${a}`)
+        const m = `${message}, expected ${e} got ${a}`
+        console.log('\x1b[33m%s\x1b[0m', m);  //yellow
+        return m
     }
 
     private applyBonus(bonus: Bonus): void {
