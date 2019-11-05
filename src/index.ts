@@ -337,6 +337,15 @@ export class Character {
 
     }
 
+    public assert<T>(expect: (c: Character) => T, actual: (c: Character) => T, message: string): void {
+        const e = expect(this)
+        const a = actual(this)
+        if (e === a) {
+            return
+        }
+        console.warn(`${message}, expected ${e} got ${a}`)
+    }
+
     private applyBonus(bonus: Bonus): void {
         bonus(this)
     }

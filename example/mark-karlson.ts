@@ -91,6 +91,8 @@ char.levelUp('Cleric', c => { // 11
 char.levelUp('Cleric', c => { // 12
     c.addFeat('War Caster', c => { })
 })
+char.levelUp('Cleric', c => { // 13
+})
 
 char.addItem('Shining Plate Armor', c => {
     c.setAC(18 + 1)
@@ -122,6 +124,11 @@ char.addItem('Sickle', c => {
 })
 char.addItem('Holy Symbol', c => { })
 
+char.addFeature('Tattoo: Hammer and Sickle', `you emit an aura within five feet
+of you and anybody in this aura can use anybody else's saving throw modifier in
+place of their own when they have to make a save, so long as they are within the
+aura as well `)
+
 // Cantrips
 char.addSpell('Guidance')
 char.addSpell('Light')
@@ -137,11 +144,6 @@ char.addSpell('Toll the Dead', c => {
         range: '60',
     })
 })
-
-char.addFeature('Tattoo: Hammer and Sickle', `you emit an aura within five feet
-of you and anybody in this aura can use anybody else's saving throw modifier in
-place of their own when they have to make a save, so long as they are within the
-aura as well `)
 
 // Level 1
 // char.addSpell('Ceremony')
@@ -174,5 +176,11 @@ char.addSpell('Holy Weapon')
 // Level 6
 char.addSpell('Harm')
 char.addSpell('Planar Ally')
+
+char.assert(
+    c => c.level.get('Cleric') + c.stats.wis.mod() + 5 /* cantrips */ + 2/* firbolg */ + 10 /* cleric */,
+    c => c.spells.length,
+    'Number of spells',
+)
 
 char.save('index.html')
