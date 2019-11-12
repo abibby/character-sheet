@@ -173,11 +173,11 @@ char.addSpell('Meld into Stone')
 
 // Level 4
 char.addSpell('Control Water')
-char.addSpell('Death Ward')
 char.addSpell('Stone Shape')
+char.addSpell('Freedom of Movement')
 
 // Level 5
-char.addSpell('Flame Strike')
+char.addSpell('Dawn')
 char.addSpell('Greater Restoration')
 char.addSpell('Holy Weapon')
 // char.addSpell('Contagion')
@@ -188,6 +188,7 @@ char.addSpell('Planar Ally')
 
 // level 7
 char.addSpell('Regenerate')
+// char.addSpell('Conjure Celestial')
 
 char.assert(
     c => c.level.get('Cleric') + c.stats.wis.mod() + 5 /* cantrips */ + 2/* firbolg */ + 10 /* cleric */,
