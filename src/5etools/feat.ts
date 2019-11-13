@@ -1,6 +1,5 @@
-import { readJSON } from "./util";
 import { Entry } from "./entry";
-import { Stats } from "..";
+import feats from './feat-data.json'
 
 export interface Feat {
     name: string,
@@ -26,8 +25,7 @@ export interface Feat {
     // ]
 }
 
-const feats: Feat[] = readJSON('feats.json').feat
 
 export function findFeat(name: string): Feat | undefined {
-    return feats.find(f => f.name === name)
+    return (feats as Feat[]).find(f => f.name === name)
 }

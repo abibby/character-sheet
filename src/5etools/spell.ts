@@ -1,5 +1,5 @@
-import { readJSON } from "./util"
 import { Entry } from "./entry"
+import spells from './spell-data.json'
 
 type School = string
 export interface Time {
@@ -58,19 +58,6 @@ export interface Spell {
     areaTags: string[]
 }
 
-let spellCache: Spell[] | undefined
-function allSpells(): Spell[] {
-    if (spellCache === undefined) {
-        spellCache = []
-        const index: string[] = Object.values(readJSON('spells', 'index.json'))
-        for (const file of index) {
-            const result: { spell: Spell[] } = readJSON('spells', file)
-            spellCache = spellCache.concat(result.spell)
-        }
-    }
-    return spellCache
-}
 export function findSpell(name: string): Spell | undefined {
-    const spells = allSpells()
-    return spells.find(spell => spell.name === name)
+    return (spells as unknown as Spell[]).find(spell => spell.name === name)
 }

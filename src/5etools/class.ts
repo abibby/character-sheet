@@ -1,6 +1,6 @@
-import { readJSON } from "./util"
 import { Stats } from ".."
 import { Entry } from "./entry"
+import classes from './class-data.json'
 
 interface StartingProficiencies {
     armor: string[],
@@ -41,20 +41,6 @@ export interface Class {
     page: number
 }
 
-
-let classCache: Class[] | undefined
-
-function allClasses(): Class[] {
-    if (classCache === undefined) {
-        classCache = []
-        const index: string[] = Object.values(readJSON('class', 'index.json'))
-        for (const file of index) {
-            const result: { class: Class[] } = readJSON('class', file)
-            classCache = classCache.concat(result.class)
-        }
-    }
-    return classCache
-}
 export function findClass(name: string): Class | undefined {
-    return allClasses().find(c => c.name === name)
+    return (classes as Class[]).find(c => c.name === name)
 }
