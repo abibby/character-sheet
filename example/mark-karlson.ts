@@ -164,9 +164,9 @@ char.addSpell('Shield of Faith')
 // Level 2
 char.addSpell('Blindness/Deafness')
 char.addSpell('Silence')
+char.addSpell('Zone of Truth')
 
 // Level 3
-char.addSpell('Zone of Truth')
 char.addSpell('Mass Healing Word')
 char.addSpell('Water Walk')
 char.addSpell('Meld into Stone')
