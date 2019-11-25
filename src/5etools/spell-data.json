@@ -732,6 +732,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromClassListVariant": [
@@ -816,6 +820,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -877,6 +885,14 @@
                 "name": "Selesnya Initiate",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -927,6 +943,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -942,6 +962,14 @@
         "page": 211,
         "areaTags": [
             "C"
+        ],
+        "races": [
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -991,6 +1019,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -1012,6 +1044,16 @@
                     "subclass": {
                         "name": "Horizon Walker (UA)",
                         "source": "UARangerAndRogue"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -1142,6 +1184,12 @@
             {
                 "name": "Yuan-ti Pureblood",
                 "source": "VGM"
+            },
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ],
         "conditionInflict": [
@@ -1236,6 +1284,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -1453,6 +1509,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -1662,7 +1722,15 @@
             "The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.",
             "If you move so that an affected creature is forced to pass through the barrier, the spell ends."
         ],
-        "page": 213
+        "page": 213,
+        "races": [
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Antimagic Field",
@@ -1900,6 +1968,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -1956,6 +2028,20 @@
             {
                 "name": "Dimir Operative",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -2063,6 +2149,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -2083,6 +2173,12 @@
                 "name": "Tiefling (Mammon)",
                 "source": "MTF",
                 "baseName": "Tiefling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
         ],
@@ -2202,6 +2298,12 @@
                 "name": "Tiefling (Levistus)",
                 "source": "MTF",
                 "baseName": "Tiefling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
         ]
@@ -2564,6 +2666,20 @@
         ],
         "miscTags": [
             "HL"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -2613,6 +2729,16 @@
                         "name": "Battle Smith",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -2632,6 +2758,20 @@
         ],
         "areaTags": [
             "R"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -2701,6 +2841,16 @@
                         "name": "Twilight (UA)",
                         "source": "UAClericDruidWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -2724,6 +2874,14 @@
         ],
         "miscTags": [
             "HL"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -2794,6 +2952,14 @@
         ],
         "miscTags": [
             "PRM"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -2981,6 +3147,16 @@
                     "subclass": {
                         "name": "Battle Smith",
                         "source": "UAArtificerRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -3356,6 +3532,14 @@
         ],
         "miscTags": [
             "HL"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -3426,6 +3610,14 @@
             {
                 "name": "Gruul Anarch",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -3608,6 +3800,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -3667,6 +3863,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -4034,6 +4238,16 @@
                         "name": "Spores",
                         "source": "GGR"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
+                    }
                 }
             ]
         },
@@ -4334,6 +4548,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -4387,6 +4605,14 @@
         "page": 219,
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -4435,6 +4661,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -4542,6 +4772,16 @@
                     "subclass": {
                         "name": "Battle Smith",
                         "source": "UAArtificerRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
                     }
                 }
             ],
@@ -4935,6 +5175,20 @@
             {
                 "name": "Selesnya Initiate",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -5560,6 +5814,32 @@
                 "name": "Azorius Functionary",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -5815,6 +6095,16 @@
                     "subclass": {
                         "name": "Spores (UA)",
                         "source": "UAThreeSubclasses"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -6341,6 +6631,20 @@
                 "name": "Selesnya Initiate",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -6433,6 +6737,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -6515,7 +6827,15 @@
             "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.",
             "This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language."
         ],
-        "page": 224
+        "page": 224,
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Compulsion",
@@ -6728,6 +7048,16 @@
                     "subclass": {
                         "name": "Lurker in the Deep (UA)",
                         "source": "UASorcererAndWarlock"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
                     }
                 }
             ],
@@ -6957,6 +7287,14 @@
                 "name": "Rakdos Cultist",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -7059,6 +7397,14 @@
         "miscTags": [
             "SMN",
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -7094,6 +7440,18 @@
                     "name": "Ranger",
                     "source": "PHB"
                 }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
+                    }
+                }
             ]
         },
         "source": "PHB",
@@ -7111,6 +7469,14 @@
             {
                 "name": "Gruul Anarch",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -7256,6 +7622,14 @@
         ],
         "miscTags": [
             "SMN"
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -7405,6 +7779,14 @@
         "miscTags": [
             "SMN",
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -7847,6 +8229,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromClassListVariant": [
@@ -7860,7 +8246,15 @@
         "entries": [
             "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched."
         ],
-        "page": 227
+        "page": 227,
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Control Water",
@@ -8001,6 +8395,14 @@
         ],
         "areaTags": [
             "N"
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -8312,6 +8714,14 @@
                 "name": "Azorius Functionary",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -8349,6 +8759,10 @@
                 {
                     "name": "Paladin",
                     "source": "PHB"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -8379,7 +8793,15 @@
         "entries": [
             "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn't go bad."
         ],
-        "page": 229
+        "page": 229,
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Create Undead",
@@ -8598,6 +9020,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -8677,6 +9103,14 @@
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -8909,6 +9343,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -8974,6 +9412,12 @@
                 "source": "UAThatOldBlackMagic",
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
+            },
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
             }
         ],
         "areaTags": [
@@ -9032,6 +9476,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -9241,6 +9689,12 @@
                 "source": "SCAG",
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
+            },
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
             }
         ],
         "areaTags": [
@@ -9302,6 +9756,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -9552,6 +10010,16 @@
                         "name": "Alchemist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -9579,6 +10047,14 @@
             {
                 "name": "Orzhov Representative",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -9870,7 +10346,15 @@
             "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.",
             "The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
         ],
-        "page": 231
+        "page": 231,
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Detect Magic",
@@ -9935,6 +10419,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -9963,6 +10451,12 @@
             {
                 "name": "Firbolg",
                 "source": "VGM"
+            },
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -10030,6 +10524,14 @@
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -10145,6 +10647,12 @@
                 "source": "MTF",
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
+            },
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
             }
         ],
         "backgrounds": [
@@ -10256,6 +10764,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -10308,6 +10824,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -10410,6 +10930,12 @@
                 "name": "Tiefling (Glasya)",
                 "source": "MTF",
                 "baseName": "Tiefling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
                 "baseSource": "PHB"
             }
         ],
@@ -10624,6 +11150,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -10862,6 +11392,26 @@
             {
                 "name": "Izzet Engineer",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -11152,6 +11702,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -11578,6 +12136,14 @@
         ],
         "areaTags": [
             "ST"
+        ],
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -11835,6 +12401,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -11932,6 +12502,14 @@
                 "name": "Izzet Engineer",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -11990,6 +12568,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -12160,6 +12742,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -12773,6 +13359,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -12797,6 +13387,14 @@
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -12929,6 +13527,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -12964,6 +13566,14 @@
         "miscTags": [
             "PRM",
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -13009,6 +13619,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -13095,6 +13709,18 @@
                 "source": "SCAG",
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
+            },
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ],
         "areaTags": [
@@ -13148,6 +13774,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -13412,6 +14042,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -13434,6 +14068,14 @@
         "page": 239,
         "areaTags": [
             "MT"
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -13761,7 +14403,15 @@
             "You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the alarm spell, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.",
             "This spell merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense."
         ],
-        "page": 241
+        "page": 241,
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Find the Path",
@@ -13921,6 +14571,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -14054,6 +14708,16 @@
                     "subclass": {
                         "name": "Wildfire (UA)",
                         "source": "UAClericDruidWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
                     }
                 }
             ],
@@ -14239,6 +14903,16 @@
                     "subclass": {
                         "name": "Wildfire (UA)",
                         "source": "UAClericDruidWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -14605,6 +15279,16 @@
                         "source": "UAGiantSoulSorcerer",
                         "subSubclass": "Fire"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -14774,6 +15458,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -14887,6 +15575,12 @@
             {
                 "name": "Triton",
                 "source": "VGM"
+            },
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
             }
         ],
         "areaTags": [
@@ -15141,6 +15835,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -15248,6 +15946,14 @@
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -15462,6 +16168,16 @@
                     "subclass": {
                         "name": "Swarmkeeper (UA)",
                         "source": "UAFighterRangerRogue"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -16035,6 +16751,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -16113,6 +16833,14 @@
                 "name": "Izzet Engineer",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -16161,6 +16889,14 @@
         "page": 246,
         "miscTags": [
             "HL"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -16280,6 +17016,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromClassListVariant": [
@@ -16444,6 +17184,14 @@
         ],
         "areaTags": [
             "ST"
+        ],
+        "races": [
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -16493,6 +17241,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -16540,6 +17292,14 @@
         "page": 246,
         "areaTags": [
             "ST"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -16675,6 +17435,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -16819,6 +17587,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -17039,6 +17811,12 @@
             {
                 "name": "Triton",
                 "source": "VGM"
+            },
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
             }
         ],
         "areaTags": [
@@ -17262,6 +18040,14 @@
         ],
         "savingThrow": [
             "charisma"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -17339,6 +18125,14 @@
         ],
         "areaTags": [
             "C"
+        ],
+        "races": [
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -17442,6 +18236,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -17636,6 +18434,18 @@
                     "name": "Druid",
                     "source": "PHB"
                 }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
+                    }
+                }
             ]
         },
         "source": "PHB",
@@ -17658,6 +18468,14 @@
         "miscTags": [
             "HL",
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -17705,6 +18523,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -18030,6 +18852,16 @@
                     "subclass": {
                         "name": "Battle Smith",
                         "source": "UAArtificerRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -18683,6 +19515,20 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -18898,6 +19744,16 @@
                         "name": "Artillerist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
+                    }
                 }
             ]
         },
@@ -18969,6 +19825,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -19015,6 +19875,14 @@
         "page": 252,
         "areaTags": [
             "ST"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -19081,6 +19949,14 @@
             {
                 "name": "Orzhov Representative",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -19613,6 +20489,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -19710,6 +20590,12 @@
                 "source": "MTF",
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
+            },
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
             }
         ],
         "conditionInflict": [
@@ -19774,6 +20660,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -19816,6 +20706,12 @@
                 "source": "MTF",
                 "baseName": "Gith",
                 "baseSource": "MTF"
+            },
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ],
         "areaTags": [
@@ -19885,6 +20781,14 @@
         "page": 254,
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -19990,7 +20894,15 @@
             "Name or describe a person, place, or object. The spell brings to your mind a brief summary of the significant lore about the thing you named. The lore might consist of current tales, forgotten stories, or even secret lore that has never been widely known. If the thing you named isn't of legendary importance, you gain no information. The more information you already have about the thing, the more precise and detailed the information you receive is.",
             "The information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell might yield this information: \"Woe to the evildoer whose hand touches the axe, for even the haft slices the hand of the evil ones. Only a true Child of Stone, lover and beloved of Moradin, may awaken the true powers of the axe, and only with the sacred word Rudnogg on the lips.\""
         ],
-        "page": 254
+        "page": 254,
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Leomund's Secret Chest",
@@ -20034,6 +20946,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -20064,6 +20980,14 @@
         ],
         "miscTags": [
             "PRM"
+        ],
+        "races": [
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -20121,6 +21045,14 @@
         "page": 255,
         "areaTags": [
             "H"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -20177,6 +21109,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -20231,6 +21167,12 @@
             {
                 "name": "Aasimar",
                 "source": "DMG"
+            },
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
             }
         ],
         "areaTags": [
@@ -20282,6 +21224,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -20318,6 +21264,12 @@
                 "name": "Tiefling (Abyssal)",
                 "source": "UAThatOldBlackMagic",
                 "baseName": "Tiefling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
         ],
@@ -20378,6 +21330,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -20675,7 +21631,21 @@
         "entries": [
             "Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
         ],
-        "page": 256
+        "page": 256,
+        "races": [
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Locate Creature",
@@ -20815,7 +21785,21 @@
             "The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn't locate the creature.",
             "This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature."
         ],
-        "page": 256
+        "page": 256,
+        "races": [
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Locate Object",
@@ -20904,7 +21888,21 @@
             "The spell can locate a specific object known to you, as long as you have seen it up close—within 30 feet—at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
             "This spell can't locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object."
         ],
-        "page": 256
+        "page": 256,
+        "races": [
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Longstrider",
@@ -20961,6 +21959,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -20980,6 +21982,20 @@
         "page": 256,
         "areaTags": [
             "ST"
+        ],
+        "races": [
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -21031,6 +22047,14 @@
         "page": 256,
         "areaTags": [
             "ST"
+        ],
+        "races": [
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -21084,6 +22108,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -21290,6 +22318,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -21492,6 +22528,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -21507,6 +22547,14 @@
         "page": 257,
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -21556,6 +22604,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -21650,7 +22702,15 @@
                 ]
             }
         ],
-        "page": 257
+        "page": 257,
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Major Image",
@@ -21725,6 +22785,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -21797,6 +22865,16 @@
                     "subclass": {
                         "name": "Battle Smith",
                         "source": "UAArtificerRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -21922,6 +23000,16 @@
                         "name": "Order",
                         "source": "GGR"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -21951,6 +23039,14 @@
         "miscTags": [
             "HL",
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -22230,6 +23326,16 @@
                         "name": "Alchemist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
+                    }
                 }
             ]
         },
@@ -22308,6 +23414,32 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
+                    }
                 }
             ]
         },
@@ -22316,7 +23448,15 @@
             "This spell repairs a single break or tear in an object you touch, such as broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.",
             "This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object."
         ],
-        "page": 259
+        "page": 259,
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Message",
@@ -22366,6 +23506,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -22380,6 +23524,12 @@
                 "name": "Tiefling (Abyssal)",
                 "source": "UAThatOldBlackMagic",
                 "baseName": "Tiefling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
                 "baseSource": "PHB"
             }
         ],
@@ -22601,6 +23751,12 @@
                 "name": "Tiefling (Glasya)",
                 "source": "MTF",
                 "baseName": "Tiefling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
                 "baseSource": "PHB"
             }
         ]
@@ -22832,6 +23988,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -22950,6 +24114,12 @@
                 "source": "MTF",
                 "baseName": "Gith",
                 "baseSource": "MTF"
+            },
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ],
         "miscTags": [
@@ -23209,6 +24379,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -23224,6 +24398,14 @@
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Dwarf (Mark of Warding)",
+                "source": "ERLW",
+                "baseName": "Dwarf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -23324,6 +24506,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -23356,6 +24542,14 @@
         "page": 262,
         "miscTags": [
             "PRM"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -23570,6 +24764,14 @@
                 "name": "Dimir Operative",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -23758,6 +24960,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -23964,6 +25170,18 @@
                 "source": "EEPC",
                 "baseName": "Genasi",
                 "baseSource": "EEPC"
+            },
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ],
         "areaTags": [
@@ -24306,6 +25524,14 @@
         "page": 265,
         "miscTags": [
             "SMN"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -24730,6 +25956,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -25083,6 +26313,14 @@
         "miscTags": [
             "HL",
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Healing)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -25137,6 +26375,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -25174,6 +26416,12 @@
                 "name": "Tiefling (Abyssal)",
                 "source": "UAThatOldBlackMagic",
                 "baseName": "Tiefling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
                 "baseSource": "PHB"
             }
         ]
@@ -25698,6 +26946,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -25808,6 +27060,14 @@
         ],
         "areaTags": [
             "ST"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -26050,6 +27310,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -26133,6 +27397,10 @@
                 {
                     "name": "Paladin",
                     "source": "PHB"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -26158,6 +27426,14 @@
         "page": 270,
         "areaTags": [
             "S"
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -26254,6 +27530,16 @@
                     "subclass": {
                         "name": "Wildfire (UA)",
                         "source": "UAClericDruidWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -26510,6 +27796,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -26625,6 +27915,16 @@
                     "subclass": {
                         "name": "Alchemist",
                         "source": "UAArtificerRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Alchemist",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -27039,6 +28339,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -27228,6 +28532,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -27348,6 +28656,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -27538,6 +28850,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -27662,6 +28978,16 @@
                     "subclass": {
                         "name": "Wildfire (UA)",
                         "source": "UAClericDruidWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -28064,6 +29390,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -28074,6 +29404,14 @@
         "page": 274,
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Detection)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -28278,7 +29616,15 @@
             "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
             "You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive."
         ],
-        "page": 274
+        "page": 274,
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Sequester",
@@ -28494,6 +29840,16 @@
                         "name": "Lurker in the Deep (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
+                    }
                 }
             ]
         },
@@ -28619,6 +29975,26 @@
                         "name": "Artillerist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
+                    }
                 }
             ]
         },
@@ -28639,6 +30015,12 @@
                 "source": "MTF",
                 "baseName": "Gith",
                 "baseSource": "MTF"
+            },
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -28719,6 +30101,14 @@
         "page": 275,
         "areaTags": [
             "ST"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -28816,6 +30206,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -28950,6 +30344,14 @@
         ],
         "areaTags": [
             "S"
+        ],
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -29009,6 +30411,14 @@
         "page": 276,
         "opposedCheck": [
             "intelligence"
+        ],
+        "races": [
+            {
+                "name": "Elf (Mark of Shadow)",
+                "source": "ERLW",
+                "baseName": "Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -29177,6 +30587,14 @@
                 "name": "Dimir Operative",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -29276,6 +30694,14 @@
         ],
         "areaTags": [
             "Y"
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -29422,6 +30848,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -29543,6 +30973,14 @@
             {
                 "name": "Gruul Anarch",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Handling)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -29710,6 +31148,20 @@
                 "name": "Selesnya Initiate",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Half-Orc (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Half-Orc",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Finding)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -29764,6 +31216,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -30410,6 +31866,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -30441,7 +31901,15 @@
         "entries": [
             "You touch a stone object of Medium size or smaller or a section of stone no more than 5 feet in any dimension and form it into any shape that suits your purpose. So, for example, you could shape a large rock into a weapon, idol, or coffer, or make a small passage through a wall, as long as the wall is less than 5 feet thick. You could also shape a stone door or its frame to seal the door shut. The object you create can have up to two hinges and a latch, but finer mechanical detail isn't possible."
         ],
-        "page": 278
+        "page": 278,
+        "races": [
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Stoneskin",
@@ -30503,6 +31971,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -31636,6 +33108,14 @@
         "page": 282,
         "miscTags": [
             "PRM"
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Passage)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -31698,6 +33178,12 @@
                 "name": "Tiefling (Mammon)",
                 "source": "MTF",
                 "baseName": "Tiefling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Human (Mark of Making)",
+                "source": "ERLW",
+                "baseName": "Human",
                 "baseSource": "PHB"
             }
         ],
@@ -31871,6 +33357,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -32063,6 +33553,16 @@
                         "name": "Lurker in the Deep (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -32229,7 +33729,15 @@
         "entries": [
             "This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says."
         ],
-        "page": 283
+        "page": 283,
+        "races": [
+            {
+                "name": "Gnome (Mark of Scribing)",
+                "source": "ERLW",
+                "baseName": "Gnome",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Transport via Plants",
@@ -32752,6 +34260,14 @@
                 "name": "Izzet Engineer",
                 "source": "GGR"
             }
+        ],
+        "races": [
+            {
+                "name": "Halfling (Mark of Hospitality)",
+                "source": "ERLW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -33075,6 +34591,16 @@
                         "name": "Artillerist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
+                    }
                 }
             ]
         },
@@ -33192,6 +34718,16 @@
                     "subclass": {
                         "name": "Artillerist",
                         "source": "UAArtificerRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
                     }
                 }
             ]
@@ -33325,6 +34861,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -33509,6 +35049,16 @@
                         "name": "Battle Smith",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Battle Smith",
+                        "source": "ERLW"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -33535,6 +35085,14 @@
             {
                 "name": "Selesnya Initiate",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -33594,6 +35152,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -33697,6 +35259,10 @@
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -33781,6 +35347,10 @@
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromSubclass": [
@@ -34051,6 +35621,16 @@
                         "name": "Artillerist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Artillerist",
+                        "source": "ERLW"
+                    }
                 }
             ]
         },
@@ -34074,6 +35654,14 @@
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
             }
         ]
     },
@@ -34503,6 +36091,14 @@
             {
                 "name": "Orzhov Representative",
                 "source": "GGR"
+            }
+        ],
+        "races": [
+            {
+                "name": "Human (Mark of Sentinel)",
+                "source": "ERLW",
+                "baseName": "Human",
+                "baseSource": "PHB"
             }
         ]
     },

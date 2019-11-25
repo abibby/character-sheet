@@ -9850,7 +9850,7 @@
                                     "name": "Midnight Shroud",
                                     "entries": [
                                         "{@i 17th-level Twilight Domain feature}",
-                                        "You can harness the shrouding power of night to protect your allies and stymie your foes. Whenever you cast the {@spell darkness} spell using a spell slot, you can choose a number of creatures that you can see (including yourself) equal to your Wisdom modifier (minimum of one). The chosen creatures can see through the darkness"
+                                        "You can harness the shrouding power of night to protect your allies and stymie your foes. Whenever you cast the {@spell darkness} spell using a spell slot, you can choose a number of creatures that you can see (including yourself) equal to your Wisdom modifier (minimum of one). The chosen creatures can see through the darkness."
                                     ]
                                 }
                             ]
@@ -10601,15 +10601,6 @@
                             ]
                         }
                     ]
-                },
-                {
-                    "name": "Cantrip Versatility",
-                    "entries": [
-                        "{@i 1st-level druid feature (enhances Spellcasting)}",
-                        "Whenever you gain a level in this class, you can replace one cantrip you learned from this Spellcasting feature with another cantrip from the druid spell list."
-                    ],
-                    "source": "UAClassFeatureVariants",
-                    "page": 4
                 }
             ],
             [
@@ -10667,16 +10658,6 @@
                             ]
                         }
                     ]
-                },
-                {
-                    "name": "Wild Companion",
-                    "entries": [
-                        "{@i 2nd-level druid feature (enhances Wild Shape)}",
-                        "You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell find familiar} spell, without material components.",
-                        "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
-                    ],
-                    "source": "UAClassFeatureVariants",
-                    "page": 4
                 },
                 {
                     "name": "Druid Circle",
@@ -19953,7 +19934,7 @@
                                             "items": [
                                                 "You can use your Wisdom modifier in place of your Strength modifier when making Strength checks and Strength saving throws.",
                                                 "The arms are monk weapons and have a reach of 10 feet. The arms deal radiant or necrotic damage (your choice). When you attack with the arms, you can use your Wisdom modifier instead of your Strength or Dexterity modifier for the attack and damage rolls.",
-                                                "Immediately after you use the Attack action with your astral arms on your turn, you can make one extra attack with your astral arms as a bonus action. The number of extra attacks increases when you reach certain levels in this class, increasing to two at 11th level and three at17th level."
+                                                "Immediately after you use the Attack action with your astral arms on your turn, you can make one extra attack with your astral arms as a bonus action. The number of extra attacks increases when you reach certain levels in this class, increasing to two at 11th level and three at 17th level."
                                             ]
                                         }
                                     ]
@@ -34403,8 +34384,8 @@
                                     "type": "entries",
                                     "name": "Twinned Spell",
                                     "entries": [
-                                        "When you cast a spell that doesn't have a range of self and is incapable of targeting more than one creature at the spell's current level, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).",
-                                        "To be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, magic missile and scorching ray aren't eligible, but ray of frost and chromatic orb are."
+                                        "When you cast a spell that targets only one creature and doesn't have a range of self, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).",
+                                        "To be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, {@spell magic missile} and {@spell scorching ray} aren't eligible, but {@spell ray of frost} and {@spell chromatic orb} are."
                                     ]
                                 }
                             ]
@@ -37169,15 +37150,6 @@
                     ]
                 },
                 {
-                    "name": "Spell Versatility",
-                    "entries": [
-                        "{@i 1st-level warlock feature (enhances Pact Magic)}",
-                        "Whenever you finish a long rest, you can replace one spell you learned from this Pact Magic feature with another spell from the warlock spell list. The new spell must be the same level as the spell you replace."
-                    ],
-                    "source": "UAClassFeatureVariants",
-                    "page": 10
-                },
-                {
                     "name": "Otherworldly Patron",
                     "entries": [
                         "At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
@@ -37249,16 +37221,6 @@
                                         "name": "The Seeker (UA)",
                                         "source": "UATheFaithful"
                                     }
-                                },
-                                {
-                                    "name": "Pact of the Talisman",
-                                    "source": "UAClassFeatureVariants",
-                                    "page": 11,
-                                    "entries": [
-                                        "Your patron gives you a special amulet, a talisman that can aid you, or anyone else who wears it, when the need is great. When the wearer makes an ability check with a skill in which they lack proficiency, they can add a {@dice d4} to the roll.",
-                                        "If you lose the talisman, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous amulet.",
-                                        "The talisman turns to ash when you die."
-                                    ]
                                 }
                             ]
                         }

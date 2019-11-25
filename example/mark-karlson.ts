@@ -23,6 +23,8 @@ char.setRace('Firbolg', c => {
     c.addSpell('Detect Magic')
     c.addSpell('Disguise Self')
 
+    c.addLimitedFeature('Hidden Step', 1, 'sr')
+
     c.speed = 30
 });
 
