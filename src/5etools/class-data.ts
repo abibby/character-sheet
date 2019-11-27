@@ -1,4 +1,4 @@
-[
+export default [
     {
         "name": "Artificer",
         "source": "UAArtificer",
@@ -13781,7 +13781,7 @@
                 {
                     "name": "Action Surge",
                     "entries": [
-                        "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+                        "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action.",
                         "Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
                     ]
                 }
@@ -17723,6 +17723,129 @@
                 ],
                 "source": "UAFighterRangerAndRogue",
                 "shortName": "Rune Knight (UA)"
+            },
+            {
+                "name": "Psychic Warrior (UA)",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Psychic Warrior",
+                            "entries": [
+                                "Awakening to the psionic power within themselves, a Psychic Warrior is a fighter who augments their physical might with psychically infused weapon strikes, telekinetic lashes, and barriers of mental force.",
+                                "As a Psychic Warrior, you might have honed your psionic abilities through your own disciplined practice, unlocked it under the tutelage of a master, or developed it at an academy dedicated to wielding the mind's power as both weapon and shield.",
+                                {
+                                    "type": "entries",
+                                    "name": "Psionic Armament",
+                                    "entries": [
+                                        "{@i 3rd-level Psychic Warrior feature}",
+                                        "You can channel your psychic power to magically augment your prowess. When you finish a long rest, choose whether to augment your defenses or your strikes. The chosen benefit lasts until you finish a long rest.",
+                                        {
+                                            "type": "entries",
+                                            "name": "Augmented Defenses",
+                                            "entries": [
+                                                "When you or a creature you can see within 30 feet of you takes damage, you can use your reaction to roll a {@dice d10} and reduce the amount of damage taken by the number rolled. When you reach 10th level in this class, the die changes to a {@dice d12}."
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "name": "Augmented Strikes",
+                                            "entries": [
+                                                "Once during each of your turns when you hit a creature with a weapon attack, you can also deal {@dice 1d4} psychic damage to that target. When you reach 10th level in this class, the psychic damage increases to {@dice 1d6}."
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Telekinetic Hand",
+                                    "type": "entries",
+                                    "entries": [
+                                        "{@i 3rd-level Psychic Warrior feature}",
+                                        "You learn the {@spell mage hand} cantrip. You can cast it without components, and you can make the spectral hand {@condition invisible}. Intelligence is your spellcasting ability for this spell."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Strength of Mind",
+                                    "entries": [
+                                        "{@i 7th-level Psychic Warrior feature}",
+                                        "As a bonus action, you can telekinetically lash out at a creature you can see within 20 feet of you. The target must make a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. On a failed save, the target takes force damage equal to {@dice 2d6} plus your Intelligence modifier and is telekinetically moved 15 feet directly toward or away from you (your choice). On a successful save, it takes half as much damage and isn't moved.",
+                                        "You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Telekinetic Bulwark",
+                                    "entries": [
+                                        "{@i 10th-level Psychic Warrior feature}",
+                                        "When you take the {@action Attack} action, you can forgo one of your attacks to project a bastion of psionic power in a 10-foot radius around yourself. It lasts for 1 minute or until you're {@condition incapacitated}. For the duration, you and your allies in that area gain the benefits of half cover and have advantage on Strength saving throws.",
+                                        "Once you use this feature, you can't do so again until you finish a long rest or until after you use your Second Wind feature."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Psionic Armament Improvement",
+                                    "entries": [
+                                        "{@i 10th-level Psychic Warrior feature}",
+                                        "When you reach 10th level in this class, your Augmented Defenses dice increases to {@dice 1d12}, and your Augmented Strikes dice increases to a {@dice d6}."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Agonizing Strikes",
+                                    "entries": [
+                                        "{@i 15th-level Psychic Warrior feature}",
+                                        "Your attacks can channel psychic agony. When you hit a creature with a weapon attack, you can also deal {@dice 2d10} psychic damage to that target and force it to make a Constitution saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. Unless the save succeeds, the target falls {@condition prone}, and it suffers disadvantage on ability checks until the end of your next turn.",
+                                        "You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Psychic Dreadnaught",
+                                    "entries": [
+                                        "{@i 18th-level Psychic Warrior feature}",
+                                        "The power of your mind suffuses your entire being, making you a nigh-unstoppable force on the battlefield. Using your reaction when you take damage, you can give yourself the following benefits for 1 minute or until you're {@condition incapacitated}:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "At the start of each of your turns, you regain 10 hit points.",
+                                                "Your walking speed increases by 10 feet.",
+                                                "If you're {@condition prone}, you can stand up by spending 5 feet of movement."
+                                            ]
+                                        },
+                                        "Once you activate this feature, you can't use it again until you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "source": "UAFighterRogueWizard",
+                "shortName": "Psychic Warrior (UA)",
+                "page": 1
             }
         ],
         "fluff": [
@@ -32408,6 +32531,92 @@
                 ],
                 "source": "UAFighterRangerRogue",
                 "shortName": "Revived (UA)"
+            },
+            {
+                "name": "Soulknife (UA)",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Soulknife",
+                            "entries": [
+                                "A Soulknife possesses powerful psionic potential. They channel this reservoir of inner magic into tangible blades of psychic energy, striking at their victims' minds. They find easy employment as members of thieves' guilds, being particularly sought after as assassins, since their signature psychic blades leave behind no visible wounds.",
+                                "As a Soulknife, your psionic abilities might have haunted you since you were a child, only revealing their potential when your psychic knives first appeared. Or you might have sought out a reclusive order of psionic assassins and spent years learning how to manifest your deadly blades.",
+                                {
+                                    "name": "Psychic Blade",
+                                    "type": "entries",
+                                    "entries": [
+                                        "{@i 3rd-level Soulknife feature}",
+                                        "As a bonus action, you can create a magical blade of shimmering psychic power from one or both of your hands. While one of your hands is manifesting a blade, you can't hold anything in that hand. You can dismiss one or both blades at any time (no action required), and they disappear if you're {@condition incapacitated}.",
+                                        "The blade is a simple melee weapon with the finesse, light, and thrown properties. It has a normal range of 30 feet and a long range of 60 feet, and it deals {@dice 1d6} psychic damage on a hit. If you throw the blade as part of an attack, it vanishes immediately after it hits or misses its target. The blade otherwise disappears the instant it leaves your hand."
+                                    ]
+                                },
+                                {
+                                    "name": "Psionic Enhancement",
+                                    "type": "entries",
+                                    "entries": [
+                                        "{@i 3rd-level Soulknife feature}",
+                                        "You can focus your psionic power to give yourself an extraordinary ability. When you finish a long rest, you gain one of the following benefits of your choice, which lasts until you finish a long rest:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "You can communicate telepathically with any creature you can see within 30 feet of you. If a creature can speak at least one language, it can respond to you telepathically.",
+                                                "Increase your walking speed by 5 feet.",
+                                                "Your hit point maximum and your current hit points increase by an amount equal to your Intelligence modifier plus your rogue level."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Terrifying Blade",
+                                    "entries": [
+                                        "{@i 9th-level Soulknife feature}",
+                                        "Your psychic blades can now stoke terror within a target: When you damage a creature with your Psychic Blade, you can force the target to make a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Intelligence modifier). On a failed save, the creature is {@condition frightened} of you until the start of your next turn. On a successful save, the creature isn't {@condition frightened} and is immune to your Terrifying Blade for 24 hours."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Psychic Veil",
+                                    "entries": [
+                                        "{@i 13th-level Soulknife feature}",
+                                        "You can weave a veil of psionic static to mask your physical presence. As an action, you can magically become {@condition invisible}, along with anything you are wearing or carrying, for 10 minutes. This invisibility ends if you make an attack or if you force a creature to make a saving throw.",
+                                        "You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Rend Mind",
+                                    "entries": [
+                                        "{@i 17th-level Soulknife feature}",
+                                        "You can sweep your Psychic Blade directly through a creature's mind. As an action while you have at least one Psychic Blade manifested, you can force a creature you can see within 30 feet of you to make an Intelligence saving throw (DC equal to 10 + your proficiency bonus + your Intelligence modifier). If you are hidden from the target, it has disadvantage on the save. On a failed save, the target takes {@dice 12d6} psychic damage, and it is {@condition stunned} until the start of your next turn. On a successful save, the target takes half as much damage and isn't {@condition stunned}. One of your Psychic Blades vanishes after using this feature.",
+                                        "You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "source": "UAFighterRogueWizard",
+                "shortName": "Soulknife (UA)",
+                "page": 2
             }
         ],
         "fluff": [

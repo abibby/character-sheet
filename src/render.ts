@@ -1,8 +1,6 @@
-import { Character, Stats, Stat, Skills, LimitedFeature, StatMap, Attack } from "."
-import { Entry, findSpell, Components, Duration, Spell, findFeat, Feat, findClass, ClassFeature } from "./5etools"
-import { promises as fs } from 'fs'
-import { join } from "path"
-import { range } from './functional'
+import { Character, Stats, Stat, Skills, LimitedFeature, StatMap, Attack } from "./index.js"
+import { Entry, findSpell, Components, Duration, Spell, findFeat, Feat, findClass, ClassFeature } from "./5etools/index.js"
+import { range } from './functional.js'
 
 
 async function html(strings: TemplateStringsArray, ...parts: unknown[]): Promise<string> {
@@ -72,22 +70,6 @@ function sign(num: number): string {
 
 export async function render(c: Character): Promise<string> {
     return html`
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <style>
-        ${fs.readFile(join(__dirname, 'main.css'))}
-    </style>
-
-    <title>${c.name}</title>
-</head>
-
-<body>
     <div class="character">
         <header>
             <div class="name">${c.name}</div>
@@ -113,10 +95,7 @@ export async function render(c: Character): Promise<string> {
         ${collapse('Feats', feats(c))}
         ${collapse('Spells', spells(c.spells))}
     </section>
-</body>
-
-</html>
-`
+    `
 }
 
 async function collapse(header: unknown, body: unknown): Promise<string> {

@@ -1,6 +1,6 @@
-import { Stats } from ".."
-import { Entry } from "./entry"
-import classes from './class-data.json'
+import { Stats } from "../index.js"
+import { Entry } from "./entry.js"
+import classes from './class-data.js'
 
 interface StartingProficiencies {
     armor: string[],

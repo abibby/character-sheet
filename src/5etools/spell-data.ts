@@ -1,4 +1,4 @@
-[
+export default [
     {
         "name": "Distort Value",
         "level": 1,

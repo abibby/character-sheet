@@ -1,5 +1,5 @@
-import { Entry } from "./entry"
-import spells from './spell-data.json'
+import { Entry } from "./entry.js"
+import spells from './spell-data.js'
 
 type School = string
 export interface Time {

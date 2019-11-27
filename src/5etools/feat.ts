@@ -1,5 +1,5 @@
-import { Entry } from "./entry";
-import feats from './feat-data.json'
+import { Entry } from "./entry.js";
+import feats from './feat-data.js'
 
 export interface Feat {
     name: string,

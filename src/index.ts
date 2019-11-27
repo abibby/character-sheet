@@ -1,10 +1,5 @@
-import { Class, findClass, Entry } from "./5etools"
-import { render } from "./render"
-import { promises as fs } from 'fs'
-
-if (!Object.fromEntries) {
-    require('object.fromentries').shim()
-}
+import { findClass, Entry } from "./5etools/index.js"
+import { render } from "./render.js"
 
 export class Level {
     private classMap = new Map<string, number>()

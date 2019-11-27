@@ -198,4 +198,10 @@ char.assert(
     'Number of spells',
 )
 
+char.assert(
+    c => new Set(c.spells).size,
+    c => c.spells.length,
+    'No duplicate spells',
+)
+
 char.render().then(html => writeFileSync('index.html', html))

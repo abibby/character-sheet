@@ -3,10 +3,10 @@
         "sourceMap": true,
         "noImplicitAny": true,
         "moduleResolution": "node",
-        "target": "es5",
+        "target": "es6",
         "strictNullChecks": true,
-        "resolveJsonModule": true,
         "esModuleInterop": true,
+        "module": "es6",
         "outDir": "dist",
         "declaration": true,
         "lib": [
