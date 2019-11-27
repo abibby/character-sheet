@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,9 +34,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var _5etools_1 = require("./5etools");
-var render_1 = require("./render");
+import { findClass } from "./5etools";
+import { render } from "./render";
 if (!Object.fromEntries) {
     require('object.fromentries').shim();
 }
@@ -79,7 +77,7 @@ var Level = /** @class */ (function () {
     };
     return Level;
 }());
-exports.Level = Level;
+export { Level };
 var Stat = /** @class */ (function () {
     function Stat() {
         this.value = 0;
@@ -102,8 +100,8 @@ var Stat = /** @class */ (function () {
     };
     return Stat;
 }());
-exports.Stat = Stat;
-exports.StatMap = {
+export { Stat };
+export var StatMap = {
     str: 'strength',
     dex: 'dexterity',
     con: 'constitution',
@@ -111,7 +109,7 @@ exports.StatMap = {
     wis: 'wisdom',
     cha: 'charisma',
 };
-exports.SkillsMap = {
+export var SkillsMap = {
     'acrobatics': 'dex',
     'animal handling': 'wis',
     'arcana': 'int',
@@ -163,7 +161,7 @@ var Character = /** @class */ (function () {
     Object.defineProperty(Character.prototype, "saves", {
         get: function () {
             var _this = this;
-            return Object.fromEntries(Object.keys(exports.StatMap)
+            return Object.fromEntries(Object.keys(StatMap)
                 .map(function (stat) { return [
                 stat,
                 _this.stats[stat].mod() + Number(_this.saveIsProficient(stat)) * _this.proficiencyBonus,
@@ -175,7 +173,7 @@ var Character = /** @class */ (function () {
     Object.defineProperty(Character.prototype, "skills", {
         get: function () {
             var _this = this;
-            return Object.fromEntries(Object.entries(exports.SkillsMap)
+            return Object.fromEntries(Object.entries(SkillsMap)
                 .map(function (_a) {
                 var skill = _a[0], stat = _a[1];
                 return [
@@ -291,7 +289,7 @@ var Character = /** @class */ (function () {
     };
     Character.prototype.levelUp = function (name, bonus) {
         this.level.add(name);
-        var c = _5etools_1.findClass(name);
+        var c = findClass(name);
         if (c !== undefined) {
             this.addHitDie(c.hd.faces);
         }
@@ -337,7 +335,7 @@ var Character = /** @class */ (function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, render_1.render(this)];
+                    case 0: return [4 /*yield*/, render(this)];
                     case 1: return [2 /*return*/, _a.sent()];
                 }
             });
@@ -358,9 +356,8 @@ var Character = /** @class */ (function () {
     };
     return Character;
 }());
-exports.Character = Character;
-function mod(num) {
+export { Character };
+export function mod(num) {
     return Math.floor((num - 10) / 2);
 }
-exports.mod = mod;
 //# sourceMappingURL=index.js.map

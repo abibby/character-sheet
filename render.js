@@ -1,4 +1,3 @@
-"use strict";
 var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -50,12 +49,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var _1 = require(".");
-var _5etools_1 = require("./5etools");
-var fs_1 = require("fs");
-var path_1 = require("path");
-var functional_1 = require("./functional");
+import { StatMap } from ".";
+import { findSpell, findFeat, findClass } from "./5etools";
+import { promises as fs } from 'fs';
+import { join } from "path";
+import { range } from './functional';
 function html(strings) {
     var parts = [];
     for (var _i = 1; _i < arguments.length; _i++) {
@@ -156,14 +154,13 @@ function sign(num) {
     }
     return '' + num;
 }
-function render(c) {
+export function render(c) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
-            return [2 /*return*/, html(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\n    <style>\n        ", "\n    </style>\n\n    <title>", "</title>\n</head>\n\n<body>\n    <div class=\"character\">\n        <header>\n            <div class=\"name\">", "</div>\n            <div class=\"class-level\">", "</div>\n            <div class=\"background\">", "</div>\n            <div class=\"player-name\">", "</div>\n            <div class=\"race\">", "</div>\n            <div class=\"alignment\">", "</div>\n            <div class=\"xp\">", "</div>\n        </header>\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n    </div>\n    <section class=\"lists\">\n        ", "\n        ", "\n        ", "\n        ", "\n    </section>\n</body>\n\n</html>\n"], ["\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\n    <style>\n        ", "\n    </style>\n\n    <title>", "</title>\n</head>\n\n<body>\n    <div class=\"character\">\n        <header>\n            <div class=\"name\">", "</div>\n            <div class=\"class-level\">", "</div>\n            <div class=\"background\">", "</div>\n            <div class=\"player-name\">", "</div>\n            <div class=\"race\">", "</div>\n            <div class=\"alignment\">", "</div>\n            <div class=\"xp\">", "</div>\n        </header>\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n    </div>\n    <section class=\"lists\">\n        ", "\n        ", "\n        ", "\n        ", "\n    </section>\n</body>\n\n</html>\n"])), fs_1.promises.readFile(path_1.join(__dirname, 'main.css')), c.name, c.name, c.level, c.background, c.playerName, c.race, c.alignment, c.xp, stats(c.stats), saves(c.saves), skills(c), combat(c), limitedFeatures(c.limitedFeatures), items(c), features(c), attacks(c), collapse('Limited Class Features', limitedClassFeatures(c)), collapse('Class Features', classFeatures(c)), collapse('Feats', feats(c)), collapse('Spells', spells(c.spells)))];
+            return [2 /*return*/, html(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\n    <style>\n        ", "\n    </style>\n\n    <title>", "</title>\n</head>\n\n<body>\n    <div class=\"character\">\n        <header>\n            <div class=\"name\">", "</div>\n            <div class=\"class-level\">", "</div>\n            <div class=\"background\">", "</div>\n            <div class=\"player-name\">", "</div>\n            <div class=\"race\">", "</div>\n            <div class=\"alignment\">", "</div>\n            <div class=\"xp\">", "</div>\n        </header>\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n    </div>\n    <section class=\"lists\">\n        ", "\n        ", "\n        ", "\n        ", "\n    </section>\n</body>\n\n</html>\n"], ["\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\n    <style>\n        ", "\n    </style>\n\n    <title>", "</title>\n</head>\n\n<body>\n    <div class=\"character\">\n        <header>\n            <div class=\"name\">", "</div>\n            <div class=\"class-level\">", "</div>\n            <div class=\"background\">", "</div>\n            <div class=\"player-name\">", "</div>\n            <div class=\"race\">", "</div>\n            <div class=\"alignment\">", "</div>\n            <div class=\"xp\">", "</div>\n        </header>\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n        ", "\n    </div>\n    <section class=\"lists\">\n        ", "\n        ", "\n        ", "\n        ", "\n    </section>\n</body>\n\n</html>\n"])), fs.readFile(join(__dirname, 'main.css')), c.name, c.name, c.level, c.background, c.playerName, c.race, c.alignment, c.xp, stats(c.stats), saves(c.saves), skills(c), combat(c), limitedFeatures(c.limitedFeatures), items(c), features(c), attacks(c), collapse('Limited Class Features', limitedClassFeatures(c)), collapse('Class Features', classFeatures(c)), collapse('Feats', feats(c)), collapse('Spells', spells(c.spells)))];
         });
     });
 }
-exports.render = render;
 function collapse(header, body) {
     return __awaiter(this, void 0, void 0, function () {
         var key;
@@ -197,7 +194,7 @@ function saves(s) {
 function save(s, title) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
-            return [2 /*return*/, html(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    <div class=\"save\">\n        <span class=\"value\">\n            ", "\n        </span>\n        <span class=\"title\">\n            ", "\n        </span>\n    </div>\n    "], ["\n    <div class=\"save\">\n        <span class=\"value\">\n            ", "\n        </span>\n        <span class=\"title\">\n            ", "\n        </span>\n    </div>\n    "])), sign(s), titleCase(_1.StatMap[title]))];
+            return [2 /*return*/, html(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    <div class=\"save\">\n        <span class=\"value\">\n            ", "\n        </span>\n        <span class=\"title\">\n            ", "\n        </span>\n    </div>\n    "], ["\n    <div class=\"save\">\n        <span class=\"value\">\n            ", "\n        </span>\n        <span class=\"title\">\n            ", "\n        </span>\n    </div>\n    "])), sign(s), titleCase(StatMap[title]))];
         });
     });
 }
@@ -236,7 +233,7 @@ function limitedFeatures(features) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             return [2 /*return*/, html(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n    <section class=\"limited-features\">\n        <table>\n            <thead>\n                <tr>\n                    <th>Feature</th>\n                    <th>Recover</th>\n                    <th></th>\n                </tr>\n            </thead>\n            <tbody>\n                ", "\n            </tbody>\n        </table>\n    </section>\n    "], ["\n    <section class=\"limited-features\">\n        <table>\n            <thead>\n                <tr>\n                    <th>Feature</th>\n                    <th>Recover</th>\n                    <th></th>\n                </tr>\n            </thead>\n            <tbody>\n                ",
-                    "\n            </tbody>\n        </table>\n    </section>\n    "])), features.map(function (f) { return html(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n                <tr>\n                    <td>", "</td>\n                    <td>", "</td>\n                    <td class=\"used\">\n                        ", "\n                    </td>\n                </tr>\n                "], ["\n                <tr>\n                    <td>", "</td>\n                    <td>", "</td>\n                    <td class=\"used\">\n                        ", "\n                    </td>\n                </tr>\n                "])), f.name, f.recharge, functional_1.range(f.uses).map(function () { return html(templateObject_11 || (templateObject_11 = __makeTemplateObject(["<span class='use'></span>"], ["<span class='use'></span>"]))); })); }))];
+                    "\n            </tbody>\n        </table>\n    </section>\n    "])), features.map(function (f) { return html(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n                <tr>\n                    <td>", "</td>\n                    <td>", "</td>\n                    <td class=\"used\">\n                        ", "\n                    </td>\n                </tr>\n                "], ["\n                <tr>\n                    <td>", "</td>\n                    <td>", "</td>\n                    <td class=\"used\">\n                        ", "\n                    </td>\n                </tr>\n                "])), f.name, f.recharge, range(f.uses).map(function () { return html(templateObject_11 || (templateObject_11 = __makeTemplateObject(["<span class='use'></span>"], ["<span class='use'></span>"]))); })); }))];
         });
     });
 }
@@ -276,7 +273,7 @@ function attack(a) {
                 extra = html(templateObject_19 || (templateObject_19 = __makeTemplateObject(["<td>", " vs. AC</td>"], ["<td>", " vs. AC</td>"])), sign(a.attackBonus()));
             }
             else {
-                extra = html(templateObject_20 || (templateObject_20 = __makeTemplateObject(["<td>DC ", " ", " save</td>"], ["<td>DC ", " ", " save</td>"])), a.saveDC(), _1.StatMap[a.save]);
+                extra = html(templateObject_20 || (templateObject_20 = __makeTemplateObject(["<td>DC ", " ", " save</td>"], ["<td>DC ", " ", " save</td>"])), a.saveDC(), StatMap[a.save]);
             }
             return [2 /*return*/, html(templateObject_21 || (templateObject_21 = __makeTemplateObject(["\n        <tr>\n            <td>", "</td>\n            <td>", "</td>\n            ", "\n            <td>", "</td>\n        </tr>\n        "], ["\n        <tr>\n            <td>", "</td>\n            <td>", "</td>\n            ", "\n            <td>", "</td>\n        </tr>\n        "])), a.name, a.range, extra, a.damage())];
         });
@@ -301,7 +298,7 @@ function classFeature(c) {
     return function (name) { return __awaiter(_this, void 0, void 0, function () {
         var cls, features;
         return __generator(this, function (_a) {
-            cls = _5etools_1.findClass(c.level.classes[0]);
+            cls = findClass(c.level.classes[0]);
             features = cls.classFeatures.flatMap(function (cf) { return getFeature(cf, name).map(entry); })
                 .concat(cls.subclasses
                 .filter(function (sub) { return Array.from(c.class.values()).includes(sub.name); })
@@ -337,7 +334,7 @@ function feats(c) {
         return __generator(this, function (_a) {
             return [2 /*return*/, html(templateObject_25 || (templateObject_25 = __makeTemplateObject(["\n    <div class=\"feats columns\">\n        ", "\n    </div>\n    "], ["\n    <div class=\"feats columns\">\n        ",
                     "\n    </div>\n    "])), c.feats
-                    .map(_5etools_1.findFeat)
+                    .map(findFeat)
                     .filter(function (f) { return f !== undefined; })
                     .map(feat))];
         });
@@ -354,7 +351,7 @@ function spells(s) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             return [2 /*return*/, html(templateObject_27 || (templateObject_27 = __makeTemplateObject(["\n    <div class=\"spells columns\">\n        ", "\n    </div>\n    "], ["\n    <div class=\"spells columns\">\n        ",
-                    "\n    </div>\n    "])), s.map(_5etools_1.findSpell)
+                    "\n    </div>\n    "])), s.map(findSpell)
                     .filter(function (spell) { return spell !== undefined; })
                     .sort(function (a, b) { return a.name.localeCompare(b.name); })
                     .sort(function (a, b) { return a.level - b.level; })
