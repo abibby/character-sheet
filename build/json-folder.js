@@ -1,9 +1,15 @@
-import fetch from 'node-fetch'
-import { promises as fs } from 'fs'
-import { resolve } from 'path'
+// @ts-check
+
+const fetch = require('node-fetch').default
+const fs = require('fs').promises
+const { resolve } = require('path')
 
 const basePath = 'https://5e.tools/data/'
-async function downloadFolder(folder: string, outFile: string) {
+/**
+ * @param {string} folder
+ * @param {string} outFile
+ */
+async function downloadFolder(folder, outFile) {
     const index = await fetch(basePath + folder + '/index.json').then(r => r.json())
     const items = []
     for (const path of Object.values(index)) {
@@ -12,12 +18,20 @@ async function downloadFolder(folder: string, outFile: string) {
     }
     await writeJsonModule(outFile, items)
 }
-async function downloadFile(file: string, outFile: string) {
+/**
+ * @param {string} file
+ * @param {string} outFile
+ */
+async function downloadFile(file, outFile) {
     const content = await fetch(basePath + '/' + file + '.json').then(r => r.json())
     await writeJsonModule(outFile, content[Object.keys(content)[0]])
 }
 
-async function writeJsonModule(file: string, object: any) {
+/**
+ * @param {string} file
+ * @param {any} object
+ */
+async function writeJsonModule(file, object) {
     await fs.writeFile(file, 'export default ' + JSON.stringify(object, undefined, '    '))
 }
 

@@ -12,14 +12,13 @@
     "gh-pages": "^2.1.1",
     "node-fetch": "^2.6.0",
     "sass": "^1.23.0",
-    "ts-node": "^8.5.0",
     "tslint": "^5.20.1",
     "typescript": "^3.6.4"
   },
   "scripts": {
     "sass": "sass src/main.scss > dist/main.css",
     "ts": "tsc",
-    "data": "ts-node build/json-folder",
+    "data": "node build/json-folder",
     "build": "npm run data && npm run sass && npm run ts",
     "deploy": "gh-pages -d dist"
   },
