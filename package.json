@@ -19,7 +19,7 @@
     "sass": "sass src/main.scss > dist/main.css",
     "ts": "tsc",
     "data": "node build/json-folder",
-    "build": "npm run data && npm run sass && npm run ts",
+    "build": "npm run data && npm run ts && npm run sass",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
