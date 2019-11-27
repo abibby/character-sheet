@@ -1,4 +1,4 @@
-import { Entry } from "./entry";
+import { Entry } from "./entry.js";
 declare type School = string;
 export interface Time {
     unit: string;

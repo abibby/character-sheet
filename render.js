@@ -7,11 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { StatMap } from ".";
-import { findSpell, findFeat, findClass } from "./5etools";
-import { promises as fs } from 'fs';
-import { join } from "path";
-import { range } from './functional';
+import { StatMap } from "./index.js";
+import { findSpell, findFeat, findClass } from "./5etools/index.js";
+import { range } from './functional.js';
 function html(strings, ...parts) {
     return __awaiter(this, void 0, void 0, function* () {
         let out = '';
@@ -83,22 +81,6 @@ function sign(num) {
 export function render(c) {
     return __awaiter(this, void 0, void 0, function* () {
         return html `
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <style>
-        ${fs.readFile(join(__dirname, 'main.css'))}
-    </style>
-
-    <title>${c.name}</title>
-</head>
-
-<body>
     <div class="character">
         <header>
             <div class="name">${c.name}</div>
@@ -124,10 +106,7 @@ export function render(c) {
         ${collapse('Feats', feats(c))}
         ${collapse('Spells', spells(c.spells))}
     </section>
-</body>
-
-</html>
-`;
+    `;
     });
 }
 function collapse(header, body) {

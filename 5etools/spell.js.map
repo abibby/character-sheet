@@ -1,1 +1,1 @@
-{"version":3,"file":"spell.js","sourceRoot":"","sources":["../../src/5etools/spell.ts"],"names":[],"mappings":"AACA,OAAO,MAAM,MAAM,cAAc,CAAA;AA2DjC,MAAM,UAAU,SAAS,CAAC,IAAY;IAClC,OAAQ,MAA6B,CAAC,IAAI,CAAC,KAAK,CAAC,EAAE,CAAC,KAAK,CAAC,IAAI,KAAK,IAAI,CAAC,CAAA;AAC5E,CAAC"}
+{"version":3,"file":"spell.js","sourceRoot":"","sources":["../../src/5etools/spell.ts"],"names":[],"mappings":"AACA,OAAO,MAAM,MAAM,iBAAiB,CAAA;AA2DpC,MAAM,UAAU,SAAS,CAAC,IAAY;IAClC,OAAQ,MAA6B,CAAC,IAAI,CAAC,KAAK,CAAC,EAAE,CAAC,KAAK,CAAC,IAAI,KAAK,IAAI,CAAC,CAAA;AAC5E,CAAC"}

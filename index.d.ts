@@ -1,4 +1,4 @@
-import { Entry } from "./5etools";
+import { Entry } from "./5etools/index.js";
 export declare class Level {
     private classMap;
     add(className: string): void;

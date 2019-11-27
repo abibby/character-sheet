@@ -1,5 +1,5 @@
-import { Stats } from "..";
-import { Entry } from "./entry";
+import { Stats } from "../index.js";
+import { Entry } from "./entry.js";
 interface StartingProficiencies {
     armor: string[];
     weapons: string[];

@@ -1,4 +1,4 @@
-import classes from './class-data';
+import classes from './class-data.js';
 export function findClass(name) {
     return classes.find(c => c.name === name);
 }

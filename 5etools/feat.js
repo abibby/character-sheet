@@ -1,4 +1,4 @@
-import feats from './feat-data';
+import feats from './feat-data.js';
 export function findFeat(name) {
     return feats.find(f => f.name === name);
 }

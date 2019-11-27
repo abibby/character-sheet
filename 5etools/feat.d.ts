@@ -1,4 +1,4 @@
-import { Entry } from "./entry";
+import { Entry } from "./entry.js";
 export interface Feat {
     name: string;
     source: string;
