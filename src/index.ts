@@ -309,10 +309,12 @@ export class Character {
             Object.assign(f, feature)
         }
     }
-    public addItem(item: string, bonus: Bonus) {
+    public addItem(item: string, bonus?: Bonus) {
         this.items.push(item)
 
-        this.applyBonus(bonus)
+        if (bonus) {
+            this.applyBonus(bonus)
+        }
     }
 
     public addFeat(name: string, bonus: Bonus) {

@@ -18,6 +18,7 @@
   "scripts": {
     "sass": "sass src/main.scss > dist/main.css",
     "ts": "tsc",
+    "watch": "tsc --watch",
     "data": "node build/json-folder",
     "build": "npm run data && npm run ts && npm run sass",
     "deploy": "gh-pages -d dist"
