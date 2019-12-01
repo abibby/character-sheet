@@ -371,17 +371,18 @@ function classFeature(c) {
 }
 function getFeature(entries, name) {
     for (const entry of entries) {
+        // console.log(entry);
         if (typeof entry === 'string') {
             continue;
         }
-        if (('type' in entry) && entry.type !== 'entries') {
+        if (!('entries' in entry)) {
             continue;
         }
         if (entry.name === name) {
             return entry.entries;
         }
         const feature = getFeature(entry.entries, name);
-        if (feature !== undefined) {
+        if (feature.length > 0) {
             return feature;
         }
     }

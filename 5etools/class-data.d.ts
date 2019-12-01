@@ -270,6 +270,143 @@ declare const _default: ({
         "faces": number;
     };
     "proficiency": string[];
+    "multiclassing": {
+        "requirements": {
+            "int": number;
+            "str"?: undefined;
+            "cha"?: undefined;
+            "wis"?: undefined;
+            "or"?: undefined;
+            "dex"?: undefined;
+        };
+        "proficienciesGained": {
+            "armor": string[];
+            "tools": string[];
+            "weapons"?: undefined;
+            "skills"?: undefined;
+        };
+    };
+    "classTableGroups": ({
+        "colLabels": string[];
+        "rows": number[][];
+        "title"?: undefined;
+    } | {
+        "title": string;
+        "colLabels": string[];
+        "rows": number[][];
+    })[];
+    "startingProficiencies": {
+        "armor": string[];
+        "weapons": string[];
+        "tools": string[];
+        "skills": {
+            "choose": number;
+            "from": string[];
+        };
+    };
+    "startingEquipment": {
+        "additionalFromBackground": boolean;
+        "default": string[];
+        "goldAlternative": string;
+    };
+    "classFeatures": (({
+        "name": string;
+        "entries": (string | {
+            "type": string;
+            "items": string[];
+        })[];
+    } | {
+        "name": string;
+        "entries": (string | {
+            "type": string;
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": string[];
+            })[];
+        } | {
+            "type": string;
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "attributes": string[];
+            })[];
+        })[];
+    })[] | ({
+        "name": string;
+        "entries": string[];
+        "gainSubclassFeature": boolean;
+    } | {
+        "name": string;
+        "entries": string[];
+        "gainSubclassFeature"?: undefined;
+    })[])[];
+    "subclassTitle": string;
+    "subclasses": {
+        "name": string;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "caption": string;
+                    "colLabels": string[];
+                    "colStyles": string[];
+                    "rows": string[][];
+                })[];
+            } | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            }[];
+        }[])[];
+        "source": string;
+        "shortName": string;
+    }[];
+    "fluff": {
+        "entries": (string | {
+            "type": string;
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "name": string;
+                    "entries": string[];
+                })[];
+            })[];
+        })[];
+        "source": string;
+        "page": number;
+    }[];
+    "page": number;
+    "spellcastingAbility"?: undefined;
+    "casterProgression"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "hd": {
+        "number": number;
+        "faces": number;
+    };
+    "proficiency": string[];
     "classTableGroups": {
         "colLabels": string[];
         "rows": (string | {

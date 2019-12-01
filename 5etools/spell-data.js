@@ -11959,6 +11959,16 @@ export default [
                         "name": "Order",
                         "source": "GGR"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Psionics (UA)",
+                        "source": "UAFighterRogueWizard"
+                    }
                 }
             ]
         },
@@ -16004,6 +16014,18 @@ export default [
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Psionics (UA)",
+                        "source": "UAFighterRogueWizard"
+                    }
                 }
             ]
         },
@@ -22113,6 +22135,28 @@ export default [
                     "name": "Artificer",
                     "source": "ERLW"
                 }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Fighter",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Psychic Warrior (UA)",
+                        "source": "UAFighterRogueWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Psionics (UA)",
+                        "source": "UAFighterRogueWizard"
+                    }
+                }
             ]
         },
         "source": "PHB",
@@ -23510,6 +23554,18 @@ export default [
                 {
                     "name": "Artificer",
                     "source": "ERLW"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Psionics (UA)",
+                        "source": "UAFighterRogueWizard"
+                    }
                 }
             ]
         },
@@ -29143,6 +29199,16 @@ export default [
                         "name": "Vengeance",
                         "source": "PHB"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Psionics (UA)",
+                        "source": "UAFighterRogueWizard"
+                    }
                 }
             ]
         },
@@ -32750,6 +32816,16 @@ export default [
                     "subclass": {
                         "name": "Great Old One",
                         "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Psionics (UA)",
+                        "source": "UAFighterRogueWizard"
                     }
                 }
             ]

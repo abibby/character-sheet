@@ -3,8 +3,8 @@ export declare class Level {
     private classMap;
     add(className: string): void;
     get(className: string): number;
-    readonly total: number;
-    readonly classes: string[];
+    get total(): number;
+    get classes(): string[];
     toString(): string;
 }
 export declare class Stat {
@@ -75,25 +75,25 @@ export declare class Character {
     readonly level: Level;
     readonly class: Map<string, string>;
     readonly stats: Readonly<Stats<Stat>>;
-    readonly saves: Stats;
+    get saves(): Stats;
     readonly spells: string[];
     readonly features: string[];
     readonly limitedFeatures: LimitedFeature[];
     readonly items: string[];
     private skillProficiency;
     private saveProficiency;
-    readonly skills: Skills<number>;
-    readonly proficiencyBonus: number;
+    get skills(): Skills<number>;
+    get proficiencyBonus(): number;
     private acBase;
     private acMod;
-    readonly ac: number;
-    readonly initiative: number;
+    get ac(): number;
+    get initiative(): number;
     speed: number;
     hitDice: number[];
-    readonly maxHP: number;
+    get maxHP(): number;
     private spellSaveStat;
-    readonly spellSaveDC: number;
-    readonly spellAttackMod: number;
+    get spellSaveDC(): number;
+    get spellAttackMod(): number;
     feats: string[];
     attacks: Attack[];
     setRace(race: string, bonus: Bonus): void;
@@ -113,7 +113,7 @@ export declare class Character {
     addFeature(feature: string, description?: Entry): void;
     addLimitedFeature(name: string, uses: number, recharge: string): void;
     updateLimitedFeature(name: string, feature: Partial<LimitedFeature>): void;
-    addItem(item: string, bonus: Bonus): void;
+    addItem(item: string, bonus?: Bonus): void;
     addFeat(name: string, bonus: Bonus): void;
     addAttack(attack: Attack): void;
     render(): Promise<string>;

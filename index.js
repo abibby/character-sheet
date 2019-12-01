@@ -236,7 +236,9 @@ export class Character {
     }
     addItem(item, bonus) {
         this.items.push(item);
-        this.applyBonus(bonus);
+        if (bonus) {
+            this.applyBonus(bonus);
+        }
     }
     addFeat(name, bonus) {
         this.feats.push(name);

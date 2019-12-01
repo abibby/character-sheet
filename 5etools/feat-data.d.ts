@@ -17,7 +17,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -33,7 +35,9 @@ declare const _default: ({
         "items": string[];
     })[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -50,7 +54,9 @@ declare const _default: ({
     "ability": {
         "con": number;
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -67,7 +73,9 @@ declare const _default: ({
     "ability": {
         "dex": number;
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -84,7 +92,9 @@ declare const _default: ({
     "ability": {
         "cha": number;
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -101,7 +111,9 @@ declare const _default: ({
     "ability": {
         "int": number;
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -119,7 +131,9 @@ declare const _default: ({
     "ability": {
         "int": number;
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -144,7 +158,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -157,7 +173,9 @@ declare const _default: ({
         "dex": number;
     }[];
     "prerequisite"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -170,7 +188,9 @@ declare const _default: ({
         "wis": number;
     }[];
     "prerequisite"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -183,7 +203,9 @@ declare const _default: ({
         "int": number;
     }[];
     "prerequisite"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -196,7 +218,9 @@ declare const _default: ({
         "str": number;
     }[];
     "prerequisite"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -209,7 +233,9 @@ declare const _default: ({
         "cha": number;
     }[];
     "prerequisite"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -220,7 +246,9 @@ declare const _default: ({
     })[];
     "prerequisite"?: undefined;
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -233,7 +261,9 @@ declare const _default: ({
         "con": number;
     }[];
     "prerequisite"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -249,7 +279,9 @@ declare const _default: ({
         };
     }[];
     "prerequisite"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -265,7 +297,9 @@ declare const _default: ({
         "entries": string[];
     })[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -279,8 +313,10 @@ declare const _default: ({
         "type": string;
         "items": string[];
     })[];
+    "srd": boolean;
     "ability"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -297,7 +333,9 @@ declare const _default: ({
     "ability": {
         "str": number;
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -309,7 +347,9 @@ declare const _default: ({
     }[];
     "entries": string[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -324,7 +364,9 @@ declare const _default: ({
         "items": string[];
     })[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -344,7 +386,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -361,7 +405,9 @@ declare const _default: ({
         };
     }[];
     "prerequisite"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -377,7 +423,9 @@ declare const _default: ({
     }[];
     "entries": string[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -392,7 +440,9 @@ declare const _default: ({
         "items": string[];
     })[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -405,7 +455,9 @@ declare const _default: ({
         "items": string[];
     })[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -422,6 +474,8 @@ declare const _default: ({
         "page": number;
     }[];
     "ability"?: undefined;
+    "srd"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -437,7 +491,9 @@ declare const _default: ({
         "entries": string[];
     })[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "prerequisite": {
@@ -452,20 +508,22 @@ declare const _default: ({
         "items": string[];
     })[];
     "ability"?: undefined;
+    "srd"?: undefined;
     "additionalSources"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
-    "prerequisite": ({
-        "level": {
-            "level": number;
-        };
-        "other"?: undefined;
-    } | {
-        "other": string;
-        "level"?: undefined;
-    })[];
+    "prerequisite": {
+        "race": {
+            "name": string;
+        }[];
+    }[];
     "source": string;
     "page": number;
+    "otherSources": {
+        "source": string;
+        "page": number;
+    }[];
     "entries": (string | {
         "type": string;
         "items": string[];
@@ -476,6 +534,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
 } | {
     "name": string;
@@ -484,32 +543,10 @@ declare const _default: ({
     }[];
     "source": string;
     "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-        "caption"?: undefined;
-        "colLabels"?: undefined;
-        "colStyles"?: undefined;
-        "rows"?: undefined;
-    } | {
-        "type": string;
-        "caption": string;
-        "colLabels": string[];
-        "colStyles": string[];
-        "rows": (string | number)[][];
-        "items"?: undefined;
-    })[];
-    "ability": {
-        "con": number;
+    "otherSources": {
+        "source": string;
+        "page": number;
     }[];
-    "additionalSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "other": string;
-    }[];
-    "source": string;
-    "page": number;
     "entries": (string | {
         "type": string;
         "items": string[];
@@ -545,6 +582,7 @@ declare const _default: ({
     "ability": {
         "con": number;
     }[];
+    "srd"?: undefined;
     "additionalSources"?: undefined;
 })[];
 export default _default;

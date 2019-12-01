@@ -10576,8 +10576,17 @@ declare const _default: ({
             "name": string;
             "source": string;
         }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
         "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
     };
     "source": string;
     "entries": string[];
@@ -14134,8 +14143,17 @@ declare const _default: ({
             "name": string;
             "source": string;
         }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
         "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
     };
     "source": string;
     "entries": string[];
@@ -15115,8 +15133,17 @@ declare const _default: ({
             "name": string;
             "source": string;
         }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
         "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
     };
     "source": string;
     "entries": string[];
@@ -20050,6 +20077,68 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "source": string;
+    "entries": string[];
+    "page": number;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
+    "races": {
+        "name": string;
+        "source": string;
+        "baseName": string;
+        "baseSource": string;
+    }[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "areaTags"?: undefined;
+    "miscTags"?: undefined;
+    "damageInflict"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
