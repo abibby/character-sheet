@@ -328,6 +328,7 @@ function classFeature(c: Character) {
         if (features.length === 0) {
             return ''
         }
+
         return html`
         <div class="class-feature column-item">
             <h2>${name}</h2>
@@ -339,7 +340,6 @@ function classFeature(c: Character) {
 
 function getFeature(entries: (Entry | ClassFeature)[], name: string): Entry[] {
     for (const entry of entries) {
-        // console.log(entry);
         if (typeof entry === 'string') {
             continue
         }
@@ -347,7 +347,7 @@ function getFeature(entries: (Entry | ClassFeature)[], name: string): Entry[] {
             continue
         }
 
-        if (entry.name === name) {
+        if ('name' in entry && entry.name === name) {
             return entry.entries
         }
 
@@ -448,11 +448,20 @@ async function entry(e: Entry): Promise<string> {
         return html`<p>${extractTemplates(e)}</p>`
     }
     if (e.type === 'entries') {
+        return html`<h3>${e.name}</h3>${e.entries.map(entry)}`
+    }
+    if (e.type === 'options') {
         return html`${e.entries.map(entry)}`
     }
     if (e.type === 'list') {
         return html`<ul>${e.items.map(item => html`<li>${extractTemplates(item)}</li>`)}</ul>`
     }
+
+    if (e instanceof Array) {
+        return html`${e.map(entry)}`
+    }
+    console.log(e);
+
     return ''
 }
 
