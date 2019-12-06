@@ -48,6 +48,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -107,6 +108,7 @@ declare const _default: ({
     "miscTags": string[];
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -162,6 +164,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -221,6 +224,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -275,6 +279,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -333,6 +338,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -395,6 +401,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -445,6 +452,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -504,6 +512,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -566,6 +575,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -627,6 +637,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -681,6 +692,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "races"?: undefined;
@@ -758,6 +770,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -819,6 +832,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -895,6 +909,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -979,6 +994,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -1047,6 +1063,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -1098,6 +1115,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -1168,6 +1186,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -1247,6 +1266,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "races"?: undefined;
@@ -1312,6 +1332,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -1371,6 +1392,7 @@ declare const _default: ({
     })[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -1434,6 +1456,7 @@ declare const _default: ({
     "savingThrow": string[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -1505,6 +1528,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -1565,6 +1589,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -1623,6 +1648,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -1712,6 +1738,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -1774,6 +1801,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -1823,6 +1851,7 @@ declare const _default: ({
     "page": number;
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -1894,6 +1923,7 @@ declare const _default: ({
         "items": string[];
     })[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -1977,6 +2007,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
@@ -2049,6 +2080,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
@@ -2120,6 +2152,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -2182,6 +2215,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -2249,6 +2283,7 @@ declare const _default: ({
     "savingThrow": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -2316,6 +2351,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -2382,6 +2418,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -2453,6 +2490,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -2528,6 +2566,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -2608,6 +2647,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "srd"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
@@ -2678,6 +2718,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "races"?: undefined;
@@ -2747,6 +2788,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": string;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -2799,6 +2841,7 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -2858,6 +2901,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "opposedCheck"?: undefined;
@@ -2920,6 +2964,7 @@ declare const _default: ({
     }[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -3001,6 +3046,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -3072,6 +3118,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -3137,6 +3184,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -3202,6 +3250,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -3275,6 +3324,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -3354,6 +3404,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -3439,6 +3490,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "meta"?: undefined;
@@ -3521,6 +3573,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -3591,6 +3644,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -3646,6 +3700,7 @@ declare const _default: ({
     "savingThrow": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -3723,6 +3778,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -3780,6 +3836,7 @@ declare const _default: ({
     }[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -3841,6 +3898,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -3895,6 +3953,7 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -3962,6 +4021,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -4033,6 +4093,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -4086,6 +4147,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -4151,6 +4213,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -4231,6 +4294,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "races"?: undefined;
@@ -4290,6 +4354,7 @@ declare const _default: ({
     "page": number;
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -4370,6 +4435,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -4431,6 +4497,7 @@ declare const _default: ({
     };
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -4517,6 +4584,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -4594,6 +4662,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -4659,6 +4728,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -4728,6 +4798,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -4805,6 +4876,7 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -4899,6 +4971,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -4977,6 +5050,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -5048,6 +5122,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -5101,6 +5176,7 @@ declare const _default: ({
     }[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -5180,6 +5256,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -5250,6 +5327,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -5303,6 +5381,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -5360,6 +5439,7 @@ declare const _default: ({
     }[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -5421,6 +5501,7 @@ declare const _default: ({
     "page": number;
     "damageInflict": string[];
     "savingThrow": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
@@ -5489,6 +5570,7 @@ declare const _default: ({
     "spellAttack": string[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -5543,6 +5625,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -5607,6 +5690,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -5695,6 +5779,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -5751,6 +5836,7 @@ declare const _default: ({
         "rows": string[][];
     })[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -5816,6 +5902,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -5884,6 +5971,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -5957,6 +6045,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -6016,6 +6105,7 @@ declare const _default: ({
     }[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -6094,6 +6184,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -6169,6 +6260,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -6246,6 +6338,7 @@ declare const _default: ({
     "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -6309,6 +6402,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -6374,6 +6468,7 @@ declare const _default: ({
     }[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -6435,6 +6530,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -6515,6 +6611,7 @@ declare const _default: ({
         "baseSource": string;
     }[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -6568,6 +6665,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -6646,6 +6744,7 @@ declare const _default: ({
         "source": string;
     }[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -6721,6 +6820,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -6781,6 +6881,7 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -6835,6 +6936,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -6903,6 +7005,7 @@ declare const _default: ({
     }[];
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -6957,6 +7060,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -7035,6 +7139,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     })[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -7102,6 +7207,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -7176,6 +7282,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
@@ -7238,6 +7345,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -7315,6 +7423,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -7373,6 +7482,7 @@ declare const _default: ({
     "savingThrow": string[];
     "spellAttack": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -7435,6 +7545,7 @@ declare const _default: ({
     }[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -7506,6 +7617,7 @@ declare const _default: ({
     }[];
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -7580,6 +7692,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -7642,6 +7755,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "damageInflict": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -7698,6 +7812,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -7780,6 +7895,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -7837,6 +7953,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -7909,6 +8026,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -7962,6 +8080,7 @@ declare const _default: ({
     };
     "entries": string[];
     "page": number;
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -8041,6 +8160,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -8103,6 +8223,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -8167,6 +8288,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -8215,6 +8337,7 @@ declare const _default: ({
     "spellAttack": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -8298,6 +8421,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -8371,6 +8495,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -8463,6 +8588,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -8537,6 +8663,7 @@ declare const _default: ({
     }[];
     "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -8615,6 +8742,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -8686,6 +8814,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -8743,6 +8872,7 @@ declare const _default: ({
     "page": number;
     "damageInflict": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -8810,6 +8940,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -8878,6 +9009,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -8939,6 +9071,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -9001,6 +9134,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9071,6 +9205,7 @@ declare const _default: ({
         "baseSource": string;
     }[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -9136,6 +9271,7 @@ declare const _default: ({
         "entries": string[];
     }[];
     "page": number;
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -9206,6 +9342,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -9273,6 +9410,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9325,6 +9463,7 @@ declare const _default: ({
     "savingThrow": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -9396,6 +9535,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
@@ -9446,6 +9586,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9495,6 +9636,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9550,6 +9692,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9608,6 +9751,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9662,6 +9806,7 @@ declare const _default: ({
     "savingThrow": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -9732,6 +9877,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9794,6 +9940,7 @@ declare const _default: ({
     "page": number;
     "damageInflict": string[];
     "damageResist": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9845,6 +9992,7 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -9914,6 +10062,7 @@ declare const _default: ({
         "baseSource": string;
     }[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -9983,6 +10132,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "races"?: undefined;
@@ -10068,6 +10218,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "races"?: undefined;
@@ -10125,6 +10276,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -10182,6 +10334,7 @@ declare const _default: ({
     }[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -10272,6 +10425,7 @@ declare const _default: ({
         "baseSource": string;
     })[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -10333,6 +10487,7 @@ declare const _default: ({
     "page": number;
     "damageInflict": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -10390,6 +10545,7 @@ declare const _default: ({
     "page": number;
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -10446,6 +10602,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -10530,6 +10687,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -10612,6 +10770,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -10684,6 +10843,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -10745,6 +10905,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -10821,6 +10982,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -10884,6 +11046,7 @@ declare const _default: ({
     };
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -10953,6 +11116,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -11004,6 +11168,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -11065,6 +11230,7 @@ declare const _default: ({
     }[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -11150,6 +11316,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "meta"?: undefined;
@@ -11200,12 +11367,81 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
+    "source": string;
+    "entries": string[];
+    "page": number;
+    "savingThrow": string[];
+    "areaTags": string[];
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "damageInflict"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -11281,6 +11517,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -11354,6 +11591,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -11424,6 +11662,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
@@ -11487,6 +11726,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -11545,6 +11785,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -11618,6 +11859,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -11704,6 +11946,7 @@ declare const _default: ({
         "baseSource": string;
     })[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -11767,6 +12010,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -11837,6 +12081,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
@@ -11905,6 +12150,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -11983,6 +12229,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -12037,6 +12284,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -12106,6 +12354,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -12179,6 +12428,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -12251,6 +12501,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "meta"?: undefined;
@@ -12304,6 +12555,7 @@ declare const _default: ({
     "page": number;
     "damageImmune": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -12387,6 +12639,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -12465,6 +12718,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -12545,6 +12799,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -12601,6 +12856,7 @@ declare const _default: ({
     "savingThrow": string[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -12669,6 +12925,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -12740,6 +12997,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -12802,6 +13060,7 @@ declare const _default: ({
     "savingThrow": string[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -12877,6 +13136,7 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -12947,6 +13207,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -13016,6 +13277,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -13076,6 +13338,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -13133,6 +13396,7 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -13197,6 +13461,7 @@ declare const _default: ({
     "damageInflict": string[];
     "spellAttack": string[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -13280,6 +13545,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "races"?: undefined;
@@ -13363,6 +13629,7 @@ declare const _default: ({
     }[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -13419,6 +13686,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -13486,6 +13754,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -13559,12 +13828,76 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "source": string;
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "page": number;
+    "areaTags": string[];
+    "races": {
+        "name": string;
+        "source": string;
+        "baseName": string;
+        "baseSource": string;
+    }[];
+    "srd": string;
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "miscTags"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
@@ -13627,6 +13960,7 @@ declare const _default: ({
         "baseSource": string;
     })[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -13698,6 +14032,7 @@ declare const _default: ({
     }[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -13769,6 +14104,7 @@ declare const _default: ({
         "baseName"?: undefined;
         "baseSource"?: undefined;
     })[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
@@ -13833,6 +14169,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -13895,6 +14232,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -13974,6 +14312,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -14039,6 +14378,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -14097,6 +14437,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -14168,6 +14509,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -14250,6 +14592,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -14305,6 +14648,7 @@ declare const _default: ({
     "page": number;
     "savingThrow": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
@@ -14376,6 +14720,7 @@ declare const _default: ({
     }[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
@@ -14437,6 +14782,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -14512,6 +14858,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -14578,6 +14925,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -14640,6 +14988,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -14689,6 +15038,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -14762,6 +15112,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -14821,6 +15172,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -14876,6 +15228,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -14951,6 +15304,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -15025,6 +15379,7 @@ declare const _default: ({
     "damageInflict": string[];
     "spellAttack": string[];
     "areaTags": string[];
+    "srd": string;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -15086,6 +15441,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15159,6 +15515,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15212,6 +15569,7 @@ declare const _default: ({
     "page": number;
     "damageInflict": string[];
     "damageImmune": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15281,6 +15639,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15333,6 +15692,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15416,6 +15776,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15481,6 +15842,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -15555,6 +15917,7 @@ declare const _default: ({
         "baseSource": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15633,6 +15996,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "damageInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -15699,6 +16063,7 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -15757,6 +16122,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15812,6 +16178,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -15881,6 +16248,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": string;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -15941,6 +16309,7 @@ declare const _default: ({
     "spellAttack": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -16015,6 +16384,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -16081,6 +16451,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -16138,6 +16509,7 @@ declare const _default: ({
     "savingThrow": string[];
     "opposedCheck": string[];
     "areaTags": string[];
+    "srd": string;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -16204,6 +16576,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -16258,6 +16631,7 @@ declare const _default: ({
     "savingThrow": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -16341,6 +16715,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -16413,6 +16788,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -16484,6 +16860,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -16553,6 +16930,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "backgrounds"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -16612,6 +16990,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -16687,6 +17066,7 @@ declare const _default: ({
     "savingThrow": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -16740,6 +17120,7 @@ declare const _default: ({
     "savingThrow": string[];
     "spellAttack": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -16811,6 +17192,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -16868,6 +17250,7 @@ declare const _default: ({
     }[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -16934,6 +17317,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -16990,6 +17374,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -17035,6 +17420,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17099,6 +17485,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -17168,6 +17555,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17229,6 +17617,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -17290,6 +17679,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -17353,6 +17743,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17403,6 +17794,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "opposedCheck": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17467,6 +17859,7 @@ declare const _default: ({
     "opposedCheck": string[];
     "conditionInflict": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
@@ -17547,6 +17940,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17616,6 +18010,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17684,6 +18079,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17751,6 +18147,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17812,6 +18209,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17882,6 +18280,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "areaTags": string[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17951,6 +18350,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -18017,6 +18417,7 @@ declare const _default: ({
     }[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -18092,6 +18493,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -18139,6 +18541,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -18210,6 +18613,7 @@ declare const _default: ({
         })[])[];
     })[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -18261,6 +18665,7 @@ declare const _default: ({
     "entries": string[];
     "page": number;
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -18317,6 +18722,7 @@ declare const _default: ({
     "page": number;
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -18383,6 +18789,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -18448,6 +18855,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -18514,6 +18922,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "races"?: undefined;
@@ -18574,6 +18983,7 @@ declare const _default: ({
     "page": number;
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -18643,6 +19053,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -18725,6 +19136,7 @@ declare const _default: ({
     "page": number;
     "savingThrow": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
@@ -18807,6 +19219,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -18860,6 +19273,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -18925,6 +19339,7 @@ declare const _default: ({
     "opposedCheck": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -18990,6 +19405,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19046,6 +19462,7 @@ declare const _default: ({
     "page": number;
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -19106,6 +19523,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19177,6 +19595,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "races"?: undefined;
@@ -19242,6 +19661,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19312,6 +19732,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19374,6 +19795,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19442,6 +19864,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19524,6 +19947,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -19582,6 +20006,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19635,6 +20060,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19715,6 +20141,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -19794,6 +20221,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
@@ -19870,6 +20298,7 @@ declare const _default: ({
     "page": number;
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -19929,6 +20358,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -20003,6 +20433,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -20070,6 +20501,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -20133,6 +20565,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -20206,6 +20639,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -20282,6 +20716,7 @@ declare const _default: ({
     "damageInflict": string[];
     "opposedCheck": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -20359,6 +20794,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
@@ -20424,6 +20860,7 @@ declare const _default: ({
     "damageInflict": string[];
     "spellAttack": string[];
     "areaTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
@@ -20491,6 +20928,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -20561,6 +20999,7 @@ declare const _default: ({
     "page": number;
     "savingThrow": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -20625,6 +21064,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -20698,6 +21138,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -20759,6 +21200,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "races"?: undefined;
@@ -20832,6 +21274,7 @@ declare const _default: ({
     })[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -20887,6 +21330,7 @@ declare const _default: ({
     "savingThrow": string[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -20937,6 +21381,7 @@ declare const _default: ({
     "savingThrow": string[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -20995,6 +21440,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -21055,6 +21501,7 @@ declare const _default: ({
     "opposedCheck": string[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -21124,6 +21571,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -21190,10 +21638,66 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount"?: undefined;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "source": string;
+    "entries": string[];
+    "page": number;
+    "areaTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "miscTags"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -21254,6 +21758,7 @@ declare const _default: ({
     })[];
     "page": number;
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21330,6 +21835,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21393,6 +21899,7 @@ declare const _default: ({
         "baseSource": string;
     }[];
     "miscTags": string[];
+    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21454,6 +21961,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21511,6 +22019,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -21574,6 +22083,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -21658,6 +22168,7 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "meta"?: undefined;
@@ -21702,6 +22213,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21774,6 +22286,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21827,6 +22340,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21891,6 +22405,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21953,6 +22468,7 @@ declare const _default: ({
     "savingThrow": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -22006,6 +22522,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22062,6 +22579,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22123,6 +22641,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22185,6 +22704,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -22245,6 +22765,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22318,6 +22839,7 @@ declare const _default: ({
     "spellAttack": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
@@ -22377,6 +22899,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "meta"?: undefined;
@@ -22437,6 +22960,7 @@ declare const _default: ({
     "page": number;
     "damageImmune": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22503,6 +23027,7 @@ declare const _default: ({
     "savingThrow": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
@@ -22581,6 +23106,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22662,6 +23188,7 @@ declare const _default: ({
         "source": string;
     }[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22728,6 +23255,7 @@ declare const _default: ({
     "page": number;
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22811,6 +23339,7 @@ declare const _default: ({
     }[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -22867,6 +23396,7 @@ declare const _default: ({
     "savingThrow": string[];
     "conditionInflict": string[];
     "areaTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
@@ -22920,6 +23450,7 @@ declare const _default: ({
     "conditionInflict": string[];
     "areaTags": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
@@ -22994,6 +23525,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -23045,6 +23577,7 @@ declare const _default: ({
     "damageInflict": string[];
     "damageResist": string[];
     "miscTags": string[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -23109,6 +23642,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23151,6 +23685,7 @@ declare const _default: ({
     "source": string;
     "entries": string[];
     "page": number;
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -23226,6 +23761,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23293,6 +23829,7 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     }[];
+    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
@@ -23351,6 +23888,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23401,6 +23939,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23450,6 +23989,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23500,6 +24040,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23545,6 +24086,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23594,6 +24136,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23653,6 +24196,510 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s"?: undefined;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "savingThrow": string[];
+    "areaTags": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "areaTags": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount"?: undefined;
+        };
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "areaTags"?: undefined;
+    "miscTags"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+        "condition": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount"?: undefined;
+        };
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s"?: undefined;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "areaTags"?: undefined;
+    "miscTags"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s"?: undefined;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "entriesHigherLevel": {
+        "name": string;
+        "type": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "areaTags": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "conditionInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s"?: undefined;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "entriesHigherLevel": {
+        "name": string;
+        "type": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "miscTags"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount"?: undefined;
+        };
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "source": string;
+    "page": number;
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "areaTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "miscTags"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23726,6 +24773,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -23790,6 +24838,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -23860,6 +24909,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -23927,6 +24977,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -23993,6 +25044,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -24081,6 +25133,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -24148,6 +25201,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -24215,6 +25269,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -24268,6 +25323,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -24331,6 +25387,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -24398,6 +25455,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -24465,6 +25523,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -24528,6 +25587,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -24600,61 +25660,8 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
-    "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
-    "spellAttack"?: undefined;
-    "damageVulnerable"?: undefined;
-    "damageImmune"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "level": number;
-    "school": string;
-    "time": {
-        "number": number;
-        "unit": string;
-    }[];
-    "range": {
-        "type": string;
-        "distance": {
-            "type": string;
-            "amount": number;
-        };
-    };
-    "duration": {
-        "type": string;
-        "duration": {
-            "type": string;
-            "amount": number;
-        };
-    }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "entries": string[];
-    "source": string;
-    "page": number;
-    "components": {
-        "v": boolean;
-        "s"?: undefined;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "entriesHigherLevel"?: undefined;
-    "conditionInflict"?: undefined;
-    "backgrounds"?: undefined;
-    "races"?: undefined;
-    "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
@@ -24708,6 +25715,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -24771,6 +25779,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -24836,6 +25845,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -24894,7 +25904,59 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
@@ -24947,6 +26009,58 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -24998,6 +26112,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25047,6 +26162,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25102,6 +26218,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25158,6 +26275,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25207,6 +26325,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25262,60 +26381,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
-    "races"?: undefined;
-    "meta"?: undefined;
-    "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
-    "spellAttack"?: undefined;
-    "damageVulnerable"?: undefined;
-    "damageImmune"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "level": number;
-    "school": string;
-    "time": {
-        "number": number;
-        "unit": string;
-    }[];
-    "range": {
-        "type": string;
-        "distance": {
-            "type": string;
-            "amount"?: undefined;
-        };
-    };
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "duration": {
-        "type": string;
-        "duration": {
-            "type": string;
-            "amount": number;
-        };
-    }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "entries": string[];
-    "areaTags": string[];
-    "entriesHigherLevel"?: undefined;
-    "conditionInflict"?: undefined;
-    "savingThrow"?: undefined;
-    "miscTags"?: undefined;
-    "damageInflict"?: undefined;
-    "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25373,6 +26439,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -25427,6 +26494,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25482,6 +26550,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25542,6 +26611,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25597,6 +26667,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25653,6 +26724,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25716,6 +26788,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "opposedCheck"?: undefined;
@@ -25772,6 +26845,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25830,6 +26904,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25888,6 +26963,7 @@ declare const _default: ({
     "areaTags": string[];
     "miscTags": string[];
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25944,6 +27020,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26001,6 +27078,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26063,6 +27141,7 @@ declare const _default: ({
     "miscTags": string[];
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26128,6 +27207,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -26199,6 +27279,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26264,6 +27345,7 @@ declare const _default: ({
     "miscTags": string[];
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26328,6 +27410,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26390,6 +27473,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26448,6 +27532,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26504,6 +27589,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26563,10 +27649,71 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "page": number;
+    "miscTags": string[];
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "areaTags"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26624,6 +27771,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26683,6 +27831,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26751,6 +27900,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26814,6 +27964,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26871,6 +28022,7 @@ declare const _default: ({
     "areaTags": string[];
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26929,6 +28081,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26991,6 +28144,7 @@ declare const _default: ({
     "miscTags": string[];
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27045,6 +28199,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27113,6 +28268,7 @@ declare const _default: ({
     "miscTags": string[];
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27171,6 +28327,7 @@ declare const _default: ({
     "miscTags": string[];
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27225,6 +28382,58 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "page": number;
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "areaTags"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27288,6 +28497,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27341,6 +28551,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27405,6 +28616,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27462,6 +28674,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27469,6 +28682,62 @@ declare const _default: ({
     "spellAttack"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount"?: undefined;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "page": number;
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "conditionInflict": string[];
+    "areaTags": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
@@ -27520,6 +28789,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27574,6 +28844,7 @@ declare const _default: ({
     "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27635,6 +28906,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27697,6 +28969,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27761,6 +29034,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "opposedCheck"?: undefined;
@@ -27821,6 +29095,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "opposedCheck"?: undefined;
@@ -27881,6 +29156,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27939,6 +29215,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27996,6 +29273,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28051,6 +29329,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28110,6 +29389,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28168,6 +29448,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28224,6 +29505,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28284,6 +29566,7 @@ declare const _default: ({
     "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28345,6 +29628,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28402,6 +29686,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28457,6 +29742,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28518,6 +29804,7 @@ declare const _default: ({
     "miscTags": string[];
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28568,6 +29855,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28621,6 +29909,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28675,6 +29964,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28734,6 +30024,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28782,6 +30073,7 @@ declare const _default: ({
     "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28840,6 +30132,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28898,6 +30191,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28958,6 +30252,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "opposedCheck"?: undefined;
@@ -29027,6 +30322,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -29080,6 +30376,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29138,6 +30435,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29201,6 +30499,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -29258,6 +30557,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29320,6 +30620,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29371,6 +30672,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29434,6 +30736,7 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29491,6 +30794,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29561,6 +30865,58 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "spellAttack"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "page": number;
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "miscTags"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29619,6 +30975,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29680,6 +31037,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29737,6 +31095,7 @@ declare const _default: ({
     "miscTags": string[];
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29791,6 +31150,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29844,6 +31204,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29904,6 +31265,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29965,6 +31327,7 @@ declare const _default: ({
     "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30025,6 +31388,7 @@ declare const _default: ({
     "areaTags": string[];
     "miscTags": string[];
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30086,6 +31450,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30148,6 +31513,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -30208,6 +31574,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30266,6 +31633,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30325,6 +31693,7 @@ declare const _default: ({
     "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30384,6 +31753,7 @@ declare const _default: ({
     "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30437,6 +31807,7 @@ declare const _default: ({
     "areaTags"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "srd"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;

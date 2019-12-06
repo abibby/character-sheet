@@ -480,6 +480,15 @@ declare const _default: ({
                         "name": string;
                         "entries": string[];
                     }[];
+                } | {
+                    "type": string;
+                    "entries": {
+                        "type": string;
+                        "name": string;
+                        "entries": string[];
+                        "source": string;
+                        "page": number;
+                    }[];
                 })[];
             })[];
         }[] | {
@@ -492,6 +501,15 @@ declare const _default: ({
                         "type": string;
                         "name": string;
                         "entries": string[];
+                    }[];
+                } | {
+                    "type": string;
+                    "entries": {
+                        "type": string;
+                        "name": string;
+                        "entries": string[];
+                        "source": string;
+                        "page": number;
                     }[];
                 })[];
             }[];
@@ -1403,17 +1421,7 @@ declare const _default: ({
         "page"?: undefined;
     } | {
         "name": string;
-        "entries": (string | {
-            "type": string;
-            "entries": {
-                "type": string;
-                "entries": {
-                    "type": string;
-                    "name": string;
-                    "entries": string[];
-                }[];
-            }[];
-        })[];
+        "entries": string[];
         "source": string;
         "page": number;
     })[] | {
@@ -1441,6 +1449,24 @@ declare const _default: ({
                         })[];
                     }[];
                 })[];
+                "source"?: undefined;
+                "page"?: undefined;
+            } | {
+                "name": string;
+                "type": string;
+                "entries": (string | {
+                    "type": string;
+                    "entries": {
+                        "type": string;
+                        "entries": {
+                            "type": string;
+                            "name": string;
+                            "entries": string[];
+                        }[];
+                    }[];
+                })[];
+                "source": string;
+                "page": number;
             })[];
         }[] | {
             "entries": {
@@ -1680,36 +1706,6 @@ declare const _default: ({
         "source": string;
         "shortName": string;
         "spellcastingAbility"?: undefined;
-        "casterProgression"?: undefined;
-        "page"?: undefined;
-    } | {
-        "name": string;
-        "spellcastingAbility": string;
-        "subclassFeatures": ({
-            "name": string;
-            "entries": (string | {
-                "type": string;
-                "name": string;
-                "entries": (string | {
-                    "type": string;
-                    "name": string;
-                    "entries": (string | {
-                        "type": string;
-                        "name": string;
-                        "attributes": string[];
-                    })[];
-                })[];
-            })[];
-        }[] | {
-            "entries": {
-                "type": string;
-                "name": string;
-                "entries": string[];
-            }[];
-        }[])[];
-        "source": string;
-        "shortName": string;
-        "subclassTableGroups"?: undefined;
         "casterProgression"?: undefined;
         "page"?: undefined;
     } | {
@@ -4426,31 +4422,6 @@ declare const _default: ({
             "entries": (string | {
                 "type": string;
                 "name": string;
-                "entries": (string | {
-                    "type": string;
-                    "items": string[];
-                })[];
-            })[];
-        }[] | {
-            "entries": {
-                "type": string;
-                "name": string;
-                "entries": (string | {
-                    "type": string;
-                    "items": string[];
-                })[];
-            }[];
-        }[])[];
-        "source": string;
-        "shortName": string;
-        "page"?: undefined;
-    } | {
-        "name": string;
-        "subclassFeatures": ({
-            "name": string;
-            "entries": (string | {
-                "type": string;
-                "name": string;
                 "entries": string[];
             })[];
         }[] | {
@@ -4469,6 +4440,44 @@ declare const _default: ({
                             "entry": string;
                         }[];
                     })[];
+                })[];
+            }[];
+        }[])[];
+        "source": string;
+        "shortName": string;
+        "page": number;
+    } | {
+        "name": string;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "name": string;
+                "type": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            } | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "name": string;
+                    "entries": string[];
+                })[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "style": string;
+                    "items": {
+                        "type": string;
+                        "name": string;
+                        "entry": string;
+                    }[];
                 })[];
             }[];
         }[])[];

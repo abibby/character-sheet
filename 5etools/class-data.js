@@ -3781,7 +3781,9 @@ export default [
                                                     "name": "Elk",
                                                     "entries": [
                                                         "While you're raging and aren't wearing heavy armor, your walking speed increases by 15 feet. The spirit of the elk makes you extraordinarily swift."
-                                                    ]
+                                                    ],
+                                                    "source": "SCAG",
+                                                    "page": 122
                                                 }
                                             ]
                                         },
@@ -3793,7 +3795,9 @@ export default [
                                                     "name": "Tiger",
                                                     "entries": [
                                                         "While raging, you can add 10 feet to your long jump distance and 3 feet to your high jump distance. The spirit of the tiger empowers your leaps."
-                                                    ]
+                                                    ],
+                                                    "source": "SCAG",
+                                                    "page": 122
                                                 }
                                             ]
                                         },
@@ -3854,7 +3858,9 @@ export default [
                                                     "name": "Elk",
                                                     "entries": [
                                                         "Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not {@condition incapacitated}. The elk spirit helps you roam far and fast."
-                                                    ]
+                                                    ],
+                                                    "source": "SCAG",
+                                                    "page": 122
                                                 }
                                             ]
                                         },
@@ -3866,7 +3872,9 @@ export default [
                                                     "name": "Tiger",
                                                     "entries": [
                                                         "You gain proficiency in two skills from the following list: {@skill Athletics}, {@skill Acrobatics}, {@skill Stealth}, and {@skill Survival}. The cat spirit hones your survival instincts."
-                                                    ]
+                                                    ],
+                                                    "source": "SCAG",
+                                                    "page": 122
                                                 }
                                             ]
                                         },
@@ -3940,7 +3948,9 @@ export default [
                                                     "name": "Elk",
                                                     "entries": [
                                                         "While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked {@condition prone} and take bludgeoning damage equal to {@dice 1d12} + your Strength modifier."
-                                                    ]
+                                                    ],
+                                                    "source": "SCAG",
+                                                    "page": 122
                                                 }
                                             ]
                                         },
@@ -3952,7 +3962,9 @@ export default [
                                                     "name": "Tiger",
                                                     "entries": [
                                                         "While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it."
-                                                    ]
+                                                    ],
+                                                    "source": "SCAG",
+                                                    "page": 122
                                                 }
                                             ]
                                         },
@@ -4775,7 +4787,7 @@ export default [
                                     "type": "entries",
                                     "name": "Magic Reserves",
                                     "entries": [
-                                        "At 6th level, you can channel the magic surging inside you into other creatures. As an action,you can touch a creature and roll a {@dice d4}. The creature recovers an expended spell slot of a level equal to the number rolled. If the creature you touch can't recover a spell slot of that level, the creature instead gains temporary hit points equal to five times the number rolled.",
+                                        "At 6th level, you can channel the magic surging inside you into other creatures. As an action, you can touch a creature and roll a {@dice d4}. The creature recovers an expended spell slot of a level equal to the number rolled. If the creature you touch can't recover a spell slot of that level, the creature instead gains temporary hit points equal to five times the number rolled.",
                                         "You take force damage equal to five times the number rolled.",
                                         "When you reach 14th level in this class, you increase the die to a {@dice d6}."
                                     ]
@@ -4803,7 +4815,7 @@ export default [
                                     "type": "entries",
                                     "name": "Chaotic Fury",
                                     "entries": [
-                                        "At 14th level, you become a wellspring of wild magic while you are raging. As a bonus action,you can reroll on the Wild Surge table, replacing your current effect with the new one."
+                                        "At 14th level, you become a wellspring of wild magic while you are raging. As a bonus action, you can reroll on the Wild Surge table, replacing your current effect with the new one."
                                     ]
                                 },
                                 {
@@ -14872,75 +14884,6 @@ export default [
                     ],
                     "source": "UAClassFeatureVariants",
                     "page": 5
-                },
-                {
-                    "name": "Maneuver Options",
-                    "entries": [
-                        "{@i 1st-level feature (enhances Maneuvers)}",
-                        "If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters and to characters who have the Superior Technique fighting style or the Martial Adept feat.",
-                        {
-                            "type": "entries",
-                            "entries": [
-                                {
-                                    "type": "options",
-                                    "entries": [
-                                        {
-                                            "type": "entries",
-                                            "name": "Ambush",
-                                            "entries": [
-                                                "When you make a Dexterity ({@skill Stealth}) check or an initiative roll, you can expend one superiority die and add the die to the roll."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Bait and Switch",
-                                            "entries": [
-                                                "When you're within 5 feet of an ally on your turn, you can expend one superiority die and switch places with that ally, provided you spend at least 5 feet of movement. This movement doesn't provoke opportunity attacks.",
-                                                "Roll the superiority die. Until the start of your next turn, the ally gains a bonus to AC equal to the number rolled."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Brace",
-                                            "entries": [
-                                                "When an enemy you can see moves within 5 feet of you, you can use your reaction to expend one superiority die and make one weapon attack against that creature. If the attack hits, add the superiority die to the attack's damage roll."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Restraining Strike",
-                                            "entries": [
-                                                "Immediately after you hit a creature with a melee weapon attack on your turn, you can expend one superiority die and use a bonus action to grapple the target (see chapter 9 in the Player's Handbook for rules on grappling). Add the superiority die to your Strength ({@skill Athletics}) check. The target is also restrained while grappled in this way."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Silver Tongue",
-                                            "entries": [
-                                                "When you make a Charisma ({@skill Deception}) check or a Charisma ({@skill Persuasion}) check, you can expend one superiority die, and add the superiority die to the ability check."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Snipe",
-                                            "entries": [
-                                                "As a bonus action, you can expend one superiority die and make a ranged weapon attack. You can draw a thrown weapon as part of making this attack. If you hit, add the superiority die to the attack's damage roll."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Studious Eye",
-                                            "entries": [
-                                                "When you make a Wisdom ({@skill Insight}) check or an Intelligence ({@skill Investigation}) check, you can expend one superiority die, and add the superiority die to the ability check."
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "source": "UAClassFeatureVariants",
-                    "page": 5
                 }
             ],
             [
@@ -15264,7 +15207,7 @@ export default [
                                 },
                                 {
                                     "type": "options",
-                                    "name": "Battle Master: Maneuvers",
+                                    "name": "Maneuvers",
                                     "entries": [
                                         {
                                             "type": "entries",
@@ -15460,6 +15403,76 @@ export default [
                                             ]
                                         }
                                     ]
+                                },
+                                {
+                                    "name": "Maneuver Options",
+                                    "type": "entries",
+                                    "entries": [
+                                        "{@i 1st-level feature (enhances Maneuvers)}",
+                                        "If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters and to characters who have the Superior Technique fighting style or the Martial Adept feat.",
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "options",
+                                                    "entries": [
+                                                        {
+                                                            "type": "entries",
+                                                            "name": "Ambush",
+                                                            "entries": [
+                                                                "When you make a Dexterity ({@skill Stealth}) check or an initiative roll, you can expend one superiority die and add the die to the roll."
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entries",
+                                                            "name": "Bait and Switch",
+                                                            "entries": [
+                                                                "When you're within 5 feet of an ally on your turn, you can expend one superiority die and switch places with that ally, provided you spend at least 5 feet of movement. This movement doesn't provoke opportunity attacks.",
+                                                                "Roll the superiority die. Until the start of your next turn, the ally gains a bonus to AC equal to the number rolled."
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entries",
+                                                            "name": "Brace",
+                                                            "entries": [
+                                                                "When an enemy you can see moves within 5 feet of you, you can use your reaction to expend one superiority die and make one weapon attack against that creature. If the attack hits, add the superiority die to the attack's damage roll."
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entries",
+                                                            "name": "Restraining Strike",
+                                                            "entries": [
+                                                                "Immediately after you hit a creature with a melee weapon attack on your turn, you can expend one superiority die and use a bonus action to grapple the target (see chapter 9 in the Player's Handbook for rules on grappling). Add the superiority die to your Strength ({@skill Athletics}) check. The target is also restrained while grappled in this way."
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entries",
+                                                            "name": "Silver Tongue",
+                                                            "entries": [
+                                                                "When you make a Charisma ({@skill Deception}) check or a Charisma ({@skill Persuasion}) check, you can expend one superiority die, and add the superiority die to the ability check."
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entries",
+                                                            "name": "Snipe",
+                                                            "entries": [
+                                                                "As a bonus action, you can expend one superiority die and make a ranged weapon attack. You can draw a thrown weapon as part of making this attack. If you hit, add the superiority die to the attack's damage roll."
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entries",
+                                                            "name": "Studious Eye",
+                                                            "entries": [
+                                                                "When you make a Wisdom ({@skill Insight}) check or an Intelligence ({@skill Investigation}) check, you can expend one superiority die, and add the superiority die to the ability check."
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 5
                                 }
                             ]
                         }
@@ -18084,140 +18097,6 @@ export default [
                 ],
                 "source": "Stream",
                 "shortName": "Warlord (Stream)"
-            },
-            {
-                "name": "Psychic Warrior (Livestream)",
-                "spellcastingAbility": "int",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Psychic Warrior (Livestream)",
-                            "entries": [
-                                "{@i Transcribed on 2018-10-13. [Square bracketed text] denotes transcriber's annotations.}",
-                                "A Psychic Warrior combines the study of psionics with martial training, yielding a warrior who can transcend their physical limits while delivering skilled, deadly attacks.",
-                                {
-                                    "type": "entries",
-                                    "name": "Spellcasting",
-                                    "entries": [
-                                        "When you reach 3rd level, you augment your martial prowess with the ability to cast spells.",
-                                        {
-                                            "type": "entries",
-                                            "name": "Cantrips",
-                                            "entries": [
-                                                "You learn two cantrips of your choice from the psionic spell list. You learn an additional wizard or psionic cantrip at 10th level."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Spell Slots",
-                                            "entries": [
-                                                "The Psychic Warrior Spellcasting table shows how many spells slots you have to case your spells of 1st level or higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Spells Known of 1st-Level and Higher",
-                                            "entries": [
-                                                "You know three 1st-level spells of your choice chosen from the psionic spell list.",
-                                                "The Spells Known column {@i [currently unavailable]} of the Psychic Warrior Spellcasting table shows when you learn more spells of 1st level or higher. Each of these spells must be chosen from the psionic spell list, and must be of a level for which you have spell slots.",
-                                                "Whenever you gain a fighter level, you can replace one of the psionic spells you know with another spells of your choice from the psionic spell list."
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "name": "Spellcasting Ability",
-                                            "entries": [
-                                                "Intelligence is your spellcasting ability for your spells. You use your Intelligence modifier whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a spell you cast and when making an attack roll with one.",
-                                                {
-                                                    "type": "abilityDc",
-                                                    "name": "Spell",
-                                                    "attributes": [
-                                                        "int"
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "abilityAttackMod",
-                                                    "name": "Spell",
-                                                    "attributes": [
-                                                        "int"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Psychic Destroyer",
-                                    "entries": [
-                                        "Starting at 3rd level, you can expend your spell energy to imbue your attacks with psychic power. Once during your turn when you hit with a weapon attack, you can expend one spell slot to deal psychic damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Psychic Guardian",
-                                    "entries": [
-                                        "Starting at 3rd level, you can expend your spell energy to protect your allies from harm. When an ally you can see within 30 feet of you is hit by an attack, you can use your reaction and expend a spell slot of 1st level or higher to grant that ally a bonus to AC equal to 3 + the spell slot's level, including against the triggering attack, until the end of your next turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Psychic Storm",
-                                    "entries": [
-                                        "At 7th level, your aggression translates into an aura of disruptive psychic energy. If you cast a psionic cantrip or use the attack action on your turn, all hostile creatures within 10 feet of you take psychic damage equal to double your Intelligence modifier (minimum 1)."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Psionic Recovery",
-                                    "entries": [
-                                        "Starting at 10th level, when you use your Second Wind class feature you also regain an expended 1st-level spell slot."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Psionic Surge",
-                                    "entries": [
-                                        "At 15th level, you gain the ability to channel additional psionic power when you use your Action Surge class feature. Until the end of your turn, if your attack or spell causes a creature to take psychic damage, that creature takes an additional 1d10 psychic damage. A creature can take this additional damage only once during your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Mind Cleaver",
-                                    "entries": [
-                                        "At 18th level, your attacks leave behind traces of disruptive, psychic energy. If you hit a creature with a weapon attack, you can cause it to become vulnerable to psychic energy until the end of your next turn. Once you use this ability, you cannot use it again until you complete a short or long rest."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "Stream",
-                "shortName": "Psychic Warrior (Stream)"
             },
             {
                 "name": "Weapon Master (Livestream)",
@@ -21158,7 +21037,7 @@ export default [
                                     "name": "Aura Sight",
                                     "entries": [
                                         "At 6th level, you gain the ability to perceive the auras of other creatures.",
-                                        "As an action, select a creature that you can see. That creature makes a Wisdom saving throw, though it has no knowledge that you forced it to attempt this saving throw. On a failed save, you learn if the creature shares and aspects of its alignment with you, its current hit points, and its current attitude and intentions toward you or one other creature, object, or location of your choice. In addition, for the next 24 hours or until you use this ability again, you can use an action to determine the creature's distance and direction from you.",
+                                        "As an action, select a creature that you can see. That creature makes a Wisdom saving throw, though it has no knowledge that you forced it to attempt this saving throw. On a failed save, you learn if the creature shares any aspects of its alignment with you, its current hit points, and its current attitude and intentions toward you or one other creature, object, or location of your choice. In addition, for the next 24 hours or until you use this ability again, you can use an action to determine the creature's distance and direction from you.",
                                         "If a creature succeeds on its saving throw against this ability, you cannot use this ability against that creature again until you complete a long rest."
                                     ]
                                 }
@@ -26912,8 +26791,7 @@ export default [
                                     "type": "entries",
                                     "name": "Ancient Fortitude",
                                     "entries": [
-                                        "At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum.",
-                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
+                                        "At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum."
                                     ]
                                 }
                             ]
@@ -29149,8 +29027,7 @@ export default [
                                     "type": "entries",
                                     "name": "Ancient Fortitude",
                                     "entries": [
-                                        "At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum.",
-                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
+                                        "At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum."
                                     ]
                                 }
                             ]
@@ -31199,8 +31076,7 @@ export default [
                                     "type": "entries",
                                     "name": "Ancient Fortitude",
                                     "entries": [
-                                        "At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum.",
-                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
+                                        "At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum."
                                     ]
                                 }
                             ]
@@ -43307,101 +43183,6 @@ export default [
                 "shortName": "Invention (UA)"
             },
             {
-                "name": "School of Psionics (Livestream)",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "School of Psionics (Livestream)",
-                            "entries": [
-                                "The School of Psionics emphasizes the power of the mind, granting its practitioners the ability to read minds and transform the energy of their thoughts into tangible, physical force.",
-                                "Known as psions, members of this school are rare and usually meet in secretive enclaves that delve into the mysteries of aberrations and other bizarre creatures.",
-                                {
-                                    "type": "entries",
-                                    "name": "ESP",
-                                    "entries": [
-                                        "At 2nd level, you gain the ability to contact other creatures' minds. You can cast {@spell detect thoughts} using this ability. When you cast that spell, whether with this ability or from some other ability, it has the following modifications:",
-                                        {
-                                            "type": "list",
-                                            "items": [
-                                                "The spell does not require concentration.",
-                                                "The benefits that require you to use an action instead require the use of a bonus action.",
-                                                "If you use the option to probe deeper and the target fails its Wisdom saving throw, it is vulnerable to psychic damage you inflict until the end of your next turn."
-                                            ]
-                                        },
-                                        "Once you cast {@spell detect thoughts} using this ability, you can't use it again until you complete a short or long rest."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Telepath",
-                                    "entries": [
-                                        "Starting at 2nd level, you gain telepathy with a range of 30 feet.",
-                                        "When you select spells, you can choose spells from the psionic spell list, even if they do not appear on your class list."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Telekinetic Mind",
-                                    "entries": [
-                                        "Starting at 6th level, you gain the ability to transform your thoughts into tangible force. You can cast {@spell telekinesis} using this ability. When you cast that spell, whether with this ability or from some other ability, it has the following modifications:",
-                                        {
-                                            "type": "list",
-                                            "items": [
-                                                "The spell does not require concentration.",
-                                                "The benefits that require you to use an action instead require the use of a bonus action.",
-                                                "The spell's duration is 1 minute, and you cannot choose a new target after selecting your initial one. This restriction no longer applies once you reach 9th level."
-                                            ]
-                                        },
-                                        "Once you cast {@spell telekinesis} using this ability, you can't use it again until you complete a short or long rest."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Superior ESP",
-                                    "entries": [
-                                        "At 10th level, your proficiency with the detect thoughts spell grows. You gain the following additional benefits when you cast the spell:",
-                                        {
-                                            "type": "list",
-                                            "items": [
-                                                "The spell now targets a number of creatures equal to your Intelligence modifier (minimum 1).",
-                                                "If you use the option to probe deeper and the target fails its Wisdom saving throw, you can choose to charm it instead of making it vulnerable to psychic damage. It makes another Wisdom saving throw at the end of its turn, ending this effect with a successful save or if it takes damage from you or your allies."
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Improved Telekinesis",
-                                    "entries": [
-                                        "At 14th level, you master the full potential of your mind to project physical force into the world. When you cast {@spell telekinesis} and each time you select a new target for the spell, you can instead choose a number of targets up to your Intelligence bonus (minimum 1)."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "Stream",
-                "shortName": "Psionics (Stream)"
-            },
-            {
                 "name": "Onomancy (UA)",
                 "subclassFeatures": [
                     [
@@ -43551,6 +43332,167 @@ export default [
                 "source": "UAClericDruidWizard",
                 "shortName": "Onomancy (UA)",
                 "page": 4
+            },
+            {
+                "name": "Psionics (UA)",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Psionics",
+                            "entries": [
+                                "Wizards study magical power in all its forms, including the magic of psionics. Those wizards who follow the tradition of Psionics hone the magical potential of their own minds. Sometimes called psionicists or mentalists, these wizards interact with the multiverse through the lens of their psionic aptitude and awareness.",
+                                "Psionicists channel their magic by focusing their minds. By doing so they can transcend their physical bodies, adopting forms of pure thought, casting spells psionically to bypass the need for components, and perceiving the world with a broader range of senses.",
+                                "As a member of the Psionics tradition, you might have awoken your psionic potential through the strain of your esoteric studies, or perhaps you joined a scholarly order dedicated to unlocking the magic of the mind.",
+                                {
+                                    "name": "Psionic Focus",
+                                    "type": "entries",
+                                    "entries": [
+                                        "{@i 2nd-level Psionics feature}",
+                                        "You have learned to channel psionic energy through a special object: a psionic focus. You gain the object with this feature (see the \"Your Psionic Focus\" sidebar for how you might have acquired the item).",
+                                        "While your psionic focus is on your person, you gain the following benefits:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "The object is a spellcasting focus for you.",
+                                                "When you roll psychic or force damage for any of your wizard spells, you can reroll any of those damage dice that rolls a 1, but you must use the new roll."
+                                            ]
+                                        },
+                                        "If your psionic focus is lost, you can magically recreate it by meditating for 1 hour during a short or long rest, at the end of which the focus appears in your hand."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Psionic Devotion",
+                                    "entries": [
+                                        "{@i 2nd-level Psionics feature}",
+                                        "Your study of psionics begins to unleash your mind's potential. When you gain this feature, choose one of the following cantrips: friends, mage hand, or message. You learn that cantrip if you don't already know it, and it doesn't count against the number of wizard cantrips you know. While your psionic focus is on your person, you can cast the chosen cantrip as a bonus action, requiring no components, and with the modification listed below:",
+                                        {
+                                            "type": "entries",
+                                            "name": "Friends",
+                                            "entries": [
+                                                "When the spell ends, the target doesn't become hostile to you."
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "name": "Mage Hand",
+                                            "entries": [
+                                                "You can make the hand {@condition invisible} when you cast the spell, and controlling the spell is a bonus action for you."
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "name": "Message",
+                                            "entries": [
+                                                "You don't need to point toward the target or whisper your message out loud."
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Your Psionic Focus",
+                                    "type": "inset",
+                                    "entries": [
+                                        "Every member of the Psionics tradition has a story about how their psionic focus came into their life. Consider how you found yours and what form it takes.",
+                                        "The event that brought your psionic focus to you probably holds personal significance. Did your master give it to you upon the completion of your apprenticeship? Was it awarded to you when you graduated from your academy of wizardry? Did it call to you in a jeweler's shop? Was it associated with the moment when your psionic powers first manifested? One morning, did you wake up with it humming under your pillow?",
+                                        "The form your psionic focus takes is also yours to define, likely being a reflection of how your magic came into being, a symbol of your own psyche, or an item you use to focus your thoughts. It is a handheld object that has special meaning to you, but that can't be a weapon or magic item. Perhaps it's a childhood memento, the skull of an alien creature, a crystal that makes you feel a certain way, a coin that only lands on its edge, a firescarred planchette, or any other enigmatic personal relic.",
+                                        "However the object arrived and whatever form it takes, your psionic focus is now yours, and you decide how to handle it. Will you mount it on a wand or staff? Would you prefer to wear it on a necklace or circlet? Have you embedded it into the cover of your spellbook? Wherever you put it, you can now channel your magic through it, and it is a sign of your membership in the revered tradition of psionic wizardry."
+                                    ]
+                                },
+                                {
+                                    "type": "inset",
+                                    "name": "Psionic Spells",
+                                    "entries": [
+                                        "Spell selection is part of what defines a wizard and their individual fields of expertise. When creating your Psionics wizard, consider spells that are thematically appropriate for that tradition. Psionics as a theme generally includes spells that do the following:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "contact or manipulate minds",
+                                                "allow the caster to perceive distant locations or planes",
+                                                "alter perception",
+                                                "move objects and creatures",
+                                                "teleport",
+                                                "deal psychic or force damage"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Thought Form",
+                                    "entries": [
+                                        "{@i 6th-level Psionics feature}",
+                                        "While you are carrying your psionic focus, you can use a bonus action to magically transform your body into pure psionic energy. The transformation lasts for 10 minutes, until you use a bonus action to assume your normal form, or until you are {@condition incapacitated} or die.",
+                                        "While in thought form, you are a figure of luminous psychic energy, with your psionic focus hovering within. Your form can appear as anything you wish, but it is obviously magical, is the same size as you, and sheds dim light in a 5-foot-radius. Any other equipment you are wearing or carrying transforms with you and melds into your thought form. You also gain the following benefits:",
+                                        {
+                                            "type": "list",
+                                            "style": "list-hang-notitle",
+                                            "items": [
+                                                {
+                                                    "type": "item",
+                                                    "name": "Psionic Spellcasting",
+                                                    "entry": "When you cast a spell while in thought form, you can cast the spell psionically. If you do so, the spell doesn't require verbal, somatic, or material components that lack a gold cost."
+                                                },
+                                                {
+                                                    "type": "item",
+                                                    "name": "Psychic Resilience",
+                                                    "entry": "You gain resistance to psychic damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks. You can transform using this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Mental Discipline",
+                                    "entries": [
+                                        "{@i 10th-level Psionics feature}",
+                                        "Your mind's power expands to greater heights. When you gain this feature, choose one of the following spells: {@spell dominate person}, {@spell scrying}, or {@spell telekinesis}. You can add the spell to your spellbook, and you can cast it without components.",
+                                        "You can also cast the chosen spell once without expending a spell slot. After you do so, you regain the ability to cast the spell without a slot when you finish a long rest."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Empowered Psionics",
+                                    "entries": [
+                                        "{@i 10th-level Psionics feature}",
+                                        "When you deal psychic or force damage with a wizard spell, you can add your Intelligence modifier to the damage against one of the spell's targets."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Thought Travel",
+                                    "entries": [
+                                        "{@i 14th-level Psionics feature}",
+                                        "While using your Thought Form, you have a flying speed equal to your walking speed and can hover, and you can move through other creatures and objects as if they were difficult terrain.",
+                                        "You take {@dice 1d10} force damage if you end your turn inside an object. If you return to your normal form while inside an object, you are shunted to the nearest unoccupied space, and you take {@dice 1d10} force damage for every 5 feet traveled."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "source": "UAFighterRogueWizard",
+                "shortName": "Psionics (UA)",
+                "page": 3
             }
         ],
         "fluff": [

@@ -371,14 +371,13 @@ function classFeature(c) {
 }
 function getFeature(entries, name) {
     for (const entry of entries) {
-        // console.log(entry);
         if (typeof entry === 'string') {
             continue;
         }
         if (!('entries' in entry)) {
             continue;
         }
-        if (entry.name === name) {
+        if ('name' in entry && entry.name === name) {
             return entry.entries;
         }
         const feature = getFeature(entry.entries, name);
@@ -483,11 +482,18 @@ function entry(e) {
             return html `<p>${extractTemplates(e)}</p>`;
         }
         if (e.type === 'entries') {
+            return html `<h3>${e.name}</h3>${e.entries.map(entry)}`;
+        }
+        if (e.type === 'options') {
             return html `${e.entries.map(entry)}`;
         }
         if (e.type === 'list') {
             return html `<ul>${e.items.map(item => html `<li>${extractTemplates(item)}</li>`)}</ul>`;
         }
+        if (e instanceof Array) {
+            return html `${e.map(entry)}`;
+        }
+        console.log(e);
         return '';
     });
 }

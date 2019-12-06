@@ -3,6 +3,9 @@ export declare type Entry = string | {
     name: string;
     entries: Entry[];
 } | {
+    type: "options";
+    entries: Entry[];
+} | {
     type: "abilityDc";
     name: string;
     attributes: string;
