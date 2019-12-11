@@ -770,8 +770,7 @@ export default [
         "miscTags": [
             "SCL",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Aid",
@@ -894,8 +893,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Alarm",
@@ -972,8 +970,7 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Alter Self",
@@ -1105,8 +1102,7 @@ export default [
                 "name": "Simic Scientist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Animal Friendship",
@@ -1210,8 +1206,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Animal Messenger",
@@ -1297,8 +1292,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Animal Shapes",
@@ -1351,8 +1345,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Animate Dead",
@@ -1466,8 +1459,7 @@ export default [
         "miscTags": [
             "PRM",
             "SMN"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Animate Objects",
@@ -1641,8 +1633,7 @@ export default [
         ],
         "miscTags": [
             "SMN"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Antilife Shell",
@@ -1739,8 +1730,7 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Antimagic Field",
@@ -1844,8 +1834,7 @@ export default [
         "page": 213,
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Antipathy/Sympathy",
@@ -1932,8 +1921,7 @@ export default [
         ],
         "areaTags": [
             "C"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Arcane Eye",
@@ -2055,8 +2043,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Arcane Gate",
@@ -2200,8 +2187,7 @@ export default [
                 "name": "Azorius Functionary",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Armor of Agathys",
@@ -2464,8 +2450,7 @@ export default [
         ],
         "areaTags": [
             "MT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Augury",
@@ -2574,8 +2559,7 @@ export default [
             "The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
             "If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
         ],
-        "page": 215,
-        "srd": true
+        "page": 215
     },
     {
         "name": "Aura of Life",
@@ -2976,8 +2960,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Bane",
@@ -3107,8 +3090,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Banishing Smite",
@@ -3376,8 +3358,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Barkskin",
@@ -3452,8 +3433,7 @@ export default [
         "page": 217,
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Beacon of Hope",
@@ -3560,8 +3540,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Beast Sense",
@@ -3778,8 +3757,7 @@ export default [
                 "name": "Orzhov Representative",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Bigby's Hand",
@@ -3893,8 +3871,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": "Arcane Hand"
+        ]
     },
     {
         "name": "Blade Barrier",
@@ -3949,8 +3926,7 @@ export default [
         ],
         "areaTags": [
             "W"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Blade Ward",
@@ -4114,8 +4090,7 @@ export default [
         "page": 219,
         "areaTags": [
             "MT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Blight",
@@ -4309,8 +4284,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Blinding Smite",
@@ -4497,16 +4471,6 @@ export default [
                         "name": "Spores (UA)",
                         "source": "UAThreeSubclasses"
                     }
-                },
-                {
-                    "class": {
-                        "name": "Druid",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Spores",
-                        "source": "GGR"
-                    }
                 }
             ]
         },
@@ -4536,8 +4500,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Blink",
@@ -4650,8 +4613,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Blur",
@@ -4733,8 +4695,7 @@ export default [
         "entries": [
             "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
         ],
-        "page": 219,
-        "srd": true
+        "page": 219
     },
     {
         "name": "Branding Smite",
@@ -4861,8 +4822,7 @@ export default [
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Burning Hands",
@@ -5010,8 +4970,7 @@ export default [
                 "name": "Rakdos Cultist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Call Lightning",
@@ -5118,8 +5077,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Calm Emotions",
@@ -5232,8 +5190,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Chain Lightning",
@@ -5301,8 +5258,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Charm Person",
@@ -5447,8 +5403,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Chill Touch",
@@ -5534,8 +5489,7 @@ export default [
         ],
         "miscTags": [
             "SCL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Chromatic Orb",
@@ -5679,8 +5633,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Circle of Power",
@@ -5887,8 +5840,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Clone",
@@ -5936,8 +5888,7 @@ export default [
         "page": 222,
         "miscTags": [
             "PRM"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Cloud of Daggers",
@@ -6188,8 +6139,7 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Color Spray",
@@ -6260,8 +6210,7 @@ export default [
         ],
         "areaTags": [
             "N"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Command",
@@ -6473,8 +6422,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Commune",
@@ -6565,8 +6513,7 @@ export default [
             "Divine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead.",
             "If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret."
         ],
-        "page": 223,
-        "srd": true
+        "page": 223
     },
     {
         "name": "Commune with Nature",
@@ -6698,8 +6645,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Compelled Duel",
@@ -6889,8 +6835,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Compulsion",
@@ -6993,8 +6938,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Cone of Cold",
@@ -7147,8 +7091,7 @@ export default [
         ],
         "areaTags": [
             "N"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Confusion",
@@ -7352,8 +7295,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Conjure Animals",
@@ -7463,8 +7405,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Conjure Barrage",
@@ -7597,8 +7538,7 @@ export default [
         "miscTags": [
             "SMN",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Conjure Elemental",
@@ -7690,8 +7630,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Conjure Fey",
@@ -7756,8 +7695,7 @@ export default [
         "miscTags": [
             "SMN",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Conjure Minor Elementals",
@@ -7849,8 +7787,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Conjure Volley",
@@ -7972,8 +7909,7 @@ export default [
         "miscTags": [
             "SMN",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Contact Other Plane",
@@ -8035,8 +7971,7 @@ export default [
         ],
         "savingThrow": [
             "intelligence"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Contagion",
@@ -8193,8 +8128,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Contingency",
@@ -8243,8 +8177,7 @@ export default [
             "The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to, and then contingency ends.",
             "The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person."
         ],
-        "page": 227,
-        "srd": true
+        "page": 227
     },
     {
         "name": "Continual Flame",
@@ -8321,8 +8254,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Control Water",
@@ -8471,8 +8403,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Control Weather",
@@ -8634,8 +8565,7 @@ export default [
                 ]
             }
         ],
-        "page": 228,
-        "srd": true
+        "page": 228
     },
     {
         "name": "Cordon of Arrows",
@@ -8792,8 +8722,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Create Food and Water",
@@ -8872,8 +8801,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Create Undead",
@@ -8940,8 +8868,7 @@ export default [
         "miscTags": [
             "PRM",
             "SMN"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Create or Destroy Water",
@@ -9051,8 +8978,7 @@ export default [
         ],
         "miscTags": [
             "PRM"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Creation",
@@ -9186,8 +9112,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Crown of Madness",
@@ -9500,8 +9425,7 @@ export default [
         ],
         "miscTags": [
             "HL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Dancing Lights",
@@ -9590,8 +9514,7 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Darkness",
@@ -9776,8 +9699,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Darkvision",
@@ -9848,8 +9770,7 @@ export default [
         "page": 230,
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Daylight",
@@ -9973,8 +9894,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Death Ward",
@@ -10136,8 +10056,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Delayed Blast Fireball",
@@ -10208,8 +10127,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Demiplane",
@@ -10267,8 +10185,7 @@ export default [
         "miscTags": [
             "PRM",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Destructive Wave",
@@ -10437,8 +10354,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Detect Magic",
@@ -10542,8 +10458,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Detect Poison and Disease",
@@ -10618,8 +10533,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Detect Thoughts",
@@ -10749,8 +10663,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Dimension Door",
@@ -10859,8 +10772,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Disguise Self",
@@ -11035,8 +10947,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Disintegrate",
@@ -11105,8 +11016,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Dispel Evil and Good",
@@ -11179,8 +11089,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Dispel Magic",
@@ -11296,8 +11205,7 @@ export default [
         "page": 234,
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Dissonant Whispers",
@@ -11505,8 +11413,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Divine Favor",
@@ -11575,8 +11482,7 @@ export default [
         "page": 234,
         "damageInflict": [
             "radiant"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Divine Word",
@@ -11639,8 +11545,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Dominate Beast",
@@ -11805,8 +11710,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Dominate Monster",
@@ -11887,8 +11791,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Dominate Person",
@@ -12107,8 +12010,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Drawmij's Instant Summons",
@@ -12160,8 +12062,7 @@ export default [
             "If another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.",
             "{@spell Dispel magic} or a similar effect successfully applied to the sapphire ends this spell's effect."
         ],
-        "page": 235,
-        "srd": "Instant Summons"
+        "page": 235
     },
     {
         "name": "Dream",
@@ -12253,8 +12154,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Druidcraft",
@@ -12325,8 +12225,7 @@ export default [
                 "name": "Simic Scientist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Earthquake",
@@ -12417,8 +12316,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Eldritch Blast",
@@ -12472,8 +12370,7 @@ export default [
         ],
         "miscTags": [
             "SCL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Elemental Weapon",
@@ -12804,8 +12701,7 @@ export default [
                 "name": "Simic Scientist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Enlarge/Reduce",
@@ -12944,8 +12840,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Ensnaring Strike",
@@ -13136,8 +13031,7 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Enthrall",
@@ -13224,8 +13118,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Etherealness",
@@ -13304,8 +13197,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Evard's Black Tentacles",
@@ -13424,8 +13316,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": "Black Tentacles"
+        ]
     },
     {
         "name": "Expeditious Retreat",
@@ -13515,8 +13406,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Eyebite",
@@ -13606,8 +13496,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Fabricate",
@@ -13695,8 +13584,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Faerie Fire",
@@ -13847,8 +13735,7 @@ export default [
         ],
         "areaTags": [
             "C"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "False Life",
@@ -13969,8 +13856,7 @@ export default [
                 ]
             }
         ],
-        "page": 239,
-        "srd": true
+        "page": 239
     },
     {
         "name": "Fear",
@@ -14116,8 +14002,7 @@ export default [
                 "name": "Rakdos Cultist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Feather Fall",
@@ -14201,8 +14086,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Feeblemind",
@@ -14270,8 +14154,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Feign Death",
@@ -14434,8 +14317,7 @@ export default [
             "PRM",
             "SMN",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Find Steed",
@@ -14482,8 +14364,7 @@ export default [
         "page": 240,
         "miscTags": [
             "SMN"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Find Traps",
@@ -14540,8 +14421,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Find the Path",
@@ -14598,8 +14478,7 @@ export default [
             "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn't specific (such as \"a green dragon's lair\"), the spell fails.",
             "For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination."
         ],
-        "page": 240,
-        "srd": true
+        "page": 240
     },
     {
         "name": "Finger of Death",
@@ -14661,8 +14540,7 @@ export default [
         "miscTags": [
             "PRM",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Fire Bolt",
@@ -14762,8 +14640,7 @@ export default [
         ],
         "miscTags": [
             "SCL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Fire Shield",
@@ -14879,8 +14756,7 @@ export default [
         "damageResist": [
             "cold",
             "fire"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Fire Storm",
@@ -14938,8 +14814,7 @@ export default [
         ],
         "areaTags": [
             "C"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Fireball",
@@ -15075,8 +14950,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Flame Blade",
@@ -15155,8 +15029,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Flame Strike",
@@ -15320,8 +15193,7 @@ export default [
                 "name": "Boros Legionnaire",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Flaming Sphere",
@@ -15466,8 +15338,7 @@ export default [
                 "name": "Rakdos Cultist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Flesh to Stone",
@@ -15543,8 +15414,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Fly",
@@ -15621,8 +15491,7 @@ export default [
         "page": 243,
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Fog Cloud",
@@ -15726,8 +15595,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Forbiddance",
@@ -15787,8 +15655,7 @@ export default [
         ],
         "miscTags": [
             "PRM"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Forcecage",
@@ -15855,8 +15722,7 @@ export default [
         ],
         "areaTags": [
             "C"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Foresight",
@@ -15922,8 +15788,7 @@ export default [
         "page": 244,
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Freedom of Movement",
@@ -16100,8 +15965,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Friends",
@@ -16359,8 +16223,7 @@ export default [
                 "name": "Simic Scientist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Gate",
@@ -16429,8 +16292,7 @@ export default [
         "page": 244,
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Geas",
@@ -16533,8 +16395,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Gentle Repose",
@@ -16634,8 +16495,7 @@ export default [
             "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
             "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
         ],
-        "page": 245,
-        "srd": true
+        "page": 245
     },
     {
         "name": "Giant Insect",
@@ -16747,8 +16607,7 @@ export default [
         ],
         "miscTags": [
             "SMN"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Glibness",
@@ -16794,8 +16653,7 @@ export default [
         "entries": [
             "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."
         ],
-        "page": 245,
-        "srd": true
+        "page": 245
     },
     {
         "name": "Globe of Invulnerability",
@@ -16858,8 +16716,7 @@ export default [
         "page": 245,
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Glyph of Warding",
@@ -17006,8 +16863,7 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Goodberry",
@@ -17063,8 +16919,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Grasping Vine",
@@ -17210,8 +17065,7 @@ export default [
         ],
         "areaTags": [
             "Q"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Greater Invisibility",
@@ -17360,8 +17214,7 @@ export default [
                 "baseName": "Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Greater Restoration",
@@ -17469,8 +17322,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Guardian of Faith",
@@ -17613,8 +17465,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Guards and Wards",
@@ -17713,8 +17564,7 @@ export default [
         ],
         "miscTags": [
             "PRM"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Guidance",
@@ -17779,8 +17629,7 @@ export default [
                 "name": "Orzhov Representative",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Guiding Bolt",
@@ -17870,8 +17719,7 @@ export default [
                 "name": "Boros Legionnaire",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Gust of Wind",
@@ -17995,8 +17843,7 @@ export default [
         ],
         "areaTags": [
             "L"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Hail of Thorns",
@@ -18223,8 +18070,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Hallucinatory Terrain",
@@ -18309,8 +18155,7 @@ export default [
                 "baseName": "Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Harm",
@@ -18362,8 +18207,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Haste",
@@ -18511,8 +18355,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Heal",
@@ -18572,8 +18415,7 @@ export default [
         "miscTags": [
             "HL",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Healing Word",
@@ -18656,8 +18498,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Heat Metal",
@@ -18775,8 +18616,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Hellish Rebuke",
@@ -18879,8 +18719,7 @@ export default [
                 "name": "Rakdos Cultist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Heroes' Feast",
@@ -18942,8 +18781,7 @@ export default [
         ],
         "areaTags": [
             "MT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Heroism",
@@ -19072,8 +18910,7 @@ export default [
                 "name": "Boros Legionnaire",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Hex",
@@ -19300,8 +19137,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Hold Person",
@@ -19498,8 +19334,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Holy Aura",
@@ -19556,8 +19391,7 @@ export default [
         ],
         "areaTags": [
             "R"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Hunger of Hadar",
@@ -19717,8 +19551,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Hypnotic Pattern",
@@ -19828,8 +19661,7 @@ export default [
         ],
         "areaTags": [
             "C"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Ice Storm",
@@ -19971,8 +19803,7 @@ export default [
         ],
         "areaTags": [
             "Y"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Identify",
@@ -20074,8 +19905,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Illusory Script",
@@ -20150,8 +19980,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Imprisonment",
@@ -20264,8 +20093,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Incendiary Cloud",
@@ -20331,8 +20159,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Inflict Wounds",
@@ -20421,8 +20248,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Insect Plague",
@@ -20627,8 +20453,7 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Invisibility",
@@ -20800,8 +20625,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Jump",
@@ -20920,8 +20744,7 @@ export default [
                 "name": "Simic Scientist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Knock",
@@ -20988,8 +20811,7 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Legend Lore",
@@ -21102,8 +20924,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Leomund's Secret Chest",
@@ -21189,8 +21010,7 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": "Secret Chest"
+        ]
     },
     {
         "name": "Leomund's Tiny Hut",
@@ -21255,8 +21075,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": "Tiny Hut"
+        ]
     },
     {
         "name": "Lesser Restoration",
@@ -21380,8 +21199,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Levitate",
@@ -21482,8 +21300,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Light",
@@ -21602,8 +21419,7 @@ export default [
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Lightning Arrow",
@@ -21774,8 +21590,7 @@ export default [
         ],
         "areaTags": [
             "L"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Locate Animals or Plants",
@@ -21852,8 +21667,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Locate Creature",
@@ -22007,8 +21821,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Locate Object",
@@ -22111,8 +21924,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Longstrider",
@@ -22206,8 +22018,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mage Armor",
@@ -22266,8 +22077,7 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mage Hand",
@@ -22411,8 +22221,7 @@ export default [
                 "name": "Dimir Operative",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Magic Circle",
@@ -22561,8 +22370,7 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Magic Jar",
@@ -22626,8 +22434,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Magic Missile",
@@ -22716,8 +22523,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Magic Mouth",
@@ -22793,8 +22599,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Magic Weapon",
@@ -22949,8 +22754,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Major Image",
@@ -23033,8 +22837,7 @@ export default [
                 "baseName": "Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mass Cure Wounds",
@@ -23140,8 +22943,7 @@ export default [
         ],
         "miscTags": [
             "HL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mass Heal",
@@ -23188,8 +22990,7 @@ export default [
         "miscTags": [
             "HL",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mass Healing Word",
@@ -23290,8 +23091,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mass Suggestion",
@@ -23371,8 +23171,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Maze",
@@ -23431,8 +23230,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Meld into Stone",
@@ -23515,8 +23313,7 @@ export default [
                 "name": "Dimir Operative",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Melf's Acid Arrow",
@@ -23608,8 +23405,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": "Acid Arrow"
+        ]
     },
     {
         "name": "Mending",
@@ -23704,8 +23500,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Message",
@@ -23802,8 +23597,7 @@ export default [
                 "name": "Azorius Functionary",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Meteor Swarm",
@@ -23861,8 +23655,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mind Blank",
@@ -23915,8 +23708,7 @@ export default [
         ],
         "damageImmune": [
             "psychic"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Minor Illusion",
@@ -24023,8 +23815,7 @@ export default [
                 "baseName": "Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mirage Arcane",
@@ -24078,8 +23869,7 @@ export default [
             "The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.",
             "Creatures with truesight can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
         ],
-        "page": 260,
-        "srd": true
+        "page": 260
     },
     {
         "name": "Mirror Image",
@@ -24191,8 +23981,7 @@ export default [
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mislead",
@@ -24263,8 +24052,7 @@ export default [
                 "baseName": "Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Misty Step",
@@ -24392,8 +24180,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Modify Memory",
@@ -24523,8 +24310,7 @@ export default [
         "miscTags": [
             "PRM",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Moonbeam",
@@ -24603,8 +24389,7 @@ export default [
         ],
         "areaTags": [
             "Y"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Mordenkainen's Faithful Hound",
@@ -24677,8 +24462,7 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": "Faithful Hound"
+        ]
     },
     {
         "name": "Mordenkainen's Magnificent Mansion",
@@ -24732,8 +24516,7 @@ export default [
             "Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.",
             "You can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance."
         ],
-        "page": 261,
-        "srd": "Magnificent Mansion"
+        "page": 261
     },
     {
         "name": "Mordenkainen's Private Sanctum",
@@ -24823,8 +24606,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": "Private Sanctum"
+        ]
     },
     {
         "name": "Mordenkainen's Sword",
@@ -24890,8 +24672,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": "Arcane Sword"
+        ]
     },
     {
         "name": "Move Earth",
@@ -24952,8 +24733,7 @@ export default [
         "page": 263,
         "areaTags": [
             "Q"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Nondetection",
@@ -25048,8 +24828,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Nystul's Magic Aura",
@@ -25126,8 +24905,7 @@ export default [
         ],
         "miscTags": [
             "PRM"
-        ],
-        "srd": "Arcanist's Magic Aura"
+        ]
     },
     {
         "name": "Otiluke's Freezing Sphere",
@@ -25191,8 +24969,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": "Freezing Sphere"
+        ]
     },
     {
         "name": "Otiluke's Resilient Sphere",
@@ -25312,8 +25089,7 @@ export default [
                 "name": "Izzet Engineer",
                 "source": "GGR"
             }
-        ],
-        "srd": "Resilient Sphere"
+        ]
     },
     {
         "name": "Otto's Irresistible Dance",
@@ -25371,8 +25147,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": "Irresistible Dance"
+        ]
     },
     {
         "name": "Pass without Trace",
@@ -25473,8 +25248,7 @@ export default [
                 "name": "Dimir Operative",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Passwall",
@@ -25556,8 +25330,7 @@ export default [
         "page": 264,
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Phantasmal Force",
@@ -25756,8 +25529,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Phantom Steed",
@@ -25816,8 +25588,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Planar Ally",
@@ -25865,8 +25636,7 @@ export default [
         "page": 265,
         "miscTags": [
             "SMN"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Planar Binding",
@@ -26004,8 +25774,7 @@ export default [
         ],
         "miscTags": [
             "SMN"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Plane Shift",
@@ -26076,8 +25845,7 @@ export default [
         "areaTags": [
             "ST",
             "MT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Plant Growth",
@@ -26195,8 +25963,7 @@ export default [
                 "name": "Selesnya Initiate",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Poison Spray",
@@ -26276,8 +26043,7 @@ export default [
         "miscTags": [
             "SCL",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Polymorph",
@@ -26366,8 +26132,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Power Word Heal",
@@ -26479,8 +26244,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Power Word Stun",
@@ -26544,8 +26308,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Prayer of Healing",
@@ -26614,8 +26377,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Prestidigitation",
@@ -26718,8 +26480,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Prismatic Spray",
@@ -26848,8 +26609,7 @@ export default [
         ],
         "miscTags": [
             "PRM"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Prismatic Wall",
@@ -26977,8 +26737,7 @@ export default [
         "miscTags": [
             "PRM",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Produce Flame",
@@ -27053,8 +26812,7 @@ export default [
         ],
         "miscTags": [
             "SCL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Programmed Illusion",
@@ -27111,8 +26869,7 @@ export default [
         "page": 269,
         "opposedCheck": [
             "intelligence"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Project Image",
@@ -27184,8 +26941,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Protection from Energy",
@@ -27368,8 +27124,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Protection from Evil and Good",
@@ -27555,8 +27310,7 @@ export default [
         "page": 270,
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Protection from Poison",
@@ -27658,8 +27412,7 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Purify Food and Drink",
@@ -27737,8 +27490,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Raise Dead",
@@ -27858,8 +27610,7 @@ export default [
         "page": 270,
         "miscTags": [
             "HL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Rary's Telepathic Bond",
@@ -27929,8 +27680,7 @@ export default [
         "page": 270,
         "areaTags": [
             "MT"
-        ],
-        "srd": "Telepathic Bond"
+        ]
     },
     {
         "name": "Ray of Enfeeblement",
@@ -28061,8 +27811,7 @@ export default [
                 "name": "Orzhov Representative",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Ray of Frost",
@@ -28154,8 +27903,7 @@ export default [
         ],
         "miscTags": [
             "SCL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Ray of Sickness",
@@ -28344,8 +28092,7 @@ export default [
         ],
         "miscTags": [
             "HL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Reincarnate",
@@ -28548,8 +28295,7 @@ export default [
             },
             "The reincarnated creature recalls its former life and experiences. It retains the capabilities it had in its original form, except it exchanges its original race for the new one and changes its racial traits accordingly."
         ],
-        "page": 271,
-        "srd": true
+        "page": 271
     },
     {
         "name": "Remove Curse",
@@ -28603,8 +28349,7 @@ export default [
         "page": 271,
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Resistance",
@@ -28677,8 +28422,7 @@ export default [
         "page": 272,
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Resurrection",
@@ -28733,8 +28477,7 @@ export default [
         "page": 272,
         "miscTags": [
             "HL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Reverse Gravity",
@@ -28796,8 +28539,7 @@ export default [
         ],
         "areaTags": [
             "Y"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Revivify",
@@ -28925,8 +28667,7 @@ export default [
         ],
         "miscTags": [
             "HL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Rope Trick",
@@ -29037,8 +28778,7 @@ export default [
                 "name": "Izzet Engineer",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Sacred Flame",
@@ -29120,8 +28860,7 @@ export default [
         "miscTags": [
             "SCL",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Sanctuary",
@@ -29217,8 +28956,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Scorching Ray",
@@ -29340,8 +29078,7 @@ export default [
                 "name": "Boros Legionnaire",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Scrying",
@@ -29540,8 +29277,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Searing Smite",
@@ -29742,8 +29478,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Seeming",
@@ -29862,8 +29597,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Sending",
@@ -29956,8 +29690,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Sequester",
@@ -30012,8 +29745,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Shapechange",
@@ -30076,8 +29808,7 @@ export default [
             "When you transform, you choose whether your equipment falls to the ground, merges into the new form, or is worn by it. Worn equipment functions as normal. The DM determines whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change shape or size to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge into your new form. Equipment that merges has no effect in that state.",
             "During this spell's duration, you can use your action to assume a different form following the same restrictions and rules for the original form, with one exception: if your new form has more hit points than your current one, your hit points remain at their current value."
         ],
-        "page": 274,
-        "srd": true
+        "page": 274
     },
     {
         "name": "Shatter",
@@ -30217,8 +29948,7 @@ export default [
                 "name": "Gruul Anarch",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Shield",
@@ -30358,8 +30088,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Shield of Faith",
@@ -30446,8 +30175,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Shillelagh",
@@ -30504,8 +30232,7 @@ export default [
         "entries": [
             "The wood of a {@item club|phb} or {@item quarterstaff|phb} you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a {@dice d8}. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon."
         ],
-        "page": 275,
-        "srd": true
+        "page": 275
     },
     {
         "name": "Shocking Grasp",
@@ -30588,8 +30315,7 @@ export default [
         ],
         "miscTags": [
             "SCL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Silence",
@@ -30692,8 +30418,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Silent Image",
@@ -30760,8 +30485,7 @@ export default [
                 "baseName": "Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Simulacrum",
@@ -30811,8 +30535,7 @@ export default [
             "If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly.",
             "If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed."
         ],
-        "page": 276,
-        "srd": true
+        "page": 276
     },
     {
         "name": "Sleep",
@@ -30938,8 +30661,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Sleet Storm",
@@ -31046,8 +30768,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Slow",
@@ -31157,8 +30878,7 @@ export default [
         "areaTags": [
             "MT",
             "C"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Spare the Dying",
@@ -31228,8 +30948,7 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Speak with Animals",
@@ -31329,8 +31048,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Speak with Dead",
@@ -31434,8 +31152,7 @@ export default [
                 "name": "Orzhov Representative",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Speak with Plants",
@@ -31511,8 +31228,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Spider Climb",
@@ -31626,8 +31342,7 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Spike Growth",
@@ -31732,8 +31447,7 @@ export default [
         ],
         "areaTags": [
             "R"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Spirit Guardians",
@@ -31836,8 +31550,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Spiritual Weapon",
@@ -31963,8 +31676,7 @@ export default [
         ],
         "areaTags": [
             "ST"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Staggering Smite",
@@ -32171,8 +31883,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Stone Shape",
@@ -32264,8 +31975,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Stoneskin",
@@ -32434,8 +32144,7 @@ export default [
                 "name": "Gruul Anarch",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Storm of Vengeance",
@@ -32528,8 +32237,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Suggestion",
@@ -32648,8 +32356,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Sunbeam",
@@ -32717,8 +32424,7 @@ export default [
         ],
         "areaTags": [
             "L"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Sunburst",
@@ -32781,8 +32487,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Swift Quiver",
@@ -32974,8 +32679,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Tasha's Hideous Laughter",
@@ -33059,8 +32763,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": "Hideous Laughter"
+        ]
     },
     {
         "name": "Telekinesis",
@@ -33157,8 +32860,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Telepathy",
@@ -33363,8 +33065,7 @@ export default [
         "page": 281,
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Teleportation Circle",
@@ -33491,8 +33192,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Tenser's Floating Disk",
@@ -33565,8 +33265,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": "Floating Disk"
+        ]
     },
     {
         "name": "Thaumaturgy",
@@ -33696,8 +33395,7 @@ export default [
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Thorn Whip",
@@ -33987,8 +33685,7 @@ export default [
                 "name": "Gruul Anarch",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Time Stop",
@@ -34031,8 +33728,7 @@ export default [
             "You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take {@dice 1d4 + 1} turns in a row, during which you can use actions and move as normal.",
             "This spell ends if one of the actions you use during this period, or any effects that you create during this period, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it."
         ],
-        "page": 283,
-        "srd": true
+        "page": 283
     },
     {
         "name": "Tongues",
@@ -34117,8 +33813,7 @@ export default [
                 "baseName": "Gnome",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Transport via Plants",
@@ -34162,8 +33857,7 @@ export default [
         "entries": [
             "This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement."
         ],
-        "page": 283,
-        "srd": true
+        "page": 283
     },
     {
         "name": "Tree Stride",
@@ -34244,8 +33938,7 @@ export default [
             "You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet. Both trees must be living and at least the same size as you. You must use 5 feet of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500 feet and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree you're in. You appear in a spot of your choice within 5 feet of the destination tree, using another 5 feet of movement. If you have no movement left, you appear within 5 feet of the tree you entered.",
             "You can use this transportation ability once per round for the duration. You must end each turn outside a tree."
         ],
-        "page": 283,
-        "srd": true
+        "page": 283
     },
     {
         "name": "True Polymorph",
@@ -34336,8 +34029,7 @@ export default [
             "PRM",
             "SMN",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "True Resurrection",
@@ -34393,8 +34085,7 @@ export default [
         ],
         "miscTags": [
             "HL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "True Seeing",
@@ -34458,8 +34149,7 @@ export default [
         "entries": [
             "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
         ],
-        "page": 284,
-        "srd": true
+        "page": 284
     },
     {
         "name": "True Strike",
@@ -34523,8 +34213,7 @@ export default [
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Tsunami",
@@ -34655,8 +34344,7 @@ export default [
                 "baseName": "Halfling",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Vampiric Touch",
@@ -34793,8 +34481,7 @@ export default [
         ],
         "miscTags": [
             "HL"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Vicious Mockery",
@@ -34861,8 +34548,7 @@ export default [
         "miscTags": [
             "SCL",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Wall of Fire",
@@ -35028,8 +34714,7 @@ export default [
                 "name": "Rakdos Cultist",
                 "source": "GGR"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Wall of Force",
@@ -35134,8 +34819,7 @@ export default [
         ],
         "areaTags": [
             "W"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Wall of Ice",
@@ -35202,8 +34886,7 @@ export default [
         ],
         "areaTags": [
             "W"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Wall of Stone",
@@ -35303,8 +34986,7 @@ export default [
         ],
         "miscTags": [
             "PRM"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Wall of Thorns",
@@ -35371,8 +35053,7 @@ export default [
         ],
         "areaTags": [
             "W"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Warding Bond",
@@ -35489,8 +35170,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Water Breathing",
@@ -35597,8 +35277,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Water Walk",
@@ -35701,8 +35380,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Web",
@@ -35836,8 +35514,7 @@ export default [
         ],
         "areaTags": [
             "C"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Weird",
@@ -35900,8 +35577,7 @@ export default [
         ],
         "areaTags": [
             "S"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Wind Walk",
@@ -35956,8 +35632,7 @@ export default [
         ],
         "miscTags": [
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Wind Wall",
@@ -36064,8 +35739,7 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Wish",
@@ -36142,8 +35816,7 @@ export default [
         "miscTags": [
             "HL",
             "SGT"
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Witch Bolt",
@@ -36255,8 +35928,7 @@ export default [
             "You and up to five willing creatures within 5 feet of you instantly teleport to a previously designated sanctuary. You and any creatures that teleport with you appear in the nearest unoccupied space to the spot you designated when you prepared your sanctuary (see below). If you cast this spell without first preparing a sanctuary, the spell has no effect.",
             "You must designate a sanctuary by casting this spell within a location, such as a temple, dedicated to or strongly linked to your deity. If you attempt to cast the spell in this manner in an area that isn't dedicated to your deity, the spell has no effect."
         ],
-        "page": 289,
-        "srd": true
+        "page": 289
     },
     {
         "name": "Wrathful Smite",
@@ -36504,8 +36176,7 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ],
-        "srd": true
+        ]
     },
     {
         "name": "Booming Blade",
@@ -40279,6 +39950,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -40557,6 +40232,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -40637,6 +40316,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -41322,6 +41005,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -42058,6 +41745,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -42482,6 +42173,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -42556,6 +42251,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -42735,6 +42434,10 @@ export default [
             {
                 "source": "UAWGE",
                 "page": 107
+            },
+            {
+                "source": "ERLW",
+                "page": 50
             }
         ],
         "areaTags": [
@@ -42742,6 +42445,14 @@ export default [
         ],
         "miscTags": [
             "SGT"
+        ],
+        "races": [
+            {
+                "name": "Half-Elf (Mark of Storm)",
+                "source": "ERLW",
+                "baseName": "Half-Elf",
+                "baseSource": "PHB"
+            }
         ]
     },
     {
@@ -43856,6 +43567,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -43937,7 +43652,7 @@ export default [
         },
         "entries": [
             "You transform up to ten creatures of your choice that you can see within range. An unwilling target must succeed on a Wisdom saving throw to resist the transformation. An unwilling shapechanger automatically succeeds on the save.",
-            "Each target assumes a beast form of your choice, and you can choose the same form or different ones for each target. The new form can be any beast you have seen whose challenge rating is equal to or less than the target's (or half the target's level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast, but the target retains its hit points, alignment, and personality.",
+            "Each target assumes a beast form of your choice, and you can choose the same form or different ones for each target. The new form can be {@filter any beast|bestiary|type=beast} you have seen whose challenge rating is equal to or less than the target's (or half the target's level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast, but the target retains its hit points, alignment, and personality.",
             "Each target gains a number of temporary hit points equal to the hit points of its new form. These temporary hit points can't be replaced by temporary hit points from another source. A target reverts to its normal form when it has no more temporary hit points or it dies. If the spell ends before then, the creature loses all its temporary hit points and reverts to its normal form.",
             "The creature is limited in the actions it can perform by the nature of its new form. It can't speak, cast spells, or do anything else that requires hands or speech.",
             "The target's gear melds into the new form. The target can't activate, use, wield, or otherwise benefit from any of its equipment."
@@ -44736,6 +44451,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -45160,6 +44879,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromClassListVariant": [
@@ -45226,6 +44949,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -45297,6 +45024,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -46114,6 +45845,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },
@@ -46247,6 +45982,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ],
             "fromClassListVariant": [
@@ -46381,6 +46120,10 @@ export default [
                 {
                     "name": "Artificer (Revisited)",
                     "source": "UAArtificerRevisited"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "ERLW"
                 }
             ]
         },

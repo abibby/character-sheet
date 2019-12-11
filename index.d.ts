@@ -8,12 +8,15 @@ export declare class Level {
     toString(): string;
 }
 export declare class Stat {
-    private value;
+    private bonus;
+    private readonly initial;
     private override;
+    constructor(initial: number);
     add(amount: number): void;
     set(value: number): void;
     get(): number;
     mod(): number;
+    points(): number;
     toString(): string;
 }
 declare type Bonus = (c: Character) => void;
@@ -74,7 +77,7 @@ export declare class Character {
     xp: number;
     readonly level: Level;
     readonly class: Map<string, string>;
-    readonly stats: Readonly<Stats<Stat>>;
+    stats: Readonly<Stats<Stat>>;
     get saves(): Stats;
     readonly spells: string[];
     readonly features: string[];
@@ -117,6 +120,7 @@ export declare class Character {
     addFeat(name: string, bonus: Bonus): void;
     addAttack(attack: Attack): void;
     render(): Promise<string>;
+    pointBuy(): number;
     assert<T>(expect: (c: Character) => T, actual: (c: Character) => T, message: string): string | undefined;
     private applyBonus;
 }

@@ -11779,6 +11779,15 @@ export default [
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "Cantrip Versatility",
+                    "entries": [
+                        "{@i 1st-level druid feature (enhances Spellcasting)}",
+                        "Whenever you gain a level in this class, you can replace one cantrip you learned from this Spellcasting feature with another cantrip from the druid spell list."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 4
                 }
             ],
             [
@@ -11836,6 +11845,16 @@ export default [
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "Wild Companion",
+                    "entries": [
+                        "{@i 2nd-level druid feature (enhances Wild Shape)}",
+                        "You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell find familiar} spell, without material components.",
+                        "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 4
                 },
                 {
                     "name": "Druid Circle",
@@ -36136,7 +36155,10 @@ export default [
                                                     "99-00",
                                                     "You regain all expended sorcery points."
                                                 ]
-                                            ]
+                                            ],
+                                            "data": {
+                                                "tableInclude": true
+                                            }
                                         }
                                     ]
                                 },
@@ -38401,6 +38423,15 @@ export default [
                     ]
                 },
                 {
+                    "name": "Spell Versatility",
+                    "entries": [
+                        "{@i 1st-level warlock feature (enhances Pact Magic)}",
+                        "Whenever you finish a long rest, you can replace one spell you learned from this Pact Magic feature with another spell from the warlock spell list. The new spell must be the same level as the spell you replace."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 10
+                },
+                {
                     "name": "Otherworldly Patron",
                     "entries": [
                         "At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
@@ -38472,6 +38503,16 @@ export default [
                                         "name": "The Seeker (UA)",
                                         "source": "UATheFaithful"
                                     }
+                                },
+                                {
+                                    "name": "Pact of the Talisman",
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 11,
+                                    "entries": [
+                                        "Your patron gives you a special amulet, a talisman that can aid you, or anyone else who wears it, when the need is great. When the wearer makes an ability check with a skill in which they lack proficiency, they can add a {@dice d4} to the roll.",
+                                        "If you lose the talisman, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous amulet.",
+                                        "The talisman turns to ash when you die."
+                                    ]
                                 }
                             ]
                         }
