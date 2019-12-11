@@ -27,21 +27,55 @@ export class Level {
 }
 
 export class Stat {
-    private value: number = 0
+    private bonus: number = 0
+    private readonly initial: number
     private override: number = 0
 
+    constructor(initial: number) {
+        this.initial = initial
+    }
+
     public add(amount: number): void {
-        this.override += amount
+        this.bonus += amount
     }
     public set(value: number): void {
-        this.value = Math.max(value, this.value)
+        this.override = Math.max(value, this.override)
     }
     public get(): number {
-        return Math.max(this.value, this.override)
+        return Math.max(this.initial + this.bonus, this.override)
     }
     public mod(): number {
         return mod(this.get())
     }
+
+    public points(): number {
+        const pointValues: { [points: number]: number | undefined } = {
+            3: -9,
+            4: -6,
+            5: -4,
+            6: -2,
+            7: -1,
+            8: 0,
+            9: 1,
+            10: 2,
+            11: 3,
+            12: 4,
+            13: 5,
+            14: 7,
+            15: 9,
+            16: 12,
+            17: 15,
+            18: 19,
+        }
+        if (this.initial > 15) {
+            console.warn('point buy ability scores should be less than 15')
+        }
+        if (this.initial < 8) {
+            console.warn('point buy ability scores should be greater than 8')
+        }
+        return pointValues[this.initial] ?? 0
+    }
+
     public toString(): string {
         return String(this.get())
     }
@@ -141,13 +175,13 @@ export class Character {
     public readonly level: Level = new Level()
     public readonly class: Map<string, string> = new Map()
 
-    public readonly stats: Readonly<Stats<Stat>> = {
-        str: new Stat(),
-        dex: new Stat(),
-        con: new Stat(),
-        int: new Stat(),
-        wis: new Stat(),
-        cha: new Stat(),
+    public stats: Readonly<Stats<Stat>> = {
+        str: new Stat(10),
+        dex: new Stat(10),
+        con: new Stat(10),
+        int: new Stat(10),
+        wis: new Stat(10),
+        cha: new Stat(10),
     }
     public get saves(): Stats {
         return Object.fromEntries(
@@ -234,12 +268,14 @@ export class Character {
     }
 
     public setStats(stats: Stats<number>): void {
-        this.stats.str.add(stats.str)
-        this.stats.dex.add(stats.dex)
-        this.stats.con.add(stats.con)
-        this.stats.int.add(stats.int)
-        this.stats.wis.add(stats.wis)
-        this.stats.cha.add(stats.cha)
+        this.stats = {
+            str: new Stat(stats.str),
+            dex: new Stat(stats.dex),
+            con: new Stat(stats.con),
+            int: new Stat(stats.int),
+            wis: new Stat(stats.wis),
+            cha: new Stat(stats.cha),
+        }
     }
 
     public setAC(ac: number): void {
@@ -331,6 +367,15 @@ export class Character {
         return await render(this)
     }
 
+    public pointBuy(): number {
+        return this.stats.str.points() +
+            this.stats.dex.points() +
+            this.stats.con.points() +
+            this.stats.int.points() +
+            this.stats.wis.points() +
+            this.stats.cha.points()
+    }
+
     public assert<T>(expect: (c: Character) => T, actual: (c: Character) => T, message: string): string | undefined {
         const e = expect(this)
         const a = actual(this)
@@ -338,7 +383,7 @@ export class Character {
             return
         }
         const m = `${message}, expected ${e} got ${a}`
-        console.log('\x1b[33m%s\x1b[0m', m);  //yellow
+        console.warn(m);  //yellow
         return m
     }
 
