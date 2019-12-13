@@ -32,11 +32,6 @@ $light: #666;
     }
 }
 
-@mixin lined {
-    background-image: linear-gradient(lightgrey 1px, transparent 0);
-    background-size: 100% #{$line-height * 1em};
-}
-
 body {
     font-family: "Ubuntu", sans-serif;
     font-size: $font-size;
@@ -61,11 +56,13 @@ body {
     grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
     // grid-template-rows: 64px 64px 128px 256px;
     grid-template-areas:
-        "header  header  header           header"
-        "stats   saves   combat           items"
-        "stats   skills  combat           items"
-        "stats   skills  limited-features features"
-        "attacks attacks attacks          features";
+        "header     header     header     header"
+        "stats      saves      combat     features"
+        "stats      skills     combat     features"
+        "stats      skills     combat     limited-features"
+        "stats      skills     items      limited-features"
+        "stats      skills     attacks    attacks"
+        "spell-list spell-list spell-list spell-list";
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     line-height: $line-height;
@@ -219,13 +216,12 @@ body {
         grid-area: combat;
 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
-            "max-hp   max-hp   ac         ac          prof-bonus  prof-bonus"
-            "hp       hp       hp         hp          initiative  initiative"
-            "hp       hp       hp         hp          speed       speed"
-            "hit-dice hit-dice hit-dice   death-saves death-saves death-saves";
+            "max-hp   ac          prof-bonus"
+            "hp       hp          initiative"
+            "hit-dice death-saves speed";
 
         grid-gap: 10px;
 
@@ -304,7 +300,6 @@ body {
         grid-area: items;
 
         @include border;
-        @include lined;
         @include bottom-text("Items");
     }
 
@@ -312,7 +307,6 @@ body {
         grid-area: features;
 
         @include border;
-        @include lined;
         @include bottom-text("Features");
     }
 
@@ -321,6 +315,26 @@ body {
         @include border;
 
         @include bottom-text("Attacks");
+    }
+
+    .spell-list {
+        grid-area: spell-list;
+        @include border;
+
+        @include bottom-text("Spells");
+
+        columns: 4;
+
+        h3 {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 10px;
+        }
     }
 }
 
