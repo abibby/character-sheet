@@ -1184,7 +1184,7 @@ declare const _default: ({
             "skills"?: undefined;
         };
     };
-    "classFeatures": (({
+    "classFeatures": ({
         "name": string;
         "entries": (string | {
             "type": string;
@@ -1195,14 +1195,7 @@ declare const _default: ({
                 "attributes": string[];
             })[];
         })[];
-        "source"?: undefined;
-        "page"?: undefined;
-    } | {
-        "name": string;
-        "entries": string[];
-        "source": string;
-        "page": number;
-    })[] | ({
+    }[] | ({
         "name": string;
         "entries": (string | {
             "type": string;
@@ -1219,21 +1212,11 @@ declare const _default: ({
             "colStyles"?: undefined;
             "rows"?: undefined;
         })[];
-        "source"?: undefined;
-        "page"?: undefined;
-        "gainSubclassFeature"?: undefined;
-    } | {
-        "name": string;
-        "entries": string[];
-        "source": string;
-        "page": number;
         "gainSubclassFeature"?: undefined;
     } | {
         "name": string;
         "entries": string[];
         "gainSubclassFeature": boolean;
-        "source"?: undefined;
-        "page"?: undefined;
     })[])[];
     "subclassTitle": string;
     "subclasses": ({
@@ -4029,21 +4012,11 @@ declare const _default: ({
                 "attributes": string[];
             })[];
         })[];
-        "source"?: undefined;
-        "page"?: undefined;
-        "gainSubclassFeature"?: undefined;
-    } | {
-        "name": string;
-        "entries": string[];
-        "source": string;
-        "page": number;
         "gainSubclassFeature"?: undefined;
     } | {
         "name": string;
         "entries": string[];
         "gainSubclassFeature": boolean;
-        "source"?: undefined;
-        "page"?: undefined;
     })[] | {
         "name": string;
         "entries": (string | {
@@ -4060,7 +4033,6 @@ declare const _default: ({
                 "entries": string[];
                 "source"?: undefined;
                 "subclass"?: undefined;
-                "page"?: undefined;
             } | {
                 "type": string;
                 "name": string;
@@ -4070,14 +4042,6 @@ declare const _default: ({
                     "name": string;
                     "source": string;
                 };
-                "page"?: undefined;
-            } | {
-                "name": string;
-                "source": string;
-                "page": number;
-                "entries": string[];
-                "type"?: undefined;
-                "subclass"?: undefined;
             })[];
         })[];
     }[])[];

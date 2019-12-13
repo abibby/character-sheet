@@ -19,7 +19,7 @@ body h2 {
 .character {
   display: grid;
   grid-template-columns: 0.25fr 0.75fr 1fr 1fr;
-  grid-template-areas: "header  header  header           header" "stats   saves   combat           items" "stats   skills  combat           items" "stats   skills  limited-features features" "attacks attacks attacks          features";
+  grid-template-areas: "header     header     header     header" "stats      saves      combat     features" "stats      skills     combat     features" "stats      skills     combat     limited-features" "stats      skills     items      limited-features" "stats      skills     attacks    attacks" "spell-list spell-list spell-list spell-list";
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   line-height: 1.3;
@@ -228,9 +228,9 @@ body h2 {
 .character .combat {
   grid-area: combat;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "max-hp   max-hp   ac         ac          prof-bonus  prof-bonus" "hp       hp       hp         hp          initiative  initiative" "hp       hp       hp         hp          speed       speed" "hit-dice hit-dice hit-dice   death-saves death-saves death-saves";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "max-hp   ac          prof-bonus" "hp       hp          initiative" "hit-dice death-saves speed";
   grid-gap: 10px;
 }
 .character .combat .max-hp,
@@ -420,8 +420,6 @@ body h2 {
   border: solid #ccc 4px;
   border-radius: 3px;
   padding: 4px;
-  background-image: linear-gradient(lightgrey 1px, transparent 0);
-  background-size: 100% 1.3em;
   position: relative;
   padding-bottom: 15.5px;
 }
@@ -442,8 +440,6 @@ body h2 {
   border: solid #ccc 4px;
   border-radius: 3px;
   padding: 4px;
-  background-image: linear-gradient(lightgrey 1px, transparent 0);
-  background-size: 100% 1.3em;
   position: relative;
   padding-bottom: 15.5px;
 }
@@ -478,6 +474,36 @@ body h2 {
   background-color: white;
   left: 0;
   padding-top: 5px;
+}
+.character .spell-list {
+  grid-area: spell-list;
+  border: solid #ccc 4px;
+  border-radius: 3px;
+  padding: 4px;
+  position: relative;
+  padding-bottom: 15.5px;
+  columns: 4;
+}
+.character .spell-list::after {
+  content: "Spells";
+  display: block;
+  font-size: 10.5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  left: 0;
+  padding-top: 5px;
+}
+.character .spell-list h3 {
+  margin: 0;
+}
+.character .spell-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 .lists {

@@ -99,6 +99,7 @@ export function render(c) {
         ${items(c)}
         ${features(c)}
         ${attacks(c)}
+        ${spellList(c.spells)}
     </div>
     <section class="lists">
         ${collapse('Limited Class Features', limitedClassFeatures(c))}
@@ -445,6 +446,27 @@ function spell(s) {
             ${duration(s.duration)}
         </section>
         ${s.entries.map(entry)}
+    </div>
+    `;
+    });
+}
+function spellList(s) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const spells = s.map(findSpell)
+            .filter((spell) => spell !== undefined)
+            .sort((a, b) => a.name.localeCompare(b.name));
+        const spellsByLevel = [];
+        for (let level = 0; level < 10; level++) {
+            spellsByLevel.push(spells.filter(spell => spell.level === level));
+        }
+        return html `
+    <div class="spell-list">
+        ${spellsByLevel.filter(s => s.length > 0).map((spells, level) => html `
+            <h3>Level ${level}</h3>
+            <ul>
+                ${spells.map(spell => html `<li>${spell.name}</li>`)}
+            </ul>
+        `)}
     </div>
     `;
     });
