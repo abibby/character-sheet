@@ -88,7 +88,7 @@ export async function render(c: Character): Promise<string> {
         ${items(c)}
         ${features(c)}
         ${attacks(c)}
-        ${spellList(c.spells)}
+        ${spellList(c)}
     </div>
     <section class="lists">
         ${collapse('Limited Class Features', limitedClassFeatures(c))}
@@ -414,9 +414,30 @@ async function spell(s: Spell): Promise<string> {
     </div>
     `
 }
-
-async function spellList(s: string[]): Promise<string> {
-    const spells = s.map(findSpell)
+const fullCaster = [
+    [2, 0, 0, 0, 0, 0, 0, 0, 0],
+    [3, 0, 0, 0, 0, 0, 0, 0, 0],
+    [4, 2, 0, 0, 0, 0, 0, 0, 0],
+    [4, 3, 0, 0, 0, 0, 0, 0, 0],
+    [4, 3, 2, 0, 0, 0, 0, 0, 0],
+    [4, 3, 3, 0, 0, 0, 0, 0, 0],
+    [4, 3, 3, 1, 0, 0, 0, 0, 0],
+    [4, 3, 3, 2, 0, 0, 0, 0, 0],
+    [4, 3, 3, 3, 1, 0, 0, 0, 0],
+    [4, 3, 3, 3, 2, 0, 0, 0, 0],
+    [4, 3, 3, 3, 2, 1, 0, 0, 0],
+    [4, 3, 3, 3, 2, 1, 0, 0, 0],
+    [4, 3, 3, 3, 2, 1, 1, 0, 0],
+    [4, 3, 3, 3, 2, 1, 1, 0, 0],
+    [4, 3, 3, 3, 2, 1, 1, 1, 0],
+    [4, 3, 3, 3, 2, 1, 1, 1, 0],
+    [4, 3, 3, 3, 2, 1, 1, 1, 1],
+    [4, 3, 3, 3, 3, 1, 1, 1, 1],
+    [4, 3, 3, 3, 3, 2, 1, 1, 1],
+    [4, 3, 3, 3, 3, 2, 2, 1, 1],
+]
+async function spellList(c: Character): Promise<string> {
+    const spells = c.spells.map(findSpell)
         .filter((spell): spell is Spell => spell !== undefined)
         .sort((a, b) => a.name.localeCompare(b.name))
     const spellsByLevel = []
@@ -427,7 +448,12 @@ async function spellList(s: string[]): Promise<string> {
     return html`
     <div class="spell-list">
         ${spellsByLevel.filter(s => s.length > 0).map((spells, level) => html`
-            <h3>Level ${level}</h3>
+            <h3>
+                Level ${level}
+                <span class="used">
+                    ${range(fullCaster[c.level.total - 1][level - 1]).map(() => html`<span class='use'></span>`)}
+                </span>
+            </h3>
             <ul>
                 ${spells.map(spell => html`<li>${spell.name}</li>`)}
             </ul>
