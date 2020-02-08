@@ -1,5 +1,7 @@
 declare const _default: ({
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -26,6 +28,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -34,31 +42,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "page": number;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -86,16 +89,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
-    "page": number;
     "entries": string[];
     "entriesHigherLevel": {
         "type": string;
@@ -104,21 +97,32 @@ declare const _default: ({
     }[];
     "conditionInflict": string[];
     "savingThrow": string[];
-    "areaTags": string[];
     "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -142,6 +146,12 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": (string | {
+        "type": string;
+        "entries": string[];
+        "by": string;
+    })[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -150,14 +160,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "entries": string[];
-        "by": string;
-    })[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -165,16 +167,19 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -206,6 +211,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -214,27 +224,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "page": number;
-    "entries": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -261,6 +267,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -269,27 +278,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "page": number;
-    "entries": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -312,16 +319,6 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
-    "page": number;
     "entries": (string | {
         "type": string;
         "entries": string[];
@@ -333,22 +330,33 @@ declare const _default: ({
         "entries": string[];
     }[];
     "damageInflict": string[];
-    "areaTags": string[];
     "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -375,16 +383,6 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
-    "page": number;
     "entries": (string | {
         "type": string;
         "entries": string[];
@@ -395,23 +393,34 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "areaTags": string[];
     "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -438,31 +447,32 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "source": string;
     "entries": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "page": number;
-    "classes"?: undefined;
     "entriesHigherLevel"?: undefined;
+    "classes"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -490,6 +500,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -498,31 +515,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "miscTags": string[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -553,6 +564,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -561,31 +578,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -612,15 +624,6 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "items": string[];
@@ -630,24 +633,35 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "miscTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -670,6 +684,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -681,30 +709,25 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -731,6 +754,13 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -751,39 +781,33 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -810,43 +834,53 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
     };
     "entries": string[];
-    "page": number;
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -874,6 +908,12 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "damageInflict": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -891,14 +931,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "damageInflict": string[];
     "races": {
         "name": string;
         "source": string;
@@ -909,21 +941,24 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -950,6 +985,16 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -967,15 +1012,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
     "races": ({
         "name": string;
         "source": string;
@@ -987,24 +1023,24 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     })[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1031,15 +1067,6 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
@@ -1050,31 +1077,41 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1102,6 +1139,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1110,27 +1150,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1153,6 +1191,13 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1173,34 +1218,28 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1228,24 +1267,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "caption": string;
@@ -1258,27 +1279,46 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "damageInflict": string[];
+    "miscTags": string[];
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1306,6 +1346,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1323,32 +1364,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1376,6 +1417,12 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1384,31 +1431,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1435,6 +1477,14 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1446,31 +1496,24 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1498,6 +1541,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1515,35 +1559,34 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -1571,6 +1614,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1579,10 +1624,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -1590,16 +1631,20 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1627,6 +1672,7 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1635,9 +1681,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
@@ -1648,22 +1691,24 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -1690,6 +1735,13 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1718,15 +1770,6 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
     "races": {
         "name": string;
         "source": string;
@@ -1735,19 +1778,22 @@ declare const _default: ({
     }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -1770,6 +1816,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1787,31 +1842,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1838,6 +1886,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1846,27 +1897,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -1893,27 +1942,6 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant": {
-            "name": string;
-            "source": string;
-        }[];
-    };
-    "source": string;
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
@@ -1922,24 +1950,45 @@ declare const _default: ({
         "type": string;
         "items": string[];
     })[];
-    "page": number;
-    "srd": boolean;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant": {
+            "name": string;
+            "source": string;
+        }[];
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -1967,6 +2016,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageResist": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -1987,35 +2040,32 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageResist": string[];
-    "areaTags": string[];
+    "races": {
+        "name": string;
+        "source": string;
+        "baseName": string;
+        "baseSource": string;
+    }[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "races": {
-        "name": string;
-        "source": string;
-        "baseName": string;
-        "baseSource": string;
-    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -2043,6 +2093,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageResist": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2063,11 +2116,6 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageResist": string[];
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
@@ -2081,14 +2129,17 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -2116,6 +2167,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2136,11 +2190,6 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
@@ -2153,15 +2202,19 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -2188,6 +2241,10 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2199,35 +2256,32 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -2255,6 +2309,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2272,31 +2335,22 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -2324,6 +2378,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2341,27 +2398,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "conditionInflict": string[];
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -2389,6 +2445,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2406,31 +2472,22 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -2458,6 +2515,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2486,27 +2545,26 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -2534,6 +2592,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2551,35 +2612,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -2607,6 +2665,12 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2624,23 +2688,15 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
+    }[];
+    "backgrounds": {
+        "name": string;
+        "source": string;
     }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
@@ -2648,14 +2704,18 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -2683,24 +2743,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "items": string[];
@@ -2710,27 +2752,46 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -2758,15 +2819,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "name": string;
@@ -2777,22 +2829,29 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "damageInflict": string[];
+    "spellAttack": string[];
     "opposedCheck": string[];
-    "spellAttack": string[];
     "miscTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": string;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "damageVulnerable"?: undefined;
@@ -2800,6 +2859,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -2827,6 +2889,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2835,27 +2901,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -2882,35 +2944,37 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": string[];
-    "page": number;
     "damageResist": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -2938,6 +3002,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -2955,31 +3026,25 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3002,6 +3067,16 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3030,34 +3105,24 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -3085,6 +3150,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3105,30 +3174,28 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
     "entriesHigherLevel"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3155,6 +3222,16 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3172,31 +3249,22 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3223,6 +3291,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3240,32 +3310,31 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3293,6 +3362,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3321,27 +3391,27 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3369,6 +3439,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3389,36 +3466,30 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3441,6 +3512,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3469,39 +3549,31 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3529,6 +3601,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3557,34 +3639,25 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3612,6 +3685,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3629,35 +3705,33 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3680,6 +3754,16 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3688,31 +3772,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3739,6 +3814,16 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3756,39 +3841,30 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3815,6 +3891,20 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3823,20 +3913,12 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -3849,6 +3931,8 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -3875,6 +3959,16 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3883,22 +3977,11 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -3908,6 +3991,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -3934,6 +4020,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -3942,31 +4037,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -3994,6 +4080,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4011,10 +4099,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -4022,16 +4106,20 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4063,6 +4151,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4080,35 +4169,35 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4135,6 +4224,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4143,27 +4234,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -4191,6 +4280,14 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4199,31 +4296,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "areaTags": string[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4251,6 +4342,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4279,34 +4379,26 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4333,6 +4425,14 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4344,31 +4444,24 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4395,6 +4488,20 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4415,38 +4522,25 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4473,6 +4567,11 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4490,30 +4589,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4536,35 +4631,6 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": ({
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-                "subSubclass": string;
-            };
-        } | {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-                "subSubclass"?: undefined;
-            };
-        })[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
@@ -4573,32 +4639,61 @@ declare const _default: ({
         "type": string;
         "items": string[];
     })[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": ({
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+                "subSubclass": string;
+            };
+        } | {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+                "subSubclass"?: undefined;
+            };
+        })[];
+        "fromClassListVariant"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -4626,6 +4721,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4643,35 +4742,33 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4698,6 +4795,11 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4715,35 +4817,31 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4771,6 +4869,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4788,30 +4890,27 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4834,6 +4933,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -4865,31 +4973,23 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -4917,24 +5017,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "caption": string;
@@ -4958,32 +5040,51 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "savingThrow": string[];
     "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5011,24 +5112,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "items": string[];
@@ -5038,32 +5121,50 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "miscTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -5086,6 +5187,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5103,35 +5207,34 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5159,6 +5262,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5167,31 +5277,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5219,6 +5323,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5237,39 +5348,33 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5297,15 +5402,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "items": string[];
@@ -5315,32 +5411,41 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "miscTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -5363,6 +5468,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5371,27 +5479,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5419,15 +5526,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "items": string[];
@@ -5437,24 +5535,34 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "miscTags": string[];
-    "srd": boolean;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5481,6 +5589,13 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5492,30 +5607,24 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5542,6 +5651,15 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "conditionInflict": string[];
+    "spellAttack": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5559,22 +5677,11 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "savingThrow": string[];
-    "spellAttack": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -5584,6 +5691,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5614,6 +5724,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5622,27 +5733,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5670,6 +5781,7 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5681,32 +5793,32 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5734,6 +5846,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5762,28 +5883,17 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -5792,6 +5902,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5819,6 +5932,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "caption": string;
+        "colLabels": string[];
+        "colStyles": string[];
+        "rows": string[][];
+    })[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5827,33 +5947,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "caption": string;
-        "colLabels": string[];
-        "colStyles": string[];
-        "rows": string[][];
-    })[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -5880,6 +5993,15 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5888,31 +6010,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -5936,6 +6051,12 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -5953,39 +6074,34 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6008,6 +6124,7 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6036,32 +6153,109 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
+    "races": {
+        "name": string;
+        "source": string;
+        "baseName": string;
+        "baseSource": string;
+    }[];
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6088,6 +6282,13 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6096,107 +6297,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
-    "level": number;
-    "school": string;
-    "time": {
-        "number": number;
-        "unit": string;
-    }[];
-    "range": {
-        "type": string;
-        "distance": {
-            "type": string;
-            "amount": number;
-        };
-    };
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "m": string;
-        "r"?: undefined;
-    };
-    "duration": {
-        "type": string;
-    }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
     "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
     "page": number;
-    "races": {
-        "name": string;
-        "source": string;
-        "baseName": string;
-        "baseSource": string;
-    }[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "miscTags": string[];
     "srd": boolean;
-    "conditionInflict"?: undefined;
-    "savingThrow"?: undefined;
-    "damageInflict"?: undefined;
-    "meta"?: undefined;
-    "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
-    "spellAttack"?: undefined;
-    "damageVulnerable"?: undefined;
-    "damageImmune"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
     "level": number;
     "school": string;
     "time": {
@@ -6219,24 +6338,6 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "caption": string;
@@ -6249,32 +6350,50 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -6302,6 +6421,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6319,35 +6443,31 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -6375,6 +6495,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6392,27 +6515,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6435,53 +6557,54 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": string[];
     "entriesHigherLevel": {
         "type": string;
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
+    "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6509,6 +6632,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6517,9 +6641,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
@@ -6530,22 +6651,25 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6573,6 +6697,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6601,32 +6727,31 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6653,6 +6778,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6661,27 +6788,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6708,6 +6834,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6736,30 +6864,29 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
     }[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6786,6 +6913,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6806,35 +6935,34 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6862,6 +6990,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6870,31 +7007,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -6921,6 +7050,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6932,27 +7063,25 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -6975,6 +7104,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -6992,13 +7126,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
@@ -7006,16 +7133,20 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7043,6 +7174,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7051,32 +7183,32 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7104,6 +7236,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7121,13 +7258,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
     "races": ({
         "name": string;
         "source": string;
@@ -7139,22 +7269,25 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     })[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7182,6 +7315,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7190,38 +7328,34 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7249,6 +7383,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7266,11 +7404,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "opposedCheck": string[];
     "races": {
         "name": string;
         "source": string;
@@ -7281,12 +7414,11 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -7295,6 +7427,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7317,6 +7452,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7334,32 +7472,30 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7386,6 +7522,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7403,10 +7542,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "opposedCheck": string[];
     "races": ({
         "name": string;
         "source": string;
@@ -7422,13 +7557,12 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -7437,6 +7571,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7464,30 +7601,28 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "name": string;
         "entries": string[];
     })[];
-    "page": number;
-    "savingThrow": string[];
     "spellAttack": string[];
+    "savingThrow": string[];
     "areaTags": string[];
-    "srd": boolean;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -7497,6 +7632,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7519,6 +7657,13 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7536,31 +7681,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -7583,6 +7721,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7600,17 +7747,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
@@ -7618,16 +7754,20 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7654,6 +7794,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7675,38 +7820,34 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7734,6 +7875,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7751,27 +7894,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7794,6 +7936,14 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7802,30 +7952,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7853,6 +7996,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7873,39 +8026,30 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7933,6 +8077,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -7941,31 +8095,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -7993,6 +8138,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8010,34 +8165,25 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -8065,6 +8211,11 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8073,30 +8224,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8120,6 +8267,10 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8148,32 +8299,29 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8196,50 +8344,51 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "items": string[];
     })[];
-    "page": number;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8267,6 +8416,17 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8275,22 +8435,9 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -8300,6 +8447,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8322,6 +8472,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8330,18 +8485,11 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -8351,6 +8499,8 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -8378,6 +8528,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8398,39 +8555,34 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8458,6 +8610,17 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8478,38 +8641,28 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8537,6 +8690,14 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "name": string;
+        "type": string;
+        "entries": string[];
+    })[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8568,39 +8729,31 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": (string | {
-        "name": string;
-        "type": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -8628,6 +8781,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8645,25 +8808,14 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "conditionInflict": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -8673,6 +8825,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8700,6 +8855,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8731,21 +8891,14 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -8755,6 +8908,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8781,6 +8937,10 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8798,35 +8958,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8854,6 +9011,14 @@ declare const _default: ({
             "upTo": boolean;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8862,31 +9027,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -8914,6 +9072,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8931,18 +9096,9 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -8952,6 +9108,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -8979,6 +9138,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -8996,35 +9156,35 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9052,6 +9212,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9060,31 +9229,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9107,6 +9268,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9124,32 +9287,31 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9177,6 +9339,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9194,32 +9359,30 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9246,6 +9409,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9263,31 +9432,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9315,6 +9479,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9332,30 +9500,27 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9383,6 +9548,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9400,32 +9567,31 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9448,6 +9614,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9456,27 +9627,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -9503,6 +9669,14 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "damageResist": string[];
+    "conditionInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9520,30 +9694,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "damageResist": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9570,38 +9738,39 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
     };
     "entries": string[];
-    "page": number;
     "miscTags": string[];
-    "srd": boolean;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9624,6 +9793,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9632,83 +9803,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
-    "level": number;
-    "school": string;
-    "time": {
-        "number": number;
-        "unit": string;
-    }[];
-    "range": {
-        "type": string;
-        "distance": {
-            "type": string;
-            "amount": number;
-        };
-    };
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "duration": {
-        "type": string;
-    }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
     "source": string;
-    "entries": string[];
     "page": number;
-    "races": {
-        "name": string;
-        "source": string;
-        "baseName": string;
-        "baseSource": string;
-    }[];
     "srd": boolean;
-    "entriesHigherLevel"?: undefined;
-    "conditionInflict"?: undefined;
-    "savingThrow"?: undefined;
-    "areaTags"?: undefined;
-    "miscTags"?: undefined;
-    "damageInflict"?: undefined;
-    "backgrounds"?: undefined;
-    "meta"?: undefined;
-    "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
-    "spellAttack"?: undefined;
-    "damageVulnerable"?: undefined;
-    "damageImmune"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
     "level": number;
     "school": string;
     "time": {
@@ -9740,6 +9854,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9748,27 +9863,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9791,6 +9906,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9799,27 +9919,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9842,6 +9958,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -9860,24 +9990,16 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -9889,6 +10011,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -9915,188 +10040,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant": {
-            "name": string;
-            "source": string;
-        }[];
-    };
-    "source": string;
     "entries": string[];
-    "page": number;
-    "damageInflict": string[];
     "damageResist": string[];
-    "srd": boolean;
-    "entriesHigherLevel"?: undefined;
-    "conditionInflict"?: undefined;
-    "savingThrow"?: undefined;
-    "areaTags"?: undefined;
-    "miscTags"?: undefined;
-    "backgrounds"?: undefined;
-    "races"?: undefined;
-    "meta"?: undefined;
-    "opposedCheck"?: undefined;
-    "spellAttack"?: undefined;
-    "damageVulnerable"?: undefined;
-    "damageImmune"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "level": number;
-    "school": string;
-    "time": {
-        "number": number;
-        "unit": string;
-    }[];
-    "range": {
-        "type": string;
-        "distance": {
-            "type": string;
-            "amount": number;
-        };
-    };
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "duration": {
-        "type": string;
-    }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
-    "entriesHigherLevel"?: undefined;
-    "conditionInflict"?: undefined;
-    "miscTags"?: undefined;
-    "backgrounds"?: undefined;
-    "races"?: undefined;
-    "meta"?: undefined;
-    "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
-    "spellAttack"?: undefined;
-    "damageVulnerable"?: undefined;
-    "damageImmune"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "level": number;
-    "school": string;
-    "time": {
-        "number": number;
-        "unit": string;
-    }[];
-    "range": {
-        "type": string;
-        "distance": {
-            "type": string;
-            "amount"?: undefined;
-        };
-    };
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "m": string;
-        "r"?: undefined;
-    };
-    "duration": {
-        "type": string;
-        "duration": {
-            "type": string;
-            "amount": number;
-        };
-        "concentration": boolean;
-    }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "races": {
-        "name": string;
-        "source": string;
-        "baseName": string;
-        "baseSource": string;
-    }[];
-    "areaTags": string[];
-    "srd": boolean;
-    "conditionInflict"?: undefined;
-    "savingThrow"?: undefined;
-    "miscTags"?: undefined;
-    "backgrounds"?: undefined;
-    "meta"?: undefined;
-    "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
-    "damageVulnerable"?: undefined;
-    "damageImmune"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "level": number;
-    "school": string;
-    "time": {
-        "number": number;
-        "unit": string;
-    }[];
-    "range": {
-        "type": string;
-        "distance": {
-            "type": string;
-            "amount": number;
-        };
-    };
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "m": string;
-        "r"?: undefined;
-    };
-    "duration": {
-        "type": string;
-    }[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10117,34 +10063,25 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "srd": boolean;
+    "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
+    "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10161,135 +10098,42 @@ declare const _default: ({
     "components": {
         "v": boolean;
         "s": boolean;
-        "m": string;
         "r"?: undefined;
+        "m"?: undefined;
     };
     "duration": {
         "type": string;
-        "duration": {
-            "type": string;
-            "amount": number;
-        };
-        "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": ({
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-                "subSubclass"?: undefined;
-            };
-        } | {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-                "subSubclass": string;
-            };
-        })[];
-        "fromClassListVariant": {
-            "name": string;
-            "source": string;
-        }[];
-    };
-    "source": string;
     "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "srd": boolean;
-    "conditionInflict"?: undefined;
-    "miscTags"?: undefined;
-    "races"?: undefined;
-    "meta"?: undefined;
-    "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
-    "spellAttack"?: undefined;
-    "damageVulnerable"?: undefined;
-    "damageImmune"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "level": number;
-    "school": string;
-    "time": {
-        "number": number;
-        "unit": string;
-    }[];
-    "range": {
-        "type": string;
-        "distance": {
-            "type": string;
-            "amount": number;
-        };
-    };
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "m": string;
-        "r"?: undefined;
-    };
-    "duration": {
-        "type": string;
-        "duration": {
-            "type": string;
-            "amount": number;
-        };
-        "concentration": boolean;
-    }[];
     "classes": {
         "fromClassList": {
             "name": string;
             "source": string;
         }[];
-        "fromClassListVariant": {
-            "name": string;
-            "source": string;
-        }[];
+        "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
-    "damageInflict"?: undefined;
+    "conditionInflict"?: undefined;
+    "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10317,6 +10161,300 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass"?: undefined;
+    };
+    "races": {
+        "name": string;
+        "source": string;
+        "baseName": string;
+        "baseSource": string;
+    }[];
+    "conditionInflict"?: undefined;
+    "savingThrow"?: undefined;
+    "miscTags"?: undefined;
+    "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant": {
+            "name": string;
+            "source": string;
+        }[];
+    };
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
+    "conditionInflict"?: undefined;
+    "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": ({
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+                "subSubclass"?: undefined;
+            };
+        } | {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+                "subSubclass": string;
+            };
+        })[];
+        "fromClassListVariant": {
+            "name": string;
+            "source": string;
+        }[];
+    };
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
+    "conditionInflict"?: undefined;
+    "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass"?: undefined;
+    };
+    "entriesHigherLevel"?: undefined;
+    "damageInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount"?: undefined;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10325,31 +10463,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10377,6 +10509,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10405,14 +10544,6 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
     "races": ({
         "name": string;
         "source": string;
@@ -10424,22 +10555,24 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     })[];
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10470,6 +10603,13 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "damageInflict": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10478,30 +10618,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10532,6 +10666,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10540,27 +10677,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10587,6 +10722,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10598,27 +10735,26 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10645,6 +10781,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10673,35 +10811,33 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -10729,6 +10865,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10746,9 +10884,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": ({
         "name": string;
         "source": string;
@@ -10760,7 +10895,6 @@ declare const _default: ({
         "baseName"?: undefined;
         "baseSource"?: undefined;
     })[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
@@ -10771,15 +10905,19 @@ declare const _default: ({
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10807,6 +10945,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10835,30 +10975,29 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10890,6 +11029,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10901,27 +11042,26 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -10948,6 +11088,17 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -10965,34 +11116,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11019,50 +11160,51 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant": {
-            "name": string;
-            "source": string;
-        }[];
-    };
-    "source": string;
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
     };
     "entries": string[];
-    "page": number;
-    "srd": boolean;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant": {
+            "name": string;
+            "source": string;
+        }[];
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11090,6 +11232,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11107,30 +11252,28 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11157,6 +11300,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11165,27 +11309,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11213,6 +11357,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11221,31 +11372,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11273,6 +11418,20 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11290,35 +11449,19 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -11327,6 +11470,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11349,6 +11495,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11357,32 +11505,30 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -11410,6 +11556,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11427,30 +11577,28 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11478,6 +11626,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11506,32 +11657,30 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11558,6 +11707,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11578,35 +11732,31 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "page": number;
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11633,6 +11783,10 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11650,32 +11804,29 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11706,15 +11857,6 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "name": string;
@@ -11723,25 +11865,35 @@ declare const _default: ({
             "items": string[];
         })[];
     })[];
-    "page": number;
-    "areaTags": string[];
     "miscTags": string[];
-    "srd": boolean;
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11769,6 +11921,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11777,30 +11931,29 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11827,6 +11980,15 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11844,25 +12006,14 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -11872,6 +12023,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -11899,6 +12053,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11930,10 +12087,6 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
     "races": ({
         "name": string;
         "source": string;
@@ -11945,22 +12098,23 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     })[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -11988,6 +12142,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -11996,31 +12159,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12048,6 +12204,14 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "damageResist": string[];
+    "damageVulnerable": string[];
+    "savingThrow": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12065,36 +12229,29 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "damageResist": string[];
-    "damageVulnerable": string[];
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12121,6 +12278,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12139,24 +12299,19 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "opposedCheck": string[];
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -12165,6 +12320,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12192,6 +12350,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12220,30 +12381,28 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12266,6 +12425,14 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12274,31 +12441,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12321,6 +12481,14 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12338,36 +12506,29 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12395,6 +12556,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12412,34 +12583,25 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12463,6 +12625,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12480,39 +12651,31 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12539,6 +12702,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "damageImmune": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12550,27 +12716,25 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageImmune": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12598,6 +12762,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12626,34 +12797,27 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -12681,6 +12845,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12698,36 +12871,29 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
-    "miscTags": string[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12755,6 +12921,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12783,34 +12959,25 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12842,6 +13009,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12850,27 +13021,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -12898,6 +13065,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12915,27 +13087,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -12963,6 +13132,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "opposedCheck": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -12980,28 +13158,17 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "opposedCheck": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -13010,6 +13177,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13037,6 +13207,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13054,27 +13228,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13097,6 +13268,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13125,31 +13305,23 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13176,6 +13348,12 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13193,35 +13371,30 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13252,6 +13425,11 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13260,38 +13438,34 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13319,6 +13493,15 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13327,31 +13510,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13379,6 +13554,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13390,27 +13569,24 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13433,6 +13609,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13450,22 +13635,11 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -13475,6 +13649,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13502,6 +13679,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13530,34 +13716,26 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13585,6 +13763,14 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13613,36 +13799,29 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13665,6 +13844,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13676,32 +13857,31 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13728,6 +13908,7 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13745,32 +13926,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -13797,6 +13978,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13814,35 +13997,34 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": string;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -13869,6 +14051,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13877,35 +14065,30 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -13928,6 +14111,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -13945,9 +14130,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": ({
         "name": string;
         "source": string;
@@ -13959,23 +14141,25 @@ declare const _default: ({
         "baseName": string;
         "baseSource": string;
     })[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14003,6 +14187,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14020,32 +14208,29 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14072,6 +14257,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "savingThrow": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14089,10 +14276,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
     "races": ({
         "name": string;
         "source": string;
@@ -14104,22 +14287,24 @@ declare const _default: ({
         "baseName"?: undefined;
         "baseSource"?: undefined;
     })[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -14147,6 +14332,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14155,31 +14349,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14202,6 +14389,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14219,35 +14411,31 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14275,6 +14463,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14303,32 +14492,32 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14355,44 +14544,45 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": string[];
     "entriesHigherLevel": {
         "type": string;
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14419,6 +14609,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14427,32 +14619,31 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14479,6 +14670,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14496,9 +14688,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
@@ -14509,22 +14698,25 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14555,6 +14747,18 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14572,39 +14776,28 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14632,6 +14825,9 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14643,27 +14839,25 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14686,6 +14880,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14703,36 +14906,28 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14760,43 +14955,44 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
     };
     "entries": string[];
-    "page": number;
     "miscTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14824,6 +15020,12 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14844,36 +15046,31 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14901,36 +15098,34 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": string[];
     "entriesHigherLevel": {
         "type": string;
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "opposedCheck": string[];
     "miscTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -14939,6 +15134,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -14961,6 +15159,14 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -14978,31 +15184,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15025,6 +15224,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15033,27 +15235,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15076,6 +15276,14 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15096,36 +15304,29 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15152,6 +15353,16 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15160,31 +15371,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15212,6 +15414,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15223,27 +15428,25 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15270,6 +15473,13 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15291,33 +15501,27 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "conditionInflict": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -15340,50 +15544,48 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": ({
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-                "subSubclass": string;
-            };
-        } | {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-                "subSubclass"?: undefined;
-            };
-        })[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": string[];
     "entriesHigherLevel": {
         "type": string;
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "damageInflict": string[];
     "spellAttack": string[];
     "areaTags": string[];
-    "srd": string;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": ({
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+                "subSubclass": string;
+            };
+        } | {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+                "subSubclass"?: undefined;
+            };
+        })[];
+        "fromClassListVariant"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -15393,6 +15595,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15415,6 +15620,7 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15432,32 +15638,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15484,6 +15690,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15501,35 +15709,34 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15556,6 +15763,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "damageImmune": string[];
+    "damageInflict": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15564,27 +15774,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "damageImmune": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15611,6 +15819,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "opposedCheck": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15629,24 +15839,20 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "opposedCheck": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -15655,6 +15861,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15681,6 +15890,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15689,27 +15899,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15736,6 +15946,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15767,32 +15978,32 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15820,6 +16031,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15831,32 +16045,30 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "conditionInflict": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15879,6 +16091,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15907,32 +16121,31 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -15960,6 +16173,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -15980,34 +16203,25 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -16035,6 +16249,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16052,31 +16275,23 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -16103,6 +16318,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16111,32 +16329,30 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -16167,6 +16383,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16175,27 +16392,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -16222,15 +16439,6 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "items": string[];
@@ -16240,29 +16448,39 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "miscTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": string;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -16294,6 +16512,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16302,18 +16525,11 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -16323,6 +16539,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -16353,6 +16572,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16370,35 +16591,34 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -16425,48 +16645,49 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "name": string;
         "entries": string[];
     })[];
-    "page": number;
-    "areaTags": string[];
     "miscTags": string[];
-    "srd": string;
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -16489,6 +16710,16 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16497,22 +16728,10 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "areaTags": string[];
-    "srd": string;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -16522,6 +16741,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -16549,6 +16771,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageImmune": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16566,30 +16792,27 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageImmune": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -16617,6 +16840,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16625,27 +16852,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -16673,6 +16897,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16701,35 +16927,34 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -16756,6 +16981,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16784,27 +17011,25 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -16832,6 +17057,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16849,18 +17079,12 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -16870,6 +17094,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -16897,6 +17124,17 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16917,31 +17155,21 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -16968,6 +17196,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -16976,35 +17210,30 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17035,6 +17264,15 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17055,31 +17293,23 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17106,6 +17336,10 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "spellAttack": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17114,18 +17348,12 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -17135,6 +17363,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17157,6 +17388,7 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17185,30 +17417,30 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17231,6 +17463,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17239,30 +17485,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
     }[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17290,6 +17531,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17307,30 +17552,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -17353,6 +17594,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17364,27 +17608,26 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17407,6 +17650,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17415,27 +17661,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17458,6 +17702,14 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17469,36 +17721,29 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17526,6 +17771,10 @@ declare const _default: ({
             "upTo": boolean;
         };
     }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17543,35 +17792,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17594,6 +17840,16 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17605,31 +17861,22 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17656,6 +17903,16 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17667,31 +17924,22 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17718,6 +17966,20 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17726,24 +17988,16 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -17755,6 +18009,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17782,6 +18039,8 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": string[];
+    "opposedCheck": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17790,18 +18049,14 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "opposedCheck": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -17811,6 +18066,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17842,6 +18100,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17853,18 +18115,12 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "opposedCheck": string[];
-    "conditionInflict": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -17874,6 +18130,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17901,6 +18160,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageResist": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -17929,32 +18191,30 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageResist": string[];
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -17986,6 +18246,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18006,27 +18268,26 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18053,6 +18314,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "damageResist": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18070,30 +18334,28 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageResist": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18116,6 +18378,12 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18133,35 +18401,30 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18188,6 +18451,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18205,27 +18470,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -18252,6 +18516,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18272,30 +18542,25 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18323,6 +18588,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "spellAttack": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18340,21 +18609,15 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -18364,6 +18627,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18386,6 +18652,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18404,20 +18684,12 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -18430,6 +18702,8 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -18452,6 +18726,17 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "spellAttack": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18469,31 +18754,19 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "spellAttack": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
     "miscTags"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "opposedCheck"?: undefined;
@@ -18502,6 +18775,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18528,6 +18804,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18536,27 +18815,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18583,15 +18860,6 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "caption": string;
@@ -18612,25 +18880,35 @@ declare const _default: ({
             };
         })[])[];
     })[];
-    "page": number;
-    "srd": boolean;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18653,6 +18931,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18661,27 +18941,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18709,6 +18988,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18717,27 +18999,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18764,6 +19044,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18784,27 +19067,25 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18831,6 +19112,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18848,30 +19130,30 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18894,6 +19176,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18911,30 +19207,25 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -18961,6 +19252,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -18978,27 +19272,25 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19021,6 +19313,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19038,25 +19339,14 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -19066,6 +19356,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19097,6 +19390,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "caption": string;
+        "colLabels": string[];
+        "colStyles": string[];
+        "rows": string[][];
+    })[];
+    "savingThrow": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19125,33 +19427,24 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "caption": string;
-        "colLabels": string[];
-        "colStyles": string[];
-        "rows": string[][];
-    })[];
-    "page": number;
-    "savingThrow": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -19179,6 +19472,14 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19199,16 +19500,6 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
@@ -19216,19 +19507,23 @@ declare const _default: ({
         "baseSource": string;
     }[];
     "conditionInflict"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19255,6 +19550,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19263,32 +19560,31 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19315,6 +19611,11 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19332,18 +19633,11 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -19353,6 +19647,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19379,6 +19676,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19396,32 +19694,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19449,6 +19747,9 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19457,27 +19758,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19509,6 +19808,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19520,27 +19820,27 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19563,6 +19863,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19580,34 +19889,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19635,6 +19936,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19652,32 +19954,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19705,6 +20007,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19722,32 +20026,31 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19774,6 +20077,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19792,27 +20096,27 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19835,6 +20139,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19853,18 +20171,10 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -19877,6 +20187,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19904,6 +20217,13 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "conditionInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19932,35 +20252,29 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -19988,6 +20302,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "opposedCheck": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -19996,24 +20312,20 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "opposedCheck": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -20022,6 +20334,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20049,6 +20364,7 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20057,27 +20373,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20104,6 +20420,14 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "conditionInflict": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20121,39 +20445,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20181,6 +20498,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20209,32 +20530,29 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20262,6 +20580,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20293,27 +20614,25 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20336,6 +20655,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20344,35 +20665,34 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20399,55 +20719,56 @@ declare const _default: ({
             "amount": number;
         };
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
-    "source": string;
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
     };
     "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20474,6 +20795,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20494,30 +20816,30 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20544,6 +20866,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20552,35 +20875,35 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20608,6 +20931,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20626,9 +20950,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
@@ -20639,22 +20960,25 @@ declare const _default: ({
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20682,6 +21006,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20710,18 +21038,12 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "opposedCheck": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -20731,6 +21053,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20758,6 +21083,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20778,34 +21113,25 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20832,6 +21158,15 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20849,22 +21184,11 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -20874,6 +21198,8 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -20901,6 +21227,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20918,27 +21247,26 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -20966,6 +21294,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -20994,27 +21325,25 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21037,6 +21366,7 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21055,32 +21385,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21112,6 +21442,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageResist": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21129,30 +21462,28 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageResist": string[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21180,6 +21511,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21188,31 +21529,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21240,6 +21572,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21257,10 +21593,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
     "races": ({
         "name": string;
         "source": string;
@@ -21272,22 +21604,23 @@ declare const _default: ({
         "baseName"?: undefined;
         "baseSource"?: undefined;
     })[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21315,6 +21648,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21323,27 +21661,23 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21366,6 +21700,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21374,27 +21713,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -21422,6 +21756,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21430,10 +21766,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21441,16 +21773,20 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21478,6 +21814,16 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21489,22 +21835,10 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -21514,6 +21848,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -21541,6 +21878,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21558,32 +21900,28 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21611,6 +21949,14 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "conditionInflict": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21628,31 +21974,23 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -21679,6 +22017,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21687,10 +22027,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -21698,16 +22034,20 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21730,15 +22070,6 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "caption": string;
@@ -21756,25 +22087,35 @@ declare const _default: ({
         "colStyles"?: undefined;
         "rows"?: undefined;
     })[];
-    "page": number;
     "miscTags": string[];
-    "srd": boolean;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21805,6 +22146,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21825,32 +22168,31 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "miscTags": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": string;
     "level": number;
     "school": string;
     "time": {
@@ -21877,6 +22219,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21885,35 +22233,30 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "miscTags": string[];
-    "srd": string;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -21941,6 +22284,10 @@ declare const _default: ({
             "upTo": boolean;
         };
     }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -21949,35 +22296,31 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -22000,6 +22343,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22008,13 +22365,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -22029,6 +22379,8 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -22056,6 +22408,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22073,27 +22429,25 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
     "entriesHigherLevel"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22116,6 +22470,15 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22147,39 +22510,31 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22202,6 +22557,7 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22210,27 +22566,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22257,6 +22613,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22277,32 +22634,32 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22329,6 +22686,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22337,27 +22695,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22385,6 +22743,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22402,27 +22761,27 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22450,6 +22809,14 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22458,31 +22825,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22509,6 +22869,9 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22517,27 +22880,25 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22568,6 +22929,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22576,27 +22938,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22624,6 +22986,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22632,32 +22995,31 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -22685,6 +23047,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22693,18 +23060,12 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -22714,6 +23075,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22740,6 +23104,11 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22748,38 +23117,34 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22807,6 +23172,16 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22827,22 +23202,10 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -22852,6 +23215,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22874,6 +23240,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22882,35 +23262,30 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -22938,6 +23313,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageImmune": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -22955,27 +23333,25 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageImmune": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23003,6 +23379,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23021,27 +23401,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23072,6 +23449,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23092,35 +23471,34 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23147,6 +23525,13 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23175,33 +23560,27 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
     "backgrounds": {
         "name": string;
         "source": string;
     }[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23228,6 +23607,13 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23246,30 +23632,24 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": string[];
-    "page": number;
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23297,6 +23677,12 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23325,24 +23711,16 @@ declare const _default: ({
         })[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -23351,6 +23729,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23378,6 +23759,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23389,27 +23775,23 @@ declare const _default: ({
         }[];
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23436,6 +23818,10 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23444,27 +23830,24 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23492,6 +23875,10 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23509,35 +23896,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23560,38 +23944,38 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": (string | {
         "type": string;
         "items": string[];
     })[];
-    "page": number;
-    "damageInflict": string[];
     "damageResist": string[];
+    "damageInflict": string[];
     "miscTags": string[];
-    "srd": boolean;
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -23619,6 +24003,15 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23627,22 +24020,12 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23652,6 +24035,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23674,6 +24060,7 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23682,27 +24069,26 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "srd": boolean;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -23730,6 +24116,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23750,18 +24141,12 @@ declare const _default: ({
             "source": string;
         }[];
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "conditionInflict": string[];
     "entriesHigherLevel"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -23771,6 +24156,9 @@ declare const _default: ({
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
     "level": number;
     "school": string;
     "time": {
@@ -23797,6 +24185,9 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23814,36 +24205,32 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "page": number;
-    "savingThrow": string[];
-    "areaTags": string[];
-    "backgrounds": {
-        "name": string;
-        "source": string;
-    }[];
     "races": {
         "name": string;
         "source": string;
         "baseName": string;
         "baseSource": string;
     }[];
-    "srd": boolean;
+    "backgrounds": {
+        "name": string;
+        "source": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
     "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -23870,6 +24257,28 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "scalingLevelDice": ({
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    } | {
+        "label": string;
+        "scaling": {
+            "5": string;
+            "11": string;
+            "17": string;
+            "1"?: undefined;
+        };
+    })[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23878,12 +24287,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -23899,6 +24302,7 @@ declare const _default: ({
 } | {
     "name": string;
     "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -23921,6 +24325,28 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": ({
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    } | {
+        "label": string;
+        "scaling": {
+            "5": string;
+            "11": string;
+            "17": string;
+            "1"?: undefined;
+        };
+    })[];
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23929,12 +24355,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -23950,6 +24370,7 @@ declare const _default: ({
 } | {
     "name": string;
     "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -23972,6 +24393,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -23980,12 +24415,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "page": number;
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -23993,13 +24422,14 @@ declare const _default: ({
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
     "level": number;
     "school": string;
     "time": {
@@ -24021,6 +24451,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24029,11 +24461,8 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "areaTags": string[];
-    "components"?: undefined;
     "page"?: undefined;
+    "components"?: undefined;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -24041,16 +24470,18 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
     "level": number;
     "school": string;
     "time": {
@@ -24067,6 +24498,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24075,14 +24520,8 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
-    "components"?: undefined;
     "page"?: undefined;
+    "components"?: undefined;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -24090,13 +24529,14 @@ declare const _default: ({
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
     "level": number;
     "school": string;
     "time": {
@@ -24117,6 +24557,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24125,28 +24566,29 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "source": string;
-    "entries": string[];
-    "components"?: undefined;
     "page"?: undefined;
+    "components"?: undefined;
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24174,39 +24616,40 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "source": string;
     "entries": string[];
     "entriesHigherLevel": {
         "type": string;
         "name": string;
         "entries": string[];
     }[];
-    "page": number;
     "damageInflict": string[];
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24220,49 +24663,50 @@ declare const _default: ({
             "amount": number;
         };
     };
-    "duration": {
-        "type": string;
-        "duration": {
-            "type": string;
-            "amount": number;
-        };
-        "concentration": boolean;
-    }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "entries": string[];
-    "source": string;
-    "page": number;
     "components": {
         "v": boolean;
         "s"?: undefined;
         "r"?: undefined;
         "m"?: undefined;
     };
+    "duration": {
+        "type": string;
+        "duration": {
+            "type": string;
+            "amount": number;
+        };
+        "concentration": boolean;
+    }[];
+    "entries": string[];
     "savingThrow": string[];
-    "areaTags": string[];
     "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24276,6 +24720,12 @@ declare const _default: ({
             "amount": number;
         };
     };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
     "duration": {
         "type": string;
         "duration": {
@@ -24284,6 +24734,12 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24292,33 +24748,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "source": string;
-    "page": number;
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "areaTags": string[];
-    "damageInflict": string[];
-    "conditionInflict": string[];
-    "savingThrow": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24332,6 +24777,12 @@ declare const _default: ({
             "amount"?: undefined;
         };
     };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
     "duration": {
         "type": string;
         "duration": {
@@ -24340,6 +24791,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24348,33 +24800,27 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "source": string;
-    "page": number;
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24389,6 +24835,12 @@ declare const _default: ({
             "amount"?: undefined;
         };
     };
+    "components": {
+        "v": boolean;
+        "s"?: undefined;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
     "duration": {
         "type": string;
         "duration": {
@@ -24396,6 +24848,7 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24403,34 +24856,28 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
-    };
-    "entries": string[];
-    "source": string;
-    "page": number;
-    "components": {
-        "v": boolean;
-        "s"?: undefined;
-        "r"?: undefined;
-        "m"?: undefined;
     };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24444,6 +24891,12 @@ declare const _default: ({
             "amount": number;
         };
     };
+    "components": {
+        "v": boolean;
+        "s"?: undefined;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
     "duration": {
         "type": string;
         "duration": {
@@ -24451,6 +24904,20 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24459,19 +24926,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "source": string;
-    "page": number;
-    "components": {
-        "v": boolean;
-        "s"?: undefined;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -24479,13 +24933,15 @@ declare const _default: ({
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24498,6 +24954,12 @@ declare const _default: ({
             "type": string;
             "amount": number;
         };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
     };
     "duration": {
         "type": string;
@@ -24506,6 +24968,16 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "name": string;
+        "type": string;
+        "entries": string[];
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24514,37 +24986,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "source": string;
-    "page": number;
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "entriesHigherLevel": {
-        "name": string;
-        "type": string;
-        "entries": string[];
-    }[];
-    "damageInflict": string[];
-    "areaTags": string[];
-    "savingThrow": string[];
-    "miscTags": string[];
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24558,26 +25015,16 @@ declare const _default: ({
             "amount": number;
         };
     };
-    "duration": {
-        "type": string;
-    }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
-    "entries": string[];
-    "source": string;
-    "page": number;
     "components": {
         "v": boolean;
         "s"?: undefined;
         "r"?: undefined;
         "m"?: undefined;
     };
+    "duration": {
+        "type": string;
+    }[];
+    "entries": string[];
     "entriesHigherLevel": {
         "name": string;
         "type": string;
@@ -24587,19 +25034,30 @@ declare const _default: ({
     "conditionInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24613,6 +25071,12 @@ declare const _default: ({
             "amount": number;
         };
     };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
     "duration": {
         "type": string;
         "duration": {
@@ -24620,6 +25084,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24628,33 +25098,22 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "source": string;
-    "page": number;
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "damageInflict": string[];
-    "conditionInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
 } | {
     "name": string;
+    "source": string;
+    "page": number;
     "level": number;
     "school": string;
     "time": {
@@ -24668,6 +25127,12 @@ declare const _default: ({
             "amount"?: undefined;
         };
     };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
     "duration": {
         "type": string;
         "duration": {
@@ -24675,6 +25140,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24683,16 +25150,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "source": string;
-    "page": number;
-    "components": {
-        "v": boolean;
-        "s": boolean;
-        "r"?: undefined;
-        "m"?: undefined;
-    };
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -24700,11 +25157,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -24739,23 +25197,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
     "meta": {
         "technomagic": boolean;
         "ritual"?: undefined;
@@ -24767,13 +25208,31 @@ declare const _default: ({
         "entries": string[];
     }[];
     "opposedCheck": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
     "spellAttack"?: undefined;
@@ -24806,6 +25265,14 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "meta": {
+        "ritual": boolean;
+        "technomagic"?: undefined;
+    };
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24823,26 +25290,19 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "meta": {
-        "ritual": boolean;
-        "technomagic"?: undefined;
-    };
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -24876,6 +25336,17 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "technomagic": boolean;
+        "ritual"?: undefined;
+    };
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24893,27 +25364,17 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "meta": {
-        "technomagic": boolean;
-        "ritual"?: undefined;
-    };
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
-    "miscTags": string[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -24948,6 +25409,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "meta": {
+        "technomagic": boolean;
+        "ritual"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -24965,23 +25431,19 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "meta": {
-        "technomagic": boolean;
-        "ritual"?: undefined;
-    };
-    "entries": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25015,6 +25477,12 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "entriesHigherLevel": {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    }[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25032,24 +25500,19 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "entries": string[];
-    "entriesHigherLevel": {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25084,23 +25547,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
     "meta": {
         "technomagic": boolean;
         "ritual"?: undefined;
@@ -25130,14 +25576,32 @@ declare const _default: ({
     "damageInflict": string[];
     "savingThrow": string[];
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25172,6 +25636,12 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "meta": {
+        "technomagic": boolean;
+        "ritual"?: undefined;
+    };
+    "entries": string[];
+    "savingThrow": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25189,23 +25659,18 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "meta": {
-        "technomagic": boolean;
-        "ritual"?: undefined;
-    };
-    "entries": string[];
-    "savingThrow": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25240,6 +25705,12 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "meta": {
+        "technomagic": boolean;
+        "ritual"?: undefined;
+    };
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25257,12 +25728,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "meta": {
-        "technomagic": boolean;
-        "ritual"?: undefined;
-    };
-    "entries": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -25270,10 +25735,11 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25303,6 +25769,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "meta": {
+        "technomagic": boolean;
+        "ritual"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25311,23 +25782,19 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "meta": {
-        "technomagic": boolean;
-        "ritual"?: undefined;
-    };
-    "entries": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25362,6 +25829,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25379,20 +25847,20 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "entries": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25426,6 +25894,11 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "meta": {
+        "technomagic": boolean;
+        "ritual"?: undefined;
+    };
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25443,23 +25916,19 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "meta": {
-        "technomagic": boolean;
-        "ritual"?: undefined;
-    };
-    "entries": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25494,40 +25963,41 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
     "meta": {
         "technomagic": boolean;
         "ritual"?: undefined;
     };
     "entries": string[];
     "savingThrow": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25562,6 +26032,8 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25579,8 +26051,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
     };
-    "entries": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -25588,11 +26058,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25627,23 +26098,6 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromSubclass": {
-            "class": {
-                "name": string;
-                "source": string;
-            };
-            "subclass": {
-                "name": string;
-                "source": string;
-            };
-        }[];
-        "fromClassListVariant"?: undefined;
-    };
     "meta": {
         "technomagic": boolean;
         "ritual"?: undefined;
@@ -25654,17 +26108,35 @@ declare const _default: ({
         "name": string;
         "entries": string[];
     }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromSubclass": {
+            "class": {
+                "name": string;
+                "source": string;
+            };
+            "subclass": {
+                "name": string;
+                "source": string;
+            };
+        }[];
+        "fromClassListVariant"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25699,6 +26171,11 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25707,20 +26184,16 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "savingThrow": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25755,14 +26228,6 @@ declare const _default: ({
         "type": string;
         "condition": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
@@ -25773,6 +26238,14 @@ declare const _default: ({
         "entries": string[];
     })[];
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -25780,10 +26253,11 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25813,14 +26287,6 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
     "entries": (string | {
         "type": string;
         "caption": string;
@@ -25841,11 +26307,20 @@ declare const _default: ({
     "damageInflict": string[];
     "spellAttack": string[];
     "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -25884,20 +26359,20 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
     };
     "entries": string[];
     "miscTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -25905,10 +26380,11 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25938,6 +26414,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -25946,11 +26436,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -25958,8 +26443,8 @@ declare const _default: ({
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -25993,6 +26478,8 @@ declare const _default: ({
             "amount": number;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26001,8 +26488,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -26010,11 +26495,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26044,6 +26530,11 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26052,11 +26543,15 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "damageInflict": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
@@ -26064,8 +26559,8 @@ declare const _default: ({
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26095,6 +26590,20 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
+    "damageInflict": string[];
+    "spellAttack": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26103,11 +26612,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "damageInflict": string[];
-    "spellAttack": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -26146,6 +26650,10 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26154,20 +26662,17 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26202,6 +26707,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "miscTags": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26210,20 +26718,18 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "areaTags": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26258,6 +26764,11 @@ declare const _default: ({
         "type": string;
         "ends": string[];
     }[];
+    "entries": string[];
+    "conditionInflict": string[];
+    "savingThrow": string[];
+    "opposedCheck": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26266,16 +26777,12 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "savingThrow": string[];
-    "opposedCheck": string[];
-    "conditionInflict": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26309,6 +26816,8 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
+    "entries": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26317,8 +26826,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -26326,11 +26833,72 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    }[];
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "miscTags": string[];
+    "areaTags": string[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26365,6 +26933,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26373,20 +26944,18 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "savingThrow": string[];
-    "areaTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "miscTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26416,14 +26985,6 @@ declare const _default: ({
     "duration": {
         "type": string;
     }[];
-    "classes": {
-        "fromClassList": {
-            "name": string;
-            "source": string;
-        }[];
-        "fromClassListVariant"?: undefined;
-        "fromSubclass"?: undefined;
-    };
     "meta": {
         "ritual": boolean;
         "technomagic"?: undefined;
@@ -26432,18 +26993,27 @@ declare const _default: ({
         "type": string;
         "items": string[];
     })[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26478,6 +27048,7 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -26486,20 +27057,20 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26551,11 +27122,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -26612,6 +27184,7 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26668,6 +27241,7 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -26725,11 +27299,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -26784,15 +27359,16 @@ declare const _default: ({
     }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -26846,11 +27422,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -26905,11 +27482,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -26964,6 +27542,7 @@ declare const _default: ({
     "miscTags": string[];
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27021,11 +27600,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -27079,11 +27659,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27142,11 +27723,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27208,10 +27790,11 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27280,6 +27863,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "miscTags"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27346,11 +27930,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27411,11 +27996,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -27474,11 +28060,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -27533,11 +28120,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -27590,11 +28178,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27650,6 +28239,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -27709,11 +28299,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27772,11 +28363,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27832,11 +28424,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27901,11 +28494,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -27965,11 +28559,12 @@ declare const _default: ({
     "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28023,11 +28618,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28082,11 +28678,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28145,11 +28742,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28200,11 +28798,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -28269,11 +28868,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -28328,11 +28928,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28383,11 +28984,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -28434,11 +29036,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -28494,15 +29097,16 @@ declare const _default: ({
     }[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28552,11 +29156,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28613,15 +29218,16 @@ declare const _default: ({
     "savingThrow": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -28670,16 +29276,22 @@ declare const _default: ({
     }[];
     "areaTags": string[];
     "miscTags": string[];
+    "races": {
+        "name": string;
+        "source": string;
+        "baseName": string;
+        "baseSource": string;
+    }[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
-    "races"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28730,11 +29342,12 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -28790,6 +29403,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28845,6 +29459,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -28907,11 +29522,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -28970,11 +29586,64 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "m": string;
+        "r"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "page": number;
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29035,10 +29704,11 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
 } | {
     "name": string;
@@ -29096,10 +29766,11 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -29157,11 +29828,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -29211,16 +29883,17 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29274,11 +29947,12 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29330,11 +30004,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29390,11 +30065,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -29449,6 +30125,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29506,11 +30183,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29567,6 +30245,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -29629,11 +30308,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -29687,11 +30367,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29743,11 +30424,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "otherSources"?: undefined;
 } | {
@@ -29805,11 +30487,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29856,11 +30539,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29910,11 +30594,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -29965,6 +30650,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30021,15 +30707,16 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
 } | {
     "name": string;
@@ -30074,11 +30761,12 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30133,11 +30821,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -30188,15 +30877,16 @@ declare const _default: ({
     "damageInflict": string[];
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30253,10 +30943,11 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30323,10 +31014,11 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -30377,11 +31069,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30436,11 +31129,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30500,10 +31194,11 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -30558,6 +31253,7 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30621,11 +31317,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30673,6 +31370,7 @@ declare const _default: ({
     "savingThrow"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30737,6 +31435,7 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -30795,11 +31494,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30866,11 +31566,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30917,11 +31618,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -30976,11 +31678,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -31034,15 +31737,16 @@ declare const _default: ({
     "savingThrow": string[];
     "conditionInflict": string[];
     "entriesHigherLevel"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -31096,11 +31800,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -31151,11 +31856,12 @@ declare const _default: ({
     "conditionInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -31205,11 +31911,12 @@ declare const _default: ({
     "miscTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -31266,11 +31973,64 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
+    "damageVulnerable"?: undefined;
+    "damageImmune"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "level": number;
+    "school": string;
+    "time": {
+        "number": number;
+        "unit": string;
+    }[];
+    "range": {
+        "type": string;
+        "distance": {
+            "type": string;
+            "amount": number;
+        };
+    };
+    "components": {
+        "v": boolean;
+        "s": boolean;
+        "r"?: undefined;
+        "m"?: undefined;
+    };
+    "duration": {
+        "type": string;
+    }[];
+    "classes": {
+        "fromClassList": {
+            "name": string;
+            "source": string;
+        }[];
+        "fromClassListVariant"?: undefined;
+        "fromSubclass"?: undefined;
+    };
+    "entries": string[];
+    "page": number;
+    "damageInflict": string[];
+    "savingThrow": string[];
+    "areaTags": string[];
+    "miscTags": string[];
+    "entriesHigherLevel"?: undefined;
+    "conditionInflict"?: undefined;
+    "backgrounds"?: undefined;
+    "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
+    "races"?: undefined;
+    "meta"?: undefined;
+    "damageResist"?: undefined;
+    "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;
@@ -31328,6 +32088,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -31389,6 +32150,7 @@ declare const _default: ({
     "miscTags": string[];
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -31451,11 +32213,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -31514,10 +32277,11 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -31570,16 +32334,17 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -31634,11 +32399,12 @@ declare const _default: ({
     "damageInflict"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
 } | {
@@ -31694,6 +32460,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -31754,6 +32521,7 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
@@ -31804,15 +32572,16 @@ declare const _default: ({
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
-    "areaTags"?: undefined;
     "miscTags"?: undefined;
+    "areaTags"?: undefined;
     "backgrounds"?: undefined;
     "srd"?: undefined;
+    "scalingLevelDice"?: undefined;
     "races"?: undefined;
     "meta"?: undefined;
     "damageResist"?: undefined;
-    "opposedCheck"?: undefined;
     "spellAttack"?: undefined;
+    "opposedCheck"?: undefined;
     "damageVulnerable"?: undefined;
     "damageImmune"?: undefined;
     "otherSources"?: undefined;

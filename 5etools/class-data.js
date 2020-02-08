@@ -2,6 +2,8 @@ export default [
     {
         "name": "Artificer",
         "source": "UAArtificer",
+        "page": 1,
+        "isReprinted": true,
         "hd": {
             "number": 1,
             "faces": 8
@@ -12,6 +14,46 @@ export default [
         ],
         "spellcastingAbility": "int",
         "casterProgression": "1/3",
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium"
+            ],
+            "weapons": [
+                "simple"
+            ],
+            "tools": [
+                "Thieves' tools",
+                "tinker's tools",
+                "one type of artisan's tools of your choice"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "deception",
+                            "history",
+                            "investigation",
+                            "medicine",
+                            "nature",
+                            "religion",
+                            "sleight of hand"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item handaxe|phb} and a {@item light hammer|phb} or (b) any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon}",
+                "a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
+                "(a) {@item scale mail|phb} or (b) {@item studded leather armor|phb}",
+                "{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
+            ]
+        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -212,42 +254,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium"
-            ],
-            "weapons": [
-                "simple"
-            ],
-            "tools": [
-                "Thieves' tools",
-                "tinker's tools",
-                "one type of artisan's tools of your choice"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Arcana",
-                    "Deception",
-                    "History",
-                    "Investigation",
-                    "Medicine",
-                    "Nature",
-                    "Religion",
-                    "Sleight of Hand"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item handaxe|phb} and a {@item light hammer|phb} or (b) any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon}",
-                "a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
-                "(a) {@item scale mail|phb} or (b) {@item studded leather armor|phb}",
-                "{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
-            ]
-        },
         "classFeatures": [
             [
                 {
@@ -384,6 +390,17 @@ export default [
                     "entries": [
                         "When you reach 4th, 8th, 12th, 16th, and 18th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -429,6 +446,17 @@ export default [
                     "entries": [
                         "At 8th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -455,6 +483,17 @@ export default [
                     "entries": [
                         "At 12th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -487,6 +526,17 @@ export default [
                     "entries": [
                         "At 16th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -504,6 +554,17 @@ export default [
                     "entries": [
                         "At 18th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 18th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -520,6 +581,8 @@ export default [
         "subclasses": [
             {
                 "name": "Alchemist",
+                "shortName": "Alchemist",
+                "source": "UAArtificer",
                 "subclassFeatures": [
                     [
                         {
@@ -682,12 +745,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAArtificer",
-                "shortName": "Alchemist"
+                ]
             },
             {
                 "name": "Gunsmith",
+                "shortName": "Gunsmith",
+                "source": "UAArtificer",
                 "subclassFeatures": [
                     [
                         {
@@ -776,16 +839,15 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAArtificer",
-                "shortName": "Gunsmith"
+                ]
             }
-        ],
-        "page": 1
+        ]
     },
     {
         "name": "Artificer (Revisited)",
         "source": "UAArtificerRevisited",
+        "page": 1,
+        "isReprinted": true,
         "hd": {
             "number": 1,
             "faces": 8
@@ -794,6 +856,51 @@ export default [
             "con",
             "int"
         ],
+        "spellcastingAbility": "int",
+        "casterProgression": "1/2",
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium",
+                "shields"
+            ],
+            "weapons": [
+                "simple",
+                "hand crossbows",
+                "heavy crossbows"
+            ],
+            "tools": [
+                "thieves' tools",
+                "tinker's tools",
+                "one type of artisan's tools of your choice"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "history",
+                            "investigation",
+                            "medicine",
+                            "nature",
+                            "perception",
+                            "sleight of hand"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon}",
+                "a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
+                "(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb}",
+                "{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
+            ],
+            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+        },
         "multiclassing": {
             "requirements": {
                 "int": 13
@@ -1073,133 +1180,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium",
-                "shields"
-            ],
-            "weapons": [
-                "simple",
-                "hand crossbows",
-                "heavy crossbows"
-            ],
-            "tools": [
-                "thieves' tools",
-                "tinker's tools",
-                "one type of artisan's tools of your choice"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Arcana",
-                    "History",
-                    "Investigation",
-                    "Medicine",
-                    "Nature",
-                    "Perception",
-                    "Sleight of Hand"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon}",
-                "a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
-                "(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb}",
-                "{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
-            ],
-            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-        },
-        "fluff": [
-            {
-                "page": 1,
-                "source": "UAArtificerRevisited",
-                "type": "section",
-                "entries": [
-                    "Masters of unlocking magic in everyday objects, artificers are supreme inventors. They see magic as a complex system waiting to be decoded and controlled. Artificers use tools to channel arcane power, crafting temporary and permanent magical objects. To cast a spell, an artificer could use alchemist's supplies to create a potent elixir, calligrapher's supplies to inscribe a sigil of power on an ally's armor, or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and their talents.",
-                    {
-                        "type": "entries",
-                        "name": "Arcane Science",
-                        "entries": [
-                            "In the world of Eberron, arcane magic has been harnessed as a form of science and deployed throughout society. Artificers reflect this development. Their knowledge of magical devices, and their ability to infuse mundane items with magical energy, allows the grand magical projects of Eberron to continue running. During the Last War, artificers were marshaled on a massive scale. Many lives were saved because of the inventions of brave artificers, but also countless lives were lost because of the mass destruction that artificers' creations unleashed."
-                        ]
-                    },
-                    {
-                        "type": "entries",
-                        "name": "Seekers of New Lore",
-                        "entries": [
-                            "Nothing excites an artificer quite like uncovering a new metal or discovering a source of elemental energy. In artificer circles, new inventions and strange discoveries create the most excitement. Artificers who wish to make a mark must find something fresh, rather than uncover someone else's work.",
-                            "This drive for novelty pushes artificers to become adventurers. Eberron's main travel routes and populated regions have long since been explored. Thus, artificers take to the edge of civilization in hopes of making the next great discovery in arcane research."
-                        ]
-                    },
-                    {
-                        "type": "entries",
-                        "name": "Creating an Artificer",
-                        "entries": [
-                            "When creating an artificer character, think about your character's background and drive for adventure. Does the character have a rival? What is the character's relationship with the artisan or artificer who taught the basics of the craft? Talk to your DM about the role played by artificers in the campaign, and what sort of organizations and NPCs you might have ties to.",
-                            {
-                                "type": "entries",
-                                "name": "Quick Build",
-                                "entries": [
-                                    "You can make an artificer quickly by following these suggestions. First, put your highest ability score in Intelligence, followed by Constitution or Dexterity. Second, choose the guild artisan background."
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "inset",
-                        "name": "Artificers in Other Worlds",
-                        "entries": [
-                            "Eberron is the world most associated with artificers, yet the class can be found throughout the multiverse. In the Forgotten Realms, for example, the island of Lantan is home to many artificers, and in the world of Dragonlance, tinker gnomes are often members of this class. The strange technologies in the Barrier Peaks of the World of Greyhawk have inspired some folk to walk the path of the artificer, and in Mystara, various nations employ artificers to keep airships and other wondrous devices operational. In the City of Sigil, artificers share discoveries from throughout the cosmos, and one in particular—the gnome inventor named Vi—runs a multiverse-spanning business from there. In the worldcity Ravnica, the Izzet League trains numerous artificers, the destructiveness of whom is unparalleled in other worlds, except by the tinker gnomes of Krynn."
-                        ]
-                    },
-                    {
-                        "type": "inset",
-                        "name": "Optional Rule: Firearm Proficiency",
-                        "entries": [
-                            "The creation and operation of gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in the Dungeon Master's Guide (p. 267) and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
-                        ]
-                    },
-                    {
-                        "type": "inset",
-                        "name": "Optional Rule: Multiclassing",
-                        "entries": [
-                            "If your group uses the optional rule on multiclassing in the Player's Handbook (p. 163), here's what you need to know if you choose artificer as one of your classes.",
-                            {
-                                "type": "entries",
-                                "name": "Ability Score Minimum",
-                                "entries": [
-                                    "As a multiclass character, you must have at least an Intelligence score of 13 to take a level in this class."
-                                ]
-                            },
-                            {
-                                "type": "entries",
-                                "name": "Proficiencies Gained",
-                                "entries": [
-                                    "If artificer isn't your initial class, here are the proficiencies you gain when you take your first level as an artificer: light armor, medium armor, shields, thieves' tools, tinker's tools."
-                                ]
-                            },
-                            {
-                                "type": "entries",
-                                "name": "Extra Attack",
-                                "entries": [
-                                    "The Arcane Armament feature doesn't give you an additional attack if you also have the Extra Attack feature."
-                                ]
-                            },
-                            {
-                                "type": "entries",
-                                "name": "Spell Slots",
-                                "entries": [
-                                    "Add half your levels (rounded up) in the artificer class to the appropriate levels from other classes to determine your available spell slots."
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
         "classFeatures": [
             [
                 {
@@ -1354,6 +1334,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -1381,6 +1372,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -1400,6 +1402,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -1420,6 +1433,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -1439,6 +1463,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -1454,6 +1489,9 @@ export default [
         "subclasses": [
             {
                 "name": "Alchemist",
+                "shortName": "Alchemist",
+                "source": "UAArtificerRevisited",
+                "page": 6,
                 "subclassFeatures": [
                     [
                         {
@@ -1564,13 +1602,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAArtificerRevisited",
-                "shortName": "Alchemist",
-                "page": 6
+                ]
             },
             {
                 "name": "Archivist",
+                "shortName": "Archivist",
+                "source": "UAArtificerRevisited",
+                "page": 7,
                 "subclassFeatures": [
                     [
                         {
@@ -1768,13 +1806,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "shortName": "Archivist",
-                "page": 7,
-                "source": "UAArtificerRevisited"
+                ]
             },
             {
                 "name": "Artillerist",
+                "shortName": "Artillerist",
+                "source": "UAArtificerRevisited",
+                "page": 9,
                 "subclassFeatures": [
                     [
                         {
@@ -1913,13 +1951,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "shortName": "Artillerist",
-                "page": 9,
-                "source": "UAArtificerRevisited"
+                ]
             },
             {
                 "name": "Battle Smith",
+                "shortName": "Battle Smith",
+                "source": "UAArtificerRevisited",
+                "page": 11,
                 "subclassFeatures": [
                     [
                         {
@@ -2059,17 +2097,102 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "shortName": "Battle Smith",
-                "page": 11,
-                "source": "UAArtificerRevisited"
+                ]
             }
         ],
-        "page": 1
+        "fluff": [
+            {
+                "page": 1,
+                "source": "UAArtificerRevisited",
+                "type": "section",
+                "entries": [
+                    "Masters of unlocking magic in everyday objects, artificers are supreme inventors. They see magic as a complex system waiting to be decoded and controlled. Artificers use tools to channel arcane power, crafting temporary and permanent magical objects. To cast a spell, an artificer could use alchemist's supplies to create a potent elixir, calligrapher's supplies to inscribe a sigil of power on an ally's armor, or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and their talents.",
+                    {
+                        "type": "entries",
+                        "name": "Arcane Science",
+                        "entries": [
+                            "In the world of Eberron, arcane magic has been harnessed as a form of science and deployed throughout society. Artificers reflect this development. Their knowledge of magical devices, and their ability to infuse mundane items with magical energy, allows the grand magical projects of Eberron to continue running. During the Last War, artificers were marshaled on a massive scale. Many lives were saved because of the inventions of brave artificers, but also countless lives were lost because of the mass destruction that artificers' creations unleashed."
+                        ]
+                    },
+                    {
+                        "type": "entries",
+                        "name": "Seekers of New Lore",
+                        "entries": [
+                            "Nothing excites an artificer quite like uncovering a new metal or discovering a source of elemental energy. In artificer circles, new inventions and strange discoveries create the most excitement. Artificers who wish to make a mark must find something fresh, rather than uncover someone else's work.",
+                            "This drive for novelty pushes artificers to become adventurers. Eberron's main travel routes and populated regions have long since been explored. Thus, artificers take to the edge of civilization in hopes of making the next great discovery in arcane research."
+                        ]
+                    },
+                    {
+                        "type": "entries",
+                        "name": "Creating an Artificer",
+                        "entries": [
+                            "When creating an artificer character, think about your character's background and drive for adventure. Does the character have a rival? What is the character's relationship with the artisan or artificer who taught the basics of the craft? Talk to your DM about the role played by artificers in the campaign, and what sort of organizations and NPCs you might have ties to.",
+                            {
+                                "type": "entries",
+                                "name": "Quick Build",
+                                "entries": [
+                                    "You can make an artificer quickly by following these suggestions. First, put your highest ability score in Intelligence, followed by Constitution or Dexterity. Second, choose the guild artisan background."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "inset",
+                        "name": "Artificers in Other Worlds",
+                        "entries": [
+                            "Eberron is the world most associated with artificers, yet the class can be found throughout the multiverse. In the Forgotten Realms, for example, the island of Lantan is home to many artificers, and in the world of Dragonlance, tinker gnomes are often members of this class. The strange technologies in the Barrier Peaks of the World of Greyhawk have inspired some folk to walk the path of the artificer, and in Mystara, various nations employ artificers to keep airships and other wondrous devices operational. In the City of Sigil, artificers share discoveries from throughout the cosmos, and one in particular—the gnome inventor named Vi—runs a multiverse-spanning business from there. In the worldcity Ravnica, the Izzet League trains numerous artificers, the destructiveness of whom is unparalleled in other worlds, except by the tinker gnomes of Krynn."
+                        ]
+                    },
+                    {
+                        "type": "inset",
+                        "name": "Optional Rule: Firearm Proficiency",
+                        "entries": [
+                            "The creation and operation of gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in the Dungeon Master's Guide (p. 267) and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
+                        ]
+                    },
+                    {
+                        "type": "inset",
+                        "name": "Optional Rule: Multiclassing",
+                        "entries": [
+                            "If your group uses the optional rule on multiclassing in the Player's Handbook (p. 163), here's what you need to know if you choose artificer as one of your classes.",
+                            {
+                                "type": "entries",
+                                "name": "Ability Score Minimum",
+                                "entries": [
+                                    "As a multiclass character, you must have at least an Intelligence score of 13 to take a level in this class."
+                                ]
+                            },
+                            {
+                                "type": "entries",
+                                "name": "Proficiencies Gained",
+                                "entries": [
+                                    "If artificer isn't your initial class, here are the proficiencies you gain when you take your first level as an artificer: light armor, medium armor, shields, thieves' tools, tinker's tools."
+                                ]
+                            },
+                            {
+                                "type": "entries",
+                                "name": "Extra Attack",
+                                "entries": [
+                                    "The Arcane Armament feature doesn't give you an additional attack if you also have the Extra Attack feature."
+                                ]
+                            },
+                            {
+                                "type": "entries",
+                                "name": "Spell Slots",
+                                "entries": [
+                                    "Add half your levels (rounded up) in the artificer class to the appropriate levels from other classes to determine your available spell slots."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     },
     {
         "name": "Artificer",
         "source": "ERLW",
+        "page": 54,
         "hd": {
             "number": 1,
             "faces": 8
@@ -2078,6 +2201,49 @@ export default [
             "con",
             "int"
         ],
+        "spellcastingAbility": "int",
+        "casterProgression": "1/2",
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium",
+                "shields"
+            ],
+            "weapons": [
+                "simple"
+            ],
+            "tools": [
+                "thieves' tools",
+                "tinker's tools",
+                "one type of artisan's tools of your choice"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "history",
+                            "investigation",
+                            "medicine",
+                            "nature",
+                            "perception",
+                            "sleight of hand"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon} of your choice",
+                "a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
+                "(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb}",
+                "{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
+            ],
+            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+        },
         "multiclassing": {
             "requirements": {
                 "int": 13
@@ -2357,43 +2523,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium",
-                "shields"
-            ],
-            "weapons": [
-                "simple"
-            ],
-            "tools": [
-                "thieves' tools",
-                "tinker's tools",
-                "one type of artisan's tools of your choice"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Arcana",
-                    "History",
-                    "Investigation",
-                    "Medicine",
-                    "Nature",
-                    "Perception",
-                    "Sleight of Hand"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon} of your choice",
-                "a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
-                "(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb}",
-                "{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
-            ],
-            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-        },
         "classFeatures": [
             [
                 {
@@ -2546,6 +2675,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -2581,6 +2721,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -2623,6 +2774,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -2657,6 +2819,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -2675,6 +2848,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -2697,6 +2881,8 @@ export default [
         "subclasses": [
             {
                 "name": "Alchemist",
+                "shortName": "Alchemist",
+                "source": "ERLW",
                 "subclassFeatures": [
                     [
                         {
@@ -2855,12 +3041,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "ERLW",
-                "shortName": "Alchemist"
+                ]
             },
             {
                 "name": "Artillerist",
+                "shortName": "Artillerist",
+                "source": "ERLW",
                 "subclassFeatures": [
                     [
                         {
@@ -3009,12 +3195,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "ERLW",
-                "shortName": "Artillerist"
+                ]
             },
             {
                 "name": "Battle Smith",
+                "shortName": "Battle Smith",
+                "source": "ERLW",
                 "subclassFeatures": [
                     [
                         {
@@ -3152,9 +3338,7 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "ERLW",
-                "shortName": "Battle Smith"
+                ]
             }
         ],
         "fluff": [
@@ -3230,12 +3414,13 @@ export default [
                 "source": "ERLW",
                 "page": 0
             }
-        ],
-        "page": 54
+        ]
     },
     {
         "name": "Barbarian",
         "source": "PHB",
+        "page": 46,
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 12
@@ -3244,6 +3429,55 @@ export default [
             "str",
             "con"
         ],
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium",
+                "shields"
+            ],
+            "weapons": [
+                "simple",
+                "martial"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "animal handling",
+                            "athletics",
+                            "intimidation",
+                            "nature",
+                            "perception",
+                            "survival"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
+                "(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                "An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
+            ],
+            "goldAlternative": "{@dice 2d4×10|2d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "str": 13
+            },
+            "proficienciesGained": {
+                "armor": [
+                    "shields"
+                ],
+                "weapons": [
+                    "simple",
+                    "martial"
+                ]
+            }
+        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -3394,51 +3628,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium",
-                "shields"
-            ],
-            "weapons": [
-                "simple",
-                "martial"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Animal Handling",
-                    "Athletics",
-                    "Intimidation",
-                    "Nature",
-                    "Perception",
-                    "Survival"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
-                "(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-                "An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
-            ],
-            "goldAlternative": "{@dice 2d4×10|2d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "str": 13
-            },
-            "proficienciesGained": {
-                "armor": [
-                    "shields"
-                ],
-                "weapons": [
-                    "simple",
-                    "martial"
-                ]
-            }
-        },
         "classFeatures": [
             [
                 {
@@ -3506,6 +3695,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -3556,6 +3756,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM uses the optional Feats, you can instead take a feat."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -3592,6 +3803,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM uses the optional Feats, you can instead take a feat."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -3627,6 +3849,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM uses the optional Feats, you can instead take a feat."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -3652,6 +3885,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM uses the optional Feats, you can instead take a feat."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -3667,6 +3911,9 @@ export default [
         "subclasses": [
             {
                 "name": "Path of the Berserker",
+                "shortName": "Berserker",
+                "source": "PHB",
+                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -3723,12 +3970,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Berserker"
+                ]
             },
             {
                 "name": "Path of the Totem Warrior",
+                "shortName": "Totem Warrior",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -3985,12 +4232,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Totem Warrior"
+                ]
             },
             {
                 "name": "Path of the Battlerager",
+                "shortName": "Battlerager",
+                "source": "SCAG",
                 "subclassFeatures": [
                     [
                         {
@@ -4056,12 +4303,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Battlerager"
+                ]
             },
             {
                 "name": "Path of the Ancestral Guardian (UA)",
+                "shortName": "Ancestral Guardian (UA)",
+                "source": "UABarbarianPrimalPaths",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -4119,12 +4367,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UABarbarianPrimalPaths",
-                "shortName": "Ancestral Guardian (UA)"
+                ]
             },
             {
                 "name": "Path of the Ancestral Guardian v2 (UA)",
+                "shortName": "Ancestral Guardian v2 (UA)",
+                "source": "UARevisedSubclasses",
                 "spellcastingAbility": "wis",
                 "subclassFeatures": [
                     [
@@ -4183,12 +4431,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARevisedSubclasses",
-                "shortName": "Ancestral Guardian v2 (UA)"
+                ]
             },
             {
                 "name": "Path of the Storm Herald (UA)",
+                "shortName": "Storm Herald (UA)",
+                "source": "UABarbarianPrimalPaths",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -4353,12 +4602,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UABarbarianPrimalPaths",
-                "shortName": "Storm Herald (UA)"
+                ]
             },
             {
                 "name": "Path of the Zealot (UA)",
+                "shortName": "Zealot (UA)",
+                "source": "UABarbarianPrimalPaths",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -4424,12 +4674,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UABarbarianPrimalPaths",
-                "shortName": "Zealot (UA)"
+                ]
             },
             {
                 "name": "Path of the Ancestral Guardian",
+                "shortName": "Ancestral Guardian",
+                "source": "XGE",
                 "spellcastingAbility": "wis",
                 "subclassFeatures": [
                     [
@@ -4489,12 +4739,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Ancestral Guardian"
+                ]
             },
             {
                 "name": "Path of the Storm Herald",
+                "shortName": "Storm Herald",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -4631,12 +4881,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Storm Herald"
+                ]
             },
             {
                 "name": "Path of the Zealot",
+                "shortName": "Zealot",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -4702,12 +4952,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Zealot"
+                ]
             },
             {
                 "name": "Path of the Wild Soul (UA)",
+                "shortName": "Wild Soul (UA)",
+                "source": "UABarbarianAndMonk",
                 "subclassFeatures": [
                     [
                         {
@@ -4763,7 +5013,7 @@ export default [
                                                 ],
                                                 [
                                                     6,
-                                                    "Arcane energy taps into the minds of those around you. Each creature within 30 feet of you must succeed ona Wisdom saving throw or you see a glimpse of the creature's thoughts, learning how it plans to attack you. As a result, the creature has disadvantage on attack rolls against you until the start of your next."
+                                                    "Arcane energy taps into the minds of those around you. Each creature within 30 feet of you must succeed ona Wisdom saving throw or you see a glimpse of the creature's thoughts, learning how it plans to attack you. As a result, the creature has disadvantage on attack rolls against you until the start of your next turn."
                                                 ],
                                                 [
                                                     7,
@@ -4828,9 +5078,141 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UABarbarianAndMonk",
-                "shortName": "Wild Soul (UA)"
+                ]
+            },
+            {
+                "name": "Path of the Beast (UA)",
+                "shortName": "Beast (UA)",
+                "source": "UA2020SubclassesPt1",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Path of the Beast",
+                            "entries": [
+                                "Barbarians who walk the Path of Beast draw their rage from a bestial spark burning within their souls. That beast howls to be released and bursts forth in the throes of rage.",
+                                "Those who tread this path might be inhabited by a primal spirit or descended from shapeshifters. You can choose the origin of your feral might or determine it randomly by rolling on the Origin of the Beast table.",
+                                {
+                                    "type": "table",
+                                    "caption": "Origin of the Beast",
+                                    "colLabels": [
+                                        "d4",
+                                        "Origin"
+                                    ],
+                                    "colStyles": [
+                                        "col-2 text-center",
+                                        "col-10"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "1",
+                                            "One of your parents is a lycanthrope, and you've inherited some of the curse."
+                                        ],
+                                        [
+                                            "2",
+                                            "You are descended from a legendary druid, a fact manifested by your ability to partially change shape."
+                                        ],
+                                        [
+                                            "3",
+                                            "A fey spirit gifted you with the ability to adopt different bestial aspects."
+                                        ],
+                                        [
+                                            "4",
+                                            "An ancient animal spirit dwells within you, allowing you to walk this path."
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Form of the Beast",
+                                    "entries": [
+                                        "{@i 3rd-level Path of the Beast feature}",
+                                        "When you enter your rage, you can transform, revealing the bestial power within you. Until your rage ends, you manifest a natural melee weapon, choosing one of the following options each time you rage:",
+                                        {
+                                            "type": "list",
+                                            "style": "list-hang-notitle",
+                                            "items": [
+                                                {
+                                                    "type": "item",
+                                                    "name": "Bite",
+                                                    "entry": "Your mouth transforms into a bestial snout or great mandibles (your choice). Your bite deals {@dice 1d8} piercing damage on a hit. Once on each of your turns when you damage a creature with your bite, you regain a number of hit points equal to your Constitution modifier (minimum of 1 hit point)."
+                                                },
+                                                {
+                                                    "type": "item",
+                                                    "name": "Claws",
+                                                    "entry": "Your hands transform into claws, which deal {@dice 1d6} slashing damage on a hit. When you take the {@action Attack} action on your turn and make an attack with your claws, you can make one additional attack using your claws as part of the same action."
+                                                },
+                                                {
+                                                    "type": "item",
+                                                    "name": "Tail",
+                                                    "entry": "You grow a lashing, spiny tail, which deals {@dice 1d12} piercing damage on a hit and has the reach property."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Bestial Soul",
+                                    "entries": [
+                                        "{@i 6th-level Path of the Beast feature}",
+                                        "The feral spirit within you grows in power, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+                                        "You can also call on the feral spirit to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish a short or long rest:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "You gain a swimming speed equal to your walking speed, and you can breathe underwater.",
+                                                "You gain a climbing speed equal to your walking speed, and you can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+                                                "When you jump, you can make a Strength ({@skill Athletics}) check and extend your jump by a number of feet equal to the check's total. You can make this special check only once per turn."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Infectious Fury",
+                                    "entries": [
+                                        "{@i 10th-level Path of the Beast feature}",
+                                        "When you hit a creature with your natural weapons while you are raging, the spirit within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "The target must use its reaction to make a melee attack against another creature of your choice that you can see.",
+                                                "Target takes {@dice 2d12} psychic damage. You can use this feature a number of times equal to your Constitution modifier (a minimum of once)."
+                                            ]
+                                        },
+                                        "You regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Call the Hunt",
+                                    "entries": [
+                                        "{@i 14th-level Path of the Beast feature}",
+                                        "The beast within grows so powerful that you can spread its ferocity to your allies. When you enter your rage, you can choose a number of willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). Until your rage ends, the chosen creatures gain the Reckless {@action Attack} feature and you have advantage on saving throws against being {@condition frightened}. You also gain 5 temporary hit points for each creature that accepts the benefit. You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
@@ -5122,12 +5504,12 @@ export default [
                 "source": "XGE",
                 "page": 8
             }
-        ],
-        "page": 46
+        ]
     },
     {
         "name": "Bard",
         "source": "PHB",
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 8
@@ -5478,29 +5860,33 @@ export default [
             "tools": [
                 "three musical instruments of your choice"
             ],
-            "skills": {
-                "choose": 3,
-                "from": [
-                    "Athletics",
-                    "Acrobatics",
-                    "Sleight of Hand",
-                    "Stealth",
-                    "Arcana",
-                    "History",
-                    "Investigation",
-                    "Nature",
-                    "Religion",
-                    "Animal Handling",
-                    "Insight",
-                    "Medicine",
-                    "Perception",
-                    "Survival",
-                    "Deception",
-                    "Intimidation",
-                    "Performance",
-                    "Persuasion"
-                ]
-            }
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "athletics",
+                            "acrobatics",
+                            "sleight of hand",
+                            "stealth",
+                            "arcana",
+                            "history",
+                            "investigation",
+                            "nature",
+                            "religion",
+                            "animal handling",
+                            "insight",
+                            "medicine",
+                            "perception",
+                            "survival",
+                            "deception",
+                            "intimidation",
+                            "performance",
+                            "persuasion"
+                        ],
+                        "count": 3
+                    }
+                }
+            ]
         },
         "startingEquipment": {
             "additionalFromBackground": true,
@@ -5520,29 +5906,33 @@ export default [
                 "armor": [
                     "light"
                 ],
-                "skills": {
-                    "choose": 1,
-                    "from": [
-                        "Athletics",
-                        "Acrobatics",
-                        "Sleight of Hand",
-                        "Stealth",
-                        "Arcana",
-                        "History",
-                        "Investigation",
-                        "Nature",
-                        "Religion",
-                        "Animal Handling",
-                        "Insight",
-                        "Medicine",
-                        "Perception",
-                        "Survival",
-                        "Deception",
-                        "Intimidation",
-                        "Performance",
-                        "Persuasion"
-                    ]
-                },
+                "skills": [
+                    {
+                        "choose": {
+                            "from": [
+                                "athletics",
+                                "acrobatics",
+                                "sleight of hand",
+                                "stealth",
+                                "arcana",
+                                "history",
+                                "investigation",
+                                "nature",
+                                "religion",
+                                "animal handling",
+                                "insight",
+                                "medicine",
+                                "perception",
+                                "survival",
+                                "deception",
+                                "intimidation",
+                                "performance",
+                                "persuasion"
+                            ],
+                            "count": 1
+                        }
+                    }
+                ],
                 "tools": [
                     "one musical instrument of your choice"
                 ]
@@ -5688,6 +6078,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -5727,6 +6128,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -5767,6 +6179,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -5808,6 +6231,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -5834,6 +6268,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -5902,7 +6347,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Lore"
+                "shortName": "Lore",
+                "srd": true
             },
             {
                 "name": "College of Valor",
@@ -6022,7 +6468,8 @@ export default [
                     ]
                 ],
                 "source": "UABardBardColleges",
-                "shortName": "Glamour (UA)"
+                "shortName": "Glamour (UA)",
+                "isReprinted": true
             },
             {
                 "name": "College of Whispers (UA)",
@@ -6091,7 +6538,8 @@ export default [
                     ]
                 ],
                 "source": "UABardBardColleges",
-                "shortName": "Whispers (UA)"
+                "shortName": "Whispers (UA)",
+                "isReprinted": true
             },
             {
                 "name": "College of Swords (UA)",
@@ -6204,7 +6652,8 @@ export default [
                     ]
                 ],
                 "source": "UAKitsOfOld",
-                "shortName": "Swords (UA)"
+                "shortName": "Swords (UA)",
+                "isReprinted": true
             },
             {
                 "name": "College of Swords v2 (UA)",
@@ -6328,7 +6777,8 @@ export default [
                     ]
                 ],
                 "source": "UARevisedSubclasses",
-                "shortName": "Swords v2 (UA)"
+                "shortName": "Swords v2 (UA)",
+                "isReprinted": true
             },
             {
                 "name": "College of Satire (UA)",
@@ -7044,6 +7494,8 @@ export default [
     {
         "name": "Cleric",
         "source": "PHB",
+        "page": 36,
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 8
@@ -7054,6 +7506,53 @@ export default [
         ],
         "spellcastingAbility": "wis",
         "casterProgression": "full",
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium",
+                "shields"
+            ],
+            "weapons": [
+                "simple"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "history",
+                            "insight",
+                            "medicine",
+                            "persuasion",
+                            "religion"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item mace|phb} or (b) a {@item warhammer|phb} (if proficient)",
+                "(a) {@item scale mail|phb}, (b) {@item leather armor|phb}, or (c) {@item chain mail|phb} (if proficient)",
+                "(a) a {@item light crossbow|phb} and {@item Crossbow Bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                "(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
+                "A {@item shield|phb} and a {@item holy symbol|phb}"
+            ],
+            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "wis": 13
+            },
+            "proficienciesGained": {
+                "armor": [
+                    "light",
+                    "medium",
+                    "shields"
+                ]
+            }
+        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -7359,49 +7858,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium",
-                "shields"
-            ],
-            "weapons": [
-                "simple"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "History",
-                    "Insight",
-                    "Medicine",
-                    "Persuasion",
-                    "Religion"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item mace|phb} or (b) a {@item warhammer|phb} (if proficient)",
-                "(a) {@item scale mail|phb}, (b) {@item leather armor|phb}, or (c) {@item chain mail|phb} (if proficient)",
-                "(a) a {@item light crossbow|phb} and {@item Crossbow Bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-                "(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
-                "A {@item shield|phb} and a {@item holy symbol|phb}"
-            ],
-            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "wis": 13
-            },
-            "proficienciesGained": {
-                "armor": [
-                    "light",
-                    "medium",
-                    "shields"
-                ]
-            }
-        },
         "classFeatures": [
             [
                 {
@@ -7530,6 +7986,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -7563,6 +8030,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 },
                 {
                     "name": "Destroy Undead (CR 1)",
@@ -7604,6 +8082,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -7623,6 +8112,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -7655,6 +8155,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -7670,6 +8181,8 @@ export default [
         "subclasses": [
             {
                 "name": "Arcana Domain",
+                "shortName": "Arcana",
+                "source": "SCAG",
                 "subclassFeatures": [
                     [
                         {
@@ -7821,12 +8334,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Arcana"
+                ]
             },
             {
                 "name": "City Domain (UA)",
+                "shortName": "City (UA)",
+                "source": "UAModernMagic",
                 "subclassFeatures": [
                     [
                         {
@@ -7957,12 +8470,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAModernMagic",
-                "shortName": "City (UA)"
+                ]
             },
             {
                 "name": "Death Domain",
+                "shortName": "Death",
+                "source": "DMG",
                 "subclassFeatures": [
                     [
                         {
@@ -8084,12 +8597,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "DMG",
-                "shortName": "Death"
+                ]
             },
             {
                 "name": "Knowledge Domain",
+                "shortName": "Knowledge",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -8232,12 +8745,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Knowledge"
+                ]
             },
             {
                 "name": "Knowledge Domain (PSA)",
+                "shortName": "Knowledge (PSA)",
+                "source": "PSA",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -8301,12 +8815,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PSA",
-                "shortName": "Knowledge (PSA)"
+                ]
             },
             {
                 "name": "Life Domain",
+                "shortName": "Life",
+                "source": "PHB",
+                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -8428,12 +8943,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Life"
+                ]
             },
             {
                 "name": "Light Domain",
+                "shortName": "Light",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -8556,12 +9071,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Light"
+                ]
             },
             {
                 "name": "Nature Domain",
+                "shortName": "Nature",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -8683,12 +9198,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Nature"
+                ]
             },
             {
                 "name": "Tempest Domain",
+                "shortName": "Tempest",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -8811,12 +9326,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Tempest"
+                ]
             },
             {
                 "name": "Trickery Domain",
+                "shortName": "Trickery",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -8933,12 +9448,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Trickery"
+                ]
             },
             {
                 "name": "War Domain",
+                "shortName": "War",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -9059,12 +9574,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "War"
+                ]
             },
             {
                 "name": "Forge Domain (UA)",
+                "shortName": "Forge (UA)",
+                "source": "UAClericDivineDomains",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -9196,12 +9712,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAClericDivineDomains",
-                "shortName": "Forge (UA)"
+                ]
             },
             {
                 "name": "Forge Domain",
+                "shortName": "Forge",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -9339,12 +9855,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Forge"
+                ]
             },
             {
                 "name": "Grave Domain (UA)",
+                "shortName": "Grave (UA)",
+                "source": "UAClericDivineDomains",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -9476,12 +9993,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAClericDivineDomains",
-                "shortName": "Grave (UA)"
+                ]
             },
             {
                 "name": "Protection Domain (UA)",
+                "shortName": "Protection (UA)",
+                "source": "UAClericDivineDomains",
                 "subclassFeatures": [
                     [
                         {
@@ -9604,12 +10121,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAClericDivineDomains",
-                "shortName": "Protection (UA)"
+                ]
             },
             {
                 "name": "Solidarity Domain (PSA)",
+                "shortName": "Solidarity (PSA)",
+                "source": "PSA",
                 "subclassFeatures": [
                     [
                         {
@@ -9732,12 +10249,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PSA",
-                "shortName": "Solidarity (PSA)"
+                ]
             },
             {
                 "name": "Strength Domain (PSA)",
+                "shortName": "Strength (PSA)",
+                "source": "PSA",
                 "subclassFeatures": [
                     [
                         {
@@ -9859,12 +10376,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PSA",
-                "shortName": "Strength (PSA)"
+                ]
             },
             {
                 "name": "Ambition Domain (PSA)",
+                "shortName": "Ambition (PSA)",
+                "source": "PSA",
                 "subclassFeatures": [
                     [
                         {
@@ -9982,12 +10499,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PSA",
-                "shortName": "Ambition (PSA)"
+                ]
             },
             {
                 "name": "Zeal Domain (PSA)",
+                "shortName": "Zeal (PSA)",
+                "source": "PSA",
                 "subclassFeatures": [
                     [
                         {
@@ -10113,12 +10630,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PSA",
-                "shortName": "Zeal (PSA)"
+                ]
             },
             {
                 "name": "Grave Domain",
+                "shortName": "Grave",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -10242,12 +10759,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Grave"
+                ]
             },
             {
                 "name": "Order Domain (UA)",
+                "shortName": "Order (UA)",
+                "source": "UAOrderDomain",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -10372,12 +10890,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAOrderDomain",
-                "shortName": "Order (UA)"
+                ]
             },
             {
                 "name": "Darkness Domain (Twitter)",
+                "shortName": "Darkness (Twitter)",
+                "source": "Twitter",
                 "subclassFeatures": [
                     [
                         {
@@ -10491,12 +11009,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "Twitter",
-                "shortName": "Darkness (Twitter)"
+                ]
             },
             {
                 "name": "Destruction Domain (Twitter)",
+                "shortName": "Destruction (Twitter)",
+                "source": "Twitter",
                 "subclassFeatures": [
                     [
                         {
@@ -10621,12 +11139,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "Twitter",
-                "shortName": "Destruction (Twitter)"
+                ]
             },
             {
                 "name": "Beauty Domain (Twitter)",
+                "shortName": "Beauty (Twitter)",
+                "source": "Twitter",
                 "subclassFeatures": [
                     [
                         {
@@ -10745,12 +11263,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "Twitter",
-                "shortName": "Beauty (Twitter)"
+                ]
             },
             {
                 "name": "Order Domain",
+                "shortName": "Order",
+                "source": "GGR",
+                "page": 25,
                 "subclassFeatures": [
                     [
                         {
@@ -10877,13 +11396,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "GGR",
-                "shortName": "Order",
-                "page": 25
+                ]
             },
             {
                 "name": "Twilight Domain (UA)",
+                "shortName": "Twilight (UA)",
+                "source": "UAClericDruidWizard",
+                "page": 1,
                 "subclassFeatures": [
                     [
                         {
@@ -11034,10 +11553,197 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAClericDruidWizard",
-                "shortName": "Twilight (UA)",
-                "page": 1
+                ]
+            },
+            {
+                "name": "Unity Domain (UA)",
+                "shortName": "Unity (UA)",
+                "source": "UA2020SubclassesPt2",
+                "page": 2,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Unity Domain (UA)",
+                            "entries": [
+                                "A sense of oneness shines at the heart of healthy communities, whether bound together by friendship, blood, faith, or some other uniting force. The gods of unity deepen such bonds and delight in their strength.",
+                                "Clerics of these gods preside over marriages and other familial bonding customs, but they also nurture the emotional bonds of friendship and camaraderie. Their divine blessings bolster and protect allies in battle through these deep bonds and turn aside malign influences.",
+                                {
+                                    "type": "table",
+                                    "caption": "Unity Deities",
+                                    "colLabels": [
+                                        "Deity",
+                                        "Pantheon"
+                                    ],
+                                    "colStyles": [
+                                        "col-6",
+                                        "col-6"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "Angharradh",
+                                            "Elven"
+                                        ],
+                                        [
+                                            "Athena",
+                                            "Greek"
+                                        ],
+                                        [
+                                            "Berronar Truesilver",
+                                            "Dwarven"
+                                        ],
+                                        [
+                                            "Boldrei",
+                                            "Eberron"
+                                        ],
+                                        [
+                                            "Cyrrollalee",
+                                            "Halfling"
+                                        ],
+                                        [
+                                            "Eldath",
+                                            "Forgotten Realms"
+                                        ],
+                                        [
+                                            "Gaerdal Ironhand",
+                                            "Gnomish"
+                                        ],
+                                        [
+                                            "Heimdall",
+                                            "Norse"
+                                        ],
+                                        [
+                                            "Paladine",
+                                            "Dragonlance"
+                                        ],
+                                        [
+                                            "Rao",
+                                            "Greyhawk"
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "table",
+                                    "caption": "Unity Domain Spells",
+                                    "colLabels": [
+                                        "Cleric Level",
+                                        "Spells"
+                                    ],
+                                    "colStyles": [
+                                        "col-3 text-center",
+                                        "col-9"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "1st",
+                                            "{@spell heroism}, {@spell shield of faith}"
+                                        ],
+                                        [
+                                            "3rd",
+                                            "{@spell aid}, {@spell warding bond}"
+                                        ],
+                                        [
+                                            "5th",
+                                            "{@spell beacon of hope}, {@spell sending}"
+                                        ],
+                                        [
+                                            "7th",
+                                            "{@spell aura of purity}, {@spell guardian of faith}"
+                                        ],
+                                        [
+                                            "9th",
+                                            "{@spell greater restoration}, {@spell Rary's telepathic bond}"
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Emboldening Bond",
+                                    "entries": [
+                                        "{@i 1st-level Unity Domain feature}",
+                                        "You can forge an empowering bond between allies. As an action, you can choose two willing creatures you can see within 30 feet of you (this can include yourself) and create a magical bond between them. While either bonded creature is within 30 feet of the other, the creature can roll a {@dice d4} and add the number rolled to an attack roll, an ability check, or a saving throw it makes. Each creature can add the {@dice d4} no more than once per turn. The bond lasts for 1 hour or until you use this feature again.",
+                                        "You can use this feature once, and you regain the ability to do so when you finish a long rest. You can also expend a spell slot to use the feature again."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Channel Divinity: Shared Burden",
+                                    "entries": [
+                                        "{@i 2nd-level Unity Domain feature}",
+                                        "You can use your Channel Divinity to protect your allies through the strength of your shared bonds.",
+                                        "When a creature you can see within 30 feet of you takes damage, you can use your reaction to choose a number of other willing creatures you can see, up to a number of creatures equal to your Wisdom modifier (minimum of one creature). Distribute the damage taken between the original target and the chosen creatures. Each creature must take at least 1 damage. Apply any damage resistance or vulnerability of the creatures involved after you distribute the damage."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Protective Bond",
+                                    "entries": [
+                                        "{@i 6th-level Unity Domain feature}",
+                                        "The bond you forge between people shields them from harm. While either creature chosen for your Emboldening Bond feature is within 30 feet of the other, the creature can use its reaction to grant resistance to all damage to the other creature when that other creature takes damage. This resistance lasts until the end of the current turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Potent Spellcasting",
+                                    "entries": [
+                                        "{@i 8th-level Unity Domain feature}",
+                                        "You add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Blessed Strikes",
+                                    "entries": [
+                                        "{@i 8th-level cleric Divine Domain feature (replaces Potent Spellcasting)}",
+                                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@dice 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
+                                    ],
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 4
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Enduring Unity",
+                                    "entries": [
+                                        "{@i 17th-level Unity Domain feature}",
+                                        "The bonds you create endure across vast distances. Creatures affected by your Emboldening Bond feature gain its benefits, as well as those of your Protective Bond feature, while they are on the same plane of existence as each other.",
+                                        "Additionally, when a creature chosen for your Emboldening Bond is reduced to 0 hit points, their bonded partner gains the following benefits for 1 minute, or until the creature regains at least 1 hit point:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "The creature has advantage on attack rolls, ability checks, and saving throws",
+                                                "The creature gains resistance to all damage",
+                                                "As an action, the creature can touch their bonded partner to expend and roll any number of Hit Dice. Their bonded partner regains a number of hit points equal to the total rolled."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
@@ -11337,12 +12043,12 @@ export default [
                 "source": "XGE",
                 "page": 17
             }
-        ],
-        "page": 36
+        ]
     },
     {
         "name": "Druid",
         "source": "PHB",
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 8
@@ -11662,7 +12368,10 @@ export default [
             "armor": [
                 "light",
                 "medium",
-                "shields (druids will not wear armor or use shields made of metal)"
+                {
+                    "proficiency": "shields",
+                    "full": "shields (druids will not wear armor or use shields made of metal)"
+                }
             ],
             "weapons": [
                 "clubs",
@@ -11679,19 +12388,23 @@ export default [
             "tools": [
                 "Herbalism kit"
             ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Arcana",
-                    "Animal Handling",
-                    "Insight",
-                    "Medicine",
-                    "Nature",
-                    "Perception",
-                    "Religion",
-                    "Survival"
-                ]
-            }
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "animal handling",
+                            "insight",
+                            "medicine",
+                            "nature",
+                            "perception",
+                            "religion",
+                            "survival"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
         },
         "startingEquipment": {
             "additionalFromBackground": true,
@@ -11710,7 +12423,10 @@ export default [
                 "armor": [
                     "light",
                     "medium",
-                    "shields (druids will not wear armor or use shields made of metal)"
+                    {
+                        "proficiency": "shields",
+                        "full": "shields (druids will not wear armor or use shields made of metal)"
+                    }
                 ]
             }
         },
@@ -11779,6 +12495,15 @@ export default [
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "Cantrip Versatility",
+                    "entries": [
+                        "{@i 1st-level druid feature (enhances Spellcasting)}",
+                        "Whenever you gain a level in this class, you can replace one cantrip you learned from this Spellcasting feature with another cantrip from the druid spell list."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 4
                 }
             ],
             [
@@ -11838,6 +12563,16 @@ export default [
                     ]
                 },
                 {
+                    "name": "Wild Companion",
+                    "entries": [
+                        "{@i 2nd-level druid feature (enhances Wild Shape)}",
+                        "You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell find familiar} spell, without material components.",
+                        "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 4
+                },
+                {
                     "name": "Druid Circle",
                     "entries": [
                         "At 2nd level, you choose to identify with a circle of druids from the list of available circles. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
@@ -11859,6 +12594,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -11885,6 +12631,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -11905,6 +12662,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -11925,6 +12693,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -11949,6 +12728,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -12280,7 +13070,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Land"
+                "shortName": "Land",
+                "srd": true
             },
             {
                 "name": "Circle of the Moon",
@@ -12473,7 +13264,8 @@ export default [
                     ]
                 ],
                 "source": "UADruid",
-                "shortName": "Dreams (UA)"
+                "shortName": "Dreams (UA)",
+                "isReprinted": true
             },
             {
                 "name": "Circle of the Shepherd (UA)",
@@ -12581,7 +13373,8 @@ export default [
                     ]
                 ],
                 "source": "UADruid",
-                "shortName": "Shepherd (UA)"
+                "shortName": "Shepherd (UA)",
+                "isReprinted": true
             },
             {
                 "name": "Circle of the Shepherd v2 (UA)",
@@ -12698,7 +13491,8 @@ export default [
                     ]
                 ],
                 "source": "UARevisedClassOptions",
-                "shortName": "Shepherd v2 (UA)"
+                "shortName": "Shepherd v2 (UA)",
+                "isReprinted": true
             },
             {
                 "name": "Circle of Twilight (UA)",
@@ -13047,7 +13841,8 @@ export default [
                     ]
                 ],
                 "source": "UAThreeSubclasses",
-                "shortName": "Spores (UA)"
+                "shortName": "Spores (UA)",
+                "isReprinted": true
             },
             {
                 "name": "Circle of Spores",
@@ -14669,6 +15464,8 @@ export default [
     {
         "name": "Fighter",
         "source": "PHB",
+        "page": 70,
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 10
@@ -14688,19 +15485,23 @@ export default [
                 "simple",
                 "martial"
             ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Acrobatics",
-                    "Animal Handling",
-                    "Athletics",
-                    "History",
-                    "Insight",
-                    "Intimidation",
-                    "Perception",
-                    "Survival"
-                ]
-            }
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "acrobatics",
+                            "animal handling",
+                            "athletics",
+                            "history",
+                            "insight",
+                            "intimidation",
+                            "perception",
+                            "survival"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
         },
         "startingEquipment": {
             "additionalFromBackground": true,
@@ -14911,6 +15712,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -14929,6 +15741,17 @@ export default [
                         "When you reach 6th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 6th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -14947,6 +15770,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -14982,6 +15816,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -14999,6 +15844,17 @@ export default [
                         "When you reach 14th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 14th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -15017,6 +15873,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -15049,6 +15916,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -15064,6 +15942,9 @@ export default [
         "subclasses": [
             {
                 "name": "Champion",
+                "shortName": "Champion",
+                "source": "PHB",
+                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -15133,12 +16014,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Champion"
+                ]
             },
             {
                 "name": "Battle Master",
+                "shortName": "Battle Master",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -15149,7 +16030,7 @@ export default [
                                     "type": "entries",
                                     "name": "Student of War",
                                     "entries": [
-                                        "At 3rd level, you gain proficiency with one type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan tool} of your choice."
+                                        "At 3rd level, you gain proficiency with one type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} of your choice."
                                     ]
                                 },
                                 {
@@ -15576,12 +16457,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Battle Master"
+                ]
             },
             {
                 "name": "Cavalier (UA)",
+                "shortName": "Cavalier (UA)",
+                "source": "UAKitsOfOld",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -15698,12 +16580,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAKitsOfOld",
-                "shortName": "Cavalier (UA)"
+                ]
             },
             {
                 "name": "Cavalier v2 (UA)",
+                "shortName": "Cavalier v2 (UA)",
+                "source": "UARevisedClassOptions",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -15852,12 +16735,14 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARevisedClassOptions",
-                "shortName": "Cavalier v2 (UA)"
+                ]
             },
             {
                 "name": "Eldritch Knight",
+                "shortName": "Eldritch Knight",
+                "source": "PHB",
+                "spellcastingAbility": "int",
+                "casterProgression": "1/3",
                 "subclassTableGroups": [
                     {
                         "subclasses": [
@@ -15867,8 +16752,8 @@ export default [
                             }
                         ],
                         "colLabels": [
-                            "{@filter Cantrips Known|spells|level=0|subclass=Eldritch Knight}",
-                            "{@filter Spells Known|spells|subclass=Eldritch Knight}"
+                            "{@filter Cantrips Known|spells|level=0|subclass=Fighter: Eldritch Knight}",
+                            "{@filter Spells Known|spells|subclass=Fighter: Eldritch Knight}"
                         ],
                         "rows": [
                             [
@@ -15962,10 +16847,10 @@ export default [
                             }
                         ],
                         "colLabels": [
-                            "{@filter 1st|spells|level=1|subclass=Eldritch Knight}",
-                            "{@filter 2nd|spells|level=2|subclass=Eldritch Knight}",
-                            "{@filter 3rd|spells|level=3|subclass=Eldritch Knight}",
-                            "{@filter 4th|spells|level=4|subclass=Eldritch Knight}"
+                            "{@filter 1st|spells|level=1|subclass=Fighter: Eldritch Knight}",
+                            "{@filter 2nd|spells|level=2|subclass=Fighter: Eldritch Knight}",
+                            "{@filter 3rd|spells|level=3|subclass=Fighter: Eldritch Knight}",
+                            "{@filter 4th|spells|level=4|subclass=Fighter: Eldritch Knight}"
                         ],
                         "rows": [
                             [
@@ -16091,8 +16976,6 @@ export default [
                         ]
                     }
                 ],
-                "spellcastingAbility": "int",
-                "casterProgression": "1/3",
                 "subclassFeatures": [
                     [
                         {
@@ -16231,12 +17114,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Eldritch Knight"
+                ]
             },
             {
                 "name": "Monster Hunter (UA)",
+                "shortName": "Monster Hunter (UA)",
+                "source": "UAGothicHeroes",
                 "spellcastingAbility": "wis",
                 "subclassFeatures": [
                     [
@@ -16354,12 +17237,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAGothicHeroes",
-                "shortName": "Monster Hunter (UA)"
+                ]
             },
             {
                 "name": "Purple Dragon Knight (Banneret)",
+                "shortName": "Purple Dragon Knight (Banneret)",
+                "source": "SCAG",
                 "subclassFeatures": [
                     [
                         {
@@ -16442,12 +17325,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Purple Dragon Knight (Banneret)"
+                ]
             },
             {
                 "name": "Scout (UA)",
+                "shortName": "Scout (UA)",
+                "source": "UAKitsOfOld",
                 "subclassFeatures": [
                     [
                         {
@@ -16582,12 +17465,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAKitsOfOld",
-                "shortName": "Scout (UA)"
+                ]
             },
             {
                 "name": "Arcane Archer (UA)",
+                "shortName": "Arcane Archer (UA)",
+                "source": "UAFighter",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -16779,12 +17663,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighter",
-                "shortName": "Arcane Archer (UA)"
+                ]
             },
             {
                 "name": "Arcane Archer v2 (UA)",
+                "shortName": "Arcane Archer v2 (UA)",
+                "source": "UARevisedSubclasses",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -16960,12 +17845,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARevisedSubclasses",
-                "shortName": "Arcane Archer v2 (UA)"
+                ]
             },
             {
                 "name": "Knight (UA)",
+                "shortName": "Knight (UA)",
+                "source": "UAFighter",
                 "subclassFeatures": [
                     [
                         {
@@ -17045,12 +17930,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighter",
-                "shortName": "Knight (UA)"
+                ]
             },
             {
                 "name": "Samurai (UA)",
+                "shortName": "Samurai (UA)",
+                "source": "UAFighter",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -17122,12 +18008,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighter",
-                "shortName": "Samurai (UA)"
+                ]
             },
             {
                 "name": "Sharpshooter (UA)",
+                "shortName": "Sharpshooter (UA)",
+                "source": "UAFighter",
                 "subclassFeatures": [
                     [
                         {
@@ -17206,12 +18092,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighter",
-                "shortName": "Sharpshooter (UA)"
+                ]
             },
             {
                 "name": "Arcane Archer",
+                "shortName": "Arcane Archer",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -17394,12 +18280,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Arcane Archer"
+                ]
             },
             {
                 "name": "Cavalier",
+                "shortName": "Cavalier",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -17487,12 +18373,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Cavalier"
+                ]
             },
             {
                 "name": "Samurai",
+                "shortName": "Samurai",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -17571,12 +18457,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Samurai"
+                ]
             },
             {
                 "name": "Brute (UA)",
+                "shortName": "Brute (UA)",
+                "source": "UAThreeSubclasses",
                 "subclassFeatures": [
                     [
                         {
@@ -17676,12 +18562,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAThreeSubclasses",
-                "shortName": "Brute (UA)"
+                ]
             },
             {
                 "name": "Warlord (Livestream)",
+                "shortName": "Warlord (Stream)",
+                "source": "Stream",
                 "subclassTableGroups": [
                     {
                         "subclasses": [
@@ -18094,12 +18980,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "Stream",
-                "shortName": "Warlord (Stream)"
+                ]
             },
             {
                 "name": "Weapon Master (Livestream)",
+                "shortName": "Weapon Master (Stream)",
+                "source": "Stream",
                 "subclassFeatures": [
                     [
                         {
@@ -18437,12 +19323,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "Stream",
-                "shortName": "Weapon Master (Stream)"
+                ]
             },
             {
                 "name": "Slayer (Livestream)",
+                "shortName": "Slayer (Stream)",
+                "source": "Stream",
                 "subclassFeatures": [
                     [
                         {
@@ -18600,12 +19486,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "Stream",
-                "shortName": "Slayer (Stream)"
+                ]
             },
             {
                 "name": "Rune Knight (UA)",
+                "shortName": "Rune Knight (UA)",
+                "source": "UAFighterRangerRogue",
                 "subclassFeatures": [
                     [
                         {
@@ -18765,12 +19651,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighterRangerAndRogue",
-                "shortName": "Rune Knight (UA)"
+                ]
             },
             {
                 "name": "Psychic Warrior (UA)",
+                "shortName": "Psychic Warrior (UA)",
+                "source": "UAFighterRogueWizard",
+                "page": 1,
                 "subclassFeatures": [
                     [
                         {
@@ -18887,10 +19774,7 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighterRogueWizard",
-                "shortName": "Psychic Warrior (UA)",
-                "page": 1
+                ]
             }
         ],
         "fluff": [
@@ -19179,12 +20063,13 @@ export default [
                 "source": "XGE",
                 "page": 27
             }
-        ],
-        "page": 70
+        ]
     },
     {
         "name": "Monk",
         "source": "PHB",
+        "page": 76,
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 8
@@ -19193,6 +20078,51 @@ export default [
             "str",
             "dex"
         ],
+        "startingProficiencies": {
+            "weapons": [
+                "simple",
+                "shortswords"
+            ],
+            "tools": [
+                "any one type of artisan's tools or any one musical instrument of your choice"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "acrobatics",
+                            "athletics",
+                            "history",
+                            "insight",
+                            "religion",
+                            "stealth"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item shortsword|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                "(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
+                "10 {@item dart|phb|darts}"
+            ],
+            "goldAlternative": "{@dice 5d4|5d4|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "dex": 13,
+                "wis": 13
+            },
+            "proficienciesGained": {
+                "weapons": [
+                    "simple",
+                    "shortswords"
+                ]
+            }
+        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -19524,47 +20454,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "weapons": [
-                "simple",
-                "shortswords"
-            ],
-            "tools": [
-                "any one type of artisan's tools or any one musical instrument of your choice"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Acrobatics",
-                    "Athletics",
-                    "History",
-                    "Insight",
-                    "Religion",
-                    "Stealth"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item shortsword|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-                "(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-                "10 {@item dart|phb|darts}"
-            ],
-            "goldAlternative": "{@dice 5d4|5d4|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "dex": 13,
-                "wis": 13
-            },
-            "proficienciesGained": {
-                "weapons": [
-                    "simple",
-                    "shortswords"
-                ]
-            }
-        },
         "classFeatures": [
             [
                 {
@@ -19711,6 +20600,17 @@ export default [
                     ]
                 },
                 {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                },
+                {
                     "name": "Slow Fall",
                     "entries": [
                         "Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level."
@@ -19767,6 +20667,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -19801,6 +20712,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -19835,6 +20757,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -19862,6 +20795,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -19877,6 +20821,8 @@ export default [
         "subclasses": [
             {
                 "name": "Way of Shadow",
+                "shortName": "Shadow",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -19932,12 +20878,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Shadow"
+                ]
             },
             {
                 "name": "Way of the Open Hand",
+                "shortName": "Open Hand",
+                "source": "PHB",
+                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -20004,12 +20951,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Open Hand"
+                ]
             },
             {
                 "name": "Way of the Four Elements",
+                "shortName": "Four Elements",
+                "source": "PHB",
                 "spellcastingAbility": "wis",
                 "subclassFeatures": [
                     [
@@ -20251,12 +21198,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Four Elements"
+                ]
             },
             {
                 "name": "Way of the Long Death",
+                "shortName": "Long Death",
+                "source": "SCAG",
                 "subclassFeatures": [
                     [
                         {
@@ -20312,12 +21259,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Long Death"
+                ]
             },
             {
                 "name": "Way of the Sun Soul",
+                "shortName": "Sun Soul",
+                "source": "SCAG",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -20379,12 +21327,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Sun Soul"
+                ]
             },
             {
                 "name": "Way of the Kensei (UA)",
+                "shortName": "Kensei (UA)",
+                "source": "UAMonk",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -20474,12 +21423,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAMonk",
-                "shortName": "Kensei (UA)"
+                ]
             },
             {
                 "name": "Way of the Kensei v2 (UA)",
+                "shortName": "Kensei v2 (UA)",
+                "source": "UARevisedSubclasses",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -20568,12 +21518,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARevisedSubclasses",
-                "shortName": "Kensei v2 (UA)"
+                ]
             },
             {
                 "name": "Way of Tranquility (UA)",
+                "shortName": "Tranquility (UA)",
+                "source": "UAMonk",
                 "subclassFeatures": [
                     [
                         {
@@ -20644,12 +21594,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAMonk",
-                "shortName": "Tranquility (UA)"
+                ]
             },
             {
                 "name": "Way of the Drunken Master (UA)",
+                "shortName": "Drunken Master (UA)",
+                "source": "UAATrioOfSubclasses",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -20706,12 +21657,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAATrioOfSubclasses",
-                "shortName": "Drunken Master (UA)"
+                ]
             },
             {
                 "name": "Way of the Drunken Master",
+                "shortName": "Drunken Master",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -20789,12 +21740,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Drunken Master"
+                ]
             },
             {
                 "name": "Way of the Kensei",
+                "shortName": "Kensei",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -20893,12 +21844,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Kensei"
+                ]
             },
             {
                 "name": "Way of the Sun Soul",
+                "shortName": "Sun Soul",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -20961,12 +21912,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Sun Soul"
+                ]
             },
             {
                 "name": "Way of the Soul Knife (Livestream)",
+                "shortName": "Soul Knife (Stream)",
+                "source": "Stream",
                 "subclassFeatures": [
                     [
                         {
@@ -21071,12 +22022,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "Stream",
-                "shortName": "Soul Knife (Stream)"
+                ]
             },
             {
                 "name": "Way of the Astral Self (UA)",
+                "shortName": "Astral Self (UA)",
+                "source": "UABarbarianAndMonk",
                 "subclassFeatures": [
                     [
                         {
@@ -21220,9 +22171,130 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UABarbarianAndMonk",
-                "shortName": "Astral Self (UA)"
+                ]
+            },
+            {
+                "name": "Way of Mercy (UA)",
+                "shortName": "Mercy (UA)",
+                "source": "UA2020SubclassesPt1",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Way of Mercy",
+                            "entries": [
+                                "Monks of the Way of Mercy learn to manipulate the life force of others to bring aid to those in need. They are wandering physicians to the poor and hurt. However, to those beyond their help—whether ailing or evil—they bring a swift end as an act of mercy.",
+                                "Those who follow the Way of Mercy might be humble members of a religious order, administering to those in greatest need, making grim choices rooted in reality rather than idealism. Some might be gentle-voiced healers, beloved by their communities, while others might be masked bringers of macabre mercies. The walkers of this way usually don simple robes with deep cowls, and they often conceal their faces with masks, presenting themselves as the faceless bringers of life and death. If you wear a mask, choose its appearance, or determine it randomly by rolling on the Merciful Mask table.",
+                                {
+                                    "type": "table",
+                                    "caption": "Merciful Mask",
+                                    "colLabels": [
+                                        "d6",
+                                        "Mask Appearance"
+                                    ],
+                                    "colStyles": [
+                                        "col-2 text-center",
+                                        "col-10"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "1",
+                                            "Raven"
+                                        ],
+                                        [
+                                            "2",
+                                            "Blank and white"
+                                        ],
+                                        [
+                                            "3",
+                                            "Crying visage"
+                                        ],
+                                        [
+                                            "4",
+                                            "Laughing visage"
+                                        ],
+                                        [
+                                            "5",
+                                            "Skull"
+                                        ],
+                                        [
+                                            "6",
+                                            "Butterfly"
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Implements of Mercy",
+                                    "entries": [
+                                        "{@i 3rd-level Way of Mercy feature}",
+                                        "You gain proficiency in the {@skill Insight} or {@skill Medicine} skill (your choice), and you gain proficiency with the herbalism kit and the poisoner's kit."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Hands of Healing",
+                                    "entries": [
+                                        "{@i 3rd-level Way of Mercy feature}",
+                                        "Your mystical touch can mend wounds. As an action, you can spend 1 ki point to touch a creature and restore a number of hit points equal to a roll of your Martial Arts die + your Wisdom modifier.",
+                                        "When you use your Flurry of Blows, you can replace one of the unarmed strikes with a use of this feature without spending its ki cost."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Hands of Harm",
+                                    "entries": [
+                                        "{@i 3rd-level Way of Mercy feature}",
+                                        "You use your ki to inflict wounds. When you hit a creature with an unarmed strike, you can spend 1 ki point to deal extra necrotic damage equal to one roll of your Martial Arts die. If the creature is {@condition incapacitated} or {@condition poisoned}, the creature instead takes necrotic damage equal to three rolls of your Martial Arts die instead. You can use this feature only once on each of your turns."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Noxious Aura",
+                                    "entries": [
+                                        "{@i 6th-level Way of Mercy feature}",
+                                        "As a bonus action, you spend 1 ki point to turn your ki into an aura of toxic miasma. The aura extends 5 feet from you in every direction, but not through total cover. It lasts for 1 minute, until you're {@condition incapacitated}, or you dismiss it (no action required).",
+                                        "While your aura is active, ranged attacks have disadvantage against you. Any other creature that starts its turn in the aura must succeed on a Constitution saving throw or become {@condition poisoned} until the end of your next turn and take poison damage equal to your Wisdom modifier (minimum of 0 damage)."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Healing Technique",
+                                    "entries": [
+                                        "{@i 11th-level Way of Mercy feature}",
+                                        "Your skill in manipulating your ki to heal increases. When you restore hit points to a creature using your Hands of Healing, you can also end one disease or a condition from the following list affecting the target: {@condition blinded}, {@condition deafened}, {@condition paralyzed}, or {@condition poisoned}."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Hand of Mercy",
+                                    "entries": [
+                                        "{@i 17th-level Way of Mercy feature}",
+                                        "Your mastery of life energy opens the door to the ultimate respite technique. As an action, you can touch a creature, expend 4 ki points, and force the creature to make a Constitution saving throw (a creature can willingly fail this save). Unless the save succeeds, the creature enters a state of suspended animation for a number of days equal to your monk level or until you end the effect early (no action required). During this time, the creature is {@condition paralyzed}, has immunity to all damage, and any curse, disease, or poison affecting it is suspended. The creature appears dead to all outward inspection and to spells used to determine the creature's status.",
+                                        "You can have only one creature under the effect of this feature at a time."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
@@ -21512,12 +22584,12 @@ export default [
                 "source": "XGE",
                 "page": 32
             }
-        ],
-        "page": 76
+        ]
     },
     {
         "name": "Mystic",
         "source": "UATheMysticClass",
+        "page": 1,
         "hd": {
             "number": 1,
             "faces": 8
@@ -21526,6 +22598,43 @@ export default [
             "int",
             "wis"
         ],
+        "startingProficiencies": {
+            "armor": [
+                "light"
+            ],
+            "weapons": [
+                "simple"
+            ],
+            "tools": [
+                "None"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "history",
+                            "insight",
+                            "medicine",
+                            "nature",
+                            "perception",
+                            "religion"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item spear|phb} or (b) a {@item mace|phb}",
+                "(a) {@item leather armor|phb} or (b) {@item studded leather armor|phb}",
+                "(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                "(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}"
+            ],
+            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -21658,39 +22767,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light"
-            ],
-            "weapons": [
-                "simple"
-            ],
-            "tools": [
-                "None"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Arcana",
-                    "History",
-                    "Insight",
-                    "Medicine",
-                    "Nature",
-                    "Perception",
-                    "Religion"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item spear|phb} or (b) a {@item mace|phb}",
-                "(a) {@item leather armor|phb} or (b) {@item studded leather armor|phb}",
-                "(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-                "(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}"
-            ],
-            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-        },
         "classFeatures": [
             [
                 {
@@ -21882,6 +22958,17 @@ export default [
                     ]
                 },
                 {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                },
+                {
                     "name": "Strength of Mind",
                     "entries": [
                         "Even the simplest psionic technique requires a deep understanding of how psionic energy can augment mind and body. This understanding allows you to alter your defenses to better deal with threats.",
@@ -21906,6 +22993,17 @@ export default [
                     "entries": [
                         "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 },
                 {
                     "name": "Potent Psionics (1d8)",
@@ -21942,6 +23040,17 @@ export default [
                     "entries": [
                         "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -21981,6 +23090,17 @@ export default [
                     "entries": [
                         "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -21998,6 +23118,17 @@ export default [
                     "entries": [
                         "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -22022,6 +23153,8 @@ export default [
         "subclasses": [
             {
                 "name": "Order of the Avatar",
+                "shortName": "Avatar",
+                "source": "UATheMysticClass",
                 "subclassFeatures": [
                     [
                         {
@@ -22085,12 +23218,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UATheMysticClass",
-                "shortName": "Avatar"
+                ]
             },
             {
                 "name": "Order of the Awakened",
+                "shortName": "Awakened",
+                "source": "UATheMysticClass",
                 "subclassFeatures": [
                     [
                         {
@@ -22159,12 +23292,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UATheMysticClass",
-                "shortName": "Awakened"
+                ]
             },
             {
                 "name": "Order of the Immortal",
+                "shortName": "Immortal",
+                "source": "UATheMysticClass",
                 "subclassFeatures": [
                     [
                         {
@@ -22230,12 +23363,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UATheMysticClass",
-                "shortName": "Immortal"
+                ]
             },
             {
                 "name": "Order of the Nomad",
+                "shortName": "Nomad",
+                "source": "UATheMysticClass",
                 "subclassFeatures": [
                     [
                         {
@@ -22299,12 +23432,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UATheMysticClass",
-                "shortName": "Nomad"
+                ]
             },
             {
                 "name": "Order of the Soul Knife",
+                "shortName": "Soul Knife",
+                "source": "UATheMysticClass",
                 "subclassFeatures": [
                     [
                         {
@@ -22395,12 +23528,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UATheMysticClass",
-                "shortName": "Soul Knife"
+                ]
             },
             {
                 "name": "Order of the Wu Jen",
+                "shortName": "Wu Jen",
+                "source": "UATheMysticClass",
                 "subclassFeatures": [
                     [
                         {
@@ -22500,16 +23633,15 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UATheMysticClass",
-                "shortName": "Wu Jen"
+                ]
             }
-        ],
-        "page": 1
+        ]
     },
     {
         "name": "Paladin",
         "source": "PHB",
+        "page": 82,
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 10
@@ -22520,6 +23652,60 @@ export default [
         ],
         "spellcastingAbility": "cha",
         "casterProgression": "1/2",
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium",
+                "heavy",
+                "shields"
+            ],
+            "weapons": [
+                "simple",
+                "martial"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "athletics",
+                            "insight",
+                            "intimidation",
+                            "medicine",
+                            "persuasion",
+                            "religion"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
+                "(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
+                "(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
+                "{@item Chain mail|phb} and a {@item holy symbol|phb}"
+            ],
+            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "str": 13,
+                "cha": 13
+            },
+            "proficienciesGained": {
+                "armor": [
+                    "light",
+                    "medium",
+                    "shields"
+                ],
+                "weapons": [
+                    "simple",
+                    "martial"
+                ]
+            }
+        },
         "classTableGroups": [
             {
                 "title": "Spell Slots per Spell Level",
@@ -22674,56 +23860,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium",
-                "heavy",
-                "shields"
-            ],
-            "weapons": [
-                "simple",
-                "martial"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Athletics",
-                    "Insight",
-                    "Intimidation",
-                    "Medicine",
-                    "Persuasion",
-                    "Religion"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
-                "(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-                "(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
-                "{@item Chain mail|phb} and a {@item holy symbol|phb}"
-            ],
-            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "str": 13,
-                "cha": 13
-            },
-            "proficienciesGained": {
-                "armor": [
-                    "light",
-                    "medium",
-                    "shields"
-                ],
-                "weapons": [
-                    "simple",
-                    "martial"
-                ]
-            }
-        },
         "classFeatures": [
             [
                 {
@@ -22971,6 +24107,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -23006,6 +24153,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -23033,6 +24191,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -23061,6 +24230,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -23079,6 +24259,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -23095,6 +24286,8 @@ export default [
         "subclasses": [
             {
                 "name": "Oath of the Ancients",
+                "shortName": "Ancients",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -23267,12 +24460,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Ancients"
+                ]
             },
             {
                 "name": "Oath of Devotion",
+                "shortName": "Devotion",
+                "source": "PHB",
+                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -23449,12 +24643,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Devotion"
+                ]
             },
             {
                 "name": "Oath of Vengeance",
+                "shortName": "Vengeance",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -23623,12 +24817,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Vengeance"
+                ]
             },
             {
                 "name": "Oathbreaker",
+                "shortName": "Oathbreaker",
+                "source": "DMG",
                 "subclassFeatures": [
                     [
                         {
@@ -23736,12 +24930,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "DMG",
-                "shortName": "Oathbreaker"
+                ]
             },
             {
                 "name": "Oath of the Crown",
+                "shortName": "Crown",
+                "source": "SCAG",
                 "subclassFeatures": [
                     [
                         {
@@ -23909,12 +25103,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Crown"
+                ]
             },
             {
                 "name": "Oath of Conquest (UA)",
+                "shortName": "Conquest (UA)",
+                "source": "UAPaladin",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -24071,12 +25266,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAPaladin",
-                "shortName": "Conquest (UA)"
+                ]
             },
             {
                 "name": "Oath of Conquest v2 (UA)",
+                "shortName": "Conquest v2 (UA)",
+                "source": "UARevisedClassOptions",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -24234,12 +25430,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARevisedClassOptions",
-                "shortName": "Conquest v2 (UA)"
+                ]
             },
             {
                 "name": "Oath of Treachery (UA)",
+                "shortName": "Treachery (UA)",
+                "source": "UAPaladin",
                 "subclassFeatures": [
                     [
                         {
@@ -24385,12 +25581,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAPaladin",
-                "shortName": "Treachery (UA)"
+                ]
             },
             {
                 "name": "Oath of Redemption (UA)",
+                "shortName": "Redemption (UA)",
+                "source": "UAATrioOfSubclasses",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -24572,12 +25769,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAATrioOfSubclasses",
-                "shortName": "Redemption (UA)"
+                ]
             },
             {
                 "name": "Oath of Conquest",
+                "shortName": "Conquest",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -24726,12 +25923,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Conquest"
+                ]
             },
             {
                 "name": "Oath of Redemption",
+                "shortName": "Redemption",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -24900,12 +26097,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Redemption"
+                ]
             },
             {
                 "name": "Oath of Heroism (UA)",
+                "shortName": "Heroism (UA)",
+                "source": "UABardAndPaladin",
                 "subclassFeatures": [
                     [
                         {
@@ -24955,7 +26152,7 @@ export default [
                                         "You gain oath spells at the paladin levels listed in the Oath of Heroism Spells table.",
                                         {
                                             "type": "table",
-                                            "caption": "Oath of Conquest Spells",
+                                            "caption": "Oath of Heroism Spells",
                                             "colLabels": [
                                                 "Paladin Level",
                                                 "Spells"
@@ -25073,9 +26270,167 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UABardAndPaladin",
-                "shortName": "Heroism (UA)"
+                ]
+            },
+            {
+                "name": "Oath of the Watchers (UA)",
+                "shortName": "Watchers (UA)",
+                "source": "UA2020SubclassesPt1",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Oath of the Watchers",
+                            "entries": [
+                                "Paladins who vow the Oath of the Watchers seek to protect the mortal realm from the predations of extraplanar creatures, many of which can lay waste to mortal soldiers. Thus, the Watchers hone their minds, spirits, and bodies to be the ultimate weapons against such threats.",
+                                "Paladins who follow the Watchers' oath are ever vigilant in spotting the influence of extraplanar forces, often establishing a network of spies and informants to gather information on suspected cults. To a Watcher, keeping a healthy suspicion and awareness about one's surroundings is as natural as wearing armor in battle.",
+                                {
+                                    "type": "entries",
+                                    "name": "Tenets of the Watchers",
+                                    "entries": [
+                                        "A paladin who assumes the Oath of the Watchers swears to safeguard the mortal realm from otherworldly threats.",
+                                        {
+                                            "type": "entries",
+                                            "name": "Vigilance",
+                                            "entries": [
+                                                "The threats you face are cunning, powerful, and subversive. Be ever alert for their corruption."
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "name": "Loyalty",
+                                            "entries": [
+                                                "Never accept gifts or favors from fiends or those who truck with them. Stay true to your order, your comrades, and your duty."
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "name": "Discipline",
+                                            "entries": [
+                                                "You are the shield against the endless terrors that lie beyond the stars. Your blade must be forever sharp and your mind keen to survive what lies beyond."
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Oath Spells",
+                                    "entries": [
+                                        "{@i 3rd-level Oath of the Watchers feature}",
+                                        "You gain oath spells at the paladin levels listed in the Oath of the Watchers table. See the Sacred Oath class feature for how oath spells work.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Oath of the Watchers Spells  Spells",
+                                            "colLabels": [
+                                                "Paladin Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell alarm}, {@spell chromatic orb}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell augury}, {@spell moonbeam}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell counterspell}, {@spell nondetection}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell aura of purity}, {@spell banishment}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell hold monster}, {@spell hallow}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Channel Divinity",
+                                    "entries": [
+                                        "{@i 3rd-level Oath of the Watchers feature}",
+                                        "You gain the following Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.",
+                                        {
+                                            "type": "entries",
+                                            "name": "Watcher's Will",
+                                            "entries": [
+                                                "You can use your Channel Divinity to invest your presence with the warding power of your faith. As an action, you can choose a number of creatures you can see within 30 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). For 1 minute, all the chosen creatures have advantage on Intelligence, Wisdom, and Charisma saving throws."
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "name": "Abjure the Extraplanar",
+                                            "entries": [
+                                                "You can use your Channel Divinity to castigate unworldly beings. As an action, you present your holy symbol and each elemental, fey, fiend, or aberration within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
+                                                "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the {@action Dodge} action."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Aura of the Sentinel",
+                                    "entries": [
+                                        "{@i 7th- and 18th-level Oath of the Watchers feature}",
+                                        "You emit an aura of alertness while you aren't {@condition incapacitated}. When you and any creature of your choice within 10 feet of you rolls initiative, you each gain a bonus to initiative equal to your Charisma modifier (minimum of +1). At 18th level, the range of this aura increases to 30 feet."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Vigilant Rebuke",
+                                    "entries": [
+                                        "{@i 15th-level Oath of the Watchers feature}",
+                                        "You've learned how to magically chastise anyone who dares cast unwanted spells at you and your wards. Whenever you or a creature you can see within 30 feet of you succeeds on a saving throw against a spell, you can use your reaction to deal {@dice 2d8} + your Charisma modifier force damage to the spellcaster."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Mortal Bulwark",
+                                    "entries": [
+                                        "{@i 20th-level Oath of the Watchers feature}",
+                                        "You manifest a spark of your deity's power in defense of your sacred oath. As a bonus action, you gain the following benefits for 1 minute:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "You gain {@sense truesight} in a 120-foot radius.",
+                                                "You have advantage on attack rolls against elementals, fey, fiends, and aberrations.",
+                                                "When you hit a creature with an attack and deal damage to it, you can also force it to make a Charisma saving throw. On a failed save, the creature is magically banished to its native plane of existence if it's currently not there. On a successful save, the creature can't be banished by this feature for 24 hours."
+                                            ]
+                                        },
+                                        "Once you use this bonus action, you can't use it again until you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
@@ -25441,12 +26796,13 @@ export default [
                 "source": "XGE",
                 "page": 36
             }
-        ],
-        "page": 82
+        ]
     },
     {
         "name": "Ranger",
         "source": "PHB",
+        "page": 89,
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 10
@@ -25457,6 +26813,78 @@ export default [
         ],
         "spellcastingAbility": "wis",
         "casterProgression": "1/2",
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium",
+                "shields"
+            ],
+            "weapons": [
+                "simple",
+                "martial"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "animal handling",
+                            "athletics",
+                            "insight",
+                            "investigation",
+                            "nature",
+                            "perception",
+                            "stealth",
+                            "survival"
+                        ],
+                        "count": 3
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
+                "(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
+                "(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
+                "A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
+            ],
+            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "dex": 13,
+                "wis": 13
+            },
+            "proficienciesGained": {
+                "armor": [
+                    "light",
+                    "medium",
+                    "shields"
+                ],
+                "skills": [
+                    {
+                        "choose": {
+                            "from": [
+                                "animal handling",
+                                "athletics",
+                                "insight",
+                                "investigation",
+                                "nature",
+                                "perception",
+                                "stealth",
+                                "survival"
+                            ],
+                            "count": 1
+                        }
+                    }
+                ],
+                "weapons": [
+                    "simple",
+                    "martial"
+                ]
+            }
+        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -25678,70 +27106,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium",
-                "shields"
-            ],
-            "weapons": [
-                "simple",
-                "martial"
-            ],
-            "skills": {
-                "choose": 3,
-                "from": [
-                    "Animal Handling",
-                    "Athletics",
-                    "Insight",
-                    "Investigation",
-                    "Nature",
-                    "Perception",
-                    "Stealth",
-                    "Survival"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
-                "(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-                "(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-                "A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
-            ],
-            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "dex": 13,
-                "wis": 13
-            },
-            "proficienciesGained": {
-                "armor": [
-                    "light",
-                    "medium",
-                    "shields"
-                ],
-                "skills": {
-                    "choose": 1,
-                    "from": [
-                        "Animal Handling",
-                        "Athletics",
-                        "Insight",
-                        "Investigation",
-                        "Nature",
-                        "Perception",
-                        "Stealth",
-                        "Survival"
-                    ]
-                },
-                "weapons": [
-                    "simple",
-                    "martial"
-                ]
-            }
-        },
         "classFeatures": [
             [
                 {
@@ -26070,6 +27434,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -26105,6 +27480,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 },
                 {
                     "name": "Land's Stride",
@@ -26156,6 +27542,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -26189,6 +27586,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -26207,6 +27615,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -26222,6 +27641,9 @@ export default [
         "subclasses": [
             {
                 "name": "Hunter",
+                "shortName": "Hunter",
+                "source": "PHB",
+                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -26409,12 +27831,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Hunter"
+                ]
             },
             {
                 "name": "Beast Master",
+                "shortName": "Beast Master",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -26488,12 +27910,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Beast Master"
+                ]
             },
             {
                 "name": "Deep Stalker (UA)",
+                "shortName": "Deep Stalker (UA)",
+                "source": "UALightDarkUnderdark",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -26590,12 +28013,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UALightDarkUnderdark",
-                "shortName": "Deep Stalker (UA)"
+                ]
             },
             {
                 "name": "Horizon Walker (UA)",
+                "shortName": "Horizon Walker (UA)",
+                "source": "UARangerAndRogue",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -26703,12 +28127,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARangerAndRogue",
-                "shortName": "Horizon Walker (UA)"
+                ]
             },
             {
                 "name": "Primeval Guardian (UA)",
+                "shortName": "Primeval Guardian (UA)",
+                "source": "UARangerAndRogue",
                 "subclassFeatures": [
                     [
                         {
@@ -26823,12 +28247,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARangerAndRogue",
-                "shortName": "Primeval Guardian (UA)"
+                ]
             },
             {
                 "name": "Monster Slayer (UA)",
+                "shortName": "Monster Slayer (UA)",
+                "source": "UAATrioOfSubclasses",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -26927,12 +28352,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAATrioOfSubclasses",
-                "shortName": "Monster Slayer (UA)"
+                ]
             },
             {
                 "name": "Gloom Stalker",
+                "shortName": "Gloom Stalker",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -27038,12 +28463,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Gloom Stalker"
+                ]
             },
             {
                 "name": "Horizon Walker",
+                "shortName": "Horizon Walker",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -27057,7 +28482,7 @@ export default [
                                         "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
                                         {
                                             "type": "table",
-                                            "caption": " Spells",
+                                            "caption": "Horizon Walker Spells",
                                             "colLabels": [
                                                 "Ranger Level",
                                                 "Spells"
@@ -27152,12 +28577,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Horizon Walker"
+                ]
             },
             {
                 "name": "Monster Slayer",
+                "shortName": "Monster Slayer",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -27171,7 +28596,7 @@ export default [
                                         "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Monster Slayer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
                                         {
                                             "type": "table",
-                                            "caption": " Spells",
+                                            "caption": "Monster Slayer Spells",
                                             "colLabels": [
                                                 "Ranger Level",
                                                 "Spells"
@@ -27264,12 +28689,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Monster Slayer"
+                ]
             },
             {
                 "name": "Swarmkeeper (UA)",
+                "shortName": "Swarmkeeper (UA)",
+                "source": "UAFighterRangerRogue",
                 "subclassFeatures": [
                     [
                         {
@@ -27284,7 +28709,7 @@ export default [
                                         "You learn the mage hand cantrip if you don't already know it. When you cast it, the hand takes the form of swarming nature spirits. You also learn an additional spell when you reach certain levels in this class, as shown in the Swarmkeeper Spells table. These spells count as ranger spells for you, but don't count against the number of ranger spells you know.",
                                         {
                                             "type": "table",
-                                            "caption": " Swarmkeeper Spells",
+                                            "caption": "Swarmkeeper Spells",
                                             "colLabels": [
                                                 "Ranger Level",
                                                 "Spells"
@@ -27394,9 +28819,7 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighterRangerRogue",
-                "shortName": "Swarmkeeper (UA)"
+                ]
             }
         ],
         "fluff": [
@@ -27685,12 +29108,12 @@ export default [
                 "page": 40,
                 "source": "XGE"
             }
-        ],
-        "page": 89
+        ]
     },
     {
-        "name": "Ranger (Revised)",
-        "source": "UATheRangerRevised",
+        "name": "Ranger (Spell-less)",
+        "source": "UAModifyingClasses",
+        "page": 5,
         "hd": {
             "number": 1,
             "faces": 10
@@ -27698,229 +29121,6 @@ export default [
         "proficiency": [
             "str",
             "dex"
-        ],
-        "spellcastingAbility": "wis",
-        "casterProgression": "1/2",
-        "classTableGroups": [
-            {
-                "colLabels": [
-                    "{@filter Spells Known|spells|class=ranger}"
-                ],
-                "rows": [
-                    [
-                        0
-                    ],
-                    [
-                        2
-                    ],
-                    [
-                        3
-                    ],
-                    [
-                        3
-                    ],
-                    [
-                        4
-                    ],
-                    [
-                        4
-                    ],
-                    [
-                        5
-                    ],
-                    [
-                        5
-                    ],
-                    [
-                        6
-                    ],
-                    [
-                        6
-                    ],
-                    [
-                        7
-                    ],
-                    [
-                        7
-                    ],
-                    [
-                        8
-                    ],
-                    [
-                        8
-                    ],
-                    [
-                        9
-                    ],
-                    [
-                        9
-                    ],
-                    [
-                        10
-                    ],
-                    [
-                        10
-                    ],
-                    [
-                        11
-                    ],
-                    [
-                        11
-                    ]
-                ]
-            },
-            {
-                "title": "Spell Slots per Spell Level",
-                "colLabels": [
-                    "{@filter 1st|spells|level=1|class=Ranger}",
-                    "{@filter 2nd|spells|level=2|class=Ranger}",
-                    "{@filter 3rd|spells|level=3|class=Ranger}",
-                    "{@filter 4th|spells|level=4|class=Ranger}",
-                    "{@filter 5th|spells|level=5|class=Ranger}"
-                ],
-                "rows": [
-                    [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        2,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        3,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        3,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        2,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        2,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        2,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        2,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        0,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        1,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        1,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        2,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        2,
-                        0
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        3,
-                        1
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        3,
-                        1
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        3,
-                        2
-                    ],
-                    [
-                        4,
-                        3,
-                        3,
-                        3,
-                        2
-                    ]
-                ]
-            }
         ],
         "startingProficiencies": {
             "armor": [
@@ -27932,19 +29132,23 @@ export default [
                 "simple",
                 "martial"
             ],
-            "skills": {
-                "choose": 3,
-                "from": [
-                    "Animal Handling",
-                    "Athletics",
-                    "Insight",
-                    "Investigation",
-                    "Nature",
-                    "Perception",
-                    "Stealth",
-                    "Survival"
-                ]
-            }
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "animal handling",
+                            "athletics",
+                            "insight",
+                            "investigation",
+                            "nature",
+                            "perception",
+                            "stealth",
+                            "survival"
+                        ],
+                        "count": 3
+                    }
+                }
+            ]
         },
         "startingEquipment": {
             "additionalFromBackground": true,
@@ -27956,2050 +29160,6 @@ export default [
             ],
             "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
         },
-        "classFeatures": [
-            [
-                {
-                    "name": "Favored Enemy",
-                    "entries": [
-                        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy commonly encountered in the wilds.",
-                        "Choose a type of favored enemy: {@filter beasts|bestiary|type=beast}, {@filter fey|bestiary|type=fey}, {@filter humanoids|bestiary|type=humanoid}, {@filter monstrosities|bestiary|type=monstrosity}, or {@filter undead|bestiary|type=undead}. You gain a +2 bonus to damage rolls with weapon attacks against creatures of the chosen type. Additionally, you have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-                        "When you gain this feature, you also learn one language of your choice, typically one spoken by your favored enemy or creatures associated with it. However, you are free to pick any language you wish to learn."
-                    ]
-                },
-                {
-                    "name": "Natural Explorer",
-                    "entries": [
-                        "You are a master of navigating the natural world, and you react with swift and decisive action when attacked. This grants you the following benefits:",
-                        {
-                            "type": "list",
-                            "items": [
-                                "You ignore difficult terrain.",
-                                "You have advantage on initiative rolls.",
-                                "On your first turn during combat, you have advantage on attack rolls against creatures that have not yet acted."
-                            ]
-                        },
-                        "In addition, you are skilled at navigating the wilderness. You gain the following benefits when traveling for an hour or more:",
-                        {
-                            "type": "list",
-                            "items": [
-                                "Difficult terrain doesn't slow your group's travel.",
-                                "Your group can't become lost except by magical means.",
-                                "Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-                                "If you are traveling alone, you can move stealthily at a normal pace.",
-                                "When you forage, you find twice as much food as you normally would.",
-                                "While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area."
-                            ]
-                        }
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Spellcasting",
-                    "entries": [
-                        "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does. See {@book chapter 10|PHB|10} for the general rules of spellcasting and chapter 11 for the {@filter ranger spell list|spells|class=ranger}.",
-                        {
-                            "type": "entries",
-                            "name": "Spell Slots",
-                            "entries": [
-                                "The Ranger table shows how many spell slots you have to cast your {@filter ranger spells|spells|class=ranger} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-                                "For example, if you know the 1st-level spell {@spell animal friendship} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell animal friendship} using either slot."
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "name": "Spells Known of 1st Level and Higher",
-                            "entries": [
-                                "You know two 1st-level spells of your choice from the ranger spell list.",
-                                "The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
-                                "Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots."
-                            ]
-                        },
-                        {
-                            "type": "entries",
-                            "name": "Spellcasting Ability",
-                            "entries": [
-                                "Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.",
-                                {
-                                    "type": "abilityDc",
-                                    "name": "Spell",
-                                    "attributes": [
-                                        "wis"
-                                    ]
-                                },
-                                {
-                                    "type": "abilityAttackMod",
-                                    "name": "Spell",
-                                    "attributes": [
-                                        "wis"
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Fighting Style",
-                    "entries": [
-                        "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
-                        {
-                            "type": "options",
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Archery",
-                                    "entries": [
-                                        "You gain a +2 bonus to attack rolls you make with ranged weapons."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Close Quarters Shooter",
-                                    "entries": [
-                                        "When making a ranged attack while you are within 5 feet of a hostile creature, you do not have disadvantage on the attack roll. Your ranged attacks ignore half cover and three-quarters cover against targets within 30 feet of you. You have a +1 bonus to attack rolls on ranged attacks."
-                                    ],
-                                    "source": "UALightDarkUnderdark"
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Defense",
-                                    "entries": [
-                                        "While you are wearing armor, you gain a +1 bonus to AC."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Dueling",
-                                    "entries": [
-                                        "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Mariner",
-                                    "entries": [
-                                        "As long as you are not wearing heavy armor or using a shield, you have a swimming speed and a climbing speed equal to your normal speed, and you gain a +1 bonus to AC."
-                                    ],
-                                    "source": "UAWaterborneAdventures"
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Tunnel Fighter",
-                                    "entries": [
-                                        "As a bonus action, you can enter a defensive stance that lasts until the start of your next turn. While in your defensive stance, you can make opportunity attacks without using your reaction, and you can use your reaction to make a melee attack against a creature that moves more than 5 feet while within your reach."
-                                    ],
-                                    "source": "UALightDarkUnderdark"
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Two-Weapon Fighting",
-                                    "entries": [
-                                        "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Blind Fighting",
-                                    "entries": [
-                                        "Being unable to see a creature doesn't impose disadvantage on your attack rolls against it, provided the creature isn't hidden from you."
-                                    ],
-                                    "source": "UAClassFeatureVariants",
-                                    "page": 12
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Interception",
-                                    "entries": [
-                                        "When a creature you can see hits a target that is within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by {@dice 1d10} + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction."
-                                    ],
-                                    "source": "UAClassFeatureVariants",
-                                    "page": 12
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Thrown Weapon Fighting",
-                                    "entries": [
-                                        "You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
-                                        "In addition, when you hit with a ranged attack using a thrown weapon, you gain a +1 bonus to the damage roll."
-                                    ],
-                                    "source": "UAClassFeatureVariants",
-                                    "page": 12
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Unarmed Fighting",
-                                    "entries": [
-                                        "Your unarmed strikes can deal bludgeoning damage equal to {@dice 1d6} + your Strength modifier. If you strike with two free hands, the {@dice d6} becomes a {@dice d8}.",
-                                        "When you successfully start a grapple, you can deal {@dice 1d4} bludgeoning damage to the grappled creature. Until the grapple ends, you can also deal this damage to the creature whenever you hit it with a melee attack."
-                                    ],
-                                    "source": "UAClassFeatureVariants",
-                                    "page": 12
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Druidic Warrior",
-                                    "entries": [
-                                        "You learn two cantrips of your choice from the {@filter druid spell list|spells|level=0|class=druid}. They count as druid spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list."
-                                    ],
-                                    "source": "UAClassFeatureVariants",
-                                    "page": 7
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Martial Versatility",
-                    "entries": [
-                        "{@i 2nd-level feature (enhances Fighting Style)}",
-                        "Whenever you gain a level in this class, you can replace a fighting style you know with another style available to your class. This change represents a shift of focus in your martial training and practice, causing you to lose the benefits of one style and gain the benefits of another style."
-                    ],
-                    "source": "UAClassFeatureVariants",
-                    "page": 12
-                }
-            ],
-            [
-                {
-                    "name": "Primeval Awareness",
-                    "entries": [
-                        "Beginning at 3rd level, your mastery of ranger lore allows you to establish a powerful link to beasts and to the land around you.",
-                        "You have an innate ability to communicate with beasts, and they recognize you as a kindred spirit. Through sounds and gestures, you can communicate simple ideas to a beast as an action, and can read its basic mood and intent. You learn its emotional state, whether it is affected by magic of any sort, its short-term needs (such as food or safety), and actions you can take (if any) to persuade it to not attack.",
-                        "You cannot use this ability against a creature that you have attacked within the past 10 minutes.",
-                        "Additionally, you can attune your senses to determine if any of your favored enemies lurk nearby. By spending 1 uninterrupted minute in concentration (as if you were concentrating on a spell), you can sense whether any of your favored enemies are present within 5 miles of you. This feature reveals which of your favored enemies are present, their numbers, and the creatures' general direction and distance (in miles) from you.",
-                        "If there are multiple groups of your favored enemies within range, you learn this information for each group."
-                    ]
-                },
-                {
-                    "name": "Ranger Conclave",
-                    "entries": [
-                        "At 3rd level, you choose to emulate the ideals and training of a ranger conclave from the list of available conclaves. Your choice grants you features at 3rd level and again at 5th, 7th, 11th, and 15th level."
-                    ],
-                    "gainSubclassFeature": true
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ranger Conclave feature",
-                    "entries": [
-                        "At 5th level, you gain a feature granted to you by your Ranger Conclave."
-                    ],
-                    "gainSubclassFeature": true
-                }
-            ],
-            [
-                {
-                    "name": "Greater Favored Enemy",
-                    "entries": [
-                        "At 6th level, you are ready to hunt even deadlier game. Choose a type of greater favored enemy: {@filter aberrations|bestiary|type=aberration}, {@filter celestials|bestiary|type=celestial}, {@filter constructs|bestiary|type=construct}, {@filter dragons|bestiary|type=dragon}, {@filter elementals|bestiary|type=elemental}, {@filter fiends|bestiary|type=fiend}, or {@filter giants|bestiary|type=giant}. You gain all the benefits against this chosen enemy that you normally gain against your favored enemy, including an additional language. Your bonus to damage rolls against all your favored enemies increases to +4.",
-                        "Additionally, you have advantage on saving throws against the spells and abilities used by a greater favored enemy."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ranger Conclave feature",
-                    "entries": [
-                        "At 7th level, you gain a feature granted to you by your Ranger Conclave."
-                    ],
-                    "gainSubclassFeature": true
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-                    ]
-                },
-                {
-                    "name": "Fleet of Foot",
-                    "entries": [
-                        "Beginning at 8th level, you can use the {@action Dash} action as a bonus action on your turn."
-                    ]
-                }
-            ],
-            [],
-            [
-                {
-                    "name": "Hide in Plain Sight",
-                    "entries": [
-                        "Starting at 10th level, you can remain perfectly still for long periods of time to set up ambushes.",
-                        "When you attempt to hide on your turn, you can opt to not move on that turn. If you avoid moving, creatures that attempt to detect you take a -10 penalty to their Wisdom ({@skill Perception}) checks until the start of your next turn. You lose this benefit if you move or fall {@condition prone}, either voluntarily or because of some external effect. You are still automatically detected if any effect or action causes you to no longer be hidden.",
-                        "If you are still hidden on your next turn, you can continue to remain motionless and gain this benefit until you are detected."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ranger Conclave feature",
-                    "entries": [
-                        "At 11th level, you gain a feature granted to you by your Ranger Conclave."
-                    ],
-                    "gainSubclassFeature": true
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-                    ]
-                }
-            ],
-            [],
-            [
-                {
-                    "name": "Vanish",
-                    "entries": [
-                        "Starting at 14th level, you can use the {@action Hide} action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ranger Conclave feature",
-                    "entries": [
-                        "At 15th level, you gain a feature granted to you by your Ranger Conclave."
-                    ],
-                    "gainSubclassFeature": true
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-                    ]
-                }
-            ],
-            [],
-            [
-                {
-                    "name": "Feral Senses",
-                    "entries": [
-                        "At 18th level, you gain preternatural senses that help you fight creatures you can't see. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it. You are also aware of the location of any {@condition invisible} creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't {@condition blinded} or {@condition deafened}."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Foe Slayer",
-                    "entries": [
-                        "At 20th level, you become an unparalleled hunter. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
-                    ]
-                }
-            ]
-        ],
-        "subclassTitle": "Ranger Conclave",
-        "subclasses": [
-            {
-                "name": "Beast Conclave",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Beast Conclave (UA)",
-                            "entries": [
-                                "Many rangers are more at home in the wilds than in civilization, to the point where animals consider them kin. Rangers of the Beast Conclave develop a close bond with a beast, then further strengthen that bond through the use of magic.",
-                                {
-                                    "type": "entries",
-                                    "name": "Animal Companion",
-                                    "entries": [
-                                        "At 3rd level, you learn to use your magic to create a powerful bond with a creature of the natural world.",
-                                        "With 8 hours of work and the expenditure of 50 gp worth of rare herbs and fine food, you call forth an animal from the wilderness to serve as your faithful companion. You normally select you companion from among the following animals: an {@creature ape}, a {@creature black bear}, a {@creature boar}, a {@creature giant badger}, a {@creature giant weasel}, a {@creature mule}, a {@creature panther}, or a {@creature wolf}. However, your DM might pick one of these animals for you, based on the surrounding terrain and on what types of creatures would logically be present in the area.",
-                                        "At the end of the 8 hours, your animal companion appears and gains all the benefits of your Companion's Bond ability. You can have only one animal companion at a time.",
-                                        "If your animal companion is ever slain, the magical bond you share allows you to return it to life. With 8 hours of work and the expenditure of 25 gp worth of rare herbs and fine food, you call forth your companion's spirit and use your magic to create a new body for it. You can return an animal companion to life in this manner even if you do not possess any part of its body.",
-                                        "If you use this ability to return a former animal companion to life while you have a current animal companion, your current companion leaves you and is replaced by the restored companion."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Companion's Bond",
-                                    "entries": [
-                                        "Your animal companion gains a variety of benefits while it is linked to you.",
-                                        "The animal companion loses its Multiattack action, if it has one.",
-                                        "The companion obeys your commands as best it can. It rolls for initiative like any other creature, but you determine its actions, decisions, attitudes, and so on. If you are {@condition incapacitated} or absent, your companion acts on its own.",
-                                        "When using your Natural Explorer feature, you and your animal companion can both move stealthily at a normal pace.",
-                                        "Your animal companion has abilities and game statistics determined in part by your level. Your companion uses your proficiency bonus rather than its own. In addition to the areas where it normally uses its proficiency bonus, an animal companion also adds its proficiency bonus to its AC and to its damage rolls.",
-                                        "Your animal companion gains proficiency in two skills of your choice. It also becomes proficient with all saving throws.",
-                                        "For each level you gain after 3rd, your animal companion gains an additional hit die and increases its hit points accordingly.",
-                                        "Whenever you gain the Ability Score Improvement class feature, your companion's abilities also improve. Your companion can increase one ability score of your choice by 2, or it can increase two ability scores of your choice by 1. As normal, your companion can't increase an ability score above 20 using this feature unless its description specifies otherwise.",
-                                        "Your companion shares your alignment, and has a personality trait and a flaw that you can roll for or select from the tables below. Your companion shares your ideal, and its bond is always, \"The ranger who travels with me is a beloved companion for whom I would gladly give my life.\"",
-                                        "Your animal companion gains the benefits of your Favored Enemy feature, and of your Greater Favored Enemy feature when you gain that feature at 6th level. It uses the favored enemies you selected for those features.",
-                                        {
-                                            "type": "table",
-                                            "caption": "Companion Trait",
-                                            "colLabels": [
-                                                "d6",
-                                                "Trait"
-                                            ],
-                                            "colStyles": [
-                                                "col-1 text-center",
-                                                "col-11"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "1",
-                                                    "I'm dauntless in the face of adversity."
-                                                ],
-                                                [
-                                                    "2",
-                                                    "Threaten my friends, threaten me."
-                                                ],
-                                                [
-                                                    "3",
-                                                    "I stay on alert so others can rest."
-                                                ],
-                                                [
-                                                    "4",
-                                                    "People see an animal and underestimate me."
-                                                ],
-                                                [
-                                                    "5",
-                                                    "I have a knack for showing up in the nick of time."
-                                                ],
-                                                [
-                                                    "6",
-                                                    "I put my friends' needs before my own in all things."
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "type": "table",
-                                            "caption": "Companion Flaw",
-                                            "colLabels": [
-                                                "d6",
-                                                "Flaw"
-                                            ],
-                                            "colStyles": [
-                                                "col-1 text-center",
-                                                "col-11"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "1",
-                                                    "If there's food left unattended, I'll eat it."
-                                                ],
-                                                [
-                                                    "2",
-                                                    "I growl at strangers, and all people except my ranger are strangers to me."
-                                                ],
-                                                [
-                                                    "3",
-                                                    "Any time is a good time for a belly rub."
-                                                ],
-                                                [
-                                                    "4",
-                                                    "I'm deathly afraid of water."
-                                                ],
-                                                [
-                                                    "5",
-                                                    "My idea of hello is a flurry of licks to the face."
-                                                ],
-                                                [
-                                                    "6",
-                                                    "I jump on creatures to tell them how much I love them."
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Coordinated Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you and your animal companion form a more potent fighting force. When you use the {@action Attack} action on your turn, if your companion can see you, it can use its reaction to make a melee attack."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Beast's Defense",
-                                    "entries": [
-                                        "At 7th level, while your companion can see you, it has advantage on all saving throws."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Storm of Claw and Fangs",
-                                    "entries": [
-                                        "At 11th level, your companion can use its action to make a melee attack against each creature of its choice within 5 feet of it, with a separate attack roll for each target."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Superior Beast's Defense",
-                                    "entries": [
-                                        "At 15th level, whenever an attacker that your companion can see hits it with an attack, it can use its reaction to halve the attack's damage against it."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "UATheRangerRevised",
-                "shortName": "Beast Conclave"
-            },
-            {
-                "name": "Hunter Conclave",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Hunter Conclave (UA)",
-                            "entries": [
-                                "Some rangers seek to master weapons to better protect civilization from the terrors of the wilderness. Members of the Hunter Conclave learn specialized fighting techniques for use against the most dire threats, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
-                                {
-                                    "type": "entries",
-                                    "name": "Hunter's Prey",
-                                    "entries": [
-                                        "At 3rd level, you gain one of the following features of your choice: Colossus Slayer, Giant Killer, or Horde Breaker.",
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Colossus Slayer",
-                                                    "entries": [
-                                                        "Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it's below its hit point maximum. You can deal this extra damage only once per turn."
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Giant Killer",
-                                                    "entries": [
-                                                        "When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature."
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Horde Breaker",
-                                                    "entries": [
-                                                        "Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon."
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Defensive Tactics",
-                                    "entries": [
-                                        "At 7th level, you gain one of the following features of your choice: Escape the Horde, Multiattack Defense, or Steel Will.",
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Escape the Horde",
-                                                    "entries": [
-                                                        "Opportunity attacks against you are made with disadvantage."
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Multiattack Defense",
-                                                    "entries": [
-                                                        "When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn."
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Steel Will",
-                                                    "entries": [
-                                                        "You have advantage on saving throws against being {@condition frightened}."
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Multiattack",
-                                    "entries": [
-                                        "At 11th level, you gain one of the following features of your choice: Volley or Whirlwind Attack.",
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Volley",
-                                                    "entries": [
-                                                        "You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target."
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Whirlwind Attack",
-                                                    "entries": [
-                                                        "You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target."
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Superior Hunter's Defense",
-                                    "entries": [
-                                        "At 15th level, you gain one of the following features of your choice: Evasion, Stand Against the Tide, or Uncanny {@action Dodge}.",
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Evasion",
-                                                    "entries": [
-                                                        "When you are subjected to an effect, such as a red dragon's fiery breath or a {@spell lightning bolt} spell, that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on a saving throw, and only half damage if you fail"
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Stand Against the Tide",
-                                                    "entries": [
-                                                        "When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice."
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entries",
-                                            "entries": [
-                                                {
-                                                    "type": "entries",
-                                                    "name": "Uncanny Dodge",
-                                                    "entries": [
-                                                        "When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "UATheRangerRevised",
-                "shortName": "Hunter Conclave"
-            },
-            {
-                "name": "Deep Stalker Conclave",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Deep Stalker Conclave (UA)",
-                            "entries": [
-                                "Most folk descend into the depths of the Underdark only under the most pressing conditions, undertaking some desperate quest or following the promise of vast riches. All too often, evil festers beneath the earth unnoticed, and rangers of the Deep Stalker Conclave strive to uncover and defeat such threats before they can reach the surface.",
-                                {
-                                    "type": "entries",
-                                    "name": "Deep Stalker Magic",
-                                    "entries": [
-                                        "At 3rd level, you have darkvision out to a range of 90 feet. If you already have darkvision, you increase its range by 30 feet. You also gain access to additional spells at 3rd, 5th, 9th, 13th, and 15th level. Once you gain a deep stalker spell, it counts as a ranger spell for you but doesn't count against the number of rangers spells you know.",
-                                        {
-                                            "type": "table",
-                                            "caption": "Deep Stalker Spells",
-                                            "colLabels": [
-                                                "Ranger Level",
-                                                "Spells"
-                                            ],
-                                            "colStyles": [
-                                                "col-3 text-center",
-                                                "col-9"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "3rd",
-                                                    "{@spell disguise self}"
-                                                ],
-                                                [
-                                                    "5th",
-                                                    "{@spell rope trick}"
-                                                ],
-                                                [
-                                                    "9th",
-                                                    "{@spell glyph of warding}"
-                                                ],
-                                                [
-                                                    "13th",
-                                                    "{@spell greater invisibility}"
-                                                ],
-                                                [
-                                                    "17th",
-                                                    "{@spell seeming}"
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Underdark Scout",
-                                    "entries": [
-                                        "At 3rd level, you master the art of the ambush. On your first turn during combat, you gain a +10 bonus to your speed and if you use the attack action on that turn, you can make one additional attack. You are also adept at evading creatures that rely on darkvision. Such creatures gain no benefit when attempting to detect you in dark and dim conditions. Additionally, when the DM determines if you can hide from a creature, that creature gains no benefit from its darkvision."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Iron Mind",
-                                    "entries": [
-                                        "At 7th level, you gain proficiency in Wisdom saving throws."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Stalker's Flurry",
-                                    "entries": [
-                                        "Starting at 11th level, once on each of your turns when you miss with an attack, you can make another attack. You can gain one additional attack during your turn with this ability."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Stalker's Dodge",
-                                    "entries": [
-                                        "At 15th level, whenever a creature attacks you and does not have advantage, you can use your reaction to impose disadvantage on the creature's attack roll against you. You can use this feature before or after the attack roll is made, but it must be used before the outcome of the roll is determined."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "UATheRangerRevised",
-                "shortName": "Deep Stalker Conclave"
-            },
-            {
-                "name": "Horizon Walker (UA)",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Horizon Walker",
-                            "entries": [
-                                "Rangers of the Horizon Conclave guard the world against threats that originate from other planes. They seek out planar portals and keep watch over them, venturing to the outer and inner planes as needed to defeat threats.",
-                                {
-                                    "type": "entries",
-                                    "name": "Planar Magic",
-                                    "entries": [
-                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, and it doesn't count against the number of ranger spells you know.",
-                                        {
-                                            "type": "table",
-                                            "caption": "Horizon Walker Spells",
-                                            "colLabels": [
-                                                "Ranger Level",
-                                                "Spells"
-                                            ],
-                                            "colStyles": [
-                                                "col-3 text-center",
-                                                "col-9"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "3rd",
-                                                    "{@spell protection from evil and good}"
-                                                ],
-                                                [
-                                                    "5th",
-                                                    "{@spell alter self}"
-                                                ],
-                                                [
-                                                    "9th",
-                                                    "{@spell protection from energy}"
-                                                ],
-                                                [
-                                                    "13th",
-                                                    "{@spell banishment}"
-                                                ],
-                                                [
-                                                    "17th",
-                                                    "{@spell teleportation circle}"
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Planar Warrior",
-                                    "entries": [
-                                        "At 3rd level, you learn to draw on the energy of the planes to augment your attacks.",
-                                        "As a bonus action, choose one creature you can see within 30 feet of you. Until the end of this turn, your attacks against that creature ignore its damage resistances, and the next time you hit it on this turn, it takes an additional 1d6 force damage."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Portal Lore",
-                                    "entries": [
-                                        "At 3rd level, you gain the ability to detect the presence of planar portals. As an action, you detect the distance and direction to any planar portals within 1,000 feet of you. You also sense which plane of existence each portal leads to. However, if magic obscures any details of a portal, this feature doesn't reveal them.",
-                                        "Once you use this feature, you can't use it again until you finish a short or long rest. Alternatively, you can use the feature again if you expend a spell slot of 2nd level or higher.",
-                                        "See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Ethereal Step",
-                                    "entries": [
-                                        "At 7th level, you learn to step through the Ethereal Plane. As a bonus action on your turn, you can cast the {@spell etherealness} spell with this feature, but the spell ends at the end of the current turn. Once you use this feature, you can't use it again until you finish a short or long rest."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Distant Strike",
-                                    "entries": [
-                                        "At 11th level, you gain the ability to step between the planes in a blink of an eye. When you use the {@action Attack} action, you can teleport up to 10 feet before each attack. You must be able to see the destination of the teleportation.",
-                                        "If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Spectral Defense",
-                                    "entries": [
-                                        "At 15th level, your ability to move between planes becomes even more finely tuned. As a reaction when you take damage, you can halve that damage against you. For a moment, you slip into the planar boundary to lessen the harm."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "UARangerAndRogue",
-                "shortName": "Horizon Walker (UA)"
-            },
-            {
-                "name": "Primeval Guardian (UA)",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Primeval Guardian",
-                            "entries": [
-                                "Rangers of the Primeval Guardian Conclave follow an ancient tradition rooted in powerful druidic magic. These rangers learn to become one with nature, allowing them to channel the aspects of various beasts and plants in order to overcome their foes.",
-                                "These rangers dwell in the elder forests of the world. They venture out only rarely, as they consider it their sacred duty to protect the druidic groves and ancient trees that saw the earliest days of the world.",
-                                {
-                                    "type": "entries",
-                                    "name": "Guardian Magic",
-                                    "entries": [
-                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Primeval Guardian Spells table. The spell counts as a ranger spell for you, and it doesn't count against the number of ranger spells you know.",
-                                        {
-                                            "type": "table",
-                                            "caption": "Primeval Guardian Spells",
-                                            "colLabels": [
-                                                "Ranger Level",
-                                                "Spells"
-                                            ],
-                                            "colStyles": [
-                                                "col-3 text-center",
-                                                "col-9"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "3rd",
-                                                    "{@spell entangle}"
-                                                ],
-                                                [
-                                                    "5th",
-                                                    "{@spell enhance ability}"
-                                                ],
-                                                [
-                                                    "9th",
-                                                    "{@spell conjure animals}"
-                                                ],
-                                                [
-                                                    "13th",
-                                                    "{@spell giant insect}"
-                                                ],
-                                                [
-                                                    "17th",
-                                                    "{@spell insect plague}"
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Guardian Soul",
-                                    "entries": [
-                                        "Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition incapacitated}.",
-                                        "You undergo the following changes while in your guardian form:",
-                                        {
-                                            "type": "list",
-                                            "items": [
-                                                "Your size becomes Large, unless you were larger.",
-                                                "Any speed you have becomes 5 feet, unless the speed was lower.",
-                                                "Your reach increases by 5 feet.",
-                                                "You gain a number of temporary hit points at the start of each of your turns. The number equals half your ranger level. When the form ends, you lose any temporary hit points you have from it."
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Piercing Thorns",
-                                    "entries": [
-                                        "At 3rd level, your command of primal magic allows you to enhance your attacks with thorns. Once during each of your turns, you can deal an additional 1d6 piercing damage to one creature you hit with a weapon attack."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Ancient Fortitude",
-                                    "entries": [
-                                        "At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Rooted Defense",
-                                    "entries": [
-                                        "At 11th level, you gain the ability to twist and turn the ground beneath you. While you are in your guardian form, the ground within 30 feet of you is difficult terrain for your enemies."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Guardian Aura",
-                                    "entries": [
-                                        "Starting at 15th level, your guardian form emanates a magical aura that fortifies your injured allies. When any ally starts their turn within 30 feet of your guardian form, that ally regains a number of hit points equal to half your ranger level. This aura has no effect on a creature that has half or more of its hit points, and it has no effect on undead and constructs."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "UARangerAndRogue",
-                "shortName": "Primeval Guardian (UA)"
-            },
-            {
-                "name": "Monster Slayer (UA)",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Monster Slayer",
-                            "entries": [
-                                "Rangers of the Slayer Conclave seek out vampires, dragons, evil fey, fiends, and other powerful magical threats. Trained in a variety of arcane and divine techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty foes.",
-                                {
-                                    "type": "entries",
-                                    "name": "Slayer's Mysticism",
-                                    "entries": [
-                                        "You learn an additional spell when you reach certain levels in this class, as shown in the Slayer Spells table. The spell counts as a ranger spell for you but doesn't count against the number of ranger spells you know.",
-                                        {
-                                            "type": "table",
-                                            "caption": "Monster Slayer Spells",
-                                            "colLabels": [
-                                                "Ranger Level",
-                                                "Spells"
-                                            ],
-                                            "colStyles": [
-                                                "col-3 text-center",
-                                                "col-9"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "3rd",
-                                                    "{@spell protection from evil and good}"
-                                                ],
-                                                [
-                                                    "5th",
-                                                    "{@spell zone of truth}"
-                                                ],
-                                                [
-                                                    "9th",
-                                                    "{@spell magic circle}"
-                                                ],
-                                                [
-                                                    "13th",
-                                                    "{@spell banishment}"
-                                                ],
-                                                [
-                                                    "17th",
-                                                    "{@spell planar binding}"
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Slayer's Eye",
-                                    "entries": [
-                                        "Starting at 3rd level, you gain the ability to study and unravel a creature's defenses. As a bonus action, choose one creature you can see within 120 feet of you. You immediately learn the target's vulnerabilities, immunities, and resistances. You also learn any special effects triggered when the target takes damage, such as fire damage halting its regeneration.",
-                                        "In addition, the first time each turn you hit the target with a weapon attack, the target takes an extra 1d6 damage from the weapon.",
-                                        "This benefit lasts until you target a different creature with this feature or until you finish a short or long rest."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Supernatural Defense",
-                                    "entries": [
-                                        "At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Eye forces you to make a saving throw, add 1d6 to your roll."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Relentless Slayer",
-                                    "entries": [
-                                        "At 11th level, you gain the ability to foil your foe's ability to escape. Your study of folklore and arcane knowledge gives you a key insight to keep your prey cornered. If the target of your Slayer's Eye attempts to teleport, change its shape, travel to another plane of existence, or turn gaseous, you can use your reaction to make a Wisdom check contested by a Wisdom check made by the target. To use this ability, you must be able to see the target and need to be within 30 feet of it. If you succeed, you foil its attempt, causing it to waste the action, bonus action, or reaction it used."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Slayer's Counter",
-                                    "entries": [
-                                        "At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Eye forces you to make a saving throw, you can use your reaction to make one weapon attack against it. You make this attack immediately before making the saving throw. If the attack hits, your save automatically succeeds, in addition to the attack's normal effects."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "UAATrioOfSubclasses",
-                "shortName": "Monster Slayer (UA)"
-            },
-            {
-                "name": "Gloom Stalker",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Gloom Stalker",
-                            "entries": [
-                                "Gloom Stalkers are at home in the darkest places: deep under the earth, in gloomy alleyways, in primeval forests, and wherever else the light dims. Most folk enter such places with trepidation, but a Gloom Stalker ventures boldly into the darkness, seeking to ambush threats before they can reach the broader world. Such rangers are often found in the Underdark, but they will go any place where evil lurks in the shadows.",
-                                {
-                                    "type": "entries",
-                                    "name": "Gloom Stalker Magic",
-                                    "entries": [
-                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Gloom Stalker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-                                        {
-                                            "type": "table",
-                                            "caption": "Gloom Stalker Spells",
-                                            "colLabels": [
-                                                "Ranger Level",
-                                                "Spells"
-                                            ],
-                                            "colStyles": [
-                                                "col-3 text-center",
-                                                "col-9"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "3rd",
-                                                    "{@spell disguise self}"
-                                                ],
-                                                [
-                                                    "5th",
-                                                    "{@spell rope trick}"
-                                                ],
-                                                [
-                                                    "9th",
-                                                    "{@spell fear}"
-                                                ],
-                                                [
-                                                    "13th",
-                                                    "{@spell greater invisibility}"
-                                                ],
-                                                [
-                                                    "17th",
-                                                    "{@spell seeming}"
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Dread Ambusher",
-                                    "entries": [
-                                        "At 3rd level, you master the art of the ambush. You can give yourself a bonus to your initiative rolls equal to your Wisdom modifier.",
-                                        "At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the {@action Attack} action on that turn, you can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra 1d8 damage of the weapon's damage type."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Umbral Sight",
-                                    "entries": [
-                                        "At 3rd level, you gain darkvision out to a range of 60 feet. If you already have darkvision from your race, its range increases by 30 feet.",
-                                        "You are also adept at evading creatures that rely on darkvision. While in darkness, you are {@condition invisible} to any creature that relies on darkvision to see you in that darkness."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Iron Mind",
-                                    "entries": [
-                                        "By 7th level, you have honed your ability to resist the mind-altering powers of your prey. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Stalker's Flurry",
-                                    "entries": [
-                                        "At 11th level, you learn to attack with such unexpected speed that you can turn a miss into another strike. Once on each of your turns when you miss with a weapon attack, you can make another weapon attack as part of the same action."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Shadowy Dodge",
-                                    "entries": [
-                                        "Starting at 15th level, you can dodge in unforeseen ways, with wisps of supernatural shadow around you. Whenever a creature makes an attack roll against you and doesn't have advantage on the roll, you can use your reaction to impose disadvantage on it. You must use this feature before you know the outcome of the attack roll."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "XGE",
-                "shortName": "Gloom Stalker"
-            },
-            {
-                "name": "Horizon Walker",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Horizon Walker",
-                            "entries": [
-                                "Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse—especially benevolent dragons, fey, and elementals—that work to preserve life and the order of the planes.",
-                                {
-                                    "type": "entries",
-                                    "name": "Horizon Walker Magic",
-                                    "entries": [
-                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-                                        {
-                                            "type": "table",
-                                            "caption": " Spells",
-                                            "colLabels": [
-                                                "Ranger Level",
-                                                "Spells"
-                                            ],
-                                            "colStyles": [
-                                                "col-3 text-center",
-                                                "col-9"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "3rd",
-                                                    "{@spell protection from evil and good}"
-                                                ],
-                                                [
-                                                    "5th",
-                                                    "{@spell misty step}"
-                                                ],
-                                                [
-                                                    "9th",
-                                                    "{@spell haste}"
-                                                ],
-                                                [
-                                                    "13th",
-                                                    "{@spell banishment}"
-                                                ],
-                                                [
-                                                    "17th",
-                                                    "{@spell teleportation circle}"
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Detect Portal",
-                                    "entries": [
-                                        "At 3rd level, you gain the ability to magically sense the presence of a planar portal. As an action, you detect the distance and direction to the closest planar portal within 1 mile of you.",
-                                        "Once you use this feature, you can't use it again until you finish a short or long rest.",
-                                        "See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Planar Warrior",
-                                    "entries": [
-                                        "At 3rd level, you learn to draw on the energy of the multiverse to augment your attacks.",
-                                        "As a bonus action, choose one creature you can see within 30 feet of you. The next time you hit that creature on this turn with a weapon attack, all damage dealt by the attack becomes force damage, and the creature takes an extra 1d8 force damage from the attack. When you reach 11th level in this class, the extra damage increases to 2d8."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Ethereal Step",
-                                    "entries": [
-                                        "At 7th level, you learn to step through the Ethereal Plane. As a bonus action, you can cast the {@spell etherealness} spell with this feature, without expending a spell slot, but the spell ends at the end of the current turn.",
-                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Distant Strike",
-                                    "entries": [
-                                        "At 11th level, you gain the ability to pass between the planes in the blink of an eye. When you take the {@action Attack} action, you can teleport up to 10 feet before each attack to an unoccupied space you can see.",
-                                        "If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Spectral Defense",
-                                    "entries": [
-                                        "At 15th level, your ability to move between planes enables you to slip through the planar boundaries to lessen the harm done to you during battle. When you take damage from an attack, you can use your reaction to give yourself resistance to all of that attack's damage on this turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "XGE",
-                "shortName": "Horizon Walker"
-            },
-            {
-                "name": "Monster Slayer",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Monster Slayer",
-                            "entries": [
-                                "You have dedicated yourself to hunting down creatures of the night and wielders of grim magic. A Monster Slayer seeks out vampires, dragons, evil fey, fiends, and other magical threats. Trained in supernatural techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty, mystical foes.",
-                                {
-                                    "type": "entries",
-                                    "name": "Monster Slayer Magic",
-                                    "entries": [
-                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Monster Slayer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
-                                        {
-                                            "type": "table",
-                                            "caption": " Spells",
-                                            "colLabels": [
-                                                "Ranger Level",
-                                                "Spells"
-                                            ],
-                                            "colStyles": [
-                                                "col-3 text-center",
-                                                "col-9"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "3rd",
-                                                    "{@spell protection from evil and good}"
-                                                ],
-                                                [
-                                                    "5th",
-                                                    "{@spell zone of truth}"
-                                                ],
-                                                [
-                                                    "9th",
-                                                    "{@spell magic circle}"
-                                                ],
-                                                [
-                                                    "13th",
-                                                    "{@spell banishment}"
-                                                ],
-                                                [
-                                                    "17th",
-                                                    "{@spell hold monster}"
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Hunter's Sense",
-                                    "entries": [
-                                        "At 3rd level, you gain the ability to peer at a creature and magically discern how best to hurt it. As an action, choose one creature you can see within 60 feet of you. You immediately learn whether the creature has any damage immunities, resistances, or vulnerabilities and what they are. If the creature is hidden from divination magic, you sense that it has no damage immunities, resistances, or vulnerabilities.",
-                                        "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses of it when you finish a long rest."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Slayer's Prey",
-                                    "entries": [
-                                        "Starting at 3rd level, you can focus your ire on one foe, increasing the harm you inflict on it. As a bonus action, you designate one creature you can see within 60 feet of you as the target of this feature. The first time each turn that you hit that target with a weapon attack, it takes an extra 1d6 damage from the weapon.",
-                                        "This benefit lasts until you finish a short or long rest. It ends early if you designate a different creature."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Supernatural Defense",
-                                    "entries": [
-                                        "At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Prey forces you to make a saving throw and whenever you make an ability check to escape that target's grapple, add 1d6 to your roll."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Magic-User's Nemesis",
-                                    "entries": [
-                                        "At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to try to magically foil it. The creature must succeed on a Wisdom saving throw against your spell save DC, or its spell or teleport fails and is wasted.",
-                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Slayer's Counter",
-                                    "entries": [
-                                        "At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Prey forces you to make a saving throw, you can use your reaction to make one weapon attack against the quarry. You make this attack immediately before making the saving throw. If your attack hits, your save automatically succeeds, in addition to the attack's normal effects."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "XGE",
-                "shortName": "Monster Slayer"
-            },
-            {
-                "name": "Swarmkeeper (UA)",
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Swarmkeeper",
-                            "entries": [
-                                "Feeling a deep connection to the world around them, some rangers reach out through their magical connection to nature and gather a host of fey spirits, which take the form of swarming beasts—be they buzzing insects, fluttering birds, slippery squids, or otherwise. The swarm becomes a potent force in battle, as well as helpful—if potentially disturbing—company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
-                                {
-                                    "type": "entries",
-                                    "name": "Swarmkeeper Magic",
-                                    "entries": [
-                                        "{@i 3rd-level Swarmkeeper feature}",
-                                        "You learn the mage hand cantrip if you don't already know it. When you cast it, the hand takes the form of swarming nature spirits. You also learn an additional spell when you reach certain levels in this class, as shown in the Swarmkeeper Spells table. These spells count as ranger spells for you, but don't count against the number of ranger spells you know.",
-                                        {
-                                            "type": "table",
-                                            "caption": " Swarmkeeper Spells",
-                                            "colLabels": [
-                                                "Ranger Level",
-                                                "Spells"
-                                            ],
-                                            "colStyles": [
-                                                "col-3 text-center",
-                                                "col-9"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "3rd",
-                                                    "{@spell faerie fire}"
-                                                ],
-                                                [
-                                                    "5th",
-                                                    "{@spell web}"
-                                                ],
-                                                [
-                                                    "9th",
-                                                    "{@spell gaseous form}"
-                                                ],
-                                                [
-                                                    "13th",
-                                                    "{@spell giant insect}"
-                                                ],
-                                                [
-                                                    "17th",
-                                                    "{@spell insect plague}"
-                                                ]
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Gathered Swarm",
-                                    "entries": [
-                                        "{@i 3rd-level Swarmkeeper feature}",
-                                        "You magically attract a swarm of fey spirits that look like Tiny beasts of your choice. The swarm remains in your space, crawling on you or through your clothing, or flying and skittering immediately around you within your space.",
-                                        "As a bonus action, you can agitate the swarm for 1 minute. For the duration, some of the swarm clings to your weapons or follows your strikes when you attack: once during each of your turns when you hit a creature with a weapon attack, you can deal an extra {@dice 1d6} force damage to that creature, and the swarm moves the creature up to 5 feet toward you or away from you (your choice). At 11th level, the extra damage increases to {@dice 2d6}.",
-                                        "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Extra Attack",
-                                    "entries": [
-                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Writhing Tide",
-                                    "entries": [
-                                        "{@i 7th-level Swarmkeeper feature}",
-                                        "You can condense part of your swarm into a focused mass that lifts or sweeps you along. Whenever you activate your Gathered Swarm feature, choose one of the following additional benefits:",
-                                        {
-                                            "type": "list",
-                                            "items": [
-                                                "Your walking speed increases by 10 feet, and you can take the {@action Disengage} action as a bonus action.",
-                                                "You gain a climb speed equal to your walking speed. You can climb difficult surfaces, including upside down on ceilings, without making an ability check.",
-                                                "You gain a flying speed of 10 feet and can hover."
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Scuttling Eyes",
-                                    "entries": [
-                                        "{@i 11th-level Swarmkeeper feature}",
-                                        "As an action, you can magically form one of the spirits of your swarm into the shape of a Tiny beast of your choice. The transformation lasts for 1 hour, at which point the spirit disappears. For the duration, the spirit has a speed of 40 feet, which it can use to walk, climb, fly, or swim. The spirit has your senses and telepathically relays what it sees and hears to you. During your turn, you can speak through the spirit, telepathically command it to move, and it can {@action Hide} using your bonus to Dexterity ({@skill Stealth}) checks. The spirit has AC 18. If it takes damage, you must succeed on a Wisdom saving throw (DC equal to 10, or half the damage dealt, whichever is higher) or the spirit disappears.",
-                                        "As an action, you can dismiss the spirit early. If you do, you can magically teleport to an unoccupied space within 5 feet of where the spirit disappeared.",
-                                        "Once you use this feature, you can't do so again until you finish a long rest. You can also use it again by expending a spell slot of 3rd level or higher.",
-                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Gathered Swarm Improvement",
-                                    "entries": [
-                                        "{@i 11th-level Swarmkeeper feature}",
-                                        "The extra damage from your swarm increases to {@dice 2d6}."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Storm of Minions",
-                                    "entries": [
-                                        "{@i 15th-level Swarmkeeper feature}",
-                                        "Your swarm can expel a seething storm of spirits that drains life from others. As an action, you create a magical sphere filled with an enraged swarm centered on a point you can see within 120 feet of you. The sphere has a 10-foot-radius and lasts for 1 minute. The sphere is difficult terrain for creatures other than you. A creature other than you that starts its turn in the sphere's area must make a Constitution saving throw against your spell save DC. On a failed save, the creature takes {@dice 2d8} necrotic damage and is {@condition blinded} until the start of its next turn. On a successful save, it takes half as much damage and isn't {@condition blinded}. At the start of your turn, if any number of Small or larger creatures took necrotic damage from the swarm, you regain 1d8 hit points. On subsequent turns, you can use a bonus action to move the sphere up to 30 feet.",
-                                        "When you activate this feature, you can choose any number of creatures you can see to be unaffected by it.",
-                                        "Once you use this feature, you can't do so again until you finish a long rest. You can also use it again by expending a spell slot of 4th level or higher."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ],
-                "source": "UAFighterRangerRogue",
-                "shortName": "Swarmkeeper (UA)"
-            }
-        ],
-        "fluff": [
-            {
-                "entries": [
-                    "Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of steel, cutting down one enemy after another.",
-                    "After tumbling away from a cone of freezing air, an elf finds her feet and draws back her bow to loose an arrow at the white dragon. Shrugging off the wave of fear that emanates from the dragon like the cold of its breath, she sends one arrow after another to find the gaps between the dragon's thick scales.",
-                    "Holding his hand high, a half-elf whistles to the hawk that circles high above him, calling the bird back to his side. Whispering instructions in Elvish, he points to the owlbear he's been tracking and sends the hawk to distract the creature while he readies his bow.",
-                    "Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.",
-                    {
-                        "type": "entries",
-                        "name": "Deadly Hunters",
-                        "entries": [
-                            "Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.",
-                            "Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature's power, much as a druid does. Their spells, like their combat abilities, emphasize speed, stealth, and the hunt. A ranger's talents and abilities are honed with deadly focus on the grim task of protecting the borderlands."
-                        ]
-                    },
-                    {
-                        "type": "entries",
-                        "name": "Independent Adventurers",
-                        "entries": [
-                            "Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first—and possibly the last—line of defense.",
-                            "This fierce independence makes rangers well suited to adventuring, since they are accustomed to life far from the comforts of a dry bed and a hot bath. Faced with city-bred adventurers who grouse and whine about the hardships of the wild, rangers respond with some mixture of amusement, frustration, and compassion. But they quickly learn that other adventurers who can carry their own weight in a fight against civilization's foes are worth any extra burden. Coddled city folk might not know how to feed themselves or find fresh water in the wild, but they make up for it in other ways."
-                        ]
-                    },
-                    {
-                        "type": "entries",
-                        "name": "Creating a Ranger",
-                        "entries": [
-                            "As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger's ways? Did you leave your apprenticeship, or was your mentor slain—perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.",
-                            "What's the source of your particular hatred of a certain kind of enemy? Did a monster kill someone you loved or destroy your home village? Or did you see too much of the destruction these monsters cause and commit yourself to reining in their depredations? Is your adventuring career a continuation of your work in protecting the borderlands, or a significant change? What made you join up with a band of adventurers? Do you find it challenging to teach new allies the ways of the wild, or do you welcome the relief from solitude that they offer?",
-                            {
-                                "type": "entries",
-                                "name": "Quick Build",
-                                "entries": [
-                                    "You can make a ranger quickly by following these suggestions. First, make Dexterity your highest ability score, followed by Wisdom. (Some rangers who focus on two-weapon fighting make Strength higher than Dexterity.) Second, choose the {@background outlander} background."
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "source": "PHB",
-                "page": 89
-            },
-            {
-                "entries": [
-                    {
-                        "type": "quote",
-                        "entries": [
-                            "I spend a lot of my life away from civilization, keeping to its fringes to protect it. Don't assume that because I don't bend the knee to your king that I haven't done more to protect him than all his knights put together."
-                        ],
-                        "by": "Soveliss"
-                    },
-                    "Rangers are free-minded wanderers and seekers who patrol the edges of civilized territory, turning back the denizens of the wild lands beyond. It is a thankless job, since their efforts are rarely understood and almost never rewarded. Yet rangers persist in their duties, never doubting that their work makes the world a safer place.",
-                    "A relationship with civilization informs every ranger's personality and history. Some rangers see themselves as enforcers of the law and bringers of justice on civilization's frontier, answering to no sovereign power. Others are survivalists who eschew civilization altogether. They vanquish monsters to keep themselves safe while they live in and travel through the perilous wild areas of the world. If their efforts also benefit the kingdoms and other civilized realms that they avoid, so be it.",
-                    "If you're creating or playing a ranger character, the following sections offer ideas for embellishing the character and enhancing your roleplaying experience.",
-                    {
-                        "type": "entries",
-                        "name": "View of the World",
-                        "entries": [
-                            "A ranger's view of the world begins (and sometimes ends) with that character's outlook toward civilized folk and the places they occupy. Some rangers have an attitude toward civilization that's deeply rooted in disdain, while others pity the people they have sworn to protect—though on the battlefield, it's impossible to tell the difference between one ranger and another. Indeed, to those who have seen them operate and been the beneficiaries of their prowess, it scarcely matters why rangers do what they do. That said, no two rangers are likely to express their opinions on any matter in the same way.",
-                            "If you haven't yet thought about the details of your character's worldview, consider putting a finer point on things by summarizing that viewpoint in a short statement (such as the entries on the following table). How might that feeling affect the way you conduct yourself?",
-                            {
-                                "type": "table",
-                                "caption": "View of the World",
-                                "colLabels": [
-                                    "{@dice d6}",
-                                    "View"
-                                ],
-                                "colStyles": [
-                                    "col-1 text-center",
-                                    "col-11"
-                                ],
-                                "rows": [
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 1
-                                            }
-                                        },
-                                        "Towns and cities are the best places for those who can't survive on their own."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 2
-                                            }
-                                        },
-                                        "The advancement of civilization is the best way to thwart chaos, but its reach must be monitored."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 3
-                                            }
-                                        },
-                                        "Towns and cities are a necessary evil, but once the wilderness is purged of supernatural threats, we will need them no more."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 4
-                                            }
-                                        },
-                                        "Walls are for cowards, who huddle behind them while others do the work of making the world safe."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 5
-                                            }
-                                        },
-                                        "Visiting a town is not unpleasant, but after a few days I feel the irresistible call to return to the wild."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 6
-                                            }
-                                        },
-                                        "Cities breed weakness by isolating folk from the harsh lessons of the wild."
-                                    ]
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "entries",
-                        "name": "Homelands",
-                        "entries": [
-                            "All rangers, regardless of how they came to take up the profession, have a strong connection to the natural world and its various terrains. For some rangers, the wilderness is where they grew up, either as a result of being born there or moving there at a young age. For other rangers, civilization was originally home, but the wilderness became a second homeland.",
-                            "Think of your character's backstory and decide what terrain feels most like home, whether or not you were born there. What does that terrain say about your personality? Does it influence which spells you choose to learn? Have your experiences there shaped who your favored enemies are?",
-                            {
-                                "type": "table",
-                                "caption": "Homelands",
-                                "colLabels": [
-                                    "{@dice d6}",
-                                    "Homeland"
-                                ],
-                                "colStyles": [
-                                    "col-1 text-center",
-                                    "col-11"
-                                ],
-                                "rows": [
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 1
-                                            }
-                                        },
-                                        "You patrolled an ancient forest, darkened and corrupted by several crossings to the Shadowfell."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 2
-                                            }
-                                        },
-                                        "As part of a group of nomads, you acquired the skills for surviving in the desert."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 3
-                                            }
-                                        },
-                                        "Your early life in the Underdark prepared you for the challenges of combating its denizens."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 4
-                                            }
-                                        },
-                                        "You dwelled on the edge of a swamp, in an area imperiled by land creatures as well as aquatic ones."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 5
-                                            }
-                                        },
-                                        "Because you grew up among the peaks, finding the best path through the mountains is second nature to you."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 6
-                                            }
-                                        },
-                                        "You wandered the far north, learning how to protect yourself and prosper in a realm overrun by ice."
-                                    ]
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "entries",
-                        "name": "Sworn Enemy",
-                        "entries": [
-                            "Every ranger begins with a favored enemy (or two). The determination of a favored enemy might be tied to a specific event in the character's early life, or it might be entirely a matter of choice.",
-                            "What spurred your character to select a particular enemy? Was the choice made because of tradition or curiosity, or do you have a grudge to settle?",
-                            {
-                                "type": "table",
-                                "caption": "Sworn Enemies",
-                                "colLabels": [
-                                    "{@dice d6}",
-                                    "Enemy"
-                                ],
-                                "colStyles": [
-                                    "col-1 text-center",
-                                    "col-11"
-                                ],
-                                "rows": [
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 1
-                                            }
-                                        },
-                                        "You seek revenge on nature's behalf for the great transgressions your foe has committed."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 2
-                                            }
-                                        },
-                                        "Your forebears or predecessors fought these creatures, and so shall you."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 3
-                                            }
-                                        },
-                                        "You bear no enmity toward your foe. You stalk such creatures as a hunter tracks down a wild animal."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 4
-                                            }
-                                        },
-                                        "You find your foe fascinating, and you collect books of tales and history concerning it."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 5
-                                            }
-                                        },
-                                        "You collect tokens of your fallen enemies to remind you of each kill."
-                                    ],
-                                    [
-                                        {
-                                            "type": "cell",
-                                            "roll": {
-                                                "exact": 6
-                                            }
-                                        },
-                                        "You respect your chosen enemy, and you see your battles as a test of respective skills."
-                                    ]
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "page": 40,
-                "source": "XGE"
-            }
-        ],
-        "page": 1
-    },
-    {
-        "name": "Ranger (Spell-less)",
-        "source": "UAModifyingClasses",
-        "hd": {
-            "number": 1,
-            "faces": 10
-        },
-        "proficiency": [
-            "str",
-            "dex"
-        ],
         "classTableGroups": [
             {
                 "colLabels": [
@@ -30069,40 +29229,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium",
-                "shields"
-            ],
-            "weapons": [
-                "simple",
-                "martial"
-            ],
-            "skills": {
-                "choose": 3,
-                "from": [
-                    "Animal Handling",
-                    "Athletics",
-                    "Insight",
-                    "Investigation",
-                    "Nature",
-                    "Perception",
-                    "Stealth",
-                    "Survival"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
-                "(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-                "(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-                "A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
-            ],
-            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-        },
         "classFeatures": [
             [
                 {
@@ -30415,6 +29541,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -30457,6 +29594,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 },
                 {
                     "name": "Land's Stride",
@@ -30523,6 +29671,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -30582,6 +29741,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -30615,6 +29785,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -30630,6 +29811,8 @@ export default [
         "subclasses": [
             {
                 "name": "Hunter",
+                "shortName": "Hunter",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -30817,12 +30000,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Hunter"
+                ]
             },
             {
                 "name": "Beast Master",
+                "shortName": "Beast Master",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -30896,12 +30079,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Beast Master"
+                ]
             },
             {
                 "name": "Deep Stalker (UA)",
+                "shortName": "Deep Stalker (UA)",
+                "source": "UALightDarkUnderdark",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -30957,12 +30141,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UALightDarkUnderdark",
-                "shortName": "Deep Stalker (UA)"
+                ]
             },
             {
                 "name": "Horizon Walker (UA)",
+                "shortName": "Horizon Walker (UA)",
+                "source": "UARangerAndRogue",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -31029,12 +30214,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARangerAndRogue",
-                "shortName": "Horizon Walker (UA)"
+                ]
             },
             {
                 "name": "Primeval Guardian (UA)",
+                "shortName": "Primeval Guardian (UA)",
+                "source": "UARangerAndRogue",
                 "subclassFeatures": [
                     [
                         {
@@ -31108,12 +30293,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARangerAndRogue",
-                "shortName": "Primeval Guardian (UA)"
+                ]
             },
             {
                 "name": "Monster Slayer (UA)",
+                "shortName": "Monster Slayer (UA)",
+                "source": "UAATrioOfSubclasses",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -31171,12 +30357,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAATrioOfSubclasses",
-                "shortName": "Monster Slayer (UA)"
+                ]
             },
             {
                 "name": "Gloom Stalker",
+                "shortName": "Gloom Stalker",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -31241,12 +30427,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Gloom Stalker"
+                ]
             },
             {
                 "name": "Horizon Walker",
+                "shortName": "Horizon Walker",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -31314,12 +30500,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Horizon Walker"
+                ]
             },
             {
                 "name": "Monster Slayer",
+                "shortName": "Monster Slayer",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -31385,12 +30571,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Monster Slayer"
+                ]
             },
             {
                 "name": "Swarmkeeper (UA)",
+                "shortName": "Swarmkeeper (UA)",
+                "source": "UAFighterRangerRogue",
                 "subclassFeatures": [
                     [
                         {
@@ -31473,12 +30659,2372 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighterRangerRogue",
-                "shortName": "Swarmkeeper (UA)"
+                ]
             }
         ],
-        "page": 5,
+        "fluff": [
+            {
+                "entries": [
+                    "Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of steel, cutting down one enemy after another.",
+                    "After tumbling away from a cone of freezing air, an elf finds her feet and draws back her bow to loose an arrow at the white dragon. Shrugging off the wave of fear that emanates from the dragon like the cold of its breath, she sends one arrow after another to find the gaps between the dragon's thick scales.",
+                    "Holding his hand high, a half-elf whistles to the hawk that circles high above him, calling the bird back to his side. Whispering instructions in Elvish, he points to the owlbear he's been tracking and sends the hawk to distract the creature while he readies his bow.",
+                    "Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.",
+                    {
+                        "type": "entries",
+                        "name": "Deadly Hunters",
+                        "entries": [
+                            "Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.",
+                            "Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature's power, much as a druid does. Their spells, like their combat abilities, emphasize speed, stealth, and the hunt. A ranger's talents and abilities are honed with deadly focus on the grim task of protecting the borderlands."
+                        ]
+                    },
+                    {
+                        "type": "entries",
+                        "name": "Independent Adventurers",
+                        "entries": [
+                            "Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first—and possibly the last—line of defense.",
+                            "This fierce independence makes rangers well suited to adventuring, since they are accustomed to life far from the comforts of a dry bed and a hot bath. Faced with city-bred adventurers who grouse and whine about the hardships of the wild, rangers respond with some mixture of amusement, frustration, and compassion. But they quickly learn that other adventurers who can carry their own weight in a fight against civilization's foes are worth any extra burden. Coddled city folk might not know how to feed themselves or find fresh water in the wild, but they make up for it in other ways."
+                        ]
+                    },
+                    {
+                        "type": "entries",
+                        "name": "Creating a Ranger",
+                        "entries": [
+                            "As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger's ways? Did you leave your apprenticeship, or was your mentor slain—perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.",
+                            "What's the source of your particular hatred of a certain kind of enemy? Did a monster kill someone you loved or destroy your home village? Or did you see too much of the destruction these monsters cause and commit yourself to reining in their depredations? Is your adventuring career a continuation of your work in protecting the borderlands, or a significant change? What made you join up with a band of adventurers? Do you find it challenging to teach new allies the ways of the wild, or do you welcome the relief from solitude that they offer?",
+                            {
+                                "type": "entries",
+                                "name": "Quick Build",
+                                "entries": [
+                                    "You can make a ranger quickly by following these suggestions. First, make Dexterity your highest ability score, followed by Wisdom. (Some rangers who focus on two-weapon fighting make Strength higher than Dexterity.) Second, choose the {@background outlander} background."
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "source": "PHB",
+                "page": 89
+            },
+            {
+                "entries": [
+                    {
+                        "type": "quote",
+                        "entries": [
+                            "I spend a lot of my life away from civilization, keeping to its fringes to protect it. Don't assume that because I don't bend the knee to your king that I haven't done more to protect him than all his knights put together."
+                        ],
+                        "by": "Soveliss"
+                    },
+                    "Rangers are free-minded wanderers and seekers who patrol the edges of civilized territory, turning back the denizens of the wild lands beyond. It is a thankless job, since their efforts are rarely understood and almost never rewarded. Yet rangers persist in their duties, never doubting that their work makes the world a safer place.",
+                    "A relationship with civilization informs every ranger's personality and history. Some rangers see themselves as enforcers of the law and bringers of justice on civilization's frontier, answering to no sovereign power. Others are survivalists who eschew civilization altogether. They vanquish monsters to keep themselves safe while they live in and travel through the perilous wild areas of the world. If their efforts also benefit the kingdoms and other civilized realms that they avoid, so be it.",
+                    "If you're creating or playing a ranger character, the following sections offer ideas for embellishing the character and enhancing your roleplaying experience.",
+                    {
+                        "type": "entries",
+                        "name": "View of the World",
+                        "entries": [
+                            "A ranger's view of the world begins (and sometimes ends) with that character's outlook toward civilized folk and the places they occupy. Some rangers have an attitude toward civilization that's deeply rooted in disdain, while others pity the people they have sworn to protect—though on the battlefield, it's impossible to tell the difference between one ranger and another. Indeed, to those who have seen them operate and been the beneficiaries of their prowess, it scarcely matters why rangers do what they do. That said, no two rangers are likely to express their opinions on any matter in the same way.",
+                            "If you haven't yet thought about the details of your character's worldview, consider putting a finer point on things by summarizing that viewpoint in a short statement (such as the entries on the following table). How might that feeling affect the way you conduct yourself?",
+                            {
+                                "type": "table",
+                                "caption": "View of the World",
+                                "colLabels": [
+                                    "{@dice d6}",
+                                    "View"
+                                ],
+                                "colStyles": [
+                                    "col-1 text-center",
+                                    "col-11"
+                                ],
+                                "rows": [
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 1
+                                            }
+                                        },
+                                        "Towns and cities are the best places for those who can't survive on their own."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 2
+                                            }
+                                        },
+                                        "The advancement of civilization is the best way to thwart chaos, but its reach must be monitored."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 3
+                                            }
+                                        },
+                                        "Towns and cities are a necessary evil, but once the wilderness is purged of supernatural threats, we will need them no more."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 4
+                                            }
+                                        },
+                                        "Walls are for cowards, who huddle behind them while others do the work of making the world safe."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 5
+                                            }
+                                        },
+                                        "Visiting a town is not unpleasant, but after a few days I feel the irresistible call to return to the wild."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 6
+                                            }
+                                        },
+                                        "Cities breed weakness by isolating folk from the harsh lessons of the wild."
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "entries",
+                        "name": "Homelands",
+                        "entries": [
+                            "All rangers, regardless of how they came to take up the profession, have a strong connection to the natural world and its various terrains. For some rangers, the wilderness is where they grew up, either as a result of being born there or moving there at a young age. For other rangers, civilization was originally home, but the wilderness became a second homeland.",
+                            "Think of your character's backstory and decide what terrain feels most like home, whether or not you were born there. What does that terrain say about your personality? Does it influence which spells you choose to learn? Have your experiences there shaped who your favored enemies are?",
+                            {
+                                "type": "table",
+                                "caption": "Homelands",
+                                "colLabels": [
+                                    "{@dice d6}",
+                                    "Homeland"
+                                ],
+                                "colStyles": [
+                                    "col-1 text-center",
+                                    "col-11"
+                                ],
+                                "rows": [
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 1
+                                            }
+                                        },
+                                        "You patrolled an ancient forest, darkened and corrupted by several crossings to the Shadowfell."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 2
+                                            }
+                                        },
+                                        "As part of a group of nomads, you acquired the skills for surviving in the desert."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 3
+                                            }
+                                        },
+                                        "Your early life in the Underdark prepared you for the challenges of combating its denizens."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 4
+                                            }
+                                        },
+                                        "You dwelled on the edge of a swamp, in an area imperiled by land creatures as well as aquatic ones."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 5
+                                            }
+                                        },
+                                        "Because you grew up among the peaks, finding the best path through the mountains is second nature to you."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 6
+                                            }
+                                        },
+                                        "You wandered the far north, learning how to protect yourself and prosper in a realm overrun by ice."
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "entries",
+                        "name": "Sworn Enemy",
+                        "entries": [
+                            "Every ranger begins with a favored enemy (or two). The determination of a favored enemy might be tied to a specific event in the character's early life, or it might be entirely a matter of choice.",
+                            "What spurred your character to select a particular enemy? Was the choice made because of tradition or curiosity, or do you have a grudge to settle?",
+                            {
+                                "type": "table",
+                                "caption": "Sworn Enemies",
+                                "colLabels": [
+                                    "{@dice d6}",
+                                    "Enemy"
+                                ],
+                                "colStyles": [
+                                    "col-1 text-center",
+                                    "col-11"
+                                ],
+                                "rows": [
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 1
+                                            }
+                                        },
+                                        "You seek revenge on nature's behalf for the great transgressions your foe has committed."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 2
+                                            }
+                                        },
+                                        "Your forebears or predecessors fought these creatures, and so shall you."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 3
+                                            }
+                                        },
+                                        "You bear no enmity toward your foe. You stalk such creatures as a hunter tracks down a wild animal."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 4
+                                            }
+                                        },
+                                        "You find your foe fascinating, and you collect books of tales and history concerning it."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 5
+                                            }
+                                        },
+                                        "You collect tokens of your fallen enemies to remind you of each kill."
+                                    ],
+                                    [
+                                        {
+                                            "type": "cell",
+                                            "roll": {
+                                                "exact": 6
+                                            }
+                                        },
+                                        "You respect your chosen enemy, and you see your battles as a test of respective skills."
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "page": 40,
+                "source": "XGE"
+            }
+        ]
+    },
+    {
+        "name": "Ranger (Revised)",
+        "source": "UATheRangerRevised",
+        "page": 1,
+        "hd": {
+            "number": 1,
+            "faces": 10
+        },
+        "proficiency": [
+            "str",
+            "dex"
+        ],
+        "spellcastingAbility": "wis",
+        "casterProgression": "1/2",
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium",
+                "shields"
+            ],
+            "weapons": [
+                "simple",
+                "martial"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "animal handling",
+                            "athletics",
+                            "insight",
+                            "investigation",
+                            "nature",
+                            "perception",
+                            "stealth",
+                            "survival"
+                        ],
+                        "count": 3
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
+                "(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
+                "(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
+                "A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
+            ],
+            "goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+        },
+        "classTableGroups": [
+            {
+                "colLabels": [
+                    "{@filter Spells Known|spells|class=ranger}"
+                ],
+                "rows": [
+                    [
+                        0
+                    ],
+                    [
+                        2
+                    ],
+                    [
+                        3
+                    ],
+                    [
+                        3
+                    ],
+                    [
+                        4
+                    ],
+                    [
+                        4
+                    ],
+                    [
+                        5
+                    ],
+                    [
+                        5
+                    ],
+                    [
+                        6
+                    ],
+                    [
+                        6
+                    ],
+                    [
+                        7
+                    ],
+                    [
+                        7
+                    ],
+                    [
+                        8
+                    ],
+                    [
+                        8
+                    ],
+                    [
+                        9
+                    ],
+                    [
+                        9
+                    ],
+                    [
+                        10
+                    ],
+                    [
+                        10
+                    ],
+                    [
+                        11
+                    ],
+                    [
+                        11
+                    ]
+                ]
+            },
+            {
+                "title": "Spell Slots per Spell Level",
+                "colLabels": [
+                    "{@filter 1st|spells|level=1|class=Ranger}",
+                    "{@filter 2nd|spells|level=2|class=Ranger}",
+                    "{@filter 3rd|spells|level=3|class=Ranger}",
+                    "{@filter 4th|spells|level=4|class=Ranger}",
+                    "{@filter 5th|spells|level=5|class=Ranger}"
+                ],
+                "rows": [
+                    [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        2,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        3,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        3,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        2,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        2,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        2,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        2,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        0,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        1,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        1,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        2,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        2,
+                        0
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        3,
+                        1
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        3,
+                        2
+                    ],
+                    [
+                        4,
+                        3,
+                        3,
+                        3,
+                        2
+                    ]
+                ]
+            }
+        ],
+        "classFeatures": [
+            [
+                {
+                    "name": "Favored Enemy",
+                    "entries": [
+                        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy commonly encountered in the wilds.",
+                        "Choose a type of favored enemy: {@filter beasts|bestiary|type=beast}, {@filter fey|bestiary|type=fey}, {@filter humanoids|bestiary|type=humanoid}, {@filter monstrosities|bestiary|type=monstrosity}, or {@filter undead|bestiary|type=undead}. You gain a +2 bonus to damage rolls with weapon attacks against creatures of the chosen type. Additionally, you have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
+                        "When you gain this feature, you also learn one language of your choice, typically one spoken by your favored enemy or creatures associated with it. However, you are free to pick any language you wish to learn."
+                    ]
+                },
+                {
+                    "name": "Natural Explorer",
+                    "entries": [
+                        "You are a master of navigating the natural world, and you react with swift and decisive action when attacked. This grants you the following benefits:",
+                        {
+                            "type": "list",
+                            "items": [
+                                "You ignore difficult terrain.",
+                                "You have advantage on initiative rolls.",
+                                "On your first turn during combat, you have advantage on attack rolls against creatures that have not yet acted."
+                            ]
+                        },
+                        "In addition, you are skilled at navigating the wilderness. You gain the following benefits when traveling for an hour or more:",
+                        {
+                            "type": "list",
+                            "items": [
+                                "Difficult terrain doesn't slow your group's travel.",
+                                "Your group can't become lost except by magical means.",
+                                "Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
+                                "If you are traveling alone, you can move stealthily at a normal pace.",
+                                "When you forage, you find twice as much food as you normally would.",
+                                "While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Spellcasting",
+                    "entries": [
+                        "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does. See {@book chapter 10|PHB|10} for the general rules of spellcasting and chapter 11 for the {@filter ranger spell list|spells|class=ranger}.",
+                        {
+                            "type": "entries",
+                            "name": "Spell Slots",
+                            "entries": [
+                                "The Ranger table shows how many spell slots you have to cast your {@filter ranger spells|spells|class=ranger} of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+                                "For example, if you know the 1st-level spell {@spell animal friendship} and have a 1st-level and a 2nd-level spell slot available, you can cast {@spell animal friendship} using either slot."
+                            ]
+                        },
+                        {
+                            "type": "entries",
+                            "name": "Spells Known of 1st Level and Higher",
+                            "entries": [
+                                "You know two 1st-level spells of your choice from the ranger spell list.",
+                                "The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
+                                "Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots."
+                            ]
+                        },
+                        {
+                            "type": "entries",
+                            "name": "Spellcasting Ability",
+                            "entries": [
+                                "Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.",
+                                {
+                                    "type": "abilityDc",
+                                    "name": "Spell",
+                                    "attributes": [
+                                        "wis"
+                                    ]
+                                },
+                                {
+                                    "type": "abilityAttackMod",
+                                    "name": "Spell",
+                                    "attributes": [
+                                        "wis"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fighting Style",
+                    "entries": [
+                        "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+                        {
+                            "type": "options",
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Archery",
+                                    "entries": [
+                                        "You gain a +2 bonus to attack rolls you make with ranged weapons."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Close Quarters Shooter",
+                                    "entries": [
+                                        "When making a ranged attack while you are within 5 feet of a hostile creature, you do not have disadvantage on the attack roll. Your ranged attacks ignore half cover and three-quarters cover against targets within 30 feet of you. You have a +1 bonus to attack rolls on ranged attacks."
+                                    ],
+                                    "source": "UALightDarkUnderdark"
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Defense",
+                                    "entries": [
+                                        "While you are wearing armor, you gain a +1 bonus to AC."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Dueling",
+                                    "entries": [
+                                        "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Mariner",
+                                    "entries": [
+                                        "As long as you are not wearing heavy armor or using a shield, you have a swimming speed and a climbing speed equal to your normal speed, and you gain a +1 bonus to AC."
+                                    ],
+                                    "source": "UAWaterborneAdventures"
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Tunnel Fighter",
+                                    "entries": [
+                                        "As a bonus action, you can enter a defensive stance that lasts until the start of your next turn. While in your defensive stance, you can make opportunity attacks without using your reaction, and you can use your reaction to make a melee attack against a creature that moves more than 5 feet while within your reach."
+                                    ],
+                                    "source": "UALightDarkUnderdark"
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Two-Weapon Fighting",
+                                    "entries": [
+                                        "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Blind Fighting",
+                                    "entries": [
+                                        "Being unable to see a creature doesn't impose disadvantage on your attack rolls against it, provided the creature isn't hidden from you."
+                                    ],
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 12
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Interception",
+                                    "entries": [
+                                        "When a creature you can see hits a target that is within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by {@dice 1d10} + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction."
+                                    ],
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 12
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Thrown Weapon Fighting",
+                                    "entries": [
+                                        "You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
+                                        "In addition, when you hit with a ranged attack using a thrown weapon, you gain a +1 bonus to the damage roll."
+                                    ],
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 12
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Unarmed Fighting",
+                                    "entries": [
+                                        "Your unarmed strikes can deal bludgeoning damage equal to {@dice 1d6} + your Strength modifier. If you strike with two free hands, the {@dice d6} becomes a {@dice d8}.",
+                                        "When you successfully start a grapple, you can deal {@dice 1d4} bludgeoning damage to the grappled creature. Until the grapple ends, you can also deal this damage to the creature whenever you hit it with a melee attack."
+                                    ],
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 12
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Druidic Warrior",
+                                    "entries": [
+                                        "You learn two cantrips of your choice from the {@filter druid spell list|spells|level=0|class=druid}. They count as druid spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list."
+                                    ],
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 7
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Martial Versatility",
+                    "entries": [
+                        "{@i 2nd-level feature (enhances Fighting Style)}",
+                        "Whenever you gain a level in this class, you can replace a fighting style you know with another style available to your class. This change represents a shift of focus in your martial training and practice, causing you to lose the benefits of one style and gain the benefits of another style."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 12
+                }
+            ],
+            [
+                {
+                    "name": "Primeval Awareness",
+                    "entries": [
+                        "Beginning at 3rd level, your mastery of ranger lore allows you to establish a powerful link to beasts and to the land around you.",
+                        "You have an innate ability to communicate with beasts, and they recognize you as a kindred spirit. Through sounds and gestures, you can communicate simple ideas to a beast as an action, and can read its basic mood and intent. You learn its emotional state, whether it is affected by magic of any sort, its short-term needs (such as food or safety), and actions you can take (if any) to persuade it to not attack.",
+                        "You cannot use this ability against a creature that you have attacked within the past 10 minutes.",
+                        "Additionally, you can attune your senses to determine if any of your favored enemies lurk nearby. By spending 1 uninterrupted minute in concentration (as if you were concentrating on a spell), you can sense whether any of your favored enemies are present within 5 miles of you. This feature reveals which of your favored enemies are present, their numbers, and the creatures' general direction and distance (in miles) from you.",
+                        "If there are multiple groups of your favored enemies within range, you learn this information for each group."
+                    ]
+                },
+                {
+                    "name": "Ranger Conclave",
+                    "entries": [
+                        "At 3rd level, you choose to emulate the ideals and training of a ranger conclave from the list of available conclaves. Your choice grants you features at 3rd level and again at 5th, 7th, 11th, and 15th level."
+                    ],
+                    "gainSubclassFeature": true
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Ranger Conclave feature",
+                    "entries": [
+                        "At 5th level, you gain a feature granted to you by your Ranger Conclave."
+                    ],
+                    "gainSubclassFeature": true
+                }
+            ],
+            [
+                {
+                    "name": "Greater Favored Enemy",
+                    "entries": [
+                        "At 6th level, you are ready to hunt even deadlier game. Choose a type of greater favored enemy: {@filter aberrations|bestiary|type=aberration}, {@filter celestials|bestiary|type=celestial}, {@filter constructs|bestiary|type=construct}, {@filter dragons|bestiary|type=dragon}, {@filter elementals|bestiary|type=elemental}, {@filter fiends|bestiary|type=fiend}, or {@filter giants|bestiary|type=giant}. You gain all the benefits against this chosen enemy that you normally gain against your favored enemy, including an additional language. Your bonus to damage rolls against all your favored enemies increases to +4.",
+                        "Additionally, you have advantage on saving throws against the spells and abilities used by a greater favored enemy."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ranger Conclave feature",
+                    "entries": [
+                        "At 7th level, you gain a feature granted to you by your Ranger Conclave."
+                    ],
+                    "gainSubclassFeature": true
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                },
+                {
+                    "name": "Fleet of Foot",
+                    "entries": [
+                        "Beginning at 8th level, you can use the {@action Dash} action as a bonus action on your turn."
+                    ]
+                }
+            ],
+            [],
+            [
+                {
+                    "name": "Hide in Plain Sight",
+                    "entries": [
+                        "Starting at 10th level, you can remain perfectly still for long periods of time to set up ambushes.",
+                        "When you attempt to hide on your turn, you can opt to not move on that turn. If you avoid moving, creatures that attempt to detect you take a -10 penalty to their Wisdom ({@skill Perception}) checks until the start of your next turn. You lose this benefit if you move or fall {@condition prone}, either voluntarily or because of some external effect. You are still automatically detected if any effect or action causes you to no longer be hidden.",
+                        "If you are still hidden on your next turn, you can continue to remain motionless and gain this benefit until you are detected."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ranger Conclave feature",
+                    "entries": [
+                        "At 11th level, you gain a feature granted to you by your Ranger Conclave."
+                    ],
+                    "gainSubclassFeature": true
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [],
+            [
+                {
+                    "name": "Vanish",
+                    "entries": [
+                        "Starting at 14th level, you can use the {@action Hide} action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ranger Conclave feature",
+                    "entries": [
+                        "At 15th level, you gain a feature granted to you by your Ranger Conclave."
+                    ],
+                    "gainSubclassFeature": true
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [],
+            [
+                {
+                    "name": "Feral Senses",
+                    "entries": [
+                        "At 18th level, you gain preternatural senses that help you fight creatures you can't see. When you attack a creature you can't see, your inability to see it doesn't impose disadvantage on your attack rolls against it. You are also aware of the location of any {@condition invisible} creature within 30 feet of you, provided that the creature isn't hidden from you and you aren't {@condition blinded} or {@condition deafened}."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                        "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Foe Slayer",
+                    "entries": [
+                        "At 20th level, you become an unparalleled hunter. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
+                    ]
+                }
+            ]
+        ],
+        "subclassTitle": "Ranger Conclave",
+        "subclasses": [
+            {
+                "name": "Beast Conclave",
+                "shortName": "Beast Conclave",
+                "source": "UATheRangerRevised",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Beast Conclave (UA)",
+                            "entries": [
+                                "Many rangers are more at home in the wilds than in civilization, to the point where animals consider them kin. Rangers of the Beast Conclave develop a close bond with a beast, then further strengthen that bond through the use of magic.",
+                                {
+                                    "type": "entries",
+                                    "name": "Animal Companion",
+                                    "entries": [
+                                        "At 3rd level, you learn to use your magic to create a powerful bond with a creature of the natural world.",
+                                        "With 8 hours of work and the expenditure of 50 gp worth of rare herbs and fine food, you call forth an animal from the wilderness to serve as your faithful companion. You normally select you companion from among the following animals: an {@creature ape}, a {@creature black bear}, a {@creature boar}, a {@creature giant badger}, a {@creature giant weasel}, a {@creature mule}, a {@creature panther}, or a {@creature wolf}. However, your DM might pick one of these animals for you, based on the surrounding terrain and on what types of creatures would logically be present in the area.",
+                                        "At the end of the 8 hours, your animal companion appears and gains all the benefits of your Companion's Bond ability. You can have only one animal companion at a time.",
+                                        "If your animal companion is ever slain, the magical bond you share allows you to return it to life. With 8 hours of work and the expenditure of 25 gp worth of rare herbs and fine food, you call forth your companion's spirit and use your magic to create a new body for it. You can return an animal companion to life in this manner even if you do not possess any part of its body.",
+                                        "If you use this ability to return a former animal companion to life while you have a current animal companion, your current companion leaves you and is replaced by the restored companion."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Companion's Bond",
+                                    "entries": [
+                                        "Your animal companion gains a variety of benefits while it is linked to you.",
+                                        "The animal companion loses its Multiattack action, if it has one.",
+                                        "The companion obeys your commands as best it can. It rolls for initiative like any other creature, but you determine its actions, decisions, attitudes, and so on. If you are {@condition incapacitated} or absent, your companion acts on its own.",
+                                        "When using your Natural Explorer feature, you and your animal companion can both move stealthily at a normal pace.",
+                                        "Your animal companion has abilities and game statistics determined in part by your level. Your companion uses your proficiency bonus rather than its own. In addition to the areas where it normally uses its proficiency bonus, an animal companion also adds its proficiency bonus to its AC and to its damage rolls.",
+                                        "Your animal companion gains proficiency in two skills of your choice. It also becomes proficient with all saving throws.",
+                                        "For each level you gain after 3rd, your animal companion gains an additional hit die and increases its hit points accordingly.",
+                                        "Whenever you gain the Ability Score Improvement class feature, your companion's abilities also improve. Your companion can increase one ability score of your choice by 2, or it can increase two ability scores of your choice by 1. As normal, your companion can't increase an ability score above 20 using this feature unless its description specifies otherwise.",
+                                        "Your companion shares your alignment, and has a personality trait and a flaw that you can roll for or select from the tables below. Your companion shares your ideal, and its bond is always, \"The ranger who travels with me is a beloved companion for whom I would gladly give my life.\"",
+                                        "Your animal companion gains the benefits of your Favored Enemy feature, and of your Greater Favored Enemy feature when you gain that feature at 6th level. It uses the favored enemies you selected for those features.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Companion Trait",
+                                            "colLabels": [
+                                                "d6",
+                                                "Trait"
+                                            ],
+                                            "colStyles": [
+                                                "col-1 text-center",
+                                                "col-11"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "1",
+                                                    "I'm dauntless in the face of adversity."
+                                                ],
+                                                [
+                                                    "2",
+                                                    "Threaten my friends, threaten me."
+                                                ],
+                                                [
+                                                    "3",
+                                                    "I stay on alert so others can rest."
+                                                ],
+                                                [
+                                                    "4",
+                                                    "People see an animal and underestimate me."
+                                                ],
+                                                [
+                                                    "5",
+                                                    "I have a knack for showing up in the nick of time."
+                                                ],
+                                                [
+                                                    "6",
+                                                    "I put my friends' needs before my own in all things."
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "type": "table",
+                                            "caption": "Companion Flaw",
+                                            "colLabels": [
+                                                "d6",
+                                                "Flaw"
+                                            ],
+                                            "colStyles": [
+                                                "col-1 text-center",
+                                                "col-11"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "1",
+                                                    "If there's food left unattended, I'll eat it."
+                                                ],
+                                                [
+                                                    "2",
+                                                    "I growl at strangers, and all people except my ranger are strangers to me."
+                                                ],
+                                                [
+                                                    "3",
+                                                    "Any time is a good time for a belly rub."
+                                                ],
+                                                [
+                                                    "4",
+                                                    "I'm deathly afraid of water."
+                                                ],
+                                                [
+                                                    "5",
+                                                    "My idea of hello is a flurry of licks to the face."
+                                                ],
+                                                [
+                                                    "6",
+                                                    "I jump on creatures to tell them how much I love them."
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Coordinated Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you and your animal companion form a more potent fighting force. When you use the {@action Attack} action on your turn, if your companion can see you, it can use its reaction to make a melee attack."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Beast's Defense",
+                                    "entries": [
+                                        "At 7th level, while your companion can see you, it has advantage on all saving throws."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Storm of Claw and Fangs",
+                                    "entries": [
+                                        "At 11th level, your companion can use its action to make a melee attack against each creature of its choice within 5 feet of it, with a separate attack roll for each target."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Superior Beast's Defense",
+                                    "entries": [
+                                        "At 15th level, whenever an attacker that your companion can see hits it with an attack, it can use its reaction to halve the attack's damage against it."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Hunter Conclave",
+                "shortName": "Hunter Conclave",
+                "source": "UATheRangerRevised",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Hunter Conclave (UA)",
+                            "entries": [
+                                "Some rangers seek to master weapons to better protect civilization from the terrors of the wilderness. Members of the Hunter Conclave learn specialized fighting techniques for use against the most dire threats, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
+                                {
+                                    "type": "entries",
+                                    "name": "Hunter's Prey",
+                                    "entries": [
+                                        "At 3rd level, you gain one of the following features of your choice: Colossus Slayer, Giant Killer, or Horde Breaker.",
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Colossus Slayer",
+                                                    "entries": [
+                                                        "Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it's below its hit point maximum. You can deal this extra damage only once per turn."
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Giant Killer",
+                                                    "entries": [
+                                                        "When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature."
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Horde Breaker",
+                                                    "entries": [
+                                                        "Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon."
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Defensive Tactics",
+                                    "entries": [
+                                        "At 7th level, you gain one of the following features of your choice: Escape the Horde, Multiattack Defense, or Steel Will.",
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Escape the Horde",
+                                                    "entries": [
+                                                        "Opportunity attacks against you are made with disadvantage."
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Multiattack Defense",
+                                                    "entries": [
+                                                        "When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn."
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Steel Will",
+                                                    "entries": [
+                                                        "You have advantage on saving throws against being {@condition frightened}."
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Multiattack",
+                                    "entries": [
+                                        "At 11th level, you gain one of the following features of your choice: Volley or Whirlwind Attack.",
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Volley",
+                                                    "entries": [
+                                                        "You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target."
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Whirlwind Attack",
+                                                    "entries": [
+                                                        "You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target."
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Superior Hunter's Defense",
+                                    "entries": [
+                                        "At 15th level, you gain one of the following features of your choice: Evasion, Stand Against the Tide, or Uncanny {@action Dodge}.",
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Evasion",
+                                                    "entries": [
+                                                        "When you are subjected to an effect, such as a red dragon's fiery breath or a {@spell lightning bolt} spell, that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on a saving throw, and only half damage if you fail"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Stand Against the Tide",
+                                                    "entries": [
+                                                        "When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice."
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "entries": [
+                                                {
+                                                    "type": "entries",
+                                                    "name": "Uncanny Dodge",
+                                                    "entries": [
+                                                        "When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you."
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Deep Stalker Conclave",
+                "shortName": "Deep Stalker Conclave",
+                "source": "UATheRangerRevised",
+                "isReprinted": true,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Deep Stalker Conclave (UA)",
+                            "entries": [
+                                "Most folk descend into the depths of the Underdark only under the most pressing conditions, undertaking some desperate quest or following the promise of vast riches. All too often, evil festers beneath the earth unnoticed, and rangers of the Deep Stalker Conclave strive to uncover and defeat such threats before they can reach the surface.",
+                                {
+                                    "type": "entries",
+                                    "name": "Deep Stalker Magic",
+                                    "entries": [
+                                        "At 3rd level, you have darkvision out to a range of 90 feet. If you already have darkvision, you increase its range by 30 feet. You also gain access to additional spells at 3rd, 5th, 9th, 13th, and 15th level. Once you gain a deep stalker spell, it counts as a ranger spell for you but doesn't count against the number of rangers spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Deep Stalker Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell disguise self}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell rope trick}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell glyph of warding}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell greater invisibility}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell seeming}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Underdark Scout",
+                                    "entries": [
+                                        "At 3rd level, you master the art of the ambush. On your first turn during combat, you gain a +10 bonus to your speed and if you use the attack action on that turn, you can make one additional attack. You are also adept at evading creatures that rely on darkvision. Such creatures gain no benefit when attempting to detect you in dark and dim conditions. Additionally, when the DM determines if you can hide from a creature, that creature gains no benefit from its darkvision."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Iron Mind",
+                                    "entries": [
+                                        "At 7th level, you gain proficiency in Wisdom saving throws."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Stalker's Flurry",
+                                    "entries": [
+                                        "Starting at 11th level, once on each of your turns when you miss with an attack, you can make another attack. You can gain one additional attack during your turn with this ability."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Stalker's Dodge",
+                                    "entries": [
+                                        "At 15th level, whenever a creature attacks you and does not have advantage, you can use your reaction to impose disadvantage on the creature's attack roll against you. You can use this feature before or after the attack roll is made, but it must be used before the outcome of the roll is determined."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Horizon Walker (UA)",
+                "shortName": "Horizon Walker (UA)",
+                "source": "UARangerAndRogue",
+                "isReprinted": true,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Horizon Walker",
+                            "entries": [
+                                "Rangers of the Horizon Conclave guard the world against threats that originate from other planes. They seek out planar portals and keep watch over them, venturing to the outer and inner planes as needed to defeat threats.",
+                                {
+                                    "type": "entries",
+                                    "name": "Planar Magic",
+                                    "entries": [
+                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, and it doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Horizon Walker Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell protection from evil and good}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell alter self}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell protection from energy}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell banishment}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell teleportation circle}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Planar Warrior",
+                                    "entries": [
+                                        "At 3rd level, you learn to draw on the energy of the planes to augment your attacks.",
+                                        "As a bonus action, choose one creature you can see within 30 feet of you. Until the end of this turn, your attacks against that creature ignore its damage resistances, and the next time you hit it on this turn, it takes an additional 1d6 force damage."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Portal Lore",
+                                    "entries": [
+                                        "At 3rd level, you gain the ability to detect the presence of planar portals. As an action, you detect the distance and direction to any planar portals within 1,000 feet of you. You also sense which plane of existence each portal leads to. However, if magic obscures any details of a portal, this feature doesn't reveal them.",
+                                        "Once you use this feature, you can't use it again until you finish a short or long rest. Alternatively, you can use the feature again if you expend a spell slot of 2nd level or higher.",
+                                        "See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Ethereal Step",
+                                    "entries": [
+                                        "At 7th level, you learn to step through the Ethereal Plane. As a bonus action on your turn, you can cast the {@spell etherealness} spell with this feature, but the spell ends at the end of the current turn. Once you use this feature, you can't use it again until you finish a short or long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Distant Strike",
+                                    "entries": [
+                                        "At 11th level, you gain the ability to step between the planes in a blink of an eye. When you use the {@action Attack} action, you can teleport up to 10 feet before each attack. You must be able to see the destination of the teleportation.",
+                                        "If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Spectral Defense",
+                                    "entries": [
+                                        "At 15th level, your ability to move between planes becomes even more finely tuned. As a reaction when you take damage, you can halve that damage against you. For a moment, you slip into the planar boundary to lessen the harm."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Primeval Guardian (UA)",
+                "shortName": "Primeval Guardian (UA)",
+                "source": "UARangerAndRogue",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Primeval Guardian",
+                            "entries": [
+                                "Rangers of the Primeval Guardian Conclave follow an ancient tradition rooted in powerful druidic magic. These rangers learn to become one with nature, allowing them to channel the aspects of various beasts and plants in order to overcome their foes.",
+                                "These rangers dwell in the elder forests of the world. They venture out only rarely, as they consider it their sacred duty to protect the druidic groves and ancient trees that saw the earliest days of the world.",
+                                {
+                                    "type": "entries",
+                                    "name": "Guardian Magic",
+                                    "entries": [
+                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Primeval Guardian Spells table. The spell counts as a ranger spell for you, and it doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Primeval Guardian Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell entangle}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell enhance ability}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell conjure animals}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell giant insect}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell insect plague}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Guardian Soul",
+                                    "entries": [
+                                        "Starting at 3rd level, you gain the ability to temporarily grow and take on the appearance of a treelike person, covered with leaves and bark. As a bonus action, you assume this guardian form, which lasts until you end it as a bonus action or until you are {@condition incapacitated}.",
+                                        "You undergo the following changes while in your guardian form:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "Your size becomes Large, unless you were larger.",
+                                                "Any speed you have becomes 5 feet, unless the speed was lower.",
+                                                "Your reach increases by 5 feet.",
+                                                "You gain a number of temporary hit points at the start of each of your turns. The number equals half your ranger level. When the form ends, you lose any temporary hit points you have from it."
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Piercing Thorns",
+                                    "entries": [
+                                        "At 3rd level, your command of primal magic allows you to enhance your attacks with thorns. Once during each of your turns, you can deal an additional 1d6 piercing damage to one creature you hit with a weapon attack."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Ancient Fortitude",
+                                    "entries": [
+                                        "At 7th level, you gain the endurance of the ancient forests. Your hit point maximum and current hit points increase by 2 per ranger level when you assume your guardian form. This increase lasts until you leave the form; your hit point maximum then returns to normal, but your current hit points remain the same, unless they must decrease to abide by your hit point maximum."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Rooted Defense",
+                                    "entries": [
+                                        "At 11th level, you gain the ability to twist and turn the ground beneath you. While you are in your guardian form, the ground within 30 feet of you is difficult terrain for your enemies."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Guardian Aura",
+                                    "entries": [
+                                        "Starting at 15th level, your guardian form emanates a magical aura that fortifies your injured allies. When any ally starts their turn within 30 feet of your guardian form, that ally regains a number of hit points equal to half your ranger level. This aura has no effect on a creature that has half or more of its hit points, and it has no effect on undead and constructs."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Monster Slayer (UA)",
+                "shortName": "Monster Slayer (UA)",
+                "source": "UAATrioOfSubclasses",
+                "isReprinted": true,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Monster Slayer",
+                            "entries": [
+                                "Rangers of the Slayer Conclave seek out vampires, dragons, evil fey, fiends, and other powerful magical threats. Trained in a variety of arcane and divine techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty foes.",
+                                {
+                                    "type": "entries",
+                                    "name": "Slayer's Mysticism",
+                                    "entries": [
+                                        "You learn an additional spell when you reach certain levels in this class, as shown in the Slayer Spells table. The spell counts as a ranger spell for you but doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Monster Slayer Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell protection from evil and good}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell zone of truth}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell magic circle}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell banishment}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell planar binding}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Slayer's Eye",
+                                    "entries": [
+                                        "Starting at 3rd level, you gain the ability to study and unravel a creature's defenses. As a bonus action, choose one creature you can see within 120 feet of you. You immediately learn the target's vulnerabilities, immunities, and resistances. You also learn any special effects triggered when the target takes damage, such as fire damage halting its regeneration.",
+                                        "In addition, the first time each turn you hit the target with a weapon attack, the target takes an extra 1d6 damage from the weapon.",
+                                        "This benefit lasts until you target a different creature with this feature or until you finish a short or long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Supernatural Defense",
+                                    "entries": [
+                                        "At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Eye forces you to make a saving throw, add 1d6 to your roll."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Relentless Slayer",
+                                    "entries": [
+                                        "At 11th level, you gain the ability to foil your foe's ability to escape. Your study of folklore and arcane knowledge gives you a key insight to keep your prey cornered. If the target of your Slayer's Eye attempts to teleport, change its shape, travel to another plane of existence, or turn gaseous, you can use your reaction to make a Wisdom check contested by a Wisdom check made by the target. To use this ability, you must be able to see the target and need to be within 30 feet of it. If you succeed, you foil its attempt, causing it to waste the action, bonus action, or reaction it used."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Slayer's Counter",
+                                    "entries": [
+                                        "At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Eye forces you to make a saving throw, you can use your reaction to make one weapon attack against it. You make this attack immediately before making the saving throw. If the attack hits, your save automatically succeeds, in addition to the attack's normal effects."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Gloom Stalker",
+                "shortName": "Gloom Stalker",
+                "source": "XGE",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Gloom Stalker",
+                            "entries": [
+                                "Gloom Stalkers are at home in the darkest places: deep under the earth, in gloomy alleyways, in primeval forests, and wherever else the light dims. Most folk enter such places with trepidation, but a Gloom Stalker ventures boldly into the darkness, seeking to ambush threats before they can reach the broader world. Such rangers are often found in the Underdark, but they will go any place where evil lurks in the shadows.",
+                                {
+                                    "type": "entries",
+                                    "name": "Gloom Stalker Magic",
+                                    "entries": [
+                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Gloom Stalker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Gloom Stalker Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell disguise self}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell rope trick}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell fear}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell greater invisibility}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell seeming}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Dread Ambusher",
+                                    "entries": [
+                                        "At 3rd level, you master the art of the ambush. You can give yourself a bonus to your initiative rolls equal to your Wisdom modifier.",
+                                        "At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the {@action Attack} action on that turn, you can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra 1d8 damage of the weapon's damage type."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Umbral Sight",
+                                    "entries": [
+                                        "At 3rd level, you gain darkvision out to a range of 60 feet. If you already have darkvision from your race, its range increases by 30 feet.",
+                                        "You are also adept at evading creatures that rely on darkvision. While in darkness, you are {@condition invisible} to any creature that relies on darkvision to see you in that darkness."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Iron Mind",
+                                    "entries": [
+                                        "By 7th level, you have honed your ability to resist the mind-altering powers of your prey. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice)."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Stalker's Flurry",
+                                    "entries": [
+                                        "At 11th level, you learn to attack with such unexpected speed that you can turn a miss into another strike. Once on each of your turns when you miss with a weapon attack, you can make another weapon attack as part of the same action."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Shadowy Dodge",
+                                    "entries": [
+                                        "Starting at 15th level, you can dodge in unforeseen ways, with wisps of supernatural shadow around you. Whenever a creature makes an attack roll against you and doesn't have advantage on the roll, you can use your reaction to impose disadvantage on it. You must use this feature before you know the outcome of the attack roll."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Horizon Walker",
+                "shortName": "Horizon Walker",
+                "source": "XGE",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Horizon Walker",
+                            "entries": [
+                                "Horizon Walkers guard the world against threats that originate from other planes or that seek to ravage the mortal realm with otherworldly magic. They seek out planar portals and keep watch over them, venturing to the Inner Planes and the Outer Planes as needed to pursue their foes. These rangers are also friends to any forces in the multiverse—especially benevolent dragons, fey, and elementals—that work to preserve life and the order of the planes.",
+                                {
+                                    "type": "entries",
+                                    "name": "Horizon Walker Magic",
+                                    "entries": [
+                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Horizon Walker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Horizon Walker Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell protection from evil and good}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell misty step}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell haste}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell banishment}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell teleportation circle}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Detect Portal",
+                                    "entries": [
+                                        "At 3rd level, you gain the ability to magically sense the presence of a planar portal. As an action, you detect the distance and direction to the closest planar portal within 1 mile of you.",
+                                        "Once you use this feature, you can't use it again until you finish a short or long rest.",
+                                        "See the \"Planar Travel\" section in chapter 2 of the Dungeon Master's Guide for examples of planar portals."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Planar Warrior",
+                                    "entries": [
+                                        "At 3rd level, you learn to draw on the energy of the multiverse to augment your attacks.",
+                                        "As a bonus action, choose one creature you can see within 30 feet of you. The next time you hit that creature on this turn with a weapon attack, all damage dealt by the attack becomes force damage, and the creature takes an extra 1d8 force damage from the attack. When you reach 11th level in this class, the extra damage increases to 2d8."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Ethereal Step",
+                                    "entries": [
+                                        "At 7th level, you learn to step through the Ethereal Plane. As a bonus action, you can cast the {@spell etherealness} spell with this feature, without expending a spell slot, but the spell ends at the end of the current turn.",
+                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Distant Strike",
+                                    "entries": [
+                                        "At 11th level, you gain the ability to pass between the planes in the blink of an eye. When you take the {@action Attack} action, you can teleport up to 10 feet before each attack to an unoccupied space you can see.",
+                                        "If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Spectral Defense",
+                                    "entries": [
+                                        "At 15th level, your ability to move between planes enables you to slip through the planar boundaries to lessen the harm done to you during battle. When you take damage from an attack, you can use your reaction to give yourself resistance to all of that attack's damage on this turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Monster Slayer",
+                "shortName": "Monster Slayer",
+                "source": "XGE",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Monster Slayer",
+                            "entries": [
+                                "You have dedicated yourself to hunting down creatures of the night and wielders of grim magic. A Monster Slayer seeks out vampires, dragons, evil fey, fiends, and other magical threats. Trained in supernatural techniques to overcome such monsters, slayers are experts at unearthing and defeating mighty, mystical foes.",
+                                {
+                                    "type": "entries",
+                                    "name": "Monster Slayer Magic",
+                                    "entries": [
+                                        "Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the Monster Slayer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Monster Slayer Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell protection from evil and good}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell zone of truth}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell magic circle}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell banishment}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell hold monster}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Hunter's Sense",
+                                    "entries": [
+                                        "At 3rd level, you gain the ability to peer at a creature and magically discern how best to hurt it. As an action, choose one creature you can see within 60 feet of you. You immediately learn whether the creature has any damage immunities, resistances, or vulnerabilities and what they are. If the creature is hidden from divination magic, you sense that it has no damage immunities, resistances, or vulnerabilities.",
+                                        "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses of it when you finish a long rest."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Slayer's Prey",
+                                    "entries": [
+                                        "Starting at 3rd level, you can focus your ire on one foe, increasing the harm you inflict on it. As a bonus action, you designate one creature you can see within 60 feet of you as the target of this feature. The first time each turn that you hit that target with a weapon attack, it takes an extra 1d6 damage from the weapon.",
+                                        "This benefit lasts until you finish a short or long rest. It ends early if you designate a different creature."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Supernatural Defense",
+                                    "entries": [
+                                        "At 7th level, you gain extra resilience against your prey's assaults on your mind and body. Whenever the target of your Slayer's Prey forces you to make a saving throw and whenever you make an ability check to escape that target's grapple, add 1d6 to your roll."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Magic-User's Nemesis",
+                                    "entries": [
+                                        "At 11th level, you gain the ability to thwart someone else's magic. When you see a creature casting a spell or teleporting within 60 feet of you, you can use your reaction to try to magically foil it. The creature must succeed on a Wisdom saving throw against your spell save DC, or its spell or teleport fails and is wasted.",
+                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Slayer's Counter",
+                                    "entries": [
+                                        "At 15th level, you gain the ability to counterattack when your prey tries to sabotage you. If the target of your Slayer's Prey forces you to make a saving throw, you can use your reaction to make one weapon attack against the quarry. You make this attack immediately before making the saving throw. If your attack hits, your save automatically succeeds, in addition to the attack's normal effects."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Swarmkeeper (UA)",
+                "shortName": "Swarmkeeper (UA)",
+                "source": "UAFighterRangerRogue",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Swarmkeeper",
+                            "entries": [
+                                "Feeling a deep connection to the world around them, some rangers reach out through their magical connection to nature and gather a host of fey spirits, which take the form of swarming beasts—be they buzzing insects, fluttering birds, slippery squids, or otherwise. The swarm becomes a potent force in battle, as well as helpful—if potentially disturbing—company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
+                                {
+                                    "type": "entries",
+                                    "name": "Swarmkeeper Magic",
+                                    "entries": [
+                                        "{@i 3rd-level Swarmkeeper feature}",
+                                        "You learn the mage hand cantrip if you don't already know it. When you cast it, the hand takes the form of swarming nature spirits. You also learn an additional spell when you reach certain levels in this class, as shown in the Swarmkeeper Spells table. These spells count as ranger spells for you, but don't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Swarmkeeper Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell faerie fire}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell web}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell gaseous form}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell giant insect}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell insect plague}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Gathered Swarm",
+                                    "entries": [
+                                        "{@i 3rd-level Swarmkeeper feature}",
+                                        "You magically attract a swarm of fey spirits that look like Tiny beasts of your choice. The swarm remains in your space, crawling on you or through your clothing, or flying and skittering immediately around you within your space.",
+                                        "As a bonus action, you can agitate the swarm for 1 minute. For the duration, some of the swarm clings to your weapons or follows your strikes when you attack: once during each of your turns when you hit a creature with a weapon attack, you can deal an extra {@dice 1d6} force damage to that creature, and the swarm moves the creature up to 5 feet toward you or away from you (your choice). At 11th level, the extra damage increases to {@dice 2d6}.",
+                                        "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Writhing Tide",
+                                    "entries": [
+                                        "{@i 7th-level Swarmkeeper feature}",
+                                        "You can condense part of your swarm into a focused mass that lifts or sweeps you along. Whenever you activate your Gathered Swarm feature, choose one of the following additional benefits:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "Your walking speed increases by 10 feet, and you can take the {@action Disengage} action as a bonus action.",
+                                                "You gain a climb speed equal to your walking speed. You can climb difficult surfaces, including upside down on ceilings, without making an ability check.",
+                                                "You gain a flying speed of 10 feet and can hover."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Scuttling Eyes",
+                                    "entries": [
+                                        "{@i 11th-level Swarmkeeper feature}",
+                                        "As an action, you can magically form one of the spirits of your swarm into the shape of a Tiny beast of your choice. The transformation lasts for 1 hour, at which point the spirit disappears. For the duration, the spirit has a speed of 40 feet, which it can use to walk, climb, fly, or swim. The spirit has your senses and telepathically relays what it sees and hears to you. During your turn, you can speak through the spirit, telepathically command it to move, and it can {@action Hide} using your bonus to Dexterity ({@skill Stealth}) checks. The spirit has AC 18. If it takes damage, you must succeed on a Wisdom saving throw (DC equal to 10, or half the damage dealt, whichever is higher) or the spirit disappears.",
+                                        "As an action, you can dismiss the spirit early. If you do, you can magically teleport to an unoccupied space within 5 feet of where the spirit disappeared.",
+                                        "Once you use this feature, you can't do so again until you finish a long rest. You can also use it again by expending a spell slot of 3rd level or higher.",
+                                        "Once you use this feature, you can't use it again until you finish a short or long rest."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Gathered Swarm Improvement",
+                                    "entries": [
+                                        "{@i 11th-level Swarmkeeper feature}",
+                                        "The extra damage from your swarm increases to {@dice 2d6}."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Storm of Minions",
+                                    "entries": [
+                                        "{@i 15th-level Swarmkeeper feature}",
+                                        "Your swarm can expel a seething storm of spirits that drains life from others. As an action, you create a magical sphere filled with an enraged swarm centered on a point you can see within 120 feet of you. The sphere has a 10-foot-radius and lasts for 1 minute. The sphere is difficult terrain for creatures other than you. A creature other than you that starts its turn in the sphere's area must make a Constitution saving throw against your spell save DC. On a failed save, the creature takes {@dice 2d8} necrotic damage and is {@condition blinded} until the start of its next turn. On a successful save, it takes half as much damage and isn't {@condition blinded}. At the start of your turn, if any number of Small or larger creatures took necrotic damage from the swarm, you regain 1d8 hit points. On subsequent turns, you can use a bonus action to move the sphere up to 30 feet.",
+                                        "When you activate this feature, you can choose any number of creatures you can see to be unaffected by it.",
+                                        "Once you use this feature, you can't do so again until you finish a long rest. You can also use it again by expending a spell slot of 4th level or higher."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            }
+        ],
         "fluff": [
             {
                 "entries": [
@@ -31770,6 +33316,8 @@ export default [
     {
         "name": "Rogue",
         "source": "PHB",
+        "page": 94,
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 8
@@ -31778,6 +33326,84 @@ export default [
             "dex",
             "int"
         ],
+        "startingProficiencies": {
+            "armor": [
+                "light"
+            ],
+            "weapons": [
+                "simple",
+                "hand crossbows",
+                "longswords",
+                "rapiers",
+                "shortswords"
+            ],
+            "tools": [
+                "thieves' tools"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "acrobatics",
+                            "athletics",
+                            "deception",
+                            "insight",
+                            "intimidation",
+                            "investigation",
+                            "perception",
+                            "performance",
+                            "persuasion",
+                            "sleight of hand",
+                            "stealth"
+                        ],
+                        "count": 4
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item rapier|phb} or (b) a {@item shortsword|phb}",
+                "(a) a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows} or (b) a {@item shortsword|phb}",
+                "(a) a {@item burglar's pack|phb}, (b) a {@item dungeoneer's pack|phb}, or (c) an {@item explorer's pack|phb}",
+                "{@item Leather armor|phb}, two {@item dagger|phb|daggers}, and {@item thieves' tools|phb}"
+            ],
+            "goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "dex": 13
+            },
+            "proficienciesGained": {
+                "armor": [
+                    "light"
+                ],
+                "skills": [
+                    {
+                        "choose": {
+                            "from": [
+                                "acrobatics",
+                                "athletics",
+                                "deception",
+                                "insight",
+                                "intimidation",
+                                "investigation",
+                                "perception",
+                                "performance",
+                                "persuasion",
+                                "sleight of hand",
+                                "stealth"
+                            ],
+                            "count": 1
+                        }
+                    }
+                ],
+                "tools": [
+                    "thieves' tools"
+                ]
+            }
+        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -32007,76 +33633,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "armor": [
-                "light"
-            ],
-            "weapons": [
-                "simple",
-                "hand crossbows",
-                "longswords",
-                "rapiers",
-                "shortswords"
-            ],
-            "tools": [
-                "thieves' tools"
-            ],
-            "skills": {
-                "choose": 4,
-                "from": [
-                    "Acrobatics",
-                    "Athletics",
-                    "Deception",
-                    "Insight",
-                    "Intimidation",
-                    "Investigation",
-                    "Perception",
-                    "Performance",
-                    "Persuasion",
-                    "Sleight of Hand",
-                    "Stealth"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item rapier|phb} or (b) a {@item shortsword|phb}",
-                "(a) a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows} or (b) a {@item shortsword|phb}",
-                "(a) a {@item burglar's pack|phb}, (b) a {@item dungeoneer's pack|phb}, or (c) an {@item explorer's pack|phb}",
-                "{@item Leather armor|phb}, two {@item dagger|phb|daggers}, and {@item thieves' tools|phb}"
-            ],
-            "goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "dex": 13
-            },
-            "proficienciesGained": {
-                "armor": [
-                    "light"
-                ],
-                "skills": {
-                    "choose": 1,
-                    "from": [
-                        "Acrobatics",
-                        "Athletics",
-                        "Deception",
-                        "Insight",
-                        "Intimidation",
-                        "Investigation",
-                        "Perception",
-                        "Performance",
-                        "Persuasion",
-                        "Sleight of Hand",
-                        "Stealth"
-                    ]
-                },
-                "tools": [
-                    "thieves' tools"
-                ]
-            }
-        },
         "classFeatures": [
             [
                 {
@@ -32135,6 +33691,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -32168,6 +33735,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -32186,6 +33764,17 @@ export default [
                         "When you reach 10th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 10th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -32203,6 +33792,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -32237,6 +33837,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -32263,6 +33874,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -32279,6 +33901,10 @@ export default [
         "subclasses": [
             {
                 "name": "Arcane Trickster",
+                "shortName": "Arcane Trickster",
+                "source": "PHB",
+                "spellcastingAbility": "int",
+                "casterProgression": "1/3",
                 "subclassTableGroups": [
                     {
                         "subclasses": [
@@ -32288,8 +33914,8 @@ export default [
                             }
                         ],
                         "colLabels": [
-                            "{@filter Cantrips Known|spells|level=0|subclass=Arcane Trickster}",
-                            "{@filter Spells Known|spells|subclass=Arcane Trickster}"
+                            "{@filter Cantrips Known|spells|level=0|subclass=Rogue: Arcane Trickster}",
+                            "{@filter Spells Known|spells|subclass=Rogue: Arcane Trickster}"
                         ],
                         "rows": [
                             [
@@ -32383,10 +34009,10 @@ export default [
                             }
                         ],
                         "colLabels": [
-                            "{@filter 1st|spells|level=1|subclass=Arcane Trickster}",
-                            "{@filter 2nd|spells|level=2|subclass=Arcane Trickster}",
-                            "{@filter 3rd|spells|level=3|subclass=Arcane Trickster}",
-                            "{@filter 4th|spells|level=4|subclass=Arcane Trickster}"
+                            "{@filter 1st|spells|level=1|subclass=Rogue: Arcane Trickster}",
+                            "{@filter 2nd|spells|level=2|subclass=Rogue: Arcane Trickster}",
+                            "{@filter 3rd|spells|level=3|subclass=Rogue: Arcane Trickster}",
+                            "{@filter 4th|spells|level=4|subclass=Rogue: Arcane Trickster}"
                         ],
                         "rows": [
                             [
@@ -32512,8 +34138,6 @@ export default [
                         ]
                     }
                 ],
-                "spellcastingAbility": "int",
-                "casterProgression": "1/3",
                 "subclassFeatures": [
                     [
                         {
@@ -32654,12 +34278,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Arcane Trickster"
+                ]
             },
             {
                 "name": "Assassin",
+                "shortName": "Assassin",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -32725,12 +34349,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Assassin"
+                ]
             },
             {
                 "name": "Mastermind",
+                "shortName": "Mastermind",
+                "source": "SCAG",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -32805,12 +34430,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Mastermind"
+                ]
             },
             {
                 "name": "Inquisitive (UA)",
+                "shortName": "Inquisitive (UA)",
+                "source": "UAGothicHeroes",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -32881,12 +34507,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAGothicHeroes",
-                "shortName": "Inquisitive (UA)"
+                ]
             },
             {
                 "name": "Swashbuckler",
+                "shortName": "Swashbuckler",
+                "source": "SCAG",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -32953,12 +34580,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Swashbuckler"
+                ]
             },
             {
                 "name": "Thief",
+                "shortName": "Thief",
+                "source": "PHB",
+                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -33022,12 +34650,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Thief"
+                ]
             },
             {
                 "name": "Scout (UA)",
+                "shortName": "Scout (UA)",
+                "source": "UARangerAndRogue",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -33091,12 +34720,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARangerAndRogue",
-                "shortName": "Scout (UA)"
+                ]
             },
             {
                 "name": "Inquisitive",
+                "shortName": "Inquisitive",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -33168,12 +34797,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Inquisitive"
+                ]
             },
             {
                 "name": "Mastermind",
+                "shortName": "Mastermind",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -33248,12 +34877,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Mastermind"
+                ]
             },
             {
                 "name": "Scout",
+                "shortName": "Scout",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -33317,12 +34946,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Scout"
+                ]
             },
             {
                 "name": "Swashbuckler",
+                "shortName": "Swashbuckler",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -33389,12 +35018,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Swashbuckler"
+                ]
             },
             {
                 "name": "Acrobat (Livestream)",
+                "shortName": "Acrobat (Stream)",
+                "source": "Stream",
                 "subclassFeatures": [
                     [
                         {
@@ -33452,12 +35081,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "Stream",
-                "shortName": "Acrobat (Stream)"
+                ]
             },
             {
                 "name": "The Revived (UA)",
+                "shortName": "Revived (UA)",
+                "source": "UAFighterRangerRogue",
                 "subclassFeatures": [
                     [
                         {
@@ -33570,12 +35199,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighterRangerRogue",
-                "shortName": "Revived (UA)"
+                ]
             },
             {
                 "name": "Soulknife (UA)",
+                "shortName": "Soulknife (UA)",
+                "source": "UAFighterRogueWizard",
+                "page": 2,
                 "subclassFeatures": [
                     [
                         {
@@ -33655,10 +35285,7 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAFighterRogueWizard",
-                "shortName": "Soulknife (UA)",
-                "page": 2
+                ]
             }
         ],
         "fluff": [
@@ -33950,205 +35577,12 @@ export default [
                 "page": 44,
                 "source": "XGE"
             }
-        ],
-        "page": 94
-    },
-    {
-        "name": "Warrior Sidekick",
-        "source": "UASidekicks",
-        "classFeatures": [
-            [
-                {
-                    "type": "inset",
-                    "name": "Sidekick Class",
-                    "entries": [
-                        "{@note Note: this class is intended for NPC {@variantrule sidekicks|uasidekicks}.}"
-                    ]
-                },
-                {
-                    "name": "Bonus Proficiencies",
-                    "entries": [
-                        "At 1st level, the sidekick gains proficiency in one saving throw of your choice: Strength, Dexterity, or Constitution.",
-                        "In addition, the sidekick gains proficiency in three skills of your choice from the following list: {@skill Acrobatics}, {@skill Animal Handling}, {@skill Athletics}, {@skill Intimidation}, {@skill Nature}, {@skill Perception}, and {@skill Survival}. If the sidekick is a humanoid, it also gains proficiency with all armor, shields, and simple martial weapons."
-                    ]
-                },
-                {
-                    "name": "Second Wind",
-                    "entries": [
-                        "Starting at 1st level, the sidekick can use a bonus action on its turn to regain hit points equal to 1d10 + its level in this class. Once it uses this feature, it must finish a short or long rest before it can use it again.",
-                        "The sidekick can use this feature twice between rests starting at 18th level."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Danger Sense",
-                    "entries": [
-                        "Beginning at 2nd level, the sidekick has advantage on Dexterity saving throws against effects that it can see, such as traps and spells. This feature doesn't work if the sidekick is incapacitated."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Improved Critical",
-                    "entries": [
-                        "Starting at 3rd level, the sidekick's attack rolls score a critical hit on a roll of 19 or 20 on the d20."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Extra Attack (1 extra)",
-                    "entries": [
-                        "Beginning at 5th level, the sidekick can attack twice, instead of once, whenever it takes the Attack action on its turn.",
-                        "The number of attacks increases to three when the sidekick reaches 11th level and to four when it reaches 20th level."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "At 6th level, you gain another Ability Score Improvement."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Battle Readiness",
-                    "entries": [
-                        "After the sidekick reaches 7th level, it has advantage on initiative rolls."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "At 8th level, you gain another Ability Score Improvement."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Indomitable (1 use)",
-                    "entries": [
-                        "Starting at 9th level, the sidekick can reroll a saving throw that it fails, but it must use the new roll. When it uses this feature, it can't use the feature again unless it finishes a long rest.",
-                        "The sidekick can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Improved Defense",
-                    "entries": [
-                        "At 10th level, the sidekick's Armor Class increases by 1."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Extra Attack (2 extra)",
-                    "entries": [
-                        "At 11th level, you gain another Extra Attack."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "At 12th level, you gain another Ability Score Improvement."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Indomitable (2 uses)",
-                    "entries": [
-                        "At 13th level, you gain another use of Indomitable."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "At 14th level, you gain another Ability Score Improvement."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Superior Critical",
-                    "entries": [
-                        "Starting at 15th level, the sidekick's attack rolls score a critical hit on a roll of 18-20 on the d20."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "At 16th level, you gain another Ability Score Improvement."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Indomitable (3 uses)",
-                    "entries": [
-                        "At 17th level, you gain another use of Indomitable."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Second Wind (2 uses)",
-                    "entries": [
-                        "At 18th level, you gain another use of Second Wind."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Ability Score Improvement",
-                    "entries": [
-                        "At 19th level, you gain another Ability Score Improvement."
-                    ]
-                }
-            ],
-            [
-                {
-                    "name": "Extra Attack (3 extra)",
-                    "entries": [
-                        "At 20th level, you gain another Extra Attack."
-                    ]
-                }
-            ]
-        ],
-        "fluff": [
-            {
-                "entries": [
-                    "A warrior sidekick grows in martial prowess as it fights by your side. It might be a soldier, a town guard, a battle-trained beast, or any other creature honed for combat."
-                ],
-                "source": "UASidekicks",
-                "page": 2
-            }
-        ],
-        "page": 2
+        ]
     },
     {
         "name": "Expert Sidekick",
         "source": "UASidekicks",
+        "page": 3,
         "classFeatures": [
             [
                 {
@@ -34203,6 +35637,17 @@ export default [
                     "entries": [
                         "When you reach 4th level, and again at 8th, 10th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -34235,6 +35680,17 @@ export default [
                     "entries": [
                         "At 8th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -34252,6 +35708,17 @@ export default [
                     "entries": [
                         "At 10th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 10th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -34268,6 +35735,17 @@ export default [
                     "entries": [
                         "At 12th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -34284,6 +35762,17 @@ export default [
                     "entries": [
                         "At 14th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 14th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -34300,6 +35789,17 @@ export default [
                     "entries": [
                         "At 16th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -34324,6 +35824,17 @@ export default [
                     "entries": [
                         "At 19th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -34344,12 +35855,12 @@ export default [
                 "source": "UASidekicks",
                 "page": 3
             }
-        ],
-        "page": 3
+        ]
     },
     {
         "name": "Spellcaster Sidekick",
         "source": "UASidekicks",
+        "page": 4,
         "classTableGroups": [
             {
                 "colLabels": [
@@ -34861,6 +36372,17 @@ export default [
                     "entries": [
                         "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -34879,6 +36401,17 @@ export default [
                     "entries": [
                         "At 8th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -34897,6 +36430,17 @@ export default [
                     "entries": [
                         "At 12th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -34915,6 +36459,17 @@ export default [
                     "entries": [
                         "At 16th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -34924,6 +36479,17 @@ export default [
                     "entries": [
                         "At 18th level, you gain another Ability Score Improvement."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 18th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -34944,12 +36510,283 @@ export default [
                 "source": "UASidekicks",
                 "page": 4
             }
+        ]
+    },
+    {
+        "name": "Warrior Sidekick",
+        "source": "UASidekicks",
+        "page": 2,
+        "classFeatures": [
+            [
+                {
+                    "type": "inset",
+                    "name": "Sidekick Class",
+                    "entries": [
+                        "{@note Note: this class is intended for NPC {@variantrule sidekicks|uasidekicks}.}"
+                    ]
+                },
+                {
+                    "name": "Bonus Proficiencies",
+                    "entries": [
+                        "At 1st level, the sidekick gains proficiency in one saving throw of your choice: Strength, Dexterity, or Constitution.",
+                        "In addition, the sidekick gains proficiency in three skills of your choice from the following list: {@skill Acrobatics}, {@skill Animal Handling}, {@skill Athletics}, {@skill Intimidation}, {@skill Nature}, {@skill Perception}, and {@skill Survival}. If the sidekick is a humanoid, it also gains proficiency with all armor, shields, and simple and martial weapons."
+                    ]
+                },
+                {
+                    "name": "Second Wind",
+                    "entries": [
+                        "Starting at 1st level, the sidekick can use a bonus action on its turn to regain hit points equal to 1d10 + its level in this class. Once it uses this feature, it must finish a short or long rest before it can use it again.",
+                        "The sidekick can use this feature twice between rests starting at 18th level."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Danger Sense",
+                    "entries": [
+                        "Beginning at 2nd level, the sidekick has advantage on Dexterity saving throws against effects that it can see, such as traps and spells. This feature doesn't work if the sidekick is incapacitated."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Improved Critical",
+                    "entries": [
+                        "Starting at 3rd level, the sidekick's attack rolls score a critical hit on a roll of 19 or 20 on the d20."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Extra Attack (1 extra)",
+                    "entries": [
+                        "Beginning at 5th level, the sidekick can attack twice, instead of once, whenever it takes the Attack action on its turn.",
+                        "The number of attacks increases to three when the sidekick reaches 11th level and to four when it reaches 20th level."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "At 6th level, you gain another Ability Score Improvement."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 6th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Battle Readiness",
+                    "entries": [
+                        "After the sidekick reaches 7th level, it has advantage on initiative rolls."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "At 8th level, you gain another Ability Score Improvement."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Indomitable (1 use)",
+                    "entries": [
+                        "Starting at 9th level, the sidekick can reroll a saving throw that it fails, but it must use the new roll. When it uses this feature, it can't use the feature again unless it finishes a long rest.",
+                        "The sidekick can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Improved Defense",
+                    "entries": [
+                        "At 10th level, the sidekick's Armor Class increases by 1."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Extra Attack (2 extra)",
+                    "entries": [
+                        "At 11th level, you gain another Extra Attack."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "At 12th level, you gain another Ability Score Improvement."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Indomitable (2 uses)",
+                    "entries": [
+                        "At 13th level, you gain another use of Indomitable."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "At 14th level, you gain another Ability Score Improvement."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 14th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Superior Critical",
+                    "entries": [
+                        "Starting at 15th level, the sidekick's attack rolls score a critical hit on a roll of 18-20 on the d20."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "At 16th level, you gain another Ability Score Improvement."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Indomitable (3 uses)",
+                    "entries": [
+                        "At 17th level, you gain another use of Indomitable."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Second Wind (2 uses)",
+                    "entries": [
+                        "At 18th level, you gain another use of Second Wind."
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "Ability Score Improvement",
+                    "entries": [
+                        "At 19th level, you gain another Ability Score Improvement."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
+                }
+            ],
+            [
+                {
+                    "name": "Extra Attack (3 extra)",
+                    "entries": [
+                        "At 20th level, you gain another Extra Attack."
+                    ]
+                }
+            ]
         ],
-        "page": 4
+        "fluff": [
+            {
+                "entries": [
+                    "A warrior sidekick grows in martial prowess as it fights by your side. It might be a soldier, a town guard, a battle-trained beast, or any other creature honed for combat."
+                ],
+                "source": "UASidekicks",
+                "page": 2
+            }
+        ]
     },
     {
         "name": "Sorcerer",
         "source": "PHB",
+        "page": 99,
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 6
@@ -34960,6 +36797,45 @@ export default [
         ],
         "spellcastingAbility": "cha",
         "casterProgression": "full",
+        "startingProficiencies": {
+            "weapons": [
+                "daggers",
+                "darts",
+                "slings",
+                "quarterstaffs",
+                "light crossbows"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "deception",
+                            "insight",
+                            "intimidation",
+                            "persuasion",
+                            "religion"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                "(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
+                "(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
+                "Two {@item dagger|phb|daggers}"
+            ],
+            "goldAlternative": "{@dice 3d4×10|3d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "cha": 13
+            }
+        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -35353,41 +37229,6 @@ export default [
                 ]
             }
         ],
-        "startingProficiencies": {
-            "weapons": [
-                "daggers",
-                "darts",
-                "slings",
-                "quarterstaffs",
-                "light crossbows"
-            ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Arcana",
-                    "Deception",
-                    "Insight",
-                    "Intimidation",
-                    "Persuasion",
-                    "Religion"
-                ]
-            }
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-                "(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-                "(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-                "Two {@item dagger|phb|daggers}"
-            ],
-            "goldAlternative": "{@dice 3d4×10|3d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "cha": 13
-            }
-        },
         "classFeatures": [
             [
                 {
@@ -35687,6 +37528,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -35707,6 +37559,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -35726,6 +37589,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -35746,6 +37620,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -35772,6 +37657,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -35787,6 +37683,9 @@ export default [
         "subclasses": [
             {
                 "name": "Draconic Bloodline",
+                "shortName": "Draconic",
+                "source": "PHB",
+                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -35906,12 +37805,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Draconic "
+                ]
             },
             {
                 "name": "Wild Magic",
+                "shortName": "Wild ",
+                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -36193,12 +38092,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PHB",
-                "shortName": "Wild "
+                ]
             },
             {
                 "name": "Favored Soul (UA)",
+                "shortName": "Favored Soul (UA)",
+                "source": "UAModifyingClasses",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -36262,12 +38162,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAModifyingClasses",
-                "shortName": "Favored Soul (UA)"
+                ]
             },
             {
                 "name": "Favored Soul v2 (UA)",
+                "shortName": "Favored Soul v2 (UA)",
+                "source": "UASorcerer",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -36342,12 +38243,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UASorcerer",
-                "shortName": "Favored Soul v2 (UA)"
+                ]
             },
             {
                 "name": "Favored Soul v3 (UA)",
+                "shortName": "Favored Soul v3 (UA)",
+                "source": "UARevisedSubclasses",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -36416,12 +38318,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UARevisedSubclasses",
-                "shortName": "Favored Soul v3 (UA)"
+                ]
             },
             {
                 "name": "Storm Sorcery (UA)",
+                "shortName": "Storm (UA)",
+                "source": "UAWaterborneAdventures",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -36532,12 +38435,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAWaterborneAdventures",
-                "shortName": "Storm (UA)"
+                ]
             },
             {
                 "name": "Storm Sorcery",
+                "shortName": "Storm",
+                "source": "SCAG",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -36611,12 +38515,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "SCAG",
-                "shortName": "Storm"
+                ]
             },
             {
                 "name": "Shadow (UA)",
+                "shortName": "Shadow (UA)",
+                "source": "UALightDarkUnderdark",
+                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -36727,12 +38632,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UALightDarkUnderdark",
-                "shortName": "Shadow (UA)"
+                ]
             },
             {
                 "name": "Phoenix Sorcery (UA)",
+                "shortName": "Phoenix (UA)",
+                "source": "UASorcerer",
                 "subclassFeatures": [
                     [
                         {
@@ -36857,12 +38762,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UASorcerer",
-                "shortName": "Phoenix (UA)"
+                ]
             },
             {
                 "name": "Sea Sorcery (UA)",
+                "shortName": "Sea (UA)",
+                "source": "UASorcerer",
                 "subclassFeatures": [
                     [
                         {
@@ -36975,12 +38880,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UASorcerer",
-                "shortName": "Sea (UA)"
+                ]
             },
             {
                 "name": "Stone Sorcery (UA)",
+                "shortName": "Stone (UA)",
+                "source": "UASorcerer",
                 "subclassFeatures": [
                     [
                         {
@@ -37084,12 +38989,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UASorcerer",
-                "shortName": "Stone (UA)"
+                ]
             },
             {
                 "name": "Pyromancer (PSK)",
+                "shortName": "Pyromancer (PSK)",
+                "source": "PSK",
                 "subclassFeatures": [
                     [
                         {
@@ -37145,12 +39050,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "PSK",
-                "shortName": "Pyromancer (PSK)"
+                ]
             },
             {
                 "name": "Divine Soul",
+                "shortName": "Divine Soul",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -37252,12 +39157,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Divine Soul"
+                ]
             },
             {
                 "name": "Shadow Magic",
+                "shortName": "Shadow",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -37372,12 +39277,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Shadow"
+                ]
             },
             {
                 "name": "Storm Sorcery",
+                "shortName": "Storm ",
+                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -37455,12 +39360,12 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "XGE",
-                "shortName": "Storm "
+                ]
             },
             {
                 "name": "Giant Soul (UA)",
+                "shortName": "Giant Soul (UA)",
+                "source": "UAGiantSoulSorcerer",
                 "subclassFeatures": [
                     [
                         {
@@ -37623,12 +39528,13 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UAGiantSoulSorcerer",
-                "shortName": "Giant Soul (UA)"
+                ]
             },
             {
                 "name": "Aberrant Mind (UA)",
+                "shortName": "Aberrant Mind (UA)",
+                "source": "UASorcererAndWarlock",
+                "page": 1,
                 "subclassFeatures": [
                     [
                         {
@@ -37763,9 +39669,166 @@ export default [
                             ]
                         }
                     ]
-                ],
-                "source": "UASorcererAndWarlock",
-                "shortName": "Aberrant Mind (UA)"
+                ]
+            },
+            {
+                "name": "Clockwork Soul (UA)",
+                "shortName": "Clockwork Soul (UA)",
+                "source": "UA2020SubclassesPt2",
+                "page": 4,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Clockwork Soul",
+                            "entries": [
+                                "A plane of utmost order, Mechanus is a realm overseen by a godlike entity called Primus, whose actions are inscrutable and calculations, vast. You, or someone from your lineage, might have become entangled in one of the machinations of the leader of the modrons. Perhaps you were exposed to an artifact created by Primus, or your ancestor took part in the Great Modron March in some way.",
+                                "The power of Mechanus can seem strange and alien to others, but for you it is part of a vast and glorious system that others can't comprehend. At your option, you can pick from or roll on the Manifestations of Mechanus table to create a way your connection to the plane manifests while you are casting a spell.",
+                                {
+                                    "type": "table",
+                                    "caption": "Manifestations of Mechanus",
+                                    "colLabels": [
+                                        "d6",
+                                        "Manifestation"
+                                    ],
+                                    "colStyles": [
+                                        "col-2 text-center",
+                                        "col-10"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "1",
+                                            "Large, spectral cogwheels appear hovering behind you."
+                                        ],
+                                        [
+                                            "2",
+                                            "The hands of a clock appear in your eyes."
+                                        ],
+                                        [
+                                            "3",
+                                            "Your skin glows with a golden, metallic sheen."
+                                        ],
+                                        [
+                                            "4",
+                                            "Your features become unnaturally angular, like geometric objects."
+                                        ],
+                                        [
+                                            "5",
+                                            "Your spellcasting focus takes the form of a miniature Spawning Stone or other creation of Primus."
+                                        ],
+                                        [
+                                            "6",
+                                            "The ringing of a clock can be heard by you and those affected by your magic."
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Clockwork Magic",
+                                    "entries": [
+                                        "{@i 1st-level Clockwork Soul feature}",
+                                        "You learn additional spells when you reach certain levels in this class, as shown on the Clockwork Spells table. Each spell counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know. These spells can't be replaced when you gain a level in this class.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Clockwork Spells",
+                                            "colLabels": [
+                                                "Sorcerer Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "1st",
+                                                    "{@spell alarm}, {@spell protection from evil and good}"
+                                                ],
+                                                [
+                                                    "3rd",
+                                                    "{@spell find traps}, {@spell heat metal}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell counterspell}, {@spell glyph of warding}"
+                                                ],
+                                                [
+                                                    "7th",
+                                                    "{@spell arcane eye}, {@spell Otiluke's resilient sphere}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell animate objects}, {@spell wall of force}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Restore Balance",
+                                    "entries": [
+                                        "{@i 1st-level Clockwork Soul feature}",
+                                        "Your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a {@dice d20} with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.",
+                                        "You can use this feature a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Bulwark of Law",
+                                    "entries": [
+                                        "{@i 6th-level Clockwork Soul feature}",
+                                        "You can imbue a creature with a shimmering shield of order. As an action, you can expend 1 to 5 sorcery points to create a magical ward around yourself or another creature you can see within 30 feet of you. The ward lasts until you finish a long rest or until you use this feature again.",
+                                        "The ward is represented by a number of {@dice d8}s equal to the number of sorcery points spent to create it. When the warded creature takes damage, it can use its reaction to spend a number of those dice, roll them, and reduce the damage taken by the total of the spent dice."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Trance of Order",
+                                    "entries": [
+                                        "{@i 14th-level Clockwork Soul feature}",
+                                        "You gain the ability to enter a state of clockwork consciousness as a bonus action. For the next minute, attack rolls against you can't benefit from advantage, and whenever you make an attack roll, an ability check, or a saving throw, you can treat a {@dice d20} roll of 9 or lower as a 10.",
+                                        "Once you use this action, you can't use it again until you finish a long rest or until you expend 5 sorcery points to use it again."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Clockwork Cavalcade",
+                                    "entries": [
+                                        "{@i 18th-level Clockwork Soul feature}",
+                                        "You summon spirits of order to restore balance around you. As an action, you summon the spirits in a 30-foot cube originating from you. The spirits look like modrons or other constructs of your choice. The spirits are intangible and invulnerable, work fast and efficiently, and create the following effects within the cube before vanishing:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "The spirits restore up to 100 hit points, divided as you choose among any number of creatures of your choice in the cube.",
+                                                "Any damaged objects entirely in the cube are repaired.",
+                                                "Every spell of 6th level or lower ends on creatures and objects of your choice in the cube."
+                                            ]
+                                        },
+                                        "Once you use this action, you can't use it again until you finish a long rest or until you expend 7 sorcery points to use it again."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
@@ -38132,12 +40195,12 @@ export default [
                 "page": 48,
                 "source": "XGE"
             }
-        ],
-        "page": 99
+        ]
     },
     {
         "name": "Warlock",
         "source": "PHB",
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 8
@@ -38147,6 +40210,7 @@ export default [
             "cha"
         ],
         "spellcastingAbility": "cha",
+        "casterProgression": "pact",
         "classTableGroups": [
             {
                 "colLabels": [
@@ -38307,18 +40371,22 @@ export default [
             "weapons": [
                 "simple"
             ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Arcana",
-                    "Deception",
-                    "History",
-                    "Intimidation",
-                    "Investigation",
-                    "Nature",
-                    "Religion"
-                ]
-            }
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "deception",
+                            "history",
+                            "intimidation",
+                            "investigation",
+                            "nature",
+                            "religion"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
         },
         "startingEquipment": {
             "additionalFromBackground": true,
@@ -38404,6 +40472,15 @@ export default [
                     ]
                 },
                 {
+                    "name": "Spell Versatility",
+                    "entries": [
+                        "{@i 1st-level warlock feature (enhances Pact Magic)}",
+                        "Whenever you finish a long rest, you can replace one spell you learned from this Pact Magic feature with another spell from the warlock spell list. The new spell must be the same level as the spell you replace."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 10
+                },
+                {
                     "name": "Otherworldly Patron",
                     "entries": [
                         "At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
@@ -38475,6 +40552,16 @@ export default [
                                         "name": "The Seeker (UA)",
                                         "source": "UATheFaithful"
                                     }
+                                },
+                                {
+                                    "name": "Pact of the Talisman",
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 11,
+                                    "entries": [
+                                        "Your patron gives you a special amulet, a talisman that can aid you, or anyone else who wears it, when the need is great. When the wearer makes an ability check with a skill in which they lack proficiency, they can add a {@dice d4} to the roll.",
+                                        "If you lose the talisman, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous amulet.",
+                                        "The talisman turns to ash when you die."
+                                    ]
                                 }
                             ]
                         }
@@ -38488,6 +40575,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -38508,6 +40606,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -38537,6 +40646,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -38573,6 +40693,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -38592,6 +40723,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -38814,7 +40956,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Fiend"
+                "shortName": "Fiend",
+                "srd": true
             },
             {
                 "name": "Ghost in the Machine (UA)",
@@ -39282,7 +41425,8 @@ export default [
                     ]
                 ],
                 "source": "UALightDarkUnderdark",
-                "shortName": "Undying Light (UA)"
+                "shortName": "Undying Light (UA)",
+                "isReprinted": true
             },
             {
                 "name": "The Celestial (UA)",
@@ -39395,7 +41539,8 @@ export default [
                     ]
                 ],
                 "source": "UARevisedClassOptions",
-                "shortName": "Celestial (UA)"
+                "shortName": "Celestial (UA)",
+                "isReprinted": true
             },
             {
                 "name": "The Seeker (UA)",
@@ -39728,7 +41873,8 @@ export default [
                     ]
                 ],
                 "source": "UAWarlockAndWizard",
-                "shortName": "Hexblade (UA)"
+                "shortName": "Hexblade (UA)",
+                "isReprinted": true
             },
             {
                 "name": "The Celestial",
@@ -40386,6 +42532,189 @@ export default [
                 ],
                 "source": "UASorcererAndWarlock",
                 "shortName": "Lurker in the Deep (UA)"
+            },
+            {
+                "name": "The Noble Genie (UA)",
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "The Noble Genie",
+                            "entries": [
+                                "You made a pact with one of the rarest of geniekind, a noble genie. Such entities are rulers of vast fiefs on the Elemental Planes and have great influence over lesser genies and elemental creatures. Noble genies are varied in their motivations but are all arrogant collectors of creatures, knowledge, and treasure. A genie values their collection and will protect that which they claim ownership over. Through your connection to the noble, you can leverage their influence and extend their ownership of things in the multiverse.",
+                                {
+                                    "type": "entries",
+                                    "name": "Expanded Spell List",
+                                    "entries": [
+                                        "{@i 1st-level Noble Genie feature}",
+                                        "The Noble Genie lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Noble Genie Expanded Spells",
+                                            "colLabels": [
+                                                "Spell Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "1st",
+                                                    "{@spell fog cloud}, {@spell sleep}"
+                                                ],
+                                                [
+                                                    "2nd",
+                                                    "{@spell enlarge/reduce}, {@spell phantasmal force}"
+                                                ],
+                                                [
+                                                    "3rd",
+                                                    "{@spell create food and water}, {@spell protection from energy}"
+                                                ],
+                                                [
+                                                    "4th",
+                                                    "{@spell polymorph}, {@spell phantasmal killer}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell Bigby's hand}, {@spell creation}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Collector's Vessel",
+                                    "entries": [
+                                        "{@i 1st-level Noble Genie feature}",
+                                        "Your patron gives you a magical vessel with which you can bind a creature to you and to your patron's menagerie. The vessel is a Tiny object, and it is a spellcasting focus for you. You decide what the object is, or you can determine what it is randomly by rolling on the Collector's Vessel table.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Collector's Vessel",
+                                            "colLabels": [
+                                                "d6",
+                                                "Vessel"
+                                            ],
+                                            "colStyles": [
+                                                "col-2 text-center",
+                                                "col-10"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "1",
+                                                    "Oil lamp"
+                                                ],
+                                                [
+                                                    "2",
+                                                    "Urn"
+                                                ],
+                                                [
+                                                    "3",
+                                                    "Ring with a compartment"
+                                                ],
+                                                [
+                                                    "4",
+                                                    "Stoppered bottle"
+                                                ],
+                                                [
+                                                    "5",
+                                                    "Hollow statuette"
+                                                ],
+                                                [
+                                                    "6",
+                                                    "Ornate lantern"
+                                                ]
+                                            ]
+                                        },
+                                        "If you lose your vessel, you can perform a 1 hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous vessel. The vessel vanishes in a flare of elemental power when you die.",
+                                        "As an action while you are holding the vessel, you target a willing creature you can see within 100 feet of you and create a tether of wispy elemental material that links the target to you. The tether lasts for 1 hour, until you use this feature to create another tether, until the bound target is reduced to 0 hit points, or until the target ends its turn more than 100 feet from you.",
+                                        "While you are tethered to a creature, you gain the following benefits:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "You gain a bonus to your Wisdom ({@skill Perception}) checks equal to your Charisma modifier (minimum of +1).",
+                                                "When you can cast a spell, you can deliver the spell from your space or the bound creature's space."
+                                            ]
+                                        },
+                                        "You can create the tether a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest.",
+                                        {
+                                            "type": "inset",
+                                            "name": "Collector's Vessel and Pact Boons",
+                                            "entries": [
+                                                "When you create a tether with your Collector's Vessel, the tether takes on a form that reflects your patron's type of geniekind: swirling mist and wind for a {@creature djinni}, sand and flecks of rock or gems for a {@creature dao}, smoke and embers for an {@creature efreeti}, and foamy water for a {@creature marid}.",
+                                                "When you gain the Pact Boon feature at 3rd level, if you choose a boon that grants you a physical object, your vessel transforms into that object. For example, a warlock whose patron is a noble efreeti and chooses the Pact of the Tome might find their bottle transformed into an elaborate scroll made of a red dragon's wing, with brass and iron rolling rods."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Elemental Resistance",
+                                    "entries": [
+                                        "{@i 6th-level Noble Genie feature}",
+                                        "Your patron grants you protection from an element. Whenever you finish a long rest, you gain resistance to acid, cold, fire, or lightning damage (your choice) until the end of your next long rest.",
+                                        "While the tether of your Collector's Vessel is active, the tethered creature gains resistance to the damage type you chose."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Protective Wish",
+                                    "entries": [
+                                        "{@i 10th-level Noble Genie feature}",
+                                        "You're now able to use your Collector's Vessel to wish for protection for yourself or your tethered creature. If you or the tethered creature is hit by an attack, you can use your reaction to teleport, swapping places with the creature and switching which one of you is hit by the attack."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Genie's Entertainment",
+                                    "entries": [
+                                        "{@i 10th-level Noble Genie feature}",
+                                        "As an action, you attempt to send a creature you can see within 90 feet to your patron's court. The target must succeed on a Charisma saving throw against your warlock spell save DC or be magically drawn into your vessel and teleported to your patron's court in the Elemental Planes. While there, the target is {@condition stunned} and your patron marvels at the target with amusement but brings no harm to it. The target can repeat the saving throw at the end of each of its turns, reappearing in the space it left or in the nearest unoccupied space if that space is occupied on a success.",
+                                        "Once you use this feature, you can't use it again until you finish a long rest. If the target remains in your patron's court for 1 minute, the genie sends the target back at the end of its turn as if it successfully saved, and you regain the use of this feature."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Collector's Call",
+                                    "entries": [
+                                        "{@i 14th-level Noble Genie feature}",
+                                        "In exchange for extending your patron's influence over the multiverse, you can call on more of their power. As an action, you can implore your patron for aid by making a Charisma ({@skill Persuasion}) check against your warlock spell save DC. If the check succeeds, you can choose one of the following effects:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "A creature you can see within 60 feet of you regains {@dice 8d6} hit points and ends one disease or condition afflicting it: {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition paralyzed}, or {@condition poisoned}.",
+                                                "A creature you can see within 60 feet of you has disadvantage on attack rolls and saving throws until the start of your next turn.",
+                                                "You cast the {@spell legend lore} spell without material components."
+                                            ]
+                                        },
+                                        "Whether the check succeeds or fails, you can't use this feature again until you finish a long rest. Alternatively, you can regain the use of this feature by sacrificing nonmagical treasure worth at least 500 gp to your patron. This sacrifice requires the treasure to be within 10 feet of you for at least 1 minute, at the end of which you use an action to teleport the treasure to your patron's realm, provided you have the vessel of your Collector's Vessel in hand."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ],
+                "source": "UA2020SubclassesPt1",
+                "shortName": "Noble Genie (UA)"
             }
         ],
         "fluff": [
@@ -40653,6 +42982,7 @@ export default [
     {
         "name": "Wizard",
         "source": "PHB",
+        "srd": true,
         "hd": {
             "number": 1,
             "faces": 6
@@ -40976,17 +43306,21 @@ export default [
                 "quarterstaffs",
                 "light crossbows"
             ],
-            "skills": {
-                "choose": 2,
-                "from": [
-                    "Arcana",
-                    "History",
-                    "Insight",
-                    "Investigation",
-                    "Medicine",
-                    "Religion"
-                ]
-            }
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "history",
+                            "insight",
+                            "investigation",
+                            "medicine",
+                            "religion"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
         },
         "startingEquipment": {
             "additionalFromBackground": true,
@@ -41160,6 +43494,17 @@ export default [
                         "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 4th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -41180,6 +43525,17 @@ export default [
                         "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 8th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -41200,6 +43556,17 @@ export default [
                         "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 12th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -41220,6 +43587,17 @@ export default [
                         "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 16th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [],
@@ -41239,6 +43617,17 @@ export default [
                         "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
                         "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
                     ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Proficiency Versatility",
+                    "entries": [
+                        "{@i 19th-level feature (enhances Ability Score Improvement)}",
+                        "When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+                        "This change represents one of your skills atrophying as you focus on a different skill."
+                    ],
+                    "source": "UAClassFeatureVariants",
+                    "page": 1
                 }
             ],
             [
@@ -41660,7 +44049,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Abjuration"
+                "shortName": "Abjuration",
+                "srd": true
             },
             {
                 "name": "Bladesinging",
@@ -41848,7 +44238,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Conjuration"
+                "shortName": "Conjuration",
+                "srd": true
             },
             {
                 "name": "School of Divination",
@@ -41965,7 +44356,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Divination"
+                "shortName": "Divination",
+                "srd": true
             },
             {
                 "name": "School of Enchantment",
@@ -42037,7 +44429,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Enchantment"
+                "shortName": "Enchantment",
+                "srd": true
             },
             {
                 "name": "School of Evocation",
@@ -42106,7 +44499,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Evocation"
+                "shortName": "Evocation",
+                "srd": true
             },
             {
                 "name": "School of Illusion",
@@ -42177,7 +44571,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Illusion"
+                "shortName": "Illusion",
+                "srd": true
             },
             {
                 "name": "Technomancy (UA)",
@@ -42410,7 +44805,8 @@ export default [
                     ]
                 ],
                 "source": "UAWizardRevisited",
-                "shortName": "War Magic (UA)"
+                "shortName": "War Magic (UA)",
+                "isReprinted": true
             },
             {
                 "name": "School of Transmutation",
@@ -42539,7 +44935,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Transmutation"
+                "shortName": "Transmutation",
+                "srd": true
             },
             {
                 "name": "School of Necromancy",
@@ -42617,7 +45014,8 @@ export default [
                     ]
                 ],
                 "source": "PHB",
-                "shortName": "Necromancy"
+                "shortName": "Necromancy",
+                "srd": true
             },
             {
                 "name": "Lore Mastery (UA)",

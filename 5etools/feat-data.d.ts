@@ -3,28 +3,6 @@ declare const _default: ({
     "prerequisite": {
         "race": {
             "name": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "choose": {
-            "from": string[];
-            "amount": number;
-        };
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
             "subrace": string;
         }[];
     }[];
@@ -508,6 +486,32 @@ declare const _default: ({
         "items": string[];
     })[];
     "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+    "otherSources"?: undefined;
+} | {
+    "name": string;
+    "prerequisite": {
+        "race": ({
+            "name": string;
+            "displayEntry"?: undefined;
+        } | {
+            "name": string;
+            "displayEntry": string;
+        })[];
+    }[];
+    "source": string;
+    "page": number;
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "ability": {
+        "choose": {
+            "from": string[];
+            "amount": number;
+        };
+    }[];
     "srd"?: undefined;
     "additionalSources"?: undefined;
     "otherSources"?: undefined;

@@ -99,7 +99,7 @@ export function render(c) {
         ${items(c)}
         ${features(c)}
         ${attacks(c)}
-        ${spellList(c.spells)}
+        ${spellList(c)}
     </div>
     <section class="lists">
         ${collapse('Limited Class Features', limitedClassFeatures(c))}
@@ -450,9 +450,31 @@ function spell(s) {
     `;
     });
 }
-function spellList(s) {
+const fullCaster = [
+    [2, 0, 0, 0, 0, 0, 0, 0, 0],
+    [3, 0, 0, 0, 0, 0, 0, 0, 0],
+    [4, 2, 0, 0, 0, 0, 0, 0, 0],
+    [4, 3, 0, 0, 0, 0, 0, 0, 0],
+    [4, 3, 2, 0, 0, 0, 0, 0, 0],
+    [4, 3, 3, 0, 0, 0, 0, 0, 0],
+    [4, 3, 3, 1, 0, 0, 0, 0, 0],
+    [4, 3, 3, 2, 0, 0, 0, 0, 0],
+    [4, 3, 3, 3, 1, 0, 0, 0, 0],
+    [4, 3, 3, 3, 2, 0, 0, 0, 0],
+    [4, 3, 3, 3, 2, 1, 0, 0, 0],
+    [4, 3, 3, 3, 2, 1, 0, 0, 0],
+    [4, 3, 3, 3, 2, 1, 1, 0, 0],
+    [4, 3, 3, 3, 2, 1, 1, 0, 0],
+    [4, 3, 3, 3, 2, 1, 1, 1, 0],
+    [4, 3, 3, 3, 2, 1, 1, 1, 0],
+    [4, 3, 3, 3, 2, 1, 1, 1, 1],
+    [4, 3, 3, 3, 3, 1, 1, 1, 1],
+    [4, 3, 3, 3, 3, 2, 1, 1, 1],
+    [4, 3, 3, 3, 3, 2, 2, 1, 1],
+];
+function spellList(c) {
     return __awaiter(this, void 0, void 0, function* () {
-        const spells = s.map(findSpell)
+        const spells = c.spells.map(findSpell)
             .filter((spell) => spell !== undefined)
             .sort((a, b) => a.name.localeCompare(b.name));
         const spellsByLevel = [];
@@ -462,7 +484,12 @@ function spellList(s) {
         return html `
     <div class="spell-list">
         ${spellsByLevel.filter(s => s.length > 0).map((spells, level) => html `
-            <h3>Level ${level}</h3>
+            <h3>
+                Level ${level}
+                <span class="used">
+                    ${range(fullCaster[c.level.total - 1][level - 1]).map(() => html `<span class='use'></span>`)}
+                </span>
+            </h3>
             <ul>
                 ${spells.map(spell => html `<li>${spell.name}</li>`)}
             </ul>

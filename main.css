@@ -537,16 +537,19 @@ table tbody tr:not(:last-child) td {
 }
 table tbody .used {
   padding-left: 2ch;
-  white-space: nowrap;
   text-align: right;
 }
-table tbody .used .use {
+
+.used {
+  white-space: nowrap;
+}
+.used .use {
   display: inline-block;
   border: solid 1px;
   width: 0.7em;
   height: 0.7em;
 }
-table tbody .used .use:not(:last-child) {
+.used .use:not(:last-child) {
   margin-right: 2px;
 }
 

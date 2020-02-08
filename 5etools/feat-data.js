@@ -2371,7 +2371,7 @@ export default [
         "source": "PHB",
         "page": 170,
         "entries": [
-            "You gain proficiency in any combination of three {@book skills|phb|7|skills} or {@filter tools|items|type=tool;artisan tool} of your choice."
+            "You gain proficiency in any combination of three {@book skills|phb|7|skills} or {@filter tools|items|type=tool;artisan's tools} of your choice."
         ]
     },
     {
@@ -3009,7 +3009,8 @@ export default [
                         "name": "dwarf"
                     },
                     {
-                        "name": "small race"
+                        "name": "small race",
+                        "displayEntry": "a Small race"
                     }
                 ]
             }
