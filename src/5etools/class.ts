@@ -3,12 +3,14 @@ import { Entry } from "./entry.js"
 import classes from './class-data.js'
 
 interface StartingProficiencies {
-    armor: string[],
+    armor?: string[],
     weapons: string[],
     skills: {
-        choose: number,
-        from: string[]
-    }
+        choose: {
+            from: Array<keyof Stats>,
+            count: 2
+        }
+    }[]
 }
 interface HitDie {
     number: number
@@ -26,7 +28,7 @@ export interface Class {
     hd: HitDie
     proficiency: Array<keyof Stats>
     spellcastingAbility?: keyof Stats
-    casterProgression?: "1/2" | "full"
+    casterProgression?: "1/2" | "1/3" | "full" | "pact"
     startingProficiencies: StartingProficiencies
     classFeatures: ClassFeature[][]
     subclassTitle: string
