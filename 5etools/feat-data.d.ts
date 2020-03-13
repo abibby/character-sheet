@@ -1,555 +1,16 @@
 declare const _default: ({
     "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-            "subrace": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "con": number;
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "dex": number;
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "cha": number;
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "int": number;
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-            "subrace": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "int": number;
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-            "subrace": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": (string | {
-            "type": string;
-            "name": string;
-            "entries": string[];
-        })[];
-    })[];
-    "ability": {
-        "choose": {
-            "from": string[];
-            "amount": number;
-        };
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "dex": number;
-    }[];
-    "prerequisite"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "wis": number;
-    }[];
-    "prerequisite"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "int": number;
-    }[];
-    "prerequisite"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "str": number;
-    }[];
-    "prerequisite"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "cha": number;
-    }[];
-    "prerequisite"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "prerequisite"?: undefined;
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "con": number;
-    }[];
-    "prerequisite"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "choose": {
-            "from": string[];
-            "amount": number;
-        };
-    }[];
-    "prerequisite"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "race": {
-            "name": string;
-        }[];
-    }[];
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "ability": {
-            "str": number;
-        }[];
-    }[];
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "srd": boolean;
-    "ability"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "proficiency": {
-            "armor": string;
-        }[];
-    }[];
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "str": number;
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "ability": {
-            "cha": number;
-        }[];
-    }[];
-    "entries": string[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "proficiency": {
-            "armor": string;
-        }[];
-    }[];
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "proficiency": {
-            "armor": string;
-        }[];
-    }[];
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "choose": {
-            "from": string[];
-            "amount": number;
-        };
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "choose": {
-            "from": string[];
-            "amount": number;
-            "textreference": boolean;
-        };
-    }[];
-    "prerequisite"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "ability": ({
-            "int": number;
-            "wis"?: undefined;
-        } | {
-            "wis": number;
-            "int"?: undefined;
-        })[];
-    }[];
-    "entries": string[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "ability": {
-            "dex": number;
-        }[];
-    }[];
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "spellcasting": boolean;
-    }[];
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "source": string;
-    "page": number;
-    "prerequisite": {
-        "race": {
-            "name": string;
-            "subrace": string;
-        }[];
-    }[];
-    "entries": string[];
-    "additionalSources": {
-        "source": string;
-        "page": number;
-    }[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "ability": {
-            "int": number;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "name": string;
-        "entries": string[];
-    })[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-        }[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability"?: undefined;
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": ({
-            "name": string;
-            "displayEntry"?: undefined;
-        } | {
-            "name": string;
-            "displayEntry": string;
-        })[];
-    }[];
-    "source": string;
-    "page": number;
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "choose": {
-            "from": string[];
-            "amount": number;
-        };
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-    "otherSources"?: undefined;
-} | {
-    "name": string;
-    "prerequisite": {
-        "race": {
-            "name": string;
-        }[];
-    }[];
     "source": string;
     "page": number;
     "otherSources": {
         "source": string;
         "page": number;
     }[];
-    "entries": (string | {
-        "type": string;
-        "items": string[];
-    })[];
-    "ability": {
-        "choose": {
-            "from": string[];
-            "amount": number;
-        };
-    }[];
-    "srd"?: undefined;
-    "additionalSources"?: undefined;
-} | {
-    "name": string;
     "prerequisite": {
         "other": string;
     }[];
-    "source": string;
-    "page": number;
-    "otherSources": {
-        "source": string;
-        "page": number;
+    "ability": {
+        "con": number;
     }[];
     "entries": (string | {
         "type": string;
@@ -583,9 +44,548 @@ declare const _default: ({
         "colStyles"?: undefined;
         "rows"?: undefined;
     })[];
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "ability": {
+        "dex": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "ability": {
+        "cha": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "ability": {
+        "int": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "ability": {
+        "wis": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "ability": {
+        "choose": {
+            "from": string[];
+            "amount": number;
+        };
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "ability": {
+        "str": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+            "subrace": string;
+        }[];
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+        }[];
+    }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
     "ability": {
         "con": number;
     }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+        }[];
+    }[];
+    "ability": {
+        "con": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+        }[];
+    }[];
+    "ability": {
+        "dex": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+        }[];
+    }[];
+    "ability": {
+        "cha": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+        }[];
+    }[];
+    "ability": {
+        "int": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+            "subrace": string;
+        }[];
+    }[];
+    "ability": {
+        "int": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "srd": boolean;
+    "prerequisite": {
+        "ability": {
+            "str": number;
+        }[];
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "proficiency": {
+            "armor": string;
+        }[];
+    }[];
+    "ability": {
+        "str": number;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "ability": {
+            "cha": number;
+        }[];
+    }[];
+    "entries": string[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "proficiency": {
+            "armor": string;
+        }[];
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "proficiency": {
+            "armor": string;
+        }[];
+    }[];
+    "ability": {
+        "choose": {
+            "from": string[];
+            "amount": number;
+        };
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+        }[];
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "ability": {
+            "int": number;
+        }[];
+    }[];
+    "entries": (string | {
+        "type": string;
+        "name": string;
+        "entries": string[];
+    })[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "ability": {
+        "choose": {
+            "from": string[];
+            "amount": number;
+            "textreference": boolean;
+        };
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "prerequisite"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "otherSources": {
+        "source": string;
+        "page": number;
+    }[];
+    "prerequisite": {
+        "race": {
+            "name": string;
+        }[];
+    }[];
+    "ability": {
+        "choose": {
+            "from": string[];
+            "amount": number;
+        };
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "ability": ({
+            "int": number;
+            "wis"?: undefined;
+        } | {
+            "wis": number;
+            "int"?: undefined;
+        })[];
+    }[];
+    "entries": string[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "ability": {
+            "dex": number;
+        }[];
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "spellcasting": boolean;
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": ({
+            "name": string;
+            "displayEntry"?: undefined;
+        } | {
+            "name": string;
+            "displayEntry": string;
+        })[];
+    }[];
+    "ability": {
+        "choose": {
+            "from": string[];
+            "amount": number;
+        };
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": string[];
+    })[];
+    "otherSources"?: undefined;
+    "srd"?: undefined;
+    "additionalSources"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "additionalSources": {
+        "source": string;
+        "page": number;
+    }[];
+    "prerequisite": {
+        "race": {
+            "name": string;
+            "subrace": string;
+        }[];
+    }[];
+    "entries": string[];
+    "otherSources"?: undefined;
+    "ability"?: undefined;
+    "srd"?: undefined;
+} | {
+    "name": string;
+    "source": string;
+    "page": number;
+    "prerequisite": {
+        "race": {
+            "name": string;
+            "subrace": string;
+        }[];
+    }[];
+    "ability": {
+        "choose": {
+            "from": string[];
+            "amount": number;
+        };
+    }[];
+    "entries": (string | {
+        "type": string;
+        "items": (string | {
+            "type": string;
+            "name": string;
+            "entries": string[];
+        })[];
+    })[];
+    "otherSources"?: undefined;
     "srd"?: undefined;
     "additionalSources"?: undefined;
 })[];

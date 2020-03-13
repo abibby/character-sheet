@@ -450,6 +450,14 @@ function spell(s) {
     `;
     });
 }
+function isConcentration(s) {
+    for (const d of s.duration) {
+        if (d.type === 'timed' && d.concentration) {
+            return true;
+        }
+    }
+    return false;
+}
 const fullCaster = [
     [2, 0, 0, 0, 0, 0, 0, 0, 0],
     [3, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -491,7 +499,7 @@ function spellList(c) {
                 </span>
             </h3>
             <ul>
-                ${spells.map(spell => html `<li>${spell.name}</li>`)}
+                ${spells.map(spell => html `<li>${spell.name} ${isConcentration(spell) && '<span class="concentration">C</span>'}</li>`)}
             </ul>
         `)}
     </div>

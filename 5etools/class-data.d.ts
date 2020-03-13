@@ -280,6 +280,7 @@ declare const _default: ({
         }[])[];
     })[];
     "fluff": {
+        "name": string;
         "page": number;
         "source": string;
         "type": string;
@@ -393,7 +394,7 @@ declare const _default: ({
         "page": number;
     })[])[];
     "subclassTitle": string;
-    "subclasses": {
+    "subclasses": ({
         "name": string;
         "shortName": string;
         "source": string;
@@ -427,8 +428,63 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-    }[];
+        "page"?: undefined;
+    } | {
+        "name": string;
+        "shortName": string;
+        "source": string;
+        "page": number;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "caption": string;
+                    "colLabels": string[];
+                    "colStyles": string[];
+                    "rows": string[][];
+                })[];
+            } | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            } | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "name": string;
+                    "entries": (string | {
+                        "type": string;
+                        "style": string;
+                        "items": {
+                            "type": string;
+                            "name": string;
+                            "entry": string;
+                        }[];
+                    })[];
+                })[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "name": string;
+                    "entries": string[];
+                })[];
+            }[];
+        }[])[];
+    })[];
     "fluff": {
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -733,6 +789,8 @@ declare const _default: ({
         "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -745,6 +803,7 @@ declare const _default: ({
         "source": string;
         "page": number;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -769,6 +828,7 @@ declare const _default: ({
         })[];
         "source": string;
         "page": number;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
     "spellcastingAbility"?: undefined;
@@ -776,6 +836,7 @@ declare const _default: ({
 } | {
     "name": string;
     "source": string;
+    "page": number;
     "srd": boolean;
     "hd": {
         "number": number;
@@ -784,15 +845,6 @@ declare const _default: ({
     "proficiency": string[];
     "spellcastingAbility": string;
     "casterProgression": string;
-    "classTableGroups": ({
-        "colLabels": string[];
-        "rows": number[][];
-        "title"?: undefined;
-    } | {
-        "title": string;
-        "colLabels": string[];
-        "rows": number[][];
-    })[];
     "startingProficiencies": {
         "armor": string[];
         "weapons": string[];
@@ -830,6 +882,15 @@ declare const _default: ({
             "weapons"?: undefined;
         };
     };
+    "classTableGroups": ({
+        "colLabels": string[];
+        "rows": number[][];
+        "title"?: undefined;
+    } | {
+        "title": string;
+        "colLabels": string[];
+        "rows": number[][];
+    })[];
     "classFeatures": (({
         "name": string;
         "entries": (string | {
@@ -876,39 +937,15 @@ declare const _default: ({
     "subclassTitle": string;
     "subclasses": ({
         "name": string;
-        "subclassFeatures": ({
-            "name": string;
-            "entries": (string | {
-                "type": string;
-                "name": string;
-                "entries": string[];
-            })[];
-        }[] | {
-            "entries": {
-                "type": string;
-                "name": string;
-                "entries": string[];
-            }[];
-        }[])[];
-        "source": string;
         "shortName": string;
+        "source": string;
         "srd": boolean;
-        "isReprinted"?: undefined;
-    } | {
-        "name": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
                 "type": string;
                 "name": string;
-                "entries": (string | {
-                    "type": string;
-                    "entries": {
-                        "type": string;
-                        "name": string;
-                        "entries": string[];
-                    }[];
-                })[];
+                "entries": string[];
             })[];
         }[] | {
             "entries": {
@@ -917,35 +954,12 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
+        "isReprinted"?: undefined;
+    } | {
+        "name": string;
         "shortName": string;
+        "source": string;
         "isReprinted": boolean;
-        "srd"?: undefined;
-    } | {
-        "name": string;
-        "subclassFeatures": ({
-            "name": string;
-            "entries": (string | {
-                "type": string;
-                "name": string;
-                "entries": (string | {
-                    "type": string;
-                    "items": string[];
-                })[];
-            })[];
-        }[] | {
-            "entries": {
-                "type": string;
-                "name": string;
-                "entries": string[];
-            }[];
-        }[])[];
-        "source": string;
-        "shortName": string;
-        "srd"?: undefined;
-        "isReprinted"?: undefined;
-    } | {
-        "name": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -967,12 +981,61 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
+        "srd"?: undefined;
+    } | {
+        "name": string;
         "shortName": string;
+        "source": string;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": string[];
+            }[];
+        }[])[];
         "srd"?: undefined;
         "isReprinted"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "entries": {
+                        "type": string;
+                        "name": string;
+                        "entries": string[];
+                    }[];
+                })[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": string[];
+            }[];
+        }[])[];
+        "srd"?: undefined;
+        "isReprinted"?: undefined;
+    } | {
+        "name": string;
+        "shortName": string;
+        "source": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -990,12 +1053,36 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
+        "srd"?: undefined;
+        "isReprinted"?: undefined;
+    } | {
+        "name": string;
         "shortName": string;
+        "source": string;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "name": string;
+                    "entries": string[];
+                })[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": string[];
+            }[];
+        }[])[];
         "srd"?: undefined;
         "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -1008,6 +1095,7 @@ declare const _default: ({
         "source": string;
         "page": number;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -1044,8 +1132,8 @@ declare const _default: ({
         })[];
         "source": string;
         "page": number;
+        "name"?: undefined;
     })[];
-    "page": number;
     "isReprinted"?: undefined;
 } | {
     "name": string;
@@ -1451,8 +1539,73 @@ declare const _default: ({
         }[])[];
         "srd"?: undefined;
         "isReprinted"?: undefined;
+    } | {
+        "name": string;
+        "shortName": string;
+        "source": string;
+        "page": number;
+        "isReprinted": boolean;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "caption": string;
+                "colLabels": string[];
+                "colStyles": string[];
+                "rows": string[][];
+                "name"?: undefined;
+                "entries"?: undefined;
+            } | {
+                "type": string;
+                "name": string;
+                "entries": string[];
+                "caption"?: undefined;
+                "colLabels"?: undefined;
+                "colStyles"?: undefined;
+                "rows"?: undefined;
+            })[];
+        }[] | {
+            "entries": ({
+                "type": string;
+                "name": string;
+                "entries": string[];
+                "source"?: undefined;
+                "page"?: undefined;
+            } | {
+                "type": string;
+                "name": string;
+                "entries": string[];
+                "source": string;
+                "page": number;
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            }[];
+        }[])[];
+        "srd"?: undefined;
     })[];
-    "fluff": {
+    "fluff": ({
+        "name": string;
+        "type": string;
+        "entries": (string | {
+            "type": string;
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": string[];
+            })[];
+        })[];
+        "source": string;
+        "page": number;
+    } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -1498,11 +1651,13 @@ declare const _default: ({
         })[];
         "source": string;
         "page": number;
-    }[];
+        "name"?: undefined;
+    })[];
     "isReprinted"?: undefined;
 } | {
     "name": string;
     "source": string;
+    "page": number;
     "srd": boolean;
     "hd": {
         "number": number;
@@ -1511,15 +1666,6 @@ declare const _default: ({
     "proficiency": string[];
     "spellcastingAbility": string;
     "casterProgression": string;
-    "classTableGroups": ({
-        "colLabels": string[];
-        "rows": number[][];
-        "title"?: undefined;
-    } | {
-        "title": string;
-        "colLabels": string[];
-        "rows": number[][];
-    })[];
     "startingProficiencies": {
         "armor": (string | {
             "proficiency": string;
@@ -1558,6 +1704,15 @@ declare const _default: ({
             "skills"?: undefined;
         };
     };
+    "classTableGroups": ({
+        "colLabels": string[];
+        "rows": number[][];
+        "title"?: undefined;
+    } | {
+        "title": string;
+        "colLabels": string[];
+        "rows": number[][];
+    })[];
     "classFeatures": (({
         "name": string;
         "entries": (string | {
@@ -1624,33 +1779,9 @@ declare const _default: ({
     "subclassTitle": string;
     "subclasses": ({
         "name": string;
-        "subclassFeatures": ({
-            "name": string;
-            "entries": (string | {
-                "type": string;
-                "name": string;
-                "entries": (string | {
-                    "type": string;
-                    "caption": string;
-                    "colLabels": string[];
-                    "colStyles": string[];
-                    "rows": string[][];
-                })[];
-            })[];
-        }[] | {
-            "entries": {
-                "type": string;
-                "name": string;
-                "entries": string[];
-            }[];
-        }[])[];
-        "source": string;
         "shortName": string;
+        "source": string;
         "srd": boolean;
-        "isReprinted"?: undefined;
-        "page"?: undefined;
-    } | {
-        "name": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -1671,13 +1802,40 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
+        "isReprinted"?: undefined;
+        "page"?: undefined;
+    } | {
+        "name": string;
         "shortName": string;
+        "source": string;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "caption": string;
+                    "colLabels": string[];
+                    "colStyles": string[];
+                    "rows": string[][];
+                })[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": string[];
+            }[];
+        }[])[];
         "srd"?: undefined;
         "isReprinted"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "isReprinted": boolean;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -1702,13 +1860,12 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "isReprinted": boolean;
         "srd"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -1733,13 +1890,14 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
         "srd"?: undefined;
         "isReprinted"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "isReprinted": boolean;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -1760,13 +1918,13 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "isReprinted": boolean;
         "srd"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "page": number;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -1801,13 +1959,59 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
+        "srd"?: undefined;
+        "isReprinted"?: undefined;
+    } | {
+        "name": string;
         "shortName": string;
+        "source": string;
         "page": number;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "caption": string;
+                    "colLabels": string[];
+                    "colStyles": string[];
+                    "rows": string[][];
+                })[];
+            } | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "style": string;
+                    "items": {
+                        "type": string;
+                        "name": string;
+                        "entry": string;
+                    }[];
+                })[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "style": string;
+                    "items": {
+                        "type": string;
+                        "name": string;
+                        "entry": string;
+                    }[];
+                })[];
+            }[];
+        }[])[];
         "srd"?: undefined;
         "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -1820,6 +2024,7 @@ declare const _default: ({
         "source": string;
         "page": number;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -1844,8 +2049,8 @@ declare const _default: ({
         })[];
         "source": string;
         "page": number;
+        "name"?: undefined;
     })[];
-    "page": number;
     "isReprinted"?: undefined;
 } | {
     "name": string;
@@ -2399,6 +2604,8 @@ declare const _default: ({
         "subclassTableGroups"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -2411,6 +2618,7 @@ declare const _default: ({
         "source": string;
         "page": number;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -2435,6 +2643,7 @@ declare const _default: ({
         })[];
         "source": string;
         "page": number;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
     "spellcastingAbility"?: undefined;
@@ -2751,6 +2960,8 @@ declare const _default: ({
         "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -2763,6 +2974,7 @@ declare const _default: ({
         "source": string;
         "page": number;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -2787,6 +2999,7 @@ declare const _default: ({
         })[];
         "source": string;
         "page": number;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
     "spellcastingAbility"?: undefined;
@@ -3229,6 +3442,8 @@ declare const _default: ({
         "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -3241,6 +3456,7 @@ declare const _default: ({
         "page": number;
         "source": string;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -3265,6 +3481,7 @@ declare const _default: ({
         })[];
         "source": string;
         "page": number;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
 } | {
@@ -3461,6 +3678,7 @@ declare const _default: ({
             }[];
         }[])[];
         "isReprinted"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -3489,6 +3707,7 @@ declare const _default: ({
         }[])[];
         "srd"?: undefined;
         "isReprinted"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -3515,6 +3734,7 @@ declare const _default: ({
             }[];
         }[])[];
         "srd"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -3548,6 +3768,7 @@ declare const _default: ({
         }[])[];
         "srd"?: undefined;
         "isReprinted"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -3577,8 +3798,53 @@ declare const _default: ({
         }[])[];
         "srd"?: undefined;
         "isReprinted"?: undefined;
+        "page"?: undefined;
+    } | {
+        "name": string;
+        "shortName": string;
+        "source": string;
+        "page": number;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "caption": string;
+                "colLabels": string[];
+                "colStyles": string[];
+                "rows": string[][];
+                "name"?: undefined;
+                "entries"?: undefined;
+            } | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "caption": string;
+                    "colLabels": string[];
+                    "colStyles": string[];
+                    "rows": string[][];
+                })[];
+                "caption"?: undefined;
+                "colLabels"?: undefined;
+                "colStyles"?: undefined;
+                "rows"?: undefined;
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            }[];
+        }[])[];
+        "srd"?: undefined;
+        "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -3591,6 +3857,7 @@ declare const _default: ({
         "source": string;
         "page": number;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -3615,6 +3882,7 @@ declare const _default: ({
         })[];
         "page": number;
         "source": string;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
 } | {
@@ -3798,6 +4066,7 @@ declare const _default: ({
             }[];
         }[])[];
         "isReprinted"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -3825,6 +4094,7 @@ declare const _default: ({
             }[];
         }[])[];
         "isReprinted"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -3844,6 +4114,7 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -3866,6 +4137,7 @@ declare const _default: ({
             }[];
         }[])[];
         "isReprinted"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -3876,6 +4148,48 @@ declare const _default: ({
                 "type": string;
                 "name": string;
                 "entries": string[];
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            }[];
+        }[])[];
+        "isReprinted"?: undefined;
+        "page"?: undefined;
+    } | {
+        "name": string;
+        "shortName": string;
+        "source": string;
+        "page": number;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "caption": string;
+                "colLabels": string[];
+                "colStyles": string[];
+                "rows": string[][];
+                "name"?: undefined;
+                "entries"?: undefined;
+            } | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "caption": string;
+                    "colLabels": string[];
+                    "colStyles": string[];
+                    "rows": string[][];
+                })[];
+                "caption"?: undefined;
+                "colLabels"?: undefined;
+                "colStyles"?: undefined;
+                "rows"?: undefined;
             })[];
         }[] | {
             "entries": {
@@ -3890,6 +4204,8 @@ declare const _default: ({
         "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -3902,6 +4218,7 @@ declare const _default: ({
         "source": string;
         "page": number;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -3926,6 +4243,7 @@ declare const _default: ({
         })[];
         "page": number;
         "source": string;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
     "spellcastingAbility"?: undefined;
@@ -4073,6 +4391,7 @@ declare const _default: ({
             }[];
         }[])[];
         "isReprinted"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -4098,6 +4417,7 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -4130,6 +4450,7 @@ declare const _default: ({
             }[];
         }[])[];
         "isReprinted"?: undefined;
+        "page"?: undefined;
     } | {
         "name": string;
         "shortName": string;
@@ -4158,8 +4479,52 @@ declare const _default: ({
             }[];
         }[])[];
         "isReprinted"?: undefined;
+        "page"?: undefined;
+    } | {
+        "name": string;
+        "shortName": string;
+        "source": string;
+        "page": number;
+        "subclassFeatures": ({
+            "name": string;
+            "entries": (string | {
+                "type": string;
+                "caption": string;
+                "colLabels": string[];
+                "colStyles": string[];
+                "rows": string[][];
+                "name"?: undefined;
+                "entries"?: undefined;
+            } | {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "caption": string;
+                    "colLabels": string[];
+                    "colStyles": string[];
+                    "rows": string[][];
+                })[];
+                "caption"?: undefined;
+                "colLabels"?: undefined;
+                "colStyles"?: undefined;
+                "rows"?: undefined;
+            })[];
+        }[] | {
+            "entries": {
+                "type": string;
+                "name": string;
+                "entries": (string | {
+                    "type": string;
+                    "items": string[];
+                })[];
+            }[];
+        }[])[];
+        "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -4172,6 +4537,7 @@ declare const _default: ({
         "source": string;
         "page": number;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -4196,6 +4562,7 @@ declare const _default: ({
         })[];
         "page": number;
         "source": string;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
     "multiclassing"?: undefined;
@@ -4483,6 +4850,8 @@ declare const _default: ({
         "srd"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -4495,6 +4864,7 @@ declare const _default: ({
         "page": number;
         "source": string;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -4519,6 +4889,7 @@ declare const _default: ({
         })[];
         "page": number;
         "source": string;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
     "spellcastingAbility"?: undefined;
@@ -4549,6 +4920,8 @@ declare const _default: ({
         "page": number;
     })[])[];
     "fluff": {
+        "name": string;
+        "type": string;
         "entries": string[];
         "source": string;
         "page": number;
@@ -4620,6 +4993,8 @@ declare const _default: ({
         "page": number;
     })[])[];
     "fluff": {
+        "name": string;
+        "type": string;
         "entries": string[];
         "source": string;
         "page": number;
@@ -5079,6 +5454,8 @@ declare const _default: ({
         "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -5091,6 +5468,7 @@ declare const _default: ({
         "page": number;
         "source": string;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -5115,11 +5493,13 @@ declare const _default: ({
         })[];
         "page": number;
         "source": string;
+        "name"?: undefined;
     })[];
     "isReprinted"?: undefined;
 } | {
     "name": string;
     "source": string;
+    "page": number;
     "srd": boolean;
     "hd": {
         "number": number;
@@ -5128,10 +5508,6 @@ declare const _default: ({
     "proficiency": string[];
     "spellcastingAbility": string;
     "casterProgression": string;
-    "classTableGroups": {
-        "colLabels": string[];
-        "rows": (string | number)[][];
-    }[];
     "startingProficiencies": {
         "armor": string[];
         "weapons": string[];
@@ -5164,6 +5540,10 @@ declare const _default: ({
             "skills"?: undefined;
         };
     };
+    "classTableGroups": {
+        "colLabels": string[];
+        "rows": (string | number)[][];
+    }[];
     "classFeatures": (({
         "name": string;
         "entries": (string | {
@@ -5242,6 +5622,9 @@ declare const _default: ({
     "subclassTitle": string;
     "subclasses": ({
         "name": string;
+        "shortName": string;
+        "source": string;
+        "srd": boolean;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5262,12 +5645,12 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "srd": boolean;
         "isReprinted"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "isReprinted": boolean;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5300,12 +5683,12 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "isReprinted": boolean;
         "srd"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "isReprinted": boolean;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5333,12 +5716,11 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "isReprinted": boolean;
         "srd"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5371,12 +5753,12 @@ declare const _default: ({
                 "name"?: undefined;
             })[];
         }[])[];
-        "source": string;
-        "shortName": string;
         "srd"?: undefined;
         "isReprinted"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5410,12 +5792,12 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
         "srd"?: undefined;
         "isReprinted"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5460,12 +5842,12 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
         "srd"?: undefined;
         "isReprinted"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -5478,6 +5860,7 @@ declare const _default: ({
         "page": number;
         "source": string;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -5502,12 +5885,13 @@ declare const _default: ({
         })[];
         "page": number;
         "source": string;
+        "name"?: undefined;
     })[];
-    "page": number;
     "isReprinted"?: undefined;
 } | {
     "name": string;
     "source": string;
+    "page": number;
     "srd": boolean;
     "hd": {
         "number": number;
@@ -5516,15 +5900,6 @@ declare const _default: ({
     "proficiency": string[];
     "spellcastingAbility": string;
     "casterProgression": string;
-    "classTableGroups": ({
-        "colLabels": string[];
-        "rows": number[][];
-        "title"?: undefined;
-    } | {
-        "title": string;
-        "colLabels": string[];
-        "rows": number[][];
-    })[];
     "startingProficiencies": {
         "weapons": string[];
         "skills": {
@@ -5552,6 +5927,15 @@ declare const _default: ({
         };
         "proficienciesGained"?: undefined;
     };
+    "classTableGroups": ({
+        "colLabels": string[];
+        "rows": number[][];
+        "title"?: undefined;
+    } | {
+        "title": string;
+        "colLabels": string[];
+        "rows": number[][];
+    })[];
     "classFeatures": (({
         "name": string;
         "entries": (string | {
@@ -5601,6 +5985,8 @@ declare const _default: ({
     "subclassTitle": string;
     "subclasses": ({
         "name": string;
+        "shortName": string;
+        "source": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5627,13 +6013,13 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
         "isReprinted"?: undefined;
         "srd"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5659,13 +6045,14 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
         "isReprinted"?: undefined;
         "srd"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "isReprinted": boolean;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5680,13 +6067,13 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "isReprinted": boolean;
         "srd"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "srd": boolean;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5717,13 +6104,12 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "srd": boolean;
         "isReprinted"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5759,13 +6145,14 @@ declare const _default: ({
                 "entries": string[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
         "isReprinted"?: undefined;
         "srd"?: undefined;
         "page"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "page": number;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5792,13 +6179,13 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "page": number;
         "isReprinted"?: undefined;
         "srd"?: undefined;
     } | {
         "name": string;
+        "shortName": string;
+        "source": string;
+        "page": number;
         "subclassFeatures": ({
             "name": string;
             "entries": (string | {
@@ -5832,13 +6219,12 @@ declare const _default: ({
                 })[];
             }[];
         }[])[];
-        "source": string;
-        "shortName": string;
-        "page": number;
         "isReprinted"?: undefined;
         "srd"?: undefined;
     })[];
     "fluff": ({
+        "name": string;
+        "type": string;
         "entries": (string | {
             "type": string;
             "name": string;
@@ -5851,6 +6237,7 @@ declare const _default: ({
         "page": number;
         "source": string;
     } | {
+        "type": string;
         "entries": (string | {
             "type": string;
             "entries": string[];
@@ -5875,8 +6262,8 @@ declare const _default: ({
         })[];
         "page": number;
         "source": string;
+        "name"?: undefined;
     })[];
-    "page": number;
     "isReprinted"?: undefined;
 })[];
 export default _default;

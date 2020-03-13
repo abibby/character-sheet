@@ -505,6 +505,26 @@ body h2 {
   margin: 0;
   margin-bottom: 10px;
 }
+.character .spell-list ul .concentration {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  margin-left: 2px;
+  font-size: 12px;
+  top: -1px;
+}
+.character .spell-list ul .concentration::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: black;
+  z-index: -1;
+  transform: translate(-1.5px, 1px) rotate(45deg);
+}
 
 .lists {
   page-break-before: always;
