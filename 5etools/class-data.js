@@ -12548,7 +12548,6 @@ export default [
     {
         "name": "Druid",
         "source": "PHB",
-        "page": 64,
         "srd": true,
         "hd": {
             "number": 1,
@@ -12560,72 +12559,6 @@ export default [
         ],
         "spellcastingAbility": "wis",
         "casterProgression": "full",
-        "startingProficiencies": {
-            "armor": [
-                "light",
-                "medium",
-                {
-                    "proficiency": "shields",
-                    "full": "shields (druids will not wear armor or use shields made of metal)"
-                }
-            ],
-            "weapons": [
-                "clubs",
-                "daggers",
-                "darts",
-                "javelins",
-                "maces",
-                "quarterstaffs",
-                "scimitars",
-                "sickles",
-                "slings",
-                "spears"
-            ],
-            "tools": [
-                "Herbalism kit"
-            ],
-            "skills": [
-                {
-                    "choose": {
-                        "from": [
-                            "arcana",
-                            "animal handling",
-                            "insight",
-                            "medicine",
-                            "nature",
-                            "perception",
-                            "religion",
-                            "survival"
-                        ],
-                        "count": 2
-                    }
-                }
-            ]
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a wooden {@item shield|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-                "(a) a {@item scimitar|phb} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-                "{@item Leather armor|phb}, an {@item explorer's pack|phb}, and a {@item druidic focus|phb}"
-            ],
-            "goldAlternative": "{@dice 2d4×10|2d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "wis": 13
-            },
-            "proficienciesGained": {
-                "armor": [
-                    "light",
-                    "medium",
-                    {
-                        "proficiency": "shields",
-                        "full": "shields (druids will not wear armor or use shields made of metal)"
-                    }
-                ]
-            }
-        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -12931,12 +12864,78 @@ export default [
                 ]
             }
         ],
+        "startingProficiencies": {
+            "armor": [
+                "light",
+                "medium",
+                {
+                    "proficiency": "shields",
+                    "full": "shields (druids will not wear armor or use shields made of metal)"
+                }
+            ],
+            "weapons": [
+                "clubs",
+                "daggers",
+                "darts",
+                "javelins",
+                "maces",
+                "quarterstaffs",
+                "scimitars",
+                "sickles",
+                "slings",
+                "spears"
+            ],
+            "tools": [
+                "Herbalism kit"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "animal handling",
+                            "insight",
+                            "medicine",
+                            "nature",
+                            "perception",
+                            "religion",
+                            "survival"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a wooden {@item shield|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                "(a) a {@item scimitar|phb} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
+                "{@item Leather armor|phb}, an {@item explorer's pack|phb}, and a {@item druidic focus|phb}"
+            ],
+            "goldAlternative": "{@dice 2d4×10|2d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "wis": 13
+            },
+            "proficienciesGained": {
+                "armor": [
+                    "light",
+                    "medium",
+                    {
+                        "proficiency": "shields",
+                        "full": "shields (druids will not wear armor or use shields made of metal)"
+                    }
+                ]
+            }
+        },
         "classFeatures": [
             [
                 {
                     "name": "Druidic",
                     "entries": [
-                        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom ({@skill Perception}) check but can't decipher it without magic."
+                        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
                     ]
                 },
                 {
@@ -13256,9 +13255,6 @@ export default [
         "subclasses": [
             {
                 "name": "Circle of the Land",
-                "shortName": "Land",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -13572,12 +13568,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Land",
+                "srd": true
             },
             {
                 "name": "Circle of the Moon",
-                "shortName": "Moon",
-                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -13699,13 +13696,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Moon"
             },
             {
                 "name": "Circle of Dreams (UA)",
-                "shortName": "Dreams (UA)",
-                "source": "UADruid",
-                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -13766,13 +13762,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UADruid",
+                "shortName": "Dreams (UA)",
+                "isReprinted": true
             },
             {
                 "name": "Circle of the Shepherd (UA)",
-                "shortName": "Shepherd (UA)",
-                "source": "UADruid",
-                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -13875,13 +13871,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UADruid",
+                "shortName": "Shepherd (UA)",
+                "isReprinted": true
             },
             {
                 "name": "Circle of the Shepherd v2 (UA)",
-                "shortName": "Shepherd v2 (UA)",
-                "source": "UARevisedClassOptions",
-                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -13993,12 +13989,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UARevisedClassOptions",
+                "shortName": "Shepherd v2 (UA)",
+                "isReprinted": true
             },
             {
                 "name": "Circle of Twilight (UA)",
-                "shortName": "Twilight (UA)",
-                "source": "UADruid",
                 "subclassFeatures": [
                     [
                         {
@@ -14058,12 +14055,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UADruid",
+                "shortName": "Twilight (UA)"
             },
             {
                 "name": "Circle of Dreams",
-                "shortName": "Dreams",
-                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -14127,12 +14124,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "XGE",
+                "shortName": "Dreams"
             },
             {
                 "name": "Circle of the Shepherd",
-                "shortName": "Shepherd",
-                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -14234,13 +14231,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "XGE",
+                "shortName": "Shepherd"
             },
             {
                 "name": "Circle of Spores (UA)",
-                "shortName": "Spores (UA)",
-                "source": "UAThreeSubclasses",
-                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -14343,13 +14339,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAThreeSubclasses",
+                "shortName": "Spores (UA)",
+                "isReprinted": true
             },
             {
                 "name": "Circle of Spores",
-                "shortName": "Spores",
-                "source": "GGR",
-                "page": 26,
                 "subclassFeatures": [
                     [
                         {
@@ -14471,17 +14467,17 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "GGR",
+                "shortName": "Spores",
+                "page": 26
             },
             {
                 "name": "Circle of Wildfire (UA)",
-                "shortName": "Wildfire (UA)",
-                "source": "UAClericDruidWizard",
-                "page": 2,
                 "subclassFeatures": [
                     [
                         {
-                            "name": "Circle of Wildfire",
+                            "name": "Circle of Wildfire (UA)",
                             "entries": [
                                 "Druids who are members of the Circle of Wildfire understand the necessity of destruction, such as how a forest fire promotes growth. These druids bond with a primal spirit that harbors destructive tendencies, allowing the druids to use their power to create controlled flames that help flora and fauna reproduce and grow.",
                                 {
@@ -14581,169 +14577,14 @@ export default [
                             ]
                         }
                     ]
-                ]
-            },
-            {
-                "name": "Circle of the Stars (UA)",
-                "shortName": "Stars (UA)",
-                "source": "UA2020SubclassesPt3",
-                "page": 3,
-                "subclassFeatures": [
-                    [
-                        {
-                            "name": "Circle of the Stars",
-                            "entries": [
-                                "An ancient lineage, the Circle of Stars allows druids to draw on the power of starlight. These druids have tracked heavenly patterns since time immemorial, discovering secrets hidden amid the constellations. By revealing and understanding these secrets, the Circle of the Stars seeks to harness the powers of the cosmos.",
-                                "Many druids of this circle keep detailed records of the stars and their effects on the world. Some groups document these observations at megalithic sites, which serve as enigmatic libraries of lore. These repositories might take the form of stone circles, pyramids, petroglyphs, and underground temples—any construction durable enough to protect the circle's sacred knowledge even against a great cataclysm.",
-                                {
-                                    "type": "entries",
-                                    "name": "Star Map",
-                                    "entries": [
-                                        "{@i 2nd-level Circle of the Stars feature}",
-                                        "You've created a star map as part of your study of the heavens. The map is a Tiny object and can serve as a spellcasting focus for your druid spells. You decide what form the object takes, or you can determine what it is by rolling on the Star Map table.",
-                                        {
-                                            "type": "table",
-                                            "caption": "Star Map",
-                                            "colLabels": [
-                                                "d6",
-                                                "Map Form"
-                                            ],
-                                            "colStyles": [
-                                                "col-2 text-center",
-                                                "col-10"
-                                            ],
-                                            "rows": [
-                                                [
-                                                    "1",
-                                                    "A scroll of living wood that aligns with heavenly bodies"
-                                                ],
-                                                [
-                                                    "2",
-                                                    "A stone tablet with fine holes drilled through it"
-                                                ],
-                                                [
-                                                    "3",
-                                                    "A speckled owlbear hide, tooled with raised marks"
-                                                ],
-                                                [
-                                                    "4",
-                                                    "A collection of maps bound in an ebony cover"
-                                                ],
-                                                [
-                                                    "5",
-                                                    "A crystal that projects starry patterns when placed before a light"
-                                                ],
-                                                [
-                                                    "6",
-                                                    "Tempered glass disks that align to depict constellations"
-                                                ]
-                                            ]
-                                        },
-                                        "If you lose your map, you can perform a 1-hour ceremony to magically create a replacement. This ceremony can be performed during a short or long rest, and it destroys the previous map.",
-                                        "You can cast the {@spell augury} and {@spell guiding bolt} spells without expending a spell slot and without preparing the spell, provided you use the star map as the spellcasting focus. You can cast a spell from the map in this way a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest."
-                                    ]
-                                },
-                                {
-                                    "type": "entries",
-                                    "name": "Starry Form",
-                                    "entries": [
-                                        "{@i 2nd-level Circle of the Stars feature}",
-                                        "You gain the ability to harness constellations' power to alter your form. As an action, you can expend a use of your Wild Shape feature to take on a starry form rather than transforming into a beast.",
-                                        "While in your starry form, you retain your game statistics, but your body takes on a luminous, starlike quality; your joints glimmer like stars, and glowing lines connect them as on a star chart. This form sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The form lasts for 10 minutes or until you're {@condition incapacitated}.",
-                                        "Whenever you assume your starry form, choose which of the following constellations glimmers on your body; your choice gives you certain benefits while in the form:",
-                                        {
-                                            "type": "list",
-                                            "style": "list-hang-notitle",
-                                            "items": [
-                                                {
-                                                    "type": "item",
-                                                    "name": "Chalice",
-                                                    "entry": "A constellation of a life-giving goblet appears on you. Whenever you cast a spell using a spell slot that restores hit points to a creature, you or another creature within 30 feet of you can regain hit points equal to {@dice 1d8} + half your level in this class."
-                                                },
-                                                {
-                                                    "type": "item",
-                                                    "name": "Archer",
-                                                    "entry": "A constellation of an archer appears on you. You gain a bonus action that you can use to make a ranged spell attack, hurling a luminous arrow that targets a creature you can see within 60 feet of you. On a hit, the attack deals radiant damage equal to {@dice 1d8} + your Wisdom modifier."
-                                                },
-                                                {
-                                                    "type": "item",
-                                                    "name": "Dragon",
-                                                    "entry": "A constellation of a wise, ancient dragon appears on you. When you make an Intelligence or a Wisdom check or a Constitution saving throw to maintain concentration on a spell, you can treat a roll of 9 or lower on the {@dice d20} as a 10."
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Cosmic Omen",
-                                    "entries": [
-                                        "{@i 6th-level Circle of the Stars feature}",
-                                        "You learn to use your star map to divine the will of the cosmos. Whenever you finish a long rest, you can consult your star map for omens. When you do so, roll a {@dice d6}. You gain one of the following possible omens based on whether you rolled an even number or an odd number on the {@dice d6}:",
-                                        {
-                                            "type": "list",
-                                            "style": "list-hang-notitle",
-                                            "items": [
-                                                {
-                                                    "type": "item",
-                                                    "name": "Weal (even)",
-                                                    "entry": "Whenever a creature you can see within 30 feet of you makes an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and add the number rolled to the total."
-                                                },
-                                                {
-                                                    "type": "item",
-                                                    "name": "Woe (odd)",
-                                                    "entry": "Whenever a creature you can see within 30 feet of you makes an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and subtract the number rolled from the total."
-                                                }
-                                            ]
-                                        },
-                                        "You can use this reaction a number of times equal to your Wisdom modifier, and you regain all expended uses when you finish a long rest."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Full of Stars",
-                                    "entries": [
-                                        "{@i 10th-level Circle of the Stars feature}",
-                                        "While your Starry Form feature is active, you become partially incorporeal, giving you resistance to bludgeoning, piercing, and slashing damage."
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "entries": [
-                                {
-                                    "type": "entries",
-                                    "name": "Star Flare",
-                                    "entries": [
-                                        "{@i 14th-level Circle of the Stars feature}",
-                                        "Your connection to the cosmos allows you to conjure brilliant starlight. As an action, you conjure a burst of light in a 30-foot-radius sphere centered on a point you can see within 120 feet of you. You can immediately teleport each willing creature in the sphere to an unoccupied space within 30 feet of it. Each creature remaining in the sphere must succeed on a Constitution saving throw against your spell save DC or take {@dice 4d10} radiant damage and be {@condition blinded} until the end of your next turn.",
-                                        "Once you have used this action, you can't use it again until you finish a long rest or until you expend a spell slot of 5th level or higher to use it again."
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                ]
+                ],
+                "source": "UAClericDruidWizard",
+                "shortName": "Wildfire (UA)",
+                "page": 2
             }
         ],
         "fluff": [
             {
-                "name": "Druid",
-                "type": "section",
                 "entries": [
                     "Holding high a gnarled staff wreathed with holly, an elf summons the fury of the storm and calls down explosive bolts of lightning to smite the torch-carrying orcs who threaten her forest.",
                     "Crouching out of sight on a high tree branch in the form of a leopard, a human peers out of the jungle at the strange construction of a temple of Evil Elemental Air, keeping a close eye on the cultists' activities.",
@@ -14786,7 +14627,6 @@ export default [
                 "page": 64
             },
             {
-                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -16118,7 +15958,8 @@ export default [
                 "source": "XGE",
                 "page": 21
             }
-        ]
+        ],
+        "page": 64
     },
     {
         "name": "Fighter",
@@ -41400,7 +41241,6 @@ export default [
     {
         "name": "Warlock",
         "source": "PHB",
-        "page": 105,
         "srd": true,
         "hd": {
             "number": 1,
@@ -41412,53 +41252,6 @@ export default [
         ],
         "spellcastingAbility": "cha",
         "casterProgression": "pact",
-        "startingProficiencies": {
-            "armor": [
-                "light"
-            ],
-            "weapons": [
-                "simple"
-            ],
-            "skills": [
-                {
-                    "choose": {
-                        "from": [
-                            "arcana",
-                            "deception",
-                            "history",
-                            "intimidation",
-                            "investigation",
-                            "nature",
-                            "religion"
-                        ],
-                        "count": 2
-                    }
-                }
-            ]
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-                "(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-                "(a) a {@item scholar's pack|phb} or (b) a {@item dungeoneer's pack|phb}",
-                "{@item Leather armor|phb}, any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}, and two {@item dagger|phb|daggers}"
-            ],
-            "goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "cha": 13
-            },
-            "proficienciesGained": {
-                "armor": [
-                    "light"
-                ],
-                "weapons": [
-                    "simple"
-                ]
-            }
-        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -41612,6 +41405,53 @@ export default [
                 ]
             }
         ],
+        "startingProficiencies": {
+            "armor": [
+                "light"
+            ],
+            "weapons": [
+                "simple"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "deception",
+                            "history",
+                            "intimidation",
+                            "investigation",
+                            "nature",
+                            "religion"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                "(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
+                "(a) a {@item scholar's pack|phb} or (b) a {@item dungeoneer's pack|phb}",
+                "{@item Leather armor|phb}, any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}, and two {@item dagger|phb|daggers}"
+            ],
+            "goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "cha": 13
+            },
+            "proficienciesGained": {
+                "armor": [
+                    "light"
+                ],
+                "weapons": [
+                    "simple"
+                ]
+            }
+        },
         "classFeatures": [
             [
                 {
@@ -41950,8 +41790,6 @@ export default [
         "subclasses": [
             {
                 "name": "The Archfey",
-                "shortName": "Archfey",
-                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -42052,13 +41890,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Archfey"
             },
             {
                 "name": "The Fiend",
-                "shortName": "Fiend",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -42158,12 +41995,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Fiend",
+                "srd": true
             },
             {
                 "name": "Ghost in the Machine (UA)",
-                "shortName": "Ghost in the Machine (UA)",
-                "source": "UAModernMagic",
                 "subclassFeatures": [
                     [
                         {
@@ -42271,12 +42109,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAModernMagic",
+                "shortName": "Ghost in the Machine (UA)"
             },
             {
                 "name": "The Great Old One",
-                "shortName": "Great Old One",
-                "source": "PHB",
                 "subclassFeatures": [
                     [
                         {
@@ -42375,12 +42213,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Great Old One"
             },
             {
                 "name": "The Undying",
-                "shortName": "Undying",
-                "source": "SCAG",
                 "subclassFeatures": [
                     [
                         {
@@ -42482,13 +42320,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "SCAG",
+                "shortName": "Undying"
             },
             {
                 "name": "The Undying Light (UA)",
-                "shortName": "Undying Light (UA)",
-                "source": "UALightDarkUnderdark",
-                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -42627,13 +42464,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UALightDarkUnderdark",
+                "shortName": "Undying Light (UA)",
+                "isReprinted": true
             },
             {
                 "name": "The Celestial (UA)",
-                "shortName": "Celestial (UA)",
-                "source": "UARevisedClassOptions",
-                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -42741,12 +42578,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UARevisedClassOptions",
+                "shortName": "Celestial (UA)",
+                "isReprinted": true
             },
             {
                 "name": "The Seeker (UA)",
-                "shortName": "Seeker (UA)",
-                "source": "UATheFaithful",
                 "subclassFeatures": [
                     [
                         {
@@ -42848,12 +42686,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UATheFaithful",
+                "shortName": "Seeker (UA)"
             },
             {
                 "name": "The Raven Queen (UA)",
-                "shortName": "Raven Queen (UA)",
-                "source": "UAWarlockAndWizard",
                 "subclassFeatures": [
                     [
                         {
@@ -42955,13 +42793,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAWarlockAndWizard",
+                "shortName": "Raven Queen (UA)"
             },
             {
                 "name": "The Hexblade (UA)",
-                "shortName": "Hexblade (UA)",
-                "source": "UAWarlockAndWizard",
-                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -43075,12 +42912,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAWarlockAndWizard",
+                "shortName": "Hexblade (UA)",
+                "isReprinted": true
             },
             {
                 "name": "The Celestial",
-                "shortName": "Celestial",
-                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -43188,12 +43026,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "XGE",
+                "shortName": "Celestial"
             },
             {
                 "name": "The Hexblade",
-                "shortName": "Hexblade",
-                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -43310,12 +43148,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "XGE",
+                "shortName": "Hexblade"
             },
             {
                 "name": "The Kraken (Livestream)",
-                "shortName": "Kraken (Stream)",
-                "source": "Stream",
                 "subclassFeatures": [
                     [
                         {
@@ -43444,12 +43282,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "Stream",
+                "shortName": "Kraken (Stream)"
             },
             {
                 "name": "Lolth (Twitter)",
-                "shortName": "Lolth (Twitter)",
-                "source": "Twitter",
                 "subclassFeatures": [
                     [
                         {
@@ -43577,12 +43415,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "Twitter",
+                "shortName": "Lolth (Twitter)"
             },
             {
                 "name": "The Lurker in the Deep (UA)",
-                "shortName": "Lurker in the Deep (UA)",
-                "source": "UASorcererAndWarlock",
                 "subclassFeatures": [
                     [
                         {
@@ -43732,12 +43570,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UASorcererAndWarlock",
+                "shortName": "Lurker in the Deep (UA)"
             },
             {
                 "name": "The Noble Genie (UA)",
-                "shortName": "Noble Genie (UA)",
-                "source": "UA2020SubclassesPt1",
                 "subclassFeatures": [
                     [
                         {
@@ -43915,13 +43753,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UA2020SubclassesPt1",
+                "shortName": "Noble Genie (UA)"
             }
         ],
         "fluff": [
             {
-                "name": "Warlock",
-                "type": "section",
                 "entries": [
                     "With a pseudodragon curled on his shoulder, a young elf in golden robes smiles warmly, weaving a magical charm into his honeyed words and bending the palace sentinel to his will.",
                     "As flames spring to life in her hands, a wizened human whispers the secret name of her demonic patron, infusing her spell with fiendish magic.",
@@ -43966,7 +43804,6 @@ export default [
                 "source": "PHB"
             },
             {
-                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -44180,12 +44017,12 @@ export default [
                 "page": 53,
                 "source": "XGE"
             }
-        ]
+        ],
+        "page": 105
     },
     {
         "name": "Wizard",
         "source": "PHB",
-        "page": 112,
         "srd": true,
         "hd": {
             "number": 1,
@@ -44197,45 +44034,6 @@ export default [
         ],
         "spellcastingAbility": "int",
         "casterProgression": "full",
-        "startingProficiencies": {
-            "weapons": [
-                "daggers",
-                "darts",
-                "slings",
-                "quarterstaffs",
-                "light crossbows"
-            ],
-            "skills": [
-                {
-                    "choose": {
-                        "from": [
-                            "arcana",
-                            "history",
-                            "insight",
-                            "investigation",
-                            "medicine",
-                            "religion"
-                        ],
-                        "count": 2
-                    }
-                }
-            ]
-        },
-        "startingEquipment": {
-            "additionalFromBackground": true,
-            "default": [
-                "(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
-                "(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-                "(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
-                "A {@item spellbook|phb}"
-            ],
-            "goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
-        },
-        "multiclassing": {
-            "requirements": {
-                "int": 13
-            }
-        },
         "classTableGroups": [
             {
                 "colLabels": [
@@ -44541,6 +44339,45 @@ export default [
                 ]
             }
         ],
+        "startingProficiencies": {
+            "weapons": [
+                "daggers",
+                "darts",
+                "slings",
+                "quarterstaffs",
+                "light crossbows"
+            ],
+            "skills": [
+                {
+                    "choose": {
+                        "from": [
+                            "arcana",
+                            "history",
+                            "insight",
+                            "investigation",
+                            "medicine",
+                            "religion"
+                        ],
+                        "count": 2
+                    }
+                }
+            ]
+        },
+        "startingEquipment": {
+            "additionalFromBackground": true,
+            "default": [
+                "(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
+                "(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
+                "(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
+                "A {@item spellbook|phb}"
+            ],
+            "goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
+        },
+        "multiclassing": {
+            "requirements": {
+                "int": 13
+            }
+        },
         "classFeatures": [
             [
                 {
@@ -44848,8 +44685,6 @@ export default [
         "subclasses": [
             {
                 "name": "Artificer (UA)",
-                "shortName": "Artificer (UA)",
-                "source": "UAEberron",
                 "subclassFeatures": [
                     [
                         {
@@ -45181,13 +45016,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAEberron",
+                "shortName": "Artificer (UA)"
             },
             {
                 "name": "School of Abjuration",
-                "shortName": "Abjuration",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -45254,12 +45088,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Abjuration",
+                "srd": true
             },
             {
                 "name": "Bladesinging",
-                "shortName": "Bladesinging",
-                "source": "SCAG",
                 "subclassFeatures": [
                     [
                         {
@@ -45372,13 +45207,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "SCAG",
+                "shortName": "Bladesinging"
             },
             {
                 "name": "School of Conjuration",
-                "shortName": "Conjuration",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -45443,13 +45277,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Conjuration",
+                "srd": true
             },
             {
                 "name": "School of Divination",
-                "shortName": "Divination",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -45561,13 +45395,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Divination",
+                "srd": true
             },
             {
                 "name": "School of Enchantment",
-                "shortName": "Enchantment",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -45634,13 +45468,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Enchantment",
+                "srd": true
             },
             {
                 "name": "School of Evocation",
-                "shortName": "Evocation",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -45704,13 +45538,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Evocation",
+                "srd": true
             },
             {
                 "name": "School of Illusion",
-                "shortName": "Illusion",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -45776,12 +45610,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Illusion",
+                "srd": true
             },
             {
                 "name": "Technomancy (UA)",
-                "shortName": "Technomancy (UA)",
-                "source": "UAModernMagic",
                 "subclassFeatures": [
                     [
                         {
@@ -45849,12 +45684,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAModernMagic",
+                "shortName": "Technomancy (UA)"
             },
             {
                 "name": "Theurgy (UA)",
-                "shortName": "Theurgy (UA)",
-                "source": "UAWizardRevisited",
                 "subclassFeatures": [
                     [
                         {
@@ -45938,13 +45773,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAWizardRevisited",
+                "shortName": "Theurgy (UA)"
             },
             {
                 "name": "War Magic (UA)",
-                "shortName": "War Magic (UA)",
-                "source": "UAWizardRevisited",
-                "isReprinted": true,
                 "subclassFeatures": [
                     [
                         {
@@ -46010,13 +45844,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAWizardRevisited",
+                "shortName": "War Magic (UA)",
+                "isReprinted": true
             },
             {
                 "name": "School of Transmutation",
-                "shortName": "Transmutation",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -46140,13 +45974,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Transmutation",
+                "srd": true
             },
             {
                 "name": "School of Necromancy",
-                "shortName": "Necromancy",
-                "source": "PHB",
-                "srd": true,
                 "subclassFeatures": [
                     [
                         {
@@ -46219,12 +46053,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "PHB",
+                "shortName": "Necromancy",
+                "srd": true
             },
             {
                 "name": "Lore Mastery (UA)",
-                "shortName": "Lore Mastery (UA)",
-                "source": "UAWarlockAndWizard",
                 "subclassFeatures": [
                     [
                         {
@@ -46302,12 +46137,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAWarlockAndWizard",
+                "shortName": "Lore Mastery (UA)"
             },
             {
                 "name": "War Magic",
-                "shortName": "War Magic",
-                "source": "XGE",
                 "subclassFeatures": [
                     [
                         {
@@ -46375,12 +46210,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "XGE",
+                "shortName": "War Magic"
             },
             {
                 "name": "School of Invention (UA)",
-                "shortName": "Invention (UA)",
-                "source": "UAThreeSubclasses",
                 "subclassFeatures": [
                     [
                         {
@@ -46785,13 +46620,12 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAThreeSubclasses",
+                "shortName": "Invention (UA)"
             },
             {
                 "name": "Onomancy (UA)",
-                "shortName": "Onomancy (UA)",
-                "source": "UAClericDruidWizard",
-                "page": 4,
                 "subclassFeatures": [
                     [
                         {
@@ -46936,13 +46770,13 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAClericDruidWizard",
+                "shortName": "Onomancy (UA)",
+                "page": 4
             },
             {
                 "name": "Psionics (UA)",
-                "shortName": "Psionics (UA)",
-                "source": "UAFighterRogueWizard",
-                "page": 3,
                 "subclassFeatures": [
                     [
                         {
@@ -47050,11 +46884,10 @@ export default [
                                                 {
                                                     "type": "item",
                                                     "name": "Psychic Resilience",
-                                                    "entry": "You gain resistance to psychic damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+                                                    "entry": "You gain resistance to psychic damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks. You can transform using this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
                                                 }
                                             ]
-                                        },
-                                        "You can transform using this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                        }
                                     ]
                                 }
                             ]
@@ -47098,13 +46931,14 @@ export default [
                             ]
                         }
                     ]
-                ]
+                ],
+                "source": "UAFighterRogueWizard",
+                "shortName": "Psionics (UA)",
+                "page": 3
             }
         ],
         "fluff": [
             {
-                "name": "Wizard",
-                "type": "section",
                 "entries": [
                     "Clad in the silver robes that denote her station, an elf closes her eyes to shut out the distractions of the battlefield and begins her quiet chant. Fingers weaving in front of her, she completes her spell and launches a tiny bead of fire toward the enemy ranks, where it erupts into a conflagration that engulfs the soldiers.",
                     "Checking and rechecking his work, a human scribes an intricate magic circle in chalk on the bare stone floor, then sprinkles powdered iron along every line and graceful curve. When the circle is complete, he drones a long incantation. A hole opens in space inside the circle, bringing a whiff of brimstone from the otherworldly plane beyond.",
@@ -47146,7 +46980,6 @@ export default [
                 "source": "PHB"
             },
             {
-                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -47389,7 +47222,8 @@ export default [
                 "page": 58,
                 "source": "XGE"
             }
-        ]
+        ],
+        "page": 112
     }
 ];
 //# sourceMappingURL=class-data.js.map
