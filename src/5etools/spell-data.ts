@@ -219,7 +219,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a gem worth at least 50 gp",
-                "cost": 50
+                "cost": 5000
             }
         },
         "duration": [
@@ -582,7 +582,7 @@ export default [
             "s": true,
             "m": {
                 "text": "25 gold pieces, or mineral goods of equivalent value, which the spell consumes",
-                "cost": 25,
+                "cost": 2500,
                 "consume": true
             }
         },
@@ -874,6 +874,16 @@ export default [
                         "name": "Solidarity (PSA)",
                         "source": "PSA"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -972,6 +982,18 @@ export default [
                 {
                     "name": "Artificer",
                     "source": "ERLW"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -1643,6 +1665,16 @@ export default [
                         "name": "Forge",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -2043,6 +2075,16 @@ export default [
                         "name": "Seeker (UA)",
                         "source": "UATheFaithful"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -2149,7 +2191,7 @@ export default [
             "s": true,
             "m": {
                 "text": "gold dust worth at least 25 gp, which the spell consumes",
-                "cost": 25,
+                "cost": 2500,
                 "consume": true
             }
         },
@@ -2436,7 +2478,7 @@ export default [
             "s": true,
             "m": {
                 "text": "for each creature you affect with this spell, you must provide one jacinth worth at least 1,000 gp and one ornately carved bar of silver worth at least 100 gp, all of which the spell consumes",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -2500,7 +2542,7 @@ export default [
             "s": true,
             "m": {
                 "text": "specially marked sticks, bones, or similar tokens worth at least 25 gp",
-                "cost": 25
+                "cost": 2500
             }
         },
         "duration": [
@@ -2782,6 +2824,16 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
@@ -2943,7 +2995,7 @@ export default [
             "s": true,
             "m": {
                 "text": "an agate worth at least 1,000 gp, which the spell consumes",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -3394,6 +3446,26 @@ export default [
                         "name": "Monster Slayer",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         }
@@ -3563,6 +3635,16 @@ export default [
                     "subclass": {
                         "name": "Beauty (Twitter)",
                         "source": "Twitter"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
                     }
                 },
                 {
@@ -5453,6 +5535,26 @@ export default [
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         },
@@ -5609,7 +5711,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a diamond worth at least 50 gp",
-                "cost": 50
+                "cost": 5000
             }
         },
         "duration": [
@@ -5684,7 +5786,7 @@ export default [
             "s": true,
             "m": {
                 "text": "the powder of a crushed black pearl worth at least 500 gp",
-                "cost": 500
+                "cost": 50000
             }
         },
         "duration": [
@@ -5835,7 +5937,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a focus worth at least 100 gp, either a jeweled horn for hearing or a glass eye for seeing",
-                "cost": 100
+                "cost": 10000
             }
         },
         "duration": [
@@ -5962,7 +6064,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -8278,7 +8380,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp",
-                "cost": 1500
+                "cost": 150000
             }
         },
         "duration": [
@@ -8328,7 +8430,7 @@ export default [
             "s": true,
             "m": {
                 "text": "ruby dust worth 50 gp, which the spell consumes",
-                "cost": 50,
+                "cost": 5000,
                 "consume": true
             }
         },
@@ -8835,6 +8937,16 @@ export default [
                         "name": "Redemption",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -9069,7 +9181,7 @@ export default [
             "s": true,
             "m": {
                 "text": "one clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse",
-                "cost": 150
+                "cost": 15000
             }
         },
         "duration": [
@@ -11353,6 +11465,26 @@ export default [
                         "name": "Devotion",
                         "source": "PHB"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         }
@@ -11476,7 +11608,7 @@ export default [
             "s": true,
             "m": {
                 "text": "incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes",
-                "cost": 25,
+                "cost": 2500,
                 "consume": true
             }
         },
@@ -12192,7 +12324,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a sapphire worth 1,000 gp",
-                "cost": 1000
+                "cost": 100000
             }
         },
         "duration": [
@@ -14469,7 +14601,7 @@ export default [
             "s": true,
             "m": {
                 "text": "10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier",
-                "cost": 10,
+                "cost": 1000,
                 "consume": true
             }
         },
@@ -14577,7 +14709,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100 gp and an object from the location you wish to find",
-                "cost": 100
+                "cost": 10000
             }
         },
         "duration": [
@@ -14657,6 +14789,18 @@ export default [
                 {
                     "name": "Ranger",
                     "source": "PHB"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -14944,6 +15088,16 @@ export default [
                     "subclass": {
                         "name": "Battle Smith",
                         "source": "ERLW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
                     }
                 }
             ],
@@ -15830,7 +15984,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp",
-                "cost": 1000
+                "cost": 100000
             }
         },
         "duration": [
@@ -15892,7 +16046,7 @@ export default [
             "s": true,
             "m": {
                 "text": "ruby dust worth 1,500 gp",
-                "cost": 1500
+                "cost": 150000
             }
         },
         "duration": [
@@ -16464,7 +16618,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a diamond worth at least 5,000 gp",
-                "cost": 5000
+                "cost": 500000
             }
         },
         "duration": [
@@ -16962,7 +17116,7 @@ export default [
             "s": true,
             "m": {
                 "text": "incense and powdered diamond worth at least 200 gp, which the spell consumes",
-                "cost": 200,
+                "cost": 20000,
                 "consume": true
             }
         },
@@ -17067,6 +17221,16 @@ export default [
                     "subclass": {
                         "name": "Deep Stalker Conclave",
                         "source": "UATheRangerRevised"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
                     }
                 }
             ]
@@ -17428,6 +17592,16 @@ export default [
                         "name": "Twilight (UA)",
                         "source": "UAClericDruidWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         },
@@ -17464,7 +17638,7 @@ export default [
             "s": true,
             "m": {
                 "text": "diamond dust worth at least 100 gp, which the spell consumes",
-                "cost": 100,
+                "cost": 10000,
                 "consume": true
             }
         },
@@ -17530,6 +17704,16 @@ export default [
                     "subclass": {
                         "name": "Celestial",
                         "source": "XGE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
                     }
                 },
                 {
@@ -17691,6 +17875,16 @@ export default [
                         "name": "Celestial",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -17727,7 +17921,7 @@ export default [
             "s": true,
             "m": {
                 "text": "burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp",
-                "cost": 10
+                "cost": 1000
             }
         },
         "duration": [
@@ -18170,7 +18364,7 @@ export default [
             "s": true,
             "m": {
                 "text": "herbs, oils, and incense worth at least 1,000 gp, which the spell consumes",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -18855,6 +19049,16 @@ export default [
                         "name": "Forge",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -18994,7 +19198,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a gem-encrusted bowl worth at least 1,000 gp, which the spell consumes",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -19151,6 +19355,16 @@ export default [
                     "subclass": {
                         "name": "Battle Smith",
                         "source": "ERLW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
                     }
                 },
                 {
@@ -19632,7 +19846,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text",
-                "cost": 1000
+                "cost": 100000
             }
         },
         "duration": [
@@ -19944,6 +20158,16 @@ export default [
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         }
@@ -20115,7 +20339,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a pearl worth at least 100 gp and an owl feather",
-                "cost": 100
+                "cost": 10000
             }
         },
         "duration": [
@@ -20217,7 +20441,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a lead-based ink worth at least 10 gp, which the spell consumes",
-                "cost": 10,
+                "cost": 1000,
                 "consume": true
             }
         },
@@ -20295,7 +20519,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500 gp per Hit Die of the target",
-                "cost": 500
+                "cost": 50000
             }
         },
         "duration": [
@@ -21132,7 +21356,7 @@ export default [
             "s": true,
             "m": {
                 "text": "incense worth at least 250 gp, which the spell consumes, and four ivory strips worth at least 50 gp each",
-                "cost": 250,
+                "cost": 25000,
                 "consume": true
             }
         },
@@ -21246,7 +21470,7 @@ export default [
             "s": true,
             "m": {
                 "text": "an exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp",
-                "cost": 5000
+                "cost": 500000
             }
         },
         "duration": [
@@ -21889,6 +22113,16 @@ export default [
                     "subclass": {
                         "name": "Lurker in the Deep (UA)",
                         "source": "UASorcererAndWarlock"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
                     }
                 }
             ]
@@ -22556,7 +22790,7 @@ export default [
             "s": true,
             "m": {
                 "text": "holy water or powdered silver and iron worth at least 100 gp, which the spell consumes",
-                "cost": 100,
+                "cost": 10000,
                 "consume": true
             }
         },
@@ -22705,7 +22939,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a gem, crystal, reliquary, or some other ornamental container worth at least 500 gp",
-                "cost": 500
+                "cost": 50000
             }
         },
         "duration": [
@@ -22818,6 +23052,16 @@ export default [
                         "name": "Arcana",
                         "source": "SCAG"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         },
@@ -22861,7 +23105,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a small bit of honeycomb and jade dust worth at least 10 gp, which the spell consumes",
-                "cost": 10,
+                "cost": 1000,
                 "consume": true
             }
         },
@@ -24293,6 +24537,16 @@ export default [
                         "name": "Ambition (PSA)",
                         "source": "PSA"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -24371,6 +24625,28 @@ export default [
                 {
                     "name": "Warlock",
                     "source": "PHB"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         },
@@ -24481,6 +24757,26 @@ export default [
                     "subclass": {
                         "name": "Horizon Walker",
                         "source": "XGE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer (UA)",
+                        "source": "UA2020SubclassesPt3"
                     }
                 }
             ]
@@ -24822,7 +25118,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5 gp",
-                "cost": 5
+                "cost": 500
             }
         },
         "duration": [
@@ -24968,7 +25264,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp",
-                "cost": 250
+                "cost": 25000
             }
         },
         "duration": [
@@ -25096,7 +25392,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes",
-                "cost": 25,
+                "cost": 2500,
                 "consume": true
             }
         },
@@ -25422,6 +25718,16 @@ export default [
                         "name": "Redemption",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -25671,6 +25977,16 @@ export default [
                     "subclass": {
                         "name": "Treachery (UA)",
                         "source": "UAPaladin"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
                     }
                 }
             ]
@@ -26010,7 +26326,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a jewel worth at least 1,000 gp, which the spell consumes",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -26148,7 +26464,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a forked, metal rod worth at least 250 gp, attuned to a particular plane of existence",
-                "cost": 250
+                "cost": 25000
             }
         },
         "duration": [
@@ -27216,7 +27532,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a bit of fleece and jade dust worth at least 25 gp",
-                "cost": 25
+                "cost": 2500
             }
         },
         "duration": [
@@ -27274,7 +27590,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a small replica of you made from materials worth at least 5 gp",
-                "cost": 5
+                "cost": 500
             }
         },
         "duration": [
@@ -27679,6 +27995,16 @@ export default [
                         "name": "Divine Soul",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ],
             "fromClassListVariant": [
@@ -27899,7 +28225,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a diamond worth at least 500 gp, which the spell consumes",
-                "cost": 500,
+                "cost": 50000,
                 "consume": true
             }
         },
@@ -28056,6 +28382,16 @@ export default [
                     "subclass": {
                         "name": "Aberrant Mind (UA)",
                         "source": "UASorcererAndWarlock"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
                     }
                 }
             ],
@@ -28515,7 +28851,7 @@ export default [
             "s": true,
             "m": {
                 "text": "rare oils and unguents worth at least 1,000 gp, which the spell consumes",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -28848,7 +29184,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a diamond worth at least 1,000 gp, which the spell consumes",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -28967,7 +29303,7 @@ export default [
             "s": true,
             "m": {
                 "text": "diamonds worth 300 gp, which the spell consumes",
-                "cost": 300,
+                "cost": 30000,
                 "consume": true
             }
         },
@@ -29174,10 +29510,6 @@ export default [
             ]
         },
         "backgrounds": [
-            {
-                "name": "Izzet Engineer",
-                "source": "GGR"
-            },
             {
                 "name": "Izzet Engineer",
                 "source": "GGR"
@@ -29520,7 +29852,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water",
-                "cost": 1000
+                "cost": 100000
             }
         },
         "duration": [
@@ -30100,6 +30432,16 @@ export default [
                         "name": "Aberrant Mind (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
                 }
             ]
         },
@@ -30136,7 +30478,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes",
-                "cost": 5000,
+                "cost": 500000,
                 "consume": true
             }
         },
@@ -30192,7 +30534,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a jade circlet worth at least 1,500 gp, which you must place on your head before you cast the spell",
-                "cost": 1500
+                "cost": 150000
             }
         },
         "duration": [
@@ -30363,6 +30705,16 @@ export default [
                         "name": "Artillerist",
                         "source": "ERLW"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         },
@@ -30490,6 +30842,16 @@ export default [
                         "name": "Battle Smith",
                         "source": "ERLW"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         },
@@ -30589,6 +30951,16 @@ export default [
                     "subclass": {
                         "name": "Strength (PSA)",
                         "source": "PSA"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
                     }
                 }
             ]
@@ -30693,7 +31065,7 @@ export default [
             "The spell's damage increases by {@dice 1d8} when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
         ],
         "scalingLevelDice": {
-            "label": "Lightning damage",
+            "label": "lightning damage",
             "scaling": {
                 "1": "1d8",
                 "5": "2d8",
@@ -30949,7 +31321,7 @@ export default [
             "s": true,
             "m": {
                 "text": "snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
-                "cost": 1500,
+                "cost": 150000,
                 "consume": true
             }
         },
@@ -32453,7 +32825,7 @@ export default [
             "s": true,
             "m": {
                 "text": "diamond dust worth 100 gp, which the spell consumes",
-                "cost": 100,
+                "cost": 10000,
                 "consume": true
             }
         },
@@ -33019,7 +33391,7 @@ export default [
             "s": true,
             "m": {
                 "text": "mercury, phosphorus, and powdered diamond and opal with a total value of at least 1,000 gp, which the spell consumes",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -33552,7 +33924,7 @@ export default [
             "v": true,
             "m": {
                 "text": "rare chalks and inks infused with precious gems worth 50 gp, which the spell consumes",
-                "cost": 50,
+                "cost": 5000,
                 "consume": true
             }
         },
@@ -34534,7 +34906,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a sprinkle of holy water and diamonds worth at least 25,000 gp, which the spell consumes",
-                "cost": 25000,
+                "cost": 2500000,
                 "consume": true
             }
         },
@@ -34591,7 +34963,7 @@ export default [
             "s": true,
             "m": {
                 "text": "an ointment for the eyes that costs 25 gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell",
-                "cost": 25,
+                "cost": 2500,
                 "consume": true
             }
         },
@@ -35313,6 +35685,26 @@ export default [
                         "name": "Artillerist",
                         "source": "ERLW"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul (UA)",
+                        "source": "UA2020SubclassesPt2"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "ERLW"
+                    },
+                    "subclass": {
+                        "name": "Armorer (UA)",
+                        "source": "UA2020SubclassesPt3"
+                    }
                 }
             ]
         }
@@ -35578,7 +35970,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a pair of platinum rings worth at least 50 gp each, which you and the target must wear for the duration",
-                "cost": 50
+                "cost": 5000
             }
         },
         "duration": [
@@ -35643,6 +36035,16 @@ export default [
                     "subclass": {
                         "name": "Battle Smith",
                         "source": "ERLW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Unity (UA)",
+                        "source": "UA2020SubclassesPt2"
                     }
                 },
                 {
@@ -39122,7 +39524,7 @@ export default [
             "s": true,
             "m": {
                 "text": "25 gp worth of powdered silver",
-                "cost": 25
+                "cost": 2500
             }
         },
         "duration": [
@@ -40262,7 +40664,7 @@ export default [
             "s": true,
             "m": {
                 "text": "food worth at least 100 gp, which the spell consumes",
-                "cost": 100,
+                "cost": 10000,
                 "consume": true
             }
         },
@@ -40450,7 +40852,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a gem worth at least 100 gp, which the spell consumes",
-                "cost": 100,
+                "cost": 10000,
                 "consume": true
             }
         },
@@ -41106,7 +41508,7 @@ export default [
             "s": true,
             "m": {
                 "text": "25 gp worth of powdered silver, which the spell consumes",
-                "cost": 25,
+                "cost": 2500,
                 "consume": true
             }
         },
@@ -41728,7 +42130,7 @@ export default [
             "s": true,
             "m": {
                 "text": "clay, ash, and mandrake root, all of which the spell consumes, and a jewel-encrusted dagger worth at least 1,000 gp",
-                "cost": 1000,
+                "cost": 100000,
                 "consume": true
             }
         },
@@ -41918,7 +42320,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a sunburst pendant worth at least 100 gp",
-                "cost": 100
+                "cost": 10000
             }
         },
         "duration": [
@@ -43503,7 +43905,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a ruby worth at least 999 gp",
-                "cost": 999
+                "cost": 99900
             }
         },
         "duration": [
@@ -43987,7 +44389,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a small piece of adamantine worth at least 500 gp, which the spell consumes",
-                "cost": 500,
+                "cost": 50000,
                 "consume": true
             }
         },
@@ -44597,7 +44999,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a diamond worth at least 500 gp, which the spell consumes",
-                "cost": 500,
+                "cost": 50000,
                 "consume": true
             }
         },
@@ -45340,7 +45742,7 @@ export default [
             "s": true,
             "m": {
                 "text": "an undead eyeball encased in a gem worth at least 150 gp",
-                "cost": 150
+                "cost": 15000
             }
         },
         "duration": [
@@ -45840,7 +46242,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a tiny silver cage worth 100 gp",
-                "cost": 100
+                "cost": 10000
             }
         },
         "duration": [
@@ -46302,7 +46704,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a holy symbol worth at least 5 gp",
-                "cost": 5
+                "cost": 500
             }
         },
         "duration": [

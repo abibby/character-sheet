@@ -2102,6 +2102,7 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Artificer",
                 "page": 1,
                 "source": "UAArtificerRevisited",
                 "type": "section",
@@ -3339,10 +3340,214 @@ export default [
                         }
                     ]
                 ]
+            },
+            {
+                "name": "Armorer (UA)",
+                "shortName": "Armorer (UA)",
+                "source": "UA2020SubclassesPt3",
+                "page": 1,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Armorer",
+                            "entries": [
+                                "An artificer who specializes as an Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the artificer's magic, unleash potent attacks, and generate a formidable defense. The artificer bonds with this armor, becoming one with it even as they experiment with it and refine its magical capabilities.",
+                                {
+                                    "type": "entries",
+                                    "name": "Tools of the Trade",
+                                    "entries": [
+                                        "{@i 3rd-level Armorer feature}",
+                                        "You gain proficiency with heavy armor. You also gain proficiency with smith's tools. If you already have this tool proficiency, you gain proficiency with one other type of artisan's tools of your choice."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Armorer Spells",
+                                    "entries": [
+                                        "{@i 3rd-level Armorer feature}",
+                                        "You always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Armorer Spells",
+                                            "colLabels": [
+                                                "Artificer Level",
+                                                "Spell"
+                                            ],
+                                            "colStyles": [
+                                                "col-2 text-center",
+                                                "col-10"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell magic missile}, {@spell shield}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell mirror image}, {@spell shatter}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell hypnotic pattern}, {@spell lightning bolt}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell fire shield}, {@spell greater invisibility}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell passwall}, {@spell wall of force}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Power Armor",
+                                    "entries": [
+                                        "{@i 3rd-level Armorer feature}",
+                                        "Your metallurgical pursuits have led to you making armor a conduit for your artificer magic. As an action, you can turn a suit of heavy armor you are wearing into power armor, provided you have smith's tools in hand.",
+                                        "You gain the following benefits while wearing the power armor:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "If the armor normally has a Strength requirement, the power armor lacks this requirement for you.",
+                                                "You can use the power armor as a spellcasting focus for your artificer spells.",
+                                                "The power armor attaches to you and can't be removed against your will. It also expands to cover your entire body, and it replaces any missing limbs, functioning identically to a body part it is replacing."
+                                            ]
+                                        },
+                                        "The armor continues to be power armor until you doff it, you don another suit of armor, or you die."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Armor Model",
+                                    "entries": [
+                                        "{@i 3rd-level Armorer feature}",
+                                        "You can customize your power armor. When you do so, choose one of the following armor models: guardian or infiltrator. The model you choose gives you special benefits while you wear it.",
+                                        "Each model includes a special weapon. When you attack with that weapon, you can use your Intelligence modifier, instead of Strength or Dexterity, for the attack and damage rolls.",
+                                        "You can change your power armor's model whenever you finish a short or long rest, provided you have smith's tools in hand.",
+                                        {
+                                            "type": "entries",
+                                            "name": "Guardian",
+                                            "entries": [
+                                                "You design your armor to be in the frontline of conflict. It has the following features:",
+                                                {
+                                                    "type": "list",
+                                                    "style": "list-hang-notitle",
+                                                    "items": [
+                                                        {
+                                                            "type": "item",
+                                                            "name": "Thunder Gauntlets.",
+                                                            "entry": "Your armored fists each count as a simple melee weapon, and each deals {@dice 1d8} thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack rolls against targets other than you until the start of your next turn, as the armor magically emits a distracting pulse when the creature attacks someone else."
+                                                        },
+                                                        {
+                                                            "type": "item",
+                                                            "name": "Defensive Field.",
+                                                            "entry": "You gain a bonus action that you can use on each of your turns to gain temporary hit points equal to your level in this class, replacing any temporary hit points you already have. You lose these temporary hit points if you doff the armor."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "name": "Infiltrator",
+                                            "entries": [
+                                                "You customize your armor for subtle undertakings. It has the following features:",
+                                                {
+                                                    "type": "list",
+                                                    "style": "list-hang-notitle",
+                                                    "items": [
+                                                        {
+                                                            "type": "item",
+                                                            "name": "Lightning Launcher.",
+                                                            "entry": "A gemlike node appears on one of your armored fists or on the chest (your choice). It counts as a simple ranged weapon, with a normal range of 90 feet and a long range of 300 feet, and it deals {@dice 1d6} lightning damage on a hit. Once on each of your turns when you hit a creature with it, you can deal an extra {@dice 1d6} lightning damage to that target."
+                                                        },
+                                                        {
+                                                            "type": "item",
+                                                            "name": "Powered Steps.",
+                                                            "entry": "Your walking speed increases by 5 feet."
+                                                        },
+                                                        {
+                                                            "type": "item",
+                                                            "name": "Second Skin.",
+                                                            "entry": "The armor's weight is negligible, and it becomes formfitting and wearable under clothing. If the armor normally imposes disadvantage on Dexterity ({@skill Stealth}) checks, the power armor doesn't."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "name": "Extra Attack",
+                                    "type": "entries",
+                                    "entries": [
+                                        "{@i 5th-level Armorer feature}",
+                                        "You can attack twice, rather than once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Armor Modifications",
+                                    "entries": [
+                                        "{@i 9th-level Armorer feature}",
+                                        "You learn how to use your artificer infusions to specially modify the armor enhanced by your Power Armor feature. That armor now counts as separate items for the purposes of your Infuse Items feature: armor (the chest piece), boots, bracers, and a weapon. Each of those items can bear one of your infusions. In addition, the maximum number of items you can infuse at once increases by 2, but those extra items must be part of your power armor."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Perfected Armor",
+                                    "entries": [
+                                        "{@i 15th-level Armorer feature}",
+                                        "Your power armor gains additional benefits based on its model, as shown below.",
+                                        {
+                                            "type": "entries",
+                                            "name": "Guardian",
+                                            "entries": [
+                                                "Tinkering with your armor's energy system leads you to discover a powerful pulling force. When a creature you can see ends its turn within 30 feet of you, you can use your reaction to force the creature to succeed on a Strength saving throw against your spell save DC or be pulled up to 30 feet toward you to an unoccupied space. If you pull the target to space within 5 feet of you, you can make a melee weapon attack against it as part of this reaction.",
+                                                "You can use this reaction a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses of it when you finish a long rest."
+                                            ]
+                                        },
+                                        {
+                                            "type": "entries",
+                                            "name": "Infiltrator",
+                                            "entries": [
+                                                "Any creature that takes lightning damage from your Lightning Launcher glimmers with light until the start of your next turn. The glimmering creature sheds dim light in a 5 foot radius, and the next attack roll against it by a creature other than you has advantage. If that attack hits, it deals an extra {@dice 1d6} lightning damage."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
             {
+                "name": "Artificer",
+                "type": "section",
                 "entries": [
                     "Masters of unlocking magic in everyday objects, artificers are supreme inventors. They see magic as a complex system waiting to be decoded and controlled. Artificers use tools to channel arcane power, crafting magical objects. To cast a spell, an artificer could use alchemist's supplies to create a potent elixir, calligrapher's supplies to inscribe a sigil of power on an ally's armor, or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and their talents.",
                     {
@@ -5217,6 +5422,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Barbarian",
+                "type": "section",
                 "entries": [
                     "A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs as he charges toward the frost giant who dared poach his people's elk herd.",
                     "A half-orc snarls at the latest challenger to her authority over their savage tribe, ready to break his neck with her bare hands as she did to the last six rivals.",
@@ -5259,6 +5466,7 @@ export default [
                 "page": 46
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -7246,6 +7454,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Bard",
+                "type": "section",
                 "entries": [
                     "Humming as she traces her fingers over an ancient monument in a long-forgotten ruin, a half-elf in rugged leathers finds knowledge springing into her mind, conjured forth by the magic of her song—knowledge of the people who constructed the monument and the mythic saga it depicts.",
                     "A stern human warrior bangs his sword rhythmically against his scale mail, setting the tempo for his war chant and exhorting his companions to bravery and heroism. The magic of his song fortifies and emboldens them.",
@@ -7287,6 +7497,7 @@ export default [
                 "page": 51
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -10446,9 +10657,9 @@ export default [
                             "entries": [
                                 {
                                     "type": "entries",
-                                    "name": "Supreme Healing",
+                                    "name": "Avatar of Battle",
                                     "entries": [
-                                        "Avatar of Battle At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+                                        "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
                                     ]
                                 }
                             ]
@@ -11634,6 +11845,214 @@ export default [
                 ]
             },
             {
+                "name": "Love Domain (UA)",
+                "shortName": "Love (UA)",
+                "source": "UA2020SubclassesPt2",
+                "page": 2,
+                "isReprinted": true,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Love Domain (UA)",
+                            "entries": [
+                                "{@note Note: The Love domain was included in a leaked pre-release version of {@i Unearthed Arcana 2020 Subclasses, Part 2}, and superseded by the Unity domain for the final release.}",
+                                "Love exists in many forms—compassion, infatuation, friendly affection, and passionate love as a few facets. Whatever form these feelings take, the gods of love deepen the bonds between individuals.",
+                                {
+                                    "type": "table",
+                                    "caption": "Love Deities",
+                                    "colLabels": [
+                                        "Deity",
+                                        "Pantheon"
+                                    ],
+                                    "colStyles": [
+                                        "col-6",
+                                        "col-6"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "Aengus",
+                                            "Celtic"
+                                        ],
+                                        [
+                                            "Aphrodite",
+                                            "Greek"
+                                        ],
+                                        [
+                                            "Balder",
+                                            "Norse"
+                                        ],
+                                        [
+                                            "Berronar Truesilver",
+                                            "Dwarven"
+                                        ],
+                                        [
+                                            "Boldrei",
+                                            "Eberron"
+                                        ],
+                                        [
+                                            "Cyrrollalee",
+                                            "Halfling"
+                                        ],
+                                        [
+                                            "Freya",
+                                            "Norse"
+                                        ],
+                                        [
+                                            "Hanali Celanil",
+                                            "Elven"
+                                        ],
+                                        [
+                                            "Hathor",
+                                            "Egyptian"
+                                        ],
+                                        [
+                                            "Mishakal",
+                                            "Dragonlance"
+                                        ],
+                                        [
+                                            "Myhriss",
+                                            "Greyhawk"
+                                        ],
+                                        [
+                                            "Sharindlar",
+                                            "Dwarven"
+                                        ],
+                                        [
+                                            "Sheyanna Flaxenstrand",
+                                            "Gnomish"
+                                        ],
+                                        [
+                                            "Sune",
+                                            "Forgotten Realms"
+                                        ]
+                                    ]
+                                },
+                                "Clerics of these gods preside over marriages and other familial bonding customs, but they also nurture the emotional bonds of friendship and camaraderie. Their divine blessings bolster and protect allies in battle through these deep bonds and enkindle flares of infatuation to spur their allies and confound their foes.",
+                                {
+                                    "type": "table",
+                                    "caption": "Love Domain Spells",
+                                    "colLabels": [
+                                        "Cleric Level",
+                                        "Spells"
+                                    ],
+                                    "colStyles": [
+                                        "col-3 text-center",
+                                        "col-9"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "1st",
+                                            "{@spell charm person}, {@spell heroism}"
+                                        ],
+                                        [
+                                            "3rd",
+                                            "{@spell enthrall}, {@spell warding bond}"
+                                        ],
+                                        [
+                                            "5th",
+                                            "{@spell beacon of hope}, {@spell hypnotic pattern}"
+                                        ],
+                                        [
+                                            "7th",
+                                            "{@spell aura of purity}, {@spell confusion}"
+                                        ],
+                                        [
+                                            "9th",
+                                            "{@spell greater restoration}, {@spell hold monster}"
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Emboldening Bond",
+                                    "entries": [
+                                        "{@i 1st-level Love Domain feature}",
+                                        "You can forge an empowering bond between allies. As an action, you can choose two willing creatures you can see within 30 feet of you (this can include yourself) and create a magical bond between them. While either bonded creature is within 30 feet of the other, the creature can roll a {@dice d4} and add the number rolled to an attack roll, an ability check, or a saving throw it makes. Each creature can add the {@dice d4} no more than once per turn. The bond lasts for 1 hour or until you use this feature again.",
+                                        "You can use this feature once, and you regain the ability to do so when you finish a long rest. You can also expend a spell slot to use the feature again."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Channel Divinity: Impulsive Infatuation",
+                                    "entries": [
+                                        "{@i 2nd-level Love Domain feature}",
+                                        "You can use your Channel Divinity to overwhelm a creature with a flash of short-lived but intense admiration for you, driving them to rash action in your defense.",
+                                        "As an action, you present your holy symbol and choose one creature you can see within 30 feet of you. That creature must make a Wisdom saving throw; a creature can choose to fail this saving throw if it wishes. On a success, the creature is unaffected. On a failure, the creature is {@condition charmed} by you until the start of your next turn, and it must immediately use its reaction to make a weapon attack against a target you designate. If there are no valid targets, it uses its reaction to admire you."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Protective Bond",
+                                    "entries": [
+                                        "{@i 6th-level Love Domain feature}",
+                                        "The bond you forge between people shields them from harm. While either creature chosen for your Emboldening Bond feature is within 30 feet of the other, the creature can use its reaction to grant resistance to all damage to the other creature when that other creature takes damage. This resistance lasts until the end of the current turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Potent Spellcasting",
+                                    "entries": [
+                                        "{@i 8th-level Love Domain feature}",
+                                        "You add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Blessed Strikes",
+                                    "entries": [
+                                        "{@i 8th-level cleric Divine Domain feature (replaces Potent Spellcasting)}",
+                                        "In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@dice 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
+                                    ],
+                                    "source": "UAClassFeatureVariants",
+                                    "page": 4
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Enduring Unity",
+                                    "entries": [
+                                        "{@i 17th-level Love Domain feature}",
+                                        "The bonds you create endure across vast distances. Creatures affected by your Emboldening Bond feature gain its benefits, as well as those of your Protective Bond feature, while they are on the same plane of existence as each other.",
+                                        "Additionally, when a creature chosen for your Emboldening Bond is reduced to 0 hit points, their bonded partner gains the following benefits for 1 minute, or until the creature regains at least 1 hit point:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "The creature has advantage on attack rolls, ability checks, and saving throws",
+                                                "The creature gains resistance to all damage",
+                                                "As an action, the creature can touch their bonded partner to expend and roll any number of Hit Dice. Their bonded partner regains a number of hit points equal to the total rolled."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
                 "name": "Unity Domain (UA)",
                 "shortName": "Unity (UA)",
                 "source": "UA2020SubclassesPt2",
@@ -11826,6 +12245,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Cleric",
+                "type": "section",
                 "entries": [
                     "Arms and eyes upraised toward the sun and a prayer on his lips, an elf begins to glow with an inner light that spills out to heal his battle-worn companions.",
                     "Chanting a song of glory, a dwarf swings his axe in wide swaths to cut through the ranks of orcs arrayed against him, shouting praise to the gods with every foe's fall.",
@@ -11869,6 +12290,7 @@ export default [
                 "page": 56
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -12514,7 +12936,7 @@ export default [
                 {
                     "name": "Druidic",
                     "entries": [
-                        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+                        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom ({@skill Perception}) check but can't decipher it without magic."
                     ]
                 },
                 {
@@ -14059,7 +14481,7 @@ export default [
                 "subclassFeatures": [
                     [
                         {
-                            "name": "Circle of Wildfire (UA)",
+                            "name": "Circle of Wildfire",
                             "entries": [
                                 "Druids who are members of the Circle of Wildfire understand the necessity of destruction, such as how a forest fire promotes growth. These druids bond with a primal spirit that harbors destructive tendencies, allowing the druids to use their power to create controlled flames that help flora and fauna reproduce and grow.",
                                 {
@@ -14160,10 +14582,168 @@ export default [
                         }
                     ]
                 ]
+            },
+            {
+                "name": "Circle of the Stars (UA)",
+                "shortName": "Stars (UA)",
+                "source": "UA2020SubclassesPt3",
+                "page": 3,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Circle of the Stars",
+                            "entries": [
+                                "An ancient lineage, the Circle of Stars allows druids to draw on the power of starlight. These druids have tracked heavenly patterns since time immemorial, discovering secrets hidden amid the constellations. By revealing and understanding these secrets, the Circle of the Stars seeks to harness the powers of the cosmos.",
+                                "Many druids of this circle keep detailed records of the stars and their effects on the world. Some groups document these observations at megalithic sites, which serve as enigmatic libraries of lore. These repositories might take the form of stone circles, pyramids, petroglyphs, and underground temples—any construction durable enough to protect the circle's sacred knowledge even against a great cataclysm.",
+                                {
+                                    "type": "entries",
+                                    "name": "Star Map",
+                                    "entries": [
+                                        "{@i 2nd-level Circle of the Stars feature}",
+                                        "You've created a star map as part of your study of the heavens. The map is a Tiny object and can serve as a spellcasting focus for your druid spells. You decide what form the object takes, or you can determine what it is by rolling on the Star Map table.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Star Map",
+                                            "colLabels": [
+                                                "d6",
+                                                "Map Form"
+                                            ],
+                                            "colStyles": [
+                                                "col-2 text-center",
+                                                "col-10"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "1",
+                                                    "A scroll of living wood that aligns with heavenly bodies"
+                                                ],
+                                                [
+                                                    "2",
+                                                    "A stone tablet with fine holes drilled through it"
+                                                ],
+                                                [
+                                                    "3",
+                                                    "A speckled owlbear hide, tooled with raised marks"
+                                                ],
+                                                [
+                                                    "4",
+                                                    "A collection of maps bound in an ebony cover"
+                                                ],
+                                                [
+                                                    "5",
+                                                    "A crystal that projects starry patterns when placed before a light"
+                                                ],
+                                                [
+                                                    "6",
+                                                    "Tempered glass disks that align to depict constellations"
+                                                ]
+                                            ]
+                                        },
+                                        "If you lose your map, you can perform a 1-hour ceremony to magically create a replacement. This ceremony can be performed during a short or long rest, and it destroys the previous map.",
+                                        "You can cast the {@spell augury} and {@spell guiding bolt} spells without expending a spell slot and without preparing the spell, provided you use the star map as the spellcasting focus. You can cast a spell from the map in this way a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Starry Form",
+                                    "entries": [
+                                        "{@i 2nd-level Circle of the Stars feature}",
+                                        "You gain the ability to harness constellations' power to alter your form. As an action, you can expend a use of your Wild Shape feature to take on a starry form rather than transforming into a beast.",
+                                        "While in your starry form, you retain your game statistics, but your body takes on a luminous, starlike quality; your joints glimmer like stars, and glowing lines connect them as on a star chart. This form sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The form lasts for 10 minutes or until you're {@condition incapacitated}.",
+                                        "Whenever you assume your starry form, choose which of the following constellations glimmers on your body; your choice gives you certain benefits while in the form:",
+                                        {
+                                            "type": "list",
+                                            "style": "list-hang-notitle",
+                                            "items": [
+                                                {
+                                                    "type": "item",
+                                                    "name": "Chalice",
+                                                    "entry": "A constellation of a life-giving goblet appears on you. Whenever you cast a spell using a spell slot that restores hit points to a creature, you or another creature within 30 feet of you can regain hit points equal to {@dice 1d8} + half your level in this class."
+                                                },
+                                                {
+                                                    "type": "item",
+                                                    "name": "Archer",
+                                                    "entry": "A constellation of an archer appears on you. You gain a bonus action that you can use to make a ranged spell attack, hurling a luminous arrow that targets a creature you can see within 60 feet of you. On a hit, the attack deals radiant damage equal to {@dice 1d8} + your Wisdom modifier."
+                                                },
+                                                {
+                                                    "type": "item",
+                                                    "name": "Dragon",
+                                                    "entry": "A constellation of a wise, ancient dragon appears on you. When you make an Intelligence or a Wisdom check or a Constitution saving throw to maintain concentration on a spell, you can treat a roll of 9 or lower on the {@dice d20} as a 10."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Cosmic Omen",
+                                    "entries": [
+                                        "{@i 6th-level Circle of the Stars feature}",
+                                        "You learn to use your star map to divine the will of the cosmos. Whenever you finish a long rest, you can consult your star map for omens. When you do so, roll a {@dice d6}. You gain one of the following possible omens based on whether you rolled an even number or an odd number on the {@dice d6}:",
+                                        {
+                                            "type": "list",
+                                            "style": "list-hang-notitle",
+                                            "items": [
+                                                {
+                                                    "type": "item",
+                                                    "name": "Weal (even)",
+                                                    "entry": "Whenever a creature you can see within 30 feet of you makes an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and add the number rolled to the total."
+                                                },
+                                                {
+                                                    "type": "item",
+                                                    "name": "Woe (odd)",
+                                                    "entry": "Whenever a creature you can see within 30 feet of you makes an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and subtract the number rolled from the total."
+                                                }
+                                            ]
+                                        },
+                                        "You can use this reaction a number of times equal to your Wisdom modifier, and you regain all expended uses when you finish a long rest."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Full of Stars",
+                                    "entries": [
+                                        "{@i 10th-level Circle of the Stars feature}",
+                                        "While your Starry Form feature is active, you become partially incorporeal, giving you resistance to bludgeoning, piercing, and slashing damage."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Star Flare",
+                                    "entries": [
+                                        "{@i 14th-level Circle of the Stars feature}",
+                                        "Your connection to the cosmos allows you to conjure brilliant starlight. As an action, you conjure a burst of light in a 30-foot-radius sphere centered on a point you can see within 120 feet of you. You can immediately teleport each willing creature in the sphere to an unoccupied space within 30 feet of it. Each creature remaining in the sphere must succeed on a Constitution saving throw against your spell save DC or take {@dice 4d10} radiant damage and be {@condition blinded} until the end of your next turn.",
+                                        "Once you have used this action, you can't use it again until you finish a long rest or until you expend a spell slot of 5th level or higher to use it again."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
             {
+                "name": "Druid",
+                "type": "section",
                 "entries": [
                     "Holding high a gnarled staff wreathed with holly, an elf summons the fury of the storm and calls down explosive bolts of lightning to smite the torch-carrying orcs who threaten her forest.",
                     "Crouching out of sight on a high tree branch in the form of a leopard, a human peers out of the jungle at the strange construction of a temple of Evil Elemental Air, keeping a close eye on the cultists' activities.",
@@ -14206,6 +14786,7 @@ export default [
                 "page": 64
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -19857,6 +20438,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Fighter",
+                "type": "section",
                 "entries": [
                     "A human in clanging plate armor holds her shield before her as she runs toward the massed goblins. An elf behind her, clad in studded leather armor, peppers the goblins with arrows loosed from his exquisite bow. The half-orc nearby shouts orders, helping the two combatants coordinate their assault to the best advantage.",
                     "A dwarf in chain mail interposes his shield between the ogre's club and his companion, knocking the deadly blow aside. His companion, a half-elf in scale armor, swings two scimitars in a blinding whirl as she circles the ogre, looking for a blind spot in its defenses.",
@@ -19897,6 +20480,7 @@ export default [
                 "page": 70
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -22305,7 +22889,7 @@ export default [
                                     "name": "Implements of Mercy",
                                     "entries": [
                                         "{@i 3rd-level Way of Mercy feature}",
-                                        "You gain proficiency in the {@skill Insight} or {@skill Medicine} skill (your choice), and you gain proficiency with the herbalism kit and the poisoner's kit."
+                                        "You gain proficiency in the {@skill Insight} or {@skill Medicine} skill (your choice), and you gain proficiency with the {@item herbalism kit|phb} and the {@item poisoner's kit|phb}."
                                     ]
                                 },
                                 {
@@ -22377,6 +22961,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Monk",
+                "type": "section",
                 "entries": [
                     "Her fists a blur as they deflect an incoming hail of arrows, a half-elf springs over a barricade and throws herself into the massed ranks of hobgoblins on the other side. She whirls among them, knocking their blows aside and sending them reeling, until at last she stands alone.",
                     "Taking a deep breath, a human covered in tattoos settles into a battle stance. As the first charging orcs reach him, he exhales and a blast of fire roars from his mouth, engulfing his foes.",
@@ -22420,6 +23006,7 @@ export default [
                 "page": 76
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -26513,6 +27100,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Paladin",
+                "type": "section",
                 "entries": [
                     "Clad in plate armor that gleams in the sunlight despite the dust and grime of long travel, a human lays down her sword and shield and places her hands on a mortally wounded man. Divine radiance shines from her hands, the man's wounds knit closed, and his eyes open wide with amazement.",
                     "A dwarf crouches behind an outcrop, his black cloak making him nearly invisible in the night, and watches an orc war band celebrating its recent victory. Silently, he stalks into their midst and whispers an oath, and two orcs are dead before they even realize he is there.",
@@ -26555,6 +27144,7 @@ export default [
                 "source": "PHB"
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -28898,10 +29488,178 @@ export default [
                         }
                     ]
                 ]
+            },
+            {
+                "name": "Fey Wanderer (UA)",
+                "shortName": "Fey Wanderer (UA)",
+                "source": "UA2020SubclassesPt3",
+                "page": 5,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Fey Wanderer",
+                            "entries": [
+                                "As a Fey Wanderer, you guard the border between the Feywild and the Material Plane, guiding the lost out of the Feywild and preventing dangerous fey from damaging the Material Plane. Your experience with both domains makes you an exceptional negotiator between inhabitants of these worlds, as you understand both humanoid mindsets and the wiles of the fey courts.",
+                                "Fey Wanderers possess a preternatural blessing from a fey ally or a place of fey power. Choose your blessing from the Feywild Gifts table or determine it randomly.",
+                                {
+                                    "type": "table",
+                                    "caption": "Feywild Gifts",
+                                    "colLabels": [
+                                        "d6",
+                                        "Gift"
+                                    ],
+                                    "colStyles": [
+                                        "col-2 text-center",
+                                        "col-10"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "1",
+                                            "Illusory butterflies flutter around you while you take a short or long rest."
+                                        ],
+                                        [
+                                            "2",
+                                            "Fresh, seasonal flowers sprout from your hair each dawn."
+                                        ],
+                                        [
+                                            "3",
+                                            "You faintly smell of cinnamon, lavender, nutmeg, or another comforting herb or spice."
+                                        ],
+                                        [
+                                            "4",
+                                            "Your shadow dances while no one is looking directly at it."
+                                        ],
+                                        [
+                                            "5",
+                                            "Delicate horns or antlers sprout from your head."
+                                        ],
+                                        [
+                                            "6",
+                                            "Your skin and hair change color to match the season at each dawn."
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Fey Wanderer Magic",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "You learn an additional spell when you reach certain levels in this class, as shown in the Fey Wanderer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Fey Wanderer Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell charm person}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell misty step}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell dispel magic}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell banishment}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell mislead}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Cunning Will",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
+                                        "In addition, you gain proficiency in one of the following skills of your choice: {@skill Deception}, {@skill Performance}, or {@skill Persuasion}."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Dreadful Strikes",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "You augment your attacks with mind-scarring magic, drawn from the gloomy hollows of the unseelie fey. You gain a bonus action that you can use to imbue the weapon, or weapons, you're currently holding with magic. Until the end of the turn, the weapons are magical, and they deal an extra {@dice 1d6} psychic damage on a hit. A creature can take this extra damage only once per turn.",
+                                        "When you engage in two-weapon fighting, you can imbue your weapons as part of the same bonus action you use to make the attack."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Blessings of the Courts",
+                                    "entries": [
+                                        "{@i 7th-level Fey Wanderer feature}",
+                                        "You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@dice 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of you until the end of your next turn.",
+                                        "In addition, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Beguiling Twist",
+                                    "entries": [
+                                        "{@i 11th-level Fey Wanderer feature}",
+                                        "You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "The creature is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
+                                                "The creature takes {@dice 3d10} psychic damage."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Misty Presence",
+                                    "entries": [
+                                        "{@i 15th-level Fey Wanderer feature}",
+                                        "You can magically remove yourself from one creature's perception: you gain a bonus action that you can use to force a creature you can see within 30 feet of you to make a Wisdom saving throw against your spell save DC. On a failed save, the target can't see or hear you for 24 hours. The target can repeat the saving throw at the end of any turn during which you hit it with an attack roll, forced it to make a saving throw, or dealt damage to it. The effect ends early if you use this bonus action again. On a successful save, the target is immune to this feature for 7 days.",
+                                        "Once you've used this bonus action, you can't use it again until you finish a long rest or until you expend a spell slot of 4th level or higher to use it again."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
             {
+                "name": "Ranger",
+                "type": "section",
                 "entries": [
                     "Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of steel, cutting down one enemy after another.",
                     "After tumbling away from a cone of freezing air, an elf finds her feet and draws back her bow to loose an arrow at the white dragon. Shrugging off the wave of fear that emanates from the dragon like the cold of its breath, she sends one arrow after another to find the gaps between the dragon's thick scales.",
@@ -28943,6 +29701,7 @@ export default [
                 "page": 89
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -30738,10 +31497,178 @@ export default [
                         }
                     ]
                 ]
+            },
+            {
+                "name": "Fey Wanderer (UA)",
+                "shortName": "Fey Wanderer (UA)",
+                "source": "UA2020SubclassesPt3",
+                "page": 5,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Fey Wanderer",
+                            "entries": [
+                                "As a Fey Wanderer, you guard the border between the Feywild and the Material Plane, guiding the lost out of the Feywild and preventing dangerous fey from damaging the Material Plane. Your experience with both domains makes you an exceptional negotiator between inhabitants of these worlds, as you understand both humanoid mindsets and the wiles of the fey courts.",
+                                "Fey Wanderers possess a preternatural blessing from a fey ally or a place of fey power. Choose your blessing from the Feywild Gifts table or determine it randomly.",
+                                {
+                                    "type": "table",
+                                    "caption": "Feywild Gifts",
+                                    "colLabels": [
+                                        "d6",
+                                        "Gift"
+                                    ],
+                                    "colStyles": [
+                                        "col-2 text-center",
+                                        "col-10"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "1",
+                                            "Illusory butterflies flutter around you while you take a short or long rest."
+                                        ],
+                                        [
+                                            "2",
+                                            "Fresh, seasonal flowers sprout from your hair each dawn."
+                                        ],
+                                        [
+                                            "3",
+                                            "You faintly smell of cinnamon, lavender, nutmeg, or another comforting herb or spice."
+                                        ],
+                                        [
+                                            "4",
+                                            "Your shadow dances while no one is looking directly at it."
+                                        ],
+                                        [
+                                            "5",
+                                            "Delicate horns or antlers sprout from your head."
+                                        ],
+                                        [
+                                            "6",
+                                            "Your skin and hair change color to match the season at each dawn."
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Fey Wanderer Magic",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "You learn an additional spell when you reach certain levels in this class, as shown in the Fey Wanderer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Fey Wanderer Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell charm person}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell misty step}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell dispel magic}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell banishment}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell mislead}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Cunning Will",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
+                                        "In addition, you gain proficiency in one of the following skills of your choice: {@skill Deception}, {@skill Performance}, or {@skill Persuasion}."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Dreadful Strikes",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "You augment your attacks with mind-scarring magic, drawn from the gloomy hollows of the unseelie fey. You gain a bonus action that you can use to imbue the weapon, or weapons, you're currently holding with magic. Until the end of the turn, the weapons are magical, and they deal an extra {@dice 1d6} psychic damage on a hit. A creature can take this extra damage only once per turn.",
+                                        "When you engage in two-weapon fighting, you can imbue your weapons as part of the same bonus action you use to make the attack."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Blessings of the Courts",
+                                    "entries": [
+                                        "{@i 7th-level Fey Wanderer feature}",
+                                        "You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@dice 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of you until the end of your next turn.",
+                                        "In addition, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Beguiling Twist",
+                                    "entries": [
+                                        "{@i 11th-level Fey Wanderer feature}",
+                                        "You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "The creature is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
+                                                "The creature takes {@dice 3d10} psychic damage."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Misty Presence",
+                                    "entries": [
+                                        "{@i 15th-level Fey Wanderer feature}",
+                                        "You can magically remove yourself from one creature's perception: you gain a bonus action that you can use to force a creature you can see within 30 feet of you to make a Wisdom saving throw against your spell save DC. On a failed save, the target can't see or hear you for 24 hours. The target can repeat the saving throw at the end of any turn during which you hit it with an attack roll, forced it to make a saving throw, or dealt damage to it. The effect ends early if you use this bonus action again. On a successful save, the target is immune to this feature for 7 days.",
+                                        "Once you've used this bonus action, you can't use it again until you finish a long rest or until you expend a spell slot of 4th level or higher to use it again."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
             {
+                "name": "Ranger",
+                "type": "section",
                 "entries": [
                     "Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of steel, cutting down one enemy after another.",
                     "After tumbling away from a cone of freezing air, an elf finds her feet and draws back her bow to loose an arrow at the white dragon. Shrugging off the wave of fear that emanates from the dragon like the cold of its breath, she sends one arrow after another to find the gaps between the dragon's thick scales.",
@@ -30783,6 +31710,7 @@ export default [
                 "page": 89
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -33101,10 +34029,191 @@ export default [
                         }
                     ]
                 ]
+            },
+            {
+                "name": "Fey Wanderer (UA)",
+                "shortName": "Fey Wanderer (UA)",
+                "source": "UA2020SubclassesPt3",
+                "page": 5,
+                "subclassFeatures": [
+                    [
+                        {
+                            "name": "Fey Wanderer",
+                            "entries": [
+                                "As a Fey Wanderer, you guard the border between the Feywild and the Material Plane, guiding the lost out of the Feywild and preventing dangerous fey from damaging the Material Plane. Your experience with both domains makes you an exceptional negotiator between inhabitants of these worlds, as you understand both humanoid mindsets and the wiles of the fey courts.",
+                                "Fey Wanderers possess a preternatural blessing from a fey ally or a place of fey power. Choose your blessing from the Feywild Gifts table or determine it randomly.",
+                                {
+                                    "type": "table",
+                                    "caption": "Feywild Gifts",
+                                    "colLabels": [
+                                        "d6",
+                                        "Gift"
+                                    ],
+                                    "colStyles": [
+                                        "col-2 text-center",
+                                        "col-10"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "1",
+                                            "Illusory butterflies flutter around you while you take a short or long rest."
+                                        ],
+                                        [
+                                            "2",
+                                            "Fresh, seasonal flowers sprout from your hair each dawn."
+                                        ],
+                                        [
+                                            "3",
+                                            "You faintly smell of cinnamon, lavender, nutmeg, or another comforting herb or spice."
+                                        ],
+                                        [
+                                            "4",
+                                            "Your shadow dances while no one is looking directly at it."
+                                        ],
+                                        [
+                                            "5",
+                                            "Delicate horns or antlers sprout from your head."
+                                        ],
+                                        [
+                                            "6",
+                                            "Your skin and hair change color to match the season at each dawn."
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Fey Wanderer Magic",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "You learn an additional spell when you reach certain levels in this class, as shown in the Fey Wanderer Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.",
+                                        {
+                                            "type": "table",
+                                            "caption": "Fey Wanderer Spells",
+                                            "colLabels": [
+                                                "Ranger Level",
+                                                "Spells"
+                                            ],
+                                            "colStyles": [
+                                                "col-3 text-center",
+                                                "col-9"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "3rd",
+                                                    "{@spell charm person}"
+                                                ],
+                                                [
+                                                    "5th",
+                                                    "{@spell misty step}"
+                                                ],
+                                                [
+                                                    "9th",
+                                                    "{@spell dispel magic}"
+                                                ],
+                                                [
+                                                    "13th",
+                                                    "{@spell banishment}"
+                                                ],
+                                                [
+                                                    "17th",
+                                                    "{@spell mislead}"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Cunning Will",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "Your experience with the fey has guarded your mind and sharpened your tongue. You have advantage on saving throws against being {@condition charmed} or {@condition frightened}.",
+                                        "In addition, you gain proficiency in one of the following skills of your choice: {@skill Deception}, {@skill Performance}, or {@skill Persuasion}."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Dreadful Strikes",
+                                    "entries": [
+                                        "{@i 3rd-level Fey Wanderer feature}",
+                                        "You augment your attacks with mind-scarring magic, drawn from the gloomy hollows of the unseelie fey. You gain a bonus action that you can use to imbue the weapon, or weapons, you're currently holding with magic. Until the end of the turn, the weapons are magical, and they deal an extra {@dice 1d6} psychic damage on a hit. A creature can take this extra damage only once per turn.",
+                                        "When you engage in two-weapon fighting, you can imbue your weapons as part of the same bonus action you use to make the attack."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Extra Attack",
+                                    "entries": [
+                                        "Beginning at 5th level, you can attack twice, instead of once, whenever you take the {@action Attack} action on your turn."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Blessings of the Courts",
+                                    "entries": [
+                                        "{@i 7th-level Fey Wanderer feature}",
+                                        "You have learned eerie techniques from both the Gloaming Court and the Summer Court of the Feywild. Once during each of your turns, when you hit a creature with a weapon attack, you can expend a spell slot to deal extra psychic damage. The extra damage is {@dice 3d6} psychic damage and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of you until the end of your next turn.",
+                                        "In addition, whenever you make a Charisma check, you gain a bonus to the check equal to your Wisdom modifier."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Beguiling Twist",
+                                    "entries": [
+                                        "{@i 11th-level Fey Wanderer feature}",
+                                        "You learn how to manipulate mind-altering magic, channeling it from your allies toward others. Whenever a creature you can see within 120 feet of you succeeds on a saving throw against being {@condition charmed} or {@condition frightened}, you can use your reaction to force a different creature you can see within 120 feet of you to succeed on a Wisdom saving throw against your spell save DC or suffer your choice of one of the following effects:",
+                                        {
+                                            "type": "list",
+                                            "items": [
+                                                "The creature is {@condition charmed} or {@condition frightened} by you (your choice) for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a successful save.",
+                                                "The creature takes {@dice 3d10} psychic damage."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "entries": [
+                                {
+                                    "type": "entries",
+                                    "name": "Misty Presence",
+                                    "entries": [
+                                        "{@i 15th-level Fey Wanderer feature}",
+                                        "You can magically remove yourself from one creature's perception: you gain a bonus action that you can use to force a creature you can see within 30 feet of you to make a Wisdom saving throw against your spell save DC. On a failed save, the target can't see or hear you for 24 hours. The target can repeat the saving throw at the end of any turn during which you hit it with an attack roll, forced it to make a saving throw, or dealt damage to it. The effect ends early if you use this bonus action again. On a successful save, the target is immune to this feature for 7 days.",
+                                        "Once you've used this bonus action, you can't use it again until you finish a long rest or until you expend a spell slot of 4th level or higher to use it again."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ],
         "fluff": [
             {
+                "name": "Ranger",
+                "type": "section",
                 "entries": [
                     "Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of steel, cutting down one enemy after another.",
                     "After tumbling away from a cone of freezing air, an elf finds her feet and draws back her bow to loose an arrow at the white dragon. Shrugging off the wave of fear that emanates from the dragon like the cold of its breath, she sends one arrow after another to find the gaps between the dragon's thick scales.",
@@ -33146,6 +34255,7 @@ export default [
                 "page": 89
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -35368,6 +36478,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Rogue",
+                "type": "section",
                 "entries": [
                     "Signaling for her companions to wait, a halfling creeps forward through the dungeon hall. She presses an ear to the door, then pulls out a set of tools and picks the lock in the blink of an eye. Then she disappears into the shadows as her fighter friend moves forward to kick the door open.",
                     "A human lurks in the shadows of an alley while his accomplice prepares for her part in the ambush. When their target—a notorious slaver—passes the alleyway, the accomplice cries out, the slaver comes to investigate, and the assassin's blade cuts his throat before he can make a sound.",
@@ -35409,6 +36521,7 @@ export default [
                 "source": "PHB"
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -35927,6 +37040,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Expert Sidekick",
+                "type": "section",
                 "entries": [
                     "The expert is a master of certain tasks or knowledge. This sidekick follows a path that favors cunning over brawn or spellcasting. It might be a scout, a musician, a librarian, a clever street kid, a wily merchant, or a burglar."
                 ],
@@ -36582,6 +37697,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Spellcaster Sidekick",
+                "type": "section",
                 "entries": [
                     "A sidekick who becomes a spellcaster walks the paths of magic. The sidekick might be a hedge wizard, a priest, a soothsayer, a spell-wielding performer, or a person with magic in their veins."
                 ],
@@ -36852,6 +37969,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Warrior Sidekick",
+                "type": "section",
                 "entries": [
                     "A warrior sidekick grows in martial prowess as it fights by your side. It might be a soldier, a town guard, a battle-trained beast, or any other creature honed for combat."
                 ],
@@ -39911,6 +41030,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Sorcerer",
+                "type": "section",
                 "entries": [
                     "Golden eyes flashing, a human stretches out her hand and unleashes the dragonfire that burns in her veins. As an inferno rages around her foes, leathery wings spread from her back and she takes to the air.",
                     "Long hair whipped by a conjured wind, a half-elf spreads his arms wide and throws his head back. Lifting him momentarily off the ground, a wave of magic surges up in him, through him, and out from him in a mighty blast of lightning.",
@@ -39953,6 +41074,7 @@ export default [
                 "source": "PHB"
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -42798,6 +43920,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Warlock",
+                "type": "section",
                 "entries": [
                     "With a pseudodragon curled on his shoulder, a young elf in golden robes smiles warmly, weaving a magical charm into his honeyed words and bending the palace sentinel to his will.",
                     "As flames spring to life in her hands, a wizened human whispers the secret name of her demonic patron, infusing her spell with fiendish magic.",
@@ -42842,6 +43966,7 @@ export default [
                 "source": "PHB"
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",
@@ -45925,10 +47050,11 @@ export default [
                                                 {
                                                     "type": "item",
                                                     "name": "Psychic Resilience",
-                                                    "entry": "You gain resistance to psychic damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks. You can transform using this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                                                    "entry": "You gain resistance to psychic damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks."
                                                 }
                                             ]
-                                        }
+                                        },
+                                        "You can transform using this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
                                     ]
                                 }
                             ]
@@ -45977,6 +47103,8 @@ export default [
         ],
         "fluff": [
             {
+                "name": "Wizard",
+                "type": "section",
                 "entries": [
                     "Clad in the silver robes that denote her station, an elf closes her eyes to shut out the distractions of the battlefield and begins her quiet chant. Fingers weaving in front of her, she completes her spell and launches a tiny bead of fire toward the enemy ranks, where it erupts into a conflagration that engulfs the soldiers.",
                     "Checking and rechecking his work, a human scribes an intricate magic circle in chalk on the bare stone floor, then sprinkles powdered iron along every line and graceful curve. When the circle is complete, he drones a long incantation. A hole opens in space inside the circle, bringing a whiff of brimstone from the otherworldly plane beyond.",
@@ -46018,6 +47146,7 @@ export default [
                 "source": "PHB"
             },
             {
+                "type": "section",
                 "entries": [
                     {
                         "type": "quote",

@@ -414,6 +414,16 @@ async function spell(s: Spell): Promise<string> {
     </div>
     `
 }
+
+function isConcentration(s: Spell): boolean {
+    for (const d of s.duration) {
+        if (d.type === 'timed' && d.concentration) {
+            return true
+        }
+    }
+    return false
+}
+
 const fullCaster = [
     [2, 0, 0, 0, 0, 0, 0, 0, 0],
     [3, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -445,6 +455,7 @@ async function spellList(c: Character): Promise<string> {
         spellsByLevel.push(spells.filter(spell => spell.level === level)
         )
     }
+
     return html`
     <div class="spell-list">
         ${spellsByLevel.filter(s => s.length > 0).map((spells, level) => html`
@@ -455,7 +466,7 @@ async function spellList(c: Character): Promise<string> {
                 </span>
             </h3>
             <ul>
-                ${spells.map(spell => html`<li>${spell.name}</li>`)}
+                ${spells.map(spell => html`<li>${spell.name} ${isConcentration(spell) && '<span class="concentration">C</span>'}</li>`)}
             </ul>
         `)}
     </div>
