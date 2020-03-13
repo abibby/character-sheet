@@ -499,7 +499,7 @@ function spellList(c) {
                 </span>
             </h3>
             <ul>
-                ${spells.map(spell => html `<li>${spell.name} ${isConcentration(spell) && '<span class="concentration">C</span>'}</li>`)}
+                ${spells.map(spell => html `<li>${spell.name} ${isConcentration(spell) ? '<span class="concentration">C</span>' : ''}</li>`)}
             </ul>
         `)}
     </div>

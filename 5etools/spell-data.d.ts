@@ -26540,6 +26540,15 @@ declare const _default: ({
         "type": string;
     }[];
     "entries": string[];
+    "scalingLevelDice": {
+        "label": string;
+        "scaling": {
+            "1": string;
+            "5": string;
+            "11": string;
+            "17": string;
+        };
+    };
     "damageInflict": string[];
     "savingThrow": string[];
     "miscTags": string[];
@@ -26551,15 +26560,6 @@ declare const _default: ({
         }[];
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
-    };
-    "scalingLevelDice": {
-        "label": string;
-        "scaling": {
-            "1": string;
-            "5": string;
-            "11": string;
-            "17": string;
-        };
     };
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
@@ -27114,6 +27114,8 @@ declare const _default: ({
             "upTo": boolean;
         };
     }[];
+    "entries": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -27122,8 +27124,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -27175,6 +27175,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -27183,9 +27186,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "opposedCheck": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
@@ -27232,6 +27232,9 @@ declare const _default: ({
         };
         "concentration": boolean;
     }[];
+    "entries": string[];
+    "opposedCheck": string[];
+    "miscTags": string[];
     "classes": {
         "fromClassList": {
             "name": string;
@@ -27240,9 +27243,6 @@ declare const _default: ({
         "fromClassListVariant"?: undefined;
         "fromSubclass"?: undefined;
     };
-    "entries": string[];
-    "opposedCheck": string[];
-    "miscTags": string[];
     "entriesHigherLevel"?: undefined;
     "conditionInflict"?: undefined;
     "savingThrow"?: undefined;
