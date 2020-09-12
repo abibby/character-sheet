@@ -10,7 +10,7 @@
     "@types/node": "^12.11.1",
     "@types/node-fetch": "^2.5.3",
     "gh-pages": "^2.1.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "sass": "^1.23.0",
     "tslint": "^5.20.1",
     "typescript": "^3.6.4"
