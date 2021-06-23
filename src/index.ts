@@ -1,5 +1,5 @@
-import { findClass, Entry } from "./5etools/index.js"
-import { render } from "./render.js"
+import { Entry, findClass } from './5etools/index.js'
+import { render } from './render.js'
 
 export class Level {
     private classMap = new Map<string, number>()
@@ -93,24 +93,24 @@ export interface Stats<T = number> {
 }
 
 export interface Skills<T = number> {
-    'acrobatics': T
+    acrobatics: T
     'animal handling': T
-    'arcana': T
-    'athletics': T
-    'deception': T
-    'history': T
-    'insight': T
-    'intimidation': T
-    'investigation': T
-    'medicine': T
-    'nature': T
-    'perception': T
-    'performance': T
-    'persuasion': T
-    'religion': T
+    arcana: T
+    athletics: T
+    deception: T
+    history: T
+    insight: T
+    intimidation: T
+    investigation: T
+    medicine: T
+    nature: T
+    perception: T
+    performance: T
+    persuasion: T
+    religion: T
     'sleight of hand': T
-    'stealth': T
-    'survival': T
+    stealth: T
+    survival: T
 }
 
 export const StatMap: Readonly<Stats<string>> = {
@@ -123,24 +123,24 @@ export const StatMap: Readonly<Stats<string>> = {
 }
 
 export const SkillsMap: Readonly<Skills<keyof Stats<number>>> = {
-    'acrobatics': 'dex',
+    acrobatics: 'dex',
     'animal handling': 'wis',
-    'arcana': 'int',
-    'athletics': 'str',
-    'deception': 'cha',
-    'history': 'int',
-    'insight': 'wis',
-    'intimidation': 'cha',
-    'investigation': 'int',
-    'medicine': 'wis',
-    'nature': 'int',
-    'perception': 'wis',
-    'performance': 'cha',
-    'persuasion': 'cha',
-    'religion': 'int',
+    arcana: 'int',
+    athletics: 'str',
+    deception: 'cha',
+    history: 'int',
+    insight: 'wis',
+    intimidation: 'cha',
+    investigation: 'int',
+    medicine: 'wis',
+    nature: 'int',
+    perception: 'wis',
+    performance: 'cha',
+    persuasion: 'cha',
+    religion: 'int',
     'sleight of hand': 'dex',
-    'stealth': 'dex',
-    'survival': 'wis',
+    stealth: 'dex',
+    survival: 'wis',
 }
 
 export interface LimitedFeature {
@@ -154,15 +154,17 @@ export type Attack = {
     name: string
     damage: Lazy<string>
     range?: string
-} &
-    ({
-        type: 'attack',
-        attackBonus: Lazy<number>
-    } | {
-        type: 'save'
-        save: keyof Stats
-        saveDC: Lazy<number>
-    })
+} & (
+    | {
+          type: 'attack'
+          attackBonus: Lazy<number>
+      }
+    | {
+          type: 'save'
+          save: keyof Stats
+          saveDC: Lazy<number>
+      }
+)
 
 export class Character {
     public name: string = ''
@@ -185,11 +187,11 @@ export class Character {
     }
     public get saves(): Stats {
         return Object.fromEntries(
-            Object.keys(StatMap)
-                .map((stat: keyof Stats) => [
-                    stat,
-                    this.stats[stat].mod() + Number(this.saveIsProficient(stat)) * this.proficiencyBonus,
-                ])
+            Object.keys(StatMap).map((stat: keyof Stats) => [
+                stat,
+                this.stats[stat].mod() +
+                    Number(this.saveIsProficient(stat)) * this.proficiencyBonus,
+            ]),
         ) as any
     }
 
@@ -203,11 +205,12 @@ export class Character {
 
     public get skills(): Skills<number> {
         return Object.fromEntries(
-            Object.entries(SkillsMap)
-                .map(([skill, stat]) => [
-                    skill,
-                    this.stats[stat].mod() + (this.skillProficiency.filter(p => p === skill).length * this.proficiencyBonus),
-                ])
+            Object.entries(SkillsMap).map(([skill, stat]) => [
+                skill,
+                this.stats[stat].mod() +
+                    this.skillProficiency.filter((p) => p === skill).length *
+                        this.proficiencyBonus,
+            ]),
         ) as any
     }
 
@@ -238,20 +241,28 @@ export class Character {
 
     public hitDice: number[] = []
     public get maxHP(): number {
-        return this.hitDice[0]
-            + this.stats.con.mod() * this.hitDice.length
-            + this.hitDice.slice(1).reduce((total, die) => total + (die / 2 + 1), 0)
+        return (
+            this.hitDice[0] +
+            this.stats.con.mod() * this.hitDice.length +
+            this.hitDice
+                .slice(1)
+                .reduce((total, die) => total + (die / 2 + 1), 0)
+        )
     }
 
     private spellSaveStat: keyof Stats | undefined
+    public spellAttackBonus: number = 0
     public get spellSaveDC(): number {
         if (this.spellSaveStat === undefined) {
             return 0
         }
-        return 8 + this.proficiencyBonus + this.stats[this.spellSaveStat].mod()
+        return 8 + this.proficiencyBonus + this.spellAttackMod
     }
     public get spellAttackMod(): number {
-        return 0
+        if (this.spellSaveStat === undefined) {
+            return 0
+        }
+        return this.stats[this.spellSaveStat].mod() + this.spellAttackBonus
     }
 
     public feats: string[] = []
@@ -337,7 +348,10 @@ export class Character {
             recharge: recharge,
         })
     }
-    public updateLimitedFeature(name: string, feature: Partial<LimitedFeature>) {
+    public updateLimitedFeature(
+        name: string,
+        feature: Partial<LimitedFeature>,
+    ) {
         for (const f of this.limitedFeatures) {
             if (f.name !== name) {
                 continue
@@ -368,22 +382,28 @@ export class Character {
     }
 
     public pointBuy(): number {
-        return this.stats.str.points() +
+        return (
+            this.stats.str.points() +
             this.stats.dex.points() +
             this.stats.con.points() +
             this.stats.int.points() +
             this.stats.wis.points() +
             this.stats.cha.points()
+        )
     }
 
-    public assert<T>(expect: (c: Character) => T, actual: (c: Character) => T, message: string): string | undefined {
+    public assert<T>(
+        expect: (c: Character) => T,
+        actual: (c: Character) => T,
+        message: string,
+    ): string | undefined {
         const e = expect(this)
         const a = actual(this)
         if (e === a) {
             return
         }
         const m = `${message}, expected ${e} got ${a}`
-        console.warn(m);  //yellow
+        console.warn(m) //yellow
         return m
     }
 
