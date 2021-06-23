@@ -7,8 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { findClass } from "./5etools/index.js";
-import { render } from "./render.js";
+import { findClass } from './5etools/index.js';
+import { render } from './render.js';
 export class Level {
     constructor() {
         this.classMap = new Map();
@@ -76,7 +76,7 @@ export class Stat {
         if (this.initial < 8) {
             console.warn('point buy ability scores should be greater than 8');
         }
-        return _a = pointValues[this.initial], (_a !== null && _a !== void 0 ? _a : 0);
+        return (_a = pointValues[this.initial]) !== null && _a !== void 0 ? _a : 0;
     }
     toString() {
         return String(this.get());
@@ -91,24 +91,24 @@ export const StatMap = {
     cha: 'charisma',
 };
 export const SkillsMap = {
-    'acrobatics': 'dex',
+    acrobatics: 'dex',
     'animal handling': 'wis',
-    'arcana': 'int',
-    'athletics': 'str',
-    'deception': 'cha',
-    'history': 'int',
-    'insight': 'wis',
-    'intimidation': 'cha',
-    'investigation': 'int',
-    'medicine': 'wis',
-    'nature': 'int',
-    'perception': 'wis',
-    'performance': 'cha',
-    'persuasion': 'cha',
-    'religion': 'int',
+    arcana: 'int',
+    athletics: 'str',
+    deception: 'cha',
+    history: 'int',
+    insight: 'wis',
+    intimidation: 'cha',
+    investigation: 'int',
+    medicine: 'wis',
+    nature: 'int',
+    perception: 'wis',
+    performance: 'cha',
+    persuasion: 'cha',
+    religion: 'int',
     'sleight of hand': 'dex',
-    'stealth': 'dex',
-    'survival': 'wis',
+    stealth: 'dex',
+    survival: 'wis',
 };
 export class Character {
     constructor() {
@@ -136,21 +136,23 @@ export class Character {
         this.acMod = 0;
         this.speed = 0;
         this.hitDice = [];
+        this.spellAttackBonus = 0;
         this.feats = [];
         this.attacks = [];
     }
     get saves() {
-        return Object.fromEntries(Object.keys(StatMap)
-            .map((stat) => [
+        return Object.fromEntries(Object.keys(StatMap).map((stat) => [
             stat,
-            this.stats[stat].mod() + Number(this.saveIsProficient(stat)) * this.proficiencyBonus,
+            this.stats[stat].mod() +
+                Number(this.saveIsProficient(stat)) * this.proficiencyBonus,
         ]));
     }
     get skills() {
-        return Object.fromEntries(Object.entries(SkillsMap)
-            .map(([skill, stat]) => [
+        return Object.fromEntries(Object.entries(SkillsMap).map(([skill, stat]) => [
             skill,
-            this.stats[stat].mod() + (this.skillProficiency.filter(p => p === skill).length * this.proficiencyBonus),
+            this.stats[stat].mod() +
+                this.skillProficiency.filter((p) => p === skill).length *
+                    this.proficiencyBonus,
         ]));
     }
     get proficiencyBonus() {
@@ -175,18 +177,23 @@ export class Character {
         return this.stats.dex.mod();
     }
     get maxHP() {
-        return this.hitDice[0]
-            + this.stats.con.mod() * this.hitDice.length
-            + this.hitDice.slice(1).reduce((total, die) => total + (die / 2 + 1), 0);
+        return (this.hitDice[0] +
+            this.stats.con.mod() * this.hitDice.length +
+            this.hitDice
+                .slice(1)
+                .reduce((total, die) => total + (die / 2 + 1), 0));
     }
     get spellSaveDC() {
         if (this.spellSaveStat === undefined) {
             return 0;
         }
-        return 8 + this.proficiencyBonus + this.stats[this.spellSaveStat].mod();
+        return 8 + this.proficiencyBonus + this.spellAttackMod;
     }
     get spellAttackMod() {
-        return 0;
+        if (this.spellSaveStat === undefined) {
+            return 0;
+        }
+        return this.stats[this.spellSaveStat].mod() + this.spellAttackBonus;
     }
     setRace(race, bonus) {
         this.race = race;
@@ -284,12 +291,12 @@ export class Character {
         });
     }
     pointBuy() {
-        return this.stats.str.points() +
+        return (this.stats.str.points() +
             this.stats.dex.points() +
             this.stats.con.points() +
             this.stats.int.points() +
             this.stats.wis.points() +
-            this.stats.cha.points();
+            this.stats.cha.points());
     }
     assert(expect, actual, message) {
         const e = expect(this);

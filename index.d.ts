@@ -1,4 +1,4 @@
-import { Entry } from "./5etools/index.js";
+import { Entry } from './5etools/index.js';
 export declare class Level {
     private classMap;
     add(className: string): void;
@@ -29,24 +29,24 @@ export interface Stats<T = number> {
     cha: T;
 }
 export interface Skills<T = number> {
-    'acrobatics': T;
+    acrobatics: T;
     'animal handling': T;
-    'arcana': T;
-    'athletics': T;
-    'deception': T;
-    'history': T;
-    'insight': T;
-    'intimidation': T;
-    'investigation': T;
-    'medicine': T;
-    'nature': T;
-    'perception': T;
-    'performance': T;
-    'persuasion': T;
-    'religion': T;
+    arcana: T;
+    athletics: T;
+    deception: T;
+    history: T;
+    insight: T;
+    intimidation: T;
+    investigation: T;
+    medicine: T;
+    nature: T;
+    perception: T;
+    performance: T;
+    persuasion: T;
+    religion: T;
     'sleight of hand': T;
-    'stealth': T;
-    'survival': T;
+    stealth: T;
+    survival: T;
 }
 export declare const StatMap: Readonly<Stats<string>>;
 export declare const SkillsMap: Readonly<Skills<keyof Stats<number>>>;
@@ -95,6 +95,7 @@ export declare class Character {
     hitDice: number[];
     get maxHP(): number;
     private spellSaveStat;
+    spellAttackBonus: number;
     get spellSaveDC(): number;
     get spellAttackMod(): number;
     feats: string[];
