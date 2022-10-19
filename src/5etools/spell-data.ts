@@ -1,5 +1,125 @@
 export default [
     {
+        "name": "Air Bubble",
+        "source": "AAG",
+        "page": 22,
+        "level": 2,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 24
+                }
+            }
+        ],
+        "entries": [
+            "You create a spectral globe around the head of a willing creature you can see within range. The globe is filled with fresh air that lasts until the spell ends. If the creature has more than one head, the globe of air appears around only one of its heads (which is all the creature needs to avoid suffocation, assuming that all its heads share the same respiratory system)."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, you can create two additional globes of fresh air for each slot level above 2nd."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Create Spelljamming Helm",
+        "source": "AAG",
+        "page": 22,
+        "level": 5,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "touch"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a crystal rod worth at least 5,000 gp, which the spell consumes",
+                "cost": 500000,
+                "consume": true
+            }
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "Holding the rod used in the casting of the spell, you touch a Large or smaller chair that is unoccupied. The rod disappears, and the chair is transformed into a {@item spelljamming helm|AAG}."
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                }
+            ]
+        }
+    },
+    {
         "name": "Distort Value",
         "source": "AI",
         "page": 75,
@@ -114,6 +234,9 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "affectsCreatureType": [
+            "humanoid"
         ],
         "miscTags": [
             "SGT"
@@ -301,6 +424,9 @@ export default [
         "entries": [
             "Of the many tactics employed by master magician and renowned adventurer Jim Darkmagic, the old glowing coin trick is a time-honored classic. When you cast the spell, you hurl the coin that is the spell's material component to any spot within range. The coin lights up as if under the effect of a {@spell light} spell. Each creature of your choice that you can see within 30 feet of the coin must succeed on a Wisdom saving throw or be distracted for the duration. While distracted, a creature has disadvantage on Wisdom ({@skill Perception}) checks and initiative rolls."
         ],
+        "savingThrow": [
+            "wisdom"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -369,6 +495,9 @@ export default [
         "damageInflict": [
             "force"
         ],
+        "spellAttack": [
+            "R"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -431,12 +560,13 @@ export default [
                 "type": "entries",
                 "name": "At Higher Levels",
                 "entries": [
-                    "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd."
+                    "When you cast this spell using a spell slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd."
                 ]
             }
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "THP"
         ],
         "areaTags": [
             "MT"
@@ -449,6 +579,1731 @@ export default [
                 },
                 {
                     "name": "Cleric",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Linked Glyphs",
+        "source": "AitFR-AVT",
+        "page": 9,
+        "otherSources": [
+            {
+                "source": "AitFR-FCD",
+                "page": 11
+            }
+        ],
+        "level": 3,
+        "school": "A",
+        "time": [
+            {
+                "number": 1,
+                "unit": "hour"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "touch"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "incense and powdered diamond worth at least 300 gp, which the spell consumes",
+                "cost": 30000,
+                "consume": true
+            }
+        },
+        "duration": [
+            {
+                "type": "permanent",
+                "ends": [
+                    "dispel",
+                    "trigger"
+                ]
+            }
+        ],
+        "entries": [
+            "When you cast this spell, you inscribe a detection glyph that later activates a magical effect at the site of a separate, linked glyph. You inscribe the detection glyph either on a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the detection glyph is broken, and the spell ends without being triggered.",
+            "Both glyphs are nearly invisible, and finding either requires a successful Intelligence ({@skill Investigation}) check against your spell save DC.",
+            "You decide what triggers the detection glyph when you cast this spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.",
+            "You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.",
+            "When you inscribe the detection glyph, choose an alarm glyph or spell glyph to link to it.",
+            {
+                "type": "entries",
+                "name": "Alarm Glyph",
+                "entries": [
+                    "You create and magically link two glyphs: a detection glyph and an effect glyph. Each of these two glyphs must stay within 100 miles of the other or the spell effect ends. When the detection glyph is triggered, the effect glyph reacts like an alarm spell, creating a mental ping in your mind if you are within 1 mile of the effect glyph. This ping awakens you if you are sleeping."
+                ]
+            },
+            {
+                "type": "entries",
+                "name": "Spell Glyph",
+                "entries": [
+                    "You create and magically link two glyphs: a detection glyph and an effect glyph. These two glyphs must be within 100 feet of each other. You can store a prepared spell of 4th level or lower in the effect glyph by casting it as part of creating the glyphs. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the detection glyph is triggered, the spell stored in the effect glyph is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on the effect glyph. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the effect glyph. If the spell requires concentration, it lasts until the end of its full duration."
+                ]
+            }
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher to create a spell glyph, you can store any spell of up to the same level as the slot you use."
+                ]
+            }
+        ],
+        "conditionInflict": [
+            "invisible"
+        ],
+        "miscTags": [
+            "PRM"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Cleric",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Dark Star",
+        "source": "EGW",
+        "page": 186,
+        "level": 8,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 150
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a shard of onyx and a drop of the caster's blood, both of which the spell consumes",
+                "consume": true
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "This spell creates a sphere centered on a point you choose within range. The sphere can have a radius of up to 40 feet. The area within this sphere is filled with magical darkness and crushing gravitational force.",
+            "For the duration, the spell's area is {@quickref difficult terrain||3}. A creature with darkvision can't see through the magical darkness, and nonmagical light can't illuminate it. No sound can be created within or pass through the area. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are {@condition deafened} while entirely inside it. Casting a spell that includes a verbal component is impossible there.",
+            "Any creature that enters the spell's area for the first time on a turn or starts its turn there must make a Constitution saving throw. The creature takes {@damage 8d10} force damage on a failed save, or half as much damage on a successful one. A creature reduced to 0 hit points by this damage is disintegrated. A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust."
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "conditionInflict": [
+            "deafened"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "areaTags": [
+            "S"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Fortune's Favor",
+        "source": "EGW",
+        "page": 186,
+        "level": 2,
+        "school": "D",
+        "time": [
+            {
+                "number": 1,
+                "unit": "minute"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a white pearl worth at least 100 gp, which the spell consumes",
+                "cost": 10000,
+                "consume": true
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                }
+            }
+        ],
+        "entries": [
+            "You impart latent luck to yourself or one willing creature you can see within range. When the chosen creature makes an attack roll, an ability check, or a saving throw before the spell ends, it can dismiss this spell on itself to roll an additional {@dice d20} and choose which of the {@dice d20}s to use. Alternatively, when an attack roll is made against the chosen creature, it can dismiss this spell on itself to roll a {@dice d20} and choose which of the {@dice d20}s to use, the one it rolled or the one the attacker rolled.",
+            "If the original {@dice d20} roll has advantage or disadvantage, the creature rolls the additional {@dice d20} after advantage or disadvantage has been applied to the original roll."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Gift of Alacrity",
+        "source": "EGW",
+        "page": 186,
+        "level": 1,
+        "school": "D",
+        "time": [
+            {
+                "number": 1,
+                "unit": "minute"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "touch"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 8
+                }
+            }
+        ],
+        "entries": [
+            "You touch a willing creature. For the duration, the target can add {@dice 1d8} to its initiative rolls."
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Gravity Fissure",
+        "source": "EGW",
+        "page": 187,
+        "level": 6,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "line",
+            "distance": {
+                "type": "feet",
+                "amount": 100
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a fistful of iron filings"
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You manifest a ravine of gravitational energy in a line originating from you that is 100 feet long and 5 feet wide. Each creature in that line must make a Constitution saving throw, taking {@damage 8d8} force damage on a failed save, or half as much damage on a successful one.",
+            "Each creature within 10 feet of the line but not in it must succeed on a Constitution saving throw or take {@damage 8d8} force damage and be pulled toward the line until the creature is in its area."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 7th level or higher, the damage increases by {@scaledamage 8d8|6-9|1d8} for each slot level above 6th."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "areaTags": [
+            "L"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Gravity Sinkhole",
+        "source": "EGW",
+        "page": 187,
+        "level": 4,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 120
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a black marble"
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "A 20-foot-radius sphere of crushing force forms at a point you can see within range and tugs at the creatures there. Each creature in the sphere must make a Constitution saving throw. On a failed save, the creature takes {@damage 5d10} force damage and is pulled in a straight line toward the center of the sphere, ending in an unoccupied space as close to the center as possible (even if that space is in the air). On a successful save, the creature takes half as much damage and isn't pulled."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledamage 5d10|4-9|1d10} for each slot level above 4th."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "S"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Immovable Object",
+        "source": "EGW",
+        "page": 187,
+        "level": 2,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "touch"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "gold dust worth at least 25 gp, which the spell consumes",
+                "cost": 2500,
+                "consume": true
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                }
+            }
+        ],
+        "entries": [
+            "You touch an object that weighs no more than 10 pounds and cause it to become magically fixed in place. You and the creatures you designate when you cast this spell can move the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute.",
+            "If the object is fixed in the air, it can hold up to 4,000 pounds of weight. More weight causes the object to fall. Otherwise, a creature can use an action to make a Strength check against your spell save DC. On a success, the creature can move the object up to 10 feet."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "If you cast this spell using a spell slot of 4th or 5th level, the DC to move the object increases by 5, it can carry up to 8,000 pounds of weight, and the duration increases to 24 hours. If you cast this spell using a spell slot of 6th level or higher, the DC to move the object increases by 10, it can carry up to 20,000 pounds of weight, and the effect is permanent until dispelled."
+                ]
+            }
+        ],
+        "abilityCheck": [
+            "strength"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Magnify Gravity",
+        "source": "EGW",
+        "page": 188,
+        "level": 1,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "round",
+                    "amount": 1
+                }
+            }
+        ],
+        "entries": [
+            "The gravity in a 10-foot-radius sphere centered on a point you can see within range increases for a moment. Each creature in the sphere on the turn when you cast the spell must make a Constitution saving throw. On a failed save, a creature takes {@damage 2d8} force damage, and its speed is halved until the end of its next turn. On a successful save, a creature takes half as much damage and suffers no reduction to its speed.",
+            "Until the start of your next turn, any object that isn't being worn or carried in the sphere requires a successful Strength check against your spell save DC to pick up or move."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 2d8|1-9|1d8} for each slot level above 1st."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "S"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Pulse Wave",
+        "source": "EGW",
+        "page": 188,
+        "level": 3,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "cone",
+            "distance": {
+                "type": "feet",
+                "amount": 30
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You create intense pressure, unleash it in a 30-foot cone, and decide whether the pressure pulls or pushes creatures and objects. Each creature in that cone must make a Constitution saving throw. A creature takes {@damage 6d6} force damage on a failed save, or half as much damage on a successful one. And every creature that fails the save is either pulled 15 feet toward you or pushed 15 feet away from you, depending on the choice you made for the spell.",
+            "In addition, unsecured objects that are completely within the cone are likewise pulled or pushed 15 feet."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 6d6|3-9|1d6} and the distance pulled or pushed increases by 5 feet for each slot level above 3rd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "FMV"
+        ],
+        "areaTags": [
+            "N"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Ravenous Void",
+        "source": "EGW",
+        "page": 188,
+        "level": 9,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 1000
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a small, nine-pointed star made of iron"
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You create a 20-foot-radius sphere of destructive gravitational force centered on a point you can see within range. For the spell's duration, the sphere and any space within 100 feet of it are {@quickref difficult terrain||3}, and nonmagical objects fully inside the sphere are destroyed if they aren't being worn or carried.",
+            "When the sphere appears and at the start of each of your turns until the spell ends, unsecured objects within 100 feet of the sphere are pulled toward the sphere's center, ending in an unoccupied space as close to the center as possible.",
+            "A creature that starts its turn within 100 feet of the sphere must succeed on a Strength saving throw or be pulled straight toward the sphere's center, ending in an unoccupied space as close to the center as possible. A creature that enters the sphere for the first time on a turn or starts its turn there takes {@damage 5d10} force damage and is {@condition restrained} until it is no longer in the sphere. If the sphere is in the air, the {@condition restrained} creature hovers inside the sphere. A creature can use its action to make a Strength check against your spell save DC, ending this {@condition restrained} condition on itself or another creature in the sphere that it can reach. A creature reduced to 0 hit points by this spell is annihilated, along with any nonmagical items it is wearing or carrying."
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "conditionInflict": [
+            "restrained"
+        ],
+        "savingThrow": [
+            "strength"
+        ],
+        "abilityCheck": [
+            "strength"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "S"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Reality Break",
+        "source": "EGW",
+        "page": 189,
+        "level": 8,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a crystal prism"
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You shatter the barriers between realities and timelines, thrusting a creature into turmoil and madness. The target must succeed on a Wisdom saving throw, or it can't take reactions until the spell ends. The affected target must also roll a {@dice d10} at the start of each of its turns; the number rolled determines what happens to the target, as shown on the Reality Break Effects table.",
+            "At the end of each of its turns, the affected target can repeat the Wisdom saving throw, ending the spell on itself on a success.",
+            {
+                "type": "table",
+                "caption": "Reality Break Effects",
+                "colLabels": [
+                    "d10",
+                    "Effect"
+                ],
+                "colStyles": [
+                    "col-2 text-center",
+                    "col-10"
+                ],
+                "rows": [
+                    [
+                        "1-2",
+                        "{@b Vision of the Far Realm.} The target takes {@damage 6d12} psychic damage, and it is {@condition stunned} until the end of the turn."
+                    ],
+                    [
+                        "3-5",
+                        "{@b Rending Rift.} The target must make a Dexterity saving throw, taking {@damage 8d12} force damage on a failed save, or half as much damage on a successful one."
+                    ],
+                    [
+                        "6-8",
+                        "{@b Wormhole.} The target is teleported, along with everything it is wearing and carrying, up to 30 feet to an unoccupied space of your choice that you can see. The target also takes {@damage 10d12} force damage and is knocked {@condition prone}."
+                    ],
+                    [
+                        "9-10",
+                        "{@b Chill of the Dark Void.} The target takes {@damage 10d12} cold damage, and it is {@condition blinded} until the end of the turn."
+                    ]
+                ]
+            }
+        ],
+        "damageInflict": [
+            "psychic",
+            "force",
+            "cold"
+        ],
+        "conditionInflict": [
+            "stunned",
+            "prone",
+            "blinded"
+        ],
+        "savingThrow": [
+            "wisdom",
+            "dexterity"
+        ],
+        "miscTags": [
+            "RO",
+            "SGT"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Sapping Sting",
+        "source": "EGW",
+        "page": 189,
+        "level": 0,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 30
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You sap the vitality of one creature you can see in range. The target must succeed on a Constitution saving throw or take {@damage 1d4} necrotic damage and fall {@condition prone}.",
+            "This spell's damage increases by {@dice 1d4} when you reach 5th level ({@dice 2d4}), 11th level ({@dice 3d4}), and 17th level ({@dice 4d4})."
+        ],
+        "scalingLevelDice": {
+            "label": "necrotic damage",
+            "scaling": {
+                "1": "1d4",
+                "5": "2d4",
+                "11": "3d4",
+                "17": "4d4"
+            }
+        },
+        "damageInflict": [
+            "necrotic"
+        ],
+        "conditionInflict": [
+            "prone"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "SCL",
+            "SGT"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Temporal Shunt",
+        "source": "EGW",
+        "page": 189,
+        "level": 5,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "reaction",
+                "condition": "taken when a creature you can see makes an attack roll or starts to cast a spell"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 120
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "round",
+                    "amount": 1
+                }
+            }
+        ],
+        "entries": [
+            "You target the triggering creature, which must succeed on a Wisdom saving throw or vanish, being thrown to another point in time and causing the attack to miss or the spell to be wasted. At the start of its next turn, the target reappears where it was or in the closest unoccupied space. The target doesn't remember you casting the spell or being affected by it."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th. All targets must be within 30 feet of each other."
+                ]
+            }
+        ],
+        "savingThrow": [
+            "wisdom"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Tether Essence",
+        "source": "EGW",
+        "page": 189,
+        "level": 7,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a spool of platinum cord worth at least 250 gp, which the spell consumes",
+                "cost": 25000,
+                "consume": true
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "Two creatures you can see within range must make a Constitution saving throw, with disadvantage if they are within 30 feet of each other. Either creature can willingly fail the save. If either save succeeds, the spell has no effect. If both saves fail, the creatures are magically linked for the duration, regardless of the distance between them. When damage is dealt to one of them, the same damage is dealt to the other one. If hit points are restored to one of them, the same number of hit points are restored to the other one. If either of the tethered creatures is reduced to 0 hit points, the spell ends on both. If the spell ends on one creature, it ends on both."
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "MT"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Time Ravage",
+        "source": "EGW",
+        "page": 189,
+        "level": 9,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "an hourglass filled with diamond dust worth at least 5,000 gp, which the spell consumes",
+                "cost": 500000,
+                "consume": true
+            }
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You target a creature you can see within range, putting its physical form through the devastation of rapid aging. The target must make a Constitution saving throw, taking {@damage 10d12} necrotic damage on a failed save, or half as much damage on a successful one. If the save fails, the target also ages to the point where it has only 30 days left before it dies of old age. In this aged state, the target has disadvantage on attack rolls, ability checks, and saving throws, and its walking speed is halved. Only the {@spell wish} spell or the {@spell greater restoration} cast with a 9th-level spell slot can end these effects and restore the target to its previous age."
+        ],
+        "damageInflict": [
+            "necrotic"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Wristpocket",
+        "source": "EGW",
+        "page": 190,
+        "level": 2,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "meta": {
+            "ritual": true
+        },
+        "entries": [
+            "You flick your wrist, causing one object in your hand to vanish. The object, which only you can be holding and can weigh no more than 5 pounds, is transported to an extradimensional space, where it remains for the duration.",
+            "Until the spell ends, you can use your action to summon the object to your free hand, and you can use your action to return the object to the extradimensional space. An object still in the pocket plane when the spell ends appears in your space, at your feet."
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Chronurgy",
+                        "source": "EGW"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Graviturgy",
+                        "source": "EGW"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "name": "Ashardalon's Stride",
+        "source": "FTD",
+        "page": 19,
+        "level": 3,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "The billowing flames of a dragon blast from your feet, granting you explosive speed. For the duration, your speed increases by 20 feet and moving doesn't provoke opportunity attacks.",
+            "When you move within 5 feet of a creature or an object that isn't being worn or carried, it takes {@damage 1d6} fire damage from your trail of heat. A creature or object can take this damage only once during a turn."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, increase your speed by 5 feet for each spell slot level above 3rd. The spell deals an additional {@scaledamage 1d6|3-9|1d6} fire damage for each slot level above 3rd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "fire"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Draconic Transformation",
+        "source": "FTD",
+        "page": 19,
+        "level": 7,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a statuette of a dragon, worth at least 500 gp",
+                "cost": 50000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "With a roar, you draw on the magic of dragons to transform yourself, taking on draconic features. You gain the following benefits until the spell ends:",
+            {
+                "type": "list",
+                "style": "list-hang-notitle",
+                "items": [
+                    {
+                        "type": "item",
+                        "name": "Blindsight",
+                        "entries": [
+                            "You have {@sense blindsight} with a range of 30 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're {@condition blinded} or in darkness. Moreover, you can see an {@condition invisible} creature, unless the creature successfully hides from you."
+                        ]
+                    },
+                    {
+                        "type": "item",
+                        "name": "Breath Weapon",
+                        "entries": [
+                            "When you cast this spell, and as a bonus action on subsequent turns for the duration, you can exhale shimmering energy in a 60-foot cone. Each creature in that area must make a Dexterity saving throw, taking {@damage 6d8} force damage on a failed save, or half as much damage on a successful one."
+                        ]
+                    },
+                    {
+                        "type": "item",
+                        "name": "Wings",
+                        "entries": [
+                            "Incorporeal wings sprout from your back, giving you a flying speed of 60 feet."
+                        ]
+                    }
+                ]
+            }
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "savingThrow": [
+            "dexterity"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Fizban's Platinum Shield",
+        "source": "FTD",
+        "page": 20,
+        "level": 6,
+        "school": "A",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a platinum-plated dragon scale, worth at least 500 gp",
+                "cost": 50000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You create a field of silvery light that surrounds a creature of your choice within range (you can choose yourself). The field sheds dim light out to 5 feet. While surrounded by the field, a creature gains the following benefits:",
+            {
+                "type": "list",
+                "style": "list-hang-notitle",
+                "items": [
+                    {
+                        "type": "item",
+                        "name": "Cover",
+                        "entries": [
+                            "The creature has half cover."
+                        ]
+                    },
+                    {
+                        "type": "item",
+                        "name": "Damage Resistance",
+                        "entries": [
+                            "The creature has resistance to acid, cold, fire, lightning, and poison damage."
+                        ]
+                    },
+                    {
+                        "type": "item",
+                        "name": "Evasion",
+                        "entries": [
+                            "If the creature is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the creature instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+                        ]
+                    }
+                ]
+            },
+            "As a bonus action on subsequent turns, you can move the field to another creature within 60 feet of the field."
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Nathair's Mischief",
+        "source": "FTD",
+        "page": 20,
+        "level": 2,
+        "school": "I",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "s": true,
+            "m": "a piece of crust from an apple pie"
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You fill a 20-foot cube you can see within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced, and roll again at the start of each of your turns until the spell ends. You can move the cube up to 10 feet before you roll.",
+            {
+                "type": "table",
+                "caption": "Mischievous Surge",
+                "colLabels": [
+                    "d4",
+                    "Effect"
+                ],
+                "colStyles": [
+                    "col-2 text-center",
+                    "col-10"
+                ],
+                "rows": [
+                    [
+                        "1",
+                        "The smell of apple pie fills the air, and each creature in the cube must succeed on a Wisdom saving throw or become {@condition charmed} by you until the start of your next turn."
+                    ],
+                    [
+                        "2",
+                        "Bouquets of flowers appear all around, and each creature in the cube must succeed on a Dexterity saving throw or be {@condition blinded} until the start of your next turn as the flowers spray water in their faces."
+                    ],
+                    [
+                        "3",
+                        "Each creature in the cube must succeed on a Wisdom saving throw or begin giggling until the start of your next turn. A giggling creature is {@condition incapacitated} and uses all its movement to move in a random direction."
+                    ],
+                    [
+                        "4",
+                        "Drops of molasses hover in the cube, making it {@quickref difficult terrain||3} until the start of your next turn."
+                    ]
+                ]
+            }
+        ],
+        "miscTags": [
+            "RO",
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Raulothim's Psychic Lance",
+        "source": "FTD",
+        "page": 21,
+        "level": 4,
+        "school": "E",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 120
+            }
+        },
+        "components": {
+            "v": true
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You unleash a shimmering lance of psychic power from your forehead at a creature that you can see within range. Alternatively, you can utter a creature's name. If the named target is within range, it becomes the spell's target even if you can't see it. If the named target isn't within range, the lance dissipates without effect.",
+            "The target must make an Intelligence saving throw. On a failed save, the target takes {@damage 7d6} psychic damage and is {@condition incapacitated} until the start of your next turn. On a successful save, the creature takes half as much damage and isn't {@condition incapacitated}."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledamage 7d6|4-9|1d6} for each slot level above 4th."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "psychic"
+        ],
+        "conditionInflict": [
+            "incapacitated"
+        ],
+        "savingThrow": [
+            "intelligence"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Rime's Binding Ice",
+        "source": "FTD",
+        "page": 21,
+        "level": 2,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "cone",
+            "distance": {
+                "type": "feet",
+                "amount": 30
+            }
+        },
+        "components": {
+            "s": true,
+            "m": "a vial of meltwater"
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "A burst of cold energy emanates from you in a 30-foot cone. Each creature in that area must make a Constitution saving throw. On a failed save, a creature takes {@damage 3d8} cold damage and is hindered by ice formations for 1 minute, or until it or another creature within reach of it uses an action to break away the ice. A creature hindered by ice has its speed reduced to 0. On a successful save, a creature takes half as much damage and isn't hindered by ice."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, increase the cold damage by {@scaledamage 3d8|2-9|1d8} for each slot level above 2nd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "cold"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "areaTags": [
+            "N"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Summon Draconic Spirit",
+        "source": "FTD",
+        "page": 21,
+        "level": 5,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "an object with the image of a dragon engraved on it, worth at least 500 gp",
+                "cost": 50000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a {@creature draconic spirit|FTD}. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Draconic Spirit stat block. When you cast this spell, choose a family of dragon: chromatic, gem, or metallic. The creature resembles a dragon of the chosen family, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "savingThrow": [
+            "dexterity"
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
                     "source": "PHB"
                 }
             ]
@@ -495,6 +2350,114 @@ export default [
                 "source": "GGR"
             }
         ]
+    },
+    {
+        "name": "Create Magen",
+        "source": "IDRotF",
+        "page": 318,
+        "level": 7,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "hour"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "touch"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a vial of quicksilver worth 500 gp and a life-sized human doll, both of which the spell consumes, and an intricate crystal rod worth at least 1,500 gp that is not consumed",
+                "cost": 50000,
+                "consume": true
+            }
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "While casting the spell, you place a vial of quicksilver in the chest of a life-sized human doll stuffed with ash or dust. You then stitch up the doll and drip your blood on it. At the end of the casting, you tap the doll with a crystal rod, transforming it into a {@filter magen|bestiary|search=magen|source=IDRotF} clothed in whatever the doll was wearing. The type of magen is chosen by you during the casting of the spell. See {@adventure appendix C|IDRotF|21} for different kinds of magen and their statistics.",
+            "When the magen appears, your hit point maximum decreases by an amount equal to the magen's challenge rating (minimum reduction of 1). Only a {@spell wish} spell can undo this reduction to your hit point maximum.",
+            "Any magen you create with this spell obeys your commands without question."
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Frost Fingers",
+        "source": "IDRotF",
+        "page": 318,
+        "level": 1,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "cone",
+            "distance": {
+                "type": "feet",
+                "amount": 15
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "Freezing cold blasts from your fingertips in a 15-foot cone. Each creature in that area must make a Constitution saving throw, taking {@damage 2d8} cold damage on a failed save, or half as much damage on a successful one.",
+            "The cold freezes nonmagical liquids in the area that aren't being worn or carried."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d8} for each slot level above 1st."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "cold"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "areaTags": [
+            "N"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
     },
     {
         "name": "Flock of Familiars",
@@ -609,6 +2572,9 @@ export default [
                 ]
             }
         ],
+        "miscTags": [
+            "SMN"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -698,6 +2664,7 @@ export default [
         "source": "PHB",
         "page": 211,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "C",
         "time": [
@@ -765,13 +2732,14 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -787,6 +2755,7 @@ export default [
         "source": "PHB",
         "page": 211,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "A",
         "time": [
@@ -828,6 +2797,9 @@ export default [
                 ]
             }
         ],
+        "miscTags": [
+            "HL"
+        ],
         "areaTags": [
             "MT"
         ],
@@ -851,7 +2823,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -884,16 +2856,48 @@ export default [
                         "name": "Unity (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -981,7 +2985,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -993,6 +2997,36 @@ export default [
                     "subclass": {
                         "name": "Clockwork Soul (UA)",
                         "source": "UA2020SubclassesPt2"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -1088,7 +3122,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -1115,11 +3149,21 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Moon",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -1136,6 +3180,12 @@ export default [
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Master of Myriad Forms",
+                "source": "PHB"
             }
         ]
     },
@@ -1190,6 +3240,9 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "affectsCreatureType": [
+            "beast"
         ],
         "miscTags": [
             "SGT"
@@ -1294,6 +3347,9 @@ export default [
                 ]
             }
         ],
+        "affectsCreatureType": [
+            "beast"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -1366,7 +3422,7 @@ export default [
             }
         ],
         "entries": [
-            "Your magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a Large or smaller beast with a challenge rating of 4 or lower. On subsequent turns, you can use your action to transform affected creatures into new forms.",
+            "Your magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a {@filter Large or smaller beast with a challenge rating of 4 or lower|bestiary|challenge rating=[&0;&4]|type=beast|size=f;d;t;s;m;l|miscellaneous=!swarm}. On subsequent turns, you can use your action to transform affected creatures into new forms.",
             "The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each target. A target's game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. The target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked {@condition unconscious}. The creature is limited in the actions it can perform by the nature of its new form, and it can't speak or cast spells.",
             "The target's gear melds into the new form. The target can't activate, wield, or otherwise benefit from any of its equipment."
         ],
@@ -1429,6 +3485,9 @@ export default [
                 ]
             }
         ],
+        "affectsCreatureType": [
+            "humanoid"
+        ],
         "miscTags": [
             "PRM",
             "SMN"
@@ -1482,14 +3541,15 @@ export default [
                     },
                     "subclass": {
                         "name": "Spores",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -1642,7 +3702,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -1724,6 +3784,23 @@ export default [
             "The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.",
             "If you move so that an affected creature is forced to pass through the barrier, the spell ends."
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
+        "areaTags": [
+            "S"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -1771,6 +3848,26 @@ export default [
                         "name": "Grave",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
+                    }
                 }
             ]
         },
@@ -1788,6 +3885,7 @@ export default [
         "source": "PHB",
         "page": 213,
         "srd": true,
+        "basicRules": true,
         "level": 8,
         "school": "A",
         "time": [
@@ -1825,7 +3923,7 @@ export default [
                 "type": "entries",
                 "name": "Targeted Effects",
                 "entries": [
-                    "Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target."
+                    "Spells and other magical effects, such as {@spell magic missile} and {@spell charm person}, that target a creature or an object in the sphere have no effect on that target."
                 ]
             },
             {
@@ -1971,7 +4069,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -1981,6 +4085,7 @@ export default [
         "source": "PHB",
         "page": 214,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "D",
         "time": [
@@ -2032,7 +4137,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -2085,6 +4190,36 @@ export default [
                         "name": "Clockwork Soul (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -2106,6 +4241,12 @@ export default [
             {
                 "name": "Dimir Operative",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Visions of Distant Realms",
+                "source": "PHB"
             }
         ]
     },
@@ -2148,7 +4289,8 @@ export default [
             "Any creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction."
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "TP"
         ],
         "classes": {
             "fromClassList": [
@@ -2172,6 +4314,7 @@ export default [
         "source": "PHB",
         "page": 215,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "A",
         "time": [
@@ -2204,7 +4347,7 @@ export default [
             }
         ],
         "entries": [
-            "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.",
+            "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting {@spell knock} on the object suppresses {@spell arcane lock} for 10 minutes.",
             "While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10."
         ],
         "classes": {
@@ -2223,7 +4366,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         },
@@ -2300,6 +4443,9 @@ export default [
         ],
         "damageInflict": [
             "cold"
+        ],
+        "miscTags": [
+            "THP"
         ],
         "classes": {
             "fromClassList": [
@@ -2420,7 +4566,7 @@ export default [
             "strength"
         ],
         "areaTags": [
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -2432,12 +4578,12 @@ export default [
             "fromSubclass": [
                 {
                     "class": {
-                        "name": "Cleric",
+                        "name": "Sorcerer",
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
+                        "name": "Aberrant Mind (UA)",
+                        "source": "UASorcererAndWarlock"
                     }
                 },
                 {
@@ -2446,8 +4592,8 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Aberrant Mind (UA)",
-                        "source": "UASorcererAndWarlock"
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -2458,6 +4604,7 @@ export default [
         "source": "PHB",
         "page": 215,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "N",
         "time": [
@@ -2478,7 +4625,7 @@ export default [
             "s": true,
             "m": {
                 "text": "for each creature you affect with this spell, you must provide one jacinth worth at least 1,000 gp and one ornately carved bar of silver worth at least 100 gp, all of which the spell consumes",
-                "cost": 100000,
+                "cost": 110000,
                 "consume": true
             }
         },
@@ -2514,6 +4661,10 @@ export default [
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                },
+                {
+                    "name": "Monk",
+                    "source": "PHB"
                 }
             ]
         }
@@ -2523,6 +4674,7 @@ export default [
         "source": "PHB",
         "page": 215,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "D",
         "time": [
@@ -2565,7 +4717,7 @@ export default [
                 ]
             },
             "The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
-            "If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+            "If you cast the spell two or more times before completing your next long rest, there is a cumulative {@chance 25|||Random reading!|Regular reading} chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
         ],
         "classes": {
             "fromClassList": [
@@ -2597,16 +4749,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Barbarian",
                         "source": "PHB"
                     },
@@ -2614,16 +4756,38 @@ export default [
                         "name": "Ancestral Guardian",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Wizard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -2670,7 +4834,7 @@ export default [
             "HL"
         ],
         "areaTags": [
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -2719,12 +4883,48 @@ export default [
                         "name": "Wildfire (UA)",
                         "source": "UAClericDruidWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Cleric",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -2788,7 +4988,7 @@ export default [
             "poison"
         ],
         "areaTags": [
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -2811,11 +5011,11 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -2837,12 +5037,48 @@ export default [
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Cleric",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -2900,7 +5136,7 @@ export default [
             "HL"
         ],
         "areaTags": [
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -2943,22 +5179,44 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Cleric",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -3011,6 +5269,10 @@ export default [
         "conditionInflict": [
             "charmed"
         ],
+        "affectsCreatureType": [
+            "beast",
+            "plant"
+        ],
         "miscTags": [
             "PRM"
         ],
@@ -3031,7 +5293,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -3177,9 +5440,35 @@ export default [
                         "name": "Onomancy (UA)",
                         "source": "UAClericDruidWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
+                    }
                 }
             ]
-        }
+        },
+        "eldritchInvocations": [
+            {
+                "name": "Thief of Five Fates",
+                "source": "PHB"
+            }
+        ]
     },
     {
         "name": "Banishing Smite",
@@ -3252,11 +5541,11 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 }
             ]
@@ -3466,6 +5755,26 @@ export default [
                         "name": "Fey Wanderer (UA)",
                         "source": "UA2020SubclassesPt3"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
+                    }
                 }
             ]
         }
@@ -3507,6 +5816,9 @@ export default [
         "entries": [
             "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing."
         ],
+        "miscTags": [
+            "MAC"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -3542,15 +5854,27 @@ export default [
                         "source": "PHB",
                         "subSubclass": "Forest"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Beacon of Hope",
         "source": "PHB",
         "page": 217,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "A",
         "time": [
@@ -3582,9 +5906,6 @@ export default [
         ],
         "entries": [
             "This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing."
-        ],
-        "miscTags": [
-            "HL"
         ],
         "areaTags": [
             "MT"
@@ -3633,16 +5954,6 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
                         "name": "Unity (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
@@ -3655,6 +5966,16 @@ export default [
                     "subclass": {
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -3709,7 +6030,7 @@ export default [
             "ritual": true
         },
         "entries": [
-            "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings."
+            "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are {@condition blinded} and {@condition deafened} to your own surroundings."
         ],
         "areaTags": [
             "ST"
@@ -3890,6 +6211,12 @@ export default [
                 "name": "Orzhov Representative",
                 "source": "GGR"
             }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Sign of Ill Omen",
+                "source": "PHB"
+            }
         ]
     },
     {
@@ -3929,7 +6256,7 @@ export default [
         ],
         "entries": [
             "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand.",
-            "The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn't fill its space.",
+            "The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 ({@d20 8}) and a Dexterity of 10 ({@d20 0}). The hand doesn't fill its space.",
             "When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.",
             {
                 "type": "entries",
@@ -3942,7 +6269,7 @@ export default [
                 "type": "entries",
                 "name": "Forceful Hand",
                 "entries": [
-                    "The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it."
+                    "The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength ({@skill Athletics}) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it."
                 ]
             },
             {
@@ -3956,7 +6283,7 @@ export default [
                 "type": "entries",
                 "name": "Interposing Hand",
                 "entries": [
-                    "The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target."
+                    "The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is {@quickref difficult terrain||3} for the target."
                 ]
             }
         ],
@@ -3976,10 +6303,11 @@ export default [
         "spellAttack": [
             "M"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "miscTags": [
+            "FMV",
             "SGT"
         ],
         "classes": {
@@ -3994,7 +6322,36 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
+                    }
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -4012,6 +6369,7 @@ export default [
         "source": "PHB",
         "page": 218,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "V",
         "time": [
@@ -4042,7 +6400,7 @@ export default [
             }
         ],
         "entries": [
-            "You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain.",
+            "You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is {@quickref difficult terrain||3}.",
             "When a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a Dexterity saving throw. On a failed save, the creature takes {@damage 6d10} slashing damage. On a successful save, the creature takes half as much damage."
         ],
         "damageInflict": [
@@ -4128,6 +6486,7 @@ export default [
         "source": "PHB",
         "page": 219,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "E",
         "time": [
@@ -4277,6 +6636,20 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -4366,16 +6739,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Artificer (Revisited)",
                         "source": "UAArtificerRevisited"
                     },
@@ -4401,17 +6764,27 @@ export default [
                     },
                     "subclass": {
                         "name": "Spores",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -4499,7 +6872,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -4619,16 +6993,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Druid",
                         "source": "PHB"
                     },
@@ -4644,7 +7008,27 @@ export default [
                     },
                     "subclass": {
                         "name": "Spores",
-                        "source": "GGR"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
                     }
                 }
             ]
@@ -4709,7 +7093,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -4769,6 +7153,7 @@ export default [
         "source": "PHB",
         "page": 219,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "I",
         "time": [
@@ -4797,7 +7182,7 @@ export default [
             }
         ],
         "entries": [
-            "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
+            "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with {@sense truesight}."
         ],
         "classes": {
             "fromClassList": [
@@ -4819,7 +7204,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -4842,6 +7227,48 @@ export default [
                     "subclass": {
                         "name": "Hexblade",
                         "source": "XGE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
                     }
                 }
             ]
@@ -4894,6 +7321,9 @@ export default [
         "damageInflict": [
             "radiant"
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -4945,18 +7375,19 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -4980,6 +7411,7 @@ export default [
         "source": "PHB",
         "page": 220,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "V",
         "time": [
@@ -5088,6 +7520,68 @@ export default [
                         "source": "UAGiantSoulSorcerer",
                         "subSubclass": "Fire"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Sun Soul",
+                        "source": "XGE"
+                    }
                 }
             ]
         },
@@ -5122,7 +7616,8 @@ export default [
                 "name": "Rakdos Cultist",
                 "source": "GGR"
             }
-        ]
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Call Lightning",
@@ -5182,7 +7677,8 @@ export default [
             "SGT"
         ],
         "areaTags": [
-            "S"
+            "S",
+            "Y"
         ],
         "classes": {
             "fromClassList": [
@@ -5215,12 +7711,22 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
+                        "name": "Druid",
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
                     }
                 }
             ]
@@ -5274,6 +7780,9 @@ export default [
         "savingThrow": [
             "charisma"
         ],
+        "affectsCreatureType": [
+            "humanoid"
+        ],
         "areaTags": [
             "S"
         ],
@@ -5318,6 +7827,16 @@ export default [
                         "name": "Aberrant Mind (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -5351,6 +7870,7 @@ export default [
         "source": "PHB",
         "page": 221,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "V",
         "time": [
@@ -5420,6 +7940,7 @@ export default [
         "source": "PHB",
         "page": 221,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "E",
         "time": [
@@ -5465,6 +7986,9 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "affectsCreatureType": [
+            "humanoid"
         ],
         "miscTags": [
             "SGT"
@@ -5522,16 +8046,6 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
@@ -5554,6 +8068,36 @@ export default [
                     "subclass": {
                         "name": "Fey Wanderer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -5664,6 +8208,18 @@ export default [
                     "name": "Wizard",
                     "source": "PHB"
                 }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Spores",
+                        "source": "TCE"
+                    }
+                }
             ]
         },
         "races": [
@@ -5680,7 +8236,7 @@ export default [
                 "baseSource": "PHB"
             },
             {
-                "name": "Elf (Zendikar) (Mul Daya Nation)",
+                "name": "Elf (Zendikar; Mul Daya Nation)",
                 "source": "PSZ",
                 "baseName": "Elf (Zendikar)",
                 "baseSource": "PSZ"
@@ -5757,6 +8313,18 @@ export default [
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
                 }
             ]
         }
@@ -5868,8 +8436,7 @@ export default [
             "Divine energy radiates from you, distorting and diffusing magical energy within 30 feet of you. Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw."
         ],
         "areaTags": [
-            "S",
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -5907,6 +8474,16 @@ export default [
                     "subclass": {
                         "name": "Twilight (UA)",
                         "source": "UAClericDruidWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -5953,7 +8530,7 @@ export default [
         "entries": [
             "You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The sensor remains in place for the duration, and it can't be attacked or otherwise interacted with.",
             "When you cast the spell, you choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As your action, you can switch between seeing and hearing.",
-            "A creature that can see the sensor (such as a creature benefiting from {@spell see invisibility} or truesight) sees a luminous, intangible orb about the size of your fist."
+            "A creature that can see the sensor (such as a creature benefiting from {@spell see invisibility} or {@sense truesight}) sees a luminous, intangible orb about the size of your fist."
         ],
         "classes": {
             "fromClassList": [
@@ -6063,7 +8640,7 @@ export default [
             "v": true,
             "s": true,
             "m": {
-                "text": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
+                "text": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold the creature being cloned, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
                 "cost": 100000,
                 "consume": true
             }
@@ -6074,7 +8651,7 @@ export default [
             }
         ],
         "entries": [
-            "This spell grows an inert duplicate of a living, Medium creature as a safeguard against death. This clone forms inside a sealed vessel and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.",
+            "This spell grows an inert duplicate of a living creature as a safeguard against death. This clone forms inside the vessel used in the spell's casting and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.",
             "At any time after the clone matures, if the original creature dies, its soul transfers to the clone, provided that the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The original creature's physical remains, if they still exist, become inert and can't thereafter be restored to life, since the creature's soul is elsewhere."
         ],
         "miscTags": [
@@ -6274,26 +8851,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Artificer (Revisited)",
                         "source": "UAArtificerRevisited"
                     },
@@ -6309,7 +8866,7 @@ export default [
                     },
                     "subclass": {
                         "name": "Spores",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -6325,11 +8882,41 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
                     }
                 }
             ]
@@ -6339,7 +8926,8 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ]
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Color Spray",
@@ -6408,7 +8996,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -6418,6 +9012,7 @@ export default [
         "source": "PHB",
         "page": 223,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "E",
         "time": [
@@ -6498,6 +9093,21 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "construct",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
         ],
         "miscTags": [
             "SGT"
@@ -6604,14 +9214,30 @@ export default [
                     },
                     "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Bard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glamour",
+                        "source": "XGE"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -6631,6 +9257,7 @@ export default [
         "source": "PHB",
         "page": 223,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "D",
         "time": [
@@ -6665,7 +9292,7 @@ export default [
         "entries": [
             "You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.",
             "Divine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead.",
-            "If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret."
+            "If you cast the spell two or more times before finishing your next long rest, there is a cumulative {@chance 25|||No answer!|Answer} chance for each casting after the first that you get no answer. The DM makes this roll in secret."
         ],
         "classes": {
             "fromClassList": [
@@ -6712,7 +9339,27 @@ export default [
                     },
                     "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
                     }
                 }
             ]
@@ -6814,18 +9461,28 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
+                        "name": "Lurker in the Deep (UA)",
+                        "source": "UASorcererAndWarlock"
                     }
                 },
                 {
                     "class": {
-                        "name": "Warlock",
+                        "name": "Barbarian",
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Lurker in the Deep (UA)",
-                        "source": "UASorcererAndWarlock"
+                        "name": "Totem Warrior",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -6956,6 +9613,7 @@ export default [
         "source": "PHB",
         "page": 224,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "D",
         "time": [
@@ -7113,18 +9771,8 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -7136,6 +9784,26 @@ export default [
                         "name": "Aberrant Mind (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
+                    }
                 }
             ]
         },
@@ -7144,6 +9812,12 @@ export default [
                 "name": "Azorius Functionary",
                 "source": "GGR"
             }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Bewitching Whispers",
+                "source": "PHB"
+            }
         ]
     },
     {
@@ -7151,6 +9825,7 @@ export default [
         "source": "PHB",
         "page": 224,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "V",
         "time": [
@@ -7253,16 +9928,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Artificer (Revisited)",
                         "source": "UAArtificerRevisited"
                     },
@@ -7284,18 +9949,87 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -7340,7 +10074,7 @@ export default [
             "An affected target can't take reactions and must roll a {@dice d10} at the start of each of its turns to determine its behavior for that turn.",
             {
                 "type": "table",
-                "caption": "Confusion Behaviour",
+                "caption": "Confusion Behavior",
                 "colLabels": [
                     "{@dice d10}",
                     "Behavior"
@@ -7404,6 +10138,9 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "miscTags": [
+            "RO"
         ],
         "areaTags": [
             "S"
@@ -7485,7 +10222,7 @@ export default [
                     },
                     "subclass": {
                         "name": "Spores",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -7512,6 +10249,12 @@ export default [
             {
                 "name": "Rakdos Cultist",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Dreadful Word",
+                "source": "PHB"
             }
         ]
     },
@@ -7574,8 +10317,8 @@ export default [
             }
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -7675,11 +10418,11 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 }
             ]
@@ -7748,8 +10491,8 @@ export default [
             }
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -7835,6 +10578,26 @@ export default [
                         "source": "PHB",
                         "subSubclass": "Coast"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
+                    }
                 }
             ]
         },
@@ -7850,6 +10613,12 @@ export default [
             {
                 "name": "Izzet Engineer",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Minions of Chaos",
+                "source": "PHB"
             }
         ]
     },
@@ -7903,8 +10672,8 @@ export default [
             }
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -7978,8 +10747,8 @@ export default [
             }
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -7990,6 +10759,18 @@ export default [
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
+                    }
                 }
             ]
         },
@@ -8056,6 +10837,18 @@ export default [
                     "name": "Ranger",
                     "source": "PHB"
                 }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
+                    }
+                }
             ]
         }
     },
@@ -8119,8 +10912,8 @@ export default [
             }
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -8193,7 +10986,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -8325,22 +11119,12 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Druid",
                         "source": "PHB"
                     },
                     "subclass": {
                         "name": "Spores",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -8351,6 +11135,16 @@ export default [
                     "subclass": {
                         "name": "Spores (UA)",
                         "source": "UAThreeSubclasses"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
                     }
                 }
             ]
@@ -8393,7 +11187,7 @@ export default [
             }
         ],
         "entries": [
-            "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell—called the contingent spell—as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid.",
+            "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell—called the contingent spell—as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with {@spell water breathing} might stipulate that {@spell water breathing} comes into effect when you are engulfed in water or a similar liquid.",
             "The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to, and then contingency ends.",
             "The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person."
         ],
@@ -8465,13 +11259,19 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -8526,7 +11326,7 @@ export default [
                 "name": "Flood",
                 "entries": [
                     "You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land.",
-                    "If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.",
+                    "If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a {@chance 25|||Capsizes!|No effect} chance of capsizing.",
                     "The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts."
                 ]
             },
@@ -8548,8 +11348,8 @@ export default [
                 "type": "entries",
                 "name": "Whirlpool",
                 "entries": [
-                    "This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.",
-                    "When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes {@damage 2d8} bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.",
+                    "This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength ({@skill Athletics}) check against your spell save DC.",
+                    "When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes {@damage 2d8} bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength ({@skill Athletics}) check to do so.",
                     "The first time each turn that an object enters the vortex, the object takes {@damage 2d8} bludgeoning damage; this damage occurs each round it remains in the vortex."
                 ]
             }
@@ -8560,8 +11360,11 @@ export default [
         "savingThrow": [
             "strength"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
+        ],
+        "miscTags": [
+            "FMV"
         ],
         "areaTags": [
             "N"
@@ -8609,8 +11412,8 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
+                        "name": "Lurker in the Deep (UA)",
+                        "source": "UASorcererAndWarlock"
                     }
                 },
                 {
@@ -8619,8 +11422,51 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Lurker in the Deep (UA)",
-                        "source": "UASorcererAndWarlock"
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Marid"
                     }
                 }
             ]
@@ -8866,6 +11712,7 @@ export default [
         "source": "PHB",
         "page": 228,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "A",
         "time": [
@@ -8947,6 +11794,26 @@ export default [
                         "name": "Clockwork Soul (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -9009,7 +11876,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -9032,6 +11899,46 @@ export default [
                     "subclass": {
                         "name": "Alchemist",
                         "source": "UAArtificerRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -9125,8 +12032,8 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
+                        "name": "Lurker in the Deep (UA)",
+                        "source": "UASorcererAndWarlock"
                     }
                 },
                 {
@@ -9135,8 +12042,8 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Lurker in the Deep (UA)",
-                        "source": "UASorcererAndWarlock"
+                        "name": "Fathomless",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -9202,6 +12109,9 @@ export default [
                     "When you cast this spell using a 7th-level spell slot, you can animate or reassert control over four {@creature ghoul||ghouls}. When you cast this spell using an 8th-level spell slot, you can animate or reassert control over five {@creature ghoul||ghouls} or two {@creature ghast||ghasts} or {@creature wight||wights}. When you cast this spell using a 9th-level spell slot, you can animate or reassert control over six {@creature ghoul||ghouls}, three {@creature ghast||ghasts} or {@creature wight||wights}, or two {@creature mummy||mummies}."
                 ]
             }
+        ],
+        "affectsCreatureType": [
+            "humanoid"
         ],
         "miscTags": [
             "PRM",
@@ -9318,7 +12228,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -9340,6 +12250,36 @@ export default [
                     "subclass": {
                         "name": "Forge",
                         "source": "XGE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -9402,6 +12342,9 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "affectsCreatureType": [
+            "humanoid"
         ],
         "miscTags": [
             "SGT"
@@ -9501,7 +12444,7 @@ export default [
             "radiant"
         ],
         "areaTags": [
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -9539,6 +12482,7 @@ export default [
         "source": "PHB",
         "page": 230,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "V",
         "time": [
@@ -9573,6 +12517,20 @@ export default [
                     "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by {@scaledice 1d8|1-9|1d8} for each slot level above 1st."
                 ]
             }
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
         ],
         "miscTags": [
             "HL"
@@ -9612,7 +12570,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -9655,6 +12613,16 @@ export default [
                         "name": "Divine Soul",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -9678,6 +12646,7 @@ export default [
         "source": "PHB",
         "page": 230,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "V",
         "time": [
@@ -9712,6 +12681,9 @@ export default [
             "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.",
             "As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range."
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -9732,7 +12704,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         },
@@ -9768,6 +12740,7 @@ export default [
         "source": "PHB",
         "page": 230,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "V",
         "time": [
@@ -9844,32 +12817,42 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Cleric",
                         "source": "PHB"
                     },
                     "subclass": {
                         "name": "Twilight (UA)",
                         "source": "UAClericDruidWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Shadow",
+                        "source": "XGE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Shadow",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -9882,7 +12865,7 @@ export default [
                 "baseSource": "PHB"
             },
             {
-                "name": "Elf (Zendikar) (Mul Daya Nation)",
+                "name": "Elf (Zendikar; Mul Daya Nation)",
                 "source": "PSZ",
                 "baseName": "Elf (Zendikar)",
                 "baseSource": "PSZ"
@@ -10016,7 +12999,19 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Shadow",
+                        "source": "PHB"
+                    }
                 }
             ]
         }
@@ -10058,6 +13053,9 @@ export default [
             "A 60-foot-radius sphere of light spreads out from a point you choose within range. The sphere is bright light and sheds dim light for an additional 60 feet.",
             "If you chose a point on an object you are holding or one that isn't being worn or carried, the light shines from the object and moves with it. Completely covering the affected object with an opaque object, such as a bowl or a helm, blocks the light.",
             "If any of this spell's area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled."
+        ],
+        "miscTags": [
+            "LGT"
         ],
         "areaTags": [
             "S"
@@ -10136,6 +13134,16 @@ export default [
                         "name": "Celestial",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
                 }
             ]
         },
@@ -10151,6 +13159,7 @@ export default [
         "source": "PHB",
         "page": 230,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "A",
         "time": [
@@ -10275,18 +13284,39 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -10314,6 +13344,7 @@ export default [
         "source": "PHB",
         "page": 230,
         "srd": true,
+        "basicRules": true,
         "level": 7,
         "school": "V",
         "time": [
@@ -10435,7 +13466,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -10483,7 +13520,7 @@ export default [
         ],
         "areaTags": [
             "MT",
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -10532,16 +13569,6 @@ export default [
                         "name": "Zeal (PSA)",
                         "source": "PSA"
                     }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
                 }
             ]
         },
@@ -10589,6 +13616,14 @@ export default [
             "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.",
             "The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -10598,6 +13633,28 @@ export default [
                 {
                     "name": "Paladin",
                     "source": "PHB"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -10615,6 +13672,7 @@ export default [
         "source": "PHB",
         "page": 231,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "D",
         "time": [
@@ -10647,7 +13705,7 @@ export default [
             "ritual": true
         },
         "entries": [
-            "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.",
+            "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its {@book school of magic|PHB|10|The Schools of Magic}, if any.",
             "The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
         ],
         "classes": {
@@ -10686,7 +13744,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -10698,6 +13756,16 @@ export default [
                     "subclass": {
                         "name": "Arcana",
                         "source": "SCAG"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -10712,6 +13780,12 @@ export default [
                 "source": "ERLW",
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Eldritch Sight",
+                "source": "PHB"
             }
         ]
     },
@@ -10835,7 +13909,7 @@ export default [
         "savingThrow": [
             "wisdom"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "miscTags": [
@@ -10886,6 +13960,16 @@ export default [
                         "name": "Aberrant Mind (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -10927,6 +14011,7 @@ export default [
         "source": "PHB",
         "page": 233,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "C",
         "time": [
@@ -10959,7 +14044,8 @@ export default [
             "force"
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "TP"
         ],
         "classes": {
             "fromClassList": [
@@ -11013,12 +14099,32 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
+                        "name": "Ranger",
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -11030,13 +14136,15 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ]
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Disguise Self",
         "source": "PHB",
         "page": 233,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "I",
         "time": [
@@ -11067,9 +14175,9 @@ export default [
         "entries": [
             "You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.",
             "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.",
-            "To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC."
+            "To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence ({@skill Investigation}) check against your spell save DC."
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "miscTags": [
@@ -11099,7 +14207,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -11199,12 +14307,24 @@ export default [
                 "source": "ERLW",
                 "baseName": "Elf",
                 "baseSource": "PHB"
+            },
+            {
+                "name": "Hexblood",
+                "source": "VRGR",
+                "baseName": "Hexblood",
+                "baseSource": "PHB"
             }
         ],
         "backgrounds": [
             {
                 "name": "Dimir Operative",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Mask of Many Faces",
+                "source": "PHB"
             }
         ]
     },
@@ -11213,6 +14333,7 @@ export default [
         "source": "PHB",
         "page": 233,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "T",
         "time": [
@@ -11239,9 +14360,9 @@ export default [
             }
         ],
         "entries": [
-            "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.",
+            "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by {@spell wall of force}.",
             "A creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes {@damage 10d6 + 40} force damage. The target is disintegrated if this damage leaves it with 0 hit points.",
-            "A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a {@spell wish} spell.",
+            "A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a {@spell true resurrection} or a {@spell wish} spell.",
             "This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell."
         ],
         "entriesHigherLevel": [
@@ -11336,6 +14457,13 @@ export default [
         "savingThrow": [
             "charisma"
         ],
+        "affectsCreatureType": [
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -11357,6 +14485,7 @@ export default [
         "source": "PHB",
         "page": 234,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "A",
         "time": [
@@ -11432,7 +14561,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -11484,6 +14613,46 @@ export default [
                     "subclass": {
                         "name": "Fey Wanderer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -11574,6 +14743,16 @@ export default [
                         "name": "Aberrant Mind (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -11589,6 +14768,7 @@ export default [
         "source": "PHB",
         "page": 234,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "D",
         "time": [
@@ -11623,7 +14803,7 @@ export default [
         "entries": [
             "Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.",
             "The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
-            "If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+            "If you cast the spell two or more times before finishing your next long rest, there is a cumulative {@chance 25|||Random reading!|Regular reading} chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
         ],
         "classes": {
             "fromClassList": [
@@ -11654,16 +14834,38 @@ export default [
                         "source": "PHB",
                         "subSubclass": "Grassland"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Wizard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -11887,6 +15089,9 @@ export default [
         "savingThrow": [
             "wisdom"
         ],
+        "affectsCreatureType": [
+            "beast"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -11979,7 +15184,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -12003,6 +15214,7 @@ export default [
         "source": "PHB",
         "page": 235,
         "srd": true,
+        "basicRules": true,
         "level": 8,
         "school": "E",
         "time": [
@@ -12085,6 +15297,7 @@ export default [
         "source": "PHB",
         "page": 235,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "E",
         "time": [
@@ -12134,6 +15347,9 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "affectsCreatureType": [
+            "humanoid"
         ],
         "miscTags": [
             "SGT"
@@ -12263,18 +15479,8 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -12358,6 +15564,7 @@ export default [
         "source": "PHB",
         "page": 236,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "I",
         "time": [
@@ -12422,7 +15629,7 @@ export default [
                     "subclass": {
                         "name": "Land",
                         "source": "PHB",
-                        "subSubclass": "Forest"
+                        "subSubclass": "Grassland"
                     }
                 },
                 {
@@ -12433,6 +15640,16 @@ export default [
                     "subclass": {
                         "name": "Twilight (UA)",
                         "source": "UAClericDruidWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -12507,6 +15724,18 @@ export default [
                 }
             ]
         },
+        "races": [
+            {
+                "name": "Halfling (Lotusden)",
+                "source": "EGW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            },
+            {
+                "name": "Fairy",
+                "source": "WBtW"
+            }
+        ],
         "backgrounds": [
             {
                 "name": "Selesnya Initiate",
@@ -12523,6 +15752,7 @@ export default [
         "source": "PHB",
         "page": 236,
         "srd": true,
+        "basicRules": true,
         "level": 8,
         "school": "V",
         "time": [
@@ -12555,7 +15785,7 @@ export default [
         ],
         "entries": [
             "You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area.",
-            "The ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature's concentration is broken.",
+            "The ground in the area becomes {@quickref difficult terrain||3}. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature's concentration is broken.",
             "When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked {@condition prone}.",
             "This spell can have additional effects depending on the terrain in the area, as determined by the DM.",
             {
@@ -12570,7 +15800,7 @@ export default [
                 "type": "entries",
                 "name": "Structures",
                 "entries": [
-                    "The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes {@damage 5d6} bludgeoning damage, is knocked {@condition prone}, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall {@condition prone} or become buried."
+                    "The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes {@damage 5d6} bludgeoning damage, is knocked {@condition prone}, and is buried in the rubble, requiring a DC 20 Strength ({@skill Athletics}) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall {@condition prone} or become buried."
                 ]
             }
         ],
@@ -12584,7 +15814,7 @@ export default [
             "constitution",
             "dexterity"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "miscTags": [
@@ -12615,6 +15845,7 @@ export default [
         "source": "PHB",
         "page": 237,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "V",
         "time": [
@@ -12728,7 +15959,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -12774,16 +16005,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Sorcerer",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Stone (UA)",
-                        "source": "UASorcerer"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Cleric",
                         "source": "PHB"
                     },
@@ -12796,7 +16017,18 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -12903,6 +16135,9 @@ export default [
                 ]
             }
         ],
+        "miscTags": [
+            "THP"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -12934,7 +16169,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -12977,16 +16212,48 @@ export default [
                         "name": "Order (UA)",
                         "source": "UAOrderDomain"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Wizard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -13079,7 +16346,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -13096,38 +16363,48 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
+                        "name": "Warlock",
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
         "races": [
             {
                 "name": "Dwarf (Duergar)",
-                "source": "SCAG",
+                "source": "MTF",
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             },
             {
-                "name": "Dwarf (Duergar)",
-                "source": "MTF",
-                "baseName": "Dwarf",
-                "baseSource": "PHB"
+                "name": "Fairy",
+                "source": "WBtW"
             }
         ],
         "backgrounds": [
@@ -13190,7 +16467,7 @@ export default [
         "savingThrow": [
             "strength"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "classes": {
@@ -13214,10 +16491,6 @@ export default [
             ]
         },
         "backgrounds": [
-            {
-                "name": "Azorius Functionary",
-                "source": "GGR"
-            },
             {
                 "name": "Azorius Functionary",
                 "source": "GGR"
@@ -13259,7 +16532,7 @@ export default [
             }
         ],
         "entries": [
-            "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain.",
+            "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into {@quickref difficult terrain||3}.",
             "A creature in the area when you cast the spell must succeed on a Strength saving throw or be {@condition restrained} by the entangling plants until the spell ends. A creature {@condition restrained} by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.",
             "When the spell ends, the conjured plants wilt away."
         ],
@@ -13269,7 +16542,7 @@ export default [
         "savingThrow": [
             "strength"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "areaTags": [
@@ -13318,10 +16591,24 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
+        "races": [
+            {
+                "name": "Halfling (Lotusden)",
+                "source": "EGW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
+        ],
         "backgrounds": [
             {
                 "name": "Golgari Agent",
@@ -13363,7 +16650,7 @@ export default [
             }
         ],
         "entries": [
-            "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can't be {@condition charmed} succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are {@condition incapacitated} or can no longer speak."
+            "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can't be {@condition charmed} succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom ({@skill Perception}) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are {@condition incapacitated} or can no longer speak."
         ],
         "savingThrow": [
             "wisdom"
@@ -13392,18 +16679,18 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
+                        "name": "Love (UA)",
+                        "source": "UA2020SubclassesPt2"
                     }
                 },
                 {
                     "class": {
-                        "name": "Cleric",
+                        "name": "Paladin",
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Love (UA)",
-                        "source": "UA2020SubclassesPt2"
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
                     }
                 }
             ]
@@ -13432,6 +16719,7 @@ export default [
         "source": "PHB",
         "page": 238,
         "srd": true,
+        "basicRules": true,
         "level": 7,
         "school": "T",
         "time": [
@@ -13504,6 +16792,18 @@ export default [
                     "name": "Wizard",
                     "source": "PHB"
                 }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight (UA)",
+                        "source": "UADruid"
+                    }
+                }
             ]
         }
     },
@@ -13543,7 +16843,7 @@ export default [
             }
         ],
         "entries": [
-            "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain.",
+            "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into {@quickref difficult terrain||3}.",
             "When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take {@damage 3d6} bludgeoning damage and be {@condition restrained} by the tentacles until the spell ends. A creature that starts its turn in the area and is already {@condition restrained} by the tentacles takes {@damage 3d6} bludgeoning damage.",
             "A creature {@condition restrained} by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself."
         ],
@@ -13556,7 +16856,7 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength",
             "dexterity"
         ],
@@ -13586,26 +16886,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Sorcerer",
                         "source": "PHB"
                     },
@@ -13622,6 +16902,26 @@ export default [
                     "subclass": {
                         "name": "Lurker in the Deep (UA)",
                         "source": "UASorcererAndWarlock"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -13687,7 +16987,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -13699,6 +16999,16 @@ export default [
                     "subclass": {
                         "name": "Treachery (UA)",
                         "source": "UAPaladin"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
                     }
                 }
             ]
@@ -13863,7 +17173,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -13903,6 +17213,7 @@ export default [
         "source": "PHB",
         "page": 239,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "V",
         "time": [
@@ -13938,6 +17249,9 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "areaTags": [
             "C"
         ],
@@ -13957,7 +17271,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -13979,16 +17293,6 @@ export default [
                     "subclass": {
                         "name": "Archfey",
                         "source": "PHB"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
                     }
                 },
                 {
@@ -14020,6 +17324,46 @@ export default [
                         "name": "Swarmkeeper (UA)",
                         "source": "UAFighterRangerRogue"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -14047,6 +17391,10 @@ export default [
                 "source": "ERLW",
                 "baseName": "Human",
                 "baseSource": "PHB"
+            },
+            {
+                "name": "Fairy",
+                "source": "WBtW"
             }
         ]
     },
@@ -14095,6 +17443,9 @@ export default [
                 ]
             }
         ],
+        "miscTags": [
+            "THP"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -14115,7 +17466,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -14168,9 +17519,35 @@ export default [
                         "name": "Grave",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
+                    }
                 }
             ]
-        }
+        },
+        "eldritchInvocations": [
+            {
+                "name": "Fiendish Vigor",
+                "source": "PHB"
+            }
+        ]
     },
     {
         "name": "Fear",
@@ -14289,26 +17666,6 @@ export default [
                         "name": "Gloom Stalker",
                         "source": "XGE"
                     }
-                },
-                {
-                    "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
                 }
             ]
         },
@@ -14379,7 +17736,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -14572,6 +17929,16 @@ export default [
                         "name": "Raven Queen (UA)",
                         "source": "UAWarlockAndWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
                 }
             ]
         }
@@ -14617,16 +17984,15 @@ export default [
             "You gain the service of a familiar, a spirit that takes an animal form you choose: {@creature bat}, {@creature cat}, {@creature crab}, {@creature frog} (toad), {@creature hawk}, {@creature lizard}, {@creature octopus}, {@creature owl}, {@creature poisonous snake}, fish ({@creature quipper}), {@creature rat}, {@creature raven}, {@creature sea horse}, {@creature spider}, or {@creature weasel}. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.",
             "{@note Additional {@filter animal form choices|bestiary|Miscellaneous=Familiar} may be available at the DM's discretion.}",
             "Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.",
-            "When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.",
-            "While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.",
-            "As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.",
+            "When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again. As an action, you can temporarily dismiss the familiar to a pocket dimension. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you. Whenever the familiar drops to 0 hit points or disappears into the pocket dimension, it leaves behind in its space anything it was wearing or carrying.",
+            "While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are {@condition deafened||deaf} and {@condition blinded||blind} with regard to your own senses.",
             "You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.",
             "Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll."
         ],
         "miscTags": [
             "PRM",
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -14674,6 +18040,7 @@ export default [
             "You can't have more than one steed bonded by this spell at a time. As an action, you can release the steed from its bond at any time, causing it to disappear."
         ],
         "miscTags": [
+            "PRM",
             "SMN"
         ],
         "classes": {
@@ -14690,6 +18057,7 @@ export default [
         "source": "PHB",
         "page": 240,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "D",
         "time": [
@@ -14773,7 +18141,7 @@ export default [
             }
         ],
         "entries": [
-            "You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the alarm spell, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.",
+            "You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the {@spell alarm} spell, a {@spell glyph of warding}, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.",
             "This spell merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense."
         ],
         "classes": {
@@ -14818,6 +18186,7 @@ export default [
         "source": "PHB",
         "page": 241,
         "srd": true,
+        "basicRules": true,
         "level": 7,
         "school": "N",
         "time": [
@@ -14854,7 +18223,8 @@ export default [
         ],
         "miscTags": [
             "PRM",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "areaTags": [
             "ST"
@@ -14881,6 +18251,7 @@ export default [
         "source": "PHB",
         "page": 242,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "V",
         "time": [
@@ -14946,7 +18317,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -15032,6 +18403,9 @@ export default [
             "cold",
             "fire"
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -15083,32 +18457,96 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 },
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -15118,6 +18556,7 @@ export default [
         "source": "PHB",
         "page": 242,
         "srd": true,
+        "basicRules": true,
         "level": 7,
         "school": "V",
         "time": [
@@ -15177,6 +18616,7 @@ export default [
         "source": "PHB",
         "page": 241,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "V",
         "time": [
@@ -15268,16 +18708,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Artificer (Revisited)",
                         "source": "UAArtificerRevisited"
                     },
@@ -15299,15 +18729,64 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
                     }
                 }
             ]
-        }
+        },
+        "eldritchInvocations": [
+            {
+                "name": "Kiss of Mephistopheles",
+                "source": "UAWarlockAndWizard"
+            }
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Flame Blade",
@@ -15363,6 +18842,9 @@ export default [
         "spellAttack": [
             "M"
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -15376,7 +18858,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -15394,6 +18882,7 @@ export default [
         "source": "PHB",
         "page": 242,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "V",
         "time": [
@@ -15538,12 +19027,65 @@ export default [
                         "name": "Wildfire (UA)",
                         "source": "UAClericDruidWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Paladin",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -15559,6 +19101,7 @@ export default [
         "source": "PHB",
         "page": 242,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "C",
         "time": [
@@ -15608,6 +19151,9 @@ export default [
         ],
         "savingThrow": [
             "dexterity"
+        ],
+        "miscTags": [
+            "LGT"
         ],
         "areaTags": [
             "S"
@@ -15678,18 +19224,34 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -15749,6 +19311,7 @@ export default [
             "constitution"
         ],
         "miscTags": [
+            "PRM",
             "SGT"
         ],
         "areaTags": [
@@ -15768,11 +19331,23 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -15782,6 +19357,7 @@ export default [
         "source": "PHB",
         "page": 243,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "T",
         "time": [
@@ -15850,7 +19426,19 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
+                    }
                 }
             ]
         }
@@ -15890,7 +19478,7 @@ export default [
             }
         ],
         "entries": [
-            "You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it."
+            "You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is {@book heavily obscured|PHB|8|Vision and Light}. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it."
         ],
         "entriesHigherLevel": [
             {
@@ -15944,6 +19532,58 @@ export default [
                         "source": "UAGiantSoulSorcerer",
                         "subSubclass": "Cloud"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
                 }
             ]
         },
@@ -15984,7 +19624,8 @@ export default [
             "s": true,
             "m": {
                 "text": "a sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp",
-                "cost": 100000
+                "cost": 100000,
+                "consume": "optional"
             }
         },
         "duration": [
@@ -16000,7 +19641,7 @@ export default [
             "ritual": true
         },
         "entries": [
-            "You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell.",
+            "You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the {@spell gate} spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the {@spell plane shift} spell.",
             "In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell's area for the first time on a turn or starts its turn there, the creature takes {@damage 5d10} radiant or necrotic damage (your choice when you cast this spell).",
             "When you cast this spell, you can designate a password. A creature that speaks the password as it enters the area takes no damage from the spell.",
             "The spell's area can't overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting."
@@ -16008,6 +19649,13 @@ export default [
         "damageInflict": [
             "necrotic",
             "radiant"
+        ],
+        "affectsCreatureType": [
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
         ],
         "miscTags": [
             "PRM"
@@ -16094,6 +19742,7 @@ export default [
         "source": "PHB",
         "page": 244,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "D",
         "time": [
@@ -16123,7 +19772,7 @@ export default [
             }
         ],
         "entries": [
-            "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.",
+            "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can't be {@quickref Surprise|PHB|3|0|surprised} and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.",
             "This spell immediately ends if you cast it again before its duration ends."
         ],
         "areaTags": [
@@ -16151,7 +19800,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -16161,6 +19811,7 @@ export default [
         "source": "PHB",
         "page": 244,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "A",
         "time": [
@@ -16190,8 +19841,12 @@ export default [
             }
         ],
         "entries": [
-            "You touch a willing creature. For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be {@condition paralyzed} or {@condition restrained}.",
+            "You touch a willing creature. For the duration, the target's movement is unaffected by {@quickref difficult terrain||3}, and spells and other magical effects can neither reduce the target's speed nor cause the target to be {@condition paralyzed} or {@condition restrained}.",
             "The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it {@condition grappled}. Finally, being underwater imposes no penalties on the target's movement or attacks."
+        ],
+        "conditionImmune": [
+            "paralyzed",
+            "restrained"
         ],
         "areaTags": [
             "ST"
@@ -16224,7 +19879,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -16312,6 +19967,46 @@ export default [
                         "name": "Zeal (PSA)",
                         "source": "PSA"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -16331,6 +20026,12 @@ export default [
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Trickster's Escape",
+                "source": "XGE"
             }
         ]
     },
@@ -16547,7 +20248,7 @@ export default [
                     },
                     "subclass": {
                         "name": "Spores",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -16573,11 +20274,61 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -16598,6 +20349,7 @@ export default [
         "source": "PHB",
         "page": 244,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "C",
         "time": [
@@ -16658,7 +20410,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -16805,7 +20563,7 @@ export default [
         },
         "entries": [
             "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
-            "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
+            "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as {@spell raise dead}."
         ],
         "classes": {
             "fromClassList": [
@@ -16846,7 +20604,7 @@ export default [
                     },
                     "subclass": {
                         "name": "Spores",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -16863,7 +20621,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Paladin",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Paladin",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -16940,16 +20704,6 @@ export default [
                     "subclass": {
                         "name": "Primeval Guardian (UA)",
                         "source": "UARangerAndRogue"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
                     }
                 },
                 {
@@ -17033,6 +20787,7 @@ export default [
         "source": "PHB",
         "page": 245,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "A",
         "time": [
@@ -17051,7 +20806,10 @@ export default [
         "components": {
             "v": true,
             "s": true,
-            "m": "a glass or crystal bead that shatters when the spell ends"
+            "m": {
+                "text": "a glass or crystal bead that shatters when the spell ends",
+                "consume": true
+            }
         },
         "duration": [
             {
@@ -17131,7 +20889,7 @@ export default [
         ],
         "entries": [
             "When you cast this spell, you inscribe a glyph that later unleashes a magical effect. You inscribe it either on a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.",
-            "The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.",
+            "The glyph is nearly invisible and requires a successful Intelligence ({@skill Investigation}) check against your spell save DC to be found.",
             "You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.",
             "You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.",
             "When you inscribe the glyph, choose explosive runes or a spell glyph.",
@@ -17169,7 +20927,7 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "areaTags": [
@@ -17199,7 +20957,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -17348,6 +21106,7 @@ export default [
             "dexterity"
         ],
         "miscTags": [
+            "FMV",
             "SGT"
         ],
         "areaTags": [
@@ -17419,7 +21178,7 @@ export default [
             }
         ],
         "entries": [
-            "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.",
+            "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into {@quickref difficult terrain||3} for the duration.",
             "When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall {@condition prone}. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall {@condition prone}."
         ],
         "conditionInflict": [
@@ -17443,13 +21202,19 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -17459,6 +21224,7 @@ export default [
         "source": "PHB",
         "page": 246,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "I",
         "time": [
@@ -17596,11 +21362,94 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
                     }
                 }
             ]
@@ -17619,6 +21468,7 @@ export default [
         "source": "PHB",
         "page": 246,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "A",
         "time": [
@@ -17682,7 +21532,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -17725,12 +21575,38 @@ export default [
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -17748,6 +21624,7 @@ export default [
         "source": "PHB",
         "page": 246,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "C",
         "time": [
@@ -17895,7 +21772,8 @@ export default [
                 "baseName": "Human",
                 "baseSource": "PHB"
             }
-        ]
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Guards and Wards",
@@ -17941,14 +21819,14 @@ export default [
                 "type": "entries",
                 "name": "Corridors",
                 "entries": [
-                    "Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you will believe it is going in the opposite direction from the one it chooses."
+                    "Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a {@chance 50|||Disoriented!|No effect} chance that a creature other than you will believe it is going in the opposite direction from the one it chooses."
                 ]
             },
             {
                 "type": "entries",
                 "name": "Doors",
                 "entries": [
-                    "All doors in the warded area are magically locked, as if sealed by an {@spell arcane lock} spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the minor illusion spell) to make them appear as plain sections of wall."
+                    "All doors in the warded area are magically locked, as if sealed by an {@spell arcane lock} spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the {@spell minor illusion} spell) to make them appear as plain sections of wall."
                 ]
             },
             {
@@ -18002,6 +21880,7 @@ export default [
         "source": "PHB",
         "page": 248,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "D",
         "time": [
@@ -18052,7 +21931,39 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Bard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Spirits (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Bard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Spirits",
+                        "source": "VRGR"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Stars",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -18068,6 +21979,7 @@ export default [
         "source": "PHB",
         "page": 248,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "V",
         "time": [
@@ -18144,6 +22056,36 @@ export default [
                         "name": "Celestial",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Stars",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -18192,11 +22134,14 @@ export default [
         "entries": [
             "A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the spell's duration. Each creature that starts its turn in the line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the line.",
             "Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.",
-            "The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.",
+            "The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a {@chance 50|||Extinguished!|No effect} chance to extinguish them.",
             "As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you."
         ],
         "savingThrow": [
             "strength"
+        ],
+        "miscTags": [
+            "FMV"
         ],
         "areaTags": [
             "L"
@@ -18229,16 +22174,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Sorcerer",
                         "source": "PHB"
                     },
@@ -18257,12 +22192,81 @@ export default [
                         "name": "Lurker in the Deep (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -18318,7 +22322,7 @@ export default [
                 "type": "entries",
                 "name": "At Higher Levels",
                 "entries": [
-                    "If you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 1d10|1-9|1d10} for each slot level above 1st (to a maximum of {@scaledamage 1d10|1-9|6d10})."
+                    "If you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 1d10|1-6|1d10} for each slot level above 1st (to a maximum of {@damage 6d10})."
                 ]
             }
         ],
@@ -18495,6 +22499,16 @@ export default [
                         "name": "Fiend",
                         "source": "PHB"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
                 }
             ]
         },
@@ -18543,9 +22557,9 @@ export default [
         ],
         "entries": [
             "You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance.",
-            "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain."
+            "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence ({@skill Investigation}) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain."
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "areaTags": [
@@ -18581,6 +22595,16 @@ export default [
                         "source": "PHB",
                         "subSubclass": "Desert"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
                 }
             ]
         },
@@ -18598,6 +22622,7 @@ export default [
         "source": "PHB",
         "page": 249,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "N",
         "time": [
@@ -18686,6 +22711,7 @@ export default [
             "When the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it."
         ],
         "miscTags": [
+            "MAC",
             "SGT"
         ],
         "areaTags": [
@@ -18711,7 +22737,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -18785,6 +22811,36 @@ export default [
                         "name": "Horizon Walker",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
+                    }
                 }
             ]
         },
@@ -18800,6 +22856,7 @@ export default [
         "source": "PHB",
         "page": 250,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "V",
         "time": [
@@ -18825,7 +22882,7 @@ export default [
             }
         ],
         "entries": [
-            "Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead."
+            "Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends {@condition blinded||blindness}, {@condition deafened||deafness}, and any diseases affecting the target. This spell has no effect on constructs or undead."
         ],
         "entriesHigherLevel": [
             {
@@ -18835,6 +22892,20 @@ export default [
                     "When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th."
                 ]
             }
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
         ],
         "miscTags": [
             "HL",
@@ -18861,6 +22932,7 @@ export default [
         "source": "PHB",
         "page": 250,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "V",
         "time": [
@@ -18896,6 +22968,20 @@ export default [
                 ]
             }
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "miscTags": [
             "HL",
             "SGT"
@@ -18922,11 +23008,11 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 }
             ]
@@ -19016,7 +23102,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -19117,6 +23203,9 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
+        "miscTags": [
+            "SGT"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -19178,6 +23267,7 @@ export default [
         "source": "PHB",
         "page": 250,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "C",
         "time": [
@@ -19214,6 +23304,9 @@ export default [
         "damageImmune": [
             "poison"
         ],
+        "conditionImmune": [
+            "frightened"
+        ],
         "areaTags": [
             "MT"
         ],
@@ -19231,7 +23324,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -19281,6 +23380,12 @@ export default [
                 ]
             }
         ],
+        "conditionImmune": [
+            "frightened"
+        ],
+        "miscTags": [
+            "THP"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -19323,18 +23428,8 @@ export default [
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -19350,11 +23445,11 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -19375,6 +23470,26 @@ export default [
                     "subclass": {
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -19449,26 +23564,26 @@ export default [
                     "name": "Warlock",
                     "source": "PHB"
                 }
-            ],
-            "fromSubclass": [
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
-                }
             ]
         },
         "races": [
             {
-                "name": "Elf (Zendikar) (Mul Daya Nation)",
+                "name": "Elf (Zendikar; Mul Daya Nation)",
                 "source": "PSZ",
                 "baseName": "Elf (Zendikar)",
                 "baseSource": "PSZ"
+            },
+            {
+                "name": "Hexblood",
+                "source": "VRGR",
+                "baseName": "Hexblood",
+                "baseSource": "PHB"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Relentless Hex",
+                "source": "XGE"
             }
         ]
     },
@@ -19524,6 +23639,21 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "construct",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
         ],
         "miscTags": [
             "SGT"
@@ -19593,26 +23723,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Cleric",
                         "source": "PHB"
                     },
@@ -19620,15 +23730,62 @@ export default [
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Monster Slayer",
+                        "source": "XGE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Monster Slayer",
+                        "source": "XGE"
+                    }
                 }
             ]
-        }
+        },
+        "eldritchInvocations": [
+            {
+                "name": "Chains of Carceri",
+                "source": "PHB"
+            }
+        ]
     },
     {
         "name": "Hold Person",
         "source": "PHB",
         "page": 251,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "E",
         "time": [
@@ -19676,6 +23833,9 @@ export default [
         ],
         "savingThrow": [
             "wisdom"
+        ],
+        "affectsCreatureType": [
+            "humanoid"
         ],
         "miscTags": [
             "SGT"
@@ -19810,7 +23970,27 @@ export default [
                     },
                     "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -19827,6 +24007,7 @@ export default [
         "source": "PHB",
         "page": 251,
         "srd": true,
+        "basicRules": true,
         "level": 8,
         "school": "A",
         "time": [
@@ -19868,8 +24049,11 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "areaTags": [
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -19916,7 +24100,7 @@ export default [
         ],
         "entries": [
             "You open a gateway to the dark between the stars, a region infested with unknown horrors. A 20-foot-radius sphere of blackness and bitter cold appears, centered on a point within range and lasting for the duration. This void is filled with a cacophony of soft whispers and slurping noises that can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within the area are {@condition blinded}.",
-            "The void creates a warp in the fabric of space, and the area is difficult terrain. Any creature that starts its turn in the area takes {@damage 2d6} cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take {@damage 2d6} acid damage as milky, otherworldly tentacles rub against it."
+            "The void creates a warp in the fabric of space, and the area is {@quickref difficult terrain||3}. Any creature that starts its turn in the area takes {@damage 2d6} cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take {@damage 2d6} acid damage as milky, otherworldly tentacles rub against it."
         ],
         "damageInflict": [
             "acid",
@@ -19947,6 +24131,16 @@ export default [
                     "subclass": {
                         "name": "Aberrant Mind (UA)",
                         "source": "UASorcererAndWarlock"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -19986,7 +24180,7 @@ export default [
             }
         ],
         "entries": [
-            "You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra {@damage 1d6} damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature."
+            "You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra {@damage 1d6} damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom ({@skill Perception}) or Wisdom ({@skill Survival}) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature."
         ],
         "entriesHigherLevel": [
             {
@@ -19997,7 +24191,7 @@ export default [
                 ]
             }
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "wisdom"
         ],
         "miscTags": [
@@ -20131,16 +24325,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Artificer (Revisited)",
                         "source": "UAArtificerRevisited"
                     },
@@ -20162,11 +24346,21 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -20177,6 +24371,7 @@ export default [
         "source": "PHB",
         "page": 252,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "V",
         "time": [
@@ -20204,7 +24399,7 @@ export default [
         ],
         "entries": [
             "A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Dexterity saving throw. A creature takes {@damage 2d8} bludgeoning damage and {@damage 4d6} cold damage on a failed save, or half as much damage on a successful one.",
-            "Hailstones turn the storm's area of effect into difficult terrain until the end of your next turn."
+            "Hailstones turn the storm's area of effect into {@quickref difficult terrain||3} until the end of your next turn."
         ],
         "entriesHigherLevel": [
             {
@@ -20284,16 +24479,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Artificer (Revisited)",
                         "source": "UAArtificerRevisited"
                     },
@@ -20305,11 +24490,31 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
                     }
                 }
             ]
@@ -20320,6 +24525,7 @@ export default [
         "source": "PHB",
         "page": 252,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "D",
         "time": [
@@ -20373,7 +24579,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -20461,7 +24667,7 @@ export default [
             "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.",
             "To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.",
             "Should the spell be dispelled, the original script and the illusion both disappear.",
-            "A creature with truesight can read the hidden message."
+            "A creature with {@sense truesight} can read the hidden message."
         ],
         "classes": {
             "fromClassList": [
@@ -20499,6 +24705,7 @@ export default [
         "source": "PHB",
         "page": 252,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "A",
         "time": [
@@ -20670,7 +24877,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -20680,6 +24893,7 @@ export default [
         "source": "PHB",
         "page": 253,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "N",
         "time": [
@@ -20751,16 +24965,6 @@ export default [
                         "name": "Divine Soul",
                         "source": "XGE"
                     }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
                 }
             ]
         }
@@ -20801,7 +25005,7 @@ export default [
             }
         ],
         "entries": [
-            "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere's area is difficult terrain.",
+            "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere's area is {@quickref difficult terrain||3}.",
             "When the area appears, each creature in it must make a Constitution saving throw. A creature takes {@damage 4d10} piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there."
         ],
         "entriesHigherLevel": [
@@ -20904,6 +25108,17 @@ export default [
                 },
                 {
                     "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB",
+                        "subSubclass": "Underdark"
+                    }
+                },
+                {
+                    "class": {
                         "name": "Paladin",
                         "source": "PHB"
                     },
@@ -20961,6 +25176,36 @@ export default [
                         "name": "Swarmkeeper (UA)",
                         "source": "UAFighterRangerRogue"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -20969,13 +25214,15 @@ export default [
                 "name": "Golgari Agent",
                 "source": "GGR"
             }
-        ]
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Invisibility",
         "source": "PHB",
         "page": 254,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "I",
         "time": [
@@ -21051,7 +25298,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -21096,16 +25343,20 @@ export default [
                         "name": "Twilight (UA)",
                         "source": "UAClericDruidWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
                 }
             ]
         },
         "races": [
-            {
-                "name": "Dwarf (Duergar)",
-                "source": "SCAG",
-                "baseName": "Dwarf",
-                "baseSource": "PHB"
-            },
             {
                 "name": "Dwarf (Duergar)",
                 "source": "MTF",
@@ -21141,6 +25392,12 @@ export default [
                 "source": "ERLW",
                 "baseName": "Elf",
                 "baseSource": "PHB"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Shroud of Shadow",
+                "source": "XGE"
             }
         ]
     },
@@ -21178,7 +25435,7 @@ export default [
             }
         ],
         "entries": [
-            "You touch a creature. The creature's jump distance is tripled until the spell ends."
+            "You touch a creature. The creature's {@book jump distance|phb|8|Jumping} is tripled until the spell ends."
         ],
         "areaTags": [
             "ST"
@@ -21211,7 +25468,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -21223,16 +25480,6 @@ export default [
                     "subclass": {
                         "name": "Seeker (UA)",
                         "source": "UATheFaithful"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
                     }
                 }
             ]
@@ -21262,6 +25509,12 @@ export default [
                 "name": "Simic Scientist",
                 "source": "GGR"
             }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Otherworldly Leap",
+                "source": "PHB"
+            }
         ]
     },
     {
@@ -21269,6 +25522,7 @@ export default [
         "source": "PHB",
         "page": 254,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "T",
         "time": [
@@ -21293,9 +25547,9 @@ export default [
             }
         ],
         "entries": [
-            "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access.",
+            "Choose an object that you can see within range. The object can be a door, a box, a {@item chest|phb}, a set of {@item manacles|phb}, a padlock, or another object that contains a mundane or magical means that prevents access.",
             "A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked.",
-            "If you choose a target that is held shut with arcane lock, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally.",
+            "If you choose a target that is held shut with {@spell arcane lock}, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally.",
             "When you cast the spell, a loud knock, audible from as far away as 300 feet, emanates from the target object."
         ],
         "miscTags": [
@@ -21319,7 +25573,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -21434,6 +25689,16 @@ export default [
                         "name": "Archivist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
                 }
             ]
         },
@@ -21481,7 +25746,7 @@ export default [
         "entries": [
             "You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).",
             "While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica.",
-            "After 60 days, there is a cumulative 5 percent chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost."
+            "After 60 days, there is a cumulative {@chance 5|||Effect ends!|Effect continues} chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost."
         ],
         "miscTags": [
             "PRM"
@@ -21502,7 +25767,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -21588,6 +25853,28 @@ export default [
                     "name": "Wizard",
                     "source": "PHB"
                 }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight (UA)",
+                        "source": "UAClericDruidWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
+                    }
+                }
             ]
         },
         "races": [
@@ -21604,6 +25891,7 @@ export default [
         "source": "PHB",
         "page": 255,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "A",
         "time": [
@@ -21665,7 +25953,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -21708,6 +25996,16 @@ export default [
                         "name": "Celestial",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -21729,6 +26027,7 @@ export default [
         "source": "PHB",
         "page": 255,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "T",
         "time": [
@@ -21789,7 +26088,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -21801,6 +26100,16 @@ export default [
                     "subclass": {
                         "name": "Seeker (UA)",
                         "source": "UATheFaithful"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
                     }
                 }
             ]
@@ -21824,6 +26133,12 @@ export default [
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Ascendant Step",
+                "source": "PHB"
+            }
         ]
     },
     {
@@ -21831,6 +26146,7 @@ export default [
         "source": "PHB",
         "page": 255,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "V",
         "time": [
@@ -21865,6 +26181,9 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -21889,7 +26208,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -21911,6 +26230,16 @@ export default [
                     "subclass": {
                         "name": "Celestial",
                         "source": "XGE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Light",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -22015,6 +26344,7 @@ export default [
         "source": "PHB",
         "page": 255,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "V",
         "time": [
@@ -22097,16 +26427,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Warlock",
                         "source": "PHB"
                     },
@@ -22118,11 +26438,41 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -22162,6 +26512,10 @@ export default [
         },
         "entries": [
             "Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
+        ],
+        "affectsCreatureType": [
+            "beast",
+            "plant"
         ],
         "classes": {
             "fromClassList": [
@@ -22211,6 +26565,7 @@ export default [
         "source": "PHB",
         "page": 256,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "D",
         "time": [
@@ -22242,7 +26597,7 @@ export default [
         ],
         "entries": [
             "Describe or name a creature that is familiar to you. You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.",
-            "The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn't locate the creature.",
+            "The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a {@creature unicorn}), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a {@spell polymorph} spell, this spell doesn't locate the creature.",
             "This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature."
         ],
         "classes": {
@@ -22331,7 +26686,7 @@ export default [
                     },
                     "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -22342,6 +26697,16 @@ export default [
                     "subclass": {
                         "name": "Archivist",
                         "source": "UAArtificerRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -22541,7 +26906,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         },
@@ -22565,6 +26930,7 @@ export default [
         "source": "PHB",
         "page": 256,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "A",
         "time": [
@@ -22596,6 +26962,9 @@ export default [
         "entries": [
             "You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action."
         ],
+        "miscTags": [
+            "MAC"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -22618,6 +26987,12 @@ export default [
                 "baseName": "Dwarf",
                 "baseSource": "PHB"
             }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Armor of Shadows",
+                "source": "PHB"
+            }
         ]
     },
     {
@@ -22625,6 +27000,7 @@ export default [
         "source": "PHB",
         "page": 256,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "C",
         "time": [
@@ -22682,7 +27058,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -22704,6 +27080,46 @@ export default [
                     "subclass": {
                         "name": "Psionics (UA)",
                         "source": "UAFighterRogueWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Rogue",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Arcane Trickster",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -22828,6 +27244,13 @@ export default [
         "savingThrow": [
             "charisma"
         ],
+        "affectsCreatureType": [
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -22951,8 +27374,8 @@ export default [
             }
         ],
         "entries": [
-            "Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoids body.",
-            "You can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a protection from evil and good or magic circle spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.",
+            "Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoid's body.",
+            "You can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a {@spell protection from evil and good} or {@spell magic circle} spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.",
             "Once you possess a creature's body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can't use any of its class features.",
             "Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move or take actions at all.",
             "While possessing a body, you can use your action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you must make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.",
@@ -22961,6 +27384,9 @@ export default [
         ],
         "savingThrow": [
             "charisma"
+        ],
+        "affectsCreatureType": [
+            "humanoid"
         ],
         "miscTags": [
             "SGT"
@@ -22975,7 +27401,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -22985,6 +27412,7 @@ export default [
         "source": "PHB",
         "page": 257,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "V",
         "time": [
@@ -23056,11 +27484,21 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -23078,7 +27516,8 @@ export default [
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
             }
-        ]
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Magic Mouth",
@@ -23144,7 +27583,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         },
@@ -23162,6 +27601,7 @@ export default [
         "source": "PHB",
         "page": 257,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "T",
         "time": [
@@ -23222,7 +27662,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -23295,12 +27735,33 @@ export default [
                         "name": "Forge",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -23318,6 +27779,7 @@ export default [
         "source": "PHB",
         "page": 258,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "I",
         "time": [
@@ -23349,9 +27811,9 @@ export default [
             }
         ],
         "entries": [
-            "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte's stench).",
+            "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a {@creature troglodyte||troglodyte's} stench).",
             "As long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.",
-            "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature."
+            "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature."
         ],
         "entriesHigherLevel": [
             {
@@ -23362,7 +27824,7 @@ export default [
                 ]
             }
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "miscTags": [
@@ -23402,6 +27864,7 @@ export default [
         "source": "PHB",
         "page": 258,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "V",
         "time": [
@@ -23437,6 +27900,20 @@ export default [
                     "When you cast this spell using a spell slot of 6th level or higher, the healing increases by {@scaledice 3d8|5-9|1d8} for each slot level above 5th."
                 ]
             }
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
         ],
         "miscTags": [
             "HL"
@@ -23494,11 +27971,21 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -23509,6 +27996,7 @@ export default [
         "source": "PHB",
         "page": 258,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "V",
         "time": [
@@ -23536,6 +28024,20 @@ export default [
         "entries": [
             "A flood of healing energy flows from you into injured creatures around you. You restore up to 700 hit points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell are also cured of all diseases and any effect making them {@condition blinded} or {@condition deafened}. This spell has no effect on undead or constructs."
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "miscTags": [
             "HL",
             "SGT"
@@ -23557,6 +28059,7 @@ export default [
         "source": "PHB",
         "page": 258,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "V",
         "time": [
@@ -23592,6 +28095,20 @@ export default [
                 ]
             }
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "miscTags": [
             "HL",
             "SGT"
@@ -23624,24 +28141,30 @@ export default [
                     },
                     "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 },
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -23659,6 +28182,7 @@ export default [
         "source": "PHB",
         "page": 258,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "E",
         "time": [
@@ -23702,9 +28226,6 @@ export default [
                 ]
             }
         ],
-        "conditionInflict": [
-            "charmed"
-        ],
         "savingThrow": [
             "wisdom"
         ],
@@ -23740,6 +28261,7 @@ export default [
         "source": "PHB",
         "page": 258,
         "srd": true,
+        "basicRules": true,
         "level": 8,
         "school": "C",
         "time": [
@@ -23771,7 +28293,7 @@ export default [
         ],
         "entries": [
             "You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze.",
-            "The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds).",
+            "The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a {@creature minotaur} or {@creature goristro} demon automatically succeeds).",
             "When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space."
         ],
         "miscTags": [
@@ -23790,7 +28312,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -23832,7 +28355,7 @@ export default [
         },
         "entries": [
             "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.",
-            "While merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.",
+            "While merged with the stone, you can't see what occurs outside it, and any Wisdom ({@skill Perception}) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.",
             "Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals {@damage 6d6} bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall {@condition prone} in an unoccupied space closest to where you first entered."
         ],
         "damageInflict": [
@@ -23863,12 +28386,60 @@ export default [
                         "source": "PHB",
                         "subSubclass": "Mountain"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -23962,11 +28533,21 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -24033,29 +28614,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
-                }
-            ],
-            "fromSubclass": [
-                {
-                    "class": {
-                        "name": "Artificer",
-                        "source": "ERLW"
-                    },
-                    "subclass": {
-                        "name": "Artillerist",
-                        "source": "ERLW"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Artificer",
-                        "source": "ERLW"
-                    },
-                    "subclass": {
-                        "name": "Battle Smith",
-                        "source": "ERLW"
-                    }
+                    "source": "TCE"
                 }
             ]
         },
@@ -24129,7 +28688,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -24171,6 +28730,7 @@ export default [
         "source": "PHB",
         "page": 259,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "V",
         "time": [
@@ -24263,8 +28823,8 @@ export default [
         "damageImmune": [
             "psychic"
         ],
-        "damageInflict": [
-            "psychic"
+        "conditionImmune": [
+            "charmed"
         ],
         "classes": {
             "fromClassList": [
@@ -24284,6 +28844,7 @@ export default [
         "source": "PHB",
         "page": 260,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "I",
         "time": [
@@ -24316,9 +28877,9 @@ export default [
             "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.",
             "If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.",
             "If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.",
-            "If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
+            "If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "classes": {
@@ -24350,6 +28911,26 @@ export default [
                         "name": "Giant Soul (UA)",
                         "source": "UAGiantSoulSorcerer",
                         "subSubclass": "Cloud"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Wizard",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Illusion",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Shadow",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -24422,8 +29003,8 @@ export default [
         "entries": [
             "You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. The terrain's general shape remains the same, however. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road.",
             "Similarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal, or add creatures.",
-            "The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.",
-            "Creatures with truesight can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
+            "The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into {@quickref difficult terrain||3} (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.",
+            "Creatures with {@sense truesight} can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
         ],
         "classes": {
             "fromClassList": [
@@ -24479,7 +29060,7 @@ export default [
             "Each time a creature targets you with an attack during the spell's duration, roll a {@dice d20} to determine whether the attack instead targets one of your duplicates.",
             "If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.",
             "A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.",
-            "A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight."
+            "A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with {@sense truesight}."
         ],
         "classes": {
             "fromClassList": [
@@ -24541,18 +29122,44 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -24624,7 +29231,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -24647,6 +29260,46 @@ export default [
                         "name": "Fey Wanderer (UA)",
                         "source": "UA2020SubclassesPt3"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -24664,6 +29317,7 @@ export default [
         "source": "PHB",
         "page": 260,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "C",
         "time": [
@@ -24690,7 +29344,8 @@ export default [
             "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see."
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "TP"
         ],
         "classes": {
             "fromClassList": [
@@ -24777,6 +29432,46 @@ export default [
                     "subclass": {
                         "name": "Fey Wanderer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Fey Wanderer",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -24928,7 +29623,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -24995,6 +29691,9 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "areaTags": [
             "Y"
         ],
@@ -25014,6 +29713,36 @@ export default [
                     "subclass": {
                         "name": "Ancients",
                         "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -25080,7 +29809,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         },
@@ -25118,7 +29847,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5 gp",
-                "cost": 500
+                "cost": 1500
             }
         },
         "duration": [
@@ -25133,7 +29862,7 @@ export default [
         "entries": [
             "You conjure an extradimensional dwelling in range that lasts for the duration. You choose where its one entrance is located. The entrance shimmers faintly and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the portal remains open. You can open or close the portal if you are within 30 feet of it. While closed, the portal is invisible.",
             "Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.",
-            "You can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance."
+            "You can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures or objects left inside the extradimensional space are expelled into the open spaces nearest to the entrance."
         ],
         "classes": {
             "fromClassList": [
@@ -25210,6 +29939,9 @@ export default [
         "miscTags": [
             "PRM"
         ],
+        "areaTags": [
+            "C"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -25226,7 +29958,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         },
@@ -25244,6 +29976,7 @@ export default [
         "source": "PHB",
         "page": 262,
         "srd": "Arcane Sword",
+        "basicRules": true,
         "level": 7,
         "school": "V",
         "time": [
@@ -25304,7 +30037,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Move Earth",
@@ -25446,6 +30180,26 @@ export default [
                         "name": "Knowledge (PSA)",
                         "source": "PSA"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -25504,14 +30258,14 @@ export default [
                 "type": "entries",
                 "name": "False Aura",
                 "entries": [
-                    "You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item."
+                    "You change the way the target appears to spells and magical effects, such as {@spell detect magic}, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item."
                 ]
             },
             {
                 "type": "entries",
                 "name": "Mask",
                 "entries": [
-                    "You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment."
+                    "You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's {@classFeature Divine Sense|Paladin|PHB|1} or the trigger of a {@spell symbol} spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment."
                 ]
             }
         ],
@@ -25592,7 +30346,7 @@ export default [
         "savingThrow": [
             "constitution"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "areaTags": [
@@ -25603,6 +30357,13 @@ export default [
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -25685,7 +30446,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -25728,6 +30489,16 @@ export default [
                         "name": "Clockwork Soul (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -25743,6 +30514,7 @@ export default [
         "source": "PHB",
         "page": 264,
         "srd": "Irresistible Dance",
+        "basicRules": true,
         "level": 6,
         "school": "E",
         "time": [
@@ -25869,6 +30641,26 @@ export default [
                         "source": "PHB",
                         "subSubclass": "Grassland"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Shadow",
+                        "source": "PHB"
+                    }
                 }
             ]
         },
@@ -25904,6 +30696,7 @@ export default [
         "source": "PHB",
         "page": 264,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "T",
         "time": [
@@ -25982,11 +30775,31 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -26029,7 +30842,7 @@ export default [
         "entries": [
             "You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.",
             "The phantasm includes sound, temperature, and other stimuli, also evident only to the creature.",
-            "The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.",
+            "The target can use its action to examine the phantasm with an Intelligence ({@skill Investigation}) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.",
             "While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall—it was pushed, it slipped, or a strong wind might have knocked it off.",
             "An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal {@damage 1d6} psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion."
         ],
@@ -26039,8 +30852,22 @@ export default [
         "savingThrow": [
             "intelligence"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
         ],
         "miscTags": [
             "SGT"
@@ -26079,6 +30906,56 @@ export default [
                     "subclass": {
                         "name": "Great Old One",
                         "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
                     }
                 }
             ]
@@ -26182,12 +31059,48 @@ export default [
                         "name": "Archivist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -26240,6 +31153,28 @@ export default [
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
+                    }
                 }
             ]
         },
@@ -26340,7 +31275,7 @@ export default [
             }
         ],
         "entries": [
-            "With this spell, you attempt to bind a {@filter celestial|bestiary|type=celestial|miscellaneous=!swarm}, an {@filter elemental|bestiary|type=elemental|miscellaneous=!swarm}, a {@filter fey|bestiary|type=fey|miscellaneous=!swarm}, or a {@filter fiend|bestiary|type=fiend|miscellaneous=!swarm} to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of an inverted magic circle in order to keep it trapped while this spell is cast.) At the completion of the casting, the target must make a Charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell.",
+            "With this spell, you attempt to bind a {@filter celestial|bestiary|type=celestial|miscellaneous=!swarm}, an {@filter elemental|bestiary|type=elemental|miscellaneous=!swarm}, a {@filter fey|bestiary|type=fey|miscellaneous=!swarm}, or a {@filter fiend|bestiary|type=fiend|miscellaneous=!swarm} to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of an inverted {@spell magic circle} in order to keep it trapped while this spell is cast.) At the completion of the casting, the target must make a Charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell.",
             "A bound creature must follow your instructions to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. The creature obeys the letter of your instructions, but if the creature is hostile to you, it strives to twist your words to achieve its own objectives. If the creature carries out your instructions completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane of existence, it returns to the place where you bound it and remains there until the spell ends."
         ],
         "entriesHigherLevel": [
@@ -26354,6 +31289,12 @@ export default [
         ],
         "savingThrow": [
             "charisma"
+        ],
+        "affectsCreatureType": [
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend"
         ],
         "miscTags": [
             "SMN"
@@ -26435,7 +31376,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -26617,6 +31564,26 @@ export default [
                         "name": "Wildfire (UA)",
                         "source": "UAClericDruidWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -26636,6 +31603,7 @@ export default [
         "source": "PHB",
         "page": 266,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "C",
         "time": [
@@ -26710,7 +31678,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         },
@@ -26801,6 +31769,16 @@ export default [
                         "name": "Trickery",
                         "source": "PHB"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
                 }
             ]
         },
@@ -26808,6 +31786,12 @@ export default [
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Sculptor of Flesh",
+                "source": "PHB"
             }
         ]
     },
@@ -26841,6 +31825,20 @@ export default [
         "entries": [
             "A wave of healing energy washes over the creature you touch. The target regains all its hit points. If the creature is {@condition charmed}, {@condition frightened}, {@condition paralyzed}, or {@condition stunned}, the condition ends. If the creature is {@condition prone}, it can use its reaction to stand up. This spell has no effect on undead or constructs."
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "miscTags": [
             "HL"
         ],
@@ -26857,11 +31855,18 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Cleric",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -26871,6 +31876,7 @@ export default [
         "source": "PHB",
         "page": 266,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "E",
         "time": [
@@ -26929,6 +31935,7 @@ export default [
         "source": "PHB",
         "page": 267,
         "srd": true,
+        "basicRules": true,
         "level": 8,
         "school": "E",
         "time": [
@@ -26994,6 +32001,7 @@ export default [
         "source": "PHB",
         "page": 267,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "V",
         "time": [
@@ -27029,6 +32037,20 @@ export default [
                 ]
             }
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "miscTags": [
             "HL",
             "SGT"
@@ -27046,7 +32068,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Paladin",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Paladin",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -27064,6 +32092,7 @@ export default [
         "source": "PHB",
         "page": 267,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "T",
         "time": [
@@ -27132,7 +32161,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -27288,10 +32317,17 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Prismatic Wall",
@@ -27330,7 +32366,7 @@ export default [
             "A shimmering, multicolored plane of light forms a vertical opaque wall—up to 90 feet long, 30 feet high, and 1 inch thick—centered on a point you can see within range. Alternatively, you can shape the wall into a sphere up to 30 feet in diameter centered on a point you choose within range. The wall remains in place for the duration. If you position the wall so that it passes through a space occupied by a creature, the spell fails, and your action and the spell slot are wasted.",
             "The wall sheds bright light out to a range of 100 feet and dim light for an additional 100 feet. You and creatures you designate at the time you cast the spell can pass through and remain near the wall without harm. If another creature that can see the wall moves to within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or become {@condition blinded} for 1 minute.",
             "The wall consists of seven layers, each with a different color. When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.",
-            "The wall can be destroyed, also one layer at a time, in order from red to violet, by means specific to each layer. Once a layer is destroyed, it remains so for the duration of the spell. An antimagic field has no effect on a prismatic wall.",
+            "The wall can be destroyed, also one layer at a time, in order from red to violet, by means specific to each layer. Once a layer is destroyed, it remains so for the duration of the spell. An {@spell antimagic field} has no effect on a prismatic wall.",
             {
                 "type": "entries",
                 "name": "Red",
@@ -27356,7 +32392,7 @@ export default [
                 "type": "entries",
                 "name": "Green",
                 "entries": [
-                    "The creature takes {@damage 10d6} poison damage on a failed save, or half as much damage on a successful one. A passwall spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."
+                    "The creature takes {@damage 10d6} poison damage on a failed save, or half as much damage on a successful one. A {@spell passwall} spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."
                 ]
             },
             {
@@ -27371,7 +32407,7 @@ export default [
                 "name": "Indigo",
                 "entries": [
                     "On a failed save, the creature is {@condition restrained}. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the {@condition petrified} condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind.",
-                    "While this layer is in place, spells can't be cast through the wall. The layer is destroyed by bright light shed by a daylight spell or a similar spell of equal or higher level."
+                    "While this layer is in place, spells can't be cast through the wall. The layer is destroyed by bright light shed by a {@spell daylight} spell or a similar spell of equal or higher level."
                 ]
             },
             {
@@ -27417,7 +32453,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -27475,6 +32517,7 @@ export default [
             "R"
         ],
         "miscTags": [
+            "LGT",
             "SCL"
         ],
         "areaTags": [
@@ -27547,9 +32590,9 @@ export default [
             "You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific condition occurs. The illusion is imperceptible until then. It must be no larger than a 30-foot cube, and you decide when you cast the spell how the illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes.",
             "When the condition you specify occurs, the illusion springs into existence and performs in the manner you described. Once the illusion finishes performing, it disappears and remains dormant for 10 minutes. After this time, the illusion can be activated again.",
             "The triggering condition can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the area. For example, you could create an illusion of yourself to appear and warn off others who attempt to open a trapped door, or you could set the illusion to trigger only when a creature says the correct word or phrase.",
-            "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
+            "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "classes": {
@@ -27607,13 +32650,13 @@ export default [
             "You create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that you have seen before, regardless of intervening obstacles. The illusion looks and sounds like you but is intangible. If the illusion takes any damage, it disappears, and the spell ends.",
             "You can use your action to move this illusion up to twice your speed, and make it gesture, speak, and behave in whatever way you choose. It mimics your mannerisms perfectly.",
             "You can see through its eyes and hear through its ears as if you were in its space. On your turn as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are {@condition blinded} and {@condition deafened} in regard to your own surroundings.",
-            "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
+            "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
         ],
         "conditionInflict": [
             "blinded",
             "deafened"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "miscTags": [
@@ -27633,7 +32676,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -27643,6 +32687,7 @@ export default [
         "source": "PHB",
         "page": 270,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "A",
         "time": [
@@ -27716,7 +32761,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -27810,6 +32855,56 @@ export default [
                         "name": "Horizon Walker (UA)",
                         "source": "UARangerAndRogue"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Glory",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Heroism (UA)",
+                        "source": "UABardAndPaladin"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -27862,6 +32957,14 @@ export default [
         "entries": [
             "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.",
             "The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be {@condition charmed}, {@condition frightened}, or possessed by them. If the target is already {@condition charmed}, {@condition frightened}, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect."
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
         ],
         "areaTags": [
             "ST"
@@ -28005,16 +33108,33 @@ export default [
                         "name": "Clockwork Soul (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -28089,7 +33209,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -28176,7 +33296,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -28206,6 +33326,7 @@ export default [
         "source": "PHB",
         "page": 270,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "N",
         "time": [
@@ -28239,6 +33360,21 @@ export default [
             "This spell also neutralizes any poisons and cures nonmagical diseases that affected the creature at the time it died. This spell doesn't, however, remove magical diseases, curses, or similar effects; if these aren't first removed prior to casting the spell, they take effect when the creature returns to life. The spell can't return an undead creature to life.",
             "This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell automatically fails.",
             "Coming back from the dead is an ordeal. The target takes a −4 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears."
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "construct",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
         ],
         "miscTags": [
             "HL"
@@ -28312,11 +33448,11 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 }
             ]
@@ -28393,12 +33529,38 @@ export default [
                         "name": "Unity (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -28540,6 +33702,7 @@ export default [
         "source": "PHB",
         "page": 271,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "V",
         "time": [
@@ -28605,7 +33768,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -28737,11 +33900,21 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Alchemist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
                     }
                 }
             ]
@@ -28772,6 +33945,7 @@ export default [
         "source": "PHB",
         "page": 271,
         "srd": true,
+        "basicRules": true,
         "level": 7,
         "school": "T",
         "time": [
@@ -29022,6 +34196,13 @@ export default [
             },
             "The reincarnated creature recalls its former life and experiences. It retains the capabilities it had in its original form, except it exchanges its original race for the new one and changes its racial traits accordingly."
         ],
+        "affectsCreatureType": [
+            "humanoid"
+        ],
+        "miscTags": [
+            "HL",
+            "RO"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -29036,6 +34217,7 @@ export default [
         "source": "PHB",
         "page": 271,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "A",
         "time": [
@@ -29091,6 +34273,7 @@ export default [
         "source": "PHB",
         "page": 272,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "A",
         "time": [
@@ -29142,7 +34325,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -29165,6 +34348,7 @@ export default [
         "source": "PHB",
         "page": 272,
         "srd": true,
+        "basicRules": true,
         "level": 7,
         "school": "N",
         "time": [
@@ -29199,6 +34383,9 @@ export default [
             "This spell closes all mortal wounds and restores any missing body parts.",
             "Coming back from the dead is an ordeal. The target takes a −4 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears.",
             "Casting this spell to restore life to a creature that has been dead for one year or longer taxes you greatly. Until you finish a long rest, you can't cast spells again, and you have disadvantage on all attack rolls, ability checks, and saving throws."
+        ],
+        "affectsCreatureType": [
+            "undead"
         ],
         "miscTags": [
             "HL"
@@ -29284,6 +34471,7 @@ export default [
         "source": "PHB",
         "page": 272,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "N",
         "time": [
@@ -29341,7 +34529,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -29394,16 +34582,38 @@ export default [
                         "name": "Grave",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -29463,7 +34673,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -29521,6 +34731,7 @@ export default [
         "source": "PHB",
         "page": 272,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "V",
         "time": [
@@ -29606,13 +34817,15 @@ export default [
                 "name": "Boros Legionnaire",
                 "source": "GGR"
             }
-        ]
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Sanctuary",
         "source": "PHB",
         "page": 272,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "A",
         "time": [
@@ -29668,7 +34881,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -29700,6 +34913,69 @@ export default [
                     "subclass": {
                         "name": "Raven Queen (UA)",
                         "source": "UAWarlockAndWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Open Hand",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Tranquility (UA)",
+                        "source": "UAMonk"
                     }
                 }
             ]
@@ -29812,11 +35088,53 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Efreeti"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Wildfire",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -29926,9 +35244,6 @@ export default [
         "savingThrow": [
             "wisdom"
         ],
-        "miscTags": [
-            "SGT"
-        ],
         "classes": {
             "fromClassList": [
                 {
@@ -30023,6 +35338,26 @@ export default [
                     "subclass": {
                         "name": "Psionics (UA)",
                         "source": "UAFighterRogueWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -30139,7 +35474,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -30180,7 +35521,7 @@ export default [
         "components": {
             "v": true,
             "s": true,
-            "m": "a pinch of Talc and a small sprinkling of powdered silver"
+            "m": "a pinch of talc and a small sprinkling of powdered silver"
         },
         "duration": [
             {
@@ -30193,9 +35534,6 @@ export default [
         ],
         "entries": [
             "For the duration, you see {@condition invisible} creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent."
-        ],
-        "miscTags": [
-            "SGT"
         ],
         "classes": {
             "fromClassList": [
@@ -30217,7 +35555,29 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Paladin",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Watchers",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -30267,12 +35627,12 @@ export default [
             "This spell allows you to change the appearance of any number of creatures that you can see within range. You give each target you choose a new, illusory appearance. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell.",
             "The spell disguises physical appearance as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller and appear thin, fat, or in between. You can't change a target's body type, so you must choose a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you. The spell lasts for the duration, unless you use your action to dismiss it sooner.",
             "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to a creature's outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel the creature's head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.",
-            "A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised."
+            "A creature can use its action to inspect a target and make an Intelligence ({@skill Investigation}) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised."
         ],
         "savingThrow": [
             "charisma"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "miscTags": [
@@ -30346,6 +35706,38 @@ export default [
                         "name": "Gloom Stalker",
                         "source": "XGE"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
                 }
             ]
         }
@@ -30385,7 +35777,7 @@ export default [
         ],
         "entries": [
             "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
-            "You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive."
+            "You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a {@chance 5|||Message lost!|Message arrives} chance that the message doesn't arrive."
         ],
         "classes": {
             "fromClassList": [
@@ -30442,6 +35834,26 @@ export default [
                         "name": "Unity (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -30451,6 +35863,12 @@ export default [
                 "source": "ERLW",
                 "baseName": "Gnome",
                 "baseSource": "PHB"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Far Scribe",
+                "source": "UAClassFeatureVariants"
             }
         ]
     },
@@ -30493,7 +35911,7 @@ export default [
         "entries": [
             "By means of this spell, a willing creature or an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes {@condition invisible} and can't be targeted by {@filter divination spells|spells|school=D} or perceived through scrying sensors created by divination spells.",
             "If the target is a creature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn't grow older.",
-            "You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the tarrasque awakens.\" This spell also ends if the target takes any damage."
+            "You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the {@creature tarrasque} awakens.\" This spell also ends if the target takes any damage."
         ],
         "conditionInflict": [
             "invisible"
@@ -30555,6 +35973,20 @@ export default [
             "When you transform, you choose whether your equipment falls to the ground, merges into the new form, or is worn by it. Worn equipment functions as normal. The DM determines whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change shape or size to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge into your new form. Equipment that merges has no effect in that state.",
             "During this spell's duration, you can use your action to assume a different form following the same restrictions and rules for the original form, with one exception: if your new form has more hit points than your current one, your hit points remain at their current value."
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -30569,7 +36001,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -30579,6 +36012,7 @@ export default [
         "source": "PHB",
         "page": 275,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "V",
         "time": [
@@ -30668,16 +36102,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Artificer (Revisited)",
                         "source": "UAArtificerRevisited"
                     },
@@ -30699,21 +36123,41 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 },
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -30730,6 +36174,7 @@ export default [
         "source": "PHB",
         "page": 275,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "A",
         "time": [
@@ -30759,7 +36204,10 @@ export default [
             }
         ],
         "entries": [
-            "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile."
+            "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from {@spell magic missile}."
+        ],
+        "miscTags": [
+            "MAC"
         ],
         "classes": {
             "fromClassList": [
@@ -30826,27 +36274,27 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 },
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 },
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
@@ -30881,6 +36329,7 @@ export default [
         "source": "PHB",
         "page": 275,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "A",
         "time": [
@@ -30913,6 +36362,9 @@ export default [
         ],
         "entries": [
             "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration."
+        ],
+        "miscTags": [
+            "MAC"
         ],
         "areaTags": [
             "ST"
@@ -31037,6 +36489,7 @@ export default [
         "source": "PHB",
         "page": 275,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "V",
         "time": [
@@ -31101,7 +36554,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -31130,6 +36583,7 @@ export default [
         "source": "PHB",
         "page": 275,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "I",
         "time": [
@@ -31217,6 +36671,56 @@ export default [
                         "name": "Raven Queen (UA)",
                         "source": "UAWarlockAndWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Lurker in the Deep (UA)",
+                        "source": "UASorcererAndWarlock"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Shadow",
+                        "source": "PHB"
+                    }
                 }
             ]
         },
@@ -31234,6 +36738,7 @@ export default [
         "source": "PHB",
         "page": 276,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "I",
         "time": [
@@ -31267,9 +36772,9 @@ export default [
         "entries": [
             "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn't accompanied by sound, smell, or other sensory effects.",
             "You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.",
-            "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image."
+            "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image."
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "classes": {
@@ -31294,6 +36799,12 @@ export default [
                 "source": "ERLW",
                 "baseName": "Elf",
                 "baseSource": "PHB"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Misty Visions",
+                "source": "PHB"
             }
         ]
     },
@@ -31339,6 +36850,13 @@ export default [
             "If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly.",
             "If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed."
         ],
+        "affectsCreatureType": [
+            "beast",
+            "humanoid"
+        ],
+        "areaTags": [
+            "ST"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -31353,6 +36871,7 @@ export default [
         "source": "PHB",
         "page": 276,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "E",
         "time": [
@@ -31398,6 +36917,22 @@ export default [
         ],
         "conditionInflict": [
             "unconscious"
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "construct",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant",
+            "undead"
         ],
         "areaTags": [
             "S"
@@ -31457,6 +36992,26 @@ export default [
                         "name": "Twilight (UA)",
                         "source": "UAClericDruidWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Noble Genie (UA)",
+                        "source": "UA2020SubclassesPt1"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Twilight",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -31512,7 +37067,7 @@ export default [
         ],
         "entries": [
             "Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused.",
-            "The ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it falls {@condition prone}.",
+            "The ground in the area is covered with slick ice, making it {@quickref difficult terrain||3}. When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it falls {@condition prone}.",
             "If a creature starts its turn in the spell's area and is concentrating on a spell, the creature must make a successful Constitution saving throw against your spell save DC or lose concentration."
         ],
         "conditionInflict": [
@@ -31571,6 +37126,69 @@ export default [
                         "name": "Lurker in the Deep (UA)",
                         "source": "UASorcererAndWarlock"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Marid"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Marid"
+                    }
                 }
             ]
         },
@@ -31625,8 +37243,10 @@ export default [
             "A creature affected by this spell makes another Wisdom saving throw at the end of each of its turns. On a successful save, the effect ends for it."
         ],
         "savingThrow": [
-            "wisdom",
-            "dexterity"
+            "wisdom"
+        ],
+        "miscTags": [
+            "MAC"
         ],
         "areaTags": [
             "MT",
@@ -31682,23 +37302,46 @@ export default [
                     },
                     "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
-        }
+        },
+        "eldritchInvocations": [
+            {
+                "name": "Mire the Mind",
+                "source": "PHB"
+            }
+        ]
     },
     {
         "name": "Spare the Dying",
         "source": "PHB",
         "page": 277,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "N",
         "time": [
@@ -31725,6 +37368,20 @@ export default [
         "entries": [
             "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs."
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -31740,7 +37397,29 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Grave",
+                        "source": "XGE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undying",
+                        "source": "SCAG"
+                    }
                 }
             ]
         },
@@ -31803,6 +37482,9 @@ export default [
         "entries": [
             "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion."
         ],
+        "affectsCreatureType": [
+            "beast"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -31864,6 +37546,12 @@ export default [
                 "name": "Gruul Anarch",
                 "source": "GGR"
             }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Beast Speech",
+                "source": "PHB"
+            }
         ]
     },
     {
@@ -31871,6 +37559,7 @@ export default [
         "source": "PHB",
         "page": 277,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "N",
         "time": [
@@ -31903,6 +37592,21 @@ export default [
         "entries": [
             "You grant the semblance of life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose. The corpse must still have a mouth and can't be undead. The spell fails if the corpse was the target of this spell within the last 10 days.",
             "Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are hostile to it or it recognizes you as an enemy. This spell doesn't return the creature's soul to its body, only its animating spirit. Thus, the corpse can't learn new information, doesn't comprehend anything that has happened since it died, and can't speculate about future events."
+        ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "construct",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
         ],
         "classes": {
             "fromClassList": [
@@ -31955,12 +37659,38 @@ export default [
                         "name": "Raven Queen (UA)",
                         "source": "UAWarlockAndWizard"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead (UA)",
+                        "source": "UA2020SubclassesPt4"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Undead",
+                        "source": "VRGR"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Wizard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -31968,6 +37698,12 @@ export default [
             {
                 "name": "Orzhov Representative",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Whispers of the Grave",
+                "source": "PHB"
             }
         ]
     },
@@ -32006,10 +37742,10 @@ export default [
         ],
         "entries": [
             "You imbue plants within 30 feet of you with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands. You can question plants about events in the spell's area within the past day, gaining information about creatures that have passed, weather, and other circumstances.",
-            "You can also turn difficult terrain caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or you can turn ordinary terrain where plants are present into difficult terrain that lasts for the duration, causing vines and branches to hinder pursuers, for example.",
+            "You can also turn {@quickref difficult terrain||3} caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or you can turn ordinary terrain where plants are present into {@quickref difficult terrain||3} that lasts for the duration, causing vines and branches to hinder pursuers, for example.",
             "Plants might be able to perform other tasks on your behalf, at the DM's discretion. The spell doesn't enable plants to uproot themselves and move about, but they can freely move branches, tendrils, and stalks.",
             "If a plant creature is in the area, you can communicate with it as if you shared a common language, but you gain no magical ability to influence it.",
-            "This spell can cause the plants created by the entangle spell to release a {@condition restrained} creature."
+            "This spell can cause the plants created by the {@spell entangle} spell to release a {@condition restrained} creature."
         ],
         "classes": {
             "fromClassList": [
@@ -32053,6 +37789,7 @@ export default [
         "source": "PHB",
         "page": 277,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "T",
         "time": [
@@ -32109,7 +37846,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -32144,6 +37881,16 @@ export default [
                         "name": "Land",
                         "source": "PHB",
                         "subSubclass": "Underdark"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -32199,13 +37946,13 @@ export default [
             }
         ],
         "entries": [
-            "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes {@damage 2d4} piercing damage for every 5 feet it travels.",
-            "The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it."
+            "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes {@quickref difficult terrain||3} for the duration. When a creature moves into or within the area, it takes {@damage 2d4} piercing damage for every 5 feet it travels.",
+            "The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast must make a Wisdom ({@skill Perception}) check against your spell save DC to recognize the terrain as hazardous before entering it."
         ],
         "damageInflict": [
             "piercing"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "wisdom"
         ],
         "areaTags": [
@@ -32265,15 +38012,66 @@ export default [
                         "source": "UAGiantSoulSorcerer",
                         "subSubclass": "Stone"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
                 }
             ]
-        }
+        },
+        "races": [
+            {
+                "name": "Halfling (Lotusden)",
+                "source": "EGW",
+                "baseName": "Halfling",
+                "baseSource": "PHB"
+            }
+        ]
     },
     {
         "name": "Spirit Guardians",
         "source": "PHB",
         "page": 278,
         "srd": true,
+        "basicRules": true,
         "level": 3,
         "school": "C",
         "time": [
@@ -32362,7 +38160,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Paladin",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -32378,6 +38177,7 @@ export default [
         "source": "PHB",
         "page": 278,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "V",
         "time": [
@@ -32580,16 +38380,6 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
                         "name": "Artificer (Revisited)",
                         "source": "UAArtificerRevisited"
                     },
@@ -32704,6 +38494,16 @@ export default [
                         "name": "Alchemist",
                         "source": "UAArtificerRevisited"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
                 }
             ]
         }
@@ -32764,7 +38564,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -32789,6 +38589,48 @@ export default [
                         "source": "PHB",
                         "subSubclass": "Underdark"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
                 }
             ]
         },
@@ -32806,6 +38648,7 @@ export default [
         "source": "PHB",
         "page": 278,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "A",
         "time": [
@@ -32878,7 +38721,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -32961,6 +38804,27 @@ export default [
                         "name": "Strength (PSA)",
                         "source": "PSA"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB",
+                        "subSubclass": "Mountain"
+                    }
                 }
             ]
         },
@@ -33032,7 +38896,7 @@ export default [
                 "type": "entries",
                 "name": "Round 5–10",
                 "entries": [
-                    "Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes {@damage 1d6} cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical."
+                    "Gusts and freezing rain assail the area under the cloud. The area becomes {@quickref difficult terrain||3} and is heavily obscured. Each creature there takes {@damage 1d6} cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical."
                 ]
             }
         ],
@@ -33070,6 +38934,7 @@ export default [
         "source": "PHB",
         "page": 279,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "E",
         "time": [
@@ -33153,16 +39018,6 @@ export default [
                         "name": "Knowledge (PSA)",
                         "source": "PSA"
                     }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
                 }
             ]
         },
@@ -33234,6 +39089,9 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "miscTags": [
+            "LGTS"
+        ],
         "areaTags": [
             "L"
         ],
@@ -33251,6 +39109,13 @@ export default [
                     "name": "Wizard",
                     "source": "PHB"
                 }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Cleric",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
             ]
         }
     },
@@ -33259,6 +39124,7 @@ export default [
         "source": "PHB",
         "page": 279,
         "srd": true,
+        "basicRules": true,
         "level": 8,
         "school": "V",
         "time": [
@@ -33298,6 +39164,10 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "miscTags": [
+            "LGT",
+            "LGTS"
+        ],
         "areaTags": [
             "S"
         ],
@@ -33314,6 +39184,13 @@ export default [
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Cleric",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -33354,9 +39231,6 @@ export default [
         "entries": [
             "You transmute your quiver so it produces an endless supply of nonmagical ammunition, which seems to leap into your hand when you reach for it.",
             "On each of your turns until the spell ends, you can use a bonus action to make two attacks with a weapon that uses ammunition from the quiver. Each time you make such a ranged attack, your quiver magically replaces the piece of ammunition you used with a similar piece of nonmagical ammunition. Any pieces of ammunition created by this spell disintegrate when the spell ends. If the quiver leaves your possession, the spell ends."
-        ],
-        "miscTags": [
-            "SCL"
         ],
         "classes": {
             "fromClassList": [
@@ -33406,7 +39280,7 @@ export default [
         ],
         "entries": [
             "When you cast this spell, you inscribe a harmful glyph either on a surface (such as a section of floor, a wall, or a table) or within an object that can be closed to conceal the glyph (such as a book, a scroll, or a treasure chest). If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.",
-            "The glyph is nearly invisible, requiring an Intelligence (Investigation) check against your spell save DC to find it.",
+            "The glyph is nearly invisible, requiring an Intelligence ({@skill Investigation}) check against your spell save DC to find it.",
             "You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or stepping on the glyph, removing another object covering it, approaching within a certain distance of it, or manipulating the object that holds it. For glyphs inscribed within an object, the most common triggers are opening the object, approaching within a certain distance of it, or seeing or reading the glyph.",
             "You can further refine the trigger so the spell is activated only under certain circumstances or according to a creature's physical characteristics (such as height or weight), or physical kind (for example, the ward could be set to affect hags or shapechangers). You can also specify creatures that don't trigger the glyph, such as those who say a certain password.",
             "When you inscribe the glyph, choose one of the options below for its effect. Once triggered, the glyph glows, filling a 60-foot-radius sphere with dim light for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.",
@@ -33482,8 +39356,11 @@ export default [
             "charisma",
             "intelligence"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
+        ],
+        "miscTags": [
+            "LGT"
         ],
         "areaTags": [
             "S"
@@ -33506,7 +39383,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -33636,24 +39519,28 @@ export default [
                 "type": "entries",
                 "name": "Creature",
                 "entries": [
-                    "You can try to move a Huge or smaller creature. Make an ability check with your spellcasting ability contested by the creature's Strength check. If you win the contest, you move the creature up to 30 feet in any direction, including upward but not beyond the range of this spell. Until the end of your next turn, the creature is {@condition restrained} in your telekinetic grip. A creature lifted upward is suspended in mid-air."
+                    "You can try to move a Huge or smaller creature. Make an ability check with your spellcasting ability contested by the creature's Strength check. If you win the contest, you move the creature up to 30 feet in any direction, including upward but not beyond the range of this spell. Until the end of your next turn, the creature is {@condition restrained} in your telekinetic grip. A creature lifted upward is suspended in mid-air.",
+                    "On subsequent rounds, you can use your action to attempt to maintain your telekinetic grip on the creature by repeating the contest."
                 ]
             },
-            "On subsequent rounds, you can use your action to attempt to maintain your telekinetic grip on the creature by repeating the contest.",
             {
                 "type": "entries",
                 "name": "Object",
                 "entries": [
-                    "You can try to move an object that weighs up to 1,000 pounds. If the object isn't being worn or carried, you automatically move it up to 30 feet in any direction, but not beyond the range of this spell."
+                    "You can try to move an object that weighs up to 1,000 pounds. If the object isn't being worn or carried, you automatically move it up to 30 feet in any direction, but not beyond the range of this spell.",
+                    "If the object is worn or carried by a creature, you must make an ability check with your spellcasting ability contested by that creature's Strength check. If you succeed, you pull the object away from that creature and can move it up to 30 feet in any direction but not beyond the range of this spell.",
+                    "You can exert fine control on objects with your telekinetic grip, such as manipulating a simple tool, opening a door or a container, stowing or retrieving an item from an open container, or pouring the contents from a vial."
                 ]
-            },
-            "If the object is worn or carried by a creature, you must make an ability check with your spellcasting ability contested by that creature's Strength check. If you succeed, you pull the object away from that creature and can move it up to 30 feet in any direction but not beyond the range of this spell.",
-            "You can exert fine control on objects with your telekinetic grip, such as manipulating a simple tool, opening a door or a container, stowing or retrieving an item from an open container, or pouring the contents from a vial."
+            }
         ],
         "conditionInflict": [
             "restrained"
         ],
+        "abilityCheck": [
+            "strength"
+        ],
         "miscTags": [
+            "FMV",
             "SGT"
         ],
         "areaTags": [
@@ -33689,6 +39576,16 @@ export default [
                     "subclass": {
                         "name": "Psionics (UA)",
                         "source": "UAFighterRogueWizard"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -33747,6 +39644,7 @@ export default [
         "source": "PHB",
         "page": 281,
         "srd": true,
+        "basicRules": true,
         "level": 7,
         "school": "C",
         "time": [
@@ -33881,7 +39779,12 @@ export default [
             }
         ],
         "miscTags": [
-            "SGT"
+            "RO",
+            "SGT",
+            "TP"
+        ],
+        "areaTags": [
+            "MT"
         ],
         "classes": {
             "fromClassList": [
@@ -33943,7 +39846,8 @@ export default [
             "You can create a permanent teleportation circle by casting this spell in the same location every day for one year. You need not use the circle to teleport when you cast the spell in this way."
         ],
         "miscTags": [
-            "PRM"
+            "PRM",
+            "TP"
         ],
         "classes": {
             "fromClassList": [
@@ -34015,7 +39919,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -34107,6 +40017,7 @@ export default [
         "source": "PHB",
         "page": 282,
         "srd": true,
+        "basicRules": true,
         "level": 0,
         "school": "T",
         "time": [
@@ -34282,6 +40193,7 @@ export default [
             "M"
         ],
         "miscTags": [
+            "FMV",
             "SCL"
         ],
         "areaTags": [
@@ -34299,7 +40211,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -34347,6 +40259,9 @@ export default [
         "savingThrow": [
             "strength"
         ],
+        "miscTags": [
+            "FMV"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -34383,6 +40298,7 @@ export default [
         "source": "PHB",
         "page": 282,
         "srd": true,
+        "basicRules": true,
         "level": 1,
         "school": "V",
         "time": [
@@ -34426,6 +40342,9 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "miscTags": [
+            "FMV"
+        ],
         "areaTags": [
             "C"
         ],
@@ -34457,16 +40376,6 @@ export default [
                     "subclass": {
                         "name": "Tempest",
                         "source": "PHB"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
                     }
                 },
                 {
@@ -34503,18 +40412,92 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Storm (UA)",
+                        "source": "UAWaterborneAdventures"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
                     }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -34538,6 +40521,7 @@ export default [
         "source": "PHB",
         "page": 283,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "T",
         "time": [
@@ -34612,6 +40596,9 @@ export default [
         "entries": [
             "This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says."
         ],
+        "areaTags": [
+            "ST"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -34650,7 +40637,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         },
@@ -34698,6 +40686,9 @@ export default [
         ],
         "entries": [
             "This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement."
+        ],
+        "miscTags": [
+            "TP"
         ],
         "classes": {
             "fromClassList": [
@@ -34859,8 +40850,8 @@ export default [
         ],
         "miscTags": [
             "PRM",
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "areaTags": [
             "ST"
@@ -34887,6 +40878,7 @@ export default [
         "source": "PHB",
         "page": 284,
         "srd": true,
+        "basicRules": true,
         "level": 9,
         "school": "N",
         "time": [
@@ -34944,6 +40936,7 @@ export default [
         "source": "PHB",
         "page": 284,
         "srd": true,
+        "basicRules": true,
         "level": 6,
         "school": "D",
         "time": [
@@ -34977,7 +40970,7 @@ export default [
             }
         ],
         "entries": [
-            "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
+            "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has {@sense truesight}, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
         ],
         "classes": {
             "fromClassList": [
@@ -35039,6 +41032,9 @@ export default [
         ],
         "entries": [
             "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended."
+        ],
+        "areaTags": [
+            "ST"
         ],
         "classes": {
             "fromClassList": [
@@ -35105,7 +41101,7 @@ export default [
             "A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration.",
             "When the wall appears, each creature within its area must make a Strength saving throw. On a failed save, a creature takes {@damage 6d10} bludgeoning damage, or half as much damage on a successful save.",
             "At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take {@damage 5d10} bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by {@dice 1d10}. When the wall reaches 0 feet in height, the spell ends.",
-            "A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground."
+            "A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength ({@skill Athletics}) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground."
         ],
         "damageInflict": [
             "bludgeoning"
@@ -35113,7 +41109,7 @@ export default [
         "savingThrow": [
             "strength"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "areaTags": [
@@ -35309,32 +41305,18 @@ export default [
                         "name": "Grave",
                         "source": "XGE"
                     }
-                },
-                {
-                    "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -35403,7 +41385,7 @@ export default [
         },
         "races": [
             {
-                "name": "Tiefling (Variant)",
+                "name": "Tiefling (Variant; Devil's Tongue)",
                 "source": "SCAG",
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
@@ -35421,6 +41403,7 @@ export default [
         "source": "PHB",
         "page": 285,
         "srd": true,
+        "basicRules": true,
         "level": 4,
         "school": "V",
         "time": [
@@ -35563,11 +41546,21 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -35679,11 +41672,11 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -35699,11 +41692,31 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Armorer (UA)",
                         "source": "UA2020SubclassesPt3"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Artificer",
+                        "source": "TCE"
+                    },
+                    "subclass": {
+                        "name": "Armorer",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
                     }
                 }
             ]
@@ -35782,6 +41795,7 @@ export default [
         "source": "PHB",
         "page": 287,
         "srd": true,
+        "basicRules": true,
         "level": 5,
         "school": "V",
         "time": [
@@ -35849,7 +41863,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -35873,6 +41887,59 @@ export default [
                         "name": "Land",
                         "source": "PHB",
                         "subSubclass": "Mountain"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Dao"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Monk",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Four Elements",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -35951,6 +42018,7 @@ export default [
         "source": "PHB",
         "page": 287,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "A",
         "time": [
@@ -35970,7 +42038,7 @@ export default [
             "s": true,
             "m": {
                 "text": "a pair of platinum rings worth at least 50 gp each, which you and the target must wear for the duration",
-                "cost": 5000
+                "cost": 10000
             }
         },
         "duration": [
@@ -35985,6 +42053,9 @@ export default [
         "entries": [
             "This spell wards a willing creature you touch and creates a mystic connection between you and the target until the spell ends. While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount of damage.",
             "The spell ends if you drop to 0 hit points or if you and the target become separated by more than 60 feet. It also ends if the spell is cast again on either of the connected creatures. You can also dismiss the spell as an action."
+        ],
+        "miscTags": [
+            "MAC"
         ],
         "areaTags": [
             "ST"
@@ -36030,11 +42101,11 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Battle Smith",
-                        "source": "ERLW"
+                        "source": "TCE"
                     }
                 },
                 {
@@ -36056,16 +42127,33 @@ export default [
                         "name": "Love (UA)",
                         "source": "UA2020SubclassesPt2"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Cleric",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Peace",
+                        "source": "TCE"
+                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Paladin",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Ranger",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Paladin",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         },
@@ -36158,7 +42246,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -36175,12 +42263,12 @@ export default [
                 },
                 {
                     "class": {
-                        "name": "Warlock",
+                        "name": "Druid",
                         "source": "PHB"
                     },
                     "subclass": {
-                        "name": "Kraken (Stream)",
-                        "source": "Stream"
+                        "name": "Land",
+                        "source": "PHB"
                     }
                 }
             ]
@@ -36189,6 +42277,16 @@ export default [
             {
                 "name": "Simic Scientist",
                 "source": "GGR"
+            }
+        ],
+        "eldritchInvocations": [
+            {
+                "name": "Sea Twins' Gift",
+                "source": "UAWarlockAndWizard"
+            },
+            {
+                "name": "Gift of the Depths",
+                "source": "XGE"
             }
         ]
     },
@@ -36267,7 +42365,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -36292,6 +42390,16 @@ export default [
                         "source": "PHB",
                         "subSubclass": "Swamp"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
                 }
             ]
         }
@@ -36301,6 +42409,7 @@ export default [
         "source": "PHB",
         "page": 287,
         "srd": true,
+        "basicRules": true,
         "level": 2,
         "school": "C",
         "time": [
@@ -36332,7 +42441,7 @@ export default [
             }
         ],
         "entries": [
-            "You conjure a mass of thick, sticky webbing at a point of your choice within range. The webs fill a 20-foot cube from that point for the duration. The webs are difficult terrain and lightly obscure their area.",
+            "You conjure a mass of thick, sticky webbing at a point of your choice within range. The webs fill a 20-foot cube from that point for the duration. The webs are {@quickref difficult terrain||3} and lightly obscure their area.",
             "If the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.",
             "Each creature that starts its turn in the webs or that enters them during its turn must make a Dexterity saving throw. On a failed save, the creature is {@condition restrained} as long as it remains in the webs or until it breaks free.",
             "A creature {@condition restrained} by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer {@condition restrained}.",
@@ -36347,7 +42456,7 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "areaTags": [
@@ -36365,7 +42474,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromSubclass": [
@@ -36378,16 +42487,6 @@ export default [
                         "name": "Land",
                         "source": "PHB",
                         "subSubclass": "Underdark"
-                    }
-                },
-                {
-                    "class": {
-                        "name": "Warlock",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Lolth (Twitter)",
-                        "source": "Twitter"
                     }
                 },
                 {
@@ -36419,6 +42518,46 @@ export default [
                         "name": "Swarmkeeper (UA)",
                         "source": "UAFighterRangerRogue"
                     }
+                },
+                {
+                    "class": {
+                        "name": "Druid",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Land",
+                        "source": "PHB"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Spell-less)",
+                        "source": "UAModifyingClasses"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Ranger (Revised)",
+                        "source": "UATheRangerRevised"
+                    },
+                    "subclass": {
+                        "name": "Swarmkeeper",
+                        "source": "TCE"
+                    }
                 }
             ]
         },
@@ -36429,7 +42568,8 @@ export default [
                 "baseName": "Tiefling",
                 "baseSource": "PHB"
             }
-        ]
+        ],
+        "hasFluffImages": true
     },
     {
         "name": "Weird",
@@ -36490,7 +42630,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
@@ -36635,11 +42781,43 @@ export default [
                 {
                     "class": {
                         "name": "Artificer",
-                        "source": "ERLW"
+                        "source": "TCE"
                     },
                     "subclass": {
                         "name": "Artillerist",
-                        "source": "ERLW"
+                        "source": "TCE"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE",
+                        "subSubclass": "Djinni"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
                     }
                 }
             ]
@@ -36696,11 +42874,11 @@ export default [
                     "You allow up to twenty creatures that you can see to regain all hit points, and you end all effects on them described in the {@spell greater restoration} spell.",
                     "You grant up to ten creatures that you can see resistance to a damage type you choose.",
                     "You grant up to ten creatures you can see immunity to a single spell or other magical effect for 8 hours. For instance, you could make yourself and all your companions immune to a {@creature lich}'s life drain attack.",
-                    "You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a wish spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll."
+                    "You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a {@spell wish} spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll."
                 ]
             },
             "You might be able to achieve something beyond the scope of the above examples. State your wish to the DM as precisely as possible. The DM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. This spell might simply fail, the effect you desire might only be partly achieved, or you might suffer some unforeseen consequence as a result of how you worded the wish. For example, wishing that a villain were dead might propel you forward in time to a period when that villain is no longer alive, effectively removing you from the game. Similarly, wishing for a legendary magic item or artifact might instantly transport you to the presence of the item's current owner.",
-            "The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a long rest, you take {@damage 1d10} necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for {@dice 2d4} days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a {@chance 33} chance that you are unable to cast wish ever again if you suffer this stress."
+            "The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a long rest, you take {@damage 1d10} necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for {@dice 2d4} days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a {@chance 33|||Unable to cast again!|Able to cast again} chance that you are unable to cast wish ever again if you suffer this stress."
         ],
         "damageResist": [
             "acid",
@@ -36733,6 +42911,28 @@ export default [
                 {
                     "name": "Wizard",
                     "source": "PHB"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie (UA)",
+                        "source": "UA2020SubclassesRevisited"
+                    }
+                },
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Genie",
+                        "source": "TCE"
+                    }
                 }
             ]
         }
@@ -36841,6 +43041,9 @@ export default [
             "You and up to five willing creatures within 5 feet of you instantly teleport to a previously designated sanctuary. You and any creatures that teleport with you appear in the nearest unoccupied space to the spot you designated when you prepared your sanctuary (see below). If you cast this spell without first preparing a sanctuary, the spell has no effect.",
             "You must designate a sanctuary by casting this spell within a location, such as a temple, dedicated to or strongly linked to your deity. If you attempt to cast the spell in this manner in an area that isn't dedicated to your deity, the spell has no effect."
         ],
+        "miscTags": [
+            "TP"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -36893,7 +43096,7 @@ export default [
         "savingThrow": [
             "wisdom"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "wisdom"
         ],
         "classes": {
@@ -36933,22 +43136,13 @@ export default [
                         "name": "Stone (UA)",
                         "source": "UASorcerer"
                     }
-                },
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Destruction (Twitter)",
-                        "source": "Twitter"
-                    }
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -37079,7 +43273,7 @@ export default [
                     },
                     "subclass": {
                         "name": "Order",
-                        "source": "GGR"
+                        "source": "TCE"
                     }
                 }
             ]
@@ -37100,11 +43294,191 @@ export default [
         ]
     },
     {
-        "name": "Booming Blade",
-        "source": "SCAG",
-        "page": 142,
-        "level": 0,
-        "school": "V",
+        "name": "Borrowed Knowledge",
+        "source": "SCC",
+        "page": 37,
+        "level": 2,
+        "school": "D",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a book worth at least 25 gp",
+                "cost": 2500
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                }
+            }
+        ],
+        "entries": [
+            "You draw on knowledge from spirits of the past. Choose one skill in which you lack proficiency. For the spell's duration, you have proficiency in the chosen skill. The spell ends early if you cast it again."
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Cleric",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Kinetic Jaunt",
+        "source": "SCC",
+        "page": 37,
+        "level": 2,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You magically empower your movement with dance-like steps, giving yourself the following benefits for the duration.",
+            {
+                "type": "list",
+                "items": [
+                    "Your walking speed increases by 10 feet.",
+                    "You don't provoke opportunity attacks.",
+                    "You can move through the space of another creature, and it doesn't count as {@quickref difficult terrain||3}. If you end your turn in another creature's space, you are shunted to the last unoccupied space you occupied, and you take {@damage 1d8} force damage."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Silvery Barbs",
+        "source": "SCC",
+        "page": 38,
+        "level": 1,
+        "school": "E",
+        "time": [
+            {
+                "number": 1,
+                "unit": "reaction",
+                "condition": "which you take when a creature you can see within 60 feet of yourself succeeds on an attack roll, an ability check, or a saving throw"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You magically distract the triggering creature and turn its momentary uncertainty into encouragement for another creature. The triggering creature must reroll the {@dice d20} and use the lower roll.",
+            "You can then choose a different creature you can see within range (you can choose yourself). The chosen creature has advantage on the next attack roll, ability check, or saving throw it makes within 1 minute. A creature can be empowered by only one use of this spell at a time."
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Vortex Warp",
+        "source": "SCC",
+        "page": 38,
+        "level": 2,
+        "school": "C",
         "time": [
             {
                 "number": 1,
@@ -37115,12 +43489,229 @@ export default [
             "type": "point",
             "distance": {
                 "type": "feet",
-                "amount": 5
+                "amount": 90
             }
         },
         "components": {
             "v": true,
-            "m": "a weapon"
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You magically twist space around another creature you can see within range. The target must succeed on a Constitution saving throw (the target can choose to fail), or the target is teleported to an unoccupied space of your choice that you can see within range. The chosen space must be on a surface or in a liquid that can support the target without the target having to squeeze."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, the range of the spell increases by 30 feet for each slot level above 2nd."
+                ]
+            }
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "SGT",
+            "TP"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Wither and Bloom",
+        "source": "SCC",
+        "page": 38,
+        "level": 2,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a withered vine twisted into a loop"
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You invoke both death and life upon a 10-foot-radius sphere centered on a point within range. Each creature of your choice in that area must make a Constitution saving throw, taking {@damage 2d6} necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical vegetation in that area withers.",
+            "In addition, one creature of your choice in that area can spend and roll one of its unspent Hit Dice and regain a number of hit points equal to the roll plus your spellcasting ability modifier."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 2d6|2-9|1d6} for each slot above the 2nd, and the number of Hit Dice that can be spent and added to the healing roll increases by one for each slot above 2nd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "necrotic"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "HL"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Blade of Disaster",
+        "source": "TCE",
+        "page": 106,
+        "otherSources": [
+            {
+                "source": "IDRotF",
+                "page": 318
+            }
+        ],
+        "level": 9,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You create a blade-shaped planar rift about 3 feet long in an unoccupied space you can see within range. The blade lasts for the duration. When you cast this spell, you can make up to two melee spell attacks with the blade, each one against a creature, loose object, or structure within 5 feet of the blade. On a hit, the target takes {@damage 4d12} force damage. This attack scores a critical hit if the number on the {@dice d20} is 18 or higher. On a critical hit, the blade deals an extra {@damage 8d12} force damage (for a total of {@damage 12d12} force damage).",
+            "As a bonus action on your turn, you can move the blade up to 30 feet to an unoccupied space you can see and then make up to two melee spell attacks with it again.",
+            "The blade can harmlessly pass through any barrier, including a {@spell wall of force}."
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "spellAttack": [
+            "M"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "MT"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Booming Blade",
+        "source": "TCE",
+        "page": 106,
+        "otherSources": [
+            {
+                "source": "SCAG",
+                "page": 142
+            }
+        ],
+        "level": 0,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "radius",
+            "distance": {
+                "type": "feet",
+                "amount": 5
+            }
+        },
+        "components": {
+            "s": true,
+            "m": {
+                "text": "a melee weapon worth at least 1 sp",
+                "cost": 10
+            }
         },
         "duration": [
             {
@@ -37132,8 +43723,8 @@ export default [
             }
         ],
         "entries": [
-            "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and it becomes sheathed in booming energy until the start of your next turn. If the target willingly moves before then, it immediately takes {@damage 1d8} thunder damage, and the spell ends.",
-            "This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra {@damage 1d8} thunder damage to the target, and the damage the target takes for moving increases to {@damage 2d8}. Both damage rolls increase by {@dice 1d8} at 11th level and 17th level."
+            "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects and then becomes sheathed in booming energy until the start of your next turn. If the target willingly moves 5 feet or more before then, the target takes {@damage 1d8} thunder damage, and the spell ends.",
+            "This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} thunder damage to the target on a hit, and the damage the target takes for moving increases to {@damage 2d8}. Both damage rolls increase by 1d8 at 11th level ({@damage 2d8} and {@damage 3d8}) and again at 17th level ({@damage 3d8} and {@damage 4d8})."
         ],
         "scalingLevelDice": [
             {
@@ -37157,9 +43748,6 @@ export default [
         "damageInflict": [
             "thunder"
         ],
-        "spellAttack": [
-            "M"
-        ],
         "miscTags": [
             "SCL"
         ],
@@ -37169,24 +43757,121 @@ export default [
         "classes": {
             "fromClassList": [
                 {
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+                {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
                 },
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
                 },
                 {
                     "name": "Wizard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
     },
     {
+        "name": "Dream of the Blue Veil",
+        "source": "TCE",
+        "page": 106,
+        "level": 7,
+        "school": "C",
+        "time": [
+            {
+                "number": 10,
+                "unit": "minute"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 20
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a magic item or a willing creature from the destination world"
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 6
+                }
+            }
+        ],
+        "entries": [
+            "You and up to eight willing creatures within range fall {@condition unconscious} for the spell's duration and experience visions of another world on the Material Plane, such as Oerth, Toril, Krynn, or Eberron. If the spell reaches its full duration, the visions conclude with each of you encountering and pulling back a mysterious blue curtain. The spell then ends with you mentally and physically transported to the world that was in the visions.",
+            "To cast this spell, you must have a magic item that originated on the world you wish to reach, and you must be aware of the world's existence, even if you don't know the world's name. Your destination in the other world is a safe location within 1 mile of where the magic item was created. Alternatively, you can cast the spell if one of the affected creatures was born on the other world, which causes your destination to be a safe location within 1 mile of where that creature was born.",
+            "The spell ends early on a creature if that creature takes any damage, and the creature isn't transported. If you take any damage, the spell ends for you and all the other creatures, with none of you being transported."
+        ],
+        "conditionInflict": [
+            "unconscious"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        },
+        "hasFluff": true
+    },
+    {
         "name": "Green-Flame Blade",
-        "source": "SCAG",
-        "page": 143,
+        "source": "TCE",
+        "page": 107,
+        "otherSources": [
+            {
+                "source": "SCAG",
+                "page": 143
+            }
+        ],
         "level": 0,
         "school": "V",
         "time": [
@@ -37196,15 +43881,18 @@ export default [
             }
         ],
         "range": {
-            "type": "point",
+            "type": "radius",
             "distance": {
                 "type": "feet",
                 "amount": 5
             }
         },
         "components": {
-            "v": true,
-            "m": "a weapon"
+            "s": true,
+            "m": {
+                "text": "a melee weapon worth at least 1 sp",
+                "cost": 10
+            }
         },
         "duration": [
             {
@@ -37212,8 +43900,8 @@ export default [
             }
         ],
         "entries": [
-            "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and green fire leaps from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.",
-            "This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra {@damage 1d8} fire damage to the target, and the fire damage to the second creature increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by {@dice 1d8} at 11th level and 17th level."
+            "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects, and you can cause green fire to leap from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.",
+            "This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} fire damage to the target on a hit, and the fire damage to the second creature increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by {@damage 1d8} at 11th level ({@damage 2d8} and {@damage 2d8}) and 17th level ({@damage 3d8} and {@damage 3d8})."
         ],
         "scalingLevelDice": [
             {
@@ -37237,9 +43925,6 @@ export default [
         "damageInflict": [
             "fire"
         ],
-        "spellAttack": [
-            "M"
-        ],
         "miscTags": [
             "SCL",
             "SGT"
@@ -37251,24 +43936,136 @@ export default [
         "classes": {
             "fromClassList": [
                 {
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+                {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
                 },
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
                 },
                 {
                     "name": "Wizard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
     },
     {
+        "name": "Intellect Fortress",
+        "source": "TCE",
+        "page": 107,
+        "level": 3,
+        "school": "A",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 30
+            }
+        },
+        "components": {
+            "v": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "For the duration, you or one willing creature you can see within range has resistance to psychic damage, as well as advantage on Intelligence, Wisdom, and Charisma saving throws."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd. The creatures must be within 30 feet of each other when you target them."
+                ]
+            }
+        ],
+        "damageResist": [
+            "psychic"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Bard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
         "name": "Lightning Lure",
-        "source": "SCAG",
-        "page": 143,
+        "source": "TCE",
+        "page": 107,
+        "otherSources": [
+            {
+                "source": "SCAG",
+                "page": 143
+            }
+        ],
         "level": 0,
         "school": "V",
         "time": [
@@ -37278,7 +44075,7 @@ export default [
             }
         ],
         "range": {
-            "type": "point",
+            "type": "radius",
             "distance": {
                 "type": "feet",
                 "amount": 15
@@ -37293,7 +44090,7 @@ export default [
             }
         ],
         "entries": [
-            "You create a lash of lightning energy that strikes at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take {@damage 1d8} lightning damage if it is within 5 feet of you.",
+            "You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15 feet of you. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take {@damage 1d8} lightning damage if it is within 5 feet of you.",
             "This spell's damage increases by {@dice 1d8} when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
         ],
         "scalingLevelDice": {
@@ -37312,6 +44109,7 @@ export default [
             "strength"
         ],
         "miscTags": [
+            "FMV",
             "SCL",
             "SGT"
         ],
@@ -37321,25 +44119,218 @@ export default [
         "classes": {
             "fromClassList": [
                 {
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+                {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
                 },
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
                 },
                 {
                     "name": "Wizard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
     },
     {
-        "name": "Sword Burst",
-        "source": "SCAG",
-        "page": 143,
+        "name": "Mind Sliver",
+        "source": "TCE",
+        "page": 108,
         "level": 0,
+        "school": "E",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "round",
+                    "amount": 1
+                }
+            }
+        ],
+        "entries": [
+            "You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take {@damage 1d6} psychic damage and subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
+            "This spell's damage increases by {@dice 1d6} when you reach certain levels: 5th level ({@dice 2d6}), 11th level ({@dice 3d6}), and 17th level ({@dice 4d6})."
+        ],
+        "scalingLevelDice": {
+            "label": "psychic damage",
+            "scaling": {
+                "1": "1d6",
+                "5": "2d6",
+                "11": "3d6",
+                "17": "4d6"
+            }
+        },
+        "damageInflict": [
+            "psychic"
+        ],
+        "savingThrow": [
+            "intelligence"
+        ],
+        "miscTags": [
+            "SCL",
+            "SGT"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
+                    }
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Spirit Shroud",
+        "source": "TCE",
+        "page": 108,
+        "level": 3,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth spirits of the dead, which flit around you for the spell's duration. The spirits are intangible and invulnerable.",
+            "Until the spell ends, any attack you make deals {@damage 1d8} extra damage when you hit a creature within 10 feet of you. This damage is radiant, necrotic, or cold (your choice when you cast the spell). Any creature that takes this damage can't regain hit points until the start of your next turn.",
+            "In addition, any creature of your choice that you can see that starts its turn within 10 feet of you has its speed reduced by 10 feet until the start of your next turn."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 1d8|3,5,7,9|1d8} for every two slot levels above 3rd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "radiant",
+            "necrotic",
+            "cold"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Cleric",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Paladin",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Aberration",
+        "source": "TCE",
+        "page": 109,
+        "level": 4,
         "school": "C",
         "time": [
             {
@@ -37349,6 +44340,687 @@ export default [
         ],
         "range": {
             "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a pickled tentacle and an eyeball in a platinum-inlaid vial worth at least 400 gp",
+                "cost": 40000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth an aberrant spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Aberrant Spirit|TCE} stat block. When you cast the spell, choose Beholderkin, Slaad, or Star Spawn. The creature resembles an aberration of that kind, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Aberrant Mind",
+                        "source": "TCE"
+                    }
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Beast",
+        "source": "TCE",
+        "page": 109,
+        "level": 2,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a feather, tuft of fur, and fish tail inside a gilded acorn worth at least 200 gp",
+                "cost": 20000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a bestial spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Bestial Spirit|TCE} stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of your choice that is native to the chosen environment, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Celestial",
+        "source": "TCE",
+        "page": 110,
+        "level": 5,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a golden reliquary worth at least 500 gp",
+                "cost": 50000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a celestial spirit. It manifests in an angelic form in an unoccupied space that you can see within range. This corporeal form uses the {@creature Celestial Spirit|TCE} stat block. When you cast the spell, choose Avenger or Defender. Your choice determines the creature's attack in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Cleric",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Paladin",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Summon Construct",
+        "source": "TCE",
+        "page": 111,
+        "level": 4,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "an ornate stone and metal lockbox worth at least 400 gp",
+                "cost": 40000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth the spirit of a construct. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Construct Spirit|TCE} stat block. When you cast the spell, choose a material: Clay, Metal, or Stone. The creature resembles a golem or a modron (your choice) made of the chosen material, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                }
+            ],
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Sorcerer",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Clockwork Soul",
+                        "source": "TCE"
+                    }
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Elemental",
+        "source": "TCE",
+        "page": 111,
+        "level": 4,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "air, a pebble, ash, and water inside a gold-inlaid vial worth at least 400 gp",
+                "cost": 40000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth an elemental spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Elemental Spirit|TCE} stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromSubclass": [
+                {
+                    "class": {
+                        "name": "Warlock",
+                        "source": "PHB"
+                    },
+                    "subclass": {
+                        "name": "Fathomless",
+                        "source": "TCE"
+                    }
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Fey",
+        "source": "TCE",
+        "page": 112,
+        "level": 3,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a gilded flower worth at least 300 gp",
+                "cost": 30000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a fey spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Fey Spirit|TCE} stat block. When you cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a fey creature of your choice marked by the chosen mood, which determines one of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Druid",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Fiend",
+        "source": "TCE",
+        "page": 112,
+        "level": 6,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "humanoid blood inside a ruby vial worth at least 600 gp",
+                "cost": 60000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a fiendish spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Fiendish Spirit|TCE} stat block. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature resembles a fiend of the chosen type, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 7th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Shadowspawn",
+        "source": "TCE",
+        "page": 113,
+        "level": 3,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "tears inside a gem worth at least 300 gp",
+                "cost": 30000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a shadowy spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Shadow Spirit|TCE} stat block. When you cast the spell, choose an emotion: Fury, Despair, or Fear. The creature resembles a misshapen biped marked by the chosen emotion, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Summon Undead",
+        "source": "TCE",
+        "page": 114,
+        "level": 3,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a gilded skull worth at least 300 gp",
+                "cost": 30000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth an undead spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Undead Spirit|TCE} stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an undead creature with the chosen form, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Sword Burst",
+        "source": "TCE",
+        "page": 115,
+        "otherSources": [
+            {
+                "source": "SCAG",
+                "page": 143
+            }
+        ],
+        "level": 0,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "radius",
             "distance": {
                 "type": "feet",
                 "amount": 5
@@ -37363,7 +45035,7 @@ export default [
             }
         ],
         "entries": [
-            "You create a momentary circle of spectral blades that sweep around you. Each creature within range, other than you, must succeed on a Dexterity saving throw or take {@damage 1d6} force damage.",
+            "You create a momentary circle of spectral blades that sweep around you. All other creatures within 5 feet of you must succeed on a Dexterity saving throw or take {@damage 1d6} force damage.",
             "This spell's damage increases by {@dice 1d6} when you reach 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
         ],
         "scalingLevelDice": {
@@ -37390,25 +45062,194 @@ export default [
         "classes": {
             "fromClassList": [
                 {
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+                {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
                 },
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
                 },
                 {
                     "name": "Wizard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "SCAG"
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
     },
     {
-        "name": "Enter Mindscape",
-        "source": "Stream",
-        "level": 0,
-        "school": "P",
+        "name": "Tasha's Caustic Brew",
+        "source": "TCE",
+        "page": 115,
+        "level": 1,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "line",
+            "distance": {
+                "type": "feet",
+                "amount": 30
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a bit of rotten food"
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "A stream of acid emanates from you in a line 30 feet long and 5 feet wide in a direction you choose. Each creature in the line must succeed on a Dexterity saving throw or be covered in acid for the spell's duration or until a creature uses its action to scrape or wash the acid off itself or another creature. A creature covered in the acid takes {@damage 2d4} acid damage at start of each of its turns."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 2d4|1-9|2d4} for each slot level above 1st."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "acid"
+        ],
+        "savingThrow": [
+            "dexterity"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                }
+            ],
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Tasha's Mind Whip",
+        "source": "TCE",
+        "page": 115,
+        "level": 2,
+        "school": "E",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "round",
+                    "amount": 1
+                }
+            }
+        ],
+        "entries": [
+            "You psychically lash out at one creature you can see within range. The target must make an Intelligence saving throw. On a failed save, the target takes {@damage 3d6} psychic damage, and it can't take a reaction until the end of its next turn. Moreover, on its next turn, it must choose whether it gets a move, an action, or a bonus action; it gets only one of the three. On a successful save, the target takes half as much damage and suffers none of the spell's other effects."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "psychic"
+        ],
+        "savingThrow": [
+            "intelligence"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromClassListVariant": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                }
+            ]
+        },
+        "hasFluffImages": true
+    },
+    {
+        "name": "Tasha's Otherworldly Guise",
+        "source": "TCE",
+        "page": 116,
+        "level": 6,
+        "school": "T",
         "time": [
             {
                 "number": 1,
@@ -37421,38 +45262,77 @@ export default [
                 "type": "self"
             }
         },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "an object engraved with a symbol of the Outer Planes, worth at least 500 gp",
+                "cost": 50000
+            }
+        },
         "duration": [
             {
                 "type": "timed",
                 "duration": {
                     "type": "minute",
-                    "amount": 10
+                    "amount": 1
                 },
                 "concentration": true
             }
         ],
         "entries": [
-            "By shutting down your normal senses, you extend your mind into the psionics landscape around you. For the duration you can use a bonus action to sense the presence of creatures within a 60-foot cone. You learn the number of creatures within the cone and their creature type. You cannot detect undead or constructs with this spell.",
-            "This spell is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead,or 3 feet of wood or dirt.",
-            "This spell's duration cannot be ended due to damage."
+            "Uttering an incantation, you draw on the magic of the Lower Planes or Upper Planes (your choice) to transform yourself. You gain the following benefits until the spell ends:",
+            {
+                "type": "list",
+                "items": [
+                    "You are immune to fire and poison damage (Lower Planes) or radiant and necrotic damage (Upper Planes).",
+                    "You are immune to the {@condition poisoned} condition (Lower Planes) or the {@condition charmed} condition (Upper Planes).",
+                    "Spectral wings appear on your back, giving you a flying speed of 40 feet.",
+                    "You have a +2 bonus to AC.",
+                    "All your weapon attacks are magical, and when you make a weapon attack, you can use your spellcasting ability modifier, instead of Strength or Dexterity, for the attack and damage rolls.",
+                    "You can attack twice, instead of once, when you take the {@action Attack} action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that lets you attack more than once when you take the Attack action on your turn."
+                ]
+            }
         ],
-        "areaTags": [
-            "N"
+        "damageImmune": [
+            "fire",
+            "poison",
+            "radiant",
+            "necrotic"
+        ],
+        "conditionImmune": [
+            "charmed",
+            "poisoned"
+        ],
+        "miscTags": [
+            "MAC"
         ],
         "classes": {
-            "fromClassList": [
+            "fromClassListVariant": [
                 {
-                    "name": "Psion",
-                    "source": "Stream"
+                    "name": "Sorcerer",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB",
+                    "definedInSource": "TCE"
                 }
             ]
         }
     },
     {
-        "name": "Mind Fist",
-        "source": "Stream",
-        "level": 0,
-        "school": "P",
+        "name": "Intellect Fortress",
+        "source": "UA2020PsionicOptionsRevisited",
+        "page": 7,
+        "level": 4,
+        "school": "A",
         "time": [
             {
                 "number": 1,
@@ -37463,35 +45343,38 @@ export default [
             "type": "point",
             "distance": {
                 "type": "feet",
-                "amount": 60
+                "amount": 30
             }
+        },
+        "components": {
+            "v": true
         },
         "duration": [
             {
-                "type": "instant"
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
             }
         ],
         "entries": [
-            "You point at one creature you can see within range and project a focused beam of telekinetic power at it. The target must succeed on a Strength saving throw or take {@damage 1d6} bludgeoning damage and be pushed up to 15 feet away from you.",
-            "This spell's damage increases by one die when you reach 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
+            "For the duration, you or one willing creature you can see within range has resistance to psychic damage, as well as advantage on Intelligence, Wisdom, and Charisma saving throws."
         ],
-        "scalingLevelDice": {
-            "label": "bludgeoning damage",
-            "scaling": {
-                "1": "1d6",
-                "5": "2d6",
-                "11": "3d6",
-                "17": "4d6"
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
+                ]
             }
-        },
-        "damageInflict": [
-            "bludgeoning"
         ],
-        "savingThrow": [
-            "strength"
+        "damageResist": [
+            "psychic"
         ],
         "miscTags": [
-            "SCL",
             "SGT"
         ],
         "areaTags": [
@@ -37500,17 +45383,26 @@ export default [
         "classes": {
             "fromClassList": [
                 {
-                    "name": "Psion",
-                    "source": "Stream"
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
                 }
             ]
         }
     },
     {
-        "name": "Mind Strike",
-        "source": "Stream",
+        "name": "Mind Sliver",
+        "source": "UA2020PsionicOptionsRevisited",
+        "page": 7,
         "level": 0,
-        "school": "P",
+        "school": "E",
         "time": [
             {
                 "number": 1,
@@ -37524,22 +45416,29 @@ export default [
                 "amount": 60
             }
         },
+        "components": {
+            "v": true
+        },
         "duration": [
             {
-                "type": "instant"
+                "type": "timed",
+                "duration": {
+                    "type": "round",
+                    "amount": 1
+                }
             }
         ],
         "entries": [
-            "You point at one creature you can see within range, and a psychic bolt pierces its mind. The target must succeed on an Intelligence saving throw or take {@damage 1d10} psychic damage.",
-            "This spell's damage increases by one die when you reach 5th level ({@damage 2d10}), 11th level ({@damage 3d10}), and 17th level ({@damage 4d10})."
+            "You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must make an Intelligence saving throw. Unless the saving throw is successful, the target takes {@damage 1d6} psychic damage, and the first time it makes a saving throw before the end of your next turn, it must roll a {@dice d4} and subtract the number rolled from the save.",
+            "This spell's damage increases by {@dice 1d6} when you reach certain levels: 5th level ({@dice 2d6}), 11th level ({@dice 3d6}), and 17th level ({@dice 4d6})."
         ],
         "scalingLevelDice": {
             "label": "psychic damage",
             "scaling": {
-                "1": "1d10",
-                "5": "2d10",
-                "11": "3d10",
-                "17": "4d10"
+                "1": "1d6",
+                "5": "2d6",
+                "11": "3d6",
+                "17": "4d6"
             }
         },
         "damageInflict": [
@@ -37558,17 +45457,961 @@ export default [
         "classes": {
             "fromClassList": [
                 {
-                    "name": "Psion",
-                    "source": "Stream"
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
                 }
             ]
         }
     },
     {
-        "name": "Psychic Step",
-        "source": "Stream",
-        "level": 0,
-        "school": "P",
+        "name": "Mind Thrust",
+        "source": "UA2020PsionicOptionsRevisited",
+        "page": 7,
+        "level": 2,
+        "school": "E",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "round",
+                    "amount": 1
+                }
+            }
+        ],
+        "entries": [
+            "You thrust a lance of psychic disruption into the mind of one creature you can see within range. The target must make an Intelligence saving throw. On a failed save, the target takes {@damage 3d6} psychic damage, and it can't take a reaction until the end of its next turn. Moreover, on its next turn, it must choose whether it gets a move, an action, or a bonus action; it gets only one of the three. On a successful save, the target takes half as much damage and suffers none of the spell's other effects."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "psychic"
+        ],
+        "savingThrow": [
+            "intelligence"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Acid Stream",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 2,
+        "level": 1,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "line",
+            "distance": {
+                "type": "feet",
+                "amount": 30
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a bit of rotten food"
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "A stream of acid emanates from you in a line 30 feet long and 5 feet wide in a direction you choose. Each creature in the line must succeed on a Dexterity saving throw or be covered in acid for the spell's duration or until a creature uses its action to scrape or wash the acid off itself or another creature. A creature covered in the acid takes {@damage 3d4} acid damage at start of each of its turns."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 3d4|1-9|1d4} for each slot level above 1st."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "acid"
+        ],
+        "savingThrow": [
+            "dexterity"
+        ],
+        "areaTags": [
+            "L"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Otherworldly Form",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 2,
+        "level": 6,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "an object engraved with a symbol of the Outer Planes, worth at least 500 gp",
+                "cost": 50000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "Uttering an incantation, you draw on the magic of the Lower Planes or Upper Planes (your choice) to transform yourself. You gain the following benefits until the spell ends:",
+            {
+                "type": "list",
+                "items": [
+                    "You are immune to fire and poison damage (Lower Planes) or radiant and necrotic damage (Upper Planes).",
+                    "You are immune to the {@condition poisoned} condition (Lower Planes) or the {@condition charmed} condition (Upper Planes).",
+                    "Spectral wings appear on your back, giving you a flying speed of 40 feet.",
+                    "You have a +2 bonus to AC.",
+                    "All your weapon attacks are magical, and when you make a weapon attack, you can use your spellcasting ability modifier, instead of Strength or Dexterity, for the attack and damage rolls.",
+                    "You can attack twice, instead of once, when you take the Attack action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that gives you extra attacks."
+                ]
+            }
+        ],
+        "damageImmune": [
+            "fire",
+            "poison",
+            "radiant",
+            "necrotic"
+        ],
+        "conditionImmune": [
+            "poisoned",
+            "charmed"
+        ],
+        "miscTags": [
+            "MAC"
+        ],
+        "areaTags": [
+            "ST"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Cleric",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Spirit Shroud",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 2,
+        "level": 3,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth spirits of the dead, which flit around you for the spell's duration. The spirits are intangible and invulnerable, and they are good or evil (your choice).",
+            "Until the spell ends, any attack you make deals {@damage 1d8} extra damage when you hit a creature within 10 feet of you. This damage is radiant if the spirits are good and necrotic if they are evil. Any creature that takes this damage can't regain hit points until the start of your next turn.",
+            "In addition, any creature of your choice that you can see that starts its turn within 10 feet of you has its speed reduced by 10 feet until the start of your next turn."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the extra damage increases by {@scaledamage 1d8|3-9|1d8} for each slot level above 3rd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "radiant",
+            "necrotic",
+            "cold"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Cleric",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Paladin",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Aberrant Spirit",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 3,
+        "level": 4,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a pickled tentacle and an eyeball in a crystal vial worth at least 400 gp",
+                "cost": 40000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a spirit from the Far Realm or another alien realm of madness. The spirit manifests physically in an unoccupied space that you can see within range. This corporeal form uses the {@creature Aberrant Spirit|UA2020SpellsAndMagicTattoos} stat block. When you cast the spell, choose Beholderkin, Slaadi, or Star Spawn. The creature physically resembles your choice, which also determines some of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is friendly to you and your companions for the spell's duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don't issue any, it defends itself but otherwise takes no action."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Bestial Spirit",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 3,
+        "level": 2,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a feather, tuft of fur, and fish tail inside a gilded acorn worth at least 200 gp",
+                "cost": 20000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth the spirit of a beast. The spirit manifests physically in an unoccupied space that you can see within range. This corporeal form uses the {@creature Bestial Spirit|UA2020SpellsAndMagicTattoos} stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature physically resembles an animal of your choice that is native to the chosen environment, which also determines one of the movement modes in the creature's stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is friendly to you and your companions for the spell's duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don't issue any, it defends itself but otherwise takes no action."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Celestial Spirit",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 4,
+        "level": 5,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a golden reliquary worth at least 500 gp",
+                "cost": 50000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a spirit from the Upper Planes. The spirit manifests physically in an angelic form in an unoccupied space that you can see within range. This corporeal form uses the {@creature Celestial Spirit|UA2020SpellsAndMagicTattoos} stat block. When you cast the spell, choose Avenger or Defender. Your choice determines the creature's attack in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is friendly to you and your companions for the spell's duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don't issue any, it defends itself but otherwise takes no action."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 6th level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Cleric",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Paladin",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Elemental Spirit",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 4,
+        "level": 4,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "air, a pebble, ash, and water inside a crystal vial worth at least 400 gp",
+                "cost": 40000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a spirit from the Elemental Planes. The spirit manifests physically in an unoccupied space that you can see within range. This corporeal form uses the {@creature Elemental Spirit|UA2020SpellsAndMagicTattoos} stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature physically resembles a vaguely humanoid form wreathed in the chosen element, which also determines some of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is friendly to you and your companions for the spell's duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don't issue any, it defends itself but otherwise takes no action."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Fey Spirit",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 5,
+        "level": 3,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a gilded flower worth at least 300 gp",
+                "cost": 30000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a spirit from the Feywild. The spirit manifests physically in an unoccupied space that you can see within range. This corporeal form uses the {@creature Fey Spirit|UA2020SpellsAndMagicTattoos} stat block. When you cast the spell, choose a mood: Deceitful, Furious, or Joyful. The creature physically resembles a satyr, a dryad, or an elf (your choice) marked by the chosen mood, which also determines one of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is friendly to you and your companions for the spell's duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don't issue any, it defends itself but otherwise takes no action."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Fiendish Spirit",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 6,
+        "level": 6,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "humanoid blood inside a ruby vial worth at least 600 gp",
+                "cost": 60000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a fiendish spirit from the Lower Planes. The spirit manifests physically in an unoccupied space that you can see within range. This corporeal form uses the {@creature Fiendish Spirit|UA2020SpellsAndMagicTattoos} stat block. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature physically resembles a fiend of the chosen type, which also determines some of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is friendly to you and your companions for the spell's duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don't issue any, it defends itself but otherwise takes no action."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 7th level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Shadow Spirit",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 7,
+        "level": 3,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "tears inside a crystal vial worth at least 300 gp",
+                "cost": 30000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a shadowy spirit from the Shadowfell. The spirit manifests physically in an unoccupied space that you can see within range. This corporeal form uses the {@creature Shadow Spirit|UA2020SpellsAndMagicTattoos} stat block. When you cast the spell, choose an emotion: Fury, Despair, or Fear. The creature physically resembles a misshapen humanoid marked by the chosen emotion, which also determines some of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is friendly to you and your companions for the spell's duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don't issue any, it defends itself but otherwise takes no action."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Undead Spirit",
+        "source": "UA2020SpellsAndMagicTattoos",
+        "page": 7,
+        "level": 3,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a gilded humanoid skull worth at least 300 gp",
+                "cost": 30000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a restless spirit from beyond the grave. The spirit manifests physically in an unoccupied space that you can see within range. This corporeal form uses the {@creature Undead Spirit|UA2020SpellsAndMagicTattoos} stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The creature physically resembles a humanoid with the chosen form, which also determines some of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is friendly to you and your companions for the spell's duration. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys verbal commands that you issue to it (no action required by you). If you don't issue any, it defends itself but otherwise takes no action."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Draconic Transformation",
+        "source": "UA2021DraconicOptions",
+        "page": 5,
+        "level": 7,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a statuette of a dragon, worth at least 500 gp",
+                "cost": 50000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "With a roar, you draw on the magic of dragons to transform yourself, taking on various draconic features. You gain the following benefits until the spell ends:",
+            {
+                "type": "list",
+                "items": [
+                    "You have {@sense blindsight} with a range of 30 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're {@condition blinded} or in darkness. Moreover, you can see an {@condition invisible} creature, unless the creature successfully hides from you.",
+                    "Incorporeal wings sprout from your back, giving you a flying speed of 40 feet.",
+                    "When you cast this spell, and as a bonus action on subsequent turns for the duration, you can exhale a breath of shimmering energy in a 30- foot cone. Each creature in the area must make a Dexterity saving throw, taking {@damage 3d8} force damage on a failed save or half as much damage on a successful one."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "conditionInflict": [
+            "blinded",
+            "invisible"
+        ],
+        "savingThrow": [
+            "dexterity"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Fizban's Platinum Shield",
+        "source": "UA2021DraconicOptions",
+        "page": 5,
+        "level": 6,
+        "school": "A",
         "time": [
             {
                 "number": 1,
@@ -37582,24 +46425,779 @@ export default [
                 "amount": 60
             }
         },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a platinum-plated dragon scale, worth at least 500 gp",
+                "cost": 50000
+            }
+        },
         "duration": [
             {
                 "type": "timed",
                 "duration": {
-                    "type": "round",
+                    "type": "minute",
                     "amount": 1
-                }
+                },
+                "concentration": true
             }
         ],
         "entries": [
-            "You alter the composition of your body in a subtle manner, allowing you to take seemingly impossible steps.",
-            "Until the end of your turn, you speed increases by 10 feet and you can walk across vertical surfaces without falling. If you end your turn on such a surface, you immediately fall."
+            "You create a field of silvery light that surrounds a creature of your choice within range (you can choose yourself). The field sheds dim light out to 5 feet.",
+            "As a bonus action on subsequent turns, you can move the field to another creature within 60 feet of the field.",
+            "The creature protected by the field gains the following benefits:",
+            {
+                "type": "list",
+                "items": [
+                    "The creature has half cover.",
+                    "The creature has resistance to acid, cold, fire, lightning, and poison damage.",
+                    "If the creature is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the creature instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+                ]
+            }
+        ],
+        "damageResist": [
+            "acid",
+            "cold",
+            "fire",
+            "lightning",
+            "poison"
+        ],
+        "savingThrow": [
+            "dexterity"
         ],
         "classes": {
             "fromClassList": [
                 {
-                    "name": "Psion",
-                    "source": "Stream"
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Flame Stride",
+        "source": "UA2021DraconicOptions",
+        "page": 6,
+        "level": 3,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "bonus"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "The billowing flames of a dragon cover your feet, granting you explosive speed. For the duration, your speed increases by 20 feet and moving doesn't provoke opportunity attacks.",
+            "When you move within 5 feet of a creature or object that isn't being worn or carried, it takes {@damage 1d6} fire damage from your trail of heat. A creature or object can take this damage only once during a turn."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, increase your speed by 5 feet for each spell slot level above 3rd. Additionally, the spell deals an additional {@damage 1d6} fire damage for each slot level above 3rd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "fire"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+                {
+                    "name": "Ranger",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Icingdeath's Frost",
+        "source": "UA2021DraconicOptions",
+        "page": 6,
+        "level": 2,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "cone",
+            "distance": {
+                "type": "feet",
+                "amount": 15
+            }
+        },
+        "components": {
+            "s": true,
+            "m": "a vial of meltwater"
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "A burst of icy cold energy emanates from you in a 30-foot cone. Each creature in that area must make a Constitution saving throw. On a failed save, a creature takes {@damage 3d8} cold damage and is covered in ice for 1 minute or until a creature uses its action to break the ice off itself or another creature. A creature covered in ice has its speed reduced to 0. On a successful save, a creature takes half as much damage with no additional effects."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 3rd level or higher, increase the cold damage by {@dice 1d8} for each slot level above 2nd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "cold"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Nathair's Mischief",
+        "source": "UA2021DraconicOptions",
+        "page": 6,
+        "level": 2,
+        "school": "I",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "s": true,
+            "m": "a piece of crust from an apple pie"
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You fill a 20-foot cube centered on a point you choose within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced. At the start of each of your turns, you can move the cube up to 10 feet and reroll on the table.",
+            {
+                "type": "table",
+                "caption": "Mischievous Surge",
+                "colLabels": [
+                    "d4",
+                    "Effect"
+                ],
+                "colStyles": [
+                    "col-2 text-center",
+                    "col-12"
+                ],
+                "rows": [
+                    [
+                        "1",
+                        "The smell of apple pie fills the air, and each creature in the cube must succeed on a Wisdom saving throw or become {@condition charmed} by you until the start of your next turn. "
+                    ],
+                    [
+                        "2",
+                        "Bouquets of flowers appear all around, and each creature in the cube must succeed on a Dexterity saving throw or be {@condition blinded} until the start of your next turn as the flowers spray water in their faces."
+                    ],
+                    [
+                        "3",
+                        "Each creature in the cube must succeed on a Wisdom saving throw or begin giggling until the start of your next turn. A giggling creature is {@condition incapacitated} and uses all its movement to move in a random direction."
+                    ],
+                    [
+                        "4",
+                        "Drops of molasses appear and hover in the cube, turning it into {@quickref difficult terrain||3} until the start of your next turn."
+                    ]
+                ]
+            }
+        ],
+        "conditionInflict": [
+            "blinded",
+            "charmed",
+            "incapacitated"
+        ],
+        "savingThrow": [
+            "dexterity",
+            "wisdom"
+        ],
+        "miscTags": [
+            "RO"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Raulothim's Psychic Lance",
+        "source": "UA2021DraconicOptions",
+        "page": 6,
+        "level": 4,
+        "school": "E",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 120
+            }
+        },
+        "components": {
+            "v": true
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You unleash a shimmering lance of psychic power from your forehead at a creature that you can see within range. Alternatively, you can utter the creature's name. If the named target is within range, it gains no benefit from cover or invisibility as the lance homes in on it. If the named target isn't within range, the lance dissipates, and the spell slot is not expended.",
+            "The target must succeed on an Intelligence saving throw or take {@damage 10d6} psychic damage and be {@condition incapacitated} until the start of your next turn."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@dice 1d6} for each slot level above 4th."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "psychic"
+        ],
+        "conditionInflict": [
+            "incapacitated"
+        ],
+        "savingThrow": [
+            "intelligence"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Draconic Spirit",
+        "source": "UA2021DraconicOptions",
+        "page": 7,
+        "level": 5,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "an art object from a dragon's hoard, worth at least 500 gp",
+                "cost": 50000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a draconic spirit. It manifests in an unoccupied space that you can see within range.",
+            "This corporeal form uses the {@creature Draconic Spirit|UA2021DraconicOptions} stat block. When you cast this spell, choose a family of dragon: Chromatic, Gem, or Metallic. The creature resembles a dragon of the chosen family, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
+            "The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT",
+            "SMN"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Antagonize",
+        "source": "UA2022WondersOfTheMultiverse",
+        "page": 10,
+        "level": 3,
+        "school": "E",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 30
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a playing card depicting a rogue"
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You whisper magical words that antagonize one creature of your choice within range. The target must make a Wisdom saving throw. On a failed save, it takes {@damage 4d4} psychic damage and must immediately use its reaction, if available, to make a melee attack against another creature of your choice that you can see. If no other creature is within range, the target has disadvantage on the next attack roll it makes before the start of your next turn."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@dice 1d4} for each slot level above 4th."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "psychic"
+        ],
+        "savingThrow": [
+            "wisdom"
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "House of Cards",
+        "source": "UA2022WondersOfTheMultiverse",
+        "page": 10,
+        "level": 3,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "minute"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "touch"
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a deck of cards"
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 24
+                }
+            }
+        ],
+        "entries": [
+            "You touch the ground and conjure forth a defensive structure made of enormous playing cards. The structure rises with you at its center, harmlessly lifting you and any creatures in the area. The house of cards has a square base that is 30 feet on each side, and it has three floors with 10- foot-high ceilings. The second floor is 20 feet on each side, and the top floor is 10 feet on each side—both centered above the bottom floor. Ramps connect the interior of each floor, and empty doorframes connect the interior and exterior of each level. Creatures inside or on top of the structure have half cover.",
+            "Each card that comprises the house is 5 feet wide and 10 feet tall and is very fragile. A card has AC 10 and 1 hit point. The cards are immune to poison and psychic damage. Reducing a card to 0 hit points destroys it. Every time a card is destroyed, roll {@dice 1d6}. If you roll a 5 or a 6, the house collapses, ending the spell.",
+            "The house and all its cards vanish when the spell ends."
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Spirit of Death",
+        "source": "UA2022WondersOfTheMultiverse",
+        "page": 10,
+        "level": 4,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 60
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a gilded playing card depicting an avatar of death worth at least 400 gp",
+                "cost": 40000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a spirit that embodies death itself. Choose a creature you can see within range. The spirit manifests in an unoccupied space that you can see within 10 feet of the target, and the target becomes haunted by the spirit. The spirit uses the {@creature Reaper Spirit|UA2022WondersOfTheMultiverse} stat block. The spirit disappears when it or the haunted creature is reduced to 0 hit points, or when the spell ends.",
+            "The reaper spirit is an ally to you and your companions. In combat, the spirit shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you), but it will only attack the haunted creature. If you don't issue the spirit any commands, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 5th level or higher, use the higher level wherever the spell's level appears in the stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Spray of Cards",
+        "source": "UA2022WondersOfTheMultiverse",
+        "page": 11,
+        "level": 2,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "cone",
+            "distance": {
+                "type": "feet",
+                "amount": 15
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "a deck of cards"
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "entries": [
+            "You spray spectral cards from your hands or sleeve; the cards blind or slash at your enemies, and then vanish. Choose one of the following effects for the cards.",
+            {
+                "type": "entries",
+                "name": "Blinding Cards",
+                "entries": [
+                    "Each creature in a 15-foot cone must succeed on a Wisdom saving throw or be {@condition blinded} until the end of their next turn."
+                ]
+            },
+            {
+                "type": "entries",
+                "name": "Cutting Cards",
+                "entries": [
+                    "Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes {@damage 2d10} force damage on a failed save or half as much damage on a successful one."
+                ]
+            }
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the damage of cutting cards increases by {@dice 1d10} for every two slot levels above 2nd."
+                ]
+            }
+        ],
+        "damageInflict": [
+            "force"
+        ],
+        "conditionInflict": [
+            "blinded"
+        ],
+        "savingThrow": [
+            "dexterity",
+            "wisdom"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Bard",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Summon Warrior Spirit",
+        "source": "UA2022WondersOfTheMultiverse",
+        "page": 11,
+        "level": 3,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 90
+            }
+        },
+        "components": {
+            "v": true,
+            "s": true,
+            "m": {
+                "text": "a gilded playing card depicting a knight worth at least 300 gp",
+                "cost": 30000
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "hour",
+                    "amount": 1
+                },
+                "concentration": true
+            }
+        ],
+        "entries": [
+            "You call forth a warrior spirit from the legendary Deck of Many Things. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Warrior Spirit|UA2022WondersOfTheMultiverse} stat block. When you cast the spell, choose a type of warrior: barbarian, fighter, or monk. The warrior resembles a humanoid armed appropriately to the chosen class, which determines certain traits in its stat block. The warrior disappears when it drops to 0 hit points or when the spell ends.",
+            "The warrior is an ally to you and your companions. In combat, the warrior shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "When you cast this spell using a spell slot of 4th level or higher, the creature assumes the higher level for that casting wherever it uses the spell's level in its stat block."
+                ]
+            }
+        ],
+        "miscTags": [
+            "SGT"
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
                 }
             ]
         }
@@ -37637,7 +47235,7 @@ export default [
             }
         ],
         "entries": [
-            "You channel arcane energy into one simple or martial weapon you're holding, and choose one damage type: acid, cold, fire, lightning, poison, or thunder. Until the spell ends, you deal an extra {@damage 1d6} damage of the chosen type to any target you hit with the weapon. If the weapon isn't magical, it becomes a magic weapon for the spell's duration.",
+            "You channel arcane energy into one {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} you're holding, and choose one damage type: acid, cold, fire, lightning, poison, or thunder. Until the spell ends, you deal an extra {@damage 1d6} damage of the chosen type to any target you hit with the weapon. If the weapon isn't magical, it becomes a magic weapon for the spell's duration.",
             "As a bonus action, you can change the damage type, choosing from the options above."
         ],
         "entriesHigherLevel": [
@@ -37842,6 +47440,9 @@ export default [
             "You create a faintly shimmering barrier of protective psychic power around you. For the duration, you have advantage on all saving throws.",
             "When another creature that you can see within 30 feet of you fails a saving throw, you can use your reaction to allow them to reroll the save. They must use the new roll."
         ],
+        "miscTags": [
+            "SGT"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -37969,8 +47570,8 @@ export default [
             "intelligence"
         ],
         "miscTags": [
-            "SGT",
-            "SCL"
+            "SCL",
+            "SGT"
         ],
         "areaTags": [
             "ST"
@@ -38121,6 +47722,9 @@ export default [
         ],
         "savingThrow": [
             "dexterity"
+        ],
+        "miscTags": [
+            "FMV"
         ],
         "areaTags": [
             "N"
@@ -38324,7 +47928,7 @@ export default [
                 ]
             }
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "classes": {
@@ -38625,6 +48229,9 @@ export default [
                 ]
             }
         ],
+        "miscTags": [
+            "SMN"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -38759,6 +48366,9 @@ export default [
         "savingThrow": [
             "wisdom",
             "dexterity"
+        ],
+        "miscTags": [
+            "RO"
         ],
         "areaTags": [
             "S"
@@ -39418,6 +49028,7 @@ export default [
             "intelligence"
         ],
         "miscTags": [
+            "SCL",
             "SGT"
         ],
         "areaTags": [
@@ -39542,7 +49153,7 @@ export default [
                 "type": "entries",
                 "name": "Atonement",
                 "entries": [
-                    "You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom (Insight) check. On a success, you restore the target to its original alignment."
+                    "You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom ({@skill Insight}) check. On a success, you restore the target to its original alignment."
                 ]
             },
             {
@@ -39587,6 +49198,12 @@ export default [
                     "You touch adult humanoids willing to be bonded together in marriage. For the next 24 hours, each target gains a +2 bonus to AC and saving throws while they are within 30 feet of each other. A creature can benefit from this ceremony just once."
                 ]
             }
+        ],
+        "affectsCreatureType": [
+            "humanoid"
+        ],
+        "miscTags": [
+            "MAC"
         ],
         "areaTags": [
             "ST"
@@ -39642,8 +49259,8 @@ export default [
                     "Damage Type"
                 ],
                 "colStyles": [
-                    "col-1 text-center",
-                    "col-11"
+                    "col-2 text-center",
+                    "col-10"
                 ],
                 "rows": [
                     [
@@ -39743,6 +49360,9 @@ export default [
         ],
         "spellAttack": [
             "R"
+        ],
+        "miscTags": [
+            "RO"
         ],
         "areaTags": [
             "ST"
@@ -40106,6 +49726,21 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "construct",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "monstrosity",
+            "ooze",
+            "plant",
+            "undead"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -40220,9 +49855,9 @@ export default [
         ],
         "entries": [
             "While you cast this spell, you use the cord or rope to create a circle with a 5-foot radius on a flat surface within your reach. When you finish casting, the cord or rope disappears to become a magical trap.",
-            "The trap is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found. The trap triggers when a Small creature or larger moves into the area protected by the spell.",
+            "The trap is nearly invisible and requires a successful Intelligence ({@skill Investigation}) check against your spell save DC to be found. The trap triggers when a Small creature or larger moves into the area protected by the spell.",
             "The triggering creature must succeed on a Dexterity saving throw or fall {@condition prone} and be hoisted into the air until it hangs upside down 3 feet above the protected surface, where it is {@condition restrained}.",
-            "The {@condition restrained} creature can make a Dexterity saving throw with disadvantage at the end of each of its turns and ends the {@condition restrained} effect on a success. Alternatively, another creature that can reach the {@condition restrained} creature can use an action to make an Intelligence (Arcana) check against your spell save DC. On a success, the {@condition restrained} effect also ends."
+            "The {@condition restrained} creature can make a Dexterity saving throw with disadvantage at the end of each of its turns and ends the {@condition restrained} effect on a success. Alternatively, another creature that can reach the {@condition restrained} creature can use an action to make an Intelligence ({@skill Arcana}) check against your spell save DC. On a success, the {@condition restrained} effect also ends."
         ],
         "conditionInflict": [
             "prone",
@@ -40231,7 +49866,7 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "areaTags": [
@@ -40471,6 +50106,9 @@ export default [
         "entries": [
             "You touch one creature, imbuing it with vitality. If the target has at least 1 hit point, it gains a number of temporary hit points equal to {@dice 1d4} + your spellcasting ability modifier. The temporary hit points are lost when the spell ends."
         ],
+        "miscTags": [
+            "THP"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -40519,7 +50157,7 @@ export default [
             {
                 "type": "list",
                 "items": [
-                    "If there are any tracks on the ground within range, you know where they are, and you make Wisdom (Survival) checks to follow these tracks with advantage for 1 hour or until you cast this spell again.",
+                    "If there are any tracks on the ground within range, you know where they are, and you make Wisdom ({@skill Survival}) checks to follow these tracks with advantage for 1 hour or until you cast this spell again.",
                     "If there is edible forage within range, you know it and where to find it.",
                     "If there is clean drinking water within range, you know it and where to find it.",
                     "If there is suitable shelter for you and your companions with range, you know it and where to find.",
@@ -40624,8 +50262,8 @@ export default [
             "As part of casting the spell, you can scribe a circle on the ground using the blood of an intelligent humanoid slain within the past 24 hours. The circle is large enough to encompass your space. The summoned {@creature barlgura} cannot cross the circle or target anyone in it while the spell lasts."
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -40684,12 +50322,12 @@ export default [
             "If the check fails, the spell no longer requires concentration and the demon is no longer under your control. The {@creature hezrou} then focuses on devouring any corpses it can see. If there are no such meals at hand, it attacks the nearest creatures and eats anything it kills. If its hit points are reduced to below half its hit point maximum, it returns to the Abyss.",
             "As part of casting the spell, you can scribe a circle on the ground using the blood of an intelligent humanoid slain within the past 24 hours. The circle is large enough to encompass your space. The summoned {@creature hezrou} cannot cross the circle or target anyone in it while the spell lasts."
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "charisma"
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -40753,8 +50391,8 @@ export default [
             }
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -40808,12 +50446,12 @@ export default [
             "Roll initiative for the {@creature shadow demon}, which has its own turns. You can issue orders to the {@creature shadow demon}, and it obeys you as long as it can attack a creature on each of its turns and does not start its turn in an area of bright light. If either of these conditions is not met, the {@creature shadow demon} immediately makes a Charisma check contested by your Charisma check. If you fail the check, the spell no longer requires concentration and the demon is no longer under your control. The demon automatically succeeds on the check if it is more than 100 feet away from you.",
             "As part of casting the spell, you can scribe a circle on the ground using the blood of an intelligent humanoid slain within the past 24 hours. The circle is large enough to encompass your space. The summoned {@creature shadow demon} cannot cross the circle or target anyone in it while the spell lasts."
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "charisma"
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -40872,12 +50510,12 @@ export default [
             "If the check fails, the spell no longer requires concentration and the {@creature vrock} is no longer under your control. The {@creature vrock} takes no actions on its next turn and uses its telepathy to tell any creature it can see that it will fight in exchange for treasure. The creature that gives the {@creature vrock} the most expensive gem can command it for the next {@dice 1d6} rounds. At the end of that time, it offers the bargain again. If no one offers the {@creature vrock} treasure before its next turn begins, it attacks the nearest creatures for {@dice 1d6} rounds before returning to the Abyss.",
             "As part of casting the spell, you can scribe a circle on the ground using the blood of an intelligent humanoid slain within the past 24 hours. The circle is large enough to encompass your space. The summoned {@creature vrock} cannot cross the circle or target anyone in it while the spell lasts."
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "charisma"
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -40954,7 +50592,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -41039,7 +50678,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -41158,6 +50797,9 @@ export default [
         "conditionInflict": [
             "charmed"
         ],
+        "affectsCreatureType": [
+            "beast"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -41212,7 +50854,7 @@ export default [
             }
         ],
         "entries": [
-            "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target the ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius that lasts until the rubble is cleared. Each 5-foot-diameter portion of the area requires at least 1 minute to clear by hand.",
+            "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target the ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of {@quickref difficult terrain||3} with a 10-foot radius that lasts until the rubble is cleared. Each 5-foot-diameter portion of the area requires at least 1 minute to clear by hand.",
             "If a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save.",
             "If a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes {@damage 6d6} bludgeoning damage and is {@condition restrained}, pinched between the pillar and the obstacle. The {@condition restrained} creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's save DC. On a success, the creature is no longer {@condition restrained} and must either move off the pillar or fall off it."
         ],
@@ -41234,7 +50876,7 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength",
             "dexterity"
         ],
@@ -41323,7 +50965,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -41401,7 +51043,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -41456,6 +51098,20 @@ export default [
         "savingThrow": [
             "wisdom"
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "miscTags": [
             "SGT"
         ],
@@ -41476,11 +51132,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -41526,7 +51184,7 @@ export default [
                 "type": "entries",
                 "name": "Atonement",
                 "entries": [
-                    "You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom (Insight) check. On a successful check, you restore the target to its original alignment."
+                    "You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom ({@skill Insight}) check. On a successful check, you restore the target to its original alignment."
                 ]
             },
             {
@@ -41565,6 +51223,12 @@ export default [
                 ]
             }
         ],
+        "affectsCreatureType": [
+            "humanoid"
+        ],
+        "miscTags": [
+            "MAC"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -41582,7 +51246,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -41630,8 +51295,8 @@ export default [
                     "Damage Type"
                 ],
                 "colStyles": [
-                    "col-1 text-center",
-                    "col-11"
+                    "col-2 text-center",
+                    "col-10"
                 ],
                 "rows": [
                     [
@@ -41733,6 +51398,9 @@ export default [
         "spellAttack": [
             "R"
         ],
+        "miscTags": [
+            "RO"
+        ],
         "areaTags": [
             "ST"
         ],
@@ -41829,18 +51497,6 @@ export default [
                     "name": "Wizard",
                     "source": "PHB"
                 }
-            ],
-            "fromSubclass": [
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Beauty (Twitter)",
-                        "source": "Twitter"
-                    }
-                }
             ]
         }
     },
@@ -41918,7 +51574,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Control Winds",
@@ -42102,7 +51759,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -42157,7 +51814,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -42211,6 +51869,9 @@ export default [
         ],
         "spellAttack": [
             "R"
+        ],
+        "miscTags": [
+            "LGT"
         ],
         "areaTags": [
             "ST"
@@ -42294,7 +51955,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Dawn",
@@ -42344,6 +52006,9 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "miscTags": [
+            "LGTS"
+        ],
         "areaTags": [
             "Y"
         ],
@@ -42361,11 +52026,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Paladin",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -42480,7 +52147,7 @@ export default [
         "entries": [
             "You invoke the spirits of nature to protect an area outdoors or underground. The area can be as small as a 30-foot cube or as large as a 90-foot cube. Buildings and other structures are excluded from the affected area. If you cast this spell in the same area every day for a year, the spell lasts until dispelled.",
             "The spell creates the following effects within the area. When you cast this spell, you can specify creatures as friends who are immune to the effects. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects.",
-            "The entire warded area radiates magic. A dispel magic cast on the area, if successful, removes only one of the following effects, not the entire area. That spell's caster chooses which effect to end. Only when all its effects are gone is this spell dispelled.",
+            "The entire warded area radiates magic. A {@spell dispel magic} cast on the area, if successful, removes only one of the following effects, not the entire area. That spell's caster chooses which effect to end. Only when all its effects are gone is this spell dispelled.",
             {
                 "type": "entries",
                 "name": "Solid Fog",
@@ -42492,14 +52159,14 @@ export default [
                 "type": "entries",
                 "name": "Grasping Undergrowth",
                 "entries": [
-                    "You can fill any number of 5-foot squares on the ground that aren't filled with fog with grasping weeds and vines, as if they were affected by an entangle spell. To a creature immune to this effect, the weeds and vines feel soft and reshape themselves to serve as temporary seats or beds."
+                    "You can fill any number of 5-foot squares on the ground that aren't filled with fog with grasping weeds and vines, as if they were affected by an {@spell entangle} spell. To a creature immune to this effect, the weeds and vines feel soft and reshape themselves to serve as temporary seats or beds."
                 ]
             },
             {
                 "type": "entries",
                 "name": "Grove Guardians",
                 "entries": [
-                    "You can animate up to four trees in the area, causing them to uproot themselves from the ground. These trees have the same statistics as an awakened tree, which appears in the Monster Manual, except they can't speak, and their bark is covered with druidic symbols. If any creature not immune to this effect enters the warded area, the grove guardians fight until they have driven off or slain the intruders. The grove guardians also obey your spoken commands (no action required by you) that you issue while in the area. If you don't give them commands and no intruders are present, the grove guardians do nothing. The grove guardians can't leave the warded area. When the spell ends, the magic animating them disappears, and the trees take root again if possible."
+                    "You can animate up to four trees in the area, causing them to uproot themselves from the ground. These trees have the same statistics as an {@creature awakened tree}, which appears in the Monster Manual, except they can't speak, and their bark is covered with druidic symbols. If any creature not immune to this effect enters the warded area, the grove guardians fight until they have driven off or slain the intruders. The grove guardians also obey your spoken commands (no action required by you) that you issue while in the area. If you don't give them commands and no intruders are present, the grove guardians do nothing. The grove guardians can't leave the warded area. When the spell ends, the magic animating them disappears, and the trees take root again if possible."
                 ]
             },
             {
@@ -42512,15 +52179,16 @@ export default [
             {
                 "type": "list",
                 "items": [
-                    "A constant gust of wind in two locations of your choice",
-                    "Spike growth in one location of your choice",
-                    "Wind wall in two locations of your choice"
+                    "A constant {@spell gust of wind} in two locations of your choice",
+                    "{@spell Spike growth} in one location of your choice",
+                    "{@spell Wind wall} in two locations of your choice"
                 ]
             },
-            "To a creature immune to this effect, the winds are a fragrant, gentle breeze, and the area of spike growth is harmless."
+            "To a creature immune to this effect, the winds are a fragrant, gentle breeze, and the area of {@spell spike growth} is harmless."
         ],
         "miscTags": [
-            "PRM"
+            "PRM",
+            "SMN"
         ],
         "areaTags": [
             "C",
@@ -42596,6 +52264,7 @@ export default [
             "strength"
         ],
         "miscTags": [
+            "FMV",
             "SGT"
         ],
         "classes": {
@@ -42650,7 +52319,7 @@ export default [
             }
         ],
         "entries": [
-            "You cause a tremor in the ground within range. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes {@damage 1d6} bludgeoning damage and is knocked {@condition prone}. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared, with each 5-foot-diameter portion requiring at least 1 minute to clear by hand."
+            "You cause a tremor in the ground within range. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes {@damage 1d6} bludgeoning damage and is knocked {@condition prone}. If the ground in that area is loose earth or stone, it becomes {@quickref difficult terrain||3} until cleared, with each 5-foot-diameter portion requiring at least 1 minute to clear by hand."
         ],
         "entriesHigherLevel": [
             {
@@ -42852,7 +52521,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -42997,18 +52666,6 @@ export default [
                     "name": "Wizard",
                     "source": "PHB"
                 }
-            ],
-            "fromSubclass": [
-                {
-                    "class": {
-                        "name": "Cleric",
-                        "source": "PHB"
-                    },
-                    "subclass": {
-                        "name": "Darkness (Twitter)",
-                        "source": "Twitter"
-                    }
-                }
             ]
         }
     },
@@ -43048,7 +52705,7 @@ export default [
             }
         ],
         "entries": [
-            "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes {@damage 3d12} bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand."
+            "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes {@damage 3d12} bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes {@quickref difficult terrain||3} until cleared. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand."
         ],
         "entriesHigherLevel": [
             {
@@ -43086,7 +52743,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Far Step",
@@ -43123,7 +52781,8 @@ export default [
             "You teleport up to 60 feet to an unoccupied space you can see. On each of your turns before the spell ends, you can use a bonus action to teleport in this way again."
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "TP"
         ],
         "classes": {
             "fromClassList": [
@@ -43146,6 +52805,12 @@ export default [
         "name": "Find Greater Steed",
         "source": "XGE",
         "page": 156,
+        "additionalSources": [
+            {
+                "source": "FTD",
+                "page": 190
+            }
+        ],
         "level": 4,
         "school": "C",
         "time": [
@@ -43174,8 +52839,17 @@ export default [
             "You summon a spirit that assumes the form of a loyal, majestic mount. Appearing in an unoccupied space within range, the spirit takes on a form you choose: a {@creature griffon}, a {@creature pegasus}, a {@creature peryton}, a {@creature dire wolf}, a {@creature rhinoceros}, or a {@creature saber-toothed tiger}. The creature has the statistics provided in the Monster Manual for the chosen form, though it is a celestial, a fey, or a fiend (your choice) instead of its normal creature type. Additionally, if it has an Intelligence score of 5 or lower, its Intelligence becomes 6, and it gains the ability to understand one language of your choice that you speak.",
             "You control the mount in combat. While the mount is within 1 mile of you, you can communicate with it telepathically. While mounted on it, you can make any spell you cast that targets only you also target the mount.",
             "The mount disappears temporarily when it drops to 0 hit points or when you dismiss it as an action. Casting this spell again re-summons the bonded mount, with all its hit points restored and any conditions removed.",
-            "You can't have more than one mount bonded by this spell or find steed at the same time. As an action, you can release a mount from its bond, causing it to disappear permanently.",
-            "Whenever the mount disappears, it leaves behind any objects it was wearing or carrying."
+            "You can't have more than one mount bonded by this spell or {@spell find steed} at the same time. As an action, you can release a mount from its bond, causing it to disappear permanently.",
+            "Whenever the mount disappears, it leaves behind any objects it was wearing or carrying.",
+            {
+                "type": "inset",
+                "source": "FTD",
+                "page": 190,
+                "name": "Dragonnel Steeds",
+                "entries": [
+                    "With the DM's permission, a paladin can summon a spirit in the form of a {@creature dragonnel|ftd} using the find greater steed spell, which appears in {@i Xanathar's Guide to Everything}."
+                ]
+            }
         ],
         "miscTags": [
             "PRM",
@@ -43188,7 +52862,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Flame Arrows",
@@ -43267,7 +52942,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -43356,7 +53031,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -43423,15 +53098,15 @@ export default [
                     "You gain 10 temporary hit points.",
                     "You make Constitution saving throws with advantage.",
                     "You make Dexterity- and Wisdom-based attack rolls with advantage.",
-                    "While you are on the ground, the ground within 15 feet of you is difficult terrain for your enemies."
+                    "While you are on the ground, the ground within 15 feet of you is {@quickref difficult terrain||3} for your enemies."
                 ]
             }
         ],
         "damageInflict": [
             "force"
         ],
-        "savingThrow": [
-            "constitution"
+        "miscTags": [
+            "THP"
         ],
         "classes": {
             "fromClassList": [
@@ -43461,6 +53136,10 @@ export default [
             },
             {
                 "source": "ERLW",
+                "page": 50
+            },
+            {
+                "source": "TCE",
                 "page": 50
             }
         ],
@@ -43503,6 +53182,7 @@ export default [
             "strength"
         ],
         "miscTags": [
+            "FMV",
             "SGT"
         ],
         "areaTags": [
@@ -43527,7 +53207,7 @@ export default [
         "races": [
             {
                 "name": "Half-Elf (Mark of Storm)",
-                "source": "ERLW",
+                "source": "TCE",
                 "baseName": "Half-Elf",
                 "baseSource": "PHB"
             }
@@ -43568,7 +53248,7 @@ export default [
         ],
         "entries": [
             "You call forth a nature spirit to soothe the wounded. The intangible spirit appears in a space that is a 5-foot cube you can see within range. The spirit looks like a transparent beast or fey (your choice).",
-            "Until the spell ends, whenever you or a creature you can see moves into the spirit's space for the first time on a turn or starts its turn there, you can cause the spirit to restore {@dice 1d6} hit points to that creature (no action required). The spirit can't heal constructs or undead.",
+            "Until the spell ends, whenever you or a creature you can see moves into the spirit's space for the first time on a turn or starts its turn there, you can cause the spirit to restore {@dice 1d6} hit points to that creature (no action required). The spirit can't heal constructs or undead. The spirit can heal a number of times equal to 1 + your spellcasting ability modifier (minimum of twice). After healing that number of times, the spirit disappears.",
             "As a bonus action on your turn, you can move the spirit up to 30 feet to a space you can see."
         ],
         "entriesHigherLevel": [
@@ -43580,9 +53260,26 @@ export default [
                 ]
             }
         ],
+        "affectsCreatureType": [
+            "aberration",
+            "beast",
+            "celestial",
+            "dragon",
+            "elemental",
+            "fey",
+            "fiend",
+            "giant",
+            "humanoid",
+            "monstrosity",
+            "ooze",
+            "plant"
+        ],
         "miscTags": [
             "HL",
             "SGT"
+        ],
+        "areaTags": [
+            "C"
         ],
         "classes": {
             "fromClassList": [
@@ -43631,7 +53328,7 @@ export default [
         ],
         "entries": [
             "You imbue a weapon you touch with holy power. Until the spell ends, the weapon emits bright light in a 30-foot radius and dim light for an additional 30 feet. In addition, weapon attacks made with it deal an extra {@damage 2d8} radiant damage on a hit. If the weapon isn't already a magic weapon, it becomes one for the duration.",
-            "As a bonus action on your turn, you can dismiss this spell and cause the weapon to emit a burst of radiance. Each creature of your choice that you can see within 30 feet of you must make a Constitution saving throw. On a failed save, a creature takes {@damage 4d8} radiant damage, and it is {@condition blinded} for 1 minute. On a successful save, a creature takes half as much damage and isn't {@condition blinded}. At the end of each of its turns, a {@condition blinded} creature can make a Constitution saving throw, ending the effect on itself on a success."
+            "As a bonus action on your turn, you can dismiss this spell and cause the weapon to emit a burst of radiance. Each creature of your choice that you can see within 30 feet of the weapon must make a Constitution saving throw. On a failed save, a creature takes {@damage 4d8} radiant damage, and it is {@condition blinded} for 1 minute. On a successful save, a creature takes half as much damage and isn't {@condition blinded}. At the end of each of its turns, a {@condition blinded} creature can make a Constitution saving throw, ending the effect on itself on a success."
         ],
         "damageInflict": [
             "radiant"
@@ -43643,6 +53340,7 @@ export default [
             "constitution"
         ],
         "miscTags": [
+            "LGT",
             "SGT"
         ],
         "areaTags": [
@@ -43773,7 +53471,7 @@ export default [
             "By gathering threads of shadow material from the Shadowfell, you create a Huge shadowy dragon in an unoccupied space that you can see within range. The illusion lasts for the spell's duration and occupies its space, as if it were a creature.",
             "When the illusion appears, any of your enemies that can see it must succeed on a Wisdom saving throw or become {@condition frightened} of it for 1 minute. If a {@condition frightened} creature ends its turn in a location where it doesn't have line of sight to the illusion, it can repeat the saving throw, ending the effect on itself on a success.",
             "As a bonus action on your turn, you can move the illusion up to 60 feet. At any point during its movement, you can cause it to exhale a blast of energy in a 60-foot cone originating from its space. When you create the dragon, choose a damage type: acid, cold, fire, lightning, necrotic, or poison. Each creature in the cone must make an Intelligence saving throw, taking {@damage 7d6} damage of the chosen damage type on a failed save, or half as much damage on a successful one.",
-            "The illusion is tangible because of the shadow stuff used to create it, but attacks miss it automatically, it succeeds on all saving throws, and it is immune to all damage and conditions. A creature that uses an action to examine the dragon can determine that it is an illusion by succeeding on an Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through it and has advantage on saving throws against its breath."
+            "The illusion is tangible because of the shadow stuff used to create it, but attacks miss it automatically, it succeeds on all saving throws, and it is immune to all damage and conditions. A creature that uses an action to examine the dragon can determine that it is an illusion by succeeding on an Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through it and has advantage on saving throws against its breath."
         ],
         "damageInflict": [
             "acid",
@@ -43790,7 +53488,7 @@ export default [
             "wisdom",
             "intelligence"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "miscTags": [
@@ -43857,6 +53555,7 @@ export default [
             "dexterity"
         ],
         "miscTags": [
+            "LGT",
             "SGT"
         ],
         "areaTags": [
@@ -43876,7 +53575,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -43921,7 +53621,7 @@ export default [
         "entries": [
             "Uttering a dark incantation, you summon a devil from the Nine Hells. You choose the devil's type, which must be one of {@filter challenge rating 6 or lower|bestiary|challenge rating=[&0;&6]|tag=devil|miscellaneous=!swarm}, such as a {@creature barbed devil} or a {@creature bearded devil}. The devil appears in an unoccupied space that you can see within range. The devil disappears when it drops to 0 hit points or when the spell ends.",
             "The devil is unfriendly toward you and your companions. Roll initiative for the devil, which has its own turns. It is under the Dungeon Master's control and acts according to its nature on each of its turns, which might result in its attacking you if it thinks it can prevail, or trying to tempt you to undertake an evil act in exchange for limited service. The DM has the creature's statistics.",
-            "On each of your turns, you can try to issue a verbal command to the devil (no action required by you). It obeys the command if the likely outcome is in accordance with its desires, especially if the result would draw you toward evil. Otherwise, you must make a Charisma (Deception, Intimidation, or Persuasion) check contested by its Wisdom (Insight) check. You make the check with advantage if you say the devil's true name. If your check fails, the devil becomes immune to your verbal commands for the duration of the spell, though it can still carry out your commands if it chooses. If your check succeeds, the devil carries out your command—such as \"attack my enemies,\" \"explore the room ahead,\" or \"bear this message to the queen\"—until it completes the activity, at which point it returns to you to report having done so.",
+            "On each of your turns, you can try to issue a verbal command to the devil (no action required by you). It obeys the command if the likely outcome is in accordance with its desires, especially if the result would draw you toward evil. Otherwise, you must make a Charisma ({@skill Deception}, {@skill Intimidation}, or {@skill Persuasion}) check contested by its Wisdom ({@skill Insight}) check. You make the check with advantage if you say the devil's true name. If your check fails, the devil becomes immune to your verbal commands for the duration of the spell, though it can still carry out your commands if it chooses. If your check succeeds, the devil carries out your command—such as \"attack my enemies,\" \"explore the room ahead,\" or \"bear this message to the queen\"—until it completes the activity, at which point it returns to you to report having done so.",
             "If your concentration ends before the spell reaches its full duration, the devil doesn't disappear if it has become immune to your verbal commands. Instead, it acts in whatever manner it chooses for {@dice 3d6} minutes, and then it disappears.",
             "If you possess an individual devil's talisman, you can summon that devil if it is of the appropriate challenge rating plus 1, and it obeys all your commands, with no Charisma checks required."
         ],
@@ -43935,8 +53635,8 @@ export default [
             }
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -43949,7 +53649,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Infestation",
@@ -44088,6 +53789,9 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
+        "miscTags": [
+            "LGT"
+        ],
         "areaTags": [
             "L"
         ],
@@ -44156,8 +53860,8 @@ export default [
                 "type": "list",
                 "items": [
                     "You are immune to cold damage and have resistance to fire damage.",
-                    "You can move across difficult terrain created by ice or snow without spending extra movement.",
-                    "The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.",
+                    "You can move across {@quickref difficult terrain||3} created by ice or snow without spending extra movement.",
+                    "The ground in a 10-foot radius around you is icy and is {@quickref difficult terrain||3} for creatures other than you. The radius moves with you.",
                     "You can use your action to create a 15-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes {@damage 4d6} cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn."
                 ]
             }
@@ -44176,7 +53880,7 @@ export default [
         ],
         "areaTags": [
             "N",
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -44244,7 +53948,7 @@ export default [
                 "items": [
                     "You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.",
                     "You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked {@condition prone}.",
-                    "You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are {@condition stunned} until the end of your next turn."
+                    "You can move across {@quickref difficult terrain||3} made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are {@condition stunned} until the end of your next turn."
                 ]
             }
         ],
@@ -44261,7 +53965,7 @@ export default [
             "dexterity"
         ],
         "areaTags": [
-            "R"
+            "S"
         ],
         "classes": {
             "fromClassList": [
@@ -44340,6 +54044,7 @@ export default [
             "constitution"
         ],
         "miscTags": [
+            "FMV",
             "SGT"
         ],
         "areaTags": [
@@ -44444,7 +54149,7 @@ export default [
             }
         ],
         "entries": [
-            "You sacrifice some of your health to mend another creature's injuries. You take {@damage 4d8} necrotic damage, and one creature of your choice that you can see within range regains a number of hit points equal to twice the necrotic damage you take."
+            "You sacrifice some of your health to mend another creature's injuries. You take {@damage 4d8} necrotic damage, which can't be reduced in any way, and one creature of your choice that you can see within range regains a number of hit points equal to twice the necrotic damage you take."
         ],
         "entriesHigherLevel": [
             {
@@ -44479,11 +54184,13 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Paladin",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 },
                 {
                     "name": "Warlock",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -44588,7 +54295,7 @@ export default [
             }
         ],
         "entries": [
-            "A swirling mass of 5-foot-deep water appears in a 30-foot radius centered on a point you can see within range. The point must be on the ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take {@damage 6d6} bludgeoning damage and be pulled 10 feet toward the center."
+            "A swirling mass of 5-foot-deep water appears in a 30-foot radius centered on a point you can see within range. The point must be on the ground or in a body of water. Until the spell ends, that area is {@quickref difficult terrain||3}, and any creature that starts its turn there must succeed on a Strength saving throw or take {@damage 6d6} bludgeoning damage and be pulled 10 feet toward the center."
         ],
         "damageInflict": [
             "bludgeoning"
@@ -44597,6 +54304,7 @@ export default [
             "strength"
         ],
         "miscTags": [
+            "FMV",
             "SGT"
         ],
         "areaTags": [
@@ -44677,7 +54385,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -44727,7 +54435,8 @@ export default [
             "wisdom"
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "THP"
         ],
         "areaTags": [
             "MT"
@@ -44750,7 +54459,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -44810,7 +54520,7 @@ export default [
         "savingThrow": [
             "strength"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "miscTags": [
@@ -44970,7 +54680,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -44979,6 +54690,16 @@ export default [
         "name": "Mighty Fortress",
         "source": "XGE",
         "page": 161,
+        "otherSources": [
+            {
+                "source": "AitFR-AVT",
+                "page": 10
+            },
+            {
+                "source": "AitFR-FCD",
+                "page": 12
+            }
+        ],
         "level": 8,
         "school": "C",
         "time": [
@@ -45032,7 +54753,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Mind Spike",
@@ -45108,7 +54830,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -45160,7 +54883,7 @@ export default [
                 "items": [
                     "If you target an area of loose earth, you can instantaneously excavate it, move it along the ground, and deposit it up to 5 feet away. This movement doesn't involve enough force to cause damage.",
                     "You cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour.",
-                    "If the dirt or stone you target is on the ground, you cause it to become difficult terrain. Alternatively, you can cause the ground to become normal terrain if it is already difficult terrain. This change lasts for 1 hour."
+                    "If the dirt or stone you target is on the ground, you cause it to become {@quickref difficult terrain||3}. Alternatively, you can cause the ground to become normal terrain if it is already {@quickref difficult terrain||3}. This change lasts for 1 hour."
                 ]
             },
             "If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action."
@@ -45217,7 +54940,7 @@ export default [
             }
         ],
         "entries": [
-            "You send ribbons of negative energy at one creature you can see within range. Unless the target is undead, it must make a Constitution saving throw, taking {@damage 5d12} necrotic damage on a failed save, or half as much damage on a successful one. A target killed by this damage rises up as a zombie at the start of your next turn. The zombie pursues whatever creature it can see that is closest to it. Statistics for the zombie are in the Monster Manual.",
+            "You send ribbons of negative energy at one creature you can see within range. Unless the target is undead, it must make a Constitution saving throw, taking {@damage 5d12} necrotic damage on a failed save, or half as much damage on a successful one. A target killed by this damage rises up as a {@creature zombie} at the start of your next turn. The zombie pursues whatever creature it can see that is closest to it. Statistics for the {@creature zombie} are in the Monster Manual.",
             "If you target an undead with this spell, the target doesn't make a saving throw. Instead, roll {@dice 5d12}. The target gains half the total as temporary hit points."
         ],
         "damageInflict": [
@@ -45227,7 +54950,9 @@ export default [
             "constitution"
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "SMN",
+            "THP"
         ],
         "areaTags": [
             "ST"
@@ -45304,7 +55029,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -45370,7 +55096,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Sorcerer",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -45417,13 +55144,18 @@ export default [
             "You have resistance to acid, cold, fire, lightning, and thunder damage for the spell's duration.",
             "When you take damage of one of those types, you can use your reaction to gain immunity to that type of damage, including against the triggering damage. If you do so, the resistances end, and you have the immunity until the end of your next turn, at which time the spell ends."
         ],
+        "damageResist": [
+            "acid",
+            "cold",
+            "fire",
+            "lightning",
+            "thunder"
+        ],
         "damageImmune": [
             "acid",
             "cold",
             "fire",
-            "lightning"
-        ],
-        "damageInflict": [
+            "lightning",
             "thunder"
         ],
         "classes": {
@@ -45587,7 +55319,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -45626,7 +55358,8 @@ export default [
             "wisdom"
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "TP"
         ],
         "areaTags": [
             "MT"
@@ -45649,7 +55382,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -45717,7 +55451,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Shadow of Moil",
@@ -45785,6 +55520,9 @@ export default [
             {
                 "source": "EEPC",
                 "page": 21
+            },
+            {
+                "source": "EGW"
             }
         ],
         "level": 0,
@@ -45986,13 +55724,14 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -46064,7 +55803,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -46088,7 +55827,6 @@ export default [
             }
         },
         "components": {
-            "v": true,
             "s": true,
             "m": {
                 "text": "25 feet of rope, which the spell consumes",
@@ -46106,9 +55844,9 @@ export default [
         ],
         "entries": [
             "As you cast this spell, you use the rope to create a circle with a 5-foot radius on the ground or the floor. When you finish casting, the rope disappears and the circle becomes a magic trap.",
-            "This trap is nearly invisible, requiring a successful Intelligence (Investigation) check against your spell save DC to be discerned.",
+            "This trap is nearly invisible, requiring a successful Intelligence ({@skill Investigation}) check against your spell save DC to be discerned.",
             "The trap triggers when a Small, Medium, or Large creature moves onto the ground or the floor in the spell's radius. That creature must succeed on a Dexterity saving throw or be magically hoisted into the air, leaving it hanging upside down 3 feet above the ground or the floor. The creature is {@condition restrained} there until the spell ends.",
-            "A {@condition restrained} creature can make a Dexterity saving throw at the end of each of its turns, ending the effect on itself on a success. Alternatively, the creature or someone else who can reach it can use an action to make an Intelligence (Arcana) check against your spell save DC. On a success, the {@condition restrained} effect ends.",
+            "A {@condition restrained} creature can make a Dexterity saving throw at the end of each of its turns, ending the effect on itself on a success. Alternatively, the creature or someone else who can reach it can use an action to make an Intelligence ({@skill Arcana}) check against your spell save DC. On a success, the {@condition restrained} effect ends.",
             "After the trap is triggered, the spell ends when no creature is {@condition restrained} by it."
         ],
         "conditionInflict": [
@@ -46117,7 +55855,7 @@ export default [
         "savingThrow": [
             "dexterity"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "intelligence"
         ],
         "areaTags": [
@@ -46143,7 +55881,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -46284,7 +56022,10 @@ export default [
                     "You can use an action to name a place the humanoid saw in life, which creates an invisible sensor somewhere in that place if it is on the plane of existence you're currently on. The sensor remains for as long as you concentrate, up to 10 minutes (as if you were concentrating on a spell). You receive visual and auditory information from the sensor as if you were in its space using your senses."
                 ]
             },
-            "A creature that can see the sensor (such as one using {@spell see invisibility} or truesight) sees a translucent image of the tormented humanoid whose soul you caged."
+            "A creature that can see the sensor (such as one using {@spell see invisibility} or {@sense truesight}) sees a translucent image of the tormented humanoid whose soul you caged."
+        ],
+        "affectsCreatureType": [
+            "humanoid"
         ],
         "miscTags": [
             "HL"
@@ -46323,7 +56064,10 @@ export default [
         },
         "components": {
             "s": true,
-            "m": "a melee weapon worth at least 1 sp"
+            "m": {
+                "text": "a melee weapon worth at least 1 sp",
+                "cost": 10
+            }
         },
         "duration": [
             {
@@ -46341,7 +56085,8 @@ export default [
             "M"
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "TP"
         ],
         "areaTags": [
             "MT"
@@ -46399,9 +56144,9 @@ export default [
             }
         ],
         "entries": [
-            "A 20-foot-radius sphere of whirling air springs into existence, centered on a point you choose within range. The sphere remains for the spell's duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take {@damage 2d6} bludgeoning damage. The sphere's space is difficult terrain.",
+            "A 20-foot-radius sphere of whirling air springs into existence, centered on a point you choose within range. The sphere remains for the spell's duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take {@damage 2d6} bludgeoning damage. The sphere's space is {@quickref difficult terrain||3}.",
             "Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes {@damage 4d6} lightning damage.",
-            "Creatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen."
+            "Creatures within 30 feet of the sphere have disadvantage on Wisdom ({@skill Perception}) checks made to listen."
         ],
         "entriesHigherLevel": [
             {
@@ -46437,7 +56182,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Summon Greater Demon",
@@ -46461,7 +56207,10 @@ export default [
         "components": {
             "v": true,
             "s": true,
-            "m": "a vial of blood from a humanoid killed within the past 24 hours"
+            "m": {
+                "text": "a vial of blood from a humanoid killed within the past 24 hours",
+                "consume": "optional"
+            }
         },
         "duration": [
             {
@@ -46492,8 +56241,8 @@ export default [
             "charisma"
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -46530,7 +56279,10 @@ export default [
         "components": {
             "v": true,
             "s": true,
-            "m": "a vial of blood from a humanoid killed within the past 24 hours"
+            "m": {
+                "text": "a vial of blood from a humanoid killed within the past 24 hours",
+                "consume": "optional"
+            }
         },
         "duration": [
             {
@@ -46587,7 +56339,7 @@ export default [
                     ]
                 ]
             },
-            "The DM chooses the demons, such as manes or dretches, and you choose the unoccupied spaces you can see within range where they appear. A summoned demon disappears when it drops to 0 hit points or when the spell ends.",
+            "The DM chooses the demons, such as {@creature manes} or {@creature dretch||dretches}, and you choose the unoccupied spaces you can see within range where they appear. A summoned demon disappears when it drops to 0 hit points or when the spell ends.",
             "The demons are hostile to all creatures, including you. Roll initiative for the summoned demons as a group, which has its own turns. The demons pursue and attack the nearest non-demons to the best of their ability.",
             "As part of casting the spell, you can form a circle on the ground with the blood used as a material component. The circle is large enough to encompass your space. While the spell lasts, the summoned demons can't cross the circle or harm it, and they can't target anyone within it. Using the material component in this manner consumes it when the spell ends."
         ],
@@ -46601,8 +56353,9 @@ export default [
             }
         ],
         "miscTags": [
-            "SMN",
-            "SGT"
+            "RO",
+            "SGT",
+            "SMN"
         ],
         "classes": {
             "fromClassList": [
@@ -46723,15 +56476,22 @@ export default [
             "The temple opposes types of creatures you choose when you cast this spell. Choose one or more of the following: celestials, elementals, fey, fiends, or undead. If a creature of the chosen type attempts to enter the temple, that creature must make a Charisma saving throw. On a failed save, it can't enter the temple for 24 hours. Even if the creature can enter the temple, the magic there hinders it; whenever it makes an attack roll, an ability check, or a saving throw inside the temple, it must roll a {@dice d4} and subtract the number rolled from the {@dice d20} roll.",
             "In addition, the sensors created by divination spells can't appear inside the temple, and creatures within can't be targeted by divination spells.",
             "Finally, whenever any creature in the temple regains hit points from a spell of 1st level or higher, the creature regains additional hit points equal to your Wisdom modifier (minimum 1 hit point).",
-            "The temple is made from opaque magical force that extends into the Ethereal Plane, thus blocking ethereal travel into the temple's interior. Nothing can physically pass through the temple's exterior. It can't be dispelled by dispel magic, and antimagic field has no effect on it. A {@spell disintegrate} spell destroys the temple instantly.",
+            "The temple is made from opaque magical force that extends into the Ethereal Plane, thus blocking ethereal travel into the temple's interior. Nothing can physically pass through the temple's exterior. It can't be dispelled by {@spell dispel magic}, and {@spell antimagic field} has no effect on it. A {@spell disintegrate} spell destroys the temple instantly.",
             "Casting this spell on the same spot every day for a year makes this effect permanent."
         ],
         "savingThrow": [
             "charisma"
         ],
+        "affectsCreatureType": [
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
+        ],
         "miscTags": [
-            "PRM",
             "HL",
+            "PRM",
             "SGT"
         ],
         "classes": {
@@ -46800,6 +56560,9 @@ export default [
         "savingThrow": [
             "constitution"
         ],
+        "miscTags": [
+            "THP"
+        ],
         "classes": {
             "fromClassList": [
                 {
@@ -46810,7 +56573,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -46862,7 +56626,8 @@ export default [
             "constitution"
         ],
         "miscTags": [
-            "SGT"
+            "SGT",
+            "TP"
         ],
         "areaTags": [
             "S"
@@ -46885,7 +56650,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -46976,7 +56742,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -47108,16 +56874,18 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ],
             "fromClassListVariant": [
                 {
                     "name": "Bard",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Toll the Dead",
@@ -47272,7 +57040,7 @@ export default [
             "strength",
             "dexterity"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "miscTags": [
@@ -47297,7 +57065,7 @@ export default [
                 },
                 {
                     "name": "Artificer",
-                    "source": "ERLW"
+                    "source": "TCE"
                 }
             ]
         }
@@ -47461,7 +57229,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Cleric",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -47528,7 +57297,8 @@ export default [
             "fromClassListVariant": [
                 {
                     "name": "Druid",
-                    "source": "PHB"
+                    "source": "PHB",
+                    "definedInSource": "UAClassFeatureVariants"
                 }
             ]
         }
@@ -47545,6 +57315,10 @@ export default [
             {
                 "source": "VGM",
                 "page": 116
+            },
+            {
+                "source": "MOT",
+                "page": 0
             }
         ],
         "level": 3,
@@ -47578,7 +57352,7 @@ export default [
             }
         ],
         "entries": [
-            "You create a wall of water on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall vanishes when the spell ends. The wall's space is difficult terrain.",
+            "You create a wall of water on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall vanishes when the spell ends. The wall's space is {@quickref difficult terrain||3}.",
             "Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause the area of the wall they pass through to freeze solid (at least a 5-foot-square section is frozen). Each 5-foot-square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it."
         ],
         "miscTags": [
@@ -47656,10 +57430,13 @@ export default [
                     "It {@condition deafened||deafens} you and other creatures in its area.",
                     "It extinguishes unprotected flames in its area that are torch-sized or smaller.",
                     "It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
-                    "The area is difficult terrain for creatures other than you.",
+                    "The area is {@quickref difficult terrain||3} for creatures other than you.",
                     "The attack rolls of ranged weapon attacks have disadvantage if the attacks pass in or out of the wind."
                 ]
             }
+        ],
+        "conditionInflict": [
+            "deafened"
         ],
         "classes": {
             "fromClassList": [
@@ -47813,11 +57590,12 @@ export default [
             "dexterity",
             "strength"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength",
             "dexterity"
         ],
         "miscTags": [
+            "FMV",
             "SGT"
         ],
         "areaTags": [
@@ -47838,7 +57616,8 @@ export default [
                     "source": "PHB"
                 }
             ]
-        }
+        },
+        "hasFluffImages": true
     },
     {
         "name": "Word of Radiance",
@@ -47942,7 +57721,7 @@ export default [
                 "type": "entries",
                 "name": "Grasses and Undergrowth",
                 "entries": [
-                    "Any area of ground in the cube that is covered by grass or undergrowth is difficult terrain for your enemies."
+                    "Any area of ground in the cube that is covered by grass or undergrowth is {@quickref difficult terrain||3} for your enemies."
                 ]
             },
             {
@@ -47956,7 +57735,7 @@ export default [
                 "type": "entries",
                 "name": "Roots and Vines",
                 "entries": [
-                    "At the end of each of your turns, one creature of your choice that is on the ground in the cube must succeed on a Strength saving throw or become {@condition restrained} until the spell ends. A {@condition restrained} creature can use an action to make a Strength (Athletics) check against your spell save DC, ending the effect on itself on a success."
+                    "At the end of each of your turns, one creature of your choice that is on the ground in the cube must succeed on a Strength saving throw or become {@condition restrained} until the spell ends. A {@condition restrained} creature can use an action to make a Strength ({@skill Athletics}) check against your spell save DC, ending the effect on itself on a success."
                 ]
             },
             {
@@ -47982,7 +57761,7 @@ export default [
             "dexterity",
             "strength"
         ],
-        "opposedCheck": [
+        "abilityCheck": [
             "strength"
         ],
         "miscTags": [
