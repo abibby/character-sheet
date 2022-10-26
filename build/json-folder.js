@@ -1,8 +1,8 @@
 // @ts-check
 
-import fs from 'fs/promises'
-import fetch from 'node-fetch'
-import { resolve } from 'path'
+const fetch = require('node-fetch').default
+const fs = require('fs').promises
+const { resolve } = require('path')
 
 const basePath = 'https://5e.tools/data/'
 /**
@@ -10,14 +10,10 @@ const basePath = 'https://5e.tools/data/'
  * @param {string} outFile
  */
 async function downloadFolder(folder, outFile) {
-    const index = await fetch(basePath + folder + '/index.json').then((r) =>
-        r.json(),
-    )
+    const index = await fetch(basePath + folder + '/index.json').then(r => r.json())
     const items = []
     for (const path of Object.values(index)) {
-        const content = await fetch(basePath + folder + '/' + path).then((r) =>
-            r.json(),
-        )
+        const content = await fetch(basePath + folder + '/' + path).then(r => r.json())
         items.push(...content[Object.keys(content)[0]])
     }
     await writeJsonModule(outFile, items)
@@ -27,9 +23,7 @@ async function downloadFolder(folder, outFile) {
  * @param {string} outFile
  */
 async function downloadFile(file, outFile) {
-    const content = await fetch(basePath + '/' + file + '.json').then((r) =>
-        r.json(),
-    )
+    const content = await fetch(basePath + '/' + file + '.json').then(r => r.json())
     await writeJsonModule(outFile, content[Object.keys(content)[0]])
 }
 
@@ -38,23 +32,11 @@ async function downloadFile(file, outFile) {
  * @param {any} object
  */
 async function writeJsonModule(file, object) {
-    await fs.writeFile(
-        file,
-        'export default ' + JSON.stringify(object, undefined, '    '),
-    )
+    await fs.writeFile(file, 'export default ' + JSON.stringify(object, undefined, '    '))
 }
 
-;(async () => {
-    await downloadFolder(
-        'class',
-        resolve(__dirname, '../src/5etools/class-data.ts'),
-    )
-    await downloadFolder(
-        'spells',
-        resolve(__dirname, '../src/5etools/spell-data.ts'),
-    )
-    await downloadFile(
-        'feats',
-        resolve(__dirname, '../src/5etools/feat-data.ts'),
-    )
+(async () => {
+    await downloadFolder('class', resolve(__dirname, '../src/5etools/class-data.ts'))
+    await downloadFolder('spells', resolve(__dirname, '../src/5etools/spell-data.ts'))
+    await downloadFile('feats', resolve(__dirname, '../src/5etools/feat-data.ts'))
 })()
